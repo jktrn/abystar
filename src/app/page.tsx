@@ -2,22 +2,50 @@
 
 import { useState, useEffect } from 'react'
 import { formatCharacterName } from '../utils/formatCharacterName'
+import CustomOption from '../components/CustomOption'
+import { Character } from '../types/Character'
+import Select from 'react-select'
 
 export default function Home() {
-    const [characters, setCharacters] = useState<string[]>([])
+    const [characters, setCharacters] = useState<Character[]>([])
     const [character, setCharacter] = useState('')
+
+    const getImageUrl = (character: string) => {
+        const isTraveler = character.startsWith('traveler-')
+        return isTraveler
+            ? `https://api.genshin.dev/characters/${character}/icon-big-lumine`
+            : `https://api.genshin.dev/characters/${character}/icon-big`
+    }
 
     useEffect(() => {
         fetch('https://api.genshin.dev/characters')
             .then((response) => response.json())
             .then((data) =>
-                setCharacters(
-                    data.map((character: string) =>
-                        formatCharacterName(character)
-                    )
+                Promise.all(
+                    data.map(async (character: string) => {
+                        const response = await fetch(
+                            `https://api.genshin.dev/characters/${character}`
+                        )
+                        const characterData = await response.json()
+                        return {
+                            name: formatCharacterName(character),
+                            image: getImageUrl(character),
+                            vision: characterData.vision,
+                            rarity: characterData.rarity,
+                        }
+                    })
                 )
             )
+            .then((characters) => setCharacters(characters))
     }, [])
+
+    const options = characters.map((character) => ({
+        value: character.name,
+        label: character.name,
+        image: character.image,
+        vision: character.vision,
+        rarity: character.rarity,
+    }))
 
     const handleSubmit = (event: any) => {
         event.preventDefault()
@@ -37,18 +65,21 @@ export default function Home() {
                     >
                         Character:
                     </label>
-                    <select
+                    <Select
                         id="character"
-                        value={character}
-                        onChange={(event) => setCharacter(event.target.value)}
-                        className="w-full border border-gray-300 rounded-lg px-3 py-2 text-gray-700"
-                    >
-                        {characters.map((character) => (
-                            <option key={character} value={character}>
-                                {character}
-                            </option>
-                        ))}
-                    </select>
+                        value={options.find(
+                            (option) => option.value === character
+                        )}
+                        onChange={(option) => setCharacter(option!.value)}
+                        options={options}
+                        components={{ Option: CustomOption }}
+                        styles={{
+                            control: (provided) => ({
+                                ...provided,
+                                width: 300,
+                            }),
+                        }}
+                    />
                 </div>
                 <input
                     type="submit"
