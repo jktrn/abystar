@@ -6,22 +6,23 @@ import CustomOption from '../components/CustomOption'
 import { Character } from '../types/Character'
 import Select from 'react-select'
 
+const getImageUrl = (character: string) => {
+    const isTraveler = character.startsWith('traveler-')
+    return isTraveler
+        ? `https://api.genshin.dev/characters/${character}/icon-big-lumine`
+        : `https://api.genshin.dev/characters/${character}/icon-big`
+}
+
 export default function Home() {
     const [characters, setCharacters] = useState<Character[]>([])
-    const [character, setCharacter] = useState('')
-
-    const getImageUrl = (character: string) => {
-        const isTraveler = character.startsWith('traveler-')
-        return isTraveler
-            ? `https://api.genshin.dev/characters/${character}/icon-big-lumine`
-            : `https://api.genshin.dev/characters/${character}/icon-big`
-    }
+    const [character, setCharacter] = useState<Character | null>(null)
 
     useEffect(() => {
-        fetch('https://api.genshin.dev/characters')
-            .then((response) => response.json())
-            .then((data) =>
-                Promise.all(
+        const fetchCharacters = async () => {
+            try {
+                const response = await fetch('https://api.genshin.dev/characters')
+                const data = await response.json()
+                const characters = await Promise.all(
                     data.map(async (character: string) => {
                         const response = await fetch(
                             `https://api.genshin.dev/characters/${character}`
@@ -35,12 +36,17 @@ export default function Home() {
                         }
                     })
                 )
-            )
-            .then((characters) => setCharacters(characters))
+                setCharacters(characters)
+            } catch (error) {
+                console.error(error)
+            }
+        }
+
+        fetchCharacters()
     }, [])
 
     const options = characters.map((character) => ({
-        value: character.name,
+        value: character,
         label: character.name,
         image: character.image,
         vision: character.vision,
@@ -87,6 +93,14 @@ export default function Home() {
                     className="bg-blue-500 text-white font-bold px-4 py-2 rounded-lg hover:bg-blue-600"
                 />
             </form>
+            {character && (
+                <div className="mt-4">
+                    <h2 className="text-xl font-bold mb-2">{character.name}</h2>
+                    <img src={character.image} alt={character.name} />
+                    <p>Vision: {character.vision}</p>
+                    <p>Rarity: {character.rarity}</p>
+                </div>
+            )}
         </main>
     )
 }
