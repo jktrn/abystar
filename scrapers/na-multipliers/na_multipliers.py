@@ -1,8 +1,9 @@
 import requests
 from bs4 import BeautifulSoup
 import json
+from tqdm import tqdm
 
-def parse_cell(cell):
+def parse_cell(cell: str) -> str:
     if '×' in cell:
         value, multiplier = cell.split('×')
         value = float(value.strip().strip('%')) * float(multiplier)
@@ -14,7 +15,7 @@ def parse_cell(cell):
     else:
         return cell
 
-def parse_row(row):
+def parse_row(row: list[str]) -> list[tuple[str, list[str]]]:
     key = row[0]
     if key == 'Low/High Plunge DMG':
         low_key = 'Low Plunge DMG'
@@ -25,7 +26,7 @@ def parse_row(row):
     else:
         return [(key, row[1:])]
 
-def fetch_character_data(character):
+def fetch_character_data(character: str) -> dict[str, dict[str, str]]:
     url = f'https://genshin.honeyhunterworld.com/{character}/'
     page = requests.get(url)
     soup = BeautifulSoup(page.content, 'html.parser')
@@ -47,22 +48,21 @@ def fetch_character_data(character):
     else:
         return None
 
-def fetch_all_characters_data():
-    characters_url = 'https://api.genshin.dev/characters'
-    characters = requests.get(characters_url).json()
+def fetch_all_characters_data() -> dict[str, dict[str, dict[str, str]]]:
+    with open('../character-paths.json', 'r') as f:
+        characters = json.load(f)
 
     all_data = {}
 
-    for character in characters:
+    for character, name in tqdm(characters.items()):
         data_dict = fetch_character_data(character)
         if data_dict is not None:
-            all_data[character] = data_dict
-            print(f'Finished {character}')
+            all_data[name] = data_dict
 
     return all_data
 
-def save_data_to_file(data):
-    with open('skill-multipliers.json', 'w') as f:
+def save_data_to_file(data: dict[str, dict[str, dict[str, str]]]) -> None:
+    with open('na_multipliers.json', 'w') as f:
         json.dump(data, f, indent=4)
 
 if __name__ == '__main__':
