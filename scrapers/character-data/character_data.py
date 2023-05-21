@@ -37,7 +37,7 @@ def fetch_character_data(character: str) -> dict[str, dict[str, dict[str, str]]]
 
     tables = soup.find_all('table', {'class': 'skill_table'})
 
-    all_data = {"activeSkills": []}
+    all_data = {"activeSkills": [], "passiveSkills": [], "constellations": []}
 
     for table in tables:
         skill_name_tag = table.find_all('td')[1].find('a')
@@ -65,9 +65,25 @@ def fetch_character_data(character: str) -> dict[str, dict[str, dict[str, str]]]
                     "description": skill_description,
                     "data": data_dict
                 })
+            else:
+                all_data["passiveSkills"].append({
+                    "name": skill_name,
+                    "image": skill_image,
+                    "description": skill_description
+                })
+
+    # Move the bottom six skills into the `constellations` array
+    all_data["constellations"] = all_data["passiveSkills"][-6:]
+    all_data["passiveSkills"] = all_data["passiveSkills"][:-6]
+
+    # Add a `level` integer to each constellation
+    for i, constellation in enumerate(all_data["constellations"]):
+        constellation["level"] = i + 1
 
     return all_data
 
+
+# Comment this out if you want to test with a single character. Uncomment the bottom lines
 def fetch_all_characters_data() -> dict[str, dict[str, dict[str, dict[str, str]]]]:
     with open('../character-paths.json', 'r') as f:
         characters = json.load(f)
@@ -82,13 +98,14 @@ def fetch_all_characters_data() -> dict[str, dict[str, dict[str, dict[str, str]]
     return all_data
 
 def save_data_to_file(data: dict[str, dict[str, dict[str, dict[str, str]]]]) -> None:
-    with open('skill-multipliers.json', 'w') as f:
+    with open('character-data.json', 'w') as f:
         json.dump(data, f, indent=4)
 
 if __name__ == '__main__':
+    # Comment this out if you want to test with a single character
     all_data = fetch_all_characters_data()
     save_data_to_file(all_data)
 
-    ## test
+    # Uncomment these if you want to test a single character
     # ayaka_data = fetch_character_data('ayaka')
     # print(json.dumps(ayaka_data, indent=4))
