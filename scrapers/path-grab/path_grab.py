@@ -21,7 +21,7 @@ driver.implicitly_wait(10)
 soup = BeautifulSoup(driver.page_source, 'html.parser')
 table = soup.find('table', {'class': 'genshin_table'})
 
-character_urls = []
+character_data = {}
 
 for row in table.find_all('tr'):
     # Find all cells in the row
@@ -34,20 +34,20 @@ for row in table.find_all('tr'):
         if a_element:
             # Extract the `href` attribute of the `a` element
             href = a_element.get('href')
+            # Extract the text within the `a` element
+            character_name = a_element.text
             if href:
                 # Extract the part of the URL between `/` and `/?lang=EN`
                 character_url = href.split('/')[1]
-                character_urls.append(character_url)
+                character_data[character_url] = character_name
 
-character_urls.sort()
+# Sort the JSON object by value
+sorted_character_data = dict(sorted(character_data.items(), key=lambda item: item[1]))
 
-with open('character-paths.txt', 'w') as f:
-    for character_url in character_urls:
-        f.write(character_url + '\n')
+# Don't worry all this does is remove the female traveler :insanity:
+unique_character_data = {k: v for k, v in sorted_character_data.items() if list(sorted_character_data.values()).index(v) == list(sorted_character_data.keys()).index(k)}
 
-## Temp code to generate a JSON file with empty strings as values
-
-# with open('../character-paths.json', 'w') as f:
-#     json.dump({url: "" for url in character_urls}, f, indent=4)
+with open('../character-paths.json', 'w') as f:
+    json.dump(unique_character_data, f, indent=4)
 
 driver.quit()

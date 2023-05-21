@@ -3,6 +3,8 @@ from bs4 import BeautifulSoup
 import json
 from tqdm import tqdm
 
+base_url = 'https://genshin.honeyhunterworld.com'
+
 def parse_cell(cell: str) -> str:
     if any(c.isalpha() for c in cell):
         return cell
@@ -29,19 +31,21 @@ def parse_row(row: list[str]) -> list[tuple[str, list[str]]]:
         return [(key, row[1:])]
 
 def fetch_character_data(character: str) -> dict[str, dict[str, dict[str, str]]]:
-    url = f'https://genshin.honeyhunterworld.com/{character}/'
+    url = f'{base_url}/{character}/'
     page = requests.get(url)
     soup = BeautifulSoup(page.content, 'html.parser')
 
     tables = soup.find_all('table', {'class': 'skill_table'})
 
-    all_data = {}
+    all_data = {"activeSkills": []}
 
     for table in tables:
         skill_name_tag = table.find_all('td')[1].find('a')
         
         if skill_name_tag:
             skill_name = skill_name_tag.text
+            skill_image = base_url + table.find_all('td')[0].find('img')['src'].split('?')[0]
+            skill_description = table.find_all('td')[2].get_text(separator='\n', strip=True)
             skill_table = table.find('table', {'class': 'skill_dmg_table'})
             
             if skill_table:
@@ -55,7 +59,12 @@ def fetch_character_data(character: str) -> dict[str, dict[str, dict[str, str]]]
                     for key, values in parsed_rows:
                         data_dict[key] = {header[i]: values[i-1] for i in range(1, len(header))}
                 
-                all_data[skill_name] = data_dict
+                all_data["activeSkills"].append({
+                    "name": skill_name,
+                    "image": skill_image,
+                    "description": skill_description,
+                    "data": data_dict
+                })
 
     return all_data
 
@@ -79,3 +88,7 @@ def save_data_to_file(data: dict[str, dict[str, dict[str, dict[str, str]]]]) -> 
 if __name__ == '__main__':
     all_data = fetch_all_characters_data()
     save_data_to_file(all_data)
+
+    ## test
+    # ayaka_data = fetch_character_data('ayaka')
+    # print(json.dumps(ayaka_data, indent=4))
