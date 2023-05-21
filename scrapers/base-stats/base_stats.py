@@ -32,7 +32,7 @@ def fetch_all_characters_stats() -> dict[str, dict[str, dict[str, str]]]:
     return all_data
 
 def save_data_to_file(data: dict[str, dict[str, dict[str, str]]]) -> None:
-    with open('base_stats.json', 'w') as f:
+    with open('base-stats.json', 'w') as f:
         json.dump(data, f, indent=4)
 
 if __name__ == '__main__':
