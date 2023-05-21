@@ -35,9 +35,21 @@ def fetch_character_data(character: str) -> dict[str, dict[str, dict[str, str]]]
     page = requests.get(url)
     soup = BeautifulSoup(page.content, 'html.parser')
 
-    tables = soup.find_all('table', {'class': 'skill_table'})
+    all_data = {"baseStats": {}, "activeSkills": [], "passiveSkills": [], "constellations": []}
 
-    all_data = {"activeSkills": [], "passiveSkills": [], "constellations": []}
+    # Fetch character stats and add them to the `baseStats` object
+    stats_table = soup.find('table', {'class': 'stat_table'})
+
+    rows = stats_table.find_all('tr')
+    header = [cell.text for cell in rows[0].find_all('td')[:7]]
+    data = [[cell.text for cell in row.find_all('td')[:7]] for row in rows[1:]]
+
+    data_dict = {row[0]: {header[i]: row[i] for i in range(1, len(header))} for row in data}
+
+    all_data["baseStats"] = data_dict
+
+    # Fetch character skills and add them to the `activeSkills`, `passiveSkills`, and `constellations` arrays
+    tables = soup.find_all('table', {'class': 'skill_table'})
 
     for table in tables:
         skill_name_tag = table.find_all('td')[1].find('a')
@@ -81,7 +93,6 @@ def fetch_character_data(character: str) -> dict[str, dict[str, dict[str, str]]]
         constellation["level"] = i + 1
 
     return all_data
-
 
 # Comment this out if you want to test with a single character. Uncomment the bottom lines
 def fetch_all_characters_data() -> dict[str, dict[str, dict[str, dict[str, str]]]]:
