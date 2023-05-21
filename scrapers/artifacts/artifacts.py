@@ -3,19 +3,18 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from bs4 import BeautifulSoup
 import json
-from tqdm import tqdm
 
-baseUrl = 'https://genshin.honeyhunterworld.com'
+base_url = 'https://genshin.honeyhunterworld.com'
 
-def separateBonus(string: str):
+def separate_bonus(string: str):
     index = string.find("4-Piece")
     indices = [9, index]
-    parts = [string[i:j] for i,j in zip(indices, indices[1:]+[None])]
+    parts = [string[i:j] for i, j in zip(indices, indices[1:] + [None])]
     parts[1] = parts[1][9:]
     return parts
 
 def get_artifacts():
-    url = f'https://genshin.honeyhunterworld.com/fam_art_set/'
+    url = f'{base_url}/fam_art_set/'
 
     driver = webdriver.Chrome()
     driver.get(url)
@@ -26,49 +25,45 @@ def get_artifacts():
         if option.text == '100':
             option.click()
             break
-        
+    
     driver.implicitly_wait(10)
 
     soup = BeautifulSoup(driver.page_source, 'html.parser')
     table = soup.find('table', {'class': 'genshin_table'})
 
     rows = table.find_all('tr')
-    imageSet = {}
-    num = 0
+    image_set = {}
     for row in rows:
-        imageList = row.find_all('img')
-        list = {}
-        set = ''
-        k = 0
-        for image in imageList:
-            link = baseUrl + image['src']
-            set = image['alt']
-            list[k] = link
-            k += 1
-        imageSet[set] = list
-        num += 1
-
+        image_list = row.find_all('img')
+        list = []
+        set_name = ''
+        for image in image_list:
+            link = base_url + image['src']
+            set_name = image['alt']
+            list.append(link)
+        image_set[set_name] = list
 
     data = [[cell.text for cell in row.find_all('td')[2:]] for row in rows[1:]]
     header = [[cell.text for cell in row.find_all('td')[1]] for row in rows[1:]]
-    data_dict = {}
-    index = 0
-    for row in data:
-        bonusList = separateBonus(row[0])
-        bonuses = {}
-        bonuses["Set Name"] = ''.join(header[index])
-        bonuses["Images"] = imageSet[bonuses["Set Name"]]
-        bonuses["2-Piece"] = bonusList[0]
-        bonuses["4-Piece"] = bonusList[1]
-        data_dict[index] = bonuses
-        index += 1
     
-    return data_dict
+    data_list = []
+    
+    for row in data:
+        bonus_list = separate_bonus(row[0])
+        bonuses = {
+            "setName": ''.join(header[len(data_list)]),
+            "images": image_set[''.join(header[len(data_list)])],
+            "twoPiece": bonus_list[0],
+            "fourPiece": bonus_list[1]
+        }
+        data_list.append(bonuses)
+    
+    return {"artifacts": data_list}
 
 def save_data_to_file(data: dict[str, dict[str, dict[str, str]]]) -> None:
-    with open('./scrapers/artifacts/artifacts.json', 'w') as f:
+    with open('artifacts.json', 'w') as f:
         json.dump(data, f, indent=4)
 
-
-
-save_data_to_file(get_artifacts())
+if __name__ == '__main__':
+    all_data = get_artifacts()
+    save_data_to_file(all_data)

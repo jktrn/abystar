@@ -1,410 +1,412 @@
 {
-    "0": {
-        "Set Name": "Resolution of Sojourner",
-        "Images": {
-            "0": "https://genshin.honeyhunterworld.com/img/i_n400002_35.webp",
-            "1": "https://genshin.honeyhunterworld.com/img/i_n400003_35.webp"
+    "artifacts": [
+        {
+            "setName": "Resolution of Sojourner",
+            "images": [
+                "https://genshin.honeyhunterworld.com/img/i_n400002_35.webp",
+                "https://genshin.honeyhunterworld.com/img/i_n400003_35.webp"
+            ],
+            "twoPiece": "ATK +18%.",
+            "fourPiece": "Increases Charged Attack CRIT Rate by 30%."
         },
-        "2-Piece": "ATK +18%.",
-        "4-Piece": "Increases Charged Attack CRIT Rate by 30%."
-    },
-    "1": {
-        "Set Name": "Brave Heart",
-        "Images": {
-            "0": "https://genshin.honeyhunterworld.com/img/i_n400007_35.webp",
-            "1": "https://genshin.honeyhunterworld.com/img/i_n400008_35.webp"
+        {
+            "setName": "Brave Heart",
+            "images": [
+                "https://genshin.honeyhunterworld.com/img/i_n400007_35.webp",
+                "https://genshin.honeyhunterworld.com/img/i_n400008_35.webp"
+            ],
+            "twoPiece": "ATK +18%.",
+            "fourPiece": "Increases DMG by 30% against opponents with more than 50% HP."
         },
-        "2-Piece": "ATK +18%.",
-        "4-Piece": "Increases DMG by 30% against opponents with more than 50% HP."
-    },
-    "2": {
-        "Set Name": "Defender's Will",
-        "Images": {
-            "0": "https://genshin.honeyhunterworld.com/img/i_n400012_35.webp",
-            "1": "https://genshin.honeyhunterworld.com/img/i_n400013_35.webp"
+        {
+            "setName": "Defender's Will",
+            "images": [
+                "https://genshin.honeyhunterworld.com/img/i_n400012_35.webp",
+                "https://genshin.honeyhunterworld.com/img/i_n400013_35.webp"
+            ],
+            "twoPiece": "DEF +30%",
+            "fourPiece": "For each different element present in your own party, the wearer's Elemental RES to that corresponding element is increased by 30%."
         },
-        "2-Piece": "DEF +30%",
-        "4-Piece": "For each different element present in your own party, the wearer's Elemental RES to that corresponding element is increased by 30%."
-    },
-    "3": {
-        "Set Name": "Tiny Miracle",
-        "Images": {
-            "0": "https://genshin.honeyhunterworld.com/img/i_n400017_35.webp",
-            "1": "https://genshin.honeyhunterworld.com/img/i_n400018_35.webp"
+        {
+            "setName": "Tiny Miracle",
+            "images": [
+                "https://genshin.honeyhunterworld.com/img/i_n400017_35.webp",
+                "https://genshin.honeyhunterworld.com/img/i_n400018_35.webp"
+            ],
+            "twoPiece": "All Elemental RES increased by 20%.",
+            "fourPiece": "Incoming elemental DMG increases corresponding Elemental RES by 30% for 10s. Can only occur once every 10s."
         },
-        "2-Piece": "All Elemental RES increased by 20%.",
-        "4-Piece": "Incoming elemental DMG increases corresponding Elemental RES by 30% for 10s. Can only occur once every 10s."
-    },
-    "4": {
-        "Set Name": "Berserker",
-        "Images": {
-            "0": "https://genshin.honeyhunterworld.com/img/i_n400022_35.webp",
-            "1": "https://genshin.honeyhunterworld.com/img/i_n400023_35.webp"
+        {
+            "setName": "Berserker",
+            "images": [
+                "https://genshin.honeyhunterworld.com/img/i_n400022_35.webp",
+                "https://genshin.honeyhunterworld.com/img/i_n400023_35.webp"
+            ],
+            "twoPiece": "CRIT Rate +12%",
+            "fourPiece": "When HP is below 70%, CRIT Rate increases by an additional 24%."
         },
-        "2-Piece": "CRIT Rate +12%",
-        "4-Piece": "When HP is below 70%, CRIT Rate increases by an additional 24%."
-    },
-    "5": {
-        "Set Name": "Martial Artist",
-        "Images": {
-            "0": "https://genshin.honeyhunterworld.com/img/i_n400027_35.webp",
-            "1": "https://genshin.honeyhunterworld.com/img/i_n400028_35.webp"
+        {
+            "setName": "Martial Artist",
+            "images": [
+                "https://genshin.honeyhunterworld.com/img/i_n400027_35.webp",
+                "https://genshin.honeyhunterworld.com/img/i_n400028_35.webp"
+            ],
+            "twoPiece": "Normal and Charged Attack DMG +15%",
+            "fourPiece": "After using Elemental Skill, increases Normal Attack and Charged Attack DMG by 25% for 8s."
         },
-        "2-Piece": "Normal and Charged Attack DMG +15%",
-        "4-Piece": "After using Elemental Skill, increases Normal Attack and Charged Attack DMG by 25% for 8s."
-    },
-    "6": {
-        "Set Name": "Instructor",
-        "Images": {
-            "0": "https://genshin.honeyhunterworld.com/img/i_n400032_35.webp",
-            "1": "https://genshin.honeyhunterworld.com/img/i_n400033_35.webp"
+        {
+            "setName": "Instructor",
+            "images": [
+                "https://genshin.honeyhunterworld.com/img/i_n400032_35.webp",
+                "https://genshin.honeyhunterworld.com/img/i_n400033_35.webp"
+            ],
+            "twoPiece": "Increases Elemental Mastery by 80.",
+            "fourPiece": "Upon triggering an Elemental Reaction, increases all party members' Elemental Mastery by 120 for 8s."
         },
-        "2-Piece": "Increases Elemental Mastery by 80.",
-        "4-Piece": "Upon triggering an Elemental Reaction, increases all party members' Elemental Mastery by 120 for 8s."
-    },
-    "7": {
-        "Set Name": "Gambler",
-        "Images": {
-            "0": "https://genshin.honeyhunterworld.com/img/i_n400037_35.webp",
-            "1": "https://genshin.honeyhunterworld.com/img/i_n400038_35.webp"
+        {
+            "setName": "Gambler",
+            "images": [
+                "https://genshin.honeyhunterworld.com/img/i_n400037_35.webp",
+                "https://genshin.honeyhunterworld.com/img/i_n400038_35.webp"
+            ],
+            "twoPiece": "Increases Elemental Skill DMG by 20%.",
+            "fourPiece": "Defeating an opponent has a 100% chance to remove Elemental Skill CD. Can only occur once every 15s."
         },
-        "2-Piece": "Increases Elemental Skill DMG by 20%.",
-        "4-Piece": "Defeating an opponent has a 100% chance to remove Elemental Skill CD. Can only occur once every 15s."
-    },
-    "8": {
-        "Set Name": "The Exile",
-        "Images": {
-            "0": "https://genshin.honeyhunterworld.com/img/i_n400042_35.webp",
-            "1": "https://genshin.honeyhunterworld.com/img/i_n400043_35.webp"
+        {
+            "setName": "The Exile",
+            "images": [
+                "https://genshin.honeyhunterworld.com/img/i_n400042_35.webp",
+                "https://genshin.honeyhunterworld.com/img/i_n400043_35.webp"
+            ],
+            "twoPiece": "Energy Recharge +20%",
+            "fourPiece": "Using an Elemental Burst regenerates 2 Energy for all party members (excluding the wearer) every 2s for 6s. This effect cannot stack."
         },
-        "2-Piece": "Energy Recharge +20%",
-        "4-Piece": "Using an Elemental Burst regenerates 2 Energy for all party members (excluding the wearer) every 2s for 6s. This effect cannot stack."
-    },
-    "9": {
-        "Set Name": "Adventurer",
-        "Images": {
-            "0": "https://genshin.honeyhunterworld.com/img/i_n400045_35.webp",
-            "1": "https://genshin.honeyhunterworld.com/img/i_n400046_35.webp",
-            "2": "https://genshin.honeyhunterworld.com/img/i_n400047_35.webp"
+        {
+            "setName": "Adventurer",
+            "images": [
+                "https://genshin.honeyhunterworld.com/img/i_n400045_35.webp",
+                "https://genshin.honeyhunterworld.com/img/i_n400046_35.webp",
+                "https://genshin.honeyhunterworld.com/img/i_n400047_35.webp"
+            ],
+            "twoPiece": "Max HP increased by 1000.",
+            "fourPiece": "Opening a chest regenerates 30% Max HP over 5s."
         },
-        "2-Piece": "Max HP increased by 1000.",
-        "4-Piece": "Opening a chest regenerates 30% Max HP over 5s."
-    },
-    "10": {
-        "Set Name": "Lucky Dog",
-        "Images": {
-            "0": "https://genshin.honeyhunterworld.com/img/i_n400050_35.webp",
-            "1": "https://genshin.honeyhunterworld.com/img/i_n400051_35.webp",
-            "2": "https://genshin.honeyhunterworld.com/img/i_n400052_35.webp"
+        {
+            "setName": "Lucky Dog",
+            "images": [
+                "https://genshin.honeyhunterworld.com/img/i_n400050_35.webp",
+                "https://genshin.honeyhunterworld.com/img/i_n400051_35.webp",
+                "https://genshin.honeyhunterworld.com/img/i_n400052_35.webp"
+            ],
+            "twoPiece": "DEF increased by 100.",
+            "fourPiece": "Picking up Mora restores 300 HP."
         },
-        "2-Piece": "DEF increased by 100.",
-        "4-Piece": "Picking up Mora restores 300 HP."
-    },
-    "11": {
-        "Set Name": "Scholar",
-        "Images": {
-            "0": "https://genshin.honeyhunterworld.com/img/i_n400057_35.webp",
-            "1": "https://genshin.honeyhunterworld.com/img/i_n400058_35.webp"
+        {
+            "setName": "Scholar",
+            "images": [
+                "https://genshin.honeyhunterworld.com/img/i_n400057_35.webp",
+                "https://genshin.honeyhunterworld.com/img/i_n400058_35.webp"
+            ],
+            "twoPiece": "Energy Recharge +20%",
+            "fourPiece": "Gaining Elemental Particles or Orbs gives 3 Energy to all party members who have a bow or a catalyst equipped. Can only occur once every 3s."
         },
-        "2-Piece": "Energy Recharge +20%",
-        "4-Piece": "Gaining Elemental Particles or Orbs gives 3 Energy to all party members who have a bow or a catalyst equipped. Can only occur once every 3s."
-    },
-    "12": {
-        "Set Name": "Traveling Doctor",
-        "Images": {
-            "0": "https://genshin.honeyhunterworld.com/img/i_n400060_35.webp",
-            "1": "https://genshin.honeyhunterworld.com/img/i_n400061_35.webp",
-            "2": "https://genshin.honeyhunterworld.com/img/i_n400062_35.webp"
+        {
+            "setName": "Traveling Doctor",
+            "images": [
+                "https://genshin.honeyhunterworld.com/img/i_n400060_35.webp",
+                "https://genshin.honeyhunterworld.com/img/i_n400061_35.webp",
+                "https://genshin.honeyhunterworld.com/img/i_n400062_35.webp"
+            ],
+            "twoPiece": "Increases incoming healing by 20%.",
+            "fourPiece": "Using Elemental Burst restores 20% HP."
         },
-        "2-Piece": "Increases incoming healing by 20%.",
-        "4-Piece": "Using Elemental Burst restores 20% HP."
-    },
-    "13": {
-        "Set Name": "Blizzard Strayer",
-        "Images": {
-            "0": "https://genshin.honeyhunterworld.com/img/i_n400068_35.webp",
-            "1": "https://genshin.honeyhunterworld.com/img/i_n400069_35.webp"
+        {
+            "setName": "Blizzard Strayer",
+            "images": [
+                "https://genshin.honeyhunterworld.com/img/i_n400068_35.webp",
+                "https://genshin.honeyhunterworld.com/img/i_n400069_35.webp"
+            ],
+            "twoPiece": "Cryo DMG Bonus +15%",
+            "fourPiece": "When a character attacks an opponent affected by Cryo, their CRIT Rate is increased by 20%. If the opponent is Frozen, CRIT Rate is increased by an additional 20%."
         },
-        "2-Piece": "Cryo DMG Bonus +15%",
-        "4-Piece": "When a character attacks an opponent affected by Cryo, their CRIT Rate is increased by 20%. If the opponent is Frozen, CRIT Rate is increased by an additional 20%."
-    },
-    "14": {
-        "Set Name": "Thundersoother",
-        "Images": {
-            "0": "https://genshin.honeyhunterworld.com/img/i_n400073_35.webp",
-            "1": "https://genshin.honeyhunterworld.com/img/i_n400074_35.webp"
+        {
+            "setName": "Thundersoother",
+            "images": [
+                "https://genshin.honeyhunterworld.com/img/i_n400073_35.webp",
+                "https://genshin.honeyhunterworld.com/img/i_n400074_35.webp"
+            ],
+            "twoPiece": "Electro RES increased by 40%.",
+            "fourPiece": "Increases DMG against opponents affected by Electro by 35%."
         },
-        "2-Piece": "Electro RES increased by 40%.",
-        "4-Piece": "Increases DMG against opponents affected by Electro by 35%."
-    },
-    "15": {
-        "Set Name": "Lavawalker",
-        "Images": {
-            "0": "https://genshin.honeyhunterworld.com/img/i_n400078_35.webp",
-            "1": "https://genshin.honeyhunterworld.com/img/i_n400079_35.webp"
+        {
+            "setName": "Lavawalker",
+            "images": [
+                "https://genshin.honeyhunterworld.com/img/i_n400078_35.webp",
+                "https://genshin.honeyhunterworld.com/img/i_n400079_35.webp"
+            ],
+            "twoPiece": "Pyro RES increased by 40%.",
+            "fourPiece": "Increases DMG against opponents affected by Pyro by 35%."
         },
-        "2-Piece": "Pyro RES increased by 40%.",
-        "4-Piece": "Increases DMG against opponents affected by Pyro by 35%."
-    },
-    "16": {
-        "Set Name": "Maiden Beloved",
-        "Images": {
-            "0": "https://genshin.honeyhunterworld.com/img/i_n400083_35.webp",
-            "1": "https://genshin.honeyhunterworld.com/img/i_n400084_35.webp"
+        {
+            "setName": "Maiden Beloved",
+            "images": [
+                "https://genshin.honeyhunterworld.com/img/i_n400083_35.webp",
+                "https://genshin.honeyhunterworld.com/img/i_n400084_35.webp"
+            ],
+            "twoPiece": "Character Healing Effectiveness +15%",
+            "fourPiece": "Using an Elemental Skill or Burst increases healing received by all party members by 20% for 10s."
         },
-        "2-Piece": "Character Healing Effectiveness +15%",
-        "4-Piece": "Using an Elemental Skill or Burst increases healing received by all party members by 20% for 10s."
-    },
-    "17": {
-        "Set Name": "Gladiator's Finale",
-        "Images": {
-            "0": "https://genshin.honeyhunterworld.com/img/i_n400088_35.webp",
-            "1": "https://genshin.honeyhunterworld.com/img/i_n400089_35.webp"
+        {
+            "setName": "Gladiator's Finale",
+            "images": [
+                "https://genshin.honeyhunterworld.com/img/i_n400088_35.webp",
+                "https://genshin.honeyhunterworld.com/img/i_n400089_35.webp"
+            ],
+            "twoPiece": "ATK +18%.",
+            "fourPiece": "If the wielder of this artifact set uses a Sword, Claymore or Polearm, increases their Normal Attack DMG by 35%."
         },
-        "2-Piece": "ATK +18%.",
-        "4-Piece": "If the wielder of this artifact set uses a Sword, Claymore or Polearm, increases their Normal Attack DMG by 35%."
-    },
-    "18": {
-        "Set Name": "Viridescent Venerer",
-        "Images": {
-            "0": "https://genshin.honeyhunterworld.com/img/i_n400093_35.webp",
-            "1": "https://genshin.honeyhunterworld.com/img/i_n400094_35.webp"
+        {
+            "setName": "Viridescent Venerer",
+            "images": [
+                "https://genshin.honeyhunterworld.com/img/i_n400093_35.webp",
+                "https://genshin.honeyhunterworld.com/img/i_n400094_35.webp"
+            ],
+            "twoPiece": "Anemo DMG Bonus +15%",
+            "fourPiece": "Increases Swirl DMG by 60%. Decreases opponent's Elemental RES to the element infused in the Swirl by 40% for 10s."
         },
-        "2-Piece": "Anemo DMG Bonus +15%",
-        "4-Piece": "Increases Swirl DMG by 60%. Decreases opponent's Elemental RES to the element infused in the Swirl by 40% for 10s."
-    },
-    "19": {
-        "Set Name": "Wanderer's Troupe",
-        "Images": {
-            "0": "https://genshin.honeyhunterworld.com/img/i_n400098_35.webp",
-            "1": "https://genshin.honeyhunterworld.com/img/i_n400099_35.webp"
+        {
+            "setName": "Wanderer's Troupe",
+            "images": [
+                "https://genshin.honeyhunterworld.com/img/i_n400098_35.webp",
+                "https://genshin.honeyhunterworld.com/img/i_n400099_35.webp"
+            ],
+            "twoPiece": "Increases Elemental Mastery by 80.",
+            "fourPiece": "Increases Charged Attack DMG by 35% if the character uses a Catalyst or a Bow."
         },
-        "2-Piece": "Increases Elemental Mastery by 80.",
-        "4-Piece": "Increases Charged Attack DMG by 35% if the character uses a Catalyst or a Bow."
-    },
-    "20": {
-        "Set Name": "Thundering Fury",
-        "Images": {
-            "0": "https://genshin.honeyhunterworld.com/img/i_n400108_35.webp",
-            "1": "https://genshin.honeyhunterworld.com/img/i_n400109_35.webp"
+        {
+            "setName": "Thundering Fury",
+            "images": [
+                "https://genshin.honeyhunterworld.com/img/i_n400108_35.webp",
+                "https://genshin.honeyhunterworld.com/img/i_n400109_35.webp"
+            ],
+            "twoPiece": "Electro DMG Bonus +15%",
+            "fourPiece": "Increases DMG caused by Overloaded, Electro-Charged, Superconduct, and Hyperbloom by 40%, and the DMG Bonus conferred by Aggravate is increased by 20%. When Quicken or the aforementioned Elemental Reactions are triggered, Elemental Skill CD is decreased by 1s. Can only occur once every 0.8s."
         },
-        "2-Piece": "Electro DMG Bonus +15%",
-        "4-Piece": "Increases DMG caused by Overloaded, Electro-Charged, Superconduct, and Hyperbloom by 40%, and the DMG Bonus conferred by Aggravate is increased by 20%. When Quicken or the aforementioned Elemental Reactions are triggered, Elemental Skill CD is decreased by 1s. Can only occur once every 0.8s."
-    },
-    "21": {
-        "Set Name": "Crimson Witch of Flames",
-        "Images": {
-            "0": "https://genshin.honeyhunterworld.com/img/i_n400113_35.webp",
-            "1": "https://genshin.honeyhunterworld.com/img/i_n400114_35.webp"
+        {
+            "setName": "Crimson Witch of Flames",
+            "images": [
+                "https://genshin.honeyhunterworld.com/img/i_n400113_35.webp",
+                "https://genshin.honeyhunterworld.com/img/i_n400114_35.webp"
+            ],
+            "twoPiece": "Pyro DMG Bonus +15%",
+            "fourPiece": "Increases Overloaded, Burning, and Burgeon DMG by 40%. Increases Vaporize and Melt DMG by 15%. Using Elemental Skill increases the 2-Piece Set Bonus by 50% of its starting value for 10s. Max 3 stacks."
         },
-        "2-Piece": "Pyro DMG Bonus +15%",
-        "4-Piece": "Increases Overloaded, Burning, and Burgeon DMG by 40%. Increases Vaporize and Melt DMG by 15%. Using Elemental Skill increases the 2-Piece Set Bonus by 50% of its starting value for 10s. Max 3 stacks."
-    },
-    "22": {
-        "Set Name": "Noblesse Oblige",
-        "Images": {
-            "0": "https://genshin.honeyhunterworld.com/img/i_n400118_35.webp",
-            "1": "https://genshin.honeyhunterworld.com/img/i_n400119_35.webp"
+        {
+            "setName": "Noblesse Oblige",
+            "images": [
+                "https://genshin.honeyhunterworld.com/img/i_n400118_35.webp",
+                "https://genshin.honeyhunterworld.com/img/i_n400119_35.webp"
+            ],
+            "twoPiece": "Elemental Burst DMG +20%",
+            "fourPiece": "Using an Elemental Burst increases all party members' ATK by 20% for 12s. This effect cannot stack."
         },
-        "2-Piece": "Elemental Burst DMG +20%",
-        "4-Piece": "Using an Elemental Burst increases all party members' ATK by 20% for 12s. This effect cannot stack."
-    },
-    "23": {
-        "Set Name": "Bloodstained Chivalry",
-        "Images": {
-            "0": "https://genshin.honeyhunterworld.com/img/i_n400123_35.webp",
-            "1": "https://genshin.honeyhunterworld.com/img/i_n400124_35.webp"
+        {
+            "setName": "Bloodstained Chivalry",
+            "images": [
+                "https://genshin.honeyhunterworld.com/img/i_n400123_35.webp",
+                "https://genshin.honeyhunterworld.com/img/i_n400124_35.webp"
+            ],
+            "twoPiece": "Physical DMG +25%",
+            "fourPiece": "After defeating an opponent, increases Charged Attack DMG by 50%, and reduces its Stamina cost to 0 for 10s."
         },
-        "2-Piece": "Physical DMG +25%",
-        "4-Piece": "After defeating an opponent, increases Charged Attack DMG by 50%, and reduces its Stamina cost to 0 for 10s."
-    },
-    "24": {
-        "Set Name": "Prayers for Illumination",
-        "Images": {
-            "0": "https://genshin.honeyhunterworld.com/img/i_n400127_35.webp",
-            "1": "https://genshin.honeyhunterworld.com/img/i_n400128_35.webp"
+        {
+            "setName": "Prayers for Illumination",
+            "images": [
+                "https://genshin.honeyhunterworld.com/img/i_n400127_35.webp",
+                "https://genshin.honeyhunterworld.com/img/i_n400128_35.webp"
+            ],
+            "twoPiece": "Affected by Pyro for 40% less time",
+            "fourPiece": ""
         },
-        "2-Piece": "Affected by Pyro for 40% less time",
-        "4-Piece": ""
-    },
-    "25": {
-        "Set Name": "Prayers for Destiny",
-        "Images": {
-            "0": "https://genshin.honeyhunterworld.com/img/i_n400132_35.webp",
-            "1": "https://genshin.honeyhunterworld.com/img/i_n400133_35.webp"
+        {
+            "setName": "Prayers for Destiny",
+            "images": [
+                "https://genshin.honeyhunterworld.com/img/i_n400132_35.webp",
+                "https://genshin.honeyhunterworld.com/img/i_n400133_35.webp"
+            ],
+            "twoPiece": "Affected by Hydro for 40% less time",
+            "fourPiece": ""
         },
-        "2-Piece": "Affected by Hydro for 40% less time",
-        "4-Piece": ""
-    },
-    "26": {
-        "Set Name": "Prayers for Wisdom",
-        "Images": {
-            "0": "https://genshin.honeyhunterworld.com/img/i_n400137_35.webp",
-            "1": "https://genshin.honeyhunterworld.com/img/i_n400138_35.webp"
+        {
+            "setName": "Prayers for Wisdom",
+            "images": [
+                "https://genshin.honeyhunterworld.com/img/i_n400137_35.webp",
+                "https://genshin.honeyhunterworld.com/img/i_n400138_35.webp"
+            ],
+            "twoPiece": "Affected by Electro for 40% less time",
+            "fourPiece": ""
         },
-        "2-Piece": "Affected by Electro for 40% less time",
-        "4-Piece": ""
-    },
-    "27": {
-        "Set Name": "Prayers to Springtime",
-        "Images": {
-            "0": "https://genshin.honeyhunterworld.com/img/i_n400147_35.webp",
-            "1": "https://genshin.honeyhunterworld.com/img/i_n400148_35.webp"
+        {
+            "setName": "Prayers to Springtime",
+            "images": [
+                "https://genshin.honeyhunterworld.com/img/i_n400147_35.webp",
+                "https://genshin.honeyhunterworld.com/img/i_n400148_35.webp"
+            ],
+            "twoPiece": "Affected by Cryo for 40% less time",
+            "fourPiece": ""
         },
-        "2-Piece": "Affected by Cryo for 40% less time",
-        "4-Piece": ""
-    },
-    "28": {
-        "Set Name": "Archaic Petra",
-        "Images": {
-            "0": "https://genshin.honeyhunterworld.com/img/i_n400153_35.webp",
-            "1": "https://genshin.honeyhunterworld.com/img/i_n400154_35.webp"
+        {
+            "setName": "Archaic Petra",
+            "images": [
+                "https://genshin.honeyhunterworld.com/img/i_n400153_35.webp",
+                "https://genshin.honeyhunterworld.com/img/i_n400154_35.webp"
+            ],
+            "twoPiece": "Gain a 15% Geo DMG Bonus.",
+            "fourPiece": "Upon obtaining an Elemental Shard created through a Crystallize Reaction, all party members gain a 35% DMG Bonus for that particular element for 10s. Only one form of Elemental DMG Bonus can be gained in this manner at any one time."
         },
-        "2-Piece": "Gain a 15% Geo DMG Bonus.",
-        "4-Piece": "Upon obtaining an Elemental Shard created through a Crystallize Reaction, all party members gain a 35% DMG Bonus for that particular element for 10s. Only one form of Elemental DMG Bonus can be gained in this manner at any one time."
-    },
-    "29": {
-        "Set Name": "Retracing Bolide",
-        "Images": {
-            "0": "https://genshin.honeyhunterworld.com/img/i_n400158_35.webp",
-            "1": "https://genshin.honeyhunterworld.com/img/i_n400159_35.webp"
+        {
+            "setName": "Retracing Bolide",
+            "images": [
+                "https://genshin.honeyhunterworld.com/img/i_n400158_35.webp",
+                "https://genshin.honeyhunterworld.com/img/i_n400159_35.webp"
+            ],
+            "twoPiece": "Increases Shield Strength by 35%.",
+            "fourPiece": "While protected by a shield, gain an additional 40% Normal and Charged Attack DMG."
         },
-        "2-Piece": "Increases Shield Strength by 35%.",
-        "4-Piece": "While protected by a shield, gain an additional 40% Normal and Charged Attack DMG."
-    },
-    "30": {
-        "Set Name": "Heart of Depth",
-        "Images": {
-            "0": "https://genshin.honeyhunterworld.com/img/i_n400163_35.webp",
-            "1": "https://genshin.honeyhunterworld.com/img/i_n400164_35.webp"
+        {
+            "setName": "Heart of Depth",
+            "images": [
+                "https://genshin.honeyhunterworld.com/img/i_n400163_35.webp",
+                "https://genshin.honeyhunterworld.com/img/i_n400164_35.webp"
+            ],
+            "twoPiece": "Hydro DMG Bonus +15%",
+            "fourPiece": "After using Elemental Skill, increases Normal Attack and Charged Attack DMG by 30% for 15s."
         },
-        "2-Piece": "Hydro DMG Bonus +15%",
-        "4-Piece": "After using Elemental Skill, increases Normal Attack and Charged Attack DMG by 30% for 15s."
-    },
-    "31": {
-        "Set Name": "Tenacity of the Millelith",
-        "Images": {
-            "0": "https://genshin.honeyhunterworld.com/img/i_n400168_35.webp",
-            "1": "https://genshin.honeyhunterworld.com/img/i_n400169_35.webp"
+        {
+            "setName": "Tenacity of the Millelith",
+            "images": [
+                "https://genshin.honeyhunterworld.com/img/i_n400168_35.webp",
+                "https://genshin.honeyhunterworld.com/img/i_n400169_35.webp"
+            ],
+            "twoPiece": "HP +20%",
+            "fourPiece": "When an Elemental Skill hits an opponent, the ATK of all nearby party members is increased by 20% and their Shield Strength is increased by 30% for 3s. This effect can be triggered once every 0.5s. This effect can still be triggered even when the character who is using this artifact set is not on the field."
         },
-        "2-Piece": "HP +20%",
-        "4-Piece": "When an Elemental Skill hits an opponent, the ATK of all nearby party members is increased by 20% and their Shield Strength is increased by 30% for 3s. This effect can be triggered once every 0.5s. This effect can still be triggered even when the character who is using this artifact set is not on the field."
-    },
-    "32": {
-        "Set Name": "Pale Flame",
-        "Images": {
-            "0": "https://genshin.honeyhunterworld.com/img/i_n400173_35.webp",
-            "1": "https://genshin.honeyhunterworld.com/img/i_n400174_35.webp"
+        {
+            "setName": "Pale Flame",
+            "images": [
+                "https://genshin.honeyhunterworld.com/img/i_n400173_35.webp",
+                "https://genshin.honeyhunterworld.com/img/i_n400174_35.webp"
+            ],
+            "twoPiece": "Physical DMG is increased by 25%.",
+            "fourPiece": "When an Elemental Skill hits an opponent, ATK is increased by 9% for 7s. This effect stacks up to 2 times and can be triggered once every 0.3s. Once 2 stacks are reached, the 2-set effect is increased by 100%."
         },
-        "2-Piece": "Physical DMG is increased by 25%.",
-        "4-Piece": "When an Elemental Skill hits an opponent, ATK is increased by 9% for 7s. This effect stacks up to 2 times and can be triggered once every 0.3s. Once 2 stacks are reached, the 2-set effect is increased by 100%."
-    },
-    "33": {
-        "Set Name": "Shimenawa's Reminiscence",
-        "Images": {
-            "0": "https://genshin.honeyhunterworld.com/img/i_n400178_35.webp",
-            "1": "https://genshin.honeyhunterworld.com/img/i_n400179_35.webp"
+        {
+            "setName": "Shimenawa's Reminiscence",
+            "images": [
+                "https://genshin.honeyhunterworld.com/img/i_n400178_35.webp",
+                "https://genshin.honeyhunterworld.com/img/i_n400179_35.webp"
+            ],
+            "twoPiece": "ATK +18%.",
+            "fourPiece": "When casting an Elemental Skill, if the character has 15 or more Energy, they lose 15 Energy and Normal/Charged/Plunging Attack DMG is increased by 50% for 10s. This effect will not trigger again during that duration."
         },
-        "2-Piece": "ATK +18%.",
-        "4-Piece": "When casting an Elemental Skill, if the character has 15 or more Energy, they lose 15 Energy and Normal/Charged/Plunging Attack DMG is increased by 50% for 10s. This effect will not trigger again during that duration."
-    },
-    "34": {
-        "Set Name": "Emblem of Severed Fate",
-        "Images": {
-            "0": "https://genshin.honeyhunterworld.com/img/i_n400183_35.webp",
-            "1": "https://genshin.honeyhunterworld.com/img/i_n400184_35.webp"
+        {
+            "setName": "Emblem of Severed Fate",
+            "images": [
+                "https://genshin.honeyhunterworld.com/img/i_n400183_35.webp",
+                "https://genshin.honeyhunterworld.com/img/i_n400184_35.webp"
+            ],
+            "twoPiece": "Energy Recharge +20%",
+            "fourPiece": "Increases Elemental Burst DMG by 25% of Energy Recharge. A maximum of 75% bonus DMG can be obtained in this way."
         },
-        "2-Piece": "Energy Recharge +20%",
-        "4-Piece": "Increases Elemental Burst DMG by 25% of Energy Recharge. A maximum of 75% bonus DMG can be obtained in this way."
-    },
-    "35": {
-        "Set Name": "Husk of Opulent Dreams",
-        "Images": {
-            "0": "https://genshin.honeyhunterworld.com/img/i_n400188_35.webp",
-            "1": "https://genshin.honeyhunterworld.com/img/i_n400189_35.webp"
+        {
+            "setName": "Husk of Opulent Dreams",
+            "images": [
+                "https://genshin.honeyhunterworld.com/img/i_n400188_35.webp",
+                "https://genshin.honeyhunterworld.com/img/i_n400189_35.webp"
+            ],
+            "twoPiece": "DEF +30%",
+            "fourPiece": "A character equipped with this Artifact set will obtain the Curiosity effect in the following conditions: When on the field, the character gains 1 stack after hitting an opponent with a Geo attack, triggering a maximum of once every 0.3s. When off the field, the character gains 1 stack every 3s. Curiosity can stack up to 4 times, each providing 6% DEF and a 6% Geo DMG Bonus. When 6 seconds pass without gaining a Curiosity stack, 1 stack is lost."
         },
-        "2-Piece": "DEF +30%",
-        "4-Piece": "A character equipped with this Artifact set will obtain the Curiosity effect in the following conditions: When on the field, the character gains 1 stack after hitting an opponent with a Geo attack, triggering a maximum of once every 0.3s. When off the field, the character gains 1 stack every 3s. Curiosity can stack up to 4 times, each providing 6% DEF and a 6% Geo DMG Bonus. When 6 seconds pass without gaining a Curiosity stack, 1 stack is lost."
-    },
-    "36": {
-        "Set Name": "Ocean-Hued Clam",
-        "Images": {
-            "0": "https://genshin.honeyhunterworld.com/img/i_n400193_35.webp",
-            "1": "https://genshin.honeyhunterworld.com/img/i_n400194_35.webp"
+        {
+            "setName": "Ocean-Hued Clam",
+            "images": [
+                "https://genshin.honeyhunterworld.com/img/i_n400193_35.webp",
+                "https://genshin.honeyhunterworld.com/img/i_n400194_35.webp"
+            ],
+            "twoPiece": "Healing Bonus +15%.",
+            "fourPiece": "When the character equipping this artifact set heals a character in the party, a Sea-Dyed Foam will appear for 3 seconds, accumulating the amount of HP recovered from healing (including overflow healing). At the end of the duration, the Sea-Dyed Foam will explode, dealing DMG to nearby opponents based on 90% of the accumulated healing. (This DMG is calculated similarly to Reactions such as Electro-Charged, and Superconduct, but is not affected by Elemental Mastery, Character Levels, or Reaction DMG Bonuses). Only one Sea-Dyed Foam can be produced every 3.5 seconds. Each Sea-Dyed Foam can accumulate up to 30,000 HP (including overflow healing). There can be no more than one Sea-Dyed Foam active at any given time. This effect can still be triggered even when the character who is using this artifact set is not on the field."
         },
-        "2-Piece": "Healing Bonus +15%.",
-        "4-Piece": "When the character equipping this artifact set heals a character in the party, a Sea-Dyed Foam will appear for 3 seconds, accumulating the amount of HP recovered from healing (including overflow healing). At the end of the duration, the Sea-Dyed Foam will explode, dealing DMG to nearby opponents based on 90% of the accumulated healing. (This DMG is calculated similarly to Reactions such as Electro-Charged, and Superconduct, but is not affected by Elemental Mastery, Character Levels, or Reaction DMG Bonuses). Only one Sea-Dyed Foam can be produced every 3.5 seconds. Each Sea-Dyed Foam can accumulate up to 30,000 HP (including overflow healing). There can be no more than one Sea-Dyed Foam active at any given time. This effect can still be triggered even when the character who is using this artifact set is not on the field."
-    },
-    "37": {
-        "Set Name": "Vermillion Hereafter",
-        "Images": {
-            "0": "https://genshin.honeyhunterworld.com/img/i_n400198_35.webp",
-            "1": "https://genshin.honeyhunterworld.com/img/i_n400199_35.webp"
+        {
+            "setName": "Vermillion Hereafter",
+            "images": [
+                "https://genshin.honeyhunterworld.com/img/i_n400198_35.webp",
+                "https://genshin.honeyhunterworld.com/img/i_n400199_35.webp"
+            ],
+            "twoPiece": "ATK +18%.",
+            "fourPiece": "After using an Elemental Burst, this character will gain the Nascent Light effect, increasing their ATK by 8% for 16s. When the character's HP decreases, their ATK will further increase by 10%. This further increase can occur this way a maximum of 4 times. This effect can be triggered once every 0.8s. Nascent Light will be dispelled when the character leaves the field. If an Elemental Burst is used again during the duration of Nascent Light, the original Nascent Light will be dispelled."
         },
-        "2-Piece": "ATK +18%.",
-        "4-Piece": "After using an Elemental Burst, this character will gain the Nascent Light effect, increasing their ATK by 8% for 16s. When the character's HP decreases, their ATK will further increase by 10%. This further increase can occur this way a maximum of 4 times. This effect can be triggered once every 0.8s. Nascent Light will be dispelled when the character leaves the field. If an Elemental Burst is used again during the duration of Nascent Light, the original Nascent Light will be dispelled."
-    },
-    "38": {
-        "Set Name": "Echoes of an Offering",
-        "Images": {
-            "0": "https://genshin.honeyhunterworld.com/img/i_n400203_35.webp",
-            "1": "https://genshin.honeyhunterworld.com/img/i_n400204_35.webp"
+        {
+            "setName": "Echoes of an Offering",
+            "images": [
+                "https://genshin.honeyhunterworld.com/img/i_n400203_35.webp",
+                "https://genshin.honeyhunterworld.com/img/i_n400204_35.webp"
+            ],
+            "twoPiece": "ATK +18%.",
+            "fourPiece": "When Normal Attacks hit opponents, there is a 36% chance that it will trigger Valley Rite, which will increase Normal Attack DMG by 70% of ATK. This effect will be dispelled 0.05s after a Normal Attack deals DMG. If a Normal Attack fails to trigger Valley Rite, the odds of it triggering the next time will increase by 20%. This trigger can occur once every 0.2s."
         },
-        "2-Piece": "ATK +18%.",
-        "4-Piece": "When Normal Attacks hit opponents, there is a 36% chance that it will trigger Valley Rite, which will increase Normal Attack DMG by 70% of ATK. This effect will be dispelled 0.05s after a Normal Attack deals DMG. If a Normal Attack fails to trigger Valley Rite, the odds of it triggering the next time will increase by 20%. This trigger can occur once every 0.2s."
-    },
-    "39": {
-        "Set Name": "Deepwood Memories",
-        "Images": {
-            "0": "https://genshin.honeyhunterworld.com/img/i_n400208_35.webp",
-            "1": "https://genshin.honeyhunterworld.com/img/i_n400209_35.webp"
+        {
+            "setName": "Deepwood Memories",
+            "images": [
+                "https://genshin.honeyhunterworld.com/img/i_n400208_35.webp",
+                "https://genshin.honeyhunterworld.com/img/i_n400209_35.webp"
+            ],
+            "twoPiece": "Dendro DMG Bonus +15%.",
+            "fourPiece": "After Elemental Skills or Bursts hit opponents, the targets' Dendro RES will be decreased by 30% for 8s. This effect can be triggered even if the equipping character is not on the field."
         },
-        "2-Piece": "Dendro DMG Bonus +15%.",
-        "4-Piece": "After Elemental Skills or Bursts hit opponents, the targets' Dendro RES will be decreased by 30% for 8s. This effect can be triggered even if the equipping character is not on the field."
-    },
-    "40": {
-        "Set Name": "Gilded Dreams",
-        "Images": {
-            "0": "https://genshin.honeyhunterworld.com/img/i_n400213_35.webp",
-            "1": "https://genshin.honeyhunterworld.com/img/i_n400214_35.webp"
+        {
+            "setName": "Gilded Dreams",
+            "images": [
+                "https://genshin.honeyhunterworld.com/img/i_n400213_35.webp",
+                "https://genshin.honeyhunterworld.com/img/i_n400214_35.webp"
+            ],
+            "twoPiece": "Increases Elemental Mastery by 80.",
+            "fourPiece": "Within 8s of triggering an Elemental Reaction, the character equipping this will obtain buffs based on the Elemental Type of the other party members. ATK is increased by 14% for each party member whose Elemental Type is the same as the equipping character, and Elemental Mastery is increased by 50 for every party member with a different Elemental Type. Each of the aforementioned buffs will count up to 3 characters. This effect can be triggered once every 8s. The character who equips this can still trigger its effects when not on the field."
         },
-        "2-Piece": "Increases Elemental Mastery by 80.",
-        "4-Piece": "Within 8s of triggering an Elemental Reaction, the character equipping this will obtain buffs based on the Elemental Type of the other party members. ATK is increased by 14% for each party member whose Elemental Type is the same as the equipping character, and Elemental Mastery is increased by 50 for every party member with a different Elemental Type. Each of the aforementioned buffs will count up to 3 characters. This effect can be triggered once every 8s. The character who equips this can still trigger its effects when not on the field."
-    },
-    "41": {
-        "Set Name": "Desert Pavilion Chronicle",
-        "Images": {
-            "0": "https://genshin.honeyhunterworld.com/img/i_n400220_35.webp",
-            "1": "https://genshin.honeyhunterworld.com/img/i_n400221_35.webp"
+        {
+            "setName": "Desert Pavilion Chronicle",
+            "images": [
+                "https://genshin.honeyhunterworld.com/img/i_n400220_35.webp",
+                "https://genshin.honeyhunterworld.com/img/i_n400221_35.webp"
+            ],
+            "twoPiece": "Anemo DMG Bonus +15%",
+            "fourPiece": "When Charged Attacks hit opponents, the equipping character's Normal Attack SPD will increase by 10% while Normal, Charged, and Plunging Attack DMG will increase by 40% for 15s."
         },
-        "2-Piece": "Anemo DMG Bonus +15%",
-        "4-Piece": "When Charged Attacks hit opponents, the equipping character's Normal Attack SPD will increase by 10% while Normal, Charged, and Plunging Attack DMG will increase by 40% for 15s."
-    },
-    "42": {
-        "Set Name": "Flower of Paradise Lost",
-        "Images": {
-            "0": "https://genshin.honeyhunterworld.com/img/i_n400230_35.webp",
-            "1": "https://genshin.honeyhunterworld.com/img/i_n400231_35.webp"
+        {
+            "setName": "Flower of Paradise Lost",
+            "images": [
+                "https://genshin.honeyhunterworld.com/img/i_n400230_35.webp",
+                "https://genshin.honeyhunterworld.com/img/i_n400231_35.webp"
+            ],
+            "twoPiece": "Increases Elemental Mastery by 80.",
+            "fourPiece": "The equipping character's Bloom, Hyperbloom, and Burgeon reaction DMG are increased by 40%. Additionally, after the equipping character triggers Bloom, Hyperbloom, or Burgeon, they will gain another 25% bonus to the effect mentioned prior. Each stack of this lasts 10s. Max 4 stacks simultaneously. This effect can only be triggered once per second. The character who equips this can still trigger its effects when not on the field."
         },
-        "2-Piece": "Increases Elemental Mastery by 80.",
-        "4-Piece": "The equipping character's Bloom, Hyperbloom, and Burgeon reaction DMG are increased by 40%. Additionally, after the equipping character triggers Bloom, Hyperbloom, or Burgeon, they will gain another 25% bonus to the effect mentioned prior. Each stack of this lasts 10s. Max 4 stacks simultaneously. This effect can only be triggered once per second. The character who equips this can still trigger its effects when not on the field."
-    },
-    "43": {
-        "Set Name": "Nymph's Dream",
-        "Images": {
-            "0": "https://genshin.honeyhunterworld.com/img/i_n400240_35.webp",
-            "1": "https://genshin.honeyhunterworld.com/img/i_n400241_35.webp"
+        {
+            "setName": "Nymph's Dream",
+            "images": [
+                "https://genshin.honeyhunterworld.com/img/i_n400240_35.webp",
+                "https://genshin.honeyhunterworld.com/img/i_n400241_35.webp"
+            ],
+            "twoPiece": "Hydro DMG Bonus +15%",
+            "fourPiece": "After Normal, Charged, and Plunging Attacks, Elemental Skills, and Elemental Bursts hit opponents, 1 stack of Mirrored Nymph will be triggered, lasting 8s. When under the effect of 1, 2, or 3 or more Mirrored Nymph stacks, ATK will be increased by 7%/16%/25%, and Hydro DMG Bonus will be increased by 4%/9%/15%. Mirrored Nymph stacks created by Normal, Charged, and Plunging Attacks, Elemental Skills, and Elemental Bursts exist independently."
         },
-        "2-Piece": "Hydro DMG Bonus +15%",
-        "4-Piece": "After Normal, Charged, and Plunging Attacks, Elemental Skills, and Elemental Bursts hit opponents, 1 stack of Mirrored Nymph will be triggered, lasting 8s. When under the effect of 1, 2, or 3 or more Mirrored Nymph stacks, ATK will be increased by 7%/16%/25%, and Hydro DMG Bonus will be increased by 4%/9%/15%. Mirrored Nymph stacks created by Normal, Charged, and Plunging Attacks, Elemental Skills, and Elemental Bursts exist independently."
-    },
-    "44": {
-        "Set Name": "Vourukasha's Glow",
-        "Images": {
-            "0": "https://genshin.honeyhunterworld.com/img/i_n400250_35.webp",
-            "1": "https://genshin.honeyhunterworld.com/img/i_n400251_35.webp"
-        },
-        "2-Piece": "HP +20%",
-        "4-Piece": "Elemental Skill and Elemental Burst DMG will be increased by 10%. After the equipping character takes DMG, the aforementioned DMG Bonus is increased by 80% for 5s. This effect increase can have 5 stacks. The duration of each stack is counted independently. These effects can be triggered even when the equipping character is not on the field."
-    }
+        {
+            "setName": "Vourukasha's Glow",
+            "images": [
+                "https://genshin.honeyhunterworld.com/img/i_n400250_35.webp",
+                "https://genshin.honeyhunterworld.com/img/i_n400251_35.webp"
+            ],
+            "twoPiece": "HP +20%",
+            "fourPiece": "Elemental Skill and Elemental Burst DMG will be increased by 10%. After the equipping character takes DMG, the aforementioned DMG Bonus is increased by 80% for 5s. This effect increase can have 5 stacks. The duration of each stack is counted independently. These effects can be triggered even when the equipping character is not on the field."
+        }
+    ]
 }
