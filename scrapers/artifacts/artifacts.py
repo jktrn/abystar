@@ -1,4 +1,3 @@
-import requests
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from bs4 import BeautifulSoup
@@ -32,16 +31,12 @@ def get_artifacts():
     table = soup.find('table', {'class': 'genshin_table'})
 
     rows = table.find_all('tr')
-    image_set = {}
-    for row in rows:
-        image_list = row.find_all('img')
-        list = []
-        set_name = ''
-        for image in image_list:
-            link = base_url + image['src']
-            set_name = image['alt']
-            list.append(link)
-        image_set[set_name] = list
+    
+    image_set = {
+        row.find_all('img')[0]['alt']: [
+            base_url + image['src'] for image in row.find_all('img')
+        ] for row in rows if row.find_all('img')
+    }
 
     data = [[cell.text for cell in row.find_all('td')[2:]] for row in rows[1:]]
     header = [[cell.text for cell in row.find_all('td')[1]] for row in rows[1:]]
