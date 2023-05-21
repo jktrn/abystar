@@ -40,7 +40,7 @@ sorted_character_data = dict(sorted(character_data.items(), key=lambda item: ite
 # Don't worry all this does is remove the female traveler :insanity:
 unique_character_data = {k: v for k, v in sorted_character_data.items() if list(sorted_character_data.values()).index(v) == list(sorted_character_data.keys()).index(k)}
 
-with open('../character-paths.json', 'w') as f:
+with open('paths.json', 'w') as f:
     json.dump(unique_character_data, f, indent=4)
 
 driver.quit()

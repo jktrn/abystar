@@ -96,7 +96,7 @@ def fetch_character_data(character: str) -> dict[str, dict[str, dict[str, str]]]
 
 # Comment this out if you want to test with a single character. Uncomment the bottom lines
 def fetch_all_characters_data() -> dict[str, dict[str, dict[str, dict[str, str]]]]:
-    with open('../character-paths.json', 'r') as f:
+    with open('paths/paths.json', 'r') as f:
         characters = json.load(f)
 
     all_data = {}
@@ -109,7 +109,7 @@ def fetch_all_characters_data() -> dict[str, dict[str, dict[str, dict[str, str]]
     return all_data
 
 def save_data_to_file(data: dict[str, dict[str, dict[str, dict[str, str]]]]) -> None:
-    with open('character-data.json', 'w') as f:
+    with open('characters.json', 'w') as f:
         json.dump(data, f, indent=4)
 
 if __name__ == '__main__':
