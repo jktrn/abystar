@@ -1,7 +1,7 @@
 {
     "Albedo": {
         "name": "Albedo",
-        "image": "https://genshin.honeyhunterworld.com/img/albedo_038_gacha_card_w145.webp",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/3/30/Albedo_Icon.png",
         "weapon": "Sword",
         "vision": "Geo",
         "rarity": 5,
@@ -508,7 +508,7 @@
     },
     "Alhaitham": {
         "name": "Alhaitham",
-        "image": "https://genshin.honeyhunterworld.com/img/alhatham_078_gacha_card_w145.webp",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2c/Alhaitham_Icon.png",
         "weapon": "Sword",
         "vision": "Dendro",
         "rarity": 5,
@@ -1117,7 +1117,7 @@
     },
     "Aloy": {
         "name": "Aloy",
-        "image": "https://genshin.honeyhunterworld.com/img/aloy_062_gacha_card_w145.webp",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/e/e5/Aloy_Icon.png",
         "weapon": "Bow",
         "vision": "Cryo",
         "rarity": 4,
@@ -1658,7 +1658,7 @@
     },
     "Amber": {
         "name": "Amber",
-        "image": "https://genshin.honeyhunterworld.com/img/ambor_021_gacha_card_w145.webp",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/7/75/Amber_Icon.png",
         "weapon": "Bow",
         "vision": "Pyro",
         "rarity": 4,
@@ -2165,7 +2165,7 @@
     },
     "Arataki Itto": {
         "name": "Arataki Itto",
-        "image": "https://genshin.honeyhunterworld.com/img/itto_057_gacha_card_w145.webp",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/7/7b/Arataki_Itto_Icon.png",
         "weapon": "Claymore",
         "vision": "Geo",
         "rarity": 5,
@@ -2723,7 +2723,7 @@
     },
     "Baizhu": {
         "name": "Baizhu",
-        "image": "https://genshin.honeyhunterworld.com/img/baizhuer_082_gacha_card_w145.webp",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/c/cb/Baizhu_Icon.png",
         "weapon": "Catalyst",
         "vision": "Dendro",
         "rarity": 5,
@@ -3247,7 +3247,7 @@
     },
     "Barbara": {
         "name": "Barbara",
-        "image": "https://genshin.honeyhunterworld.com/img/barbara_014_gacha_card_w145.webp",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/6/6a/Barbara_Icon.png",
         "weapon": "Catalyst",
         "vision": "Hydro",
         "rarity": 4,
@@ -3737,7 +3737,7 @@
     },
     "Beidou": {
         "name": "Beidou",
-        "image": "https://genshin.honeyhunterworld.com/img/beidou_024_gacha_card_w145.webp",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/e/e1/Beidou_Icon.png",
         "weapon": "Claymore",
         "vision": "Electro",
         "rarity": 4,
@@ -4312,7 +4312,7 @@
     },
     "Bennett": {
         "name": "Bennett",
-        "image": "https://genshin.honeyhunterworld.com/img/bennett_032_gacha_card_w145.webp",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/7/79/Bennett_Icon.png",
         "weapon": "Sword",
         "vision": "Pyro",
         "rarity": 4,
@@ -4870,7 +4870,7 @@
     },
     "Candace": {
         "name": "Candace",
-        "image": "https://genshin.honeyhunterworld.com/img/candace_072_gacha_card_w145.webp",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/d/dd/Candace_Icon.png",
         "weapon": "Polearm",
         "vision": "Hydro",
         "rarity": 4,
@@ -5428,7 +5428,7 @@
     },
     "Chongyun": {
         "name": "Chongyun",
-        "image": "https://genshin.honeyhunterworld.com/img/chongyun_036_gacha_card_w145.webp",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Chongyun_Icon.png",
         "weapon": "Claymore",
         "vision": "Cryo",
         "rarity": 4,
@@ -5935,7 +5935,7 @@
     },
     "Collei": {
         "name": "Collei",
-        "image": "https://genshin.honeyhunterworld.com/img/collei_067_gacha_card_w145.webp",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/a/a2/Collei_Icon.png",
         "weapon": "Bow",
         "vision": "Dendro",
         "rarity": 4,
@@ -6408,7 +6408,7 @@
     },
     "Cyno": {
         "name": "Cyno",
-        "image": "https://genshin.honeyhunterworld.com/img/cyno_071_gacha_card_w145.webp",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/3/31/Cyno_Icon.png",
         "weapon": "Polearm",
         "vision": "Electro",
         "rarity": 5,
@@ -7085,7 +7085,7 @@
     },
     "Dehya": {
         "name": "Dehya",
-        "image": "https://genshin.honeyhunterworld.com/img/dehya_079_gacha_card_w145.webp",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/3/3f/Dehya_Icon.png",
         "weapon": "Claymore",
         "vision": "Pyro",
         "rarity": 5,
@@ -7677,7 +7677,7 @@
     },
     "Diluc": {
         "name": "Diluc",
-        "image": "https://genshin.honeyhunterworld.com/img/diluc_016_gacha_card_w145.webp",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/3/3d/Diluc_Icon.png",
         "weapon": "Claymore",
         "vision": "Pyro",
         "rarity": 5,
@@ -8235,7 +8235,7 @@
     },
     "Diona": {
         "name": "Diona",
-        "image": "https://genshin.honeyhunterworld.com/img/diona_039_gacha_card_w145.webp",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/4/40/Diona_Icon.png",
         "weapon": "Bow",
         "vision": "Cryo",
         "rarity": 4,
@@ -8793,7 +8793,7 @@
     },
     "Dori": {
         "name": "Dori",
-        "image": "https://genshin.honeyhunterworld.com/img/dori_068_gacha_card_w145.webp",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/5/54/Dori_Icon.png",
         "weapon": "Claymore",
         "vision": "Electro",
         "rarity": 4,
@@ -9317,7 +9317,7 @@
     },
     "Eula": {
         "name": "Eula",
-        "image": "https://genshin.honeyhunterworld.com/img/eula_051_gacha_card_w145.webp",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Eula_Icon.png",
         "weapon": "Claymore",
         "vision": "Cryo",
         "rarity": 5,
@@ -9994,7 +9994,7 @@
     },
     "Faruzan": {
         "name": "Faruzan",
-        "image": "https://genshin.honeyhunterworld.com/img/faruzan_076_gacha_card_w145.webp",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/b/b2/Faruzan_Icon.png",
         "weapon": "Bow",
         "vision": "Anemo",
         "rarity": 4,
@@ -10552,7 +10552,7 @@
     },
     "Fischl": {
         "name": "Fischl",
-        "image": "https://genshin.honeyhunterworld.com/img/fischl_031_gacha_card_w145.webp",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Fischl_Icon.png",
         "weapon": "Bow",
         "vision": "Electro",
         "rarity": 4,
@@ -11042,7 +11042,7 @@
     },
     "Ganyu": {
         "name": "Ganyu",
-        "image": "https://genshin.honeyhunterworld.com/img/ganyu_037_gacha_card_w145.webp",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/7/79/Ganyu_Icon.png",
         "weapon": "Bow",
         "vision": "Cryo",
         "rarity": 5,
@@ -11600,7 +11600,7 @@
     },
     "Gorou": {
         "name": "Gorou",
-        "image": "https://genshin.honeyhunterworld.com/img/gorou_055_gacha_card_w145.webp",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/f/fe/Gorou_Icon.png",
         "weapon": "Bow",
         "vision": "Geo",
         "rarity": 4,
@@ -12124,7 +12124,7 @@
     },
     "Hu Tao": {
         "name": "Hu Tao",
-        "image": "https://genshin.honeyhunterworld.com/img/hutao_046_gacha_card_w145.webp",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/e/e9/Hu_Tao_Icon.png",
         "weapon": "Polearm",
         "vision": "Pyro",
         "rarity": 5,
@@ -12716,7 +12716,7 @@
     },
     "Jean": {
         "name": "Jean",
-        "image": "https://genshin.honeyhunterworld.com/img/qin_003_gacha_card_w145.webp",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/6/64/Jean_Icon.png",
         "weapon": "Sword",
         "vision": "Anemo",
         "rarity": 5,
@@ -13257,7 +13257,7 @@
     },
     "Kaedehara Kazuha": {
         "name": "Kaedehara Kazuha",
-        "image": "https://genshin.honeyhunterworld.com/img/kazuha_047_gacha_card_w145.webp",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/e/e3/Kaedehara_Kazuha_Icon.png",
         "weapon": "Sword",
         "vision": "Anemo",
         "rarity": 5,
@@ -13798,7 +13798,7 @@
     },
     "Kaeya": {
         "name": "Kaeya",
-        "image": "https://genshin.honeyhunterworld.com/img/kaeya_015_gacha_card_w145.webp",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/b/b6/Kaeya_Icon.png",
         "weapon": "Sword",
         "vision": "Cryo",
         "rarity": 4,
@@ -14271,7 +14271,7 @@
     },
     "Kamisato Ayaka": {
         "name": "Kamisato Ayaka",
-        "image": "https://genshin.honeyhunterworld.com/img/ayaka_002_gacha_card_w145.webp",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Kamisato_Ayaka_Icon.png",
         "weapon": "Sword",
         "vision": "Cryo",
         "rarity": 5,
@@ -14819,7 +14819,7 @@
     },
     "Kamisato Ayato": {
         "name": "Kamisato Ayato",
-        "image": "https://genshin.honeyhunterworld.com/img/ayato_066_gacha_card_w145.webp",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/27/Kamisato_Ayato_Icon.png",
         "weapon": "Sword",
         "vision": "Hydro",
         "rarity": 5,
@@ -15411,7 +15411,7 @@
     },
     "Kaveh": {
         "name": "Kaveh",
-        "image": "https://genshin.honeyhunterworld.com/img/kaveh_081_gacha_card_w145.webp",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/1/1f/Kaveh_Icon.png",
         "weapon": "Claymore",
         "vision": "Dendro",
         "rarity": 4,
@@ -15918,7 +15918,7 @@
     },
     "Keqing": {
         "name": "Keqing",
-        "image": "https://genshin.honeyhunterworld.com/img/keqing_042_gacha_card_w145.webp",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/5/52/Keqing_Icon.png",
         "weapon": "Sword",
         "vision": "Electro",
         "rarity": 5,
@@ -16442,7 +16442,7 @@
     },
     "Kirara": {
         "name": "Kirara",
-        "image": "https://genshin.honeyhunterworld.com/img/momoka_061_gacha_card_w145.webp",
+        "icon": null,
         "weapon": "Sword",
         "vision": "Dendro",
         "rarity": 4,
@@ -17017,7 +17017,7 @@
     },
     "Klee": {
         "name": "Klee",
-        "image": "https://genshin.honeyhunterworld.com/img/klee_029_gacha_card_w145.webp",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/9/9c/Klee_Icon.png",
         "weapon": "Catalyst",
         "vision": "Pyro",
         "rarity": 5,
@@ -17490,7 +17490,7 @@
     },
     "Kujou Sara": {
         "name": "Kujou Sara",
-        "image": "https://genshin.honeyhunterworld.com/img/sara_056_gacha_card_w145.webp",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/d/df/Kujou_Sara_Icon.png",
         "weapon": "Bow",
         "vision": "Electro",
         "rarity": 4,
@@ -17997,7 +17997,7 @@
     },
     "Kuki Shinobu": {
         "name": "Kuki Shinobu",
-        "image": "https://genshin.honeyhunterworld.com/img/shinobu_065_gacha_card_w145.webp",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/b/b3/Kuki_Shinobu_Icon.png",
         "weapon": "Sword",
         "vision": "Electro",
         "rarity": 4,
@@ -18538,7 +18538,7 @@
     },
     "Layla": {
         "name": "Layla",
-        "image": "https://genshin.honeyhunterworld.com/img/layla_074_gacha_card_w145.webp",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/1/1a/Layla_Icon.png",
         "weapon": "Sword",
         "vision": "Cryo",
         "rarity": 4,
@@ -19028,7 +19028,7 @@
     },
     "Lisa": {
         "name": "Lisa",
-        "image": "https://genshin.honeyhunterworld.com/img/lisa_006_gacha_card_w145.webp",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/6/65/Lisa_Icon.png",
         "weapon": "Catalyst",
         "vision": "Electro",
         "rarity": 4,
@@ -19569,7 +19569,7 @@
     },
     "Mika": {
         "name": "Mika",
-        "image": "https://genshin.honeyhunterworld.com/img/mika_080_gacha_card_w145.webp",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/d/dd/Mika_Icon.png",
         "weapon": "Polearm",
         "vision": "Cryo",
         "rarity": 4,
@@ -20144,7 +20144,7 @@
     },
     "Mona": {
         "name": "Mona",
-        "image": "https://genshin.honeyhunterworld.com/img/mona_041_gacha_card_w145.webp",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/4/41/Mona_Icon.png",
         "weapon": "Catalyst",
         "vision": "Hydro",
         "rarity": 5,
@@ -20692,7 +20692,7 @@
     },
     "Nahida": {
         "name": "Nahida",
-        "image": "https://genshin.honeyhunterworld.com/img/nahida_073_gacha_card_w145.webp",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/f/f9/Nahida_Icon.png",
         "weapon": "Catalyst",
         "vision": "Dendro",
         "rarity": 5,
@@ -21267,7 +21267,7 @@
     },
     "Nilou": {
         "name": "Nilou",
-        "image": "https://genshin.honeyhunterworld.com/img/nilou_070_gacha_card_w145.webp",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/5/58/Nilou_Icon.png",
         "weapon": "Sword",
         "vision": "Hydro",
         "rarity": 5,
@@ -21808,7 +21808,7 @@
     },
     "Ningguang": {
         "name": "Ningguang",
-        "image": "https://genshin.honeyhunterworld.com/img/ningguang_027_gacha_card_w145.webp",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/e/e0/Ningguang_Icon.png",
         "weapon": "Catalyst",
         "vision": "Geo",
         "rarity": 4,
@@ -22230,7 +22230,7 @@
     },
     "Noelle": {
         "name": "Noelle",
-        "image": "https://genshin.honeyhunterworld.com/img/noel_034_gacha_card_w145.webp",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/8/8e/Noelle_Icon.png",
         "weapon": "Claymore",
         "vision": "Geo",
         "rarity": 4,
@@ -22822,7 +22822,7 @@
     },
     "Qiqi": {
         "name": "Qiqi",
-        "image": "https://genshin.honeyhunterworld.com/img/qiqi_035_gacha_card_w145.webp",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/b/b3/Qiqi_Icon.png",
         "weapon": "Sword",
         "vision": "Cryo",
         "rarity": 5,
@@ -23380,7 +23380,7 @@
     },
     "Raiden Shogun": {
         "name": "Raiden Shogun",
-        "image": "https://genshin.honeyhunterworld.com/img/shougun_052_gacha_card_w145.webp",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/24/Raiden_Shogun_Icon.png",
         "weapon": "Polearm",
         "vision": "Electro",
         "rarity": 5,
@@ -24130,7 +24130,7 @@
     },
     "Razor": {
         "name": "Razor",
-        "image": "https://genshin.honeyhunterworld.com/img/razor_020_gacha_card_w145.webp",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/b/b8/Razor_Icon.png",
         "weapon": "Claymore",
         "vision": "Electro",
         "rarity": 4,
@@ -24756,7 +24756,7 @@
     },
     "Rosaria": {
         "name": "Rosaria",
-        "image": "https://genshin.honeyhunterworld.com/img/rosaria_045_gacha_card_w145.webp",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Rosaria_Icon.png",
         "weapon": "Polearm",
         "vision": "Cryo",
         "rarity": 4,
@@ -25246,7 +25246,7 @@
     },
     "Sangonomiya Kokomi": {
         "name": "Sangonomiya Kokomi",
-        "image": "https://genshin.honeyhunterworld.com/img/kokomi_054_gacha_card_w145.webp",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/f/ff/Sangonomiya_Kokomi_Icon.png",
         "weapon": "Catalyst",
         "vision": "Hydro",
         "rarity": 5,
@@ -25792,7 +25792,7 @@
     },
     "Sayu": {
         "name": "Sayu",
-        "image": "https://genshin.honeyhunterworld.com/img/sayu_053_gacha_card_w145.webp",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/22/Sayu_Icon.png",
         "weapon": "Claymore",
         "vision": "Anemo",
         "rarity": 4,
@@ -26418,7 +26418,7 @@
     },
     "Shenhe": {
         "name": "Shenhe",
-        "image": "https://genshin.honeyhunterworld.com/img/shenhe_063_gacha_card_w145.webp",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Shenhe_Icon.png",
         "weapon": "Polearm",
         "vision": "Cryo",
         "rarity": 5,
@@ -27010,7 +27010,7 @@
     },
     "Shikanoin Heizou": {
         "name": "Shikanoin Heizou",
-        "image": "https://genshin.honeyhunterworld.com/img/heizo_059_gacha_card_w145.webp",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/20/Shikanoin_Heizou_Icon.png",
         "weapon": "Catalyst",
         "vision": "Anemo",
         "rarity": 4,
@@ -27534,7 +27534,7 @@
     },
     "Sucrose": {
         "name": "Sucrose",
-        "image": "https://genshin.honeyhunterworld.com/img/sucrose_043_gacha_card_w145.webp",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/0/0e/Sucrose_Icon.png",
         "weapon": "Catalyst",
         "vision": "Anemo",
         "rarity": 4,
@@ -28007,7 +28007,7 @@
     },
     "Tartaglia": {
         "name": "Tartaglia",
-        "image": "https://genshin.honeyhunterworld.com/img/tartaglia_033_gacha_card_w145.webp",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/8/85/Tartaglia_Icon.png",
         "weapon": "Bow",
         "vision": "Hydro",
         "rarity": 5,
@@ -28769,7 +28769,7 @@
     },
     "Thoma": {
         "name": "Thoma",
-        "image": "https://genshin.honeyhunterworld.com/img/tohma_050_gacha_card_w145.webp",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/5/5b/Thoma_Icon.png",
         "weapon": "Polearm",
         "vision": "Pyro",
         "rarity": 4,
@@ -29327,7 +29327,7 @@
     },
     "Tighnari": {
         "name": "Tighnari",
-        "image": "https://genshin.honeyhunterworld.com/img/tighnari_069_gacha_card_w145.webp",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/8/87/Tighnari_Icon.png",
         "weapon": "Bow",
         "vision": "Dendro",
         "rarity": 5,
@@ -29851,7 +29851,7 @@
     },
     "Traveler": {
         "name": "Traveler",
-        "image": "https://genshin.honeyhunterworld.com/img/playerboy_005_gacha_card_w145.webp",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/5/59/Traveler_Icon.png",
         "weapon": "Multi",
         "vision": "None",
         "rarity": 1,
@@ -31539,7 +31539,7 @@
     },
     "Venti": {
         "name": "Venti",
-        "image": "https://genshin.honeyhunterworld.com/img/venti_022_gacha_card_w145.webp",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/f/f1/Venti_Icon.png",
         "weapon": "Bow",
         "vision": "Anemo",
         "rarity": 5,
@@ -32080,7 +32080,7 @@
     },
     "Wanderer": {
         "name": "Wanderer",
-        "image": "https://genshin.honeyhunterworld.com/img/wanderer_075_gacha_card_w145.webp",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/f/f8/Wanderer_Icon.png",
         "weapon": "Catalyst",
         "vision": "Anemo",
         "rarity": 5,
@@ -32553,7 +32553,7 @@
     },
     "Xiangling": {
         "name": "Xiangling",
-        "image": "https://genshin.honeyhunterworld.com/img/xiangling_023_gacha_card_w145.webp",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/3/39/Xiangling_Icon.png",
         "weapon": "Polearm",
         "vision": "Pyro",
         "rarity": 4,
@@ -33077,7 +33077,7 @@
     },
     "Xiao": {
         "name": "Xiao",
-        "image": "https://genshin.honeyhunterworld.com/img/xiao_026_gacha_card_w145.webp",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/f/fd/Xiao_Icon.png",
         "weapon": "Polearm",
         "vision": "Anemo",
         "rarity": 5,
@@ -33584,7 +33584,7 @@
     },
     "Xingqiu": {
         "name": "Xingqiu",
-        "image": "https://genshin.honeyhunterworld.com/img/xingqiu_025_gacha_card_w145.webp",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/d/d4/Xingqiu_Icon.png",
         "weapon": "Sword",
         "vision": "Hydro",
         "rarity": 4,
@@ -34091,7 +34091,7 @@
     },
     "Xinyan": {
         "name": "Xinyan",
-        "image": "https://genshin.honeyhunterworld.com/img/xinyan_044_gacha_card_w145.webp",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/24/Xinyan_Icon.png",
         "weapon": "Claymore",
         "vision": "Pyro",
         "rarity": 4,
@@ -34683,7 +34683,7 @@
     },
     "Yae Miko": {
         "name": "Yae Miko",
-        "image": "https://genshin.honeyhunterworld.com/img/yae_058_gacha_card_w145.webp",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Yae_Miko_Icon.png",
         "weapon": "Catalyst",
         "vision": "Electro",
         "rarity": 5,
@@ -35190,7 +35190,7 @@
     },
     "Yanfei": {
         "name": "Yanfei",
-        "image": "https://genshin.honeyhunterworld.com/img/feiyan_048_gacha_card_w145.webp",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/5/54/Yanfei_Icon.png",
         "weapon": "Catalyst",
         "vision": "Pyro",
         "rarity": 4,
@@ -35697,7 +35697,7 @@
     },
     "Yaoyao": {
         "name": "Yaoyao",
-        "image": "https://genshin.honeyhunterworld.com/img/yaoyao_077_gacha_card_w145.webp",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/8/83/Yaoyao_Icon.png",
         "weapon": "Polearm",
         "vision": "Dendro",
         "rarity": 4,
@@ -36255,7 +36255,7 @@
     },
     "Yelan": {
         "name": "Yelan",
-        "image": "https://genshin.honeyhunterworld.com/img/yelan_060_gacha_card_w145.webp",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/d/d3/Yelan_Icon.png",
         "weapon": "Bow",
         "vision": "Hydro",
         "rarity": 5,
@@ -36762,7 +36762,7 @@
     },
     "Yoimiya": {
         "name": "Yoimiya",
-        "image": "https://genshin.honeyhunterworld.com/img/yoimiya_049_gacha_card_w145.webp",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Yoimiya_Icon.png",
         "weapon": "Bow",
         "vision": "Pyro",
         "rarity": 5,
@@ -37286,7 +37286,7 @@
     },
     "Yun Jin": {
         "name": "Yun Jin",
-        "image": "https://genshin.honeyhunterworld.com/img/yunjin_064_gacha_card_w145.webp",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/9/9c/Yun_Jin_Icon.png",
         "weapon": "Polearm",
         "vision": "Geo",
         "rarity": 4,
@@ -37844,7 +37844,7 @@
     },
     "Zhongli": {
         "name": "Zhongli",
-        "image": "https://genshin.honeyhunterworld.com/img/zhongli_030_gacha_card_w145.webp",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/a/a6/Zhongli_Icon.png",
         "weapon": "Polearm",
         "vision": "Geo",
         "rarity": 5,
