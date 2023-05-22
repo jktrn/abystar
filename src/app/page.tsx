@@ -1,49 +1,23 @@
 'use client'
 
-import { useState, useEffect } from 'react'
-import { formatCharacterName } from '../utils/formatCharacterName'
+import { useState } from 'react'
 import CustomOption from '../components/CustomOption'
 import { Character } from '../types/Character'
 import Select from 'react-select'
-
-const getImageUrl = (character: string) => {
-    const isTraveler = character.startsWith('traveler-')
-    return isTraveler
-        ? `https://api.genshin.dev/characters/${character}/icon-big-lumine`
-        : `https://api.genshin.dev/characters/${character}/icon-big`
-}
+import charactersData from '../data/characters/characters.json'
 
 export default function Home() {
-    const [characters, setCharacters] = useState<Character[]>([])
     const [character, setCharacter] = useState<Character | null>(null)
 
-    useEffect(() => {
-        const fetchCharacters = async () => {
-            try {
-                const response = await fetch('https://api.genshin.dev/characters')
-                const data = await response.json()
-                const characters = await Promise.all(
-                    data.map(async (character: string) => {
-                        const response = await fetch(
-                            `https://api.genshin.dev/characters/${character}`
-                        )
-                        const characterData = await response.json()
-                        return {
-                            name: formatCharacterName(character),
-                            image: getImageUrl(character),
-                            vision: characterData.vision,
-                            rarity: characterData.rarity,
-                        }
-                    })
-                )
-                setCharacters(characters)
-            } catch (error) {
-                console.error(error)
-            }
-        }
-
-        fetchCharacters()
-    }, [])
+    const characters = Object.values(charactersData).map(
+        (characterData: any) => ({
+            name: characterData.name,
+            image: characterData.icon,
+            vision: characterData.vision,
+            rarity: characterData.rarity,
+            baseStats: characterData.baseStats,
+        })
+    )
 
     const options = characters.map((character) => ({
         value: character,
@@ -76,7 +50,9 @@ export default function Home() {
                         value={options.find(
                             (option) => option.value === character
                         )}
-                        onChange={(option) => setCharacter(option!.value)}
+                        onChange={(option) => {
+                            setCharacter(option!.value)
+                        }}
                         options={options}
                         components={{ Option: CustomOption }}
                         styles={{
@@ -99,6 +75,45 @@ export default function Home() {
                     <img src={character.image} alt={character.name} />
                     <p>Vision: {character.vision}</p>
                     <p>Rarity: {character.rarity}</p>
+                    {/* <h3 className="text-lg font-bold mt-4 mb-2">Base Stats:</h3>
+                    <table className="table-auto border-collapse border border-gray-400">
+                        <thead>
+                            <tr>
+                                <th className="border border-gray-400 px-4 py-2 text-gray-800">
+                                    Stat
+                                </th>
+                                {Object.keys(character.baseStats.HP).map(
+                                    (key) => (
+                                        <th
+                                            key={key}
+                                            className="border border-gray-400 px-4 py-2 text-gray-800"
+                                        >
+                                            {key}
+                                        </th>
+                                    )
+                                )}
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {Object.entries(character.baseStats).map(
+                                ([stat, values]) => (
+                                    <tr key={stat}>
+                                        <td className="border border-gray-400 px-4 py-2 text-gray-800">
+                                            {stat}
+                                        </td>
+                                        {Object.values(values).map((value) => (
+                                            <td
+                                                key={value}
+                                                className="border border-gray-400 px-4 py-2 text-gray-800"
+                                            >
+                                                {value}
+                                            </td>
+                                        ))}
+                                    </tr>
+                                )
+                            )}
+                        </tbody>
+                    </table> */}
                 </div>
             )}
         </main>
