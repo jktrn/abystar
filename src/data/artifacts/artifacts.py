@@ -2,8 +2,10 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from bs4 import BeautifulSoup
 import json
+import os
 
 base_url = 'https://genshin.honeyhunterworld.com'
+current_dir = os.path.dirname(os.path.abspath(__file__))
 
 def separate_bonus(string: str):
     index = string.find("4-Piece")
@@ -56,7 +58,8 @@ def get_artifacts():
     return {"artifacts": data_list}
 
 def save_data_to_file(data: dict[str, dict[str, dict[str, str]]]) -> None:
-    with open('artifacts.json', 'w') as f:
+    file_path = os.path.join(current_dir, "artifacts.json")
+    with open(file_path, 'w') as f:
         json.dump(data, f, indent=4)
 
 if __name__ == '__main__':

@@ -2,8 +2,10 @@ import requests
 from bs4 import BeautifulSoup
 import json
 from tqdm import tqdm
+import os
 
 base_url = 'https://genshin.honeyhunterworld.com'
+current_dir = os.path.dirname(os.path.abspath(__file__))
 
 def fetch_weapon_data(weapon: str) -> dict[str, dict[str, dict[str, str]]]:
     url = f'{base_url}/{weapon}/'
@@ -57,7 +59,8 @@ def fetch_weapon_data(weapon: str) -> dict[str, dict[str, dict[str, str]]]:
     return all_data
 
 def fetch_all_weapons_data() -> dict[str, dict[str, dict[str, str]]]:
-    with open('paths/paths.json', 'r') as f:
+    paths_path = os.path.join(current_dir, "paths", "paths.json", 'r')
+    with open(paths_path) as f:
         weapons = json.load(f)
 
     all_data = {}
@@ -72,7 +75,8 @@ def fetch_all_weapons_data() -> dict[str, dict[str, dict[str, str]]]:
     return all_data
 
 def save_data_to_file(data: dict[str, dict[str, dict[str, str]]]) -> None:
-    with open('weapons.json', 'w') as f:
+    file_path = os.path.join(current_dir, "weapons.json")
+    with open(file_path, 'w') as f:
         json.dump(data, f, indent=4)
 
 if __name__ == '__main__':
