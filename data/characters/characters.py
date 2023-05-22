@@ -35,7 +35,22 @@ def fetch_character_data(character: str) -> dict[str, dict[str, dict[str, str]]]
     page = requests.get(url)
     soup = BeautifulSoup(page.content, 'html.parser')
 
-    all_data = {"baseStats": {}, "activeSkills": [], "passiveSkills": [], "constellations": []}
+    all_data = {}
+
+    # Fetch character info
+    info_table = soup.find('table', {'class': 'main_table'})
+    rows = info_table.find_all('tr')
+    data = {row.find_all('td')[0].text: row.find_all('td')[-1].text for row in rows[1:]}
+
+    all_data["name"] = rows[0].find_all('td')[-1].text
+    all_data["image"] = base_url + rows[0].find('img')['src'].split('?')[0]
+    all_data["weapon"] = rows[5].find_all('td')[-1].text.strip()
+    all_data["vision"] = data["Vision (Introduced)"]
+    all_data["rarity"] = len(rows[4].find_all('img'))
+    all_data["description"] = data["Description"]
+    if "Title" in all_data:
+        all_data["title"] = data["Title"]
+    all_data["occupation"] = data["Occupation"]
 
     # Fetch character stats and add them to the `baseStats` object
     stats_table = soup.find('table', {'class': 'stat_table'})
@@ -50,6 +65,8 @@ def fetch_character_data(character: str) -> dict[str, dict[str, dict[str, str]]]
 
     # Fetch character skills and add them to the `activeSkills`, `passiveSkills`, and `constellations` arrays
     tables = soup.find_all('table', {'class': 'skill_table'})
+    all_data["activeSkills"] = []
+    all_data["passiveSkills"] = []
 
     for table in tables:
         skill_name_tag = table.find_all('td')[1].find('a')
@@ -94,14 +111,15 @@ def fetch_character_data(character: str) -> dict[str, dict[str, dict[str, str]]]
 
     return all_data
 
-# Comment this out if you want to test with a single character. Uncomment the bottom lines
 def fetch_all_characters_data() -> dict[str, dict[str, dict[str, dict[str, str]]]]:
     with open('paths/paths.json', 'r') as f:
         characters = json.load(f)
 
     all_data = {}
 
-    for character, name in tqdm(characters.items()):
+    pbar = tqdm(characters.items(), position=0)
+    for character, name in pbar:
+        pbar.set_description(f'Fetching {name}\'s data')
         data_dict = fetch_character_data(character)
         if data_dict:
             all_data[name] = data_dict
@@ -113,10 +131,10 @@ def save_data_to_file(data: dict[str, dict[str, dict[str, dict[str, str]]]]) -> 
         json.dump(data, f, indent=4)
 
 if __name__ == '__main__':
-    # Comment this out if you want to test with a single character
-    all_data = fetch_all_characters_data()
-    save_data_to_file(all_data)
+     # Comment this out if you want to test with a single character
+     all_data = fetch_all_characters_data()
+     save_data_to_file(all_data)
 
-    # Uncomment these if you want to test a single character
-    # ayaka_data = fetch_character_data('ayaka')
-    # print(json.dumps(ayaka_data, indent=4))
+     # Uncomment these if you want to test a single character
+    #  ayaka_data = fetch_character_data('ayaka')
+    #  print(json.dumps(ayaka_data, indent=4))

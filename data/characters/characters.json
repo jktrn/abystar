@@ -1,5 +1,12 @@
 {
     "Albedo": {
+        "name": "Albedo",
+        "image": "https://genshin.honeyhunterworld.com/img/albedo_038_gacha_card_w145.webp",
+        "weapon": "Sword",
+        "vision": "Geo",
+        "rarity": 5,
+        "description": "A genius known as the Kreideprinz, he is the Chief Alchemist and Captain of the Investigation Team of the Knights of Favonius.",
+        "occupation": "Knights of Favonius",
         "baseStats": {
             "1": {
                 "HP": "1030",
@@ -500,6 +507,13 @@
         ]
     },
     "Alhaitham": {
+        "name": "Alhaitham",
+        "image": "https://genshin.honeyhunterworld.com/img/alhatham_078_gacha_card_w145.webp",
+        "weapon": "Sword",
+        "vision": "Dendro",
+        "rarity": 5,
+        "description": "The current scribe of the Sumeru Akademiya, a man endowed with extraordinary intelligence and talent. He lives free \u2014 free from the searching eyes of ordinary people, anyway.",
+        "occupation": "Sumeru Akademiya",
         "baseStats": {
             "1": {
                 "HP": "1039",
@@ -1102,6 +1116,13 @@
         ]
     },
     "Aloy": {
+        "name": "Aloy",
+        "image": "https://genshin.honeyhunterworld.com/img/aloy_062_gacha_card_w145.webp",
+        "weapon": "Bow",
+        "vision": "Cryo",
+        "rarity": 4,
+        "description": "Formerly an outcast, now a hunter of unparalleled skill. Ready to do the right thing at any time.",
+        "occupation": "Wandering Heroine",
         "baseStats": {
             "1": {
                 "HP": "848",
@@ -1636,6 +1657,13 @@
         ]
     },
     "Amber": {
+        "name": "Amber",
+        "image": "https://genshin.honeyhunterworld.com/img/ambor_021_gacha_card_w145.webp",
+        "weapon": "Bow",
+        "vision": "Pyro",
+        "rarity": 4,
+        "description": "Always energetic and full of life, Amber's the best \u2014 albeit only \u2014 Outrider of the Knights of Favonius.",
+        "occupation": "Knights of Favonius",
         "baseStats": {
             "1": {
                 "HP": "793",
@@ -2136,6 +2164,13 @@
         ]
     },
     "Arataki Itto": {
+        "name": "Arataki Itto",
+        "image": "https://genshin.honeyhunterworld.com/img/itto_057_gacha_card_w145.webp",
+        "weapon": "Claymore",
+        "vision": "Geo",
+        "rarity": 5,
+        "description": "The first and greatest head of the Arataki Gang, famed throughout Inazuma City's Hanamizaka... Wait, what? You've never heard of them? Are you trying to be funny here?",
+        "occupation": "Arataki Gang",
         "baseStats": {
             "1": {
                 "HP": "1001",
@@ -2687,6 +2722,13 @@
         ]
     },
     "Baizhu": {
+        "name": "Baizhu",
+        "image": "https://genshin.honeyhunterworld.com/img/baizhuer_082_gacha_card_w145.webp",
+        "weapon": "Catalyst",
+        "vision": "Dendro",
+        "rarity": 5,
+        "description": "The owner of Bubu Pharmacy, who is rarely seen without the white snake named Changsheng. His medicinal knowledge is encyclopedic, and his personal intrigues subtle.",
+        "occupation": "Bubu Pharmacy",
         "baseStats": {
             "1": {
                 "HP": "1039",
@@ -3204,6 +3246,13 @@
         ]
     },
     "Barbara": {
+        "name": "Barbara",
+        "image": "https://genshin.honeyhunterworld.com/img/barbara_014_gacha_card_w145.webp",
+        "weapon": "Catalyst",
+        "vision": "Hydro",
+        "rarity": 4,
+        "description": "Every citizen of Mondstadt adores Barbara. She learned the word \"idol\" from a magazine.",
+        "occupation": "Church of Favonius",
         "baseStats": {
             "1": {
                 "HP": "821",
@@ -3687,6 +3736,13 @@
         ]
     },
     "Beidou": {
+        "name": "Beidou",
+        "image": "https://genshin.honeyhunterworld.com/img/beidou_024_gacha_card_w145.webp",
+        "weapon": "Claymore",
+        "vision": "Electro",
+        "rarity": 4,
+        "description": "Captain of her crew, The Crux. She's quite an unbound and forthright woman.",
+        "occupation": "The Crux",
         "baseStats": {
             "1": {
                 "HP": "1094",
@@ -4255,6 +4311,13 @@
         ]
     },
     "Bennett": {
+        "name": "Bennett",
+        "image": "https://genshin.honeyhunterworld.com/img/bennett_032_gacha_card_w145.webp",
+        "weapon": "Sword",
+        "vision": "Pyro",
+        "rarity": 4,
+        "description": "A good-natured adventurer from Mondstadt who's unfortunately extremely unlucky.",
+        "occupation": "Adventurers' Guild",
         "baseStats": {
             "1": {
                 "HP": "1039",
@@ -4806,6 +4869,13 @@
         ]
     },
     "Candace": {
+        "name": "Candace",
+        "image": "https://genshin.honeyhunterworld.com/img/candace_072_gacha_card_w145.webp",
+        "weapon": "Polearm",
+        "vision": "Hydro",
+        "rarity": 4,
+        "description": "A descendant of King Deshret with an amber left eye. The defender of Aaru Village.",
+        "occupation": "Aaru Village",
         "baseStats": {
             "1": {
                 "HP": "912",
@@ -5357,6 +5427,13 @@
         ]
     },
     "Chongyun": {
+        "name": "Chongyun",
+        "image": "https://genshin.honeyhunterworld.com/img/chongyun_036_gacha_card_w145.webp",
+        "weapon": "Claymore",
+        "vision": "Cryo",
+        "rarity": 4,
+        "description": "A young exorcist from a family of exorcists. He does everything he can to suppress his abundance of yang energy.",
+        "occupation": "Tianheng Thaumaturges",
         "baseStats": {
             "1": {
                 "HP": "921",
@@ -5857,6 +5934,13 @@
         ]
     },
     "Collei": {
+        "name": "Collei",
+        "image": "https://genshin.honeyhunterworld.com/img/collei_067_gacha_card_w145.webp",
+        "weapon": "Bow",
+        "vision": "Dendro",
+        "rarity": 4,
+        "description": "A trainee ranger active in Avidya Forest. Behind her enthusiastic words and actions hides a slightly introverted personality.",
+        "occupation": "Gandharva Ville",
         "baseStats": {
             "1": {
                 "HP": "821",
@@ -6323,6 +6407,13 @@
         ]
     },
     "Cyno": {
+        "name": "Cyno",
+        "image": "https://genshin.honeyhunterworld.com/img/cyno_071_gacha_card_w145.webp",
+        "weapon": "Polearm",
+        "vision": "Electro",
+        "rarity": 5,
+        "description": "The General Mahamatra in charge of supervising the researchers of the Akademiya. It is said that when he gets down to work, the General Mahamatra is even more efficient than the \"Great Vayuvyastra\" made by the Kshahrewar.",
+        "occupation": "Temple of Silence",
         "baseStats": {
             "1": {
                 "HP": "972",
@@ -6993,6 +7084,13 @@
         ]
     },
     "Dehya": {
+        "name": "Dehya",
+        "image": "https://genshin.honeyhunterworld.com/img/dehya_079_gacha_card_w145.webp",
+        "weapon": "Claymore",
+        "vision": "Pyro",
+        "rarity": 5,
+        "description": "A member of the Eremites, a mercenary organization that roams the sands of Sumeru. Valiant and powerful, she enjoys great fame amongst her fellow Eremites.",
+        "occupation": "The Eremites",
         "baseStats": {
             "1": {
                 "HP": "1220",
@@ -7578,6 +7676,13 @@
         ]
     },
     "Diluc": {
+        "name": "Diluc",
+        "image": "https://genshin.honeyhunterworld.com/img/diluc_016_gacha_card_w145.webp",
+        "weapon": "Claymore",
+        "vision": "Pyro",
+        "rarity": 5,
+        "description": "The tycoon of a winery empire in Mondstadt, unmatched in every possible way.",
+        "occupation": "Dawn Winery",
         "baseStats": {
             "1": {
                 "HP": "1011",
@@ -8129,6 +8234,13 @@
         ]
     },
     "Diona": {
+        "name": "Diona",
+        "image": "https://genshin.honeyhunterworld.com/img/diona_039_gacha_card_w145.webp",
+        "weapon": "Bow",
+        "vision": "Cryo",
+        "rarity": 4,
+        "description": "A young lady who has inherited trace amounts of non-human blood. She is the incredibly popular bartender of the Cat's Tail tavern.",
+        "occupation": "The Cat's Tail",
         "baseStats": {
             "1": {
                 "HP": "802",
@@ -8680,6 +8792,13 @@
         ]
     },
     "Dori": {
+        "name": "Dori",
+        "image": "https://genshin.honeyhunterworld.com/img/dori_068_gacha_card_w145.webp",
+        "weapon": "Claymore",
+        "vision": "Electro",
+        "rarity": 4,
+        "description": "An elusive merchant who has a fondness for glittering Mora.",
+        "occupation": "The Palace of Alcazarzaray",
         "baseStats": {
             "1": {
                 "HP": "1039",
@@ -9197,6 +9316,13 @@
         ]
     },
     "Eula": {
+        "name": "Eula",
+        "image": "https://genshin.honeyhunterworld.com/img/eula_051_gacha_card_w145.webp",
+        "weapon": "Claymore",
+        "vision": "Cryo",
+        "rarity": 5,
+        "description": "The Spindrift Knight, a scion of the old aristocracy, and the Captain of the Knights of Favonius Reconnaissance Company. The reason for which a descendant of the ancient nobles might join the Knights remains a great mystery in Mondstadt to this very day.",
+        "occupation": "Knights of Favonius",
         "baseStats": {
             "1": {
                 "HP": "1030",
@@ -9867,6 +9993,13 @@
         ]
     },
     "Faruzan": {
+        "name": "Faruzan",
+        "image": "https://genshin.honeyhunterworld.com/img/faruzan_076_gacha_card_w145.webp",
+        "weapon": "Bow",
+        "vision": "Anemo",
+        "rarity": 4,
+        "description": "A researcher from \"one hundred years ago.\" She enjoys self-identifying as everyone's senior, and has significant knowledge of ancient scripts and machines of all kinds.",
+        "occupation": "Haravatat",
         "baseStats": {
             "1": {
                 "HP": "802",
@@ -10418,6 +10551,13 @@
         ]
     },
     "Fischl": {
+        "name": "Fischl",
+        "image": "https://genshin.honeyhunterworld.com/img/fischl_031_gacha_card_w145.webp",
+        "weapon": "Bow",
+        "vision": "Electro",
+        "rarity": 4,
+        "description": "A mysterious girl who calls herself \"Prinzessin der Verurteilung\" and travels with a night raven named Oz.",
+        "occupation": "Adventurers' Guild",
         "baseStats": {
             "1": {
                 "HP": "770",
@@ -10901,6 +11041,13 @@
         ]
     },
     "Ganyu": {
+        "name": "Ganyu",
+        "image": "https://genshin.honeyhunterworld.com/img/ganyu_037_gacha_card_w145.webp",
+        "weapon": "Bow",
+        "vision": "Cryo",
+        "rarity": 5,
+        "description": "The secretary at Yuehai Pavilion. The blood of the qilin, an illuminated beast, flows within her veins.",
+        "occupation": "Yuehai Pavilion",
         "baseStats": {
             "1": {
                 "HP": "763",
@@ -11452,6 +11599,13 @@
         ]
     },
     "Gorou": {
+        "name": "Gorou",
+        "image": "https://genshin.honeyhunterworld.com/img/gorou_055_gacha_card_w145.webp",
+        "weapon": "Bow",
+        "vision": "Geo",
+        "rarity": 4,
+        "description": "The great general of Watatsumi Island's forces. He is deeply trusted by his subordinates.",
+        "occupation": "Watatsumi Island",
         "baseStats": {
             "1": {
                 "HP": "802",
@@ -11969,6 +12123,13 @@
         ]
     },
     "Hu Tao": {
+        "name": "Hu Tao",
+        "image": "https://genshin.honeyhunterworld.com/img/hutao_046_gacha_card_w145.webp",
+        "weapon": "Polearm",
+        "vision": "Pyro",
+        "rarity": 5,
+        "description": "The 77th Director of the Wangsheng Funeral Parlor. She took over the business at a rather young age.",
+        "occupation": "Wangsheng Funeral Parlor",
         "baseStats": {
             "1": {
                 "HP": "1211",
@@ -12554,6 +12715,13 @@
         ]
     },
     "Jean": {
+        "name": "Jean",
+        "image": "https://genshin.honeyhunterworld.com/img/qin_003_gacha_card_w145.webp",
+        "weapon": "Sword",
+        "vision": "Anemo",
+        "rarity": 5,
+        "description": "The righteous and rigorous Dandelion Knight, and Acting Grand Master of Mondstadt's Knights of Favonius.",
+        "occupation": "Knights of Favonius",
         "baseStats": {
             "1": {
                 "HP": "1144",
@@ -13088,6 +13256,13 @@
         ]
     },
     "Kaedehara Kazuha": {
+        "name": "Kaedehara Kazuha",
+        "image": "https://genshin.honeyhunterworld.com/img/kazuha_047_gacha_card_w145.webp",
+        "weapon": "Sword",
+        "vision": "Anemo",
+        "rarity": 5,
+        "description": "A wandering samurai from Inazuma who is currently with Liyue's Crux Fleet. A gentle and carefree soul whose heart hides a great many burdens from the past.",
+        "occupation": "The Crux",
         "baseStats": {
             "1": {
                 "HP": "1039",
@@ -13622,6 +13797,13 @@
         ]
     },
     "Kaeya": {
+        "name": "Kaeya",
+        "image": "https://genshin.honeyhunterworld.com/img/kaeya_015_gacha_card_w145.webp",
+        "weapon": "Sword",
+        "vision": "Cryo",
+        "rarity": 4,
+        "description": "An accomplished swordsman and a strategic thinker in the Knights of Favonius, rumored to hail from beyond Mondstadt.",
+        "occupation": "Knights of Favonius",
         "baseStats": {
             "1": {
                 "HP": "976",
@@ -14088,6 +14270,13 @@
         ]
     },
     "Kamisato Ayaka": {
+        "name": "Kamisato Ayaka",
+        "image": "https://genshin.honeyhunterworld.com/img/ayaka_002_gacha_card_w145.webp",
+        "weapon": "Sword",
+        "vision": "Cryo",
+        "rarity": 5,
+        "description": "Daughter of the Yashiro Commission's Kamisato Clan. Dignified and elegant, as well as wise and strong.",
+        "occupation": "Yashiro Commission",
         "baseStats": {
             "1": {
                 "HP": "1001",
@@ -14629,6 +14818,13 @@
         ]
     },
     "Kamisato Ayato": {
+        "name": "Kamisato Ayato",
+        "image": "https://genshin.honeyhunterworld.com/img/ayato_066_gacha_card_w145.webp",
+        "weapon": "Sword",
+        "vision": "Hydro",
+        "rarity": 5,
+        "description": "The young but highly accomplished head of the Yashiro Commission's Kamisato Clan. Cultured and polite, he is a man of many ways and means.",
+        "occupation": "Yashiro Commission",
         "baseStats": {
             "1": {
                 "HP": "1068",
@@ -15214,6 +15410,13 @@
         ]
     },
     "Kaveh": {
+        "name": "Kaveh",
+        "image": "https://genshin.honeyhunterworld.com/img/kaveh_081_gacha_card_w145.webp",
+        "weapon": "Claymore",
+        "vision": "Dendro",
+        "rarity": 4,
+        "description": "A renowned architect from Sumeru who perhaps cares a bit too much about too many things. He is an aesthete troubled by reality.",
+        "occupation": "Independent Design Studio",
         "baseStats": {
             "1": {
                 "HP": "1003",
@@ -15714,6 +15917,13 @@
         ]
     },
     "Keqing": {
+        "name": "Keqing",
+        "image": "https://genshin.honeyhunterworld.com/img/keqing_042_gacha_card_w145.webp",
+        "weapon": "Sword",
+        "vision": "Electro",
+        "rarity": 5,
+        "description": "The Yuheng of the Liyue Qixing. Keqing has much to say about Rex Lapis's unilateral approach to policymaking in Liyue \u2014 but in truth, gods admire skeptics such as her quite a lot.",
+        "occupation": "Liyue Qixing",
         "baseStats": {
             "1": {
                 "HP": "1020",
@@ -16231,6 +16441,13 @@
         ]
     },
     "Kirara": {
+        "name": "Kirara",
+        "image": "https://genshin.honeyhunterworld.com/img/momoka_061_gacha_card_w145.webp",
+        "weapon": "Sword",
+        "vision": "Dendro",
+        "rarity": 4,
+        "description": "A courier for Komaniya Express, a delivery company in Inazuma. A nekomata who loves her job and human society.",
+        "occupation": "Komaniya Express",
         "baseStats": {
             "1": {
                 "HP": "1021",
@@ -16799,6 +17016,13 @@
         ]
     },
     "Klee": {
+        "name": "Klee",
+        "image": "https://genshin.honeyhunterworld.com/img/klee_029_gacha_card_w145.webp",
+        "weapon": "Catalyst",
+        "vision": "Pyro",
+        "rarity": 5,
+        "description": "An explosives expert and a regular at the Knights of Favonius's confinement room. Also known as Fleeing Sunlight.",
+        "occupation": "Knights of Favonius",
         "baseStats": {
             "1": {
                 "HP": "801",
@@ -17265,6 +17489,13 @@
         ]
     },
     "Kujou Sara": {
+        "name": "Kujou Sara",
+        "image": "https://genshin.honeyhunterworld.com/img/sara_056_gacha_card_w145.webp",
+        "weapon": "Bow",
+        "vision": "Electro",
+        "rarity": 4,
+        "description": "A general of the Tenryou Commission. Bold, decisive, and skilled in battle.",
+        "occupation": "Tenryou Commission",
         "baseStats": {
             "1": {
                 "HP": "802",
@@ -17765,6 +17996,13 @@
         ]
     },
     "Kuki Shinobu": {
+        "name": "Kuki Shinobu",
+        "image": "https://genshin.honeyhunterworld.com/img/shinobu_065_gacha_card_w145.webp",
+        "weapon": "Sword",
+        "vision": "Electro",
+        "rarity": 4,
+        "description": "The capable and reliable Arataki Gang deputy leader. Please note: capable and reliable are not appellations for the \"Arataki Gang,\" but for their deputy leader in specific.",
+        "occupation": "Arataki Gang",
         "baseStats": {
             "1": {
                 "HP": "1030",
@@ -18299,6 +18537,13 @@
         ]
     },
     "Layla": {
+        "name": "Layla",
+        "image": "https://genshin.honeyhunterworld.com/img/layla_074_gacha_card_w145.webp",
+        "weapon": "Sword",
+        "vision": "Cryo",
+        "rarity": 4,
+        "description": "A Rtawahist student who specializes in Theoretical Astrology. Heavily prone to somnambulism and locked in a grinding war with sleep deprivation, the problem of restful slumber is a most troubling one to her.",
+        "occupation": "Rtawahist",
         "baseStats": {
             "1": {
                 "HP": "930",
@@ -18782,6 +19027,13 @@
         ]
     },
     "Lisa": {
+        "name": "Lisa",
+        "image": "https://genshin.honeyhunterworld.com/img/lisa_006_gacha_card_w145.webp",
+        "weapon": "Catalyst",
+        "vision": "Electro",
+        "rarity": 4,
+        "description": "The languid but knowledgeable Librarian of the Knights of Favonius, deemed by Sumeru Akademiya to be their most distinguished graduate in the past two centuries.",
+        "occupation": "Knights of Favonius",
         "baseStats": {
             "1": {
                 "HP": "802",
@@ -19316,6 +19568,13 @@
         ]
     },
     "Mika": {
+        "name": "Mika",
+        "image": "https://genshin.honeyhunterworld.com/img/mika_080_gacha_card_w145.webp",
+        "weapon": "Polearm",
+        "vision": "Cryo",
+        "rarity": 4,
+        "description": "A young knight born to an ordinary family. He serves as a Front-Line Surveyor in his Company. He is a low-key and cautious character.",
+        "occupation": "Knights of Favonius",
         "baseStats": {
             "1": {
                 "HP": "1049",
@@ -19884,6 +20143,13 @@
         ]
     },
     "Mona": {
+        "name": "Mona",
+        "image": "https://genshin.honeyhunterworld.com/img/mona_041_gacha_card_w145.webp",
+        "weapon": "Catalyst",
+        "vision": "Hydro",
+        "rarity": 5,
+        "description": "A mysterious young astrologer who proclaims herself to be \"Astrologist Mona Megistus,\" and who possesses abilities to match the title. Erudite, but prideful.",
+        "occupation": "Mondstadt",
         "baseStats": {
             "1": {
                 "HP": "810",
@@ -20425,6 +20691,13 @@
         ]
     },
     "Nahida": {
+        "name": "Nahida",
+        "image": "https://genshin.honeyhunterworld.com/img/nahida_073_gacha_card_w145.webp",
+        "weapon": "Catalyst",
+        "vision": "Dendro",
+        "rarity": 5,
+        "description": "A caged bird secluded within the confines of the Sanctuary of Surasthana who can only see the world in her dreams.",
+        "occupation": "Sumeru City",
         "baseStats": {
             "1": {
                 "HP": "807",
@@ -20993,6 +21266,13 @@
         ]
     },
     "Nilou": {
+        "name": "Nilou",
+        "image": "https://genshin.honeyhunterworld.com/img/nilou_070_gacha_card_w145.webp",
+        "weapon": "Sword",
+        "vision": "Hydro",
+        "rarity": 5,
+        "description": "The star of the Zubayr Theater. She is full of warmth and innocence, and her dances are lively and elegant.",
+        "occupation": "Zubayr Theater",
         "baseStats": {
             "1": {
                 "HP": "1182",
@@ -21527,6 +21807,13 @@
         ]
     },
     "Ningguang": {
+        "name": "Ningguang",
+        "image": "https://genshin.honeyhunterworld.com/img/ningguang_027_gacha_card_w145.webp",
+        "weapon": "Catalyst",
+        "vision": "Geo",
+        "rarity": 4,
+        "description": "The Tianquan of the Liyue Qixing. Her wealth is unsurpassed in all of Teyvat.",
+        "occupation": "Liyue Qixing",
         "baseStats": {
             "1": {
                 "HP": "821",
@@ -21942,6 +22229,13 @@
         ]
     },
     "Noelle": {
+        "name": "Noelle",
+        "image": "https://genshin.honeyhunterworld.com/img/noel_034_gacha_card_w145.webp",
+        "weapon": "Claymore",
+        "vision": "Geo",
+        "rarity": 4,
+        "description": "A maid who faithfully serves the Knights of Favonius. She dreams of joining their ranks someday.",
+        "occupation": "Knights of Favonius",
         "baseStats": {
             "1": {
                 "HP": "1012",
@@ -22527,6 +22821,13 @@
         ]
     },
     "Qiqi": {
+        "name": "Qiqi",
+        "image": "https://genshin.honeyhunterworld.com/img/qiqi_035_gacha_card_w145.webp",
+        "weapon": "Sword",
+        "vision": "Cryo",
+        "rarity": 5,
+        "description": "An apprentice and herb gatherer at Bubu Pharmacy. An undead with a bone-white complexion, she seldom has much in the way of words or emotion.",
+        "occupation": "Bubu Pharmacy",
         "baseStats": {
             "1": {
                 "HP": "963",
@@ -23078,6 +23379,13 @@
         ]
     },
     "Raiden Shogun": {
+        "name": "Raiden Shogun",
+        "image": "https://genshin.honeyhunterworld.com/img/shougun_052_gacha_card_w145.webp",
+        "weapon": "Polearm",
+        "vision": "Electro",
+        "rarity": 5,
+        "description": "Her Excellency, the Almighty Narukami Ogosho, who promised the people of Inazuma an unchanging Eternity.",
+        "occupation": "Inazuma City",
         "baseStats": {
             "1": {
                 "HP": "1005",
@@ -23821,6 +24129,13 @@
         ]
     },
     "Razor": {
+        "name": "Razor",
+        "image": "https://genshin.honeyhunterworld.com/img/razor_020_gacha_card_w145.webp",
+        "weapon": "Claymore",
+        "vision": "Electro",
+        "rarity": 4,
+        "description": "A boy who lives among the wolves in Wolvendom of Mondstadt, away from human civilization. As agile as lightning.",
+        "occupation": "Wolvendom",
         "baseStats": {
             "1": {
                 "HP": "1003",
@@ -24440,6 +24755,13 @@
         ]
     },
     "Rosaria": {
+        "name": "Rosaria",
+        "image": "https://genshin.honeyhunterworld.com/img/rosaria_045_gacha_card_w145.webp",
+        "weapon": "Polearm",
+        "vision": "Cryo",
+        "rarity": 4,
+        "description": "A sister of the church, though you wouldn't know it if it weren't for her attire. Known for her sharp, cold words and manner, she often works alone.",
+        "occupation": "Church of Favonius",
         "baseStats": {
             "1": {
                 "HP": "1030",
@@ -24923,6 +25245,13 @@
         ]
     },
     "Sangonomiya Kokomi": {
+        "name": "Sangonomiya Kokomi",
+        "image": "https://genshin.honeyhunterworld.com/img/kokomi_054_gacha_card_w145.webp",
+        "weapon": "Catalyst",
+        "vision": "Hydro",
+        "rarity": 5,
+        "description": "The Divine Priestess of Watatsumi Island. All of the island's affairs are at this young lady's fingertips.",
+        "occupation": "Watatsumi Island",
         "baseStats": {
             "1": {
                 "HP": "1049",
@@ -25462,6 +25791,13 @@
         ]
     },
     "Sayu": {
+        "name": "Sayu",
+        "image": "https://genshin.honeyhunterworld.com/img/sayu_053_gacha_card_w145.webp",
+        "weapon": "Claymore",
+        "vision": "Anemo",
+        "rarity": 4,
+        "description": "A pint-sized ninja attached to the Shuumatsuban, who always seems sleep-deprived.",
+        "occupation": "Shuumatsuban",
         "baseStats": {
             "1": {
                 "HP": "994",
@@ -26081,6 +26417,13 @@
         ]
     },
     "Shenhe": {
+        "name": "Shenhe",
+        "image": "https://genshin.honeyhunterworld.com/img/shenhe_063_gacha_card_w145.webp",
+        "weapon": "Polearm",
+        "vision": "Cryo",
+        "rarity": 5,
+        "description": "An adepti disciple with a most unusual air about her. Having spent much time cultivating in isolation in Liyue's mountains, she has become every bit as cool and distant as the adepti themselves.",
+        "occupation": "Cloud Retainer's Abode",
         "baseStats": {
             "1": {
                 "HP": "1011",
@@ -26666,6 +27009,13 @@
         ]
     },
     "Shikanoin Heizou": {
+        "name": "Shikanoin Heizou",
+        "image": "https://genshin.honeyhunterworld.com/img/heizo_059_gacha_card_w145.webp",
+        "weapon": "Catalyst",
+        "vision": "Anemo",
+        "rarity": 4,
+        "description": "A young prodigy detective from the Tenryou Commission. His senses are sharp and his thoughts are clear.",
+        "occupation": "Tenryou Commission",
         "baseStats": {
             "1": {
                 "HP": "894",
@@ -27183,6 +27533,13 @@
         ]
     },
     "Sucrose": {
+        "name": "Sucrose",
+        "image": "https://genshin.honeyhunterworld.com/img/sucrose_043_gacha_card_w145.webp",
+        "weapon": "Catalyst",
+        "vision": "Anemo",
+        "rarity": 4,
+        "description": "An alchemist filled with curiosity about all things. She researches bio-alchemy.",
+        "occupation": "Knights of Favonius",
         "baseStats": {
             "1": {
                 "HP": "775",
@@ -27649,6 +28006,13 @@
         ]
     },
     "Tartaglia": {
+        "name": "Tartaglia",
+        "image": "https://genshin.honeyhunterworld.com/img/tartaglia_033_gacha_card_w145.webp",
+        "weapon": "Bow",
+        "vision": "Hydro",
+        "rarity": 5,
+        "description": "No. 11 of The Harbingers, also known as \"Childe.\" His name is highly feared on the battlefield.",
+        "occupation": "Fatui",
         "baseStats": {
             "1": {
                 "HP": "1020",
@@ -28404,6 +28768,13 @@
         ]
     },
     "Thoma": {
+        "name": "Thoma",
+        "image": "https://genshin.honeyhunterworld.com/img/tohma_050_gacha_card_w145.webp",
+        "weapon": "Polearm",
+        "vision": "Pyro",
+        "rarity": 4,
+        "description": "The Kamisato Clan's housekeeper. A well-known \"fixer\" in Inazuma.",
+        "occupation": "Yashiro Commission",
         "baseStats": {
             "1": {
                 "HP": "866",
@@ -28955,6 +29326,13 @@
         ]
     },
     "Tighnari": {
+        "name": "Tighnari",
+        "image": "https://genshin.honeyhunterworld.com/img/tighnari_069_gacha_card_w145.webp",
+        "weapon": "Bow",
+        "vision": "Dendro",
+        "rarity": 5,
+        "description": "A young researcher well-versed in botany who currently serves as a Forest Watcher in Avidya Forest. He is a straight shooter with a warm heart \u2014 and a dab hand at guiding even the dullest of pupils.",
+        "occupation": "Gandharva Ville",
         "baseStats": {
             "1": {
                 "HP": "845",
@@ -29472,6 +29850,13 @@
         ]
     },
     "Traveler": {
+        "name": "Traveler",
+        "image": "https://genshin.honeyhunterworld.com/img/playerboy_005_gacha_card_w145.webp",
+        "weapon": "Multi",
+        "vision": "None",
+        "rarity": 1,
+        "description": "A traveler from another world who had their only kin taken away, forcing them to embark on a journey to find The Seven.",
+        "occupation": "-",
         "baseStats": {
             "1": {
                 "HP": "912",
@@ -31153,6 +31538,13 @@
         ]
     },
     "Venti": {
+        "name": "Venti",
+        "image": "https://genshin.honeyhunterworld.com/img/venti_022_gacha_card_w145.webp",
+        "weapon": "Bow",
+        "vision": "Anemo",
+        "rarity": 5,
+        "description": "One of the many bards of Mondstadt, who freely wanders the city's streets and alleys.",
+        "occupation": "Mondstadt",
         "baseStats": {
             "1": {
                 "HP": "820",
@@ -31687,6 +32079,13 @@
         ]
     },
     "Wanderer": {
+        "name": "Wanderer",
+        "image": "https://genshin.honeyhunterworld.com/img/wanderer_075_gacha_card_w145.webp",
+        "weapon": "Catalyst",
+        "vision": "Anemo",
+        "rarity": 5,
+        "description": "A wayfaring figure whose identity is a mystery. He dresses like a mountain ascetic, but he certainly does not act the part.",
+        "occupation": "None",
         "baseStats": {
             "1": {
                 "HP": "791",
@@ -32153,6 +32552,13 @@
         ]
     },
     "Xiangling": {
+        "name": "Xiangling",
+        "image": "https://genshin.honeyhunterworld.com/img/xiangling_023_gacha_card_w145.webp",
+        "weapon": "Polearm",
+        "vision": "Pyro",
+        "rarity": 4,
+        "description": "A renowned chef from Liyue. She's extremely passionate about cooking and excels at making her signature hot and spicy dishes.",
+        "occupation": "Wanmin Restaurant",
         "baseStats": {
             "1": {
                 "HP": "912",
@@ -32670,6 +33076,13 @@
         ]
     },
     "Xiao": {
+        "name": "Xiao",
+        "image": "https://genshin.honeyhunterworld.com/img/xiao_026_gacha_card_w145.webp",
+        "weapon": "Polearm",
+        "vision": "Anemo",
+        "rarity": 5,
+        "description": "A yaksha adeptus who defends Liyue. Also heralded as the \"Conqueror of Demons\" and \"Vigilant Yaksha.\"",
+        "occupation": "Liyue Adeptus",
         "baseStats": {
             "1": {
                 "HP": "991",
@@ -33170,6 +33583,13 @@
         ]
     },
     "Xingqiu": {
+        "name": "Xingqiu",
+        "image": "https://genshin.honeyhunterworld.com/img/xingqiu_025_gacha_card_w145.webp",
+        "weapon": "Sword",
+        "vision": "Hydro",
+        "rarity": 4,
+        "description": "A young man carrying a longsword who is frequently seen at book booths. He has a chivalrous heart and yearns for justice and fairness for all.",
+        "occupation": "Feiyun Commerce Guild",
         "baseStats": {
             "1": {
                 "HP": "857",
@@ -33670,6 +34090,13 @@
         ]
     },
     "Xinyan": {
+        "name": "Xinyan",
+        "image": "https://genshin.honeyhunterworld.com/img/xinyan_044_gacha_card_w145.webp",
+        "weapon": "Claymore",
+        "vision": "Pyro",
+        "rarity": 4,
+        "description": "Liyue's sole rock 'n' roll musician. She rebels against ossified prejudices using her music and passionate singing.",
+        "occupation": "\"The Red Strings\"",
         "baseStats": {
             "1": {
                 "HP": "939",
@@ -34255,6 +34682,13 @@
         ]
     },
     "Yae Miko": {
+        "name": "Yae Miko",
+        "image": "https://genshin.honeyhunterworld.com/img/yae_058_gacha_card_w145.webp",
+        "weapon": "Catalyst",
+        "vision": "Electro",
+        "rarity": 5,
+        "description": "Lady Guuji of the Grand Narukami Shrine. Also serves as the editor-in-chief of Yae Publishing House. Unimaginable intelligence and cunning are hidden under her beautiful appearance.",
+        "occupation": "Grand Narukami Shrine",
         "baseStats": {
             "1": {
                 "HP": "807",
@@ -34755,6 +35189,13 @@
         ]
     },
     "Yanfei": {
+        "name": "Yanfei",
+        "image": "https://genshin.honeyhunterworld.com/img/feiyan_048_gacha_card_w145.webp",
+        "weapon": "Catalyst",
+        "vision": "Pyro",
+        "rarity": 4,
+        "description": "A well-known legal adviser active in Liyue Harbor. A brilliant young lady in whose veins runs the blood of an illuminated beast.",
+        "occupation": "Yanfei Legal Consultancy",
         "baseStats": {
             "1": {
                 "HP": "784",
@@ -35255,6 +35696,13 @@
         ]
     },
     "Yaoyao": {
+        "name": "Yaoyao",
+        "image": "https://genshin.honeyhunterworld.com/img/yaoyao_077_gacha_card_w145.webp",
+        "weapon": "Polearm",
+        "vision": "Dendro",
+        "rarity": 4,
+        "description": "Streetward Rambler's youngest disciple. A gentle and caring \"little adult.\"",
+        "occupation": "Streetward Rambler's Abode",
         "baseStats": {
             "1": {
                 "HP": "1030",
@@ -35806,6 +36254,13 @@
         ]
     },
     "Yelan": {
+        "name": "Yelan",
+        "image": "https://genshin.honeyhunterworld.com/img/yelan_060_gacha_card_w145.webp",
+        "weapon": "Bow",
+        "vision": "Hydro",
+        "rarity": 5,
+        "description": "A mysterious person who claims to work for the Ministry of Civil Affairs, but is a \"non-entity\" on the Ministry of Civil Affairs' list.",
+        "occupation": "Yanshang Teahouse",
         "baseStats": {
             "1": {
                 "HP": "1125",
@@ -36306,6 +36761,13 @@
         ]
     },
     "Yoimiya": {
+        "name": "Yoimiya",
+        "image": "https://genshin.honeyhunterworld.com/img/yoimiya_049_gacha_card_w145.webp",
+        "weapon": "Bow",
+        "vision": "Pyro",
+        "rarity": 5,
+        "description": "Owner of Naganohara Fireworks. Known as the \"Queen of the Summer Festival,\" she excels in her craft of creating fireworks that symbolize people's hopes and dreams.",
+        "occupation": "Naganohara Fireworks",
         "baseStats": {
             "1": {
                 "HP": "791",
@@ -36823,6 +37285,13 @@
         ]
     },
     "Yun Jin": {
+        "name": "Yun Jin",
+        "image": "https://genshin.honeyhunterworld.com/img/yunjin_064_gacha_card_w145.webp",
+        "weapon": "Polearm",
+        "vision": "Geo",
+        "rarity": 4,
+        "description": "A renowned Liyue opera singer who is skilled in both playwriting and singing. Her style is one-of-a-kind, exquisite and delicate, much like the person herself.",
+        "occupation": "Yun-Han Opera Troupe",
         "baseStats": {
             "1": {
                 "HP": "894",
@@ -37374,6 +37843,13 @@
         ]
     },
     "Zhongli": {
+        "name": "Zhongli",
+        "image": "https://genshin.honeyhunterworld.com/img/zhongli_030_gacha_card_w145.webp",
+        "weapon": "Polearm",
+        "vision": "Geo",
+        "rarity": 5,
+        "description": "A mysterious expert contracted by the Wangsheng Funeral Parlor. Extremely knowledgeable in all things.",
+        "occupation": "Liyue Harbor",
         "baseStats": {
             "1": {
                 "HP": "1144",
