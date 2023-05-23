@@ -123,7 +123,7 @@ def fetch_icons():
     icons = {}
     for tr in trs[1:]:
         name = tr.find_all("td")[1].text.strip()
-        icon = tr.find("td").find("img")["data-src"].split("/revision")[0]
+        icon = tr.find("td").find("img")["data-src"].split("revision")[0]
         icons[name] = icon
 
     return icons

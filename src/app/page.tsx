@@ -59,12 +59,12 @@ export default function Home() {
 
     return (
         <div className="flex h-screen">
-            <div className="flex-1 bg-stone-800 rounded-lg mr-2 ml-4 my-4">
+            <div className="flex-1 bg-main-1000 rounded-lg mr-2 ml-4 my-4">
                 <div id="character">
-                    <h2 className="text-lg bg-stone-600 rounded-t-lg font-bold py-3 px-4">
+                    <h2 className="text-lg bg-main-800 rounded-t-lg font-bold py-3 px-4">
                         Character
                     </h2>
-                    <div className="bg-stone-700 p-4">
+                    <div className="bg-main-900 p-4">
                         <form onSubmit={handleSubmit}>
                             <button onClick={onOpen}>Select Character</button>
                             <Modal isOpen={isOpen} onClose={onClose}>
@@ -80,14 +80,14 @@ export default function Home() {
                                         as={ModalBody}
                                         className="items-center justify-center h-screen"
                                     >
-                                        <Box className="overflow-auto w-1/2 bg-stone-700 rounded-lg p-4">
+                                        <Box className="overflow-auto w-1/2 bg-main-900 rounded-lg p-4">
                                             <ModalHeader>
                                                 <Flex className="justify-between items-center mb-4">
                                                     Select Character
                                                     <ModalCloseButton />
                                                 </Flex>
                                             </ModalHeader>
-                                            <Flex className="flex-wrap gap-[4px] justify-center">
+                                            <Flex className="flex-wrap gap-[6px] justify-center">
                                                 {options.map((option) => (
                                                     <Image
                                                         key={option.value.name}
@@ -104,7 +104,7 @@ export default function Home() {
                                                                 option.value.vision.toLowerCase() as keyof typeof elementColors
                                                             ]
                                                         }
-                                                        className="object-cover rounded-full cursor-pointer hover:opacity-80 transition-opacity duration-300 ease-in-out transform hover:scale-105"
+                                                        className="object-cover rounded-full cursor-pointer hover:scale-105"
                                                         boxSize="70px"
                                                     />
                                                 ))}
@@ -117,38 +117,38 @@ export default function Home() {
                     </div>
                 </div>
                 <div id="attributes">
-                    <h2 className="text-lg bg-stone-600 font-bold py-3 px-4">
+                    <h2 className="text-lg bg-main-800 font-bold py-3 px-4">
                         Attributes
                     </h2>
-                    <div className="bg-stone-700 p-4">Attributes</div>
+                    <div className="bg-main-900 p-4">Attributes</div>
                 </div>
             </div>
-            <div className="flex-1 bg-stone-800 rounded-lg mx-2 my-4">
+            <div className="flex-1 bg-main-1000 rounded-lg mx-2 my-4">
                 <div id="weapon">
-                    <h2 className="text-lg bg-stone-600 rounded-t-lg font-bold py-3 px-4">
+                    <h2 className="text-lg bg-main-800 rounded-t-lg font-bold py-3 px-4">
                         Weapon
                     </h2>
-                    <div className="bg-stone-700 p-4">Weapon</div>
+                    <div className="bg-main-900 p-4">Weapon</div>
                 </div>
                 <div id="artifacts">
-                    <h2 className="text-lg bg-stone-600 font-bold py-3 px-4">
+                    <h2 className="text-lg bg-main-800 font-bold py-3 px-4">
                         Artifacts
                     </h2>
-                    <div className="bg-stone-700 p-4">Artifacts</div>
+                    <div className="bg-main-900 p-4">Artifacts</div>
                 </div>
                 <div id="party-buffs">
-                    <h2 className="text-lg bg-stone-600 font-bold py-3 px-4">
+                    <h2 className="text-lg bg-main-800 font-bold py-3 px-4">
                         Party Buffs
                     </h2>
-                    <div className="bg-stone-700 p-4">Party Buffs</div>
+                    <div className="bg-main-900 p-4">Party Buffs</div>
                 </div>
             </div>
-            <div className="flex-1 bg-stone-800 rounded-lg ml-2 mr-4 my-4">
+            <div className="flex-1 bg-main-1000 rounded-lg ml-2 mr-4 my-4">
                 <div id="results">
-                    <h2 className="text-lg bg-stone-600 rounded-t-lg font-bold py-3 px-4">
+                    <h2 className="text-lg bg-main-800 rounded-t-lg font-bold py-3 px-4">
                         Results
                     </h2>
-                    <div className="bg-stone-700 p-4">Results</div>
+                    <div className="bg-main-900 p-4">Results</div>
                 </div>
             </div>
         </div>
