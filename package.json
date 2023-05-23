@@ -10,6 +10,7 @@
     "prettier": "npx prettier --write src/**/*.{ts,tsx}"
   },
   "dependencies": {
+    "@chakra-ui/react": "^2.6.1",
     "@types/node": "20.2.1",
     "@types/react-dom": "18.2.4",
     "autoprefixer": "10.4.14",

@@ -1,11 +1,22 @@
 'use client'
 
 import { useState } from 'react'
-import CustomOption from '../components/CustomOption'
 import { Character } from '../types/Character'
-import Select from 'react-select'
-import Image from 'next/image'
 import charactersData from '../data/characters/characters.json'
+
+import {
+    Modal,
+    ModalOverlay,
+    ModalContent,
+    ModalHeader,
+    ModalCloseButton,
+    ModalBody,
+    useDisclosure,
+    useColorModeValue,
+    Image,
+    Box,
+    Flex,
+} from '@chakra-ui/react'
 
 export default function Home() {
     const [character, setCharacter] = useState<Character | null>(null)
@@ -28,10 +39,23 @@ export default function Home() {
         rarity: character.rarity,
     }))
 
+    const elementColors = {
+        electro: 'rgb(146, 92, 194)',
+        geo: 'rgb(190, 153, 72)',
+        anemo: 'rgb(58, 172, 173)',
+        hydro: 'rgb(59, 113, 185)',
+        dendro: 'rgb(123, 179, 73)',
+        pyro: 'rgb(185, 95, 65)',
+        cryo: 'rgb(115, 211, 227)',
+    }
+
     const handleSubmit = (event: any) => {
         event.preventDefault()
         console.log(character)
     }
+
+    // Use the useDisclosure hook to manage the state of the modal
+    const { isOpen, onOpen, onClose } = useDisclosure()
 
     return (
         <div className="flex h-screen">
@@ -42,34 +66,53 @@ export default function Home() {
                     </h2>
                     <div className="bg-stone-700 p-4">
                         <form onSubmit={handleSubmit}>
-                            <label
-                                htmlFor="character"
-                                className="block text-white font-bold mb-2"
-                            >
-                                Character:
-                            </label>
-                            <Select
-                                id="character"
-                                value={options.find(
-                                    (option) => option.value === character
-                                )}
-                                onChange={(option) => {
-                                    setCharacter(option!.value)
-                                }}
-                                options={options}
-                                components={{ Option: CustomOption }}
-                                styles={{
-                                    control: (provided) => ({
-                                        ...provided,
-                                        width: 300,
-                                    }),
-                                }}
-                            />
-                            <input
-                                type="submit"
-                                value="Submit"
-                                className="bg-blue-500 text-stone-700 font-bold px-4 py-2 rounded-lg hover:bg-blue-600 mt-4"
-                            />
+                            <button onClick={onOpen}>Select Character</button>
+                            <Modal isOpen={isOpen} onClose={onClose}>
+                                <ModalOverlay
+                                    sx={{ backdropFilter: 'blur(5px)' }}
+                                    bg={useColorModeValue(
+                                        'rgba(0,0,0,0.5)',
+                                        'rgba(255,255,255,0.2)'
+                                    )}
+                                />
+                                <ModalContent>
+                                    <Flex
+                                        as={ModalBody}
+                                        className="items-center justify-center h-screen"
+                                    >
+                                        <Box className="overflow-auto w-1/2 bg-stone-700 rounded-lg p-4">
+                                            <ModalHeader>
+                                                <Flex className="justify-between items-center mb-4">
+                                                    Select Character
+                                                    <ModalCloseButton />
+                                                </Flex>
+                                            </ModalHeader>
+                                            <Flex className="flex-wrap gap-[4px] justify-center">
+                                                {options.map((option) => (
+                                                    <Image
+                                                        key={option.value.name}
+                                                        src={option.image}
+                                                        alt={option.label}
+                                                        onClick={() => {
+                                                            setCharacter(
+                                                                option.value
+                                                            )
+                                                            onClose()
+                                                        }}
+                                                        bg={
+                                                            elementColors[
+                                                                option.value.vision.toLowerCase() as keyof typeof elementColors
+                                                            ]
+                                                        }
+                                                        className="object-cover rounded-full cursor-pointer hover:opacity-80 transition-opacity duration-300 ease-in-out transform hover:scale-105"
+                                                        boxSize="70px"
+                                                    />
+                                                ))}
+                                            </Flex>
+                                        </Box>
+                                    </Flex>
+                                </ModalContent>
+                            </Modal>
                         </form>
                     </div>
                 </div>
@@ -77,9 +120,7 @@ export default function Home() {
                     <h2 className="text-lg bg-stone-600 font-bold py-3 px-4">
                         Attributes
                     </h2>
-                    <div className="bg-stone-700 rounded-lg p-4">
-                        Attributes
-                    </div>
+                    <div className="bg-stone-700 p-4">Attributes</div>
                 </div>
             </div>
             <div className="flex-1 bg-stone-800 rounded-lg mx-2 my-4">
