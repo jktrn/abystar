@@ -1,11 +1,13 @@
 import React from 'react'
-import { Select, Text, Flex } from '@chakra-ui/react'
-import EmptyIcon from './EmptyIcon'
+import { Text, Flex } from '@chakra-ui/react'
+import Select from 'react-select'
+import { filterCustomStyles } from '../styles/filterCustomStyles'
+import { sortCustomStyles } from '../styles/sortCustomStyles'
 
 // Define an interface for the props
 interface FilterAndSortProps {
-    filterValue: string
-    setFilterValue: (value: string) => void
+    filterValue: string[]
+    setFilterValue: (value: string[]) => void
     sortOrder: string
     setSortOrder: (value: string) => void
 }
@@ -18,36 +20,52 @@ const FilterAndSort = ({
     sortOrder,
     setSortOrder,
 }: FilterAndSortProps) => {
+    // Define the options for the filter select
+    const filterOptions = [
+        { value: 'pyro', label: 'Pyro' },
+        { value: 'geo', label: 'Geo' },
+        { value: 'dendro', label: 'Dendro' },
+        { value: 'anemo', label: 'Anemo' },
+        { value: 'hydro', label: 'Hydro' },
+        { value: 'cryo', label: 'Cryo' },
+        { value: 'electro', label: 'Electro' },
+    ]
+
+    // Define the options for the sort select
+    const sortOptions = [
+        { value: '', label: 'None' },
+        { value: 'asc', label: 'Name (A-Z)' },
+        { value: 'desc', label: 'Name (Z-A)' },
+    ]
+
     return (
         <>
-            <Flex className="justify-between items-center mb-4">
-                <Text className="text-gray-300 mr-2">Filter:</Text>
+            <Flex className="items-center flex-col sm:flex-row sm:gap-4 mb-4">
+                <Text>Filter:</Text>
                 <Select
-                    value={filterValue}
-                    onChange={(e) => setFilterValue(e.target.value)}
-                    className="bg-main-700 p-2 text-gray-700 outline-none rounded-md shadow-sm focus:border-blue-500 hover:shadow-lg hover:cursor-pointer"
-                    icon={EmptyIcon}
-                >
-                    <option value="all">All Elements</option>
-                    <option value="electro">Electro</option>
-                    <option value="geo">Geo</option>
-                    <option value="anemo">Anemo</option>
-                    <option value="hydro">Hydro</option>
-                    <option value="dendro">Dendro</option>
-                    <option value="pyro">Pyro</option>
-                    <option value="cryo">Cryo</option>
-                </Select>
-                <Text className="text-gray-300 ml-4 mr-2">Sort:</Text>
+                    isMulti
+                    value={filterOptions.filter((option) =>
+                        filterValue.includes(option.value)
+                    )}
+                    onChange={(options) =>
+                        setFilterValue(options.map((option) => option.value))
+                    }
+                    options={filterOptions}
+                    className="w-full sm:w-auto"
+                    styles={filterCustomStyles}
+                    menuPortalTarget={document.body}
+                />
+                <Text className="text-gray-300">Sort:</Text>
                 <Select
-                    value={sortOrder}
-                    onChange={(e) => setSortOrder(e.target.value)}
-                    className="bg-main-700 p-2 text-gray-700 outline-none rounded-md shadow-sm focus:border-blue-500 hover:shadow-lg hover:cursor-pointer"
-                    icon={EmptyIcon}
-                >
-                    <option value="element">Element</option>
-                    <option value="asc">Name (A-Z)</option>
-                    <option value="desc">Name (Z-A)</option>
-                </Select>
+                    value={sortOptions.find(
+                        (option) => option.value === sortOrder
+                    )}
+                    onChange={(option) => setSortOrder(option?.value ?? '')}
+                    options={sortOptions}
+                    className="w-full sm:w-auto"
+                    styles={sortCustomStyles}
+                    menuPortalTarget={document.body}
+                />
             </Flex>
         </>
     )

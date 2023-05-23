@@ -1,3 +1,5 @@
+const colors = require('tailwindcss/colors')
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     content: [
@@ -9,7 +11,8 @@ module.exports = {
         extend: {
             backgroundImage: {
                 'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-                'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+                'gradient-conic':
+                    'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
             },
         },
         colors: {
@@ -21,7 +24,8 @@ module.exports = {
                 900: '#111111',
                 1000: '#0C0C0C',
             },
-        }
+            gray: colors.stone,
+        },
     },
     plugins: [],
 }

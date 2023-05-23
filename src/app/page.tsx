@@ -50,16 +50,15 @@ export default function Home() {
 
     const { isOpen, onOpen, onClose } = useDisclosure()
 
-    const [filterValue, setFilterValue] = useState<string>('all')
+    const [filterValue, setFilterValue] = useState<string[]>(['all'])
     const [sortOrder, setSortOrder] = useState<string>('element')
 
     const filterAndSortOptions = () => {
         let filteredOptions =
-            filterValue === 'all'
+            filterValue.includes('all') || filterValue.length === 0
                 ? options
-                : options.filter(
-                      (option) =>
-                          option.value.vision.toLowerCase() === filterValue
+                : options.filter((option) =>
+                      filterValue.includes(option.value.vision.toLowerCase())
                   )
 
         let sortedOptions = filteredOptions.sort((a, b) => {
@@ -101,7 +100,7 @@ export default function Home() {
                                         as={ModalBody}
                                         className="items-center justify-center h-screen"
                                     >
-                                        <Box className="overflow-auto w-1/2 bg-main-900 rounded-lg p-4">
+                                        <Box className="overflow-x-hidden xl:overflow-auto overflow-scroll xl:w-[80vw] xl:h-auto h-[80vh] w-[80vw] bg-main-900 rounded-lg p-4">
                                             <ModalHeader className="flex justify-between items-center mb-4">
                                                 Select a Character
                                                 <ModalCloseButton />
