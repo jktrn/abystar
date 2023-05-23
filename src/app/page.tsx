@@ -18,6 +18,10 @@ import {
     Flex,
 } from '@chakra-ui/react'
 
+import { elementColors } from '../utils/elementColors'
+import FilterAndSort from '../components/FilterAndSort'
+import { compareElement } from '../utils/compareElement'
+
 export default function Home() {
     const [character, setCharacter] = useState<Character | null>(null)
 
@@ -39,23 +43,40 @@ export default function Home() {
         rarity: character.rarity,
     }))
 
-    const elementColors = {
-        electro: 'rgb(146, 92, 194)',
-        geo: 'rgb(190, 153, 72)',
-        anemo: 'rgb(58, 172, 173)',
-        hydro: 'rgb(59, 113, 185)',
-        dendro: 'rgb(123, 179, 73)',
-        pyro: 'rgb(185, 95, 65)',
-        cryo: 'rgb(115, 211, 227)',
-    }
-
     const handleSubmit = (event: any) => {
         event.preventDefault()
         console.log(character)
     }
 
-    // Use the useDisclosure hook to manage the state of the modal
     const { isOpen, onOpen, onClose } = useDisclosure()
+
+    const [filterValue, setFilterValue] = useState<string>('all')
+    const [sortOrder, setSortOrder] = useState<string>('element')
+
+    const filterAndSortOptions = () => {
+        let filteredOptions =
+            filterValue === 'all'
+                ? options
+                : options.filter(
+                      (option) =>
+                          option.value.vision.toLowerCase() === filterValue
+                  )
+
+        let sortedOptions = filteredOptions.sort((a, b) => {
+            if (sortOrder === 'asc') {
+                return a.value.name.localeCompare(b.value.name)
+            } else if (sortOrder === 'desc') {
+                return b.value.name.localeCompare(a.value.name)
+            } else if (sortOrder === 'element') {
+                return compareElement(
+                    a.value.vision.toLowerCase(),
+                    b.value.vision.toLowerCase()
+                )
+            }
+        })
+
+        return sortedOptions
+    }
 
     return (
         <div className="flex h-screen">
@@ -81,33 +102,42 @@ export default function Home() {
                                         className="items-center justify-center h-screen"
                                     >
                                         <Box className="overflow-auto w-1/2 bg-main-900 rounded-lg p-4">
-                                            <ModalHeader>
-                                                <Flex className="justify-between items-center mb-4">
-                                                    Select Character
-                                                    <ModalCloseButton />
-                                                </Flex>
+                                            <ModalHeader className="flex justify-between items-center mb-4">
+                                                Select a Character
+                                                <ModalCloseButton />
                                             </ModalHeader>
+                                            <FilterAndSort
+                                                filterValue={filterValue}
+                                                setFilterValue={setFilterValue}
+                                                sortOrder={sortOrder}
+                                                setSortOrder={setSortOrder}
+                                            />
                                             <Flex className="flex-wrap gap-[6px] justify-center">
-                                                {options.map((option) => (
-                                                    <Image
-                                                        key={option.value.name}
-                                                        src={option.image}
-                                                        alt={option.label}
-                                                        onClick={() => {
-                                                            setCharacter(
+                                                {filterAndSortOptions().map(
+                                                    (option) => (
+                                                        <Image
+                                                            key={
                                                                 option.value
-                                                            )
-                                                            onClose()
-                                                        }}
-                                                        bg={
-                                                            elementColors[
-                                                                option.value.vision.toLowerCase() as keyof typeof elementColors
-                                                            ]
-                                                        }
-                                                        className="object-cover rounded-full cursor-pointer hover:scale-105"
-                                                        boxSize="70px"
-                                                    />
-                                                ))}
+                                                                    .name
+                                                            }
+                                                            src={option.image}
+                                                            alt={option.label}
+                                                            onClick={() => {
+                                                                setCharacter(
+                                                                    option.value
+                                                                )
+                                                                onClose()
+                                                            }}
+                                                            bg={
+                                                                elementColors[
+                                                                    option.value.vision.toLowerCase() as keyof typeof elementColors
+                                                                ]
+                                                            }
+                                                            className="object-cover rounded-full cursor-pointer hover:scale-105"
+                                                            boxSize="70px"
+                                                        />
+                                                    )
+                                                )}
                                             </Flex>
                                         </Box>
                                     </Flex>
@@ -116,6 +146,7 @@ export default function Home() {
                         </form>
                     </div>
                 </div>
+
                 <div id="attributes">
                     <h2 className="text-lg bg-main-800 font-bold py-3 px-4">
                         Attributes
@@ -123,6 +154,7 @@ export default function Home() {
                     <div className="bg-main-900 p-4">Attributes</div>
                 </div>
             </div>
+
             <div className="flex-1 bg-main-1000 rounded-lg mx-2 my-4">
                 <div id="weapon">
                     <h2 className="text-lg bg-main-800 rounded-t-lg font-bold py-3 px-4">
@@ -130,12 +162,14 @@ export default function Home() {
                     </h2>
                     <div className="bg-main-900 p-4">Weapon</div>
                 </div>
+
                 <div id="artifacts">
                     <h2 className="text-lg bg-main-800 font-bold py-3 px-4">
                         Artifacts
                     </h2>
                     <div className="bg-main-900 p-4">Artifacts</div>
                 </div>
+
                 <div id="party-buffs">
                     <h2 className="text-lg bg-main-800 font-bold py-3 px-4">
                         Party Buffs
@@ -143,6 +177,7 @@ export default function Home() {
                     <div className="bg-main-900 p-4">Party Buffs</div>
                 </div>
             </div>
+
             <div className="flex-1 bg-main-1000 rounded-lg ml-2 mr-4 my-4">
                 <div id="results">
                     <h2 className="text-lg bg-main-800 rounded-t-lg font-bold py-3 px-4">
