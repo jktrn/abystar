@@ -4,6 +4,7 @@ import { useState } from 'react'
 import CustomOption from '../components/CustomOption'
 import { Character } from '../types/Character'
 import Select from 'react-select'
+import Image from 'next/image'
 import charactersData from '../data/characters/characters.json'
 
 export default function Home() {
@@ -33,89 +34,82 @@ export default function Home() {
     }
 
     return (
-        <main className="flex min-h-screen flex-col items-center justify-between p-24">
-            <form
-                onSubmit={handleSubmit}
-                className="bg-white p-6 rounded-lg shadow-md"
-            >
-                <div className="mb-4">
-                    <label
-                        htmlFor="character"
-                        className="block text-gray-700 font-bold mb-2"
-                    >
-                        Character:
-                    </label>
-                    <Select
-                        id="character"
-                        value={options.find(
-                            (option) => option.value === character
-                        )}
-                        onChange={(option) => {
-                            setCharacter(option!.value)
-                        }}
-                        options={options}
-                        components={{ Option: CustomOption }}
-                        styles={{
-                            control: (provided) => ({
-                                ...provided,
-                                width: 300,
-                            }),
-                        }}
-                    />
-                </div>
-                <input
-                    type="submit"
-                    value="Submit"
-                    className="bg-blue-500 text-white font-bold px-4 py-2 rounded-lg hover:bg-blue-600"
-                />
-            </form>
-            {character && (
-                <div className="mt-4">
-                    <h2 className="text-xl font-bold mb-2">{character.name}</h2>
-                    <img src={character.image} alt={character.name} />
-                    <p>Vision: {character.vision}</p>
-                    <p>Rarity: {character.rarity}</p>
-                    {/* <h3 className="text-lg font-bold mt-4 mb-2">Base Stats:</h3>
-                    <table className="table-auto border-collapse border border-gray-400">
-                        <thead>
-                            <tr>
-                                <th className="border border-gray-400 px-4 py-2 text-gray-800">
-                                    Stat
-                                </th>
-                                {Object.keys(character.baseStats.HP).map(
-                                    (key) => (
-                                        <th
-                                            key={key}
-                                            className="border border-gray-400 px-4 py-2 text-gray-800"
-                                        >
-                                            {key}
-                                        </th>
-                                    )
+        <div className="flex h-screen">
+            <div className="flex-1 bg-stone-800 rounded-lg mr-2 ml-4 my-4">
+                <div id="character">
+                    <h2 className="text-lg bg-stone-600 rounded-t-lg font-bold py-3 px-4">
+                        Character
+                    </h2>
+                    <div className="bg-stone-700 p-4">
+                        <form onSubmit={handleSubmit}>
+                            <label
+                                htmlFor="character"
+                                className="block text-white font-bold mb-2"
+                            >
+                                Character:
+                            </label>
+                            <Select
+                                id="character"
+                                value={options.find(
+                                    (option) => option.value === character
                                 )}
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {Object.entries(character.baseStats).map(
-                                ([stat, values]) => (
-                                    <tr key={stat}>
-                                        <td className="border border-gray-400 px-4 py-2 text-gray-800">
-                                            {stat}
-                                        </td>
-                                        {Object.values(values).map((value) => (
-                                            <td
-                                                key={value}
-                                                className="border border-gray-400 px-4 py-2 text-gray-800"
-                                            >
-                                                {value}
-                                            </td>
-                                        ))}
-                                    </tr>
-                                )
-                            )}
-                        </tbody>
-                    </table> */}
+                                onChange={(option) => {
+                                    setCharacter(option!.value)
+                                }}
+                                options={options}
+                                components={{ Option: CustomOption }}
+                                styles={{
+                                    control: (provided) => ({
+                                        ...provided,
+                                        width: 300,
+                                    }),
+                                }}
+                            />
+                            <input
+                                type="submit"
+                                value="Submit"
+                                className="bg-blue-500 text-stone-700 font-bold px-4 py-2 rounded-lg hover:bg-blue-600 mt-4"
+                            />
+                        </form>
+                    </div>
                 </div>
-            )}
-        </main>
+                <div id="attributes">
+                    <h2 className="text-lg bg-stone-600 font-bold py-3 px-4">
+                        Attributes
+                    </h2>
+                    <div className="bg-stone-700 rounded-lg p-4">
+                        Attributes
+                    </div>
+                </div>
+            </div>
+            <div className="flex-1 bg-stone-800 rounded-lg mx-2 my-4">
+                <div id="weapon">
+                    <h2 className="text-lg bg-stone-600 rounded-t-lg font-bold py-3 px-4">
+                        Weapon
+                    </h2>
+                    <div className="bg-stone-700 p-4">Weapon</div>
+                </div>
+                <div id="artifacts">
+                    <h2 className="text-lg bg-stone-600 font-bold py-3 px-4">
+                        Artifacts
+                    </h2>
+                    <div className="bg-stone-700 p-4">Artifacts</div>
+                </div>
+                <div id="party-buffs">
+                    <h2 className="text-lg bg-stone-600 font-bold py-3 px-4">
+                        Party Buffs
+                    </h2>
+                    <div className="bg-stone-700 p-4">Party Buffs</div>
+                </div>
+            </div>
+            <div className="flex-1 bg-stone-800 rounded-lg ml-2 mr-4 my-4">
+                <div id="results">
+                    <h2 className="text-lg bg-stone-600 rounded-t-lg font-bold py-3 px-4">
+                        Results
+                    </h2>
+                    <div className="bg-stone-700 p-4">Results</div>
+                </div>
+            </div>
+        </div>
     )
 }

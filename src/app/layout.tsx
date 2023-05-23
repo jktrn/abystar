@@ -1,7 +1,7 @@
 import './globals.css'
 import { JetBrains_Mono } from 'next/font/google'
 
-const inter = JetBrains_Mono({ subsets: ['latin'] })
+const font = JetBrains_Mono({ subsets: ['latin'] })
 
 export const metadata = {
     title: 'Screenshot Impact',
@@ -15,7 +15,7 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <body className={inter.className}>{children}</body>
+            <body className={font.className}>{children}</body>
         </html>
     )
 }
