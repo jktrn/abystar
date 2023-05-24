@@ -6,6 +6,7 @@ interface TailwindConfig {
     theme: {
         colors: {
             main: Record<string, string>
+            lightgray: Record<string, string>
         }
     }
 }
