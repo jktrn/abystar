@@ -1,5 +1,4 @@
 import { StylesConfig } from 'react-select'
-import { elementColors } from '../utils/elementColors'
 import resolveConfig from 'tailwindcss/resolveConfig'
 import tailwindConfig from '../../tailwind.config.js'
 
@@ -18,40 +17,46 @@ type OptionTypeBase = {
 
 const colors = resolveConfig(tailwindConfig) as TailwindConfig
 
+const color = colors.theme.colors.lightgray[100]
+const backgroundColor = colors.theme.colors.main[700]
+const borderRadius = '6px'
+
 export const sortCustomStyles: StylesConfig<OptionTypeBase, false> = {
     control: (provided) => ({
         ...provided,
-        backgroundColor: colors.theme.colors.main[700],
-        color: '#fff',
+        backgroundColor,
+        color,
     }),
     singleValue: (provided) => ({
         ...provided,
-        color: '#fff',
+        color,
     }),
     option: (provided, state) => ({
         ...provided,
         backgroundColor:
             state.isFocused || state.isSelected
                 ? colors.theme.colors.main[600]
-                : colors.theme.colors.main[700],
-        color:
-            elementColors[state.data.value as keyof typeof elementColors] ||
-            provided.color,
+                : backgroundColor,
+
+    }),
+    input: (provided) => ({
+        ...provided,
+        color,
     }),
     menuPortal: (provided) => ({
         ...provided,
         zIndex: 999,
-        borderRadius: '6px',
+        borderRadius,
     }),
     menu: (provided) => ({
         ...provided,
-        backgroundColor: colors.theme.colors.main[700],
-        borderRadius: '6px',
+        backgroundColor,
+        borderRadius,
     }),
     menuList: (provided) => ({
         ...provided,
-        backgroundColor: colors.theme.colors.main[700],
+        backgroundColor,
         padding: 0,
-        borderRadius: '6px',
+        borderRadius,
     }),
 }

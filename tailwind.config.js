@@ -24,6 +24,9 @@ module.exports = {
                 900: '#111111',
                 1000: '#0C0C0C',
             },
+            lightgray: {
+                100: '#C9CACC',
+            },
             gray: colors.stone,
         },
     },

@@ -1,12 +1,12 @@
 // Define an object that maps each element to a color
 const elementColors = {
-    electro: 'rgb(146, 92, 194)',
-    geo: 'rgb(190, 153, 72)',
-    anemo: 'rgb(58, 172, 173)',
-    hydro: 'rgb(59, 113, 185)',
-    dendro: 'rgb(123, 179, 73)',
-    pyro: 'rgb(185, 95, 65)',
-    cryo: 'rgb(115, 211, 227)',
+    pyro: "#bf612d",
+    geo: "#c8922b",
+    dendro: "#84a02f",
+    anemo: "#5d9b86",
+    cryo: "#7fabb6",
+    hydro: "#3d9bc1",
+    electro: "#8c729a",
 }
 
 // Export the elementColors object as a named export

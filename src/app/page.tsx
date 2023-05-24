@@ -21,6 +21,7 @@ import {
 import { elementColors } from '../utils/elementColors'
 import FilterAndSort from '../components/FilterAndSort'
 import { compareElement } from '../utils/compareElement'
+import { darken } from 'polished'
 
 export default function Home() {
     const [character, setCharacter] = useState<Character | null>(null)
@@ -100,7 +101,7 @@ export default function Home() {
                                         as={ModalBody}
                                         className="items-center justify-center h-screen"
                                     >
-                                        <Box className="overflow-x-hidden xl:overflow-auto overflow-scroll xl:w-[80vw] xl:h-auto h-[80vh] w-[80vw] bg-main-900 rounded-lg p-4">
+                                        <Box className="overflow-x-hidden overflow-auto xl:w-[80vw] xl:h-auto max-h-[80vh] w-[80vw] bg-main-900 rounded-lg p-4">
                                             <ModalHeader className="flex justify-between items-center mb-4">
                                                 Select a Character
                                                 <ModalCloseButton />
