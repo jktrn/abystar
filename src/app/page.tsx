@@ -4,12 +4,14 @@ import { useDisclosure } from '@chakra-ui/react'
 import { useState } from 'react'
 import CharacterImage from '../components/CharacterImage'
 import CharacterModal from '../components/CharacterModal'
+import LevelSelect from '../components/LevelSelect'
 import charactersData from '../data/characters/characters.json'
 import { Character } from '../types/Character'
 
 export default function Home() {
     const defaultCharacter = charactersData['Hu Tao']
     const [character, setCharacter] = useState<Character>(defaultCharacter)
+    const [level, setLevel] = useState<string>('90/90')
 
     const characters = Object.values(charactersData).map(
         (characterData: Character) => ({
@@ -47,8 +49,20 @@ export default function Home() {
                                     setCharacter={setCharacter}
                                 />
                             </form>
-                            <div className="flex">
-                                <h3 className="text-xl font-bold">{character.name}</h3>
+                            <div className="flex flex-col">
+                                <span className="text-xl font-bold">
+                                    {character.name}
+                                </span>
+                                <span className="text-md mb-2">
+                                    {'★'.repeat(character.rarity)}
+                                </span>
+                                <div className="flex">
+                                    <LevelSelect
+                                        character={character}
+                                        level={level}
+                                        setLevel={setLevel}
+                                    />
+                                </div>
                             </div>
                         </div>
                     </div>

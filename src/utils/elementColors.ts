@@ -1,4 +1,3 @@
-// Define an object that maps each element to a color
 const elementColors = {
     pyro: '#bf612d',
     geo: '#c8922b',
@@ -8,6 +7,4 @@ const elementColors = {
     hydro: '#3d9bc1',
     electro: '#8c729a',
 }
-
-// Export the elementColors object as a named export
-export { elementColors }
+export default elementColors

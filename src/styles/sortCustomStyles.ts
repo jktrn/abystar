@@ -5,8 +5,7 @@ import tailwindConfig from '../../tailwind.config.js'
 interface TailwindConfig {
     theme: {
         colors: {
-            main: Record<string, string>
-            lightgray: Record<string, string>
+            [key: string]: Record<string, string>
         }
     }
 }

@@ -1,3 +1,5 @@
+# DO NOT RUN THIS SCRIPT AGAIN, I MADE MANUAL CHANGES TO THE JSON
+
 import requests
 from bs4 import BeautifulSoup
 import json

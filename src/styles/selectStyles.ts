@@ -1,7 +1,6 @@
 import { StylesConfig } from 'react-select'
 import resolveConfig from 'tailwindcss/resolveConfig'
 import tailwindConfig from '../../tailwind.config.js'
-import elementColors from '../utils/elementColors'
 
 interface TailwindConfig {
     theme: {
@@ -20,17 +19,29 @@ const colors = resolveConfig(tailwindConfig) as TailwindConfig
 
 const color = colors.theme.colors.lightgray[100]
 const backgroundColor = colors.theme.colors.main[700]
+const fontSize = '14px'
 const borderRadius = '6px'
 
-export const filterCustomStyles: StylesConfig<OptionTypeBase, true> = {
+export const selectStyles: StylesConfig<OptionTypeBase, false> = {
     control: (provided) => ({
         ...provided,
         backgroundColor,
         color,
+        fontSize,
+        minHeight: '20px',
+    }),
+    valueContainer: (provided) => ({
+        ...provided,
+        padding: '0 4px',
+    }),
+    indicatorsContainer: (provided) => ({
+        ...provided,
+        height: '30px',
     }),
     singleValue: (provided) => ({
         ...provided,
         color,
+        fontSize,
     }),
     option: (provided, state) => ({
         ...provided,
@@ -38,9 +49,8 @@ export const filterCustomStyles: StylesConfig<OptionTypeBase, true> = {
             state.isFocused || state.isSelected
                 ? colors.theme.colors.main[600]
                 : backgroundColor,
-        color:
-            elementColors[state.data.value as keyof typeof elementColors] ||
-            provided.color,
+        color,
+        fontSize,
     }),
     input: (provided) => ({
         ...provided,
@@ -61,26 +71,5 @@ export const filterCustomStyles: StylesConfig<OptionTypeBase, true> = {
         backgroundColor,
         padding: 0,
         borderRadius,
-    }),
-    multiValue: (provided) => ({
-        ...provided,
-        borderRadius: '8px',
-    }),
-    multiValueLabel: (provided) => ({
-        ...provided,
-        backgroundColor: colors.theme.colors.main[600],
-        color,
-        borderRadius: `${borderRadius} 0 0 ${borderRadius}`,
-    }),
-    multiValueRemove: (provided, state) => ({
-        ...provided,
-        backgroundColor: colors.theme.colors.main[600],
-        color,
-        borderRadius: `0 ${borderRadius} ${borderRadius} 0`,
-        ':hover': {
-            backgroundColor:
-                elementColors[state.data.value as keyof typeof elementColors] ||
-                provided.backgroundColor,
-        },
     }),
 }

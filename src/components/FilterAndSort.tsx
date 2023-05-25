@@ -4,7 +4,6 @@ import Select from 'react-select'
 import { filterCustomStyles } from '../styles/filterCustomStyles'
 import { sortCustomStyles } from '../styles/sortCustomStyles'
 
-// Define an interface for the props
 interface FilterAndSortProps {
     filterValue: string[]
     setFilterValue: (value: string[]) => void
@@ -12,15 +11,12 @@ interface FilterAndSortProps {
     setSortOrder: (value: string) => void
 }
 
-// Define a custom component that renders the filter and sort dropdowns
 const FilterAndSort = ({
-    // Add a colon and the type after the prop name
     filterValue,
     setFilterValue,
     sortOrder,
     setSortOrder,
 }: FilterAndSortProps) => {
-    // Define the options for the filter select
     const filterOptions = [
         { value: 'pyro', label: 'Pyro' },
         { value: 'geo', label: 'Geo' },
@@ -31,7 +27,6 @@ const FilterAndSort = ({
         { value: 'electro', label: 'Electro' },
     ]
 
-    // Define the options for the sort select
     const sortOptions = [
         { value: 'element', label: 'Element' },
         { value: 'asc', label: 'Name (A-Z)' },
@@ -90,5 +85,4 @@ const FilterAndSort = ({
     )
 }
 
-// Export the FilterAndSort component as a default export
 export default FilterAndSort
