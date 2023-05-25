@@ -1,20 +1,20 @@
-import { useState } from 'react'
-import { Character } from '../types/Character'
 import {
-    Modal,
-    ModalOverlay,
-    ModalContent,
-    ModalHeader,
-    ModalCloseButton,
-    ModalBody,
-    useColorModeValue,
-    Image,
     Box,
     Flex,
+    Image,
+    Modal,
+    ModalBody,
+    ModalCloseButton,
+    ModalContent,
+    ModalHeader,
+    ModalOverlay,
+    useColorModeValue,
 } from '@chakra-ui/react'
-import { elementColors } from '../utils/elementColors'
+import { useState } from 'react'
 import FilterAndSort from '../components/FilterAndSort'
+import { Character } from '../types/Character'
 import { compareElement } from '../utils/compareElement'
+import { elementColors } from '../utils/elementColors'
 
 interface CharacterModalProps {
     isOpen: boolean

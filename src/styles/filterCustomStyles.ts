@@ -1,7 +1,7 @@
 import { StylesConfig } from 'react-select'
-import { elementColors } from '../utils/elementColors'
 import resolveConfig from 'tailwindcss/resolveConfig'
 import tailwindConfig from '../../tailwind.config.js'
+import { elementColors } from '../utils/elementColors'
 
 interface TailwindConfig {
     theme: {

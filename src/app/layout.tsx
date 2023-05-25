@@ -1,5 +1,5 @@
-import './globals.css'
 import { JetBrains_Mono } from 'next/font/google'
+import './globals.css'
 
 const font = JetBrains_Mono({ subsets: ['latin'] })
 

@@ -1,10 +1,10 @@
 'use client'
 
+import { Image, useDisclosure } from '@chakra-ui/react'
 import { useState } from 'react'
-import { Character } from '../types/Character'
-import charactersData from '../data/characters/characters.json'
-import { useDisclosure, Image } from '@chakra-ui/react'
 import CharacterModal from '../components/CharacterModal'
+import charactersData from '../data/characters/characters.json'
+import { Character } from '../types/Character'
 
 export default function Home() {
     const defaultCharacter = charactersData['Hu Tao']
