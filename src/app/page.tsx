@@ -32,19 +32,25 @@ export default function Home() {
                         Character
                     </h2>
                     <div className="bg-main-900 p-4">
-                        <form onSubmit={handleSubmit}>
-                            <CharacterImage
-                                icon={character.icon}
-                                rarity={character.rarity}
-                                onClick={onOpen}
-                            />
-                            <CharacterModal
-                                isOpen={isOpen}
-                                onClose={onClose}
-                                characters={characters}
-                                setCharacter={setCharacter}
-                            />
-                        </form>
+                        <div className="flex gap-4">
+                            <form onSubmit={handleSubmit}>
+                                <CharacterImage
+                                    icon={character.icon}
+                                    rarity={character.rarity}
+                                    element={character.vision}
+                                    onClick={onOpen}
+                                />
+                                <CharacterModal
+                                    isOpen={isOpen}
+                                    onClose={onClose}
+                                    characters={characters}
+                                    setCharacter={setCharacter}
+                                />
+                            </form>
+                            <div className="flex">
+                                <h3 className="text-xl font-bold">{character.name}</h3>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
