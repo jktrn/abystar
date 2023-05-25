@@ -34,27 +34,20 @@ export default function CharacterModal({
 
     const filterAndSortCharacters = () => {
         let filteredCharacters =
-            filterValue.includes('all') || filterValue.length === 0
+            filterValue.includes('all') || !filterValue.length
                 ? characters
                 : characters.filter((character) =>
                       filterValue.includes(character.vision.toLowerCase())
                   )
-
-        let sortedCharacters = filteredCharacters.sort((a, b) => {
-            if (sortOrder === 'asc') {
-                return a.name.localeCompare(b.name)
-            } else if (sortOrder === 'desc') {
-                return b.name.localeCompare(a.name)
-            } else if (sortOrder === 'element') {
-                return compareElement(
-                    a.vision.toLowerCase(),
-                    b.vision.toLowerCase()
-                )
-            } else {
-                return 0
-            }
-        })
-
+        let sortedCharacters = filteredCharacters.sort((a, b) =>
+            sortOrder === 'asc'
+                ? a.name.localeCompare(b.name)
+                : sortOrder === 'desc'
+                ? b.name.localeCompare(a.name)
+                : sortOrder === 'element'
+                ? compareElement(a.vision.toLowerCase(), b.vision.toLowerCase())
+                : 0
+        )
         return sortedCharacters
     }
 

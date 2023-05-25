@@ -38,7 +38,6 @@ export const sortCustomStyles: StylesConfig<OptionTypeBase, false> = {
             state.isFocused || state.isSelected
                 ? colors.theme.colors.main[600]
                 : backgroundColor,
-
     }),
     input: (provided) => ({
         ...provided,

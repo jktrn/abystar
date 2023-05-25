@@ -56,10 +56,16 @@ const FilterAndSort = ({
                         options={filterOptions}
                         formatOptionLabel={({ value, label }) => (
                             <Flex>
-                                <Image src={`/images/elements/${value}.svg`} className="white-svg" alt={label} width={20} height={20} />
+                                <Image
+                                    src={`/images/elements/${value}.svg`}
+                                    className="white-svg"
+                                    alt={label}
+                                    width={20}
+                                    height={20}
+                                />
                                 <Text className="ml-2">{label}</Text>
                             </Flex>
-                          )}
+                        )}
                         className="w-full"
                         styles={filterCustomStyles}
                         menuPortalTarget={document.body}
