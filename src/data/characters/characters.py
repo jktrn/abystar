@@ -10,6 +10,9 @@ base_url = 'https://genshin.honeyhunterworld.com'
 icon_url = 'https://genshin-impact.fandom.com/wiki/Character'
 current_dir = os.path.dirname(os.path.abspath(__file__))
 
+def to_kebab_case(string: str) -> str:
+    return string.replace(' ', '-').lower()
+
 def parse_cell(cell: str) -> str:
     if any(c.isalpha() for c in cell):
         return cell
@@ -48,7 +51,7 @@ def fetch_character_data(character: str) -> dict[str, dict[str, dict[str, str]]]
     data = {row.find_all('td')[0].text: row.find_all('td')[-1].text for row in rows[1:]}
 
     all_data["name"] = rows[0].find_all('td')[-1].text
-    all_data["icon"] = None
+    all_data["icon"] = f'/images/icons/{to_kebab_case(all_data["name"])}.png'
     all_data["weapon"] = rows[5].find_all('td')[-1].text.strip()
     all_data["vision"] = data["Vision (Introduced)"]
     all_data["rarity"] = len(rows[4].find_all('img'))
@@ -60,11 +63,29 @@ def fetch_character_data(character: str) -> dict[str, dict[str, dict[str, str]]]
     # Fetch character stats and add them to the `baseStats` object
     stats_table = soup.find('table', {'class': 'stat_table'})
 
+    # Map level to ascension
+    ascension_map = {
+        '1': '1/20',
+        '20': '20/20',
+        '20+': '20/40',
+        '40': '40/40',
+        '40+': '40/50',
+        '50': '50/50',
+        '50+': '50/60',
+        '60': '60/60',
+        '60+': '60/70',
+        '70': '70/70',
+        '70+': '70/80',
+        '80': '80/80',
+        '80+': '80/90',
+        '90': '90/90'
+    }
+
     rows = stats_table.find_all('tr')
     header = [cell.text for cell in rows[0].find_all('td')[:7]]
     data = [[cell.text for cell in row.find_all('td')[:7]] for row in rows[1:]]
 
-    data_dict = {row[0]: {header[i]: row[i] for i in range(1, len(header))} for row in data}
+    data_dict = {ascension_map[row[0]]: {header[i]: row[i] for i in range(1, len(header))} for row in data}
 
     all_data["baseStats"] = data_dict
 
@@ -116,22 +137,22 @@ def fetch_character_data(character: str) -> dict[str, dict[str, dict[str, str]]]
 
     return all_data
 
-def fetch_icons():
-    # Fetch character icon from genshin-impact.fandom.com/wiki/Character and add it to the `icon` object
-    page_icon = requests.get(icon_url)
-    soup_icon = BeautifulSoup(page_icon.content, 'html.parser')
-    table_icon = soup_icon.find("table", { "class": "article-table" })
-    trs = table_icon.find_all("tr")
-    icons = {}
-    for tr in trs[1:]:
-        name = tr.find_all("td")[1].text.strip()
-        icon = tr.find("td").find("img")["data-src"].split("revision")[0]
-        icons[name] = icon
+# def fetch_icons():
+#     # Fetch character icon from genshin-impact.fandom.com/wiki/Character and add it to the `icon` object
+#     page_icon = requests.get(icon_url)
+#     soup_icon = BeautifulSoup(page_icon.content, 'html.parser')
+#     table_icon = soup_icon.find("table", { "class": "article-table" })
+#     trs = table_icon.find_all("tr")
+#     icons = {}
+#     for tr in trs[1:]:
+#         name = tr.find_all("td")[1].text.strip()
+#         icon = tr.find("td").find("img")["data-src"].split("revision")[0]
+#         icons[name] = icon
 
-    return icons
+#     return icons
 
 def fetch_all_characters_data() -> dict[str, dict[str, dict[str, dict[str, str]]]]:
-    paths_path = os.path.join(current_dir, "paths", "paths.json", 'r')
+    paths_path = os.path.join(current_dir, "paths", "paths.json")
     with open(paths_path) as f:
         characters = json.load(f)
 
@@ -144,10 +165,10 @@ def fetch_all_characters_data() -> dict[str, dict[str, dict[str, dict[str, str]]
         if data_dict:
             all_data[name] = data_dict
 
-    icons = fetch_icons()
-    for name, data in all_data.items():
-        if name in icons:
-            data["icon"] = icons[name]
+    # icons = fetch_icons()
+    # for name, data in all_data.items():
+    #     if name in icons:
+    #         data["icon"] = icons[name]
 
     return all_data
 

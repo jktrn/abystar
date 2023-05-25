@@ -1120,7 +1120,7 @@
         "icon": "/images/icons/aloy.png",
         "weapon": "Bow",
         "vision": "Cryo",
-        "rarity": 6,
+        "rarity": 4,
         "description": "Formerly an outcast, now a hunter of unparalleled skill. Ready to do the right thing at any time.",
         "occupation": "Wandering Heroine",
         "baseStats": {
@@ -3203,7 +3203,7 @@
             {
                 "name": "All Things Are of the Earth",
                 "image": "https://genshin.honeyhunterworld.com/img/p_822201.webp",
-                "description": "Characters who are healed by\nSeamless Shields\nwill gain the Year of Verdant Favor effect: Each 1,000 Max HP that Baizhu possesses that does not exceed 50,000 will increase the Burning, Bloom, Hyperbloom, and Burgeon reaction DMG dealt by these characters by 2%, while the Aggravate and Spread reaction DMG dealt by these characters will be increased by 0.8%. This effect lasts 6s."
+                "description": "Characters who are healed by\nSeamless Shields\nwill gain the Year of Verdant Favor effect: Each 1,000 Max HP that Baizhu possesses that does not exceed 50,000 will increase the Burning, Bloom, Hyperbloom, and Burgeon reaction DMG dealt by these characters by 2%, and will increase the DMG Bonus provided by Aggravate and Spread by 0.8%. This effect lasts 6s."
             }
         ],
         "constellations": [
@@ -16998,7 +16998,7 @@
             {
                 "name": "Steed of Skanda",
                 "image": "https://genshin.honeyhunterworld.com/img/c_614.webp",
-                "description": "After active character(s) protected by\nShields of Safe Transport\nor\nCritical Transport Shields\nhit opponents with Normal, Charged, or Plunging Attacks, Kirara will perform a coordinated attack with them using\nSmall Cat Grass Cardamoms\n, dealing 200% of her ATK as\nDendro DMG\n. DMG dealt this way is considered Elemental Burst DMG. This effect can be triggered once every 3.8s.",
+                "description": "After active character(s) protected by\nShields of Safe Transport\nor\nCritical Transport Shields\nhit opponents with Normal, Charged, or Plunging Attacks, Kirara will perform a coordinated attack with them using\nSmall Cat Grass Cardamoms\n, dealing 200% of her ATK as\nDendro DMG\n. DMG dealt this way is considered Elemental Burst DMG. This effect can be triggered once every 3.8s. This CD is shared between all party members.",
                 "level": 4
             },
             {
