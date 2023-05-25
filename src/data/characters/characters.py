@@ -1,10 +1,9 @@
-# DO NOT RUN THIS SCRIPT AGAIN, I MADE MANUAL CHANGES TO THE JSON
-
 import requests
 from bs4 import BeautifulSoup
 import json
 from tqdm import tqdm
 import os
+import fix_traveler
 
 base_url = 'https://genshin.honeyhunterworld.com'
 icon_url = 'https://genshin-impact.fandom.com/wiki/Character'
@@ -54,7 +53,11 @@ def fetch_character_data(character: str) -> dict[str, dict[str, dict[str, str]]]
     all_data["icon"] = f'/images/icons/{to_kebab_case(all_data["name"])}.png'
     all_data["weapon"] = rows[5].find_all('td')[-1].text.strip()
     all_data["vision"] = data["Vision (Introduced)"]
-    all_data["rarity"] = len(rows[4].find_all('img'))
+    # Stupid fucking Aloy exception
+    if all_data["name"] == "Aloy":
+        all_data["rarity"] = 6
+    else:
+        all_data["rarity"] = len(rows[4].find_all('img'))
     all_data["description"] = data["Description"]
     if "Title" in all_data:
         all_data["title"] = data["Title"]
@@ -127,13 +130,14 @@ def fetch_character_data(character: str) -> dict[str, dict[str, dict[str, str]]]
                     "description": skill_description
                 })
 
-    # Move the bottom six skills into the `constellations` array
-    all_data["constellations"] = all_data["passiveSkills"][-6:]
-    all_data["passiveSkills"] = all_data["passiveSkills"][:-6]
+    if all_data["name"] != "Traveler":
+        # Move the bottom six skills into the `constellations` array
+        all_data["constellations"] = all_data["passiveSkills"][-6:]
+        all_data["passiveSkills"] = all_data["passiveSkills"][:-6]
 
-    # Add a `level` integer to each constellation
-    for i, constellation in enumerate(all_data["constellations"]):
-        constellation["level"] = i + 1
+        # Add a `level` integer to each constellation
+        for i, constellation in enumerate(all_data["constellations"]):
+            constellation["level"] = i + 1
 
     return all_data
 
@@ -181,6 +185,7 @@ if __name__ == '__main__':
     # Comment this out if you want to test with a single character
     all_data = fetch_all_characters_data()
     save_data_to_file(all_data)
+    fix_traveler.fix_traveler()
 
     # Uncomment these if you want to test a single character
     # ayaka_data = fetch_character_data('ayaka')

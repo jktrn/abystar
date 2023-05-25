@@ -1120,7 +1120,7 @@
         "icon": "/images/icons/aloy.png",
         "weapon": "Bow",
         "vision": "Cryo",
-        "rarity": 4,
+        "rarity": 6,
         "description": "Formerly an outcast, now a hunter of unparalleled skill. Ready to do the right thing at any time.",
         "occupation": "Wandering Heroine",
         "baseStats": {
@@ -29849,12 +29849,12 @@
             }
         ]
     },
-    "Traveler": {
-        "name": "Traveler",
+    "Traveler (Anemo)": {
+        "name": "Traveler (Anemo)",
         "icon": "/images/icons/traveler.png",
-        "weapon": "Multi",
-        "vision": "None",
-        "rarity": 1,
+        "weapon": "Sword",
+        "vision": "Anemo",
+        "rarity": 5,
         "description": "A traveler from another world who had their only kin taken away, forcing them to embark on a journey to find The Seven.",
         "occupation": "-",
         "baseStats": {
@@ -30349,10 +30349,185 @@
                         "Lv15": "60"
                     }
                 }
+            }
+        ],
+        "passiveSkills": [
+            {
+                "name": "Slitting Wind",
+                "image": "https://genshin.honeyhunterworld.com/img/p_72101.webp",
+                "description": "The last hit of a Normal Attack combo unleashes a wind blade, dealing 60% of ATK as\nAnemo DMG\nto all opponents in its path."
             },
             {
-                "name": "Normal Attack: Foreign Rockblade",
-                "image": "https://genshin.honeyhunterworld.com/img/s_73001.webp",
+                "name": "Second Wind",
+                "image": "https://genshin.honeyhunterworld.com/img/p_72201.webp",
+                "description": "Palm Vortex\nkills regenerate 2% HP for 5s.\nThis effect can only occur once every 5s."
+            }
+        ],
+        "constellations": [
+            {
+                "name": "Raging Vortex",
+                "image": "https://genshin.honeyhunterworld.com/img/c_71.webp",
+                "description": "Palm Vortex\npulls in opponents and objects within a 5m radius.",
+                "level": 1
+            },
+            {
+                "name": "Uprising Whirlwind",
+                "image": "https://genshin.honeyhunterworld.com/img/c_72.webp",
+                "description": "Increases Energy Recharge by 16%.",
+                "level": 2
+            },
+            {
+                "name": "Sweeping Gust",
+                "image": "https://genshin.honeyhunterworld.com/img/c_73.webp",
+                "description": "Increases the Level of\nGust Surge\nby 3.\nMaximum upgrade level is 15.",
+                "level": 3
+            },
+            {
+                "name": "Cherishing Breezes",
+                "image": "https://genshin.honeyhunterworld.com/img/c_74.webp",
+                "description": "Reduces DMG taken while casting\nPalm Vortex\nby 10%.",
+                "level": 4
+            },
+            {
+                "name": "Vortex Stellaris",
+                "image": "https://genshin.honeyhunterworld.com/img/c_75.webp",
+                "description": "Increases the Level of\nPalm Vortex\nby 3.\nMaximum upgrade level is 15.",
+                "level": 5
+            },
+            {
+                "name": "Intertwined Winds",
+                "image": "https://genshin.honeyhunterworld.com/img/c_76.webp",
+                "description": "Targets who take DMG from\nGust Surge\nhave their\nAnemo RES\ndecreased by 20%.\nIf an Elemental Absorption occurred, then their RES towards the corresponding Element is also decreased by 20%.",
+                "level": 6
+            }
+        ]
+    },
+    "Traveler (Dendro)": {
+        "name": "Traveler (Dendro)",
+        "icon": "/images/icons/traveler.png",
+        "weapon": "Sword",
+        "vision": "Dendro",
+        "rarity": 5,
+        "description": "A traveler from another world who had their only kin taken away, forcing them to embark on a journey to find The Seven.",
+        "occupation": "-",
+        "baseStats": {
+            "1/20": {
+                "HP": "912",
+                "Atk": "17.81",
+                "Def": "57.22",
+                "CritRate%": "5.0%",
+                "CritDMG%": "50.0%",
+                "Bonus Atk%": "0%"
+            },
+            "20/20": {
+                "HP": "2342",
+                "Atk": "45.75",
+                "Def": "147.01",
+                "CritRate%": "5.0%",
+                "CritDMG%": "50.0%",
+                "Bonus Atk%": "0%"
+            },
+            "20/40": {
+                "HP": "3024",
+                "Atk": "59.05",
+                "Def": "189.76",
+                "CritRate%": "5.0%",
+                "CritDMG%": "50.0%",
+                "Bonus Atk%": "0%"
+            },
+            "40/40": {
+                "HP": "4529",
+                "Atk": "88.45",
+                "Def": "284.24",
+                "CritRate%": "5.0%",
+                "CritDMG%": "50.0%",
+                "Bonus Atk%": "0%"
+            },
+            "40/50": {
+                "HP": "5013",
+                "Atk": "97.91",
+                "Def": "314.61",
+                "CritRate%": "5.0%",
+                "CritDMG%": "50.0%",
+                "Bonus Atk%": "6.0%"
+            },
+            "50/50": {
+                "HP": "5766",
+                "Atk": "112.62",
+                "Def": "361.88",
+                "CritRate%": "5.0%",
+                "CritDMG%": "50.0%",
+                "Bonus Atk%": "6.0%"
+            },
+            "50/60": {
+                "HP": "6411",
+                "Atk": "125.22",
+                "Def": "402.38",
+                "CritRate%": "5.0%",
+                "CritDMG%": "50.0%",
+                "Bonus Atk%": "12.0%"
+            },
+            "60/60": {
+                "HP": "7164",
+                "Atk": "139.93",
+                "Def": "449.65",
+                "CritRate%": "5.0%",
+                "CritDMG%": "50.0%",
+                "Bonus Atk%": "12.0%"
+            },
+            "60/70": {
+                "HP": "7648",
+                "Atk": "149.38",
+                "Def": "480.03",
+                "CritRate%": "5.0%",
+                "CritDMG%": "50.0%",
+                "Bonus Atk%": "12.0%"
+            },
+            "70/70": {
+                "HP": "8401",
+                "Atk": "164.07",
+                "Def": "527.24",
+                "CritRate%": "5.0%",
+                "CritDMG%": "50.0%",
+                "Bonus Atk%": "12.0%"
+            },
+            "70/80": {
+                "HP": "8885",
+                "Atk": "173.53",
+                "Def": "557.61",
+                "CritRate%": "5.0%",
+                "CritDMG%": "50.0%",
+                "Bonus Atk%": "18.0%"
+            },
+            "80/80": {
+                "HP": "9638",
+                "Atk": "188.24",
+                "Def": "604.88",
+                "CritRate%": "5.0%",
+                "CritDMG%": "50.0%",
+                "Bonus Atk%": "18.0%"
+            },
+            "80/90": {
+                "HP": "10122",
+                "Atk": "197.69",
+                "Def": "635.25",
+                "CritRate%": "5.0%",
+                "CritDMG%": "50.0%",
+                "Bonus Atk%": "24.0%"
+            },
+            "90/90": {
+                "HP": "10875",
+                "Atk": "212.4",
+                "Def": "682.52",
+                "CritRate%": "5.0%",
+                "CritDMG%": "50.0%",
+                "Bonus Atk%": "24.0%"
+            }
+        },
+        "activeSkills": [
+            {
+                "name": "Normal Attack: Foreign Fieldcleaver",
+                "image": "https://genshin.honeyhunterworld.com/img/s_113001.webp",
                 "description": "Normal Attack\nPerforms up to 5 rapid strikes.\nCharged Attack\nConsumes a certain amount of Stamina to unleash 2 rapid sword strikes.\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.",
                 "data": {
                     "1-Hit DMG": {
@@ -30528,43 +30703,26 @@
                 }
             },
             {
-                "name": "Starfell Sword",
-                "image": "https://genshin.honeyhunterworld.com/img/s_93201.webp",
-                "description": "You disgorge a meteorite from the depths of the earth, dealing\nAoE Geo DMG\n.\nThe meteorite is considered a\nGeo Construct\n, and can be climbed or used to block attacks.\nHold\nThis skill's positioning may be adjusted.\nYou spoke with Paimon about the final destination of falling stars.",
+                "name": "Razorgrass Blade",
+                "image": "https://genshin.honeyhunterworld.com/img/s_113201.webp",
+                "description": "With a flourish of your blade, you unleash a spray of razor-sharp leaves that go before you and deal\nDendro DMG\n.\nYou and Paimon observed the flowing edges of grass and leaf.",
                 "data": {
                     "Skill DMG": {
-                        "Lv1": "248%",
-                        "Lv2": "266.6%",
-                        "Lv3": "285.2%",
-                        "Lv4": "310%",
-                        "Lv5": "328.6%",
-                        "Lv6": "347.2%",
-                        "Lv7": "372%",
-                        "Lv8": "396.8%",
-                        "Lv9": "421.6%",
-                        "Lv10": "446.4%",
-                        "Lv11": "471.2%",
-                        "Lv12": "496%",
-                        "Lv13": "527%",
-                        "Lv14": "558%",
-                        "Lv15": "589%"
-                    },
-                    "Meteorite Duration": {
-                        "Lv1": "30s",
-                        "Lv2": "30s",
-                        "Lv3": "30s",
-                        "Lv4": "30s",
-                        "Lv5": "30s",
-                        "Lv6": "30s",
-                        "Lv7": "30s",
-                        "Lv8": "30s",
-                        "Lv9": "30s",
-                        "Lv10": "30s",
-                        "Lv11": "30s",
-                        "Lv12": "30s",
-                        "Lv13": "30s",
-                        "Lv14": "30s",
-                        "Lv15": "30s"
+                        "Lv1": "230.4%",
+                        "Lv2": "247.68%",
+                        "Lv3": "264.96%",
+                        "Lv4": "288%",
+                        "Lv5": "305.28%",
+                        "Lv6": "322.56%",
+                        "Lv7": "345.6%",
+                        "Lv8": "368.64%",
+                        "Lv9": "391.68%",
+                        "Lv10": "414.72%",
+                        "Lv11": "437.76%",
+                        "Lv12": "460.8%",
+                        "Lv13": "489.6%",
+                        "Lv14": "518.4%",
+                        "Lv15": "547.2%"
                     },
                     "CD": {
                         "Lv1": "8s",
@@ -30586,80 +30744,272 @@
                 }
             },
             {
-                "name": "Wake of Earth",
-                "image": "https://genshin.honeyhunterworld.com/img/s_93901.webp",
-                "description": "Energizing the Geo deep underground, you set off expanding shockwaves.\nLaunches surrounding opponents back and deals\nAoE Geo DMG\n.\nA stone wall is erected at the edges of the shockwave.\nThe stone wall is considered a\nGeo Construct\n, and may be used to block attacks.\nYou and Paimon studied the pulse of the mountains.",
+                "name": "Surgent Manifestation",
+                "image": "https://genshin.honeyhunterworld.com/img/s_113901.webp",
+                "description": "Calling upon the might of the flora all around you, you create a Lea Lotus Lamp.\nThis Lamp will deal continuous\nDendro DMG\nto opponents within its AoE.\nLotuslight Transfiguration\nThe Lea Lotus Lamp will undergo the following changes after it comes into contact with\nHydro\n/\nElectro\n/\nPyro\n:\n\u00b7\nHydro\n: the Lamp's AoE and the AoE of its attacks are increased.\n\u00b7\nElectro\n: the Lamp's ATK SPD is increased.\n\u00b7\nPyro\n: the Lamp will explode after a short delay and then disappear, dealing\nAoE Dendro DMG\n.\nThe Lea Lotus Lamp can only undergo one Lotuslight Transfiguration in its duration.\nOnly one Lamp created by the Traveler can exist at any one time.\nYou and Paimon studied the sounds of plants that sprout after the rain.",
                 "data": {
-                    "DMG Per Shockwave": {
-                        "Lv1": "148%",
-                        "Lv2": "159.1%",
-                        "Lv3": "170.2%",
-                        "Lv4": "185%",
-                        "Lv5": "196.1%",
-                        "Lv6": "207.2%",
-                        "Lv7": "222%",
-                        "Lv8": "236.8%",
-                        "Lv9": "251.6%",
-                        "Lv10": "266.4%",
-                        "Lv11": "281.2%",
-                        "Lv12": "296%",
-                        "Lv13": "314.5%",
-                        "Lv14": "333%",
-                        "Lv15": "351.5%"
+                    "Lea Lotus Lamp Attack DMG": {
+                        "Lv1": "80.16%",
+                        "Lv2": "86.17%",
+                        "Lv3": "92.18%",
+                        "Lv4": "100.2%",
+                        "Lv5": "106.21%",
+                        "Lv6": "112.22%",
+                        "Lv7": "120.24%",
+                        "Lv8": "128.26%",
+                        "Lv9": "136.27%",
+                        "Lv10": "144.29%",
+                        "Lv11": "152.3%",
+                        "Lv12": "160.32%",
+                        "Lv13": "170.34%",
+                        "Lv14": "180.36%",
+                        "Lv15": "190.38%"
                     },
-                    "Stonewall Duration": {
-                        "Lv1": "15s",
-                        "Lv2": "15s",
-                        "Lv3": "15s",
-                        "Lv4": "15s",
-                        "Lv5": "15s",
-                        "Lv6": "15s",
-                        "Lv7": "15s",
-                        "Lv8": "15s",
-                        "Lv9": "15s",
-                        "Lv10": "15s",
-                        "Lv11": "15s",
-                        "Lv12": "15s",
-                        "Lv13": "15s",
-                        "Lv14": "15s",
-                        "Lv15": "15s"
+                    "Explosion DMG": {
+                        "Lv1": "400.8%",
+                        "Lv2": "430.86%",
+                        "Lv3": "460.92%",
+                        "Lv4": "501%",
+                        "Lv5": "531.06%",
+                        "Lv6": "561.12%",
+                        "Lv7": "601.2%",
+                        "Lv8": "641.28%",
+                        "Lv9": "681.36%",
+                        "Lv10": "721.44%",
+                        "Lv11": "761.52%",
+                        "Lv12": "801.6%",
+                        "Lv13": "851.7%",
+                        "Lv14": "901.8%",
+                        "Lv15": "951.9%"
+                    },
+                    "Lea Lotus Lamp Duration": {
+                        "Lv1": "12s",
+                        "Lv2": "12s",
+                        "Lv3": "12s",
+                        "Lv4": "12s",
+                        "Lv5": "12s",
+                        "Lv6": "12s",
+                        "Lv7": "12s",
+                        "Lv8": "12s",
+                        "Lv9": "12s",
+                        "Lv10": "12s",
+                        "Lv11": "12s",
+                        "Lv12": "12s",
+                        "Lv13": "12s",
+                        "Lv14": "12s",
+                        "Lv15": "12s"
                     },
                     "CD": {
-                        "Lv1": "15s",
-                        "Lv2": "15s",
-                        "Lv3": "15s",
-                        "Lv4": "15s",
-                        "Lv5": "15s",
-                        "Lv6": "15s",
-                        "Lv7": "15s",
-                        "Lv8": "15s",
-                        "Lv9": "15s",
-                        "Lv10": "15s",
-                        "Lv11": "15s",
-                        "Lv12": "15s",
-                        "Lv13": "15s",
-                        "Lv14": "15s",
-                        "Lv15": "15s"
+                        "Lv1": "20s",
+                        "Lv2": "20s",
+                        "Lv3": "20s",
+                        "Lv4": "20s",
+                        "Lv5": "20s",
+                        "Lv6": "20s",
+                        "Lv7": "20s",
+                        "Lv8": "20s",
+                        "Lv9": "20s",
+                        "Lv10": "20s",
+                        "Lv11": "20s",
+                        "Lv12": "20s",
+                        "Lv13": "20s",
+                        "Lv14": "20s",
+                        "Lv15": "20s"
                     },
                     "Energy Cost": {
-                        "Lv1": "60",
-                        "Lv2": "60",
-                        "Lv3": "60",
-                        "Lv4": "60",
-                        "Lv5": "60",
-                        "Lv6": "60",
-                        "Lv7": "60",
-                        "Lv8": "60",
-                        "Lv9": "60",
-                        "Lv10": "60",
-                        "Lv11": "60",
-                        "Lv12": "60",
-                        "Lv13": "60",
-                        "Lv14": "60",
-                        "Lv15": "60"
+                        "Lv1": "80",
+                        "Lv2": "80",
+                        "Lv3": "80",
+                        "Lv4": "80",
+                        "Lv5": "80",
+                        "Lv6": "80",
+                        "Lv7": "80",
+                        "Lv8": "80",
+                        "Lv9": "80",
+                        "Lv10": "80",
+                        "Lv11": "80",
+                        "Lv12": "80",
+                        "Lv13": "80",
+                        "Lv14": "80",
+                        "Lv15": "80"
                     }
                 }
+            }
+        ],
+        "passiveSkills": [
+            {
+                "name": "Verdant Overgrowth",
+                "image": "https://genshin.honeyhunterworld.com/img/p_112101.webp",
+                "description": "Lea Lotus Lamp\nwill obtain one level of Overflowing Lotuslight every second it is on the field, increasing the Elemental Mastery of active character(s) within its AoE by 6. Overflowing Lotuslight has a maximum of 10 stacks."
             },
+            {
+                "name": "Verdant Luxury",
+                "image": "https://genshin.honeyhunterworld.com/img/p_112201.webp",
+                "description": "Every point of Elemental Mastery the Traveler possesses increases the DMG dealt by\nRazorgrass Blade\nby 0.15% and the DMG dealt by\nSurgent Manifestation\nby 0.1%."
+            }
+        ],
+        "constellations": [
+            {
+                "name": "Symbiotic Creeper",
+                "image": "https://genshin.honeyhunterworld.com/img/c_111.webp",
+                "description": "After\nRazorgrass Blade\nhits an opponent, it will regenerate 3.5 Energy for the Traveler.",
+                "level": 1
+            },
+            {
+                "name": "Green Resilience",
+                "image": "https://genshin.honeyhunterworld.com/img/c_112.webp",
+                "description": "Lea Lotus Lamp\n's duration is increased by 3s.",
+                "level": 2
+            },
+            {
+                "name": "Whirling Weeds",
+                "image": "https://genshin.honeyhunterworld.com/img/c_113.webp",
+                "description": "Increases the Level of\nRazorgrass Blade\nby 3.\nMaximum upgrade level is 15.",
+                "level": 3
+            },
+            {
+                "name": "Treacle Grass",
+                "image": "https://genshin.honeyhunterworld.com/img/c_114.webp",
+                "description": "After the\nLea Lotus Lamp\ntriggers a Lotuslight Transfiguration, it will obtain 5 stacks of the Overflowing Lotuslight effect from the Passive Talent \"Verdant Overgrowth.\"\nYou must have unlocked this Passive Talent first.",
+                "level": 4
+            },
+            {
+                "name": "Viridian Transience",
+                "image": "https://genshin.honeyhunterworld.com/img/c_115.webp",
+                "description": "Increases the Level of\nSurgent Manifestation\nby 3.\nMaximum upgrade level is 15.",
+                "level": 5
+            },
+            {
+                "name": "Withering Aggregation",
+                "image": "https://genshin.honeyhunterworld.com/img/c_116.webp",
+                "description": "The\nDendro DMG Bonus\nof the character under the effect of Overflowing Lotuslight as created by the\nLea Lotus Lamp\nis increased by 12%. If the Lamp has experienced a Lotuslight Transfiguration previously, the character will also gain 12% DMG Bonus for the corresponding element.",
+                "level": 6
+            }
+        ]
+    },
+    "Traveler (Electro)": {
+        "name": "Traveler (Electro)",
+        "icon": "/images/icons/traveler.png",
+        "weapon": "Sword",
+        "vision": "Electro",
+        "rarity": 5,
+        "description": "A traveler from another world who had their only kin taken away, forcing them to embark on a journey to find The Seven.",
+        "occupation": "-",
+        "baseStats": {
+            "1/20": {
+                "HP": "912",
+                "Atk": "17.81",
+                "Def": "57.22",
+                "CritRate%": "5.0%",
+                "CritDMG%": "50.0%",
+                "Bonus Atk%": "0%"
+            },
+            "20/20": {
+                "HP": "2342",
+                "Atk": "45.75",
+                "Def": "147.01",
+                "CritRate%": "5.0%",
+                "CritDMG%": "50.0%",
+                "Bonus Atk%": "0%"
+            },
+            "20/40": {
+                "HP": "3024",
+                "Atk": "59.05",
+                "Def": "189.76",
+                "CritRate%": "5.0%",
+                "CritDMG%": "50.0%",
+                "Bonus Atk%": "0%"
+            },
+            "40/40": {
+                "HP": "4529",
+                "Atk": "88.45",
+                "Def": "284.24",
+                "CritRate%": "5.0%",
+                "CritDMG%": "50.0%",
+                "Bonus Atk%": "0%"
+            },
+            "40/50": {
+                "HP": "5013",
+                "Atk": "97.91",
+                "Def": "314.61",
+                "CritRate%": "5.0%",
+                "CritDMG%": "50.0%",
+                "Bonus Atk%": "6.0%"
+            },
+            "50/50": {
+                "HP": "5766",
+                "Atk": "112.62",
+                "Def": "361.88",
+                "CritRate%": "5.0%",
+                "CritDMG%": "50.0%",
+                "Bonus Atk%": "6.0%"
+            },
+            "50/60": {
+                "HP": "6411",
+                "Atk": "125.22",
+                "Def": "402.38",
+                "CritRate%": "5.0%",
+                "CritDMG%": "50.0%",
+                "Bonus Atk%": "12.0%"
+            },
+            "60/60": {
+                "HP": "7164",
+                "Atk": "139.93",
+                "Def": "449.65",
+                "CritRate%": "5.0%",
+                "CritDMG%": "50.0%",
+                "Bonus Atk%": "12.0%"
+            },
+            "60/70": {
+                "HP": "7648",
+                "Atk": "149.38",
+                "Def": "480.03",
+                "CritRate%": "5.0%",
+                "CritDMG%": "50.0%",
+                "Bonus Atk%": "12.0%"
+            },
+            "70/70": {
+                "HP": "8401",
+                "Atk": "164.07",
+                "Def": "527.24",
+                "CritRate%": "5.0%",
+                "CritDMG%": "50.0%",
+                "Bonus Atk%": "12.0%"
+            },
+            "70/80": {
+                "HP": "8885",
+                "Atk": "173.53",
+                "Def": "557.61",
+                "CritRate%": "5.0%",
+                "CritDMG%": "50.0%",
+                "Bonus Atk%": "18.0%"
+            },
+            "80/80": {
+                "HP": "9638",
+                "Atk": "188.24",
+                "Def": "604.88",
+                "CritRate%": "5.0%",
+                "CritDMG%": "50.0%",
+                "Bonus Atk%": "18.0%"
+            },
+            "80/90": {
+                "HP": "10122",
+                "Atk": "197.69",
+                "Def": "635.25",
+                "CritRate%": "5.0%",
+                "CritDMG%": "50.0%",
+                "Bonus Atk%": "24.0%"
+            },
+            "90/90": {
+                "HP": "10875",
+                "Atk": "212.4",
+                "Def": "682.52",
+                "CritRate%": "5.0%",
+                "CritDMG%": "50.0%",
+                "Bonus Atk%": "24.0%"
+            }
+        },
+        "activeSkills": [
             {
                 "name": "Normal Attack: Foreign Thundershock",
                 "image": "https://genshin.honeyhunterworld.com/img/s_103001.webp",
@@ -31054,10 +31404,185 @@
                         "Lv15": "80"
                     }
                 }
+            }
+        ],
+        "passiveSkills": [
+            {
+                "name": "Thunderflash",
+                "image": "https://genshin.honeyhunterworld.com/img/p_102101.webp",
+                "description": "When another nearby character in the party obtains an Abundance Amulet created by\nLightning Blade\n,\nLightning Blade's\nCD is decreased by 1.5s."
             },
             {
-                "name": "Normal Attack: Foreign Fieldcleaver",
-                "image": "https://genshin.honeyhunterworld.com/img/s_113001.webp",
+                "name": "Resounding Roar",
+                "image": "https://genshin.honeyhunterworld.com/img/p_102201.webp",
+                "description": "Increases the Energy Recharge effect granted by\nLightning Blade\n's Abundance Amulet by 10% of the Traveler's Energy Recharge."
+            }
+        ],
+        "constellations": [
+            {
+                "name": "Spring Thunder of Fertility",
+                "image": "https://genshin.honeyhunterworld.com/img/c_101.webp",
+                "description": "The number of Abundance Amulets that can be generated using\nLightning Blade\nis increased to 3.",
+                "level": 1
+            },
+            {
+                "name": "Violet Vehemence",
+                "image": "https://genshin.honeyhunterworld.com/img/c_102.webp",
+                "description": "When Falling Thunder created by\nBellowing Thunder\nhits an opponent, it will decrease their\nElectro RES\nby 15% for 8s.",
+                "level": 2
+            },
+            {
+                "name": "Distant Crackling",
+                "image": "https://genshin.honeyhunterworld.com/img/c_103.webp",
+                "description": "Increases the Level of\nBellowing Thunder\nby 3.\nMaximum upgrade level is 15.",
+                "level": 3
+            },
+            {
+                "name": "Fickle Cloudstrike",
+                "image": "https://genshin.honeyhunterworld.com/img/c_104.webp",
+                "description": "When a character obtains Abundance Amulets generated by\nLightning Blade\n, if this character's Energy is less than 35%, the Energy restored by the Abundance Amulets is increased by 100%.",
+                "level": 4
+            },
+            {
+                "name": "Clamor in the Wilds",
+                "image": "https://genshin.honeyhunterworld.com/img/c_105.webp",
+                "description": "Increases the Level of\nLightning Blade\nby 3.\nMaximum upgrade level is 15.",
+                "level": 5
+            },
+            {
+                "name": "World-Shaker",
+                "image": "https://genshin.honeyhunterworld.com/img/c_106.webp",
+                "description": "Every 2 Falling Thunder attacks triggered by\nBellowing Thunder\nwill greatly increase the DMG dealt by the next Falling Thunder, which will deal 200% of its original DMG and will restore an additional 1 Energy to the current character.",
+                "level": 6
+            }
+        ]
+    },
+    "Traveler (Geo)": {
+        "name": "Traveler (Geo)",
+        "icon": "/images/icons/traveler.png",
+        "weapon": "Sword",
+        "vision": "Geo",
+        "rarity": 5,
+        "description": "A traveler from another world who had their only kin taken away, forcing them to embark on a journey to find The Seven.",
+        "occupation": "-",
+        "baseStats": {
+            "1/20": {
+                "HP": "912",
+                "Atk": "17.81",
+                "Def": "57.22",
+                "CritRate%": "5.0%",
+                "CritDMG%": "50.0%",
+                "Bonus Atk%": "0%"
+            },
+            "20/20": {
+                "HP": "2342",
+                "Atk": "45.75",
+                "Def": "147.01",
+                "CritRate%": "5.0%",
+                "CritDMG%": "50.0%",
+                "Bonus Atk%": "0%"
+            },
+            "20/40": {
+                "HP": "3024",
+                "Atk": "59.05",
+                "Def": "189.76",
+                "CritRate%": "5.0%",
+                "CritDMG%": "50.0%",
+                "Bonus Atk%": "0%"
+            },
+            "40/40": {
+                "HP": "4529",
+                "Atk": "88.45",
+                "Def": "284.24",
+                "CritRate%": "5.0%",
+                "CritDMG%": "50.0%",
+                "Bonus Atk%": "0%"
+            },
+            "40/50": {
+                "HP": "5013",
+                "Atk": "97.91",
+                "Def": "314.61",
+                "CritRate%": "5.0%",
+                "CritDMG%": "50.0%",
+                "Bonus Atk%": "6.0%"
+            },
+            "50/50": {
+                "HP": "5766",
+                "Atk": "112.62",
+                "Def": "361.88",
+                "CritRate%": "5.0%",
+                "CritDMG%": "50.0%",
+                "Bonus Atk%": "6.0%"
+            },
+            "50/60": {
+                "HP": "6411",
+                "Atk": "125.22",
+                "Def": "402.38",
+                "CritRate%": "5.0%",
+                "CritDMG%": "50.0%",
+                "Bonus Atk%": "12.0%"
+            },
+            "60/60": {
+                "HP": "7164",
+                "Atk": "139.93",
+                "Def": "449.65",
+                "CritRate%": "5.0%",
+                "CritDMG%": "50.0%",
+                "Bonus Atk%": "12.0%"
+            },
+            "60/70": {
+                "HP": "7648",
+                "Atk": "149.38",
+                "Def": "480.03",
+                "CritRate%": "5.0%",
+                "CritDMG%": "50.0%",
+                "Bonus Atk%": "12.0%"
+            },
+            "70/70": {
+                "HP": "8401",
+                "Atk": "164.07",
+                "Def": "527.24",
+                "CritRate%": "5.0%",
+                "CritDMG%": "50.0%",
+                "Bonus Atk%": "12.0%"
+            },
+            "70/80": {
+                "HP": "8885",
+                "Atk": "173.53",
+                "Def": "557.61",
+                "CritRate%": "5.0%",
+                "CritDMG%": "50.0%",
+                "Bonus Atk%": "18.0%"
+            },
+            "80/80": {
+                "HP": "9638",
+                "Atk": "188.24",
+                "Def": "604.88",
+                "CritRate%": "5.0%",
+                "CritDMG%": "50.0%",
+                "Bonus Atk%": "18.0%"
+            },
+            "80/90": {
+                "HP": "10122",
+                "Atk": "197.69",
+                "Def": "635.25",
+                "CritRate%": "5.0%",
+                "CritDMG%": "50.0%",
+                "Bonus Atk%": "24.0%"
+            },
+            "90/90": {
+                "HP": "10875",
+                "Atk": "212.4",
+                "Def": "682.52",
+                "CritRate%": "5.0%",
+                "CritDMG%": "50.0%",
+                "Bonus Atk%": "24.0%"
+            }
+        },
+        "activeSkills": [
+            {
+                "name": "Normal Attack: Foreign Rockblade",
+                "image": "https://genshin.honeyhunterworld.com/img/s_73001.webp",
                 "description": "Normal Attack\nPerforms up to 5 rapid strikes.\nCharged Attack\nConsumes a certain amount of Stamina to unleash 2 rapid sword strikes.\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.",
                 "data": {
                     "1-Hit DMG": {
@@ -31233,26 +31758,43 @@
                 }
             },
             {
-                "name": "Razorgrass Blade",
-                "image": "https://genshin.honeyhunterworld.com/img/s_113201.webp",
-                "description": "With a flourish of your blade, you unleash a spray of razor-sharp leaves that go before you and deal\nDendro DMG\n.\nYou and Paimon observed the flowing edges of grass and leaf.",
+                "name": "Starfell Sword",
+                "image": "https://genshin.honeyhunterworld.com/img/s_93201.webp",
+                "description": "You disgorge a meteorite from the depths of the earth, dealing\nAoE Geo DMG\n.\nThe meteorite is considered a\nGeo Construct\n, and can be climbed or used to block attacks.\nHold\nThis skill's positioning may be adjusted.\nYou spoke with Paimon about the final destination of falling stars.",
                 "data": {
                     "Skill DMG": {
-                        "Lv1": "230.4%",
-                        "Lv2": "247.68%",
-                        "Lv3": "264.96%",
-                        "Lv4": "288%",
-                        "Lv5": "305.28%",
-                        "Lv6": "322.56%",
-                        "Lv7": "345.6%",
-                        "Lv8": "368.64%",
-                        "Lv9": "391.68%",
-                        "Lv10": "414.72%",
-                        "Lv11": "437.76%",
-                        "Lv12": "460.8%",
-                        "Lv13": "489.6%",
-                        "Lv14": "518.4%",
-                        "Lv15": "547.2%"
+                        "Lv1": "248%",
+                        "Lv2": "266.6%",
+                        "Lv3": "285.2%",
+                        "Lv4": "310%",
+                        "Lv5": "328.6%",
+                        "Lv6": "347.2%",
+                        "Lv7": "372%",
+                        "Lv8": "396.8%",
+                        "Lv9": "421.6%",
+                        "Lv10": "446.4%",
+                        "Lv11": "471.2%",
+                        "Lv12": "496%",
+                        "Lv13": "527%",
+                        "Lv14": "558%",
+                        "Lv15": "589%"
+                    },
+                    "Meteorite Duration": {
+                        "Lv1": "30s",
+                        "Lv2": "30s",
+                        "Lv3": "30s",
+                        "Lv4": "30s",
+                        "Lv5": "30s",
+                        "Lv6": "30s",
+                        "Lv7": "30s",
+                        "Lv8": "30s",
+                        "Lv9": "30s",
+                        "Lv10": "30s",
+                        "Lv11": "30s",
+                        "Lv12": "30s",
+                        "Lv13": "30s",
+                        "Lv14": "30s",
+                        "Lv15": "30s"
                     },
                     "CD": {
                         "Lv1": "8s",
@@ -31274,139 +31816,82 @@
                 }
             },
             {
-                "name": "Surgent Manifestation",
-                "image": "https://genshin.honeyhunterworld.com/img/s_113901.webp",
-                "description": "Calling upon the might of the flora all around you, you create a Lea Lotus Lamp.\nThis Lamp will deal continuous\nDendro DMG\nto opponents within its AoE.\nLotuslight Transfiguration\nThe Lea Lotus Lamp will undergo the following changes after it comes into contact with\nHydro\n/\nElectro\n/\nPyro\n:\n\u00b7\nHydro\n: the Lamp's AoE and the AoE of its attacks are increased.\n\u00b7\nElectro\n: the Lamp's ATK SPD is increased.\n\u00b7\nPyro\n: the Lamp will explode after a short delay and then disappear, dealing\nAoE Dendro DMG\n.\nThe Lea Lotus Lamp can only undergo one Lotuslight Transfiguration in its duration.\nOnly one Lamp created by the Traveler can exist at any one time.\nYou and Paimon studied the sounds of plants that sprout after the rain.",
+                "name": "Wake of Earth",
+                "image": "https://genshin.honeyhunterworld.com/img/s_93901.webp",
+                "description": "Energizing the Geo deep underground, you set off expanding shockwaves.\nLaunches surrounding opponents back and deals\nAoE Geo DMG\n.\nA stone wall is erected at the edges of the shockwave.\nThe stone wall is considered a\nGeo Construct\n, and may be used to block attacks.\nYou and Paimon studied the pulse of the mountains.",
                 "data": {
-                    "Lea Lotus Lamp Attack DMG": {
-                        "Lv1": "80.16%",
-                        "Lv2": "86.17%",
-                        "Lv3": "92.18%",
-                        "Lv4": "100.2%",
-                        "Lv5": "106.21%",
-                        "Lv6": "112.22%",
-                        "Lv7": "120.24%",
-                        "Lv8": "128.26%",
-                        "Lv9": "136.27%",
-                        "Lv10": "144.29%",
-                        "Lv11": "152.3%",
-                        "Lv12": "160.32%",
-                        "Lv13": "170.34%",
-                        "Lv14": "180.36%",
-                        "Lv15": "190.38%"
+                    "DMG Per Shockwave": {
+                        "Lv1": "148%",
+                        "Lv2": "159.1%",
+                        "Lv3": "170.2%",
+                        "Lv4": "185%",
+                        "Lv5": "196.1%",
+                        "Lv6": "207.2%",
+                        "Lv7": "222%",
+                        "Lv8": "236.8%",
+                        "Lv9": "251.6%",
+                        "Lv10": "266.4%",
+                        "Lv11": "281.2%",
+                        "Lv12": "296%",
+                        "Lv13": "314.5%",
+                        "Lv14": "333%",
+                        "Lv15": "351.5%"
                     },
-                    "Explosion DMG": {
-                        "Lv1": "400.8%",
-                        "Lv2": "430.86%",
-                        "Lv3": "460.92%",
-                        "Lv4": "501%",
-                        "Lv5": "531.06%",
-                        "Lv6": "561.12%",
-                        "Lv7": "601.2%",
-                        "Lv8": "641.28%",
-                        "Lv9": "681.36%",
-                        "Lv10": "721.44%",
-                        "Lv11": "761.52%",
-                        "Lv12": "801.6%",
-                        "Lv13": "851.7%",
-                        "Lv14": "901.8%",
-                        "Lv15": "951.9%"
-                    },
-                    "Lea Lotus Lamp Duration": {
-                        "Lv1": "12s",
-                        "Lv2": "12s",
-                        "Lv3": "12s",
-                        "Lv4": "12s",
-                        "Lv5": "12s",
-                        "Lv6": "12s",
-                        "Lv7": "12s",
-                        "Lv8": "12s",
-                        "Lv9": "12s",
-                        "Lv10": "12s",
-                        "Lv11": "12s",
-                        "Lv12": "12s",
-                        "Lv13": "12s",
-                        "Lv14": "12s",
-                        "Lv15": "12s"
+                    "Stonewall Duration": {
+                        "Lv1": "15s",
+                        "Lv2": "15s",
+                        "Lv3": "15s",
+                        "Lv4": "15s",
+                        "Lv5": "15s",
+                        "Lv6": "15s",
+                        "Lv7": "15s",
+                        "Lv8": "15s",
+                        "Lv9": "15s",
+                        "Lv10": "15s",
+                        "Lv11": "15s",
+                        "Lv12": "15s",
+                        "Lv13": "15s",
+                        "Lv14": "15s",
+                        "Lv15": "15s"
                     },
                     "CD": {
-                        "Lv1": "20s",
-                        "Lv2": "20s",
-                        "Lv3": "20s",
-                        "Lv4": "20s",
-                        "Lv5": "20s",
-                        "Lv6": "20s",
-                        "Lv7": "20s",
-                        "Lv8": "20s",
-                        "Lv9": "20s",
-                        "Lv10": "20s",
-                        "Lv11": "20s",
-                        "Lv12": "20s",
-                        "Lv13": "20s",
-                        "Lv14": "20s",
-                        "Lv15": "20s"
+                        "Lv1": "15s",
+                        "Lv2": "15s",
+                        "Lv3": "15s",
+                        "Lv4": "15s",
+                        "Lv5": "15s",
+                        "Lv6": "15s",
+                        "Lv7": "15s",
+                        "Lv8": "15s",
+                        "Lv9": "15s",
+                        "Lv10": "15s",
+                        "Lv11": "15s",
+                        "Lv12": "15s",
+                        "Lv13": "15s",
+                        "Lv14": "15s",
+                        "Lv15": "15s"
                     },
                     "Energy Cost": {
-                        "Lv1": "80",
-                        "Lv2": "80",
-                        "Lv3": "80",
-                        "Lv4": "80",
-                        "Lv5": "80",
-                        "Lv6": "80",
-                        "Lv7": "80",
-                        "Lv8": "80",
-                        "Lv9": "80",
-                        "Lv10": "80",
-                        "Lv11": "80",
-                        "Lv12": "80",
-                        "Lv13": "80",
-                        "Lv14": "80",
-                        "Lv15": "80"
+                        "Lv1": "60",
+                        "Lv2": "60",
+                        "Lv3": "60",
+                        "Lv4": "60",
+                        "Lv5": "60",
+                        "Lv6": "60",
+                        "Lv7": "60",
+                        "Lv8": "60",
+                        "Lv9": "60",
+                        "Lv10": "60",
+                        "Lv11": "60",
+                        "Lv12": "60",
+                        "Lv13": "60",
+                        "Lv14": "60",
+                        "Lv15": "60"
                     }
                 }
             }
         ],
         "passiveSkills": [
-            {
-                "name": "Slitting Wind",
-                "image": "https://genshin.honeyhunterworld.com/img/p_72101.webp",
-                "description": "The last hit of a Normal Attack combo unleashes a wind blade, dealing 60% of ATK as\nAnemo DMG\nto all opponents in its path."
-            },
-            {
-                "name": "Second Wind",
-                "image": "https://genshin.honeyhunterworld.com/img/p_72201.webp",
-                "description": "Palm Vortex\nkills regenerate 2% HP for 5s.\nThis effect can only occur once every 5s."
-            },
-            {
-                "name": "Raging Vortex",
-                "image": "https://genshin.honeyhunterworld.com/img/c_71.webp",
-                "description": "Palm Vortex\npulls in opponents and objects within a 5m radius."
-            },
-            {
-                "name": "Uprising Whirlwind",
-                "image": "https://genshin.honeyhunterworld.com/img/c_72.webp",
-                "description": "Increases Energy Recharge by 16%."
-            },
-            {
-                "name": "Sweeping Gust",
-                "image": "https://genshin.honeyhunterworld.com/img/c_73.webp",
-                "description": "Increases the Level of\nGust Surge\nby 3.\nMaximum upgrade level is 15."
-            },
-            {
-                "name": "Cherishing Breezes",
-                "image": "https://genshin.honeyhunterworld.com/img/c_74.webp",
-                "description": "Reduces DMG taken while casting\nPalm Vortex\nby 10%."
-            },
-            {
-                "name": "Vortex Stellaris",
-                "image": "https://genshin.honeyhunterworld.com/img/c_75.webp",
-                "description": "Increases the Level of\nPalm Vortex\nby 3.\nMaximum upgrade level is 15."
-            },
-            {
-                "name": "Intertwined Winds",
-                "image": "https://genshin.honeyhunterworld.com/img/c_76.webp",
-                "description": "Targets who take DMG from\nGust Surge\nhave their\nAnemo RES\ndecreased by 20%.\nIf an Elemental Absorption occurred, then their RES towards the corresponding Element is also decreased by 20%."
-            },
             {
                 "name": "Shattered Darkrock",
                 "image": "https://genshin.honeyhunterworld.com/img/p_92101.webp",
@@ -31416,123 +31901,43 @@
                 "name": "Frenzied Rockslide",
                 "image": "https://genshin.honeyhunterworld.com/img/p_92201.webp",
                 "description": "The final hit of a Normal Attack combo triggers a collapse, dealing 60% of ATK as\nAoE Geo DMG\n."
-            },
-            {
-                "name": "Invincible Stonewall",
-                "image": "https://genshin.honeyhunterworld.com/img/c_91.webp",
-                "description": "Party members within the radius of\nWake of Earth\nhave their CRIT Rate increased by 10% and have increased resistance against interruption."
-            },
-            {
-                "name": "Rockcore Meltdown",
-                "image": "https://genshin.honeyhunterworld.com/img/c_92.webp",
-                "description": "When the meteorite created by\nStarfell Sword\nis destroyed, it will also explode, dealing additional\nAoE Geo DMG\nequal to the amount of damage dealt by Starfell Sword."
-            },
-            {
-                "name": "Will of the Rock",
-                "image": "https://genshin.honeyhunterworld.com/img/c_93.webp",
-                "description": "Increases the Level of\nWake of Earth\nby 3.\nMaximum upgrade level is 15."
-            },
-            {
-                "name": "Reaction Force",
-                "image": "https://genshin.honeyhunterworld.com/img/c_94.webp",
-                "description": "The shockwave triggered by\nWake of Earth\nregenerates 5 Energy for every opponent hit.\nA maximum of 25 Energy can be regenerated in this manner at any one time."
-            },
-            {
-                "name": "Meteorite Impact",
-                "image": "https://genshin.honeyhunterworld.com/img/c_95.webp",
-                "description": "Increases the Level of\nStarfell Sword\nby 3.\nMaximum upgrade level is 15."
-            },
-            {
-                "name": "Everlasting Boulder",
-                "image": "https://genshin.honeyhunterworld.com/img/c_96.webp",
-                "description": "The barrier created by\nWake of Earth\nlasts 5s longer.\nThe meteorite created by\nStarfell Sword\nlasts 10s longer."
-            },
-            {
-                "name": "Thunderflash",
-                "image": "https://genshin.honeyhunterworld.com/img/p_102101.webp",
-                "description": "When another nearby character in the party obtains an Abundance Amulet created by\nLightning Blade\n,\nLightning Blade's\nCD is decreased by 1.5s."
-            },
-            {
-                "name": "Resounding Roar",
-                "image": "https://genshin.honeyhunterworld.com/img/p_102201.webp",
-                "description": "Increases the Energy Recharge effect granted by\nLightning Blade\n's Abundance Amulet by 10% of the Traveler's Energy Recharge."
-            },
-            {
-                "name": "Spring Thunder of Fertility",
-                "image": "https://genshin.honeyhunterworld.com/img/c_101.webp",
-                "description": "The number of Abundance Amulets that can be generated using\nLightning Blade\nis increased to 3."
-            },
-            {
-                "name": "Violet Vehemence",
-                "image": "https://genshin.honeyhunterworld.com/img/c_102.webp",
-                "description": "When Falling Thunder created by\nBellowing Thunder\nhits an opponent, it will decrease their\nElectro RES\nby 15% for 8s."
-            },
-            {
-                "name": "Distant Crackling",
-                "image": "https://genshin.honeyhunterworld.com/img/c_103.webp",
-                "description": "Increases the Level of\nBellowing Thunder\nby 3.\nMaximum upgrade level is 15."
-            },
-            {
-                "name": "Fickle Cloudstrike",
-                "image": "https://genshin.honeyhunterworld.com/img/c_104.webp",
-                "description": "When a character obtains Abundance Amulets generated by\nLightning Blade\n, if this character's Energy is less than 35%, the Energy restored by the Abundance Amulets is increased by 100%."
-            },
-            {
-                "name": "Clamor in the Wilds",
-                "image": "https://genshin.honeyhunterworld.com/img/c_105.webp",
-                "description": "Increases the Level of\nLightning Blade\nby 3.\nMaximum upgrade level is 15."
-            },
-            {
-                "name": "World-Shaker",
-                "image": "https://genshin.honeyhunterworld.com/img/c_106.webp",
-                "description": "Every 2 Falling Thunder attacks triggered by\nBellowing Thunder\nwill greatly increase the DMG dealt by the next Falling Thunder, which will deal 200% of its original DMG and will restore an additional 1 Energy to the current character."
-            },
-            {
-                "name": "Verdant Overgrowth",
-                "image": "https://genshin.honeyhunterworld.com/img/p_112101.webp",
-                "description": "Lea Lotus Lamp\nwill obtain one level of Overflowing Lotuslight every second it is on the field, increasing the Elemental Mastery of active character(s) within its AoE by 6. Overflowing Lotuslight has a maximum of 10 stacks."
-            },
-            {
-                "name": "Verdant Luxury",
-                "image": "https://genshin.honeyhunterworld.com/img/p_112201.webp",
-                "description": "Every point of Elemental Mastery the Traveler possesses increases the DMG dealt by\nRazorgrass Blade\nby 0.15% and the DMG dealt by\nSurgent Manifestation\nby 0.1%."
             }
         ],
         "constellations": [
             {
-                "name": "Symbiotic Creeper",
-                "image": "https://genshin.honeyhunterworld.com/img/c_111.webp",
-                "description": "After\nRazorgrass Blade\nhits an opponent, it will regenerate 3.5 Energy for the Traveler.",
+                "name": "Invincible Stonewall",
+                "image": "https://genshin.honeyhunterworld.com/img/c_91.webp",
+                "description": "Party members within the radius of\nWake of Earth\nhave their CRIT Rate increased by 10% and have increased resistance against interruption.",
                 "level": 1
             },
             {
-                "name": "Green Resilience",
-                "image": "https://genshin.honeyhunterworld.com/img/c_112.webp",
-                "description": "Lea Lotus Lamp\n's duration is increased by 3s.",
+                "name": "Rockcore Meltdown",
+                "image": "https://genshin.honeyhunterworld.com/img/c_92.webp",
+                "description": "When the meteorite created by\nStarfell Sword\nis destroyed, it will also explode, dealing additional\nAoE Geo DMG\nequal to the amount of damage dealt by Starfell Sword.",
                 "level": 2
             },
             {
-                "name": "Whirling Weeds",
-                "image": "https://genshin.honeyhunterworld.com/img/c_113.webp",
-                "description": "Increases the Level of\nRazorgrass Blade\nby 3.\nMaximum upgrade level is 15.",
+                "name": "Will of the Rock",
+                "image": "https://genshin.honeyhunterworld.com/img/c_93.webp",
+                "description": "Increases the Level of\nWake of Earth\nby 3.\nMaximum upgrade level is 15.",
                 "level": 3
             },
             {
-                "name": "Treacle Grass",
-                "image": "https://genshin.honeyhunterworld.com/img/c_114.webp",
-                "description": "After the\nLea Lotus Lamp\ntriggers a Lotuslight Transfiguration, it will obtain 5 stacks of the Overflowing Lotuslight effect from the Passive Talent \"Verdant Overgrowth.\"\nYou must have unlocked this Passive Talent first.",
+                "name": "Reaction Force",
+                "image": "https://genshin.honeyhunterworld.com/img/c_94.webp",
+                "description": "The shockwave triggered by\nWake of Earth\nregenerates 5 Energy for every opponent hit.\nA maximum of 25 Energy can be regenerated in this manner at any one time.",
                 "level": 4
             },
             {
-                "name": "Viridian Transience",
-                "image": "https://genshin.honeyhunterworld.com/img/c_115.webp",
-                "description": "Increases the Level of\nSurgent Manifestation\nby 3.\nMaximum upgrade level is 15.",
+                "name": "Meteorite Impact",
+                "image": "https://genshin.honeyhunterworld.com/img/c_95.webp",
+                "description": "Increases the Level of\nStarfell Sword\nby 3.\nMaximum upgrade level is 15.",
                 "level": 5
             },
             {
-                "name": "Withering Aggregation",
-                "image": "https://genshin.honeyhunterworld.com/img/c_116.webp",
-                "description": "The\nDendro DMG Bonus\nof the character under the effect of Overflowing Lotuslight as created by the\nLea Lotus Lamp\nis increased by 12%. If the Lamp has experienced a Lotuslight Transfiguration previously, the character will also gain 12% DMG Bonus for the corresponding element.",
+                "name": "Everlasting Boulder",
+                "image": "https://genshin.honeyhunterworld.com/img/c_96.webp",
+                "description": "The barrier created by\nWake of Earth\nlasts 5s longer.\nThe meteorite created by\nStarfell Sword\nlasts 10s longer.",
                 "level": 6
             }
         ]
