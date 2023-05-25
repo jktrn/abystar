@@ -1,7 +1,8 @@
 'use client'
 
-import { Image, useDisclosure } from '@chakra-ui/react'
+import { useDisclosure } from '@chakra-ui/react'
 import { useState } from 'react'
+import CharacterImage from '../components/CharacterImage'
 import CharacterModal from '../components/CharacterModal'
 import charactersData from '../data/characters/characters.json'
 import { Character } from '../types/Character'
@@ -32,11 +33,10 @@ export default function Home() {
                     </h2>
                     <div className="bg-main-900 p-4">
                         <form onSubmit={handleSubmit}>
-                            <Image
-                                src={character.icon}
-                                alt={character.name}
+                            <CharacterImage
+                                icon={character.icon}
+                                rarity={character.rarity}
                                 onClick={onOpen}
-                                boxSize="70px"
                             />
                             <CharacterModal
                                 isOpen={isOpen}

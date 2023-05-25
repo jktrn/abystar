@@ -33,21 +33,27 @@ export default function CharacterModal({
     const [sortOrder, setSortOrder] = useState<string>('element')
 
     const filterAndSortCharacters = () => {
-        let filteredCharacters =
+        const filteredCharacters =
             filterValue.includes('all') || !filterValue.length
                 ? characters
                 : characters.filter((character) =>
                       filterValue.includes(character.vision.toLowerCase())
                   )
-        let sortedCharacters = filteredCharacters.sort((a, b) =>
-            sortOrder === 'asc'
-                ? a.name.localeCompare(b.name)
-                : sortOrder === 'desc'
-                ? b.name.localeCompare(a.name)
-                : sortOrder === 'element'
-                ? compareElement(a.vision.toLowerCase(), b.vision.toLowerCase())
-                : 0
-        )
+        const sortedCharacters = filteredCharacters.sort((a, b) => {
+            switch (sortOrder) {
+                case 'asc':
+                    return a.name.localeCompare(b.name)
+                case 'desc':
+                    return b.name.localeCompare(a.name)
+                case 'element':
+                    return compareElement(
+                        a.vision.toLowerCase(),
+                        b.vision.toLowerCase()
+                    )
+                default:
+                    return 0
+            }
+        })
         return sortedCharacters
     }
 
@@ -56,8 +62,8 @@ export default function CharacterModal({
             <ModalOverlay
                 sx={{ backdropFilter: 'blur(5px)' }}
                 bg={useColorModeValue(
-                    'rgba(0,0,0,0.5)',
-                    'rgba(255,255,255,0.2)'
+                    'rgba(0, 0, 0, 0.5)',
+                    'rgba(255, 255, 255, 0.2)'
                 )}
             />
             <ModalContent>
