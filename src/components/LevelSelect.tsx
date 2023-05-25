@@ -33,6 +33,7 @@ const LevelSelect = ({
             options={levelOptions}
             styles={selectStyles}
             maxMenuHeight={200}
+            className="w-full"
             {...props}
         />
     )

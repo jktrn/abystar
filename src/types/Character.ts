@@ -1,3 +1,29 @@
+interface BaseStat {
+    [key: string]: string
+}
+
+interface ActiveSkill {
+    name: string
+    image: string
+    description: string
+    data: {
+        [key: string]: any
+    }
+}
+
+interface PassiveSkill {
+    name: string
+    image: string
+    description: string
+}
+
+interface Constellation {
+    name: string
+    image: string
+    description: string
+    level: number
+}
+
 export interface Character {
     name: string
     icon: string
@@ -7,27 +33,9 @@ export interface Character {
     description: string
     occupation: string
     baseStats: {
-        [key: string]: {
-            [key: string]: string
-        }
+        [key: string]: BaseStat
     }
-    activeSkills: {
-        name: string
-        image: string
-        description: string
-        data: {
-            [key: string]: any
-        }
-    }[]
-    passiveSkills?: {
-        name: string
-        image: string
-        description: string
-    }[]
-    constellations?: {
-        name: string
-        image: string
-        description: string
-        level?: number
-    }[]
+    activeSkills: ActiveSkill[]
+    passiveSkills?: PassiveSkill[]
+    constellations: Constellation[]
 }

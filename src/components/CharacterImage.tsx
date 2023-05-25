@@ -30,6 +30,7 @@ function CharacterImage({
                 className="object-cover rounded-lg cursor-pointer ease-in duration-100"
                 width={128}
                 height={128}
+                unoptimized={true}
             />
             <div className="w-8 h-8 flex rounded-full bg-main-900 absolute bottom-0.5 right-0.5 items-center justify-center">
                 <Image
