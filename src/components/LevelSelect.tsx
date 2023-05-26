@@ -15,21 +15,15 @@ const LevelSelect = ({
     setLevel,
     ...props
 }: LevelSelectProps) => {
-    const levelOptions = Object.keys(
-        character.baseStats
-    ).map((level) => ({
+    const levelOptions = Object.keys(character.baseStats).map((level) => ({
         value: level,
         label: level,
     }))
 
     return (
         <Select
-            value={levelOptions.find(
-                (option) => option.value === level
-            )}
-            onChange={(option) =>
-                setLevel(option?.value ?? '')
-            }
+            value={levelOptions.find((option) => option.value === level)}
+            onChange={(option) => setLevel(option?.value ?? '')}
             options={levelOptions}
             styles={selectStyles}
             maxMenuHeight={200}
