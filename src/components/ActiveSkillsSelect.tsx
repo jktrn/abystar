@@ -1,7 +1,8 @@
-import Image from 'next/image'
+import { Image } from '@chakra-ui/react'
 import Select from 'react-select'
 import { selectStyles } from '../styles/selectStyles'
 import { Character } from '../types/Character'
+import elementColors from '../utils/elementColors'
 
 const activeSkillOptions: any[] = []
 
@@ -25,8 +26,12 @@ function ActiveSkillsSelect({
                     <Image
                         src={skill.image}
                         alt={skill.name}
-                        width={32}
-                        height={32}
+                        bg={
+                            elementColors[
+                                character.vision.toLowerCase() as keyof typeof elementColors
+                            ]
+                        }
+                        className="!w-10 !h-8 p-1 rounded-full object-cover overflow-hidden"
                     />
                     <Select
                         options={activeSkillOptions}

@@ -130,6 +130,10 @@ def fetch_character_data(character: str) -> dict[str, dict[str, dict[str, str]]]
                     "description": skill_description
                 })
 
+    # Deletes the passive sprint skill on Ayaka and Mona
+    if len(all_data['activeSkills']) == 4:
+        del all_data['activeSkills'][2]
+
     if all_data["name"] != "Traveler":
         # Move the bottom six skills into the `constellations` array
         all_data["constellations"] = all_data["passiveSkills"][-6:]

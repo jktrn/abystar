@@ -59,27 +59,31 @@ export default function Home() {
                             </form>
                             <div className="flex w-full justify-between ml-4">
                                 <div className="flex flex-col justify-between">
-                                    <span className="text-xl font-bold leading-none">
-                                        {character.name}
-                                    </span>
-                                    <span className="text-md leading-none">
-                                        {'★'.repeat(character.rarity)}
-                                    </span>
-                                    <div className="flex items-center gap-2">
-                                        Ascension:
-                                        <LevelSelect
-                                            character={character}
-                                            level={level}
-                                            setLevel={setLevel}
-                                        />
+                                    <div className="flex flex-col">
+                                        <span className="text-xl font-bold">
+                                            {character.name}
+                                        </span>
+                                        <span className="text-md">
+                                            {'★'.repeat(character.rarity)}
+                                        </span>
                                     </div>
-                                    <div className="flex items-center gap-2">
-                                        Constellation:
-                                        <ConstellationSelect
-                                            character={character}
-                                            constellation={constellation}
-                                            setConstellation={setConstellation}
-                                        />
+                                    <div className="flex flex-col gap-2">
+                                        <div className="flex items-center gap-2">
+                                            Ascension:
+                                            <LevelSelect
+                                                character={character}
+                                                level={level}
+                                                setLevel={setLevel}
+                                            />
+                                        </div>
+                                        <div className="flex items-center gap-2">
+                                            Constellation:
+                                            <ConstellationSelect
+                                                character={character}
+                                                constellation={constellation}
+                                                setConstellation={setConstellation}
+                                            />
+                                        </div>
                                     </div>
                                 </div>
                                 <ActiveSkillsSelect

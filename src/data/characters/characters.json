@@ -14611,64 +14611,6 @@
                 }
             },
             {
-                "name": "Kamisato Art: Senho",
-                "image": "https://genshin.honeyhunterworld.com/img/s_23301.webp",
-                "description": "Alternate Sprint\nAyaka consumes Stamina and cloaks herself in a frozen fog that moves with her.\nIn Senho form, she moves swiftly upon water.\nWhen she reappears, the following effects occur:\n\u00b7Ayaka unleashes frigid energy to apply\nCryo\non nearby opponents.\n\u00b7Coldness condenses around Ayaka's blade, infusing her attacks with\nCryo\nfor a brief period.\n\"Feathers fleeting wet / the white heron treads water / a sight without flaw\"",
-                "data": {
-                    "Activation Stamina Consumption": {
-                        "Lv1": "10",
-                        "Lv2": "0",
-                        "Lv3": "0",
-                        "Lv4": "0",
-                        "Lv5": "0",
-                        "Lv6": "0",
-                        "Lv7": "0",
-                        "Lv8": "0",
-                        "Lv9": "0",
-                        "Lv10": "0",
-                        "Lv11": "0",
-                        "Lv12": "0",
-                        "Lv13": "0",
-                        "Lv14": "0",
-                        "Lv15": "0"
-                    },
-                    "Stamina Drain": {
-                        "Lv1": "15 / s",
-                        "Lv2": "0 / s",
-                        "Lv3": "0 / s",
-                        "Lv4": "0 / s",
-                        "Lv5": "0 / s",
-                        "Lv6": "0 / s",
-                        "Lv7": "0 / s",
-                        "Lv8": "0 / s",
-                        "Lv9": "0 / s",
-                        "Lv10": "0 / s",
-                        "Lv11": "0 / s",
-                        "Lv12": "0 / s",
-                        "Lv13": "0 / s",
-                        "Lv14": "0 / s",
-                        "Lv15": "0 / s"
-                    },
-                    "Infusion Duration": {
-                        "Lv1": "5s",
-                        "Lv2": "0s",
-                        "Lv3": "0s",
-                        "Lv4": "0s",
-                        "Lv5": "0s",
-                        "Lv6": "0s",
-                        "Lv7": "0s",
-                        "Lv8": "0s",
-                        "Lv9": "0s",
-                        "Lv10": "0s",
-                        "Lv11": "0s",
-                        "Lv12": "0s",
-                        "Lv13": "0s",
-                        "Lv14": "0s",
-                        "Lv15": "0s"
-                    }
-                }
-            },
-            {
                 "name": "Kamisato Art: Soumetsu",
                 "image": "https://genshin.honeyhunterworld.com/img/s_23901.webp",
                 "description": "Summons forth a snowstorm with flawless poise, unleashing a Frostflake Seki no To that moves forward continuously.\nFrostflake Seki no To\n\u00b7A storm of whirling icy winds that slashes repeatedly at every enemy it touches, dealing\nCryo DMG\n.\n\u00b7The snowstorm explodes after its duration ends, dealing\nAoE Cryo DMG\n.\n\"The blizzard veils the heron's thoughts, pity heavy in its heart.\"",
@@ -20480,47 +20422,6 @@
                         "Lv13": "12s",
                         "Lv14": "12s",
                         "Lv15": "12s"
-                    }
-                }
-            },
-            {
-                "name": "Illusory Torrent",
-                "image": "https://genshin.honeyhunterworld.com/img/s_413301.webp",
-                "description": "Alternate Sprint\nMona cloaks herself within the water's flow, consuming Stamina to move rapidly.\nWhen under the effect of Illusory Torrent, Mona can move at high speed on water.\nApplies the\nWet\nstatus to nearby opponents when she reappears.\nThis is something that Mona can do, but her teacher cannot. Well, but it's not as if her teacher would pursue any matter concerning Hydro Visions anyway...",
-                "data": {
-                    "Activation Stamina Consumption": {
-                        "Lv1": "10",
-                        "Lv2": "0",
-                        "Lv3": "0",
-                        "Lv4": "0",
-                        "Lv5": "0",
-                        "Lv6": "0",
-                        "Lv7": "0",
-                        "Lv8": "0",
-                        "Lv9": "0",
-                        "Lv10": "0",
-                        "Lv11": "0",
-                        "Lv12": "0",
-                        "Lv13": "0",
-                        "Lv14": "0",
-                        "Lv15": "0"
-                    },
-                    "Stamina Drain": {
-                        "Lv1": "15 / s",
-                        "Lv2": "0 / s",
-                        "Lv3": "0 / s",
-                        "Lv4": "0 / s",
-                        "Lv5": "0 / s",
-                        "Lv6": "0 / s",
-                        "Lv7": "0 / s",
-                        "Lv8": "0 / s",
-                        "Lv9": "0 / s",
-                        "Lv10": "0 / s",
-                        "Lv11": "0 / s",
-                        "Lv12": "0 / s",
-                        "Lv13": "0 / s",
-                        "Lv14": "0 / s",
-                        "Lv15": "0 / s"
                     }
                 }
             },
