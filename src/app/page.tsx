@@ -9,6 +9,7 @@ import ConstellationSelect from '../components/ConstellationSelect'
 import LevelSelect from '../components/LevelSelect'
 import charactersData from '../data/characters/characters.json'
 import { Character } from '../types/Character'
+import { useBaseStats } from '../utils/useBaseStats'
 
 export default function Home() {
     const defaultCharacter = charactersData['Hu Tao']
@@ -21,18 +22,9 @@ export default function Home() {
         'Lv10',
     ])
 
-    const characters = Object.values(charactersData).map(
-        (characterData: Character) => ({
-            ...characterData,
-        })
-    )
-
-    const handleSubmit = (event: any) => {
-        event.preventDefault()
-        console.log(character)
-    }
-
+    const characters = Object.values(charactersData) as Character[]
     const { isOpen, onOpen, onClose } = useDisclosure()
+    const baseStats = useBaseStats(character, level)
 
     return (
         <div className="flex flex-wrap h-screen">
@@ -43,7 +35,7 @@ export default function Home() {
                     </h2>
                     <div className="bg-main-900 p-4">
                         <div className="flex">
-                            <form onSubmit={handleSubmit}>
+                            <form>
                                 <CharacterImage
                                     icon={character.icon}
                                     rarity={character.rarity}
@@ -81,7 +73,9 @@ export default function Home() {
                                             <ConstellationSelect
                                                 character={character}
                                                 constellation={constellation}
-                                                setConstellation={setConstellation}
+                                                setConstellation={
+                                                    setConstellation
+                                                }
                                             />
                                         </div>
                                     </div>
@@ -100,7 +94,26 @@ export default function Home() {
                     <h2 className="text-lg bg-main-800 font-bold py-3 px-4">
                         Attributes
                     </h2>
-                    <div className="bg-main-900 p-4">Attributes</div>
+                    <div className="bg-main-900 p-4">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Stat</th>
+                                    <th>Value</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {Object.entries(baseStats).map(
+                                    ([key, value]) => (
+                                        <tr key={key}>
+                                            <td>{key}</td>
+                                            <td>{value}</td>
+                                        </tr>
+                                    )
+                                )}
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
 
