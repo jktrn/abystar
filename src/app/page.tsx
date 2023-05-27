@@ -30,10 +30,10 @@ export default function Home() {
     const baseStats = useBaseStats(character, level)
 
     return (
-        <div className="flex flex-wrap h-screen">
-            <div className="flex-1 bg-main-1000 rounded-lg m-2">
-                <div id="character" className="min-w-max">
-                    <h2 className="text-lg bg-main-800 rounded-t-lg font-bold py-3 px-4">
+        <div className="flex h-screen flex-wrap">
+            <div className="m-2 min-w-max min-w-max flex-1 rounded-lg bg-main-1000 md:max-w-max">
+                <div id="character">
+                    <h2 className="rounded-t-lg bg-main-800 px-4 py-3 text-lg font-bold">
                         Character
                     </h2>
                     <div className="bg-main-900 p-4">
@@ -52,7 +52,7 @@ export default function Home() {
                                     setCharacter={setCharacter}
                                 />
                             </form>
-                            <div className="flex w-full justify-between ml-4">
+                            <div className="ml-4 flex w-full justify-between">
                                 <div className="flex flex-col justify-between">
                                     <div className="flex flex-col">
                                         <span className="text-xl font-bold">
@@ -94,11 +94,11 @@ export default function Home() {
                 </div>
 
                 <div id="attributes">
-                    <h2 className="text-lg bg-main-800 font-bold py-3 px-4">
+                    <h2 className="bg-main-800 px-4 py-3 text-lg font-bold">
                         Attributes
                     </h2>
                     <div className="bg-main-900 p-4">
-                        <table>
+                        <table className="w-full border border-main-800 p-2">
                             <thead>
                                 <tr>
                                     <th>Stat</th>
@@ -109,7 +109,7 @@ export default function Home() {
                                 {Object.entries(baseStats).map(
                                     ([key, value]) => (
                                         <tr key={key}>
-                                            <td>{key}</td>
+                                            <td className="pr-4">{key}</td>
                                             <td>{value}</td>
                                         </tr>
                                     )
@@ -120,16 +120,16 @@ export default function Home() {
                 </div>
             </div>
 
-            <div className="flex-1 bg-main-1000 rounded-lg m-2">
+            <div className="m-2 flex-1 rounded-lg bg-main-1000">
                 <div id="weapon">
-                    <h2 className="text-lg bg-main-800 rounded-t-lg font-bold py-3 px-4">
+                    <h2 className="rounded-t-lg bg-main-800 px-4 py-3 text-lg font-bold">
                         Weapon
                     </h2>
                     <div className="bg-main-900 p-4">Weapon</div>
                 </div>
 
                 <div id="artifacts">
-                    <h2 className="text-lg bg-main-800 font-bold py-3 px-4">
+                    <h2 className="bg-main-800 px-4 py-3 text-lg font-bold">
                         Artifacts
                     </h2>
 
@@ -137,16 +137,16 @@ export default function Home() {
                 </div>
 
                 <div id="party-buffs">
-                    <h2 className="text-lg bg-main-800 font-bold py-3 px-4">
+                    <h2 className="bg-main-800 px-4 py-3 text-lg font-bold">
                         Party Buffs
                     </h2>
                     <div className="bg-main-900 p-4">Party Buffs</div>
                 </div>
             </div>
 
-            <div className="flex-1 bg-main-1000 rounded-lg m-2">
+            <div className="m-2 flex-1 rounded-lg bg-main-1000">
                 <div id="results">
-                    <h2 className="text-lg bg-main-800 rounded-t-lg font-bold py-3 px-4">
+                    <h2 className="rounded-t-lg bg-main-800 px-4 py-3 text-lg font-bold">
                         Results
                     </h2>
                     <div className="bg-main-900 p-4">Results</div>

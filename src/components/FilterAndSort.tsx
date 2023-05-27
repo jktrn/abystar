@@ -35,8 +35,8 @@ const FilterAndSort = ({
 
     return (
         <>
-            <Flex className="items-center flex-col w-full sm:flex-row gap-4 mb-4">
-                <Flex className="items-center w-full gap-2">
+            <Flex className="mb-4 w-full flex-col items-center gap-4 sm:flex-row">
+                <Flex className="w-full items-center gap-2">
                     <Text>Filter:</Text>
                     <Select
                         isMulti
@@ -67,7 +67,7 @@ const FilterAndSort = ({
                         hideSelectedOptions={false}
                     />
                 </Flex>
-                <Flex className="items-center w-full gap-2">
+                <Flex className="w-full items-center gap-2">
                     <Text>Sort:</Text>
                     <Select
                         value={sortOptions.find(

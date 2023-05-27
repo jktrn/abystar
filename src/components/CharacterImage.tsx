@@ -22,18 +22,18 @@ function CharacterImage({
             style={{
                 backgroundImage: `url(${backgroundImage})`,
             }}
-            className="relative w-32 h-32 bg-center bg-cover rounded-lg cursor-pointer hover:scale-105 ease-in duration-100"
+            className="relative h-32 w-32 cursor-pointer rounded-lg bg-cover bg-center duration-100 ease-in hover:scale-105"
             {...props}
         >
             <Image
                 src={icon}
                 alt="character"
-                className="object-cover rounded-lg cursor-pointer ease-in duration-100"
+                className="cursor-pointer rounded-lg object-cover duration-100 ease-in"
                 width={128}
                 height={128}
                 unoptimized={true}
             />
-            <div className="w-8 h-8 flex rounded-full bg-main-900 absolute bottom-0.5 right-0.5 items-center justify-center">
+            <div className="absolute bottom-0.5 right-0.5 flex h-8 w-8 items-center justify-center rounded-full bg-main-900">
                 <Image
                     src={elementIcon}
                     alt={`${element} element`}

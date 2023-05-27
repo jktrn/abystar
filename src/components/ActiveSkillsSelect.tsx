@@ -21,7 +21,7 @@ function ActiveSkillsSelect({
     setActiveSkills: (value: string[]) => void
 }) {
     return (
-        <div className="flex flex-col gap-2 justify-end ml-4">
+        <div className="ml-4 flex flex-col justify-end gap-2">
             {character.activeSkills.map((skill, index) => (
                 <div key={skill.name} className="flex items-center gap-2">
                     <Image
@@ -32,7 +32,7 @@ function ActiveSkillsSelect({
                                 character.vision.toLowerCase() as keyof typeof elementColors
                             ]
                         }
-                        className="!w-10 !h-8 p-1 rounded-full object-cover overflow-hidden"
+                        className="!h-8 !w-10 overflow-hidden rounded-full object-cover p-1"
                     />
                     <Select
                         options={activeSkillOptions}

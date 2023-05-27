@@ -35,11 +35,12 @@ export default function CharacterModal({
 
     const filterAndSortCharacters = () => {
         // Filters characters by element
-        const filteredCharacters = !filterValue.length
-            ? characters
-            : characters.filter((character) =>
-                  filterValue.includes(character.vision.toLowerCase())
-              )
+        const filteredCharacters =
+            filterValue.includes('all') || !filterValue.length
+                ? characters
+                : characters.filter((character) =>
+                      filterValue.includes(character.vision.toLowerCase())
+                  )
         // Sorts characters by name and element
         const sortedCharacters = filteredCharacters.sort((a, b) => {
             switch (sortOrder) {
@@ -71,10 +72,10 @@ export default function CharacterModal({
             <ModalContent>
                 <Flex
                     as={ModalBody}
-                    className="items-center justify-center h-screen"
+                    className="h-screen items-center justify-center"
                 >
-                    <Box className="overflow-x-hidden overflow-auto xl:w-[80vw] xl:h-auto max-h-[80vh] w-[80vw] bg-main-900 rounded-lg p-4">
-                        <ModalHeader className="flex justify-between items-center mb-4">
+                    <Box className="max-h-[80vh] w-[80vw] overflow-auto overflow-x-hidden rounded-lg bg-main-900 p-4 xl:h-auto xl:w-[80vw]">
+                        <ModalHeader className="mb-4 flex items-center justify-between">
                             Select a Character
                             <ModalCloseButton />
                         </ModalHeader>
@@ -84,7 +85,7 @@ export default function CharacterModal({
                             sortOrder={sortOrder}
                             setSortOrder={setSortOrder}
                         />
-                        <Flex className="flex-wrap gap-[6px] justify-center">
+                        <Flex className="flex-wrap justify-center gap-[6px]">
                             {filterAndSortCharacters().map((character) => (
                                 <Image
                                     key={character.name}
@@ -99,7 +100,7 @@ export default function CharacterModal({
                                             character.vision.toLowerCase() as keyof typeof elementColors
                                         ]
                                     }
-                                    className="object-cover rounded-full cursor-pointer hover:scale-105"
+                                    className="cursor-pointer rounded-full object-cover hover:scale-105"
                                     boxSize="70px"
                                 />
                             ))}
