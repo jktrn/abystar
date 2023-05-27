@@ -12,6 +12,7 @@ import { Character } from '../types/Character'
 import { useBaseStats } from '../utils/useBaseStats'
 
 export default function Home() {
+    // Setting default values for character, ascension/talent level, constellations
     const defaultCharacter = charactersData['Hu Tao']
     const [character, setCharacter] = useState<Character>(defaultCharacter)
     const [level, setLevel] = useState<string>('90/90')
@@ -23,7 +24,9 @@ export default function Home() {
     ])
 
     const characters = Object.values(charactersData) as Character[]
+    // For CharacterModal
     const { isOpen, onOpen, onClose } = useDisclosure()
+    // Updating base stats when character/level changes
     const baseStats = useBaseStats(character, level)
 
     return (

@@ -1,6 +1,7 @@
 import React, { HTMLAttributes, memo } from 'react'
 import Image from 'next/image'
 
+// IDK why this works it just does
 interface CharacterImageProps extends HTMLAttributes<HTMLDivElement> {
     icon: string
     rarity: number
@@ -44,4 +45,5 @@ function CharacterImage({
     )
 }
 
+// Memoize the component so it doesn't rerender when it doesn't need to
 export default memo(CharacterImage)

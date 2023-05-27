@@ -6,6 +6,7 @@ import elementColors from '../utils/elementColors'
 
 const activeSkillOptions: any[] = []
 
+// TODO: There has got to be a better way of doing this
 for (let i = 1; i <= 15; i++) {
     activeSkillOptions.push({ value: i, label: `Lv${i}` })
 }

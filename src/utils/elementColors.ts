@@ -1,15 +1,4 @@
-type ElementColors = {
-    [key in
-        | 'pyro'
-        | 'geo'
-        | 'dendro'
-        | 'anemo'
-        | 'hydro'
-        | 'cryo'
-        | 'electro']: string
-}
-
-const elementColors: ElementColors = {
+const elementColors = {
     pyro: '#bf612d',
     geo: '#c8922b',
     dendro: '#84a02f',

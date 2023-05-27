@@ -29,16 +29,18 @@ export default function CharacterModal({
     characters,
     setCharacter,
 }: CharacterModalProps) {
+    // Defaulting to "all" filter, "element" sort
     const [filterValue, setFilterValue] = useState<string[]>(['all'])
     const [sortOrder, setSortOrder] = useState<string>('element')
 
     const filterAndSortCharacters = () => {
-        const filteredCharacters =
-            filterValue.includes('all') || !filterValue.length
-                ? characters
-                : characters.filter((character) =>
-                      filterValue.includes(character.vision.toLowerCase())
-                  )
+        // Filters characters by element
+        const filteredCharacters = !filterValue.length
+            ? characters
+            : characters.filter((character) =>
+                  filterValue.includes(character.vision.toLowerCase())
+              )
+        // Sorts characters by name and element
         const sortedCharacters = filteredCharacters.sort((a, b) => {
             switch (sortOrder) {
                 case 'asc':

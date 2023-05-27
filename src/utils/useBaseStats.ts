@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react'
 import { Character } from '../types/Character'
 
+// Redefining BaseStats to have numbers as values instead of strings
 interface NewBaseStat {
     [key: string]: number
 }
 
+// Arbitrary mapping of the base stats from the scraped data to the ones used in-app
 const keyMapping: { [key: string]: string } = {
     HP: 'HP',
     Atk: 'ATK',
@@ -24,7 +26,7 @@ const keyMapping: { [key: string]: string } = {
     Phys: 'Physical DMG Bonus',
 }
 
-const fullBaseStats: { [key: string]: number } = {
+const fullBaseStats: NewBaseStat = {
     HP: 0,
     ATK: 0,
     DEF: 0,
@@ -43,6 +45,7 @@ const fullBaseStats: { [key: string]: number } = {
     'Physical DMG Bonus': 0,
 }
 
+// This hook takes in the character and their level and spits out the base stats (with ascension bonuses applied)
 export function useBaseStats(character: Character, level: string) {
     const [baseStats, setBaseStats] = useState<NewBaseStat>({})
 

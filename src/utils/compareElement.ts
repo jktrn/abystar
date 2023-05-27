@@ -1,3 +1,4 @@
+// Used in sorting by element in CharacterModal
 const compareElement = (a: string, b: string): number => {
     const order = ['pyro', 'geo', 'dendro', 'anemo', 'cryo', 'hydro', 'electro']
 
