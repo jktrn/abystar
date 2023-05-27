@@ -1,8 +1,8 @@
 import { Flex, Text } from '@chakra-ui/react'
 import Image from 'next/image'
 import Select from 'react-select'
-import { filterCustomStyles } from '../styles/filterCustomStyles'
-import { sortCustomStyles } from '../styles/sortCustomStyles'
+import { filterCustomStyles } from '@/styles/filterCustomStyles'
+import { sortCustomStyles } from '@/styles/sortCustomStyles'
 
 interface FilterAndSortProps {
     filterValue: string[]

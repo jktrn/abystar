@@ -2,14 +2,15 @@
 
 import { useDisclosure } from '@chakra-ui/react'
 import { useState } from 'react'
-import ActiveSkillsSelect from '../components/ActiveSkillsSelect'
-import CharacterImage from '../components/CharacterImage'
-import CharacterModal from '../components/CharacterModal'
-import ConstellationSelect from '../components/ConstellationSelect'
-import LevelSelect from '../components/LevelSelect'
-import charactersData from '../data/characters/characters.json'
-import { Character } from '../types/Character'
-import { useBaseStats } from '../utils/useBaseStats'
+import ActiveSkillsSelect from '@/components/ActiveSkillsSelect'
+import AttributesTable from '@/components/AttributesTable'
+import CharacterImage from '@/components/CharacterImage'
+import CharacterModal from '@/components/CharacterModal'
+import ConstellationSelect from '@/components/ConstellationSelect'
+import LevelSelect from '@/components/LevelSelect'
+import charactersData from '@/data/characters/characters.json'
+import { Character } from '@/types/Character'
+import { useBaseStats } from '@/utils/useBaseStats'
 
 export default function Home() {
     // Setting default values for character, ascension/talent level, constellations
@@ -98,11 +99,12 @@ export default function Home() {
                         Attributes
                     </h2>
                     <div className="bg-main-900 p-4">
-                        <table className="w-full border border-main-800 p-2">
+                        <div className="rounded-md border border-main-700 p-2">
+                            {/* <table className="w-full">
                             <thead>
                                 <tr>
-                                    <th>Stat</th>
-                                    <th>Value</th>
+                                    <th className="pb-2">Stat</th>
+                                    <th className="pb-2">Value</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -115,7 +117,9 @@ export default function Home() {
                                     )
                                 )}
                             </tbody>
-                        </table>
+                        </table> */}
+                            <AttributesTable baseStats={baseStats} />
+                        </div>
                     </div>
                 </div>
             </div>

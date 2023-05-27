@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Character } from '../types/Character'
+import { Character } from '@/types/Character'
 
 // Redefining BaseStats to have numbers as values instead of strings
 interface NewBaseStat {
@@ -61,6 +61,7 @@ export function useBaseStats(character: Character, level: string) {
             }
         }
 
+        console.log(newBaseStats)
         setBaseStats(newBaseStats)
     }, [character, level])
 

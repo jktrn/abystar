@@ -1,8 +1,8 @@
 import { Image } from '@chakra-ui/react'
 import Select from 'react-select'
-import { selectStyles } from '../styles/selectStyles'
-import { Character } from '../types/Character'
-import elementColors from '../utils/elementColors'
+import { selectStyles } from '@/styles/selectStyles'
+import { Character } from '@/types/Character'
+import elementColors from '@/utils/elementColors'
 
 const activeSkillOptions: any[] = []
 
