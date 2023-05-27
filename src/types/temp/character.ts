@@ -1,1 +1,1 @@
-class character {}
+// class character {}
