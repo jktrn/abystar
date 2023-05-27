@@ -15,7 +15,7 @@ function CharacterImage({
     ...props
 }: CharacterImageProps) {
     const backgroundImage = `/images/item-backgrounds/${rarity}-star.png`
-    const elementIcon = `/images/elements/${element}.svg`
+    const elementIcon = `/images/elements/${element.toLowerCase()}.svg`
 
     return (
         <div
