@@ -22,6 +22,7 @@ const LevelSelect = ({
 
     return (
         <Select
+            instanceId={'level-select'}
             value={levelOptions.find((option) => option.value === level)}
             onChange={(option) => setLevel(option?.value ?? '')}
             options={levelOptions}

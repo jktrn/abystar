@@ -26,6 +26,7 @@ const ConstellationSelect = ({
 
     return (
         <Select
+            instanceId={'constellation-select'}
             value={constellationOptions.find(
                 (option) => option.value === constellation
             )}

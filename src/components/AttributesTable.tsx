@@ -1,4 +1,5 @@
 import { useTable, Column } from 'react-table'
+import Image from 'next/image'
 import { useMemo } from 'react'
 
 interface BaseStats {
@@ -12,10 +13,18 @@ interface AttributesTableProps {
 const AttributesTable: React.FC<AttributesTableProps> = ({ baseStats }) => {
     const data = useMemo(
         () =>
-            Object.entries(baseStats).map(([key, value]) => ({
-                stat: key,
-                value,
-            })),
+            Object.entries(baseStats).map(([key, value]) => {
+                let formattedValue
+                if (['HP', 'DEF', 'Elemental Mastery', 'ATK'].includes(key)) {
+                    formattedValue = Math.round(value)
+                } else {
+                    formattedValue = `${value.toFixed(1)}%`
+                }
+                return {
+                    stat: key,
+                    value: formattedValue,
+                }
+            }),
         [baseStats]
     )
 
@@ -24,10 +33,39 @@ const AttributesTable: React.FC<AttributesTableProps> = ({ baseStats }) => {
             {
                 Header: 'Stat',
                 accessor: 'stat',
+                Cell: ({ row }) => {
+                    const attributeName = row.values.stat
+                    const iconName = attributeName
+                        .toLowerCase()
+                        .split(' ')
+                        .join('-')
+                    const iconPath = `/images/attributes/${iconName}.png`
+                    return (
+                        <span className="flex items-center gap-2">
+                            <Image
+                                className="h-auto w-auto brightness-0 invert"
+                                src={iconPath}
+                                alt={attributeName}
+                                width={12}
+                                height={12}
+                                style={{ width: 12, height: 12 }}
+                            />
+                            {attributeName}
+                        </span>
+                    )
+                },
             },
             {
-                Header: 'Value',
+                Header: 'Base',
                 accessor: 'value',
+            },
+            {
+                Header: 'Modifier',
+                accessor: '',
+            },
+            {
+                Header: 'Total',
+                accessor: '',
             },
         ],
         []
@@ -37,16 +75,14 @@ const AttributesTable: React.FC<AttributesTableProps> = ({ baseStats }) => {
         useTable({ columns, data })
 
     return (
-        <table {...getTableProps()}>
+        <table {...getTableProps()} className="w-full text-sm">
             <thead>
                 {headerGroups.map((headerGroup, index) => (
-                    <tr
-                        key={index}
-                    >
+                    <tr key={index}>
                         {headerGroup.headers.map((column) => (
                             <th
                                 key={column.id}
-                                style={{ fontWeight: 'bold' }}
+                                className="border-b border-main-700 pb-2 font-bold"
                             >
                                 {column.render('Header')}
                             </th>
@@ -58,12 +94,11 @@ const AttributesTable: React.FC<AttributesTableProps> = ({ baseStats }) => {
                 {rows.map((row, index) => {
                     prepareRow(row)
                     return (
-                        <tr
-                            key={index}
-                        >
+                        <tr key={index}>
                             {row.cells.map((cell) => (
                                 <td
                                     key={cell.getCellProps().key}
+                                    className="border-b border-main-700 py-1"
                                 >
                                     {cell.render('Cell')}
                                 </td>

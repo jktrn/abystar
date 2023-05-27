@@ -35,6 +35,7 @@ function ActiveSkillsSelect({
                         className="!h-8 !w-10 overflow-hidden rounded-full object-cover p-1"
                     />
                     <Select
+                        instanceId={`active-skill-${index}-select`}
                         options={activeSkillOptions}
                         defaultValue={{
                             value: activeSkills[index],

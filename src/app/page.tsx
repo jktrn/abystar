@@ -31,7 +31,7 @@ export default function Home() {
     const baseStats = useBaseStats(character, level)
 
     return (
-        <div className="flex h-screen flex-wrap">
+        <div className="flex h-screen flex-wrap p-2">
             <div className="m-2 min-w-max min-w-max flex-1 rounded-lg bg-main-1000 md:max-w-max">
                 <div id="character">
                     <h2 className="rounded-t-lg bg-main-800 px-4 py-3 text-lg font-bold">
@@ -100,24 +100,6 @@ export default function Home() {
                     </h2>
                     <div className="bg-main-900 p-4">
                         <div className="rounded-md border border-main-700 p-2">
-                            {/* <table className="w-full">
-                            <thead>
-                                <tr>
-                                    <th className="pb-2">Stat</th>
-                                    <th className="pb-2">Value</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {Object.entries(baseStats).map(
-                                    ([key, value]) => (
-                                        <tr key={key}>
-                                            <td className="pr-4">{key}</td>
-                                            <td>{value}</td>
-                                        </tr>
-                                    )
-                                )}
-                            </tbody>
-                        </table> */}
                             <AttributesTable baseStats={baseStats} />
                         </div>
                     </div>

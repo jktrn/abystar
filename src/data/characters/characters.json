@@ -1,7 +1,7 @@
 {
     "Albedo": {
         "name": "Albedo",
-        "icon": "/images/icons/albedo.png",
+        "icon": "/images/characters/albedo.png",
         "weapon": "Sword",
         "vision": "Geo",
         "rarity": 5,
@@ -508,7 +508,7 @@
     },
     "Alhaitham": {
         "name": "Alhaitham",
-        "icon": "/images/icons/alhaitham.png",
+        "icon": "/images/characters/alhaitham.png",
         "weapon": "Sword",
         "vision": "Dendro",
         "rarity": 5,
@@ -1117,7 +1117,7 @@
     },
     "Aloy": {
         "name": "Aloy",
-        "icon": "/images/icons/aloy.png",
+        "icon": "/images/characters/aloy.png",
         "weapon": "Bow",
         "vision": "Cryo",
         "rarity": 6,
@@ -1658,7 +1658,7 @@
     },
     "Amber": {
         "name": "Amber",
-        "icon": "/images/icons/amber.png",
+        "icon": "/images/characters/amber.png",
         "weapon": "Bow",
         "vision": "Pyro",
         "rarity": 4,
@@ -2165,7 +2165,7 @@
     },
     "Arataki Itto": {
         "name": "Arataki Itto",
-        "icon": "/images/icons/arataki-itto.png",
+        "icon": "/images/characters/arataki-itto.png",
         "weapon": "Claymore",
         "vision": "Geo",
         "rarity": 5,
@@ -2723,7 +2723,7 @@
     },
     "Baizhu": {
         "name": "Baizhu",
-        "icon": "/images/icons/baizhu.png",
+        "icon": "/images/characters/baizhu.png",
         "weapon": "Catalyst",
         "vision": "Dendro",
         "rarity": 5,
@@ -3247,7 +3247,7 @@
     },
     "Barbara": {
         "name": "Barbara",
-        "icon": "/images/icons/barbara.png",
+        "icon": "/images/characters/barbara.png",
         "weapon": "Catalyst",
         "vision": "Hydro",
         "rarity": 4,
@@ -3737,7 +3737,7 @@
     },
     "Beidou": {
         "name": "Beidou",
-        "icon": "/images/icons/beidou.png",
+        "icon": "/images/characters/beidou.png",
         "weapon": "Claymore",
         "vision": "Electro",
         "rarity": 4,
@@ -4312,7 +4312,7 @@
     },
     "Bennett": {
         "name": "Bennett",
-        "icon": "/images/icons/bennett.png",
+        "icon": "/images/characters/bennett.png",
         "weapon": "Sword",
         "vision": "Pyro",
         "rarity": 4,
@@ -4870,7 +4870,7 @@
     },
     "Candace": {
         "name": "Candace",
-        "icon": "/images/icons/candace.png",
+        "icon": "/images/characters/candace.png",
         "weapon": "Polearm",
         "vision": "Hydro",
         "rarity": 4,
@@ -5428,7 +5428,7 @@
     },
     "Chongyun": {
         "name": "Chongyun",
-        "icon": "/images/icons/chongyun.png",
+        "icon": "/images/characters/chongyun.png",
         "weapon": "Claymore",
         "vision": "Cryo",
         "rarity": 4,
@@ -5935,7 +5935,7 @@
     },
     "Collei": {
         "name": "Collei",
-        "icon": "/images/icons/collei.png",
+        "icon": "/images/characters/collei.png",
         "weapon": "Bow",
         "vision": "Dendro",
         "rarity": 4,
@@ -6408,7 +6408,7 @@
     },
     "Cyno": {
         "name": "Cyno",
-        "icon": "/images/icons/cyno.png",
+        "icon": "/images/characters/cyno.png",
         "weapon": "Polearm",
         "vision": "Electro",
         "rarity": 5,
@@ -7085,7 +7085,7 @@
     },
     "Dehya": {
         "name": "Dehya",
-        "icon": "/images/icons/dehya.png",
+        "icon": "/images/characters/dehya.png",
         "weapon": "Claymore",
         "vision": "Pyro",
         "rarity": 5,
@@ -7677,7 +7677,7 @@
     },
     "Diluc": {
         "name": "Diluc",
-        "icon": "/images/icons/diluc.png",
+        "icon": "/images/characters/diluc.png",
         "weapon": "Claymore",
         "vision": "Pyro",
         "rarity": 5,
@@ -8235,7 +8235,7 @@
     },
     "Diona": {
         "name": "Diona",
-        "icon": "/images/icons/diona.png",
+        "icon": "/images/characters/diona.png",
         "weapon": "Bow",
         "vision": "Cryo",
         "rarity": 4,
@@ -8793,7 +8793,7 @@
     },
     "Dori": {
         "name": "Dori",
-        "icon": "/images/icons/dori.png",
+        "icon": "/images/characters/dori.png",
         "weapon": "Claymore",
         "vision": "Electro",
         "rarity": 4,
@@ -9317,7 +9317,7 @@
     },
     "Eula": {
         "name": "Eula",
-        "icon": "/images/icons/eula.png",
+        "icon": "/images/characters/eula.png",
         "weapon": "Claymore",
         "vision": "Cryo",
         "rarity": 5,
@@ -9994,7 +9994,7 @@
     },
     "Faruzan": {
         "name": "Faruzan",
-        "icon": "/images/icons/faruzan.png",
+        "icon": "/images/characters/faruzan.png",
         "weapon": "Bow",
         "vision": "Anemo",
         "rarity": 4,
@@ -10552,7 +10552,7 @@
     },
     "Fischl": {
         "name": "Fischl",
-        "icon": "/images/icons/fischl.png",
+        "icon": "/images/characters/fischl.png",
         "weapon": "Bow",
         "vision": "Electro",
         "rarity": 4,
@@ -11042,7 +11042,7 @@
     },
     "Ganyu": {
         "name": "Ganyu",
-        "icon": "/images/icons/ganyu.png",
+        "icon": "/images/characters/ganyu.png",
         "weapon": "Bow",
         "vision": "Cryo",
         "rarity": 5,
@@ -11600,7 +11600,7 @@
     },
     "Gorou": {
         "name": "Gorou",
-        "icon": "/images/icons/gorou.png",
+        "icon": "/images/characters/gorou.png",
         "weapon": "Bow",
         "vision": "Geo",
         "rarity": 4,
@@ -12124,7 +12124,7 @@
     },
     "Hu Tao": {
         "name": "Hu Tao",
-        "icon": "/images/icons/hu-tao.png",
+        "icon": "/images/characters/hu-tao.png",
         "weapon": "Polearm",
         "vision": "Pyro",
         "rarity": 5,
@@ -12716,7 +12716,7 @@
     },
     "Jean": {
         "name": "Jean",
-        "icon": "/images/icons/jean.png",
+        "icon": "/images/characters/jean.png",
         "weapon": "Sword",
         "vision": "Anemo",
         "rarity": 5,
@@ -13257,7 +13257,7 @@
     },
     "Kaedehara Kazuha": {
         "name": "Kaedehara Kazuha",
-        "icon": "/images/icons/kaedehara-kazuha.png",
+        "icon": "/images/characters/kaedehara-kazuha.png",
         "weapon": "Sword",
         "vision": "Anemo",
         "rarity": 5,
@@ -13798,7 +13798,7 @@
     },
     "Kaeya": {
         "name": "Kaeya",
-        "icon": "/images/icons/kaeya.png",
+        "icon": "/images/characters/kaeya.png",
         "weapon": "Sword",
         "vision": "Cryo",
         "rarity": 4,
@@ -14271,7 +14271,7 @@
     },
     "Kamisato Ayaka": {
         "name": "Kamisato Ayaka",
-        "icon": "/images/icons/kamisato-ayaka.png",
+        "icon": "/images/characters/kamisato-ayaka.png",
         "weapon": "Sword",
         "vision": "Cryo",
         "rarity": 5,
@@ -14761,7 +14761,7 @@
     },
     "Kamisato Ayato": {
         "name": "Kamisato Ayato",
-        "icon": "/images/icons/kamisato-ayato.png",
+        "icon": "/images/characters/kamisato-ayato.png",
         "weapon": "Sword",
         "vision": "Hydro",
         "rarity": 5,
@@ -15353,7 +15353,7 @@
     },
     "Kaveh": {
         "name": "Kaveh",
-        "icon": "/images/icons/kaveh.png",
+        "icon": "/images/characters/kaveh.png",
         "weapon": "Claymore",
         "vision": "Dendro",
         "rarity": 4,
@@ -15860,7 +15860,7 @@
     },
     "Keqing": {
         "name": "Keqing",
-        "icon": "/images/icons/keqing.png",
+        "icon": "/images/characters/keqing.png",
         "weapon": "Sword",
         "vision": "Electro",
         "rarity": 5,
@@ -16384,7 +16384,7 @@
     },
     "Kirara": {
         "name": "Kirara",
-        "icon": "/images/icons/kirara.png",
+        "icon": "/images/characters/kirara.png",
         "weapon": "Sword",
         "vision": "Dendro",
         "rarity": 4,
@@ -16959,7 +16959,7 @@
     },
     "Klee": {
         "name": "Klee",
-        "icon": "/images/icons/klee.png",
+        "icon": "/images/characters/klee.png",
         "weapon": "Catalyst",
         "vision": "Pyro",
         "rarity": 5,
@@ -17432,7 +17432,7 @@
     },
     "Kujou Sara": {
         "name": "Kujou Sara",
-        "icon": "/images/icons/kujou-sara.png",
+        "icon": "/images/characters/kujou-sara.png",
         "weapon": "Bow",
         "vision": "Electro",
         "rarity": 4,
@@ -17939,7 +17939,7 @@
     },
     "Kuki Shinobu": {
         "name": "Kuki Shinobu",
-        "icon": "/images/icons/kuki-shinobu.png",
+        "icon": "/images/characters/kuki-shinobu.png",
         "weapon": "Sword",
         "vision": "Electro",
         "rarity": 4,
@@ -18480,7 +18480,7 @@
     },
     "Layla": {
         "name": "Layla",
-        "icon": "/images/icons/layla.png",
+        "icon": "/images/characters/layla.png",
         "weapon": "Sword",
         "vision": "Cryo",
         "rarity": 4,
@@ -18970,7 +18970,7 @@
     },
     "Lisa": {
         "name": "Lisa",
-        "icon": "/images/icons/lisa.png",
+        "icon": "/images/characters/lisa.png",
         "weapon": "Catalyst",
         "vision": "Electro",
         "rarity": 4,
@@ -19511,7 +19511,7 @@
     },
     "Mika": {
         "name": "Mika",
-        "icon": "/images/icons/mika.png",
+        "icon": "/images/characters/mika.png",
         "weapon": "Polearm",
         "vision": "Cryo",
         "rarity": 4,
@@ -20086,7 +20086,7 @@
     },
     "Mona": {
         "name": "Mona",
-        "icon": "/images/icons/mona.png",
+        "icon": "/images/characters/mona.png",
         "weapon": "Catalyst",
         "vision": "Hydro",
         "rarity": 5,
@@ -20593,7 +20593,7 @@
     },
     "Nahida": {
         "name": "Nahida",
-        "icon": "/images/icons/nahida.png",
+        "icon": "/images/characters/nahida.png",
         "weapon": "Catalyst",
         "vision": "Dendro",
         "rarity": 5,
@@ -21168,7 +21168,7 @@
     },
     "Nilou": {
         "name": "Nilou",
-        "icon": "/images/icons/nilou.png",
+        "icon": "/images/characters/nilou.png",
         "weapon": "Sword",
         "vision": "Hydro",
         "rarity": 5,
@@ -21709,7 +21709,7 @@
     },
     "Ningguang": {
         "name": "Ningguang",
-        "icon": "/images/icons/ningguang.png",
+        "icon": "/images/characters/ningguang.png",
         "weapon": "Catalyst",
         "vision": "Geo",
         "rarity": 4,
@@ -22131,7 +22131,7 @@
     },
     "Noelle": {
         "name": "Noelle",
-        "icon": "/images/icons/noelle.png",
+        "icon": "/images/characters/noelle.png",
         "weapon": "Claymore",
         "vision": "Geo",
         "rarity": 4,
@@ -22723,7 +22723,7 @@
     },
     "Qiqi": {
         "name": "Qiqi",
-        "icon": "/images/icons/qiqi.png",
+        "icon": "/images/characters/qiqi.png",
         "weapon": "Sword",
         "vision": "Cryo",
         "rarity": 5,
@@ -23281,7 +23281,7 @@
     },
     "Raiden Shogun": {
         "name": "Raiden Shogun",
-        "icon": "/images/icons/raiden-shogun.png",
+        "icon": "/images/characters/raiden-shogun.png",
         "weapon": "Polearm",
         "vision": "Electro",
         "rarity": 5,
@@ -24031,7 +24031,7 @@
     },
     "Razor": {
         "name": "Razor",
-        "icon": "/images/icons/razor.png",
+        "icon": "/images/characters/razor.png",
         "weapon": "Claymore",
         "vision": "Electro",
         "rarity": 4,
@@ -24657,7 +24657,7 @@
     },
     "Rosaria": {
         "name": "Rosaria",
-        "icon": "/images/icons/rosaria.png",
+        "icon": "/images/characters/rosaria.png",
         "weapon": "Polearm",
         "vision": "Cryo",
         "rarity": 4,
@@ -25147,7 +25147,7 @@
     },
     "Sangonomiya Kokomi": {
         "name": "Sangonomiya Kokomi",
-        "icon": "/images/icons/sangonomiya-kokomi.png",
+        "icon": "/images/characters/sangonomiya-kokomi.png",
         "weapon": "Catalyst",
         "vision": "Hydro",
         "rarity": 5,
@@ -25693,7 +25693,7 @@
     },
     "Sayu": {
         "name": "Sayu",
-        "icon": "/images/icons/sayu.png",
+        "icon": "/images/characters/sayu.png",
         "weapon": "Claymore",
         "vision": "Anemo",
         "rarity": 4,
@@ -26319,7 +26319,7 @@
     },
     "Shenhe": {
         "name": "Shenhe",
-        "icon": "/images/icons/shenhe.png",
+        "icon": "/images/characters/shenhe.png",
         "weapon": "Polearm",
         "vision": "Cryo",
         "rarity": 5,
@@ -26911,7 +26911,7 @@
     },
     "Shikanoin Heizou": {
         "name": "Shikanoin Heizou",
-        "icon": "/images/icons/shikanoin-heizou.png",
+        "icon": "/images/characters/shikanoin-heizou.png",
         "weapon": "Catalyst",
         "vision": "Anemo",
         "rarity": 4,
@@ -27435,7 +27435,7 @@
     },
     "Sucrose": {
         "name": "Sucrose",
-        "icon": "/images/icons/sucrose.png",
+        "icon": "/images/characters/sucrose.png",
         "weapon": "Catalyst",
         "vision": "Anemo",
         "rarity": 4,
@@ -27908,7 +27908,7 @@
     },
     "Tartaglia": {
         "name": "Tartaglia",
-        "icon": "/images/icons/tartaglia.png",
+        "icon": "/images/characters/tartaglia.png",
         "weapon": "Bow",
         "vision": "Hydro",
         "rarity": 5,
@@ -28670,7 +28670,7 @@
     },
     "Thoma": {
         "name": "Thoma",
-        "icon": "/images/icons/thoma.png",
+        "icon": "/images/characters/thoma.png",
         "weapon": "Polearm",
         "vision": "Pyro",
         "rarity": 4,
@@ -29228,7 +29228,7 @@
     },
     "Tighnari": {
         "name": "Tighnari",
-        "icon": "/images/icons/tighnari.png",
+        "icon": "/images/characters/tighnari.png",
         "weapon": "Bow",
         "vision": "Dendro",
         "rarity": 5,
@@ -29752,7 +29752,7 @@
     },
     "Traveler (Anemo)": {
         "name": "Traveler (Anemo)",
-        "icon": "/images/icons/traveler.png",
+        "icon": "/images/characters/traveler.png",
         "weapon": "Sword",
         "vision": "Anemo",
         "rarity": 5,
@@ -30305,7 +30305,7 @@
     },
     "Traveler (Dendro)": {
         "name": "Traveler (Dendro)",
-        "icon": "/images/icons/traveler.png",
+        "icon": "/images/characters/traveler.png",
         "weapon": "Sword",
         "vision": "Dendro",
         "rarity": 5,
@@ -30790,7 +30790,7 @@
     },
     "Traveler (Electro)": {
         "name": "Traveler (Electro)",
-        "icon": "/images/icons/traveler.png",
+        "icon": "/images/characters/traveler.png",
         "weapon": "Sword",
         "vision": "Electro",
         "rarity": 5,
@@ -31360,7 +31360,7 @@
     },
     "Traveler (Geo)": {
         "name": "Traveler (Geo)",
-        "icon": "/images/icons/traveler.png",
+        "icon": "/images/characters/traveler.png",
         "weapon": "Sword",
         "vision": "Geo",
         "rarity": 5,
@@ -31845,7 +31845,7 @@
     },
     "Venti": {
         "name": "Venti",
-        "icon": "/images/icons/venti.png",
+        "icon": "/images/characters/venti.png",
         "weapon": "Bow",
         "vision": "Anemo",
         "rarity": 5,
@@ -32386,7 +32386,7 @@
     },
     "Wanderer": {
         "name": "Wanderer",
-        "icon": "/images/icons/wanderer.png",
+        "icon": "/images/characters/wanderer.png",
         "weapon": "Catalyst",
         "vision": "Anemo",
         "rarity": 5,
@@ -32859,7 +32859,7 @@
     },
     "Xiangling": {
         "name": "Xiangling",
-        "icon": "/images/icons/xiangling.png",
+        "icon": "/images/characters/xiangling.png",
         "weapon": "Polearm",
         "vision": "Pyro",
         "rarity": 4,
@@ -33383,7 +33383,7 @@
     },
     "Xiao": {
         "name": "Xiao",
-        "icon": "/images/icons/xiao.png",
+        "icon": "/images/characters/xiao.png",
         "weapon": "Polearm",
         "vision": "Anemo",
         "rarity": 5,
@@ -33890,7 +33890,7 @@
     },
     "Xingqiu": {
         "name": "Xingqiu",
-        "icon": "/images/icons/xingqiu.png",
+        "icon": "/images/characters/xingqiu.png",
         "weapon": "Sword",
         "vision": "Hydro",
         "rarity": 4,
@@ -34397,7 +34397,7 @@
     },
     "Xinyan": {
         "name": "Xinyan",
-        "icon": "/images/icons/xinyan.png",
+        "icon": "/images/characters/xinyan.png",
         "weapon": "Claymore",
         "vision": "Pyro",
         "rarity": 4,
@@ -34989,7 +34989,7 @@
     },
     "Yae Miko": {
         "name": "Yae Miko",
-        "icon": "/images/icons/yae-miko.png",
+        "icon": "/images/characters/yae-miko.png",
         "weapon": "Catalyst",
         "vision": "Electro",
         "rarity": 5,
@@ -35496,7 +35496,7 @@
     },
     "Yanfei": {
         "name": "Yanfei",
-        "icon": "/images/icons/yanfei.png",
+        "icon": "/images/characters/yanfei.png",
         "weapon": "Catalyst",
         "vision": "Pyro",
         "rarity": 4,
@@ -36003,7 +36003,7 @@
     },
     "Yaoyao": {
         "name": "Yaoyao",
-        "icon": "/images/icons/yaoyao.png",
+        "icon": "/images/characters/yaoyao.png",
         "weapon": "Polearm",
         "vision": "Dendro",
         "rarity": 4,
@@ -36561,7 +36561,7 @@
     },
     "Yelan": {
         "name": "Yelan",
-        "icon": "/images/icons/yelan.png",
+        "icon": "/images/characters/yelan.png",
         "weapon": "Bow",
         "vision": "Hydro",
         "rarity": 5,
@@ -37068,7 +37068,7 @@
     },
     "Yoimiya": {
         "name": "Yoimiya",
-        "icon": "/images/icons/yoimiya.png",
+        "icon": "/images/characters/yoimiya.png",
         "weapon": "Bow",
         "vision": "Pyro",
         "rarity": 5,
@@ -37592,7 +37592,7 @@
     },
     "Yun Jin": {
         "name": "Yun Jin",
-        "icon": "/images/icons/yun-jin.png",
+        "icon": "/images/characters/yun-jin.png",
         "weapon": "Polearm",
         "vision": "Geo",
         "rarity": 4,
@@ -38150,7 +38150,7 @@
     },
     "Zhongli": {
         "name": "Zhongli",
-        "icon": "/images/icons/zhongli.png",
+        "icon": "/images/characters/zhongli.png",
         "weapon": "Polearm",
         "vision": "Geo",
         "rarity": 5,
