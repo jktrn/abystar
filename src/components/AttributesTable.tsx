@@ -43,7 +43,7 @@ const AttributesTable: React.FC<AttributesTableProps> = ({ baseStats }) => {
                     return (
                         <span className="flex items-center gap-2">
                             <Image
-                                className="h-auto w-auto brightness-0 invert"
+                                className="h-auto w-auto"
                                 src={iconPath}
                                 alt={attributeName}
                                 width={12}
@@ -94,7 +94,10 @@ const AttributesTable: React.FC<AttributesTableProps> = ({ baseStats }) => {
                 {rows.map((row, index) => {
                     prepareRow(row)
                     return (
-                        <tr key={index}>
+                        <tr
+                            key={index}
+                            className={baseStats[row.values.stat] === 0 ? 'brightness-50' : ''}
+                        >
                             {row.cells.map((cell) => (
                                 <td
                                     key={cell.getCellProps().key}
@@ -107,6 +110,7 @@ const AttributesTable: React.FC<AttributesTableProps> = ({ baseStats }) => {
                     )
                 })}
             </tbody>
+
         </table>
     )
 }
