@@ -30,8 +30,8 @@ function ActiveSkillsSelect({
     //TODO: Implement this into the JSON
     const skillIcons = [
         `/images/skill-icons/normal-attacks/${kebabCase(character.weapon)}.png`,
-        `/images/skill-icons/${kebabCase(character.name)}-skill.png`,
-        `/images/skill-icons/${kebabCase(character.name)}-burst.png`,
+        `/images/skill-icons/skills/${kebabCase(character.name)}-skill.png`,
+        `/images/skill-icons/bursts/${kebabCase(character.name)}-burst.png`,
     ]    
 
     return (
