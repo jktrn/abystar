@@ -25,3 +25,21 @@ body {
         )
         rgb(var(--background-start-rgb));
 }
+
+/* Add this CSS to your stylesheet */
+::-webkit-scrollbar {
+    @apply w-2 h-2;
+}
+   
+::-webkit-scrollbar-track {
+    @apply rounded-lg;
+}
+   
+::-webkit-scrollbar-thumb {
+    @apply bg-gray-400 rounded-lg;
+}
+   
+::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-300;
+}
+   
