@@ -1,8 +1,8 @@
-interface BaseStat {
+export interface BaseStat {
     [key: string]: string
 }
 
-interface ActiveSkill {
+export interface ActiveSkill {
     name: string
     image: string
     description: string
@@ -11,13 +11,13 @@ interface ActiveSkill {
     }
 }
 
-interface PassiveSkill {
+export interface PassiveSkill {
     name: string
     image: string
     description: string
 }
 
-interface Constellation {
+export interface Constellation {
     name: string
     image: string
     description: string

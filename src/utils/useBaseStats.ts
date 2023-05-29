@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Character } from '@/types/Character'
+import { BaseStat, Character } from '@/types/Character'
 
 // Redefining BaseStats to have numbers as values instead of strings
 interface NewBaseStat {
@@ -7,7 +7,7 @@ interface NewBaseStat {
 }
 
 // Arbitrary mapping of the base stats from the scraped data to the ones used in-app
-const keyMapping: { [key: string]: string } = {
+const keyMapping: BaseStat = {
     HP: 'HP',
     Atk: 'ATK',
     Def: 'DEF',
@@ -61,7 +61,6 @@ export function useBaseStats(character: Character, level: string) {
             }
         }
 
-        console.log(newBaseStats)
         setBaseStats(newBaseStats)
     }, [character, level])
 
