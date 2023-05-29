@@ -1,3 +1,7 @@
+import FilterAndSort from '@/components/FilterAndSort'
+import { Character } from '@/types/Character'
+import compareElement from '@/utils/compareElement'
+import elementColors from '@/utils/elementColors'
 import {
     Box,
     Flex,
@@ -11,10 +15,6 @@ import {
     useColorModeValue,
 } from '@chakra-ui/react'
 import { useState } from 'react'
-import FilterAndSort from '@/components/FilterAndSort'
-import { Character } from '@/types/Character'
-import compareElement from '@/utils/compareElement'
-import elementColors from '@/utils/elementColors'
 
 interface CharacterModalProps {
     isOpen: boolean

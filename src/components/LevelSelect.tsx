@@ -1,6 +1,6 @@
-import Select from 'react-select'
-import { Character } from '@/types/Character'
 import { selectStyles } from '@/styles/selectStyles'
+import { Character } from '@/types/Character'
+import Select from 'react-select'
 
 interface LevelSelectProps {
     character: Character

@@ -1,7 +1,5 @@
 'use client'
 
-import { useDisclosure } from '@chakra-ui/react'
-import { useState } from 'react'
 import ActiveSkillsSelect from '@/components/ActiveSkillsSelect'
 import AttributesTable from '@/components/AttributesTable'
 import CharacterImage from '@/components/CharacterImage'
@@ -11,6 +9,8 @@ import LevelSelect from '@/components/LevelSelect'
 import charactersData from '@/data/characters/characters.json'
 import { Character } from '@/types/Character'
 import { useBaseStats } from '@/utils/useBaseStats'
+import { useDisclosure } from '@chakra-ui/react'
+import { useState } from 'react'
 
 export default function Home() {
     // Setting default values for character, ascension/talent level, constellations

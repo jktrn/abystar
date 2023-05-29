@@ -1,5 +1,5 @@
-import React, { HTMLAttributes, memo } from 'react'
 import Image from 'next/image'
+import { HTMLAttributes, memo } from 'react'
 
 // IDK why this works it just does
 interface CharacterImageProps extends HTMLAttributes<HTMLDivElement> {

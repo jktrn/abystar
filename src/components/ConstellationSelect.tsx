@@ -1,7 +1,7 @@
 // TODO: Merge with LevelSelect.tsx
-import Select from 'react-select'
 import { selectStyles } from '@/styles/selectStyles'
 import { Character } from '@/types/Character'
+import Select from 'react-select'
 
 interface ConstellationSelectProps {
     character: Character
