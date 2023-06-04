@@ -1,5 +1,5 @@
-import { Bonus, Character, BaseStat, NewBaseStat } from '@/types/Character'
-import { useEffect, useState } from 'react'
+import { BaseStat, Bonus, Character, NewBaseStat } from '@/types/Character'
+import { useEffect, useState, useMemo } from 'react'
 
 const keyMapping: BaseStat = {
     HP: 'HP',
@@ -45,22 +45,27 @@ export default function useBaseStats(
     activeBonuses: Bonus[]
 ) {
     const currentBaseStats = character.baseStats[level]
-    const initialBaseStats = { ...fullBaseStats }
+    const initialBaseStats = useMemo(() => {
+        const baseStats = { ...fullBaseStats }
 
-    for (const [key, value] of Object.entries(currentBaseStats)) {
-        const newKey = keyMapping[key.replace('Bonus ', '').replace('%', '')]
-        if (newKey) {
-            initialBaseStats[newKey] += parseFloat(value.replace('%', ''))
+        for (const [key, value] of Object.entries(currentBaseStats)) {
+            const newKey =
+                keyMapping[key.replace('Bonus ', '').replace('%', '')]
+            if (newKey) {
+                baseStats[newKey] += parseFloat(value.replace('%', ''))
+            }
         }
-    }
+
+        return baseStats
+    }, [currentBaseStats])
 
     const [baseStats, setBaseStats] = useState(initialBaseStats)
+    let newBaseStats = { ...initialBaseStats }
 
     // Apply all active bonuses to base stats
     useEffect(() => {
-        let newBaseStats = { ...initialBaseStats }
         for (const bonus of activeBonuses) {
-            newBaseStats = bonus.effect(newBaseStats)
+            newBaseStats = bonus.effect(newBaseStats, bonus.level)
         }
         setBaseStats(newBaseStats)
     }, [activeBonuses, initialBaseStats])

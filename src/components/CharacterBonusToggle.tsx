@@ -3,21 +3,41 @@ import { useState } from 'react'
 
 interface BonusToggleProps {
     bonus: Bonus
-    onToggle: (bonus: Bonus, isActive: boolean) => void
+    onToggle: (bonus: Bonus, level: number) => void
 }
 
 const BonusToggle = ({ bonus, onToggle }: BonusToggleProps) => {
-    const [isActive, setIsActive] = useState(false)
+    const [level, setLevel] = useState(0)
 
-    const handleToggle = () => {
-        setIsActive(!isActive)
-        onToggle(bonus, !isActive)
+    const handleLevelChange = (newLevel: number) => {
+        setLevel(newLevel)
+        onToggle(bonus, newLevel)
     }
 
     return (
-        <label>
-            <input type="checkbox" checked={isActive} onChange={handleToggle} />
-            {bonus.name}
+        <label className="flex w-1/2 flex-none justify-between rounded-md bg-main-800 p-2">
+            <span>{bonus.name}</span>
+            {bonus.levels ? (
+                <select
+                    value={level}
+                    onChange={(event) =>
+                        handleLevelChange(parseInt(event.target.value))
+                    }
+                >
+                    <option value={0}>Off</option>
+                    {[...Array(bonus.levels)].map((_, i) => (
+                        <option key={i} value={i + 1}>
+                            {i + 1}-Stack
+                        </option>
+                    ))}
+                </select>
+            ) : (
+                <input
+                    type="checkbox"
+                    checked={level > 0}
+                    onChange={() => handleLevelChange(level > 0 ? 0 : 1)}
+                />
+            )}
         </label>
     )
 }

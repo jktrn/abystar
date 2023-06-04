@@ -9,19 +9,10 @@ interface ActiveSkillsSelectProps {
     setActiveSkills: (value: string[]) => void
 }
 
-const activeSkillOptions: any[] = []
-
-function kebabCase(str: string) {
-    return str
-        .replace(/([a-z])([A-Z])/g, '$1-$2')
-        .replace(/\s+/g, '-')
-        .toLowerCase()
-}
-
-// TODO: There has got to be a better way of doing this
-for (let i = 1; i <= 15; i++) {
-    activeSkillOptions.push({ value: i, label: `Lv${i}` })
-}
+const activeSkillOptions = [...Array(15)].map((_, i) => ({
+    value: (i + 1).toString(),
+    label: `Lv${i + 1}`,
+}))
 
 const ActiveSkillsSelect = ({
     character,
@@ -68,6 +59,13 @@ const ActiveSkillsSelect = ({
             ))}
         </div>
     )
+}
+
+function kebabCase(str: string) {
+    return str
+        .replace(/([a-z])([A-Z])/g, '$1-$2')
+        .replace(/\s+/g, '-')
+        .toLowerCase()
 }
 
 export default ActiveSkillsSelect

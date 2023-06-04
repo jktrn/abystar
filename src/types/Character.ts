@@ -44,7 +44,9 @@ export interface Character {
     constellations: Constellation[]
 }
 
-export type Bonus = {
+export interface Bonus {
     name: string
-    effect: (baseStats: NewBaseStat) => NewBaseStat
+    effect: (baseStats: NewBaseStat, level?: number) => NewBaseStat
+    levels?: number
+    level?: number
 }

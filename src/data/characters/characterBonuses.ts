@@ -4,10 +4,11 @@ const characterBonuses: Record<string, Bonus[]> = {
     'Hu Tao': [
         {
             name: 'Hu Tao Bonus 1',
-            effect: (baseStats: NewBaseStat) => {
-                baseStats['ATK'] += 100
+            effect: (baseStats: NewBaseStat, level?: number) => {
+                baseStats['ATK'] += 200 * (level || 1)
                 return baseStats
             },
+            levels: 3,
         },
         {
             name: 'Hu Tao Bonus 2',

@@ -97,21 +97,23 @@ export default function Home() {
                             </div>
                         </div>
                         {characterBonuses[character.name] && (
-                            <div>
-                                {characterBonuses[character.name].map((bonus) => (
-                                    <CharacterBonusToggle
-                                        key={bonus.name}
-                                        bonus={bonus}
-                                        onToggle={(bonus, isActive) =>
-                                            handleBonusToggle(
-                                                bonus,
-                                                isActive,
-                                                activeBonuses,
-                                                setActiveBonuses
-                                            )
-                                        }
-                                    />
-                                ))}
+                            <div className="mt-4 flex gap-2">
+                                {characterBonuses[character.name].map(
+                                    (bonus) => (
+                                        <CharacterBonusToggle
+                                            key={bonus.name}
+                                            bonus={bonus}
+                                            onToggle={(bonus, level) =>
+                                                handleBonusToggle(
+                                                    bonus,
+                                                    level,
+                                                    activeBonuses,
+                                                    setActiveBonuses
+                                                )
+                                            }
+                                        />
+                                    )
+                                )}
                             </div>
                         )}
                     </div>
