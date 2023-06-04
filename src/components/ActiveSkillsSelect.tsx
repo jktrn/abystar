@@ -3,6 +3,12 @@ import { Character } from '@/types/Character'
 import { Image } from '@chakra-ui/react'
 import Select from 'react-select'
 
+interface ActiveSkillsSelectProps {
+    character: Character
+    activeSkills: string[]
+    setActiveSkills: (value: string[]) => void
+}
+
 const activeSkillOptions: any[] = []
 
 function kebabCase(str: string) {
@@ -17,15 +23,11 @@ for (let i = 1; i <= 15; i++) {
     activeSkillOptions.push({ value: i, label: `Lv${i}` })
 }
 
-function ActiveSkillsSelect({
+const ActiveSkillsSelect = ({
     character,
     activeSkills,
     setActiveSkills,
-}: {
-    character: Character
-    activeSkills: string[]
-    setActiveSkills: (value: string[]) => void
-}) {
+}: ActiveSkillsSelectProps) => {
     //TODO: Implement this into the JSON
     const skillIcons = [
         `/images/skill-icons/normal-attacks/${kebabCase(character.weapon)}.png`,

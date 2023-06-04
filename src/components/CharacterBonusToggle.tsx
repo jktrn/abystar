@@ -1,12 +1,12 @@
 import { Bonus } from '@/types/Character'
 import { useState } from 'react'
 
-type BonusToggleProps = {
+interface BonusToggleProps {
     bonus: Bonus
     onToggle: (bonus: Bonus, isActive: boolean) => void
 }
 
-function BonusToggle({ bonus, onToggle }: BonusToggleProps) {
+const BonusToggle = ({ bonus, onToggle }: BonusToggleProps) => {
     const [isActive, setIsActive] = useState(false)
 
     const handleToggle = () => {

@@ -1,19 +1,18 @@
 import Image from 'next/image'
 import { HTMLAttributes, memo } from 'react'
 
-// IDK why this works it just does
 interface CharacterImageProps extends HTMLAttributes<HTMLDivElement> {
     icon: string
     rarity: number
     element: string
 }
 
-function CharacterImage({
+const CharacterImage = ({
     icon,
     rarity,
     element,
     ...props
-}: CharacterImageProps) {
+}: CharacterImageProps) => {
     const backgroundImage = `/images/item-backgrounds/${rarity}-star.png`
     const elementIcon = `/images/elements/${element.toLowerCase()}.svg`
 

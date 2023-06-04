@@ -1,13 +1,10 @@
+import { NewBaseStat } from '@/types/Character'
 import Image from 'next/image'
 import { useMemo } from 'react'
 import { Column, useTable } from 'react-table'
 
-interface BaseStats {
-    [key: string]: number
-}
-
 interface AttributesTableProps {
-    baseStats: BaseStats
+    baseStats: NewBaseStat
 }
 
 const AttributesTable: React.FC<AttributesTableProps> = ({ baseStats }) => {

@@ -22,12 +22,12 @@ interface CharacterModalProps {
     setCharacter: (character: Character) => void
 }
 
-export default function CharacterModal({
+const CharacterModal = ({
     isOpen,
     onClose,
     characters,
     setCharacter,
-}: CharacterModalProps) {
+}: CharacterModalProps) => {
     // Defaulting to "all" filter, "element" sort
     const [filterValue, setFilterValue] = useState<string[]>(['all'])
     const [sortOrder, setSortOrder] = useState<string>('element')
@@ -110,3 +110,5 @@ export default function CharacterModal({
         </Modal>
     )
 }
+
+export default CharacterModal
