@@ -23,7 +23,7 @@ const backgroundColor = colors.theme.colors.main[700]
 const fontSize = '14px'
 const borderRadius = '6px'
 
-export const selectStyles: StylesConfig<OptionTypeBase, false> = {
+const selectStyles: StylesConfig<OptionTypeBase, false> = {
     control: (provided) => ({
         ...provided,
         backgroundColor,
@@ -74,3 +74,5 @@ export const selectStyles: StylesConfig<OptionTypeBase, false> = {
         borderRadius,
     }),
 }
+
+export default selectStyles

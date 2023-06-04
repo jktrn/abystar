@@ -1,23 +1,25 @@
 'use client'
 
-import ActiveSkillsSelect from '@/components/ActiveSkillsSelect'
-import AttributesTable from '@/components/AttributesTable'
-import CharacterBonusToggle from '@/components/CharacterBonusToggle'
-import CharacterImage from '@/components/CharacterImage'
-import CharacterModal from '@/components/CharacterModal'
-import ConstellationSelect from '@/components/ConstellationSelect'
-import LevelSelect from '@/components/LevelSelect'
-import characterBonuses from '@/data/characters/characterBonuses'
-import charactersData from '@/data/characters/characters.json'
+import {
+    ActiveSkillsSelect,
+    AttributesTable,
+    CharacterBonusToggle,
+    CharacterImage,
+    CharacterModal,
+    ConstellationSelect,
+    LevelSelect,
+} from '@/components'
+
+import { characterBonuses, characterData } from '@/data'
 import { Bonus, Character } from '@/types/Character'
-import handleBonusToggle from '@/utils/handleBonusToggle'
-import useBaseStats from '@/utils/useBaseStats'
+import { handleBonusToggle, useBaseStats } from '@/utils'
+
 import { useDisclosure } from '@chakra-ui/react'
 import { useState } from 'react'
 
 export default function Home() {
     // Setting default values for character, ascension/talent level, constellations
-    const defaultCharacter = charactersData['Hu Tao']
+    const defaultCharacter = characterData['Hu Tao']
     const [character, setCharacter] = useState<Character>(defaultCharacter)
     const [level, setLevel] = useState<string>('90/90')
     const [constellation, setConstellation] = useState<string>('0')
@@ -29,7 +31,7 @@ export default function Home() {
     // For CharacterModal
     const { isOpen, onOpen, onClose } = useDisclosure()
 
-    const characters = Object.values(charactersData) as Character[]
+    const characters = Object.values(characterData) as Character[]
     const [activeBonuses, setActiveBonuses] = useState<Bonus[]>([])
     const baseStats = useBaseStats(character, level, activeBonuses)
 

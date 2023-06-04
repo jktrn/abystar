@@ -1,5 +1,5 @@
 // TODO: Merge with LevelSelect.tsx
-import { selectStyles } from '@/styles/selectStyles'
+import { selectStyles } from '@/styles'
 import { Character } from '@/types/Character'
 import Select from 'react-select'
 

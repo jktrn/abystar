@@ -1,7 +1,6 @@
-import FilterAndSort from '@/components/FilterAndSort'
+import { FilterAndSort } from '@/components'
 import { Character } from '@/types/Character'
-import compareElement from '@/utils/compareElement'
-import elementColors from '@/utils/elementColors'
+import { compareElement, elementColors } from '@/utils'
 import {
     Box,
     Flex,

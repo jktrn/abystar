@@ -1,5 +1,5 @@
 // Don't worry about this, it's just a custom style for the react-select component
-import elementColors from '@/utils/elementColors'
+import { elementColors } from '@/utils'
 import { StylesConfig } from 'react-select'
 import resolveConfig from 'tailwindcss/resolveConfig'
 import tailwindConfig from '../../tailwind.config.js'
@@ -23,7 +23,7 @@ const color = colors.theme.colors.lightgray[100]
 const backgroundColor = colors.theme.colors.main[700]
 const borderRadius = '6px'
 
-export const filterCustomStyles: StylesConfig<OptionTypeBase, true> = {
+const filterCustomStyles: StylesConfig<OptionTypeBase, true> = {
     control: (provided) => ({
         ...provided,
         backgroundColor,
@@ -85,3 +85,5 @@ export const filterCustomStyles: StylesConfig<OptionTypeBase, true> = {
         },
     }),
 }
+
+export default filterCustomStyles

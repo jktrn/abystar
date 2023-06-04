@@ -22,7 +22,7 @@ const color = colors.theme.colors.lightgray[100]
 const backgroundColor = colors.theme.colors.main[700]
 const borderRadius = '6px'
 
-export const sortCustomStyles: StylesConfig<OptionTypeBase, false> = {
+const sortCustomStyles: StylesConfig<OptionTypeBase, false> = {
     control: (provided) => ({
         ...provided,
         backgroundColor,
@@ -60,3 +60,5 @@ export const sortCustomStyles: StylesConfig<OptionTypeBase, false> = {
         borderRadius,
     }),
 }
+
+export default sortCustomStyles
