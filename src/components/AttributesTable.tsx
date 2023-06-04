@@ -96,7 +96,11 @@ const AttributesTable: React.FC<AttributesTableProps> = ({ baseStats }) => {
                     return (
                         <tr
                             key={index}
-                            className={baseStats[row.values.stat] === 0 ? 'brightness-50' : ''}
+                            className={
+                                baseStats[row.values.stat] === 0
+                                    ? 'brightness-50'
+                                    : ''
+                            }
                         >
                             {row.cells.map((cell) => (
                                 <td
@@ -110,7 +114,6 @@ const AttributesTable: React.FC<AttributesTableProps> = ({ baseStats }) => {
                     )
                 })}
             </tbody>
-
         </table>
     )
 }

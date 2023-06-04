@@ -2,6 +2,10 @@ export interface BaseStat {
     [key: string]: string
 }
 
+export interface NewBaseStat {
+    [key: string]: number
+}
+
 export interface ActiveSkill {
     name: string
     image: string
@@ -38,4 +42,9 @@ export interface Character {
     activeSkills: ActiveSkill[]
     passiveSkills?: PassiveSkill[]
     constellations: Constellation[]
+}
+
+export type Bonus = {
+    name: string
+    effect: (baseStats: NewBaseStat) => NewBaseStat
 }

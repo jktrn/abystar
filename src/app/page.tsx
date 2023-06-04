@@ -2,13 +2,16 @@
 
 import ActiveSkillsSelect from '@/components/ActiveSkillsSelect'
 import AttributesTable from '@/components/AttributesTable'
+import CharacterBonusToggle from '@/components/CharacterBonusToggle'
 import CharacterImage from '@/components/CharacterImage'
 import CharacterModal from '@/components/CharacterModal'
 import ConstellationSelect from '@/components/ConstellationSelect'
 import LevelSelect from '@/components/LevelSelect'
+import characterBonuses from '@/data/characters/characterBonuses'
 import charactersData from '@/data/characters/characters.json'
-import { Character } from '@/types/Character'
-import { useBaseStats } from '@/utils/useBaseStats'
+import { Bonus, Character } from '@/types/Character'
+import handleBonusToggle from '@/utils/handleBonusToggle'
+import useBaseStats from '@/utils/useBaseStats'
 import { useDisclosure } from '@chakra-ui/react'
 import { useState } from 'react'
 
@@ -19,16 +22,16 @@ export default function Home() {
     const [level, setLevel] = useState<string>('90/90')
     const [constellation, setConstellation] = useState<string>('0')
     const [activeSkills, setActiveSkills] = useState<string[]>([
-        'Lv10',
-        'Lv10',
-        'Lv10',
+        'Lv10', // Normal Attack
+        'Lv10', // Elemental Skill
+        'Lv10', // Elemental Burst
     ])
-
-    const characters = Object.values(charactersData) as Character[]
     // For CharacterModal
     const { isOpen, onOpen, onClose } = useDisclosure()
-    // Updating base stats when character/level changes
-    const baseStats = useBaseStats(character, level)
+
+    const characters = Object.values(charactersData) as Character[]
+    const [activeBonuses, setActiveBonuses] = useState<Bonus[]>([])
+    const baseStats = useBaseStats(character, level, activeBonuses)
 
     return (
         <div className="flex h-screen flex-wrap p-2">
@@ -90,6 +93,22 @@ export default function Home() {
                                     setActiveSkills={setActiveSkills}
                                 />
                             </div>
+                        </div>
+                        <div>
+                            {characterBonuses[character.name].map((bonus) => (
+                                <CharacterBonusToggle
+                                    key={bonus.name}
+                                    bonus={bonus}
+                                    onToggle={(bonus, isActive) =>
+                                        handleBonusToggle(
+                                            bonus,
+                                            isActive,
+                                            activeBonuses,
+                                            setActiveBonuses
+                                        )
+                                    }
+                                />
+                            ))}
                         </div>
                     </div>
                 </div>

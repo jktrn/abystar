@@ -1,12 +1,6 @@
+import { Bonus, Character, BaseStat, NewBaseStat } from '@/types/Character'
 import { useEffect, useState } from 'react'
-import { BaseStat, Character } from '@/types/Character'
 
-// Redefining BaseStats to have numbers as values instead of strings
-interface NewBaseStat {
-    [key: string]: number
-}
-
-// Arbitrary mapping of the base stats from the scraped data to the ones used in-app
 const keyMapping: BaseStat = {
     HP: 'HP',
     Atk: 'ATK',
@@ -45,24 +39,31 @@ const fullBaseStats: NewBaseStat = {
     'Physical DMG Bonus': 0,
 }
 
-// This hook takes in the character and their level and spits out the base stats (with ascension bonuses applied)
-export function useBaseStats(character: Character, level: string) {
-    const [baseStats, setBaseStats] = useState<NewBaseStat>({})
+export default function useBaseStats(
+    character: Character,
+    level: string,
+    activeBonuses: Bonus[]
+) {
+    const currentBaseStats = character.baseStats[level]
+    const initialBaseStats = { ...fullBaseStats }
 
-    useEffect(() => {
-        const currentBaseStats = character.baseStats[level]
-        const newBaseStats = { ...fullBaseStats }
-
-        for (const [key, value] of Object.entries(currentBaseStats)) {
-            const newKey =
-                keyMapping[key.replace('Bonus ', '').replace('%', '')]
-            if (newKey) {
-                newBaseStats[newKey] += parseFloat(value.replace('%', ''))
-            }
+    for (const [key, value] of Object.entries(currentBaseStats)) {
+        const newKey = keyMapping[key.replace('Bonus ', '').replace('%', '')]
+        if (newKey) {
+            initialBaseStats[newKey] += parseFloat(value.replace('%', ''))
         }
+    }
 
+    const [baseStats, setBaseStats] = useState(initialBaseStats)
+
+    // Apply all active bonuses to base stats
+    useEffect(() => {
+        let newBaseStats = { ...initialBaseStats }
+        for (const bonus of activeBonuses) {
+            newBaseStats = bonus.effect(newBaseStats)
+        }
         setBaseStats(newBaseStats)
-    }, [character, level])
+    }, [activeBonuses, initialBaseStats])
 
     return baseStats
 }

@@ -31,7 +31,7 @@ function ActiveSkillsSelect({
         `/images/skill-icons/normal-attacks/${kebabCase(character.weapon)}.png`,
         `/images/skill-icons/skills/${kebabCase(character.name)}-skill.png`,
         `/images/skill-icons/bursts/${kebabCase(character.name)}-burst.png`,
-    ]    
+    ]
 
     return (
         <div className="ml-4 flex flex-col justify-end gap-2">
@@ -45,7 +45,7 @@ function ActiveSkillsSelect({
                         //         character.vision.toLowerCase() as keyof typeof elementColors
                         //     ]
                         // }
-                        className="!h-8 !w-10 bg-main-700 overflow-hidden rounded-full object-cover p-1"
+                        className="!h-8 !w-10 overflow-hidden rounded-full bg-main-700 object-cover p-1"
                     />
                     <Select
                         instanceId={`active-skill-${index}-select`}
