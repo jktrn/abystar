@@ -46,7 +46,12 @@ export interface Character {
 
 export interface Bonus {
     name: string
-    effect: (baseStats: NewBaseStat, level?: number) => NewBaseStat
-    levels?: number
-    level?: number
+    description: string
+    effect: (
+        baseStats: NewBaseStat,
+        currentStacks?: number,
+        activeSkills?: string[]
+    ) => NewBaseStat
+    maxStacks?: number
+    currentStacks?: number
 }

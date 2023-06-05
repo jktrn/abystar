@@ -2,7 +2,7 @@ import { Bonus } from '@/types/Character'
 
 export default function handleBonusToggle(
     bonus: Bonus,
-    level: number,
+    bonusStacks: number,
     activeBonuses: Bonus[],
     setActiveBonuses: (bonuses: Bonus[]) => void
 ) {
@@ -10,8 +10,8 @@ export default function handleBonusToggle(
         (b) => b.name !== bonus.name
     )
 
-    if (level > 0) {
-        updatedActiveBonuses.push({ ...bonus, level })
+    if (bonusStacks > 0) {
+        updatedActiveBonuses.push({ ...bonus, currentStacks: bonusStacks })
     }
 
     setActiveBonuses(updatedActiveBonuses)

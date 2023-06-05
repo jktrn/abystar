@@ -54,6 +54,7 @@ const ActiveSkillsSelect = ({
                         }}
                         className="w-full"
                         styles={selectStyles}
+                        isSearchable={false}
                     />
                 </div>
             ))}

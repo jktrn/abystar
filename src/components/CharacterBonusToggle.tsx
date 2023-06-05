@@ -1,45 +1,60 @@
 import { Bonus } from '@/types/Character'
 import { useState } from 'react'
+import Switch from 'react-switch'
+import CustomSelect from './CustomSelect'
 
-interface BonusToggleProps {
+interface CharacterBonusToggleProps {
     bonus: Bonus
-    onToggle: (bonus: Bonus, level: number) => void
+    onToggle: (bonus: Bonus, currentStacks: number) => void
 }
 
-const BonusToggle = ({ bonus, onToggle }: BonusToggleProps) => {
-    const [level, setLevel] = useState(0)
+const CharacterBonusToggle = ({
+    bonus,
+    onToggle,
+}: CharacterBonusToggleProps) => {
+    const [currentStacks, setCurrentStacks] = useState(0)
 
-    const handleLevelChange = (newLevel: number) => {
-        setLevel(newLevel)
-        onToggle(bonus, newLevel)
+    const handleCurrentStacksChange = (newCurrentStacks: number) => {
+        setCurrentStacks(newCurrentStacks)
+        onToggle(bonus, newCurrentStacks)
     }
 
     return (
-        <label className="flex w-1/2 flex-none justify-between rounded-md bg-main-800 p-2">
-            <span>{bonus.name}</span>
-            {bonus.levels ? (
-                <select
-                    value={level}
-                    onChange={(event) =>
-                        handleLevelChange(parseInt(event.target.value))
-                    }
-                >
-                    <option value={0}>Off</option>
-                    {[...Array(bonus.levels)].map((_, i) => (
-                        <option key={i} value={i + 1}>
-                            {i + 1}-Stack
-                        </option>
-                    ))}
-                </select>
+        <label className="flex justify-between items-center rounded-md bg-main-800 p-2">
+            <div className="flex flex-col">
+                <span className="text-md">{bonus.name}</span>
+                <span className="text-xs text-lightgray-200">
+                    {bonus.description}
+                </span>
+            </div>
+            {bonus.maxStacks ? (
+                <div className="!min-w-max">
+                    <CustomSelect
+                        options={[
+                            { value: '0', label: 'Off' },
+                            ...[...Array(bonus.maxStacks)].map((_, i) => ({
+                                value: (i + 1).toString(),
+                                label: `${i + 1}-Stack`,
+                            })),
+                        ]}
+                        value={currentStacks.toString()}
+                        onChange={(value) =>
+                            handleCurrentStacksChange(parseInt(value))
+                        }
+                    />
+                </div>
             ) : (
-                <input
-                    type="checkbox"
-                    checked={level > 0}
-                    onChange={() => handleLevelChange(level > 0 ? 0 : 1)}
+                <Switch
+                    checked={currentStacks > 0}
+                    onChange={() =>
+                        handleCurrentStacksChange(currentStacks > 0 ? 0 : 1)
+                    }
+                    uncheckedIcon={false}
+                    checkedIcon={false}
                 />
             )}
         </label>
     )
 }
 
-export default BonusToggle
+export default CharacterBonusToggle

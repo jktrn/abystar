@@ -41,10 +41,11 @@ const fullBaseStats: NewBaseStat = {
 
 export default function useBaseStats(
     character: Character,
-    level: string,
+    characterLevel: string,
+    activeSkills: string[],
     activeBonuses: Bonus[]
 ) {
-    const currentBaseStats = character.baseStats[level]
+    const currentBaseStats = character.baseStats[characterLevel]
     const initialBaseStats = useMemo(() => {
         const baseStats = { ...fullBaseStats }
 
@@ -62,13 +63,12 @@ export default function useBaseStats(
     const [baseStats, setBaseStats] = useState(initialBaseStats)
     let newBaseStats = { ...initialBaseStats }
 
-    // Apply all active bonuses to base stats
     useEffect(() => {
         for (const bonus of activeBonuses) {
-            newBaseStats = bonus.effect(newBaseStats, bonus.level)
+            newBaseStats = bonus.effect(newBaseStats, bonus.currentStacks, activeSkills)
         }
         setBaseStats(newBaseStats)
-    }, [activeBonuses, initialBaseStats])
+    }, [activeBonuses, initialBaseStats, activeSkills])
 
     return baseStats
 }

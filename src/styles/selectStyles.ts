@@ -66,12 +66,15 @@ const selectStyles: StylesConfig<OptionTypeBase, false> = {
         ...provided,
         backgroundColor,
         borderRadius,
+        
     }),
     menuList: (provided) => ({
         ...provided,
         backgroundColor,
         padding: 0,
         borderRadius,
+        borderColor: colors.theme.colors.main[400],
+        borderWidth: '1px',
     }),
 }
 

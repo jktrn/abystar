@@ -39,7 +39,7 @@ export default function Home() {
 
     const characters = Object.values(characterData) as Character[]
     const [activeBonuses, setActiveBonuses] = useState<Bonus[]>([])
-    const baseStats = useBaseStats(character, level, activeBonuses)
+    const baseStats = useBaseStats(character, level, activeSkills, activeBonuses)
 
     return (
         <div className="flex h-screen flex-wrap p-2">
@@ -101,16 +101,16 @@ export default function Home() {
                             </div>
                         </div>
                         {characterBonuses[character.name] && (
-                            <div className="mt-4 flex gap-2">
+                            <div className="mt-4 flex flex-col gap-2">
                                 {characterBonuses[character.name].map(
                                     (bonus) => (
                                         <CharacterBonusToggle
                                             key={bonus.name}
                                             bonus={bonus}
-                                            onToggle={(bonus, level) =>
+                                            onToggle={(bonus, bonusStacks) =>
                                                 handleBonusToggle(
                                                     bonus,
-                                                    level,
+                                                    bonusStacks,
                                                     activeBonuses,
                                                     setActiveBonuses
                                                 )
