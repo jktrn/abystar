@@ -17,14 +17,20 @@ const characterBonuses: Record<string, Bonus[]> = {
                 const bonusString = skillData?.['ATK Increase']?.[activeSkills![1] as keyof typeof skillData['ATK Increase']].match(/\d+(\.\d+)?/)
                 const bonusFloat = bonusString ? parseFloat(bonusString[0]) : null;
                 if (bonusFloat) {
-                    baseStats['ATK'] += baseStats['HP'] * (bonusFloat / 100)
+                    let bonus = baseStats['HP'] * (bonusFloat / 100)
+                    const maxBonus = baseStats['ATK'] * 4
+                    if (bonus > maxBonus) {
+                        bonus = maxBonus
+                    }
+                    baseStats['ATK'] += bonus
                 }
                 return baseStats
             },
         },
+        
         {
             name: 'Sanguine Rogue',
-            description: "Increases Pyro DMG Bonus by 33% when under 50% Max HP",
+            description: "+33% Pyro DMG Bonus when under 50% Max HP",
             effect: (
                 baseStats: NewBaseStat,
             ) => {

@@ -16,7 +16,6 @@ const CustomSelect = ({
 }: CustomSelectProps) => {
     return (
         <Select
-            instanceId={'select'}
             value={options.find((option) => option.value === value)}
             onChange={(option) => onChange(option?.value ?? '')}
             options={options}

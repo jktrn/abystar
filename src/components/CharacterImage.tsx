@@ -31,6 +31,7 @@ const CharacterImage = ({
                 width={128}
                 height={128}
                 unoptimized={true}
+                priority={true}
             />
             <div className="absolute bottom-0.5 right-0.5 flex h-8 w-8 items-center justify-center rounded-full bg-main-900">
                 <Image

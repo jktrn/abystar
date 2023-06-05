@@ -81,6 +81,7 @@ export default function Home() {
                                                 options={levelOptions}
                                                 value={level}
                                                 onChange={setLevel}
+                                                instanceId="ascension"
                                             />
                                         </div>
                                         <div className="flex items-center gap-2">
@@ -89,6 +90,7 @@ export default function Home() {
                                                 options={constellationOptions}
                                                 value={constellation}
                                                 onChange={setConstellation}
+                                                instanceId="constellation"
                                             />
                                         </div>
                                     </div>

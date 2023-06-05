@@ -45,6 +45,7 @@ const CharacterBonusToggle = ({
                 </div>
             ) : (
                 <Switch
+                    id={bonus.name}
                     checked={currentStacks > 0}
                     onChange={() =>
                         handleCurrentStacksChange(currentStacks > 0 ? 0 : 1)

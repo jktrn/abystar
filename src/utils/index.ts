@@ -1,3 +1,4 @@
+export { attributeKeyMap, fullBaseStats } from './attributeKeyMapping'
 export { default as compareElement } from './compareElement'
 export { getLevelOptions, getConstellationOptions } from './characterOptions'
 export { default as elementColors } from './elementColors'
