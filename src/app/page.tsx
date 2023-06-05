@@ -6,13 +6,17 @@ import {
     CharacterBonusToggle,
     CharacterImage,
     CharacterModal,
-    ConstellationSelect,
-    LevelSelect,
+    CustomSelect,
 } from '@/components'
 
 import { characterBonuses, characterData } from '@/data'
 import { Bonus, Character } from '@/types/Character'
-import { handleBonusToggle, useBaseStats } from '@/utils'
+import {
+    getConstellationOptions,
+    getLevelOptions,
+    handleBonusToggle,
+    useBaseStats,
+} from '@/utils'
 
 import { useDisclosure } from '@chakra-ui/react'
 import { useState } from 'react'
@@ -21,8 +25,10 @@ export default function Home() {
     // Setting default values for character, ascension/talent level, constellations
     const defaultCharacter = characterData['Hu Tao']
     const [character, setCharacter] = useState<Character>(defaultCharacter)
-    const [level, setLevel] = useState<string>('90/90')
     const [constellation, setConstellation] = useState<string>('0')
+    const constellationOptions = getConstellationOptions(character)
+    const [level, setLevel] = useState<string>('90/90')
+    const levelOptions = getLevelOptions(character)
     const [activeSkills, setActiveSkills] = useState<string[]>([
         'Lv10', // Normal Attack
         'Lv10', // Elemental Skill
@@ -71,20 +77,18 @@ export default function Home() {
                                     <div className="flex flex-col gap-2">
                                         <div className="flex items-center gap-2">
                                             Ascension:
-                                            <LevelSelect
-                                                character={character}
-                                                level={level}
-                                                setLevel={setLevel}
+                                            <CustomSelect
+                                                options={levelOptions}
+                                                value={level}
+                                                onChange={setLevel}
                                             />
                                         </div>
                                         <div className="flex items-center gap-2">
                                             Constellation:
-                                            <ConstellationSelect
-                                                character={character}
-                                                constellation={constellation}
-                                                setConstellation={
-                                                    setConstellation
-                                                }
+                                            <CustomSelect
+                                                options={constellationOptions}
+                                                value={constellation}
+                                                onChange={setConstellation}
                                             />
                                         </div>
                                     </div>

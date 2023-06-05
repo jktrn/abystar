@@ -1,4 +1,4 @@
-import { Bonus } from '@/types/Character';
+import { Bonus } from '@/types/Character'
 
 export default function handleBonusToggle(
     bonus: Bonus,
@@ -8,11 +8,11 @@ export default function handleBonusToggle(
 ) {
     const updatedActiveBonuses = activeBonuses.filter(
         (b) => b.name !== bonus.name
-    );
+    )
 
     if (level > 0) {
-        updatedActiveBonuses.push({ ...bonus, level });
+        updatedActiveBonuses.push({ ...bonus, level })
     }
 
-    setActiveBonuses(updatedActiveBonuses);
+    setActiveBonuses(updatedActiveBonuses)
 }
