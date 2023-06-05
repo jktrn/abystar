@@ -1,6 +1,6 @@
 import { Bonus, Character } from '@/types/Character'
-import { useEffect, useState, useMemo } from 'react'
-import { attributeKeyMap, fullBaseStats } from '@/utils'
+import { convertBaseStats } from '@/utils'
+import { useEffect, useMemo, useState } from 'react'
 
 export default function useBaseStats(
     character: Character,
@@ -9,26 +9,21 @@ export default function useBaseStats(
     activeBonuses: Bonus[]
 ) {
     const currentBaseStats = character.baseStats[characterLevel]
-    const initialBaseStats = useMemo(() => {
-        const baseStats = { ...fullBaseStats }
-
-        for (const [key, value] of Object.entries(currentBaseStats)) {
-            const newKey =
-                attributeKeyMap[key.replace('Bonus ', '').replace('%', '')]
-            if (newKey) {
-                baseStats[newKey] += parseFloat(value.replace('%', ''))
-            }
-        }
-
-        return baseStats
-    }, [currentBaseStats])
+    const initialBaseStats = useMemo(
+        () => convertBaseStats(currentBaseStats),
+        [currentBaseStats]
+    )
 
     const [baseStats, setBaseStats] = useState(initialBaseStats)
 
     useEffect(() => {
         let newBaseStats = { ...initialBaseStats }
         for (const bonus of activeBonuses) {
-            newBaseStats = bonus.effect(newBaseStats, bonus.currentStacks, activeSkills)
+            newBaseStats = bonus.effect(
+                newBaseStats,
+                bonus.currentStacks,
+                activeSkills
+            )
         }
         setBaseStats(newBaseStats)
     }, [activeBonuses, initialBaseStats, activeSkills])

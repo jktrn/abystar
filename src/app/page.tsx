@@ -12,6 +12,7 @@ import {
 import { characterBonuses, characterData } from '@/data'
 import { Bonus, Character } from '@/types/Character'
 import {
+    convertBaseStats,
     getConstellationOptions,
     getLevelOptions,
     handleBonusToggle,
@@ -39,7 +40,13 @@ export default function Home() {
 
     const characters = Object.values(characterData) as Character[]
     const [activeBonuses, setActiveBonuses] = useState<Bonus[]>([])
-    const baseStats = useBaseStats(character, level, activeSkills, activeBonuses)
+    const initialBaseStats = convertBaseStats(character.baseStats[level])
+    const baseStats = useBaseStats(
+        character,
+        level,
+        activeSkills,
+        activeBonuses
+    )
 
     return (
         <div className="flex h-screen flex-wrap p-2">
@@ -131,7 +138,10 @@ export default function Home() {
                     </h2>
                     <div className="bg-main-900 p-4">
                         <div className="rounded-md border border-main-700 p-2">
-                            <AttributesTable baseStats={baseStats} />
+                            <AttributesTable
+                                baseStats={baseStats}
+                                initialBaseStats={initialBaseStats}
+                            />
                         </div>
                     </div>
                 </div>

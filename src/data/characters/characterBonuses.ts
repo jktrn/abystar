@@ -1,5 +1,5 @@
 import { Bonus, NewBaseStat } from '@/types/Character'
-import { characterData } from '@/data' 
+import { characterData } from '@/data'
 
 const characterBonuses: Record<string, Bonus[]> = {
     'Hu Tao': [
@@ -14,8 +14,13 @@ const characterBonuses: Record<string, Bonus[]> = {
                 const skillData = characterData['Hu Tao'].activeSkills.find(
                     (skill) => skill.name === 'Guide to Afterlife'
                 )?.data
-                const bonusString = skillData?.['ATK Increase']?.[activeSkills![1] as keyof typeof skillData['ATK Increase']].match(/\d+(\.\d+)?/)
-                const bonusFloat = bonusString ? parseFloat(bonusString[0]) : null;
+                const bonusString =
+                    skillData?.['ATK Increase']?.[
+                        activeSkills![1] as keyof (typeof skillData)['ATK Increase']
+                    ].match(/\d+(\.\d+)?/)
+                const bonusFloat = bonusString
+                    ? parseFloat(bonusString[0])
+                    : null
                 if (bonusFloat) {
                     let bonus = baseStats['HP'] * (bonusFloat / 100)
                     const maxBonus = baseStats['ATK'] * 4
@@ -27,13 +32,11 @@ const characterBonuses: Record<string, Bonus[]> = {
                 return baseStats
             },
         },
-        
+
         {
             name: 'Sanguine Rogue',
-            description: "+33% Pyro DMG Bonus when under 50% Max HP",
-            effect: (
-                baseStats: NewBaseStat,
-            ) => {
+            description: '+33% Pyro DMG Bonus when under 50% Max HP',
+            effect: (baseStats: NewBaseStat) => {
                 baseStats['Pyro DMG Bonus'] *= 1.33
                 return baseStats
             },

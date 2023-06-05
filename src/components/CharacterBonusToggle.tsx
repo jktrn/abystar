@@ -20,7 +20,7 @@ const CharacterBonusToggle = ({
     }
 
     return (
-        <label className="flex justify-between items-center rounded-md bg-main-800 p-2">
+        <label className="flex items-center justify-between rounded-md bg-main-800 p-2">
             <div className="flex flex-col">
                 <span className="text-md">{bonus.name}</span>
                 <span className="text-xs text-lightgray-200">

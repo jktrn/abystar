@@ -66,7 +66,6 @@ const selectStyles: StylesConfig<OptionTypeBase, false> = {
         ...provided,
         backgroundColor,
         borderRadius,
-        
     }),
     menuList: (provided) => ({
         ...provided,
