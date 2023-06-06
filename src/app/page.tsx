@@ -13,6 +13,7 @@ import { characterBonuses, characterData } from '@/data'
 import { Bonus, Character } from '@/types/Character'
 import {
     convertBaseStats,
+    displayStats,
     getConstellationOptions,
     getLevelOptions,
     handleBonusToggle,
@@ -144,6 +145,7 @@ export default function Home() {
                         <div className="rounded-md border border-main-700 p-2">
                             <AttributesTable
                                 baseStats={baseStats}
+                                displayStats={displayStats}
                                 initialBaseStats={initialBaseStats}
                             />
                         </div>

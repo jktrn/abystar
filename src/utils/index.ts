@@ -1,4 +1,4 @@
-export { attributeKeyMap, fullBaseStats } from './attributeKeyMapping'
+export { attributeKeyMap, displayStats, fullBaseStats } from './attributeKeyMapping'
 export { getConstellationOptions, getLevelOptions } from './characterOptions'
 export { default as compareElement } from './compareElement'
 export { default as convertBaseStats } from './convertBaseStats'
