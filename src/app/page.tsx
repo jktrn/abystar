@@ -20,7 +20,7 @@ import {
 } from '@/utils'
 
 import { useDisclosure } from '@chakra-ui/react'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 export default function Home() {
     // Setting default values for character, ascension/talent level, constellations
@@ -40,12 +40,15 @@ export default function Home() {
 
     const characters = Object.values(characterData) as Character[]
     const [activeBonuses, setActiveBonuses] = useState<Bonus[]>([])
+    useEffect(() => {
+        setActiveBonuses([])
+      }, [character])
     const initialBaseStats = convertBaseStats(character.baseStats[level])
     const baseStats = useBaseStats(
         character,
         level,
         activeSkills,
-        activeBonuses
+        activeBonuses,
     )
 
     return (
@@ -69,6 +72,7 @@ export default function Home() {
                                     onClose={onClose}
                                     characters={characters}
                                     setCharacter={setCharacter}
+                                    setActiveBonuses={setActiveBonuses}
                                 />
                             </form>
                             <div className="ml-4 flex w-full justify-between">

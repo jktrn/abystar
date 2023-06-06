@@ -1,5 +1,5 @@
 import { FilterAndSort } from '@/components'
-import { Character } from '@/types/Character'
+import { Bonus, Character } from '@/types/Character'
 import { compareElement, elementColors } from '@/utils'
 import {
     Box,
@@ -20,6 +20,7 @@ interface CharacterModalProps {
     onClose: () => void
     characters: Character[]
     setCharacter: (character: Character) => void
+    setActiveBonuses: (activeBonuses: Bonus[]) => void
 }
 
 const CharacterModal = ({
@@ -27,6 +28,7 @@ const CharacterModal = ({
     onClose,
     characters,
     setCharacter,
+    setActiveBonuses,
 }: CharacterModalProps) => {
     // Defaulting to "all" filter, "element" sort
     const [filterValue, setFilterValue] = useState<string[]>(['all'])
@@ -92,6 +94,7 @@ const CharacterModal = ({
                                     alt={character.name}
                                     onClick={() => {
                                         setCharacter(character)
+                                        setActiveBonuses([])
                                         onClose()
                                     }}
                                     bg={
