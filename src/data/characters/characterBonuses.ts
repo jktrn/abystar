@@ -6,6 +6,7 @@ const characterBonuses: Record<string, Bonus[]> = {
         {
             name: 'Guide to Afterlife',
             description: 'Paramita Papilio (Elemental Skill Stance)',
+            icon: '/images/skill-icons/skills/hu-tao-skill.png',
             effect: (
                 baseStats: NewBaseStat,
                 currentStacks?: number,
@@ -32,10 +33,10 @@ const characterBonuses: Record<string, Bonus[]> = {
                 return baseStats
             },
         },
-
         {
             name: 'Sanguine Rogue',
             description: '+33% Pyro DMG Bonus when under 50% Max HP',
+            icon: '/images/skill-icons/passives/hu-tao-passive2.png',
             effect: (baseStats: NewBaseStat) => {
                 baseStats['Pyro DMG Bonus'] *= 1.33
                 return baseStats

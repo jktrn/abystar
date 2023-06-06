@@ -47,6 +47,7 @@ export interface Character {
 export interface Bonus {
     name: string
     description: string
+    icon: string
     effect: (
         baseStats: NewBaseStat,
         currentStacks?: number,

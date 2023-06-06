@@ -1,4 +1,5 @@
 import { Bonus } from '@/types/Character'
+import Image from 'next/image'
 import { useState } from 'react'
 import Switch from 'react-switch'
 import CustomSelect from './CustomSelect'
@@ -21,11 +22,14 @@ const CharacterBonusToggle = ({
 
     return (
         <label className="flex items-center justify-between rounded-md bg-main-800 p-2">
-            <div className="flex flex-col">
-                <span className="text-md">{bonus.name}</span>
-                <span className="text-xs text-lightgray-200">
-                    {bonus.description}
-                </span>
+            <div className="flex gap-2">
+                <Image className="object-cover mx-1" src={bonus.icon} alt={bonus.name} width={24} height={24} />
+                <div className="flex flex-col">
+                    <span className="text-md">{bonus.name}</span>
+                    <span className="text-xs text-lightgray-200">
+                        {bonus.description}
+                    </span>
+                </div>
             </div>
             {bonus.maxStacks ? (
                 <div className="!min-w-max">
