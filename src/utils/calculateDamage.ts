@@ -10,7 +10,8 @@ function calculateDamage(
     baseStats: NewBaseStat,
     abilityScaling: AbilityScaling,
     character: Character,
-    skillLevels: string[]
+    skillLevels: string[],
+    enemyResistances: NewBaseStat
 ) {
     const characterAbilityScaling = abilityScaling[character.name]
     if (!characterAbilityScaling) return []
@@ -26,12 +27,12 @@ function calculateDamage(
             const {
                 formulaType,
                 baseStat,
-                additiveBonusStat = [],
-                multiplicativeBonusStat = [],
+                additiveBonusStat = '',
+                multiplicativeBonusStat = '',
             } = damageCalculation
 
             // Calculate damage based on formulaType and stats
-            let damage = 0
+            let damage
             switch (formulaType) {
                 case FormulaType.DamageFormula:
                     damage = calculateDamageFormula(
@@ -45,7 +46,8 @@ function calculateDamage(
                             : [additiveBonusStat],
                         Array.isArray(multiplicativeBonusStat)
                             ? multiplicativeBonusStat
-                            : [multiplicativeBonusStat]
+                            : [multiplicativeBonusStat],
+                        enemyResistances
                     )
                     break
                 case FormulaType.GenericFormulaWithScaling:

@@ -37,7 +37,7 @@ export default function Home() {
         'Lv10', // Elemental Skill
         'Lv10', // Elemental Burst
     ])
-    
+
     const characters = Object.values(characterData) as Character[]
     const [activeBonuses, setActiveBonuses] = useState<Bonus[]>([])
     const initialBaseStats = convertBaseStats(character.baseStats[level])
@@ -47,11 +47,19 @@ export default function Home() {
         activeSkills,
         activeBonuses
     )
+
+    // Temporary enemy resistances (will be replaced with a form)
+    const enemyResistances = {
+        defenseMultiplier: 50,
+        resistance: 90,
+    }
+
     const damageResults = calculateDamage(
         baseStats,
         abilityScalings,
         character,
-        activeSkills
+        activeSkills,
+        enemyResistances
     )
 
     console.log(damageResults)

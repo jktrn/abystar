@@ -1,5 +1,6 @@
 export {
     attributeKeyMap,
+    availableIcons,
     displayStats,
     fullBaseStats,
 } from './attributeKeyMapping'

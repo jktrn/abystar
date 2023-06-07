@@ -126,3 +126,23 @@ export const displayStats = [
     'Burgeon DMG Bonus',
     'Hyperbloom DMG Bonus',
 ]
+
+export const availableIcons = [
+    'hp',
+    'atk',
+    'def',
+    'elemental-mastery',
+    'energy-recharge',
+    'crit-rate',
+    'crit-dmg',
+    'healing-bonus',
+    'shield-strength',
+    'pyro-dmg-bonus',
+    'cryo-dmg-bonus',
+    'hydro-dmg-bonus',
+    'electro-dmg-bonus',
+    'anemo-dmg-bonus',
+    'geo-dmg-bonus',
+    'dendro-dmg-bonus',
+    'physical-dmg-bonus',
+]

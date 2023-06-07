@@ -2,6 +2,7 @@ import { NewBaseStat } from '@/types/Character'
 import Image from 'next/image'
 import { useMemo } from 'react'
 import { Column, useTable } from 'react-table'
+import { availableIcons } from '@/utils'
 
 interface AttributesTableProps {
     baseStats: NewBaseStat
@@ -63,14 +64,16 @@ const AttributesTable: React.FC<AttributesTableProps> = ({
                     const iconPath = `/images/attributes/${iconName}.png`
                     return (
                         <span className="flex items-center gap-2">
-                            <Image
-                                className="h-auto w-auto"
-                                src={iconPath}
-                                alt={attributeName}
-                                width={12}
-                                height={12}
-                                style={{ width: 12, height: 12 }}
-                            />
+                            {availableIcons.includes(iconName) && (
+                                <Image
+                                    className="h-auto w-auto"
+                                    src={iconPath}
+                                    alt={attributeName}
+                                    width={12}
+                                    height={12}
+                                    style={{ width: 12, height: 12 }}
+                                />
+                            )}
                             {attributeName}
                         </span>
                     )

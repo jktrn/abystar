@@ -7,33 +7,51 @@ const calculateDamageFormula = (
     key: string,
     skillLevel: string,
     baseStat: string,
-    additiveBonusStat: string[],
-    multiplicativeBonusStat: string[]
+    additiveBonusStat: string | string[],
+    multiplicativeBonusStat: string | string[],
+    enemyResistances: NewBaseStat
 ) => {
-    let damage = 0
     const { [skillLevel]: value } = skill.data[key]
     if (value) {
-        // Apply value to damage calculation
         const scalingValue = parseScalingValue(value)
-        const baseDMG = baseStats[baseStat] * (scalingValue / 100)
-        // Calculate additive bonus
-        let additiveBonus = 0
-        for (const stat of additiveBonusStat) {
-            additiveBonus += baseStats[stat] ?? 0
-        }
-        // Calculate multiplicative bonus
-        let multiplicativeBonus = 1
-        for (const stat of multiplicativeBonusStat) {
-            const bonus = baseStats[stat]
-            if (bonus) {
-                multiplicativeBonus *= 1 + bonus
-            }
-        }
+        const baseStatValue = baseStats[baseStat]
+        const additiveBonusStatValue = Array.isArray(additiveBonusStat)
+            ? additiveBonusStat.reduce(
+                  (total, stat) => total + baseStats[stat],
+                  0
+              )
+            : baseStats[additiveBonusStat]
+        const multiplicativeBonusStatValue = Array.isArray(
+            multiplicativeBonusStat
+        )
+            ? multiplicativeBonusStat.reduce(
+                  (total, stat) => total + baseStats[stat],
+                  0
+              )
+            : baseStats[multiplicativeBonusStat]
 
-        // Apply bonuses to damage calculation
-        damage = baseDMG * (1 + additiveBonus) * multiplicativeBonus
+        const nonCritDamage =
+            (baseStatValue * (scalingValue / 100) +
+                baseStatValue * (additiveBonusStatValue / 100)) *
+            (1 + multiplicativeBonusStatValue / 100) *
+            (enemyResistances.defenseMultiplier / 100) *
+            (enemyResistances.resistance / 100)
+        const critDamage =
+            (baseStatValue * (scalingValue / 100) +
+                baseStatValue * (additiveBonusStatValue / 100)) *
+            (1 + multiplicativeBonusStatValue / 100) *
+            (1 +
+                (baseStats['CRIT Rate'] / 100) *
+                    (baseStats['CRIT DMG'] / 100)) *
+            (enemyResistances.defenseMultiplier / 100) *
+            (enemyResistances.resistance / 100)
+        const averageDamage = (nonCritDamage + critDamage) / 2
+        return {
+            nonCritDamage,
+            critDamage,
+            averageDamage,
+        }
     }
-    return damage
 }
 
 export default calculateDamageFormula
