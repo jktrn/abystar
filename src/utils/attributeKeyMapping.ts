@@ -39,7 +39,6 @@ export const fullBaseStats: NewBaseStat = {
     'Shield Strength': 0,
     'Normal Attack DMG Bonus': 0,
     'Normal Attack Additive Bonus': 0,
-    'Normal Attack Multiplicative Bonus': 0,
     'Charged Attack DMG Bonus': 0,
     'Charged Attack Additive Bonus': 0,
     'Plunging Attack DMG Bonus': 0,

@@ -1,5 +1,6 @@
 import {
     AbilityScaling,
+    Bonus,
     FormulaType,
     NewBaseStat,
     Character,
@@ -11,30 +12,57 @@ function calculateDamage(
     abilityScaling: AbilityScaling,
     character: Character,
     skillLevels: string[],
-    enemyResistances: NewBaseStat
+    enemyResistances: NewBaseStat,
+    activeBonuses: Bonus[]
 ) {
     const characterAbilityScaling = abilityScaling[character.name]
     if (!characterAbilityScaling) return []
 
+    // Calculates damage for Normal Attack, Elemental Skill, and Elemental Burst
     const damageResults = character.activeSkills.flatMap((skill, index) => {
+        // Checks if the skill's abilityScalings have been implemented
         const skillAbilityScaling = characterAbilityScaling[skill.name]
         if (!skillAbilityScaling) return []
 
+        // Makes deep copy of ability scaling
+        const originalAbilityScaling = JSON.parse(
+            JSON.stringify(abilityScaling)
+        )
+
+        // Calculates damage for each aspect of the skill
         const skillDamageResults = Object.keys(skill.data).flatMap((key) => {
-            const damageCalculation = skillAbilityScaling[key]
-            if (!damageCalculation) return []
+            // Restore original ability scaling prematurely (since disabled bonuses don't exist in activeBonuses)
+            abilityScaling = JSON.parse(JSON.stringify(originalAbilityScaling))
+
+            // Apply any changes activeBonuses make to ability scaling
+            activeBonuses.forEach((bonus) => {
+                if (
+                    bonus.affectsAbilityIndex === index &&
+                    bonus.applyToAbilityScaling
+                ) {
+                    bonus.applyToAbilityScaling(abilityScaling)
+                }
+            })
+
+            // Checks if the aspect's abilityScalings have been implemented
+            const aspectAbilityScalings =
+                abilityScaling[character.name][skill.name][key]
+            if (!aspectAbilityScalings) return []
 
             const {
                 formulaType,
                 baseStat,
                 additiveBonusStat = '',
                 multiplicativeBonusStat = '',
-            } = damageCalculation
+                damageType,
+            } = aspectAbilityScalings
 
-            // Calculate damage based on formulaType and stats
+            console.log(aspectAbilityScalings)
+
             let damage
             switch (formulaType) {
                 case FormulaType.DamageFormula:
+                    if (!baseStat || !damageType) return []
                     damage = calculateDamageFormula(
                         baseStats,
                         skill,
@@ -47,7 +75,8 @@ function calculateDamage(
                         Array.isArray(multiplicativeBonusStat)
                             ? multiplicativeBonusStat
                             : [multiplicativeBonusStat],
-                        enemyResistances
+                        enemyResistances,
+                        damageType
                     )
                     break
                 case FormulaType.GenericFormulaWithScaling:

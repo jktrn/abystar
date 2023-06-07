@@ -55,6 +55,8 @@ export interface Bonus {
     ) => NewBaseStat
     maxStacks?: number
     currentStacks?: number
+    affectsAbilityIndex?: number
+    applyToAbilityScaling?: (abilityScaling: AbilityScaling) => void
 }
 
 export interface AbilityScaling {
@@ -67,9 +69,10 @@ export interface AbilityScaling {
 
 export interface AbilityScalingData {
     formulaType: FormulaType
-    baseStat: string
+    baseStat?: string
     additiveBonusStat?: string | string[]
     multiplicativeBonusStat?: string | string[]
+    damageType?: string
 }
 
 export enum FormulaType {

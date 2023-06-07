@@ -59,7 +59,8 @@ export default function Home() {
         abilityScalings,
         character,
         activeSkills,
-        enemyResistances
+        enemyResistances,
+        activeBonuses
     )
 
     console.log(damageResults)

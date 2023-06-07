@@ -6,14 +6,22 @@ const abilityScalings: AbilityScaling = {
             '1-Hit DMG': {
                 formulaType: FormulaType.DamageFormula,
                 baseStat: 'ATK',
-                additiveBonusStat: 'Normal Attack DMG Bonus',
-                multiplicativeBonusStat: 'Physical DMG Bonus',
+                additiveBonusStat: 'Normal Attack Additive Bonus',
+                multiplicativeBonusStat: [
+                    'Physical DMG Bonus',
+                    'Normal Attack DMG Bonus',
+                ],
+                damageType: 'Physical',
             },
             '2-Hit DMG': {
                 formulaType: FormulaType.DamageFormula,
                 baseStat: 'ATK',
-                additiveBonusStat: 'Normal Attack DMG Bonus',
-                multiplicativeBonusStat: 'Physical DMG Bonus',
+                additiveBonusStat: 'Normal Attack Additive Bonus',
+                multiplicativeBonusStat: [
+                    'Physical DMG Bonus',
+                    'Normal Attack DMG Bonus',
+                ],
+                damageType: 'Physical',
             },
             // ...
         },
@@ -21,8 +29,12 @@ const abilityScalings: AbilityScaling = {
             'ATK Increase': {
                 formulaType: FormulaType.DamageFormula,
                 baseStat: 'HP',
-                additiveBonusStat: 'Elemental Skill DMG Bonus',
-                multiplicativeBonusStat: 'Pyro DMG Bonus',
+                additiveBonusStat: 'Elemental Skill Additive Bonus',
+                multiplicativeBonusStat: [
+                    'Pyro DMG Bonus',
+                    'Elemental Skill DMG Bonus',
+                ],
+                damageType: 'Pyro',
             },
             // ...
         },
@@ -30,8 +42,12 @@ const abilityScalings: AbilityScaling = {
             'Skill DMG': {
                 formulaType: FormulaType.DamageFormula,
                 baseStat: 'ATK',
-                additiveBonusStat: 'Elemental Burst DMG Bonus',
-                multiplicativeBonusStat: 'Pyro DMG Bonus',
+                additiveBonusStat: 'Elemental Burst Additive Bonus',
+                multiplicativeBonusStat: [
+                    'Pyro DMG Bonus',
+                    'Elemental Burst DMG Bonus',
+                ],
+                damageType: 'Pyro',
             },
             // ...
         },

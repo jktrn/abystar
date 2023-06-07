@@ -1,4 +1,4 @@
-import { Bonus, NewBaseStat } from '@/types/Character'
+import { AbilityScaling, Bonus, NewBaseStat } from '@/types/Character'
 import { characterData } from '@/data'
 
 const characterBonuses: Record<string, Bonus[]> = {
@@ -31,6 +31,19 @@ const characterBonuses: Record<string, Bonus[]> = {
                     baseStats['ATK'] += bonus
                 }
                 return baseStats
+            },
+            affectsAbilityIndex: 0,
+            applyToAbilityScaling: (abilityScaling: AbilityScaling) => {
+                const normalAttackScaling =
+                    abilityScaling['Hu Tao'][
+                        'Normal Attack: Secret Spear of Wangsheng'
+                    ]
+                if (normalAttackScaling) {
+                    Object.values(normalAttackScaling).forEach((aspect) => {
+                        aspect.multiplicativeBonusStat = 'Pyro DMG Bonus'
+                        aspect.damageType = 'Pyro'
+                    })
+                }
             },
         },
         {

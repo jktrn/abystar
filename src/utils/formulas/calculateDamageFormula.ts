@@ -9,7 +9,8 @@ const calculateDamageFormula = (
     baseStat: string,
     additiveBonusStat: string | string[],
     multiplicativeBonusStat: string | string[],
-    enemyResistances: NewBaseStat
+    enemyResistances: NewBaseStat,
+    damageType: string
 ) => {
     const { [skillLevel]: value } = skill.data[key]
     if (value) {
@@ -40,9 +41,7 @@ const calculateDamageFormula = (
             (baseStatValue * (scalingValue / 100) +
                 baseStatValue * (additiveBonusStatValue / 100)) *
             (1 + multiplicativeBonusStatValue / 100) *
-            (1 +
-                (baseStats['CRIT Rate'] / 100) *
-                    (baseStats['CRIT DMG'] / 100)) *
+            (1 + baseStats['CRIT DMG'] / 100) *
             (enemyResistances.defenseMultiplier / 100) *
             (enemyResistances.resistance / 100)
         const averageDamage = (nonCritDamage + critDamage) / 2
@@ -50,6 +49,7 @@ const calculateDamageFormula = (
             nonCritDamage,
             critDamage,
             averageDamage,
+            damageType,
         }
     }
 }
