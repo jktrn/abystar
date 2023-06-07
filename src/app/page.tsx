@@ -9,9 +9,10 @@ import {
     CustomSelect,
 } from '@/components'
 
-import { characterBonuses, characterData } from '@/data'
+import { abilityScalings, characterBonuses, characterData } from '@/data'
 import { Bonus, Character } from '@/types/Character'
 import {
+    calculateDamage,
     convertBaseStats,
     displayStats,
     getConstellationOptions,
@@ -21,7 +22,7 @@ import {
 } from '@/utils'
 
 import { useDisclosure } from '@chakra-ui/react'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 export default function Home() {
     // Setting default values for character, ascension/talent level, constellations
@@ -36,21 +37,27 @@ export default function Home() {
         'Lv10', // Elemental Skill
         'Lv10', // Elemental Burst
     ])
-    // For CharacterModal
-    const { isOpen, onOpen, onClose } = useDisclosure()
-
+    
     const characters = Object.values(characterData) as Character[]
     const [activeBonuses, setActiveBonuses] = useState<Bonus[]>([])
-    useEffect(() => {
-        setActiveBonuses([])
-      }, [character])
     const initialBaseStats = convertBaseStats(character.baseStats[level])
     const baseStats = useBaseStats(
         character,
         level,
         activeSkills,
-        activeBonuses,
+        activeBonuses
     )
+    const damageResults = calculateDamage(
+        baseStats,
+        abilityScalings,
+        character,
+        activeSkills
+    )
+
+    console.log(damageResults)
+
+    // For CharacterModal
+    const { isOpen, onOpen, onClose } = useDisclosure()
 
     return (
         <div className="flex h-screen flex-wrap p-2">

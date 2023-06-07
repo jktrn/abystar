@@ -56,3 +56,25 @@ export interface Bonus {
     maxStacks?: number
     currentStacks?: number
 }
+
+export interface AbilityScaling {
+    [characterName: string]: {
+        [skillName: string]: {
+            [aspectName: string]: AbilityScalingData
+        }
+    }
+}
+
+export interface AbilityScalingData {
+    formulaType: FormulaType
+    baseStat: string
+    additiveBonusStat?: string | string[]
+    multiplicativeBonusStat?: string | string[]
+}
+
+export enum FormulaType {
+    DamageFormula,
+    GenericFormulaWithScaling,
+    GenericFormulaWithoutScaling,
+    ElementalReactionFormula,
+}

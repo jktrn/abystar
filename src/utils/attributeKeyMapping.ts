@@ -86,7 +86,6 @@ export const fullBaseStats: NewBaseStat = {
     'Dendro RES Shred': 0,
     'Physical RES': 0,
     'Physical RES Shred': 0,
-
 }
 
 export const displayStats = [

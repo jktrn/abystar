@@ -1,6 +1,6 @@
 import { Bonus, Character } from '@/types/Character'
 import { convertBaseStats } from '@/utils'
-import { useEffect, useMemo, useState } from 'react'
+import { useMemo } from 'react'
 
 export default function useBaseStats(
     character: Character,
@@ -14,9 +14,7 @@ export default function useBaseStats(
         [currentBaseStats]
     )
 
-    const [baseStats, setBaseStats] = useState(initialBaseStats)
-
-    useEffect(() => {
+    const baseStats = useMemo(() => {
         let newBaseStats = { ...initialBaseStats }
         for (const bonus of activeBonuses) {
             newBaseStats = bonus.effect(
@@ -25,7 +23,7 @@ export default function useBaseStats(
                 activeSkills
             )
         }
-        setBaseStats(newBaseStats)
+        return newBaseStats
     }, [activeBonuses, initialBaseStats, activeSkills])
 
     return baseStats

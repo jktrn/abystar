@@ -12,34 +12,40 @@ interface AttributesTableProps {
 const AttributesTable: React.FC<AttributesTableProps> = ({
     baseStats,
     initialBaseStats,
-    displayStats
+    displayStats,
 }) => {
     const data = useMemo(
         () =>
-        Object.entries(baseStats)
-        .filter(([key]) => displayStats.includes(key))
-        .map(([key, value]) => {
-                let formattedValue
-                let formattedInitialValue
-                let difference
-                if (['HP', 'DEF', 'Elemental Mastery', 'ATK'].includes(key)) {
-                    formattedValue = Math.round(value)
-                    formattedInitialValue = Math.round(initialBaseStats[key])
-                    difference = formattedValue - formattedInitialValue
-                } else {
-                    formattedValue = `${value.toFixed(1)}%`
-                    formattedInitialValue = `${initialBaseStats[key].toFixed(
-                        1
-                    )}%`
-                    difference = `${(value - initialBaseStats[key]).toFixed(1)}%`
-                }
-                return {
-                    stat: key,
-                    value: formattedValue,
-                    initialValue: formattedInitialValue,
-                    difference: difference,
-                }
-            }),
+            Object.entries(baseStats)
+                .filter(([key]) => displayStats.includes(key))
+                .map(([key, value]) => {
+                    let formattedValue
+                    let formattedInitialValue
+                    let difference
+                    if (
+                        ['HP', 'DEF', 'Elemental Mastery', 'ATK'].includes(key)
+                    ) {
+                        formattedValue = Math.round(value)
+                        formattedInitialValue = Math.round(
+                            initialBaseStats[key]
+                        )
+                        difference = formattedValue - formattedInitialValue
+                    } else {
+                        formattedValue = `${value.toFixed(1)}%`
+                        formattedInitialValue = `${initialBaseStats[
+                            key
+                        ].toFixed(1)}%`
+                        difference = `${(value - initialBaseStats[key]).toFixed(
+                            1
+                        )}%`
+                    }
+                    return {
+                        stat: key,
+                        value: formattedValue,
+                        initialValue: formattedInitialValue,
+                        difference: difference,
+                    }
+                }),
         [baseStats, initialBaseStats]
     )
 
@@ -82,20 +88,26 @@ const AttributesTable: React.FC<AttributesTableProps> = ({
                     let formattedDifference
                     if (difference === 0 || difference === '0.0%') {
                         if (baseStats[row.values.stat] === 0) {
-                            formattedDifference = <span>{difference}</span>;
+                            formattedDifference = <span>{difference}</span>
                         } else {
                             formattedDifference = (
-                                <span className="brightness-50">{difference}</span>
-                            );
+                                <span className="brightness-50">
+                                    {difference}
+                                </span>
+                            )
                         }
                     } else if (difference > 0) {
                         formattedDifference = (
-                            <span style={{ color: "#34D399" }}>+{difference}</span>
-                        );
+                            <span style={{ color: '#34D399' }}>
+                                +{difference}
+                            </span>
+                        )
                     } else {
                         formattedDifference = (
-                            <span style={{ color: "#F87171" }}>{difference}</span>
-                        );
+                            <span style={{ color: '#F87171' }}>
+                                {difference}
+                            </span>
+                        )
                     }
                     return formattedDifference
                 },

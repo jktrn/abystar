@@ -23,7 +23,13 @@ const CharacterBonusToggle = ({
     return (
         <label className="flex items-center justify-between rounded-md bg-main-800 p-2">
             <div className="flex gap-2">
-                <Image className="object-cover mx-1" src={bonus.icon} alt={bonus.name} width={24} height={24} />
+                <Image
+                    className="mx-1 object-cover"
+                    src={bonus.icon}
+                    alt={bonus.name}
+                    width={24}
+                    height={24}
+                />
                 <div className="flex flex-col">
                     <span className="text-md">{bonus.name}</span>
                     <span className="text-xs text-lightgray-200">
