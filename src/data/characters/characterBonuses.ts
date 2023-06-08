@@ -23,7 +23,7 @@ const characterBonuses: Record<string, Bonus[]> = {
                 const bonusFloat = bonusString
                     ? parseFloat(bonusString[0])
                     : null
-                    
+
                 if (bonusFloat) {
                     let bonus = baseStats['HP'] * (bonusFloat / 100)
                     const maxBonus = baseStats['ATK'] * 4

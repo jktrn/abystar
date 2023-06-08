@@ -99,7 +99,10 @@ const AttributesTable: React.FC<AttributesTableProps> = ({
                                 </span>
                             )
                         }
-                    } else if (difference > 0 || parseScalingValue(difference) > 0) {
+                    } else if (
+                        difference > 0 ||
+                        parseScalingValue(difference) > 0
+                    ) {
                         formattedDifference = (
                             <span style={{ color: '#34D399' }}>
                                 +{difference}

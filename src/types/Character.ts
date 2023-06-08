@@ -59,7 +59,7 @@ export interface Effect {
     (
         baseStats: NewBaseStat,
         currentStacks?: number,
-        activeSkills?: string[],
+        activeSkills?: string[]
     ): NewBaseStat
 }
 

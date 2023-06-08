@@ -115,7 +115,7 @@ const abilityScalings: AbilityScaling = {
                     'Elemental Skill DMG Bonus',
                 ],
                 damageType: 'Pyro',
-            }
+            },
             // ...
         },
         'Spirit Soother': {

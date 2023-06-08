@@ -15,7 +15,7 @@ const constellationBonuses: Record<string, Bonus[]> = {
         {
             name: 'Ominous Rainfall',
             description:
-                'Increases the Blood Blossom DMG by an amount equal to 10% of Hu Tao\'s Max HP at the time the effect is applied. Additionally, Spirit Soother will also apply the Blood Blossom effect. ',
+                "Increases the Blood Blossom DMG by an amount equal to 10% of Hu Tao's Max HP at the time the effect is applied. Additionally, Spirit Soother will also apply the Blood Blossom effect. ",
             icon: '/images/constellation-icons/hu-tao-constellation2.png',
             effect: (baseStats) => {
                 baseStats['Elemental Skill Additive Bonus'] = 10
@@ -35,7 +35,7 @@ const constellationBonuses: Record<string, Bonus[]> = {
                 activeSkills[1] = `Lv${newSkillLevel}`
                 return baseStats
             },
-        }
+        },
     ],
 }
 
