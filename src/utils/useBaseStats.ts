@@ -15,17 +15,18 @@ export default function useBaseStats(
         [currentBaseStats]
     )
 
-    const baseStats = useMemo(() => {
+    const { baseStats, updatedActiveSkills } = useMemo(() => {
         let newBaseStats = { ...initialBaseStats }
+        let newActiveSkills = [...activeSkills]
         for (const bonus of [...activeBonuses, ...activeConstellations]) {
             newBaseStats = bonus.effect(
                 newBaseStats,
                 bonus.currentStacks,
-                activeSkills
+                newActiveSkills
             )
         }
-        return newBaseStats
+        return { baseStats: newBaseStats, updatedActiveSkills: newActiveSkills }
     }, [activeBonuses, initialBaseStats, activeSkills, activeConstellations])
 
-    return baseStats
+    return { baseStats, updatedActiveSkills }
 }

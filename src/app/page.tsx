@@ -1,5 +1,8 @@
 'use client'
 
+import { useState } from 'react'
+import { useDisclosure } from '@chakra-ui/react'
+
 import {
     ActiveSkillsSelect,
     AttributesTable,
@@ -9,11 +12,7 @@ import {
     CustomSelect,
 } from '@/components'
 
-import {
-    abilityScalings,
-    characterBonuses,
-    characterData
-} from '@/data'
+import { abilityScalings, characterBonuses, characterData } from '@/data'
 
 import { Bonus, Character } from '@/types/Character'
 
@@ -28,48 +27,46 @@ import {
     useActiveConstellations,
 } from '@/utils'
 
-import { useDisclosure } from '@chakra-ui/react'
-import { useState } from 'react'
-
 export default function Home() {
     // Setting default values for character, ascension/talent level, constellations
     const defaultCharacter = characterData['Hu Tao']
     const [character, setCharacter] = useState<Character>(defaultCharacter)
-    const [constellation, setConstellation] = useState<string>('0')
-    const constellationOptions = getConstellationOptions(character)
+
     const [level, setLevel] = useState<string>('90/90')
+    const [constellation, setConstellation] = useState<string>('0')
+
     const levelOptions = getLevelOptions(character)
+    const constellationOptions = getConstellationOptions(character)
+
     const [activeSkills, setActiveSkills] = useState<string[]>([
         'Lv10', // Normal Attack
         'Lv10', // Elemental Skill
         'Lv10', // Elemental Burst
     ])
 
+    // Other state variables
     const characters = Object.values(characterData) as Character[]
     const [activeBonuses, setActiveBonuses] = useState<Bonus[]>([])
     const initialBaseStats = convertBaseStats(character.baseStats[level])
+    const [activeConstellations, setActiveConstellations] = useState<Bonus[]>(
+        []
+    )
+    // For CharacterModal
+    const { isOpen, onOpen, onClose } = useDisclosure()
 
-    // Add a new state variable to keep track of the currently active constellations
-    const [activeConstellations, setActiveConstellations] = useState<Bonus[]>([])
-
-    // Use the custom hook to handle changes to the constellation state variable
     useActiveConstellations(
         character.name,
         constellation,
-        setActiveConstellations,
-        setActiveSkills
+        setActiveConstellations
     )
 
-    // Update the useBaseStats hook to accept the activeConstellations variable
-    const baseStats = useBaseStats(
+    const { baseStats, updatedActiveSkills } = useBaseStats(
         character,
         level,
         activeSkills,
         activeBonuses,
         activeConstellations
     )
-
-    console.log(activeSkills)
 
     // Temporary enemy resistances (will be replaced with a form)
     const enemyResistances = {
@@ -81,13 +78,12 @@ export default function Home() {
         baseStats,
         abilityScalings,
         character,
-        activeSkills,
+        updatedActiveSkills,
         enemyResistances,
         activeBonuses
     )
 
-    // For CharacterModal
-    const { isOpen, onOpen, onClose } = useDisclosure()
+    console.log(damageResults)
 
     return (
         <div className="flex h-screen flex-wrap p-2">
@@ -146,7 +142,7 @@ export default function Home() {
                                 </div>
                                 <ActiveSkillsSelect
                                     character={character}
-                                    activeSkills={activeSkills}
+                                    activeSkills={updatedActiveSkills}
                                     setActiveSkills={setActiveSkills}
                                 />
                             </div>

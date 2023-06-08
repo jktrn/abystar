@@ -48,15 +48,19 @@ export interface Bonus {
     name: string
     description: string
     icon: string
-    effect: (
-        baseStats: NewBaseStat,
-        currentStacks?: number,
-        activeSkills?: string[]
-    ) => NewBaseStat
+    effect: Effect
     maxStacks?: number
     currentStacks?: number
     affectsAbilityIndex?: number
     applyToAbilityScaling?: (abilityScaling: AbilityScaling) => void
+}
+
+export interface Effect {
+    (
+        baseStats: NewBaseStat,
+        currentStacks?: number,
+        activeSkills?: string[],
+    ): NewBaseStat
 }
 
 export interface AbilityScaling {

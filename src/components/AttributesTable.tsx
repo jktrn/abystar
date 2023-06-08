@@ -2,7 +2,7 @@ import { NewBaseStat } from '@/types/Character'
 import Image from 'next/image'
 import { useMemo } from 'react'
 import { Column, useTable } from 'react-table'
-import { availableIcons } from '@/utils'
+import { availableIcons, parseScalingValue } from '@/utils'
 
 interface AttributesTableProps {
     baseStats: NewBaseStat
@@ -99,7 +99,7 @@ const AttributesTable: React.FC<AttributesTableProps> = ({
                                 </span>
                             )
                         }
-                    } else if (difference > 0) {
+                    } else if (difference > 0 || parseScalingValue(difference) > 0) {
                         formattedDifference = (
                             <span style={{ color: '#34D399' }}>
                                 +{difference}

@@ -5,8 +5,7 @@ import { useEffect } from 'react'
 export default function useActiveConstellations(
     characterName: string,
     constellation: string,
-    setActiveConstellations: (activeConstellations: Bonus[]) => void,
-    setActiveSkills: (activeSkills: string[]) => void
+    setActiveConstellations: (activeConstellations: Bonus[]) => void
 ) {
     useEffect(() => {
         if (constellation === '0') {
@@ -23,27 +22,5 @@ export default function useActiveConstellations(
             }))
 
         setActiveConstellations(newActiveConstellations)
-
-        // Recalculate the skill level increases caused by the selected constellation from scratch
-        let newActiveSkills = [
-            'Lv10', // Normal Attack
-            'Lv10', // Elemental Skill
-            'Lv10', // Elemental Burst
-        ]
-        if (currentConstellationIndex >= 2) {
-            // C3 increases the level of the Elemental Skill by 3
-            newActiveSkills[1] = `Lv${Math.min(
-                parseInt(newActiveSkills[1].slice(2)) + 3,
-                15
-            )}`
-        }
-        if (currentConstellationIndex >= 4) {
-            // C5 increases the level of the Elemental Burst by 3
-            newActiveSkills[2] = `Lv${Math.min(
-                parseInt(newActiveSkills[2].slice(2)) + 3,
-                15
-            )}`
-        }
-        setActiveSkills(newActiveSkills)
     }, [characterName, constellation])
 }
