@@ -1,8 +1,7 @@
-// Don't worry about this, it's just a custom style for the react-select component
 import { elementColors } from '@/utils'
 import { StylesConfig } from 'react-select'
 import resolveConfig from 'tailwindcss/resolveConfig'
-import tailwindConfig from '../../tailwind.config.js'
+import tailwindConfig from '../../../tailwind.config.js'
 
 interface TailwindConfig {
     theme: {

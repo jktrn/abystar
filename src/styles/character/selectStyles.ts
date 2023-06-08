@@ -1,7 +1,7 @@
 // Generic styles for react-select components
 import { StylesConfig } from 'react-select'
 import resolveConfig from 'tailwindcss/resolveConfig'
-import tailwindConfig from '../../tailwind.config.js'
+import tailwindConfig from '../../../tailwind.config.js'
 
 interface TailwindConfig {
     theme: {
