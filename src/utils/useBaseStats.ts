@@ -6,7 +6,8 @@ export default function useBaseStats(
     character: Character,
     characterLevel: string,
     activeSkills: string[],
-    activeBonuses: Bonus[]
+    activeBonuses: Bonus[],
+    activeConstellations: Bonus[]
 ) {
     const currentBaseStats = character.baseStats[characterLevel]
     const initialBaseStats = useMemo(
@@ -16,7 +17,7 @@ export default function useBaseStats(
 
     const baseStats = useMemo(() => {
         let newBaseStats = { ...initialBaseStats }
-        for (const bonus of activeBonuses) {
+        for (const bonus of [...activeBonuses, ...activeConstellations]) {
             newBaseStats = bonus.effect(
                 newBaseStats,
                 bonus.currentStacks,
@@ -24,7 +25,7 @@ export default function useBaseStats(
             )
         }
         return newBaseStats
-    }, [activeBonuses, initialBaseStats, activeSkills])
+    }, [activeBonuses, initialBaseStats, activeSkills, activeConstellations])
 
     return baseStats
 }

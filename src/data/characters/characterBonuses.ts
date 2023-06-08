@@ -12,7 +12,9 @@ const characterBonuses: Record<string, Bonus[]> = {
                 currentStacks?: number,
                 activeSkills?: string[]
             ) => {
-                const skillData = characterData['Hu Tao'].activeSkills.find(
+                const skillData: any = characterData[
+                    'Hu Tao'
+                ].activeSkills.find(
                     (skill) => skill.name === 'Guide to Afterlife'
                 )?.data
                 const bonusString =

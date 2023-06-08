@@ -9,8 +9,14 @@ import {
     CustomSelect,
 } from '@/components'
 
-import { abilityScalings, characterBonuses, characterData } from '@/data'
+import {
+    abilityScalings,
+    characterBonuses,
+    characterData
+} from '@/data'
+
 import { Bonus, Character } from '@/types/Character'
+
 import {
     calculateDamage,
     convertBaseStats,
@@ -19,6 +25,7 @@ import {
     getLevelOptions,
     handleBonusToggle,
     useBaseStats,
+    useActiveConstellations,
 } from '@/utils'
 
 import { useDisclosure } from '@chakra-ui/react'
@@ -41,12 +48,28 @@ export default function Home() {
     const characters = Object.values(characterData) as Character[]
     const [activeBonuses, setActiveBonuses] = useState<Bonus[]>([])
     const initialBaseStats = convertBaseStats(character.baseStats[level])
+
+    // Add a new state variable to keep track of the currently active constellations
+    const [activeConstellations, setActiveConstellations] = useState<Bonus[]>([])
+
+    // Use the custom hook to handle changes to the constellation state variable
+    useActiveConstellations(
+        character.name,
+        constellation,
+        setActiveConstellations,
+        setActiveSkills
+    )
+
+    // Update the useBaseStats hook to accept the activeConstellations variable
     const baseStats = useBaseStats(
         character,
         level,
         activeSkills,
-        activeBonuses
+        activeBonuses,
+        activeConstellations
     )
+
+    console.log(activeSkills)
 
     // Temporary enemy resistances (will be replaced with a form)
     const enemyResistances = {
@@ -62,8 +85,6 @@ export default function Home() {
         enemyResistances,
         activeBonuses
     )
-
-    console.log(damageResults)
 
     // For CharacterModal
     const { isOpen, onOpen, onClose } = useDisclosure()

@@ -57,8 +57,6 @@ function calculateDamage(
                 damageType,
             } = aspectAbilityScalings
 
-            console.log(aspectAbilityScalings)
-
             let damage
             switch (formulaType) {
                 case FormulaType.DamageFormula:

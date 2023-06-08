@@ -41,6 +41,7 @@ export const fullBaseStats: NewBaseStat = {
     'Normal Attack Additive Bonus': 0,
     'Charged Attack DMG Bonus': 0,
     'Charged Attack Additive Bonus': 0,
+    'Charged Attack Stamina Cost': 0,
     'Plunging Attack DMG Bonus': 0,
     'Plunging Attack Additive Bonus': 0,
     'Elemental Skill DMG Bonus': 0,
