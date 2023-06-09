@@ -36,6 +36,29 @@ const constellationBonuses: Record<string, Bonus[]> = {
                 return baseStats
             },
         },
+        {
+            name: 'Garden of Eternal Rest',
+            description:
+                'Upon defeating an enemy affected by a Blood Blossom that Hu Tao applied herself, all nearby allies in the party (excluding Hu Tao herself) will have their CRIT Rate increased by 12% for 15s.',
+            icon: '/images/constellation-icons/hu-tao-constellation4.png',
+            effect: (baseStats) => {
+                return baseStats
+            },
+        },
+        {
+            name: 'Floral Incense',
+            description:
+                'Increases the Level of Spirit Soother by 3. Maximum upgrade level is 15.',
+            icon: '/images/constellation-icons/hu-tao-constellation5.png',
+            effect: (baseStats, currentStacks, activeSkills) => {
+                if (!activeSkills) return baseStats
+                const currentSkillLevel = parseInt(activeSkills[2].slice(2))
+                if (currentSkillLevel >= 13) return baseStats
+                const newSkillLevel = currentSkillLevel + 3
+                activeSkills[2] = `Lv${newSkillLevel}`
+                return baseStats
+            },
+        },
     ],
 }
 

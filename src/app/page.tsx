@@ -10,10 +10,10 @@ import {
     CharacterImage,
     CharacterModal,
     CustomSelect,
+    ResultsTable,
 } from '@/components'
 
 import { abilityScalings, characterBonuses, characterData } from '@/data'
-
 import { Bonus, Character } from '@/types/Character'
 
 import {
@@ -33,9 +33,9 @@ export default function Home() {
     const [character, setCharacter] = useState<Character>(defaultCharacter)
 
     const [level, setLevel] = useState<string>('90/90')
-    const [constellation, setConstellation] = useState<string>('0')
-
     const levelOptions = getLevelOptions(character)
+    
+    const [constellation, setConstellation] = useState<string>('0')
     const constellationOptions = getConstellationOptions(character)
 
     const [activeSkills, setActiveSkills] = useState<string[]>([
@@ -82,8 +82,6 @@ export default function Home() {
         enemyResistances,
         activeBonuses
     )
-
-    console.log(damageResults)
 
     return (
         <div className="flex h-screen flex-wrap p-2">
@@ -215,7 +213,11 @@ export default function Home() {
                     <h2 className="rounded-t-lg bg-main-800 px-4 py-3 text-lg font-bold">
                         Results
                     </h2>
-                    <div className="bg-main-900 p-4">Results</div>
+                    <div className="bg-main-900 p-4">
+                        <div className="rounded-md border border-main-700 p-2">
+                            <ResultsTable damageResults={damageResults} />
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
