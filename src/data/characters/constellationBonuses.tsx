@@ -6,7 +6,7 @@ const constellationBonuses: Record<string, Bonus[]> = {
             name: 'Crimson Bouquet',
             description: (
                 <span>
-                    While in Paramita Papilio state, Hu Tao's Charge Attacks do not consume Stamina.
+                    While in Paramita Papilio state, Hu Tao&apos;s Charge Attacks do not consume Stamina.
                 </span>
             ),
             icon: '/images/constellation-icons/hu-tao-constellation1.png',
@@ -19,7 +19,7 @@ const constellationBonuses: Record<string, Bonus[]> = {
             name: 'Ominous Rainfall',
             description: (
                 <span>
-                    Increases the Blood Blossom DMG by an amount equal to 10% of Hu Tao's Max HP at the time the effect is applied. Additionally, Spirit Soother will also apply the Blood Blossom effect.
+                    Increases the Blood Blossom DMG by an amount equal to 10% of Hu Tao&apos;s Max HP at the time the effect is applied. Additionally, Spirit Soother will also apply the Blood Blossom effect.
                 </span>
             ),
             icon: '/images/constellation-icons/hu-tao-constellation2.png',
@@ -78,7 +78,7 @@ const constellationBonuses: Record<string, Bonus[]> = {
             name: 'Butterfly\'s Embrace',
             description: (
                 <span>
-                    Triggers when Hu Tao's HP drops below 25%, or when she suffers a lethal strike: Hu Tao will not fall as a result of the DMG sustained. Additionally, for the next 10s, all of her Elemental and Physical RES is increased by 200%, her CRIT Rate is increased by 100%, and her resistance to interruption is greatly increased. This effect triggers automatically when Hu Tao has 1 HP left. Can only occur once every 60s.
+                    Triggers when Hu Tao&apos;s HP drops below 25%, or when she suffers a lethal strike: Hu Tao will not fall as a result of the DMG sustained. Additionally, for the next 10s, all of her Elemental and Physical RES is increased by 200%, her CRIT Rate is increased by 100%, and her resistance to interruption is greatly increased. This effect triggers automatically when Hu Tao has 1 HP left. Can only occur once every 60s.
                 </span>
             ),
             icon: '/images/constellation-icons/hu-tao-constellation6.png',

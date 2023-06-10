@@ -47,7 +47,7 @@ const AttributesTable: React.FC<AttributesTableProps> = ({
                         difference: difference,
                     }
                 }),
-        [baseStats, initialBaseStats]
+        [baseStats, displayStats, initialBaseStats]
     )
 
     const columns: Column[] = useMemo(
@@ -123,7 +123,7 @@ const AttributesTable: React.FC<AttributesTableProps> = ({
                 accessor: 'value',
             },
         ],
-        []
+        [baseStats]
     )
 
     const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =

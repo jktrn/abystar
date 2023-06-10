@@ -22,5 +22,5 @@ export default function useActiveConstellations(
             }))
 
         setActiveConstellations(newActiveConstellations)
-    }, [characterName, constellation])
+    }, [characterName, constellation, setActiveConstellations])
 }
