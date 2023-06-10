@@ -5,7 +5,7 @@ import {
     NewBaseStat,
     Character,
 } from '@/types/Character'
-import { calculateDamageFormula } from '@/utils'
+import { damageFormula, genericFormulaWithScaling } from '@/utils'
 
 function calculateDamage(
     baseStats: NewBaseStat,
@@ -55,13 +55,14 @@ function calculateDamage(
                 additiveBonusStat = '',
                 multiplicativeBonusStat = '',
                 damageType,
+                outputType,
             } = aspectAbilityScalings
 
             let damage
             switch (formulaType) {
                 case FormulaType.DamageFormula:
                     if (!baseStat || !damageType) return []
-                    damage = calculateDamageFormula(
+                    damage = damageFormula(
                         baseStats,
                         skill,
                         key,
@@ -78,7 +79,21 @@ function calculateDamage(
                     )
                     break
                 case FormulaType.GenericFormulaWithScaling:
-                    // Apply generic formula with scaling
+                    if (!baseStat || !outputType) return []
+                    damage = genericFormulaWithScaling(
+                        baseStats,
+                        skill,
+                        key,
+                        skillLevels[index],
+                        baseStat,
+                        Array.isArray(additiveBonusStat)
+                            ? additiveBonusStat
+                            : [additiveBonusStat],
+                        Array.isArray(multiplicativeBonusStat)
+                            ? multiplicativeBonusStat
+                            : [multiplicativeBonusStat],
+                        outputType
+                    )
                     break
                 case FormulaType.GenericFormulaWithoutScaling:
                     // Apply generic formula without scaling

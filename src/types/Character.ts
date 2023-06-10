@@ -78,6 +78,7 @@ export interface AbilityScalingData {
     additiveBonusStat?: string | string[]
     multiplicativeBonusStat?: string | string[]
     damageType?: string
+    outputType?: FormulaOutputType
 }
 
 export enum FormulaType {
@@ -85,4 +86,10 @@ export enum FormulaType {
     GenericFormulaWithScaling,
     GenericFormulaWithoutScaling,
     ElementalReactionFormula,
+}
+
+export enum FormulaOutputType {
+    Healing,
+    Time,
+    Generic,
 }

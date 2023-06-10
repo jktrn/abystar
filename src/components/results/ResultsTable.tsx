@@ -1,6 +1,7 @@
+import { FormulaOutputType } from '@/types/Character'
+import { elementColors } from '@/utils'
 import { useMemo } from 'react'
 import { Column, useTable } from 'react-table'
-import { elementColors } from '@/utils'
 
 interface ResultsTableProps {
     damageResults: any[]
@@ -8,19 +9,21 @@ interface ResultsTableProps {
 
 interface Result {
     name: string
-    nonCrit: string | number
-    crit: string | number
-    average: string | number
+    nonCrit?: string | number
+    crit?: string | number
+    average?: string | number
     damageType?: string
 }
 
 interface Aspect {
     aspectName: string
     damage: {
-        nonCritDamage: number
-        critDamage: number
-        averageDamage: number
-        damageType: string
+        nonCritDamage?: number
+        critDamage?: number
+        averageDamage?: number
+        damageType?: string
+        outputValue?: number
+        outputType?: FormulaOutputType
     }
 }
 
@@ -57,13 +60,33 @@ const ResultsTable: React.FC<ResultsTableProps> = ({ damageResults }) => {
                 average: '',
             })
             skill.aspects.forEach((aspect: Aspect) => {
-                result.push({
-                    name: aspect.aspectName,
-                    nonCrit: Math.round(aspect.damage.nonCritDamage),
-                    crit: Math.round(aspect.damage.critDamage),
-                    average: Math.round(aspect.damage.averageDamage),
-                    damageType: aspect.damage.damageType,
-                })
+                if (
+                    'outputValue' in aspect.damage &&
+                    'outputType' in aspect.damage
+                ) {
+                    // Handle non-damage output
+                    result.push({
+                        name: aspect.aspectName,
+                        average: aspect.damage.outputValue
+                            ? Math.round(aspect.damage.outputValue)
+                            : 0, // example default value
+                    })
+                } else {
+                    // Handle damage output
+                    result.push({
+                        name: aspect.aspectName,
+                        nonCrit: aspect.damage.nonCritDamage
+                            ? Math.round(aspect.damage.nonCritDamage)
+                            : 0, // example default value
+                        crit: aspect.damage.critDamage
+                            ? Math.round(aspect.damage.critDamage)
+                            : 0, // example default value
+                        average: aspect.damage.averageDamage
+                            ? Math.round(aspect.damage.averageDamage)
+                            : 0, // example default value
+                        damageType: aspect.damage.damageType,
+                    })
+                }
             })
         })
         return result

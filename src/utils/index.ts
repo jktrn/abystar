@@ -12,8 +12,9 @@ export {
     fullBaseStats,
 } from './damage/attributeKeyMapping'
 export { default as calculateDamage } from './damage/calculateDamage'
-export { default as calculateDamageFormula } from './damage/calculateDamageFormula'
 export { default as convertBaseStats } from './damage/convertBaseStats'
+export { default as damageFormula } from './damage/formulas/damageFormula'
+export { default as genericFormulaWithScaling } from './damage/formulas/genericFormulaWithScaling'
 export { default as parseScalingValue } from './damage/parseScalingValue'
 export { default as useActiveConstellations } from './hooks/useActiveConstellations'
 export { default as useBaseStats } from './hooks/useBaseStats'

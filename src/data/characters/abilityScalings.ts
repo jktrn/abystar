@@ -1,4 +1,8 @@
-import { AbilityScaling, FormulaType } from '@/types/Character'
+import {
+    AbilityScaling,
+    FormulaType,
+    FormulaOutputType,
+} from '@/types/Character'
 
 const abilityScalings: AbilityScaling = {
     'Hu Tao': {
@@ -73,6 +77,9 @@ const abilityScalings: AbilityScaling = {
                 ],
                 damageType: 'Physical',
             },
+            // 'Charged Attack Stamina Cost': {
+
+            // }
             'Plunge DMG': {
                 formulaType: FormulaType.DamageFormula,
                 baseStat: 'ATK',
@@ -103,9 +110,13 @@ const abilityScalings: AbilityScaling = {
                 ],
                 damageType: 'Physical',
             },
-            // ...
         },
         'Guide to Afterlife': {
+            'ATK Increase': {
+                formulaType: FormulaType.GenericFormulaWithScaling,
+                baseStat: 'HP',
+                outputType: FormulaOutputType.Generic,
+            },
             'Blood Blossom DMG': {
                 formulaType: FormulaType.DamageFormula,
                 baseStat: 'ATK',

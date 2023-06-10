@@ -16,20 +16,14 @@ const calculateDamageFormula = (
     if (value) {
         const scalingValue = parseScalingValue(value)
         const baseStatValue = baseStats[baseStat]
-        const additiveBonusStatValue = Array.isArray(additiveBonusStat)
-            ? additiveBonusStat.reduce(
-                  (total, stat) => total + baseStats[stat],
-                  0
-              )
-            : baseStats[additiveBonusStat]
-        const multiplicativeBonusStatValue = Array.isArray(
-            multiplicativeBonusStat
+        const additiveBonusStatValue = calculateStatValue(
+            additiveBonusStat,
+            baseStats
         )
-            ? multiplicativeBonusStat.reduce(
-                  (total, stat) => total + baseStats[stat],
-                  0
-              )
-            : baseStats[multiplicativeBonusStat]
+        const multiplicativeBonusStatValue = calculateStatValue(
+            multiplicativeBonusStat,
+            baseStats
+        )
 
         const baseDamage =
             baseStatValue * (scalingValue / 100) +
@@ -66,6 +60,20 @@ const calculateDamageFormula = (
 // Clamping CRIT Rate between 0 and 1 to prevent negative damage and greater average damage than crit damage
 function clamp(number: number, min: number, max: number) {
     return Math.max(min, Math.min(number, max))
+}
+
+function calculateStatValue(
+    stat: string | string[],
+    baseStats: NewBaseStat
+): number {
+    return Array.isArray(stat) && stat[0] !== ''
+        ? Array.isArray(stat)
+            ? stat.reduce(
+                  (accumulator, statKey) => accumulator + baseStats[statKey],
+                  0
+              )
+            : baseStats[stat]
+        : 0
 }
 
 export default calculateDamageFormula
