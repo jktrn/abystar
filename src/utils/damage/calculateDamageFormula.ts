@@ -31,20 +31,29 @@ const calculateDamageFormula = (
               )
             : baseStats[multiplicativeBonusStat]
 
+        const baseDamage =
+            baseStatValue * (scalingValue / 100) +
+            baseStatValue * (additiveBonusStatValue / 100)
+
         const nonCritDamage =
-            (baseStatValue * (scalingValue / 100) +
-                baseStatValue * (additiveBonusStatValue / 100)) *
+            baseDamage *
             (1 + multiplicativeBonusStatValue / 100) *
             (enemyResistances.defenseMultiplier / 100) *
             (enemyResistances.resistance / 100)
         const critDamage =
-            (baseStatValue * (scalingValue / 100) +
-                baseStatValue * (additiveBonusStatValue / 100)) *
+            baseDamage *
             (1 + multiplicativeBonusStatValue / 100) *
             (1 + baseStats['CRIT DMG'] / 100) *
             (enemyResistances.defenseMultiplier / 100) *
             (enemyResistances.resistance / 100)
-        const averageDamage = (nonCritDamage + critDamage) / 2
+        const averageDamage =
+            baseDamage *
+            (1 + multiplicativeBonusStatValue / 100) *
+            (1 +
+                clamp(baseStats['CRIT Rate'] / 100, 0, 1) *
+                    (baseStats['CRIT DMG'] / 100)) *
+            (enemyResistances.defenseMultiplier / 100) *
+            (enemyResistances.resistance / 100)
         return {
             nonCritDamage,
             critDamage,
@@ -52,6 +61,11 @@ const calculateDamageFormula = (
             damageType,
         }
     }
+}
+
+// Clamping CRIT Rate between 0 and 1 to prevent negative damage and greater average damage than crit damage
+function clamp(number: number, min: number, max: number) {
+    return Math.max(min, Math.min(number, max))
 }
 
 export default calculateDamageFormula

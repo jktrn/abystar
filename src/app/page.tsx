@@ -34,7 +34,7 @@ export default function Home() {
 
     const [level, setLevel] = useState<string>('90/90')
     const levelOptions = getLevelOptions(character)
-    
+
     const [constellation, setConstellation] = useState<string>('0')
     const constellationOptions = getConstellationOptions(character)
 
@@ -157,9 +157,13 @@ export default function Home() {
                                                     bonus,
                                                     bonusStacks,
                                                     activeBonuses,
-                                                    setActiveBonuses
+                                                    setActiveBonuses,
+                                                    parseInt(constellation)
                                                 )
                                             }
+                                            constellation={parseInt(
+                                                constellation
+                                            )}
                                         />
                                     )
                                 )}

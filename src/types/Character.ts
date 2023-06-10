@@ -46,13 +46,14 @@ export interface Character {
 
 export interface Bonus {
     name: string
-    description: string
+    description: JSX.Element
     icon: string
     effect: Effect
     maxStacks?: number
     currentStacks?: number
     affectsAbilityIndex?: number
     applyToAbilityScaling?: (abilityScaling: AbilityScaling) => void
+    minConstellation?: number
 }
 
 export interface Effect {

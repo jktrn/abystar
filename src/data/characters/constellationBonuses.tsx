@@ -4,18 +4,24 @@ const constellationBonuses: Record<string, Bonus[]> = {
     'Hu Tao': [
         {
             name: 'Crimson Bouquet',
-            description:
-                "While in Paramita Papilio state, Hu Tao's Charge Attacks do not consume Stamina.",
+            description: (
+                <span>
+                    While in Paramita Papilio state, Hu Tao's Charge Attacks do not consume Stamina.
+                </span>
+            ),
             icon: '/images/constellation-icons/hu-tao-constellation1.png',
             effect: (baseStats) => {
-                //TODO
+                //TODO: Unhandled
                 return baseStats
             },
         },
         {
             name: 'Ominous Rainfall',
-            description:
-                "Increases the Blood Blossom DMG by an amount equal to 10% of Hu Tao's Max HP at the time the effect is applied. Additionally, Spirit Soother will also apply the Blood Blossom effect. ",
+            description: (
+                <span>
+                    Increases the Blood Blossom DMG by an amount equal to 10% of Hu Tao's Max HP at the time the effect is applied. Additionally, Spirit Soother will also apply the Blood Blossom effect.
+                </span>
+            ),
             icon: '/images/constellation-icons/hu-tao-constellation2.png',
             effect: (baseStats) => {
                 baseStats['Elemental Skill Additive Bonus'] = 10
@@ -24,8 +30,11 @@ const constellationBonuses: Record<string, Bonus[]> = {
         },
         {
             name: 'Lingering Carmine',
-            description:
-                'Increases the Level of Guide to Afterlife by 3. Maximum upgrade level is 15.',
+            description: (
+                <span>
+                    Increases the Level of Guide to Afterlife by 3. Maximum upgrade level is 15.
+                </span>
+            ),
             icon: '/images/constellation-icons/hu-tao-constellation3.png',
             effect: (baseStats, currentStacks, activeSkills) => {
                 if (!activeSkills) return baseStats
@@ -38,8 +47,11 @@ const constellationBonuses: Record<string, Bonus[]> = {
         },
         {
             name: 'Garden of Eternal Rest',
-            description:
-                'Upon defeating an enemy affected by a Blood Blossom that Hu Tao applied herself, all nearby allies in the party (excluding Hu Tao herself) will have their CRIT Rate increased by 12% for 15s.',
+            description: (
+                <span>
+                    Upon defeating an enemy affected by a Blood Blossom that Hu Tao applied herself, all nearby allies in the party (excluding Hu Tao herself) will have their CRIT Rate increased by 12% for 15s.
+                </span>
+            ),
             icon: '/images/constellation-icons/hu-tao-constellation4.png',
             effect: (baseStats) => {
                 return baseStats
@@ -47,8 +59,11 @@ const constellationBonuses: Record<string, Bonus[]> = {
         },
         {
             name: 'Floral Incense',
-            description:
-                'Increases the Level of Spirit Soother by 3. Maximum upgrade level is 15.',
+            description: (
+                <span>
+                    Increases the Level of Spirit Soother by 3. Maximum upgrade level is 15.
+                </span>
+            ),
             icon: '/images/constellation-icons/hu-tao-constellation5.png',
             effect: (baseStats, currentStacks, activeSkills) => {
                 if (!activeSkills) return baseStats
@@ -59,6 +74,19 @@ const constellationBonuses: Record<string, Bonus[]> = {
                 return baseStats
             },
         },
+        {
+            name: 'Butterfly\'s Embrace',
+            description: (
+                <span>
+                    Triggers when Hu Tao's HP drops below 25%, or when she suffers a lethal strike: Hu Tao will not fall as a result of the DMG sustained. Additionally, for the next 10s, all of her Elemental and Physical RES is increased by 200%, her CRIT Rate is increased by 100%, and her resistance to interruption is greatly increased. This effect triggers automatically when Hu Tao has 1 HP left. Can only occur once every 60s.
+                </span>
+            ),
+            icon: '/images/constellation-icons/hu-tao-constellation6.png',
+            effect: (baseStats) => {
+                // Already handled in characterBonuses.tsx
+                return baseStats
+            }
+        }
     ],
 }
 

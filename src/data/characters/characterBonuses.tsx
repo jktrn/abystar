@@ -5,7 +5,15 @@ const characterBonuses: Record<string, Bonus[]> = {
     'Hu Tao': [
         {
             name: 'Guide to Afterlife',
-            description: 'Paramita Papilio (Elemental Skill Stance)',
+            description: (
+                <span>
+                    Activates <b>Paramita Papilio</b> (Elemental Skill) stance,
+                    converting damage to{' '}
+                    <span style={{ color: '#bf612d' }}>Pyro</span>. Increases
+                    ATK based on Max HP (maximum gained this way cannot exceed
+                    400% original ATK)
+                </span>
+            ),
             icon: '/images/skill-icons/skills/hu-tao-skill.png',
             effect: (baseStats, currentStacks, activeSkills) => {
                 if (!activeSkills) return baseStats
@@ -50,12 +58,41 @@ const characterBonuses: Record<string, Bonus[]> = {
         },
         {
             name: 'Sanguine Rogue',
-            description: '+33% Pyro DMG Bonus when under 50% Max HP',
+            description: (
+                <span>
+                    +33% <span style={{ color: '#bf612d' }}>Pyro</span> DMG
+                    Bonus when under 50% Max HP
+                </span>
+            ),
             icon: '/images/skill-icons/passives/hu-tao-passive2.png',
             effect: (baseStats: NewBaseStat) => {
                 baseStats['Pyro DMG Bonus'] += 33
                 return baseStats
             },
+        },
+        {
+            name: "Butterfly's Embrace",
+            description: (
+                <span>
+                    (C6) Triggers when receiving fatal blow or below 25% HP. All
+                    Elemental/Physical RES increased by 200%, CRIT Rate
+                    increased by 100%
+                </span>
+            ),
+            icon: '/images/skill-icons/constellations/hu-tao-constellation6.png',
+            effect: (baseStats: NewBaseStat) => {
+                baseStats['Pyro RES'] += 200
+                baseStats['Cryo RES'] += 200
+                baseStats['Electro RES'] += 200
+                baseStats['Hydro RES'] += 200
+                baseStats['Geo RES'] += 200
+                baseStats['Anemo RES'] += 200
+                baseStats['Dendro RES'] += 200
+                baseStats['Physical RES'] += 200
+                baseStats['CRIT Rate'] += 100
+                return baseStats
+            },
+            minConstellation: 6,
         },
     ],
 }

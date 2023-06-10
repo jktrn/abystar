@@ -125,6 +125,14 @@ export const displayStats = [
     'Bloom DMG Bonus',
     'Burgeon DMG Bonus',
     'Hyperbloom DMG Bonus',
+    'Pyro RES',
+    'Cryo RES',
+    'Hydro RES',
+    'Electro RES',
+    'Anemo RES',
+    'Geo RES',
+    'Dendro RES',
+    'Physical RES',
 ]
 
 export const availableIcons = [

@@ -7,11 +7,13 @@ import CustomSelect from './CustomSelect'
 interface CharacterBonusToggleProps {
     bonus: Bonus
     onToggle: (bonus: Bonus, currentStacks: number) => void
+    constellation: number
 }
 
 const CharacterBonusToggle = ({
     bonus,
     onToggle,
+    constellation,
 }: CharacterBonusToggleProps) => {
     const [currentStacks, setCurrentStacks] = useState(0)
 
@@ -20,20 +22,29 @@ const CharacterBonusToggle = ({
         onToggle(bonus, newCurrentStacks)
     }
 
+    const isDisabled = Boolean(
+        bonus.minConstellation && bonus.minConstellation > constellation
+    )
+
     return (
-        <label className="flex items-center justify-between rounded-md bg-main-800 p-2">
-            <div className="flex gap-1">
+        <label
+            className={`flex items-center justify-between rounded-md bg-main-800 p-2 ${
+                isDisabled ? 'brightness-50' : ''
+            }`}
+        >
+            <div className="flex items-center gap-1">
                 <div className="relative h-10 w-10">
                     <Image
                         className="flex flex-none shrink-0"
                         src={bonus.icon}
                         alt={bonus.name}
                         fill={true}
+                        sizes="100%"
                     />
                 </div>
                 <div className="flex flex-col">
                     <span className="text-md">{bonus.name}</span>
-                    <span className="text-xs text-lightgray-200">
+                    <span className="w-[21rem] max-w-full break-words text-xs text-lightgray-200">
                         {bonus.description}
                     </span>
                 </div>
@@ -52,6 +63,7 @@ const CharacterBonusToggle = ({
                         onChange={(value) =>
                             handleCurrentStacksChange(parseInt(value))
                         }
+                        disabled={isDisabled} // disable select if bonus is not available
                     />
                 </div>
             ) : (
@@ -63,6 +75,7 @@ const CharacterBonusToggle = ({
                     }
                     uncheckedIcon={false}
                     checkedIcon={false}
+                    disabled={isDisabled} // disable switch if bonus is not available
                 />
             )}
         </label>
