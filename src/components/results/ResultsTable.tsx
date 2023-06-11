@@ -126,40 +126,50 @@ const ResultsTable: React.FC<ResultsTableProps> = ({ damageResults }) => {
                     prepareRow(row)
                     return (
                         <tr key={index}>
-                            {row.cells.map((cell) => (
+                            {/* Merge the cells in rows dedicated to a skill name using the colSpan attribute */}
+                            {row.original.nonCrit === '' ? (
                                 <td
-                                    key={cell.getCellProps().key}
-                                    className={`border-b border-main-700 py-1 ${
-                                        row.original.nonCrit === ''
-                                            ? 'bg-main-800 px-2 font-bold'
-                                            : 'px-4 py-1'
-                                    } ${
-                                        cell.column.id === 'nonCrit' ||
-                                        cell.column.id === 'crit' ||
-                                        cell.column.id === 'average'
-                                            ? 'w-[80px] text-right font-bold'
-                                            : ''
-                                    }`}
-                                    style={{
-                                        color:
-                                            cell.column.id === 'average' &&
-                                            row.original.outputType ===
-                                                FormulaOutputType.Healing
-                                                ? '#98db1a'
-                                                : cell.column.id !== 'name' &&
-                                                  row.original.damageType &&
-                                                  elementColors[
-                                                      row.original.damageType.toLowerCase() as keyof typeof elementColors
-                                                  ]
-                                                ? elementColors[
-                                                      row.original.damageType.toLowerCase() as keyof typeof elementColors
-                                                  ]
-                                                : undefined,
-                                    }}
+                                    colSpan={4}
+                                    className="border-b border-main-700 bg-main-800 px-2 py-1 font-bold"
                                 >
-                                    {cell.render('Cell')}
+                                    {row.cells[0].render('Cell')}
                                 </td>
-                            ))}
+                            ) : (
+                                row.cells.map((cell) => (
+                                    <td
+                                        key={cell.getCellProps().key}
+                                        className={`border-b border-main-700 py-1 ${
+                                            row.original.nonCrit === ''
+                                                ? `bg-main-800 px-2 font-bold`
+                                                : `px-4 py-1`
+                                        } ${
+                                            cell.column.id === 'nonCrit' ||
+                                            cell.column.id === 'crit' ||
+                                            cell.column.id === 'average'
+                                                ? `w-[80px] text-right font-bold`
+                                                : ''
+                                        }`}
+                                        style={{
+                                            color:
+                                                cell.column.id === 'average' &&
+                                                row.original.outputType ===
+                                                    FormulaOutputType.Healing
+                                                    ? '#98db1a'
+                                                    : cell.column.id !== 'name' &&
+                                                      row.original.damageType &&
+                                                      elementColors[
+                                                          row.original.damageType.toLowerCase() as keyof typeof elementColors
+                                                      ]
+                                                    ? elementColors[
+                                                          row.original.damageType.toLowerCase() as keyof typeof elementColors
+                                                      ]
+                                                    : undefined,
+                                        }}
+                                    >
+                                        {cell.render('Cell')}
+                                    </td>
+                                ))
+                            )}
                         </tr>
                     )
                 })}

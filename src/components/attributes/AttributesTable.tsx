@@ -37,9 +37,9 @@ const AttributesTable: React.FC<AttributesTableProps> = ({
                         formattedInitialValue = `${initialBaseStats[
                             key
                         ].toFixed(1)}%`
-                        difference = `${(value - initialBaseStats[key]).toFixed(
-                            1
-                        )}%`
+                        difference = `${(
+                            value - initialBaseStats[key]
+                        ).toFixed(1)}%`
                     }
                     return {
                         stat: key,
@@ -191,7 +191,7 @@ const AttributesTable: React.FC<AttributesTableProps> = ({
                                                     cell.column.id === 'value'
                                                         ? `text-right font-bold`
                                                         : ''
-                                                } px-4`}
+                                                } px-4`} // Increase the horizontal padding of rows with data using Tailwind CSS classes
                                             >
                                                 {cell.render('Cell')}
                                             </td>
