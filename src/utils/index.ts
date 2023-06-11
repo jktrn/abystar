@@ -1,16 +1,16 @@
 export {
+    attributeSections,
+    availableIcons,
+    displayStats,
+} from './attributes/attributeSections'
+export {
     getConstellationOptions,
     getLevelOptions,
 } from './character/characterOptions'
 export { default as handleBonusToggle } from './character/handleBonusToggle'
 export { default as compareElement } from './character/modal/compareElement'
 export { default as elementColors } from './character/modal/elementColors'
-export {
-    attributeKeyMap,
-    availableIcons,
-    displayStats,
-    fullBaseStats,
-} from './damage/attributeKeyMapping'
+export { attributeKeyMap, fullBaseStats } from './damage/attributeKeyMapping'
 export { default as calculateDamage } from './damage/calculateDamage'
 export { default as convertBaseStats } from './damage/convertBaseStats'
 export { default as damageFormula } from './damage/formulas/damageFormula'

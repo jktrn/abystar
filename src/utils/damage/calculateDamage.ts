@@ -79,7 +79,7 @@ function calculateDamage(
                     )
                     break
                 case FormulaType.GenericFormulaWithScaling:
-                    if (!baseStat || !outputType) return []
+                    if (!baseStat || outputType === undefined) return []
                     damage = genericFormulaWithScaling(
                         baseStats,
                         skill,
@@ -94,6 +94,7 @@ function calculateDamage(
                             : [multiplicativeBonusStat],
                         outputType
                     )
+
                     break
                 case FormulaType.GenericFormulaWithoutScaling:
                     // Apply generic formula without scaling

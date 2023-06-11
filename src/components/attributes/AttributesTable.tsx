@@ -2,7 +2,8 @@ import { NewBaseStat } from '@/types/Character'
 import Image from 'next/image'
 import { useMemo } from 'react'
 import { Column, useTable } from 'react-table'
-import { availableIcons, parseScalingValue } from '@/utils'
+import { attributeSections, availableIcons, parseScalingValue } from '@/utils'
+import { Fragment } from 'react'
 
 interface AttributesTableProps {
     baseStats: NewBaseStat
@@ -138,6 +139,14 @@ const AttributesTable: React.FC<AttributesTableProps> = ({
                             <th
                                 key={column.id}
                                 className="border-b border-main-700 pb-2 font-bold"
+                                style={{
+                                    width:
+                                        column.id === 'initialValue' ||
+                                        column.id === 'difference' ||
+                                        column.id === 'value'
+                                            ? '85px'
+                                            : undefined,
+                                }}
                             >
                                 {column.render('Header')}
                             </th>
@@ -146,28 +155,52 @@ const AttributesTable: React.FC<AttributesTableProps> = ({
                 ))}
             </thead>
             <tbody {...getTableBodyProps()}>
-                {rows.map((row, index) => {
-                    prepareRow(row)
-                    return (
-                        <tr
-                            key={index}
-                            className={
-                                baseStats[row.values.stat] === 0
-                                    ? 'brightness-50'
-                                    : ''
-                            }
-                        >
-                            {row.cells.map((cell) => (
-                                <td
-                                    key={cell.getCellProps().key}
-                                    className="border-b border-main-700 py-1"
-                                >
-                                    {cell.render('Cell')}
-                                </td>
-                            ))}
+                {attributeSections.map((section, sectionIndex) => (
+                    <Fragment key={sectionIndex}>
+                        <tr>
+                            <td
+                                colSpan={4}
+                                className="border-b border-main-700 bg-main-800 px-2 py-1 font-bold"
+                            >
+                                {section.name}
+                            </td>
                         </tr>
-                    )
-                })}
+                        {rows
+                            .filter((row) =>
+                                section.attributes.includes(row.values.stat)
+                            )
+                            .map((row, rowIndex) => {
+                                prepareRow(row)
+                                return (
+                                    <tr
+                                        key={rowIndex}
+                                        className={
+                                            baseStats[row.values.stat] === 0
+                                                ? 'brightness-50'
+                                                : ''
+                                        }
+                                    >
+                                        {row.cells.map((cell) => (
+                                            <td
+                                                key={cell.getCellProps().key}
+                                                className={`border-b border-main-700 py-1 ${
+                                                    cell.column.id ===
+                                                        'initialValue' ||
+                                                    cell.column.id ===
+                                                        'difference' ||
+                                                    cell.column.id === 'value'
+                                                        ? `text-right font-bold`
+                                                        : ''
+                                                } px-4`}
+                                            >
+                                                {cell.render('Cell')}
+                                            </td>
+                                        ))}
+                                    </tr>
+                                )
+                            })}
+                    </Fragment>
+                ))}
             </tbody>
         </table>
     )

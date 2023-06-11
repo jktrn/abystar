@@ -13,6 +13,7 @@ interface Result {
     crit?: string | number
     average?: string | number
     damageType?: string
+    outputType?: FormulaOutputType
 }
 
 interface Aspect {
@@ -69,7 +70,8 @@ const ResultsTable: React.FC<ResultsTableProps> = ({ damageResults }) => {
                         name: aspect.aspectName,
                         average: aspect.damage.outputValue
                             ? Math.round(aspect.damage.outputValue)
-                            : 0, // example default value
+                            : 0,
+                        outputType: aspect.damage.outputType,
                     })
                 } else {
                     // Handle damage output
@@ -77,13 +79,13 @@ const ResultsTable: React.FC<ResultsTableProps> = ({ damageResults }) => {
                         name: aspect.aspectName,
                         nonCrit: aspect.damage.nonCritDamage
                             ? Math.round(aspect.damage.nonCritDamage)
-                            : 0, // example default value
+                            : 0,
                         crit: aspect.damage.critDamage
                             ? Math.round(aspect.damage.critDamage)
-                            : 0, // example default value
+                            : 0,
                         average: aspect.damage.averageDamage
                             ? Math.round(aspect.damage.averageDamage)
-                            : 0, // example default value
+                            : 0,
                         damageType: aspect.damage.damageType,
                     })
                 }
@@ -104,6 +106,14 @@ const ResultsTable: React.FC<ResultsTableProps> = ({ damageResults }) => {
                             <th
                                 key={column.id}
                                 className="border-b border-main-700 pb-2 font-bold"
+                                style={{
+                                    width:
+                                        column.id === 'nonCrit' ||
+                                        column.id === 'crit' ||
+                                        column.id === 'average'
+                                            ? '80px'
+                                            : undefined,
+                                }}
                             >
                                 {column.render('Header')}
                             </th>
@@ -123,14 +133,24 @@ const ResultsTable: React.FC<ResultsTableProps> = ({ damageResults }) => {
                                         row.original.nonCrit === ''
                                             ? 'bg-main-800 px-2 font-bold'
                                             : 'px-4 py-1'
+                                    } ${
+                                        cell.column.id === 'nonCrit' ||
+                                        cell.column.id === 'crit' ||
+                                        cell.column.id === 'average'
+                                            ? 'w-[80px] text-right font-bold'
+                                            : ''
                                     }`}
                                     style={{
                                         color:
-                                            cell.column.id !== 'name' &&
-                                            row.original.damageType &&
-                                            elementColors[
-                                                row.original.damageType.toLowerCase() as keyof typeof elementColors
-                                            ]
+                                            cell.column.id === 'average' &&
+                                            row.original.outputType ===
+                                                FormulaOutputType.Healing
+                                                ? '#98db1a'
+                                                : cell.column.id !== 'name' &&
+                                                  row.original.damageType &&
+                                                  elementColors[
+                                                      row.original.damageType.toLowerCase() as keyof typeof elementColors
+                                                  ]
                                                 ? elementColors[
                                                       row.original.damageType.toLowerCase() as keyof typeof elementColors
                                                   ]

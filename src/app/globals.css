@@ -16,6 +16,11 @@
     }
 }
 
+@font-face {
+    font-family: 'Genshin';
+    src: url('/fonts/genshin.ttf') format('truetype');
+}
+
 body {
     color: rgb(var(--foreground-rgb));
     background: linear-gradient(

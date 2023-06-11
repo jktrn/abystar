@@ -150,7 +150,12 @@ const abilityScalings: AbilityScaling = {
                 ],
                 damageType: 'Pyro',
             },
-            // ...
+            'Skill HP Regeneration': {
+                formulaType: FormulaType.GenericFormulaWithScaling,
+                baseStat: 'HP',
+                multiplicativeBonusStat: 'Healing Bonus',
+                outputType: FormulaOutputType.Healing,
+            },
         },
     },
 }
