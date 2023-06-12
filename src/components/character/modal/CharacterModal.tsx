@@ -1,4 +1,5 @@
 import { FilterAndSort } from '@/components'
+import { abilityScalings } from '@/data'
 import { Bonus, Character } from '@/types/Character'
 import { compareElement, elementColors } from '@/utils'
 import {
@@ -61,6 +62,9 @@ const CharacterModal = ({
         return sortedCharacters
     }
 
+    const availableCharacter = (character: Character) =>
+        !!abilityScalings[character.name]
+
     return (
         <Modal isOpen={isOpen} onClose={onClose}>
             <ModalOverlay
@@ -93,6 +97,8 @@ const CharacterModal = ({
                                     src={character.icon}
                                     alt={character.name}
                                     onClick={() => {
+                                        if (!availableCharacter(character))
+                                            return
                                         setCharacter(character)
                                         setActiveBonuses([])
                                         onClose()
@@ -102,7 +108,11 @@ const CharacterModal = ({
                                             character.vision.toLowerCase() as keyof typeof elementColors
                                         ]
                                     }
-                                    className="cursor-pointer rounded-full object-cover hover:scale-105"
+                                    className={`cursor-pointer rounded-full object-cover hover:scale-105 ${
+                                        availableCharacter(character)
+                                            ? ''
+                                            : 'opacity-50'
+                                    }`}
                                     boxSize="70px"
                                 />
                             ))}

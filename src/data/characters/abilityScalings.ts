@@ -77,9 +77,11 @@ const abilityScalings: AbilityScaling = {
                 ],
                 damageType: 'Physical',
             },
-            // 'Charged Attack Stamina Cost': {
-
-            // }
+            'Charged Attack Stamina Cost': {
+                formulaType: FormulaType.GenericFormulaWithoutScaling,
+                multiplicativeBonusStat: 'Charged Attack Stamina Cost Multiplier',
+                outputType: FormulaOutputType.Generic,
+            },
             'Plunge DMG': {
                 formulaType: FormulaType.DamageFormula,
                 baseStat: 'ATK',
@@ -127,7 +129,19 @@ const abilityScalings: AbilityScaling = {
                 ],
                 damageType: 'Pyro',
             },
-            // ...
+            'Blood Blossom Duration': {
+                formulaType: FormulaType.GenericFormulaWithoutScaling,
+                outputType: FormulaOutputType.Time,
+            },
+            'Duration': {
+                formulaType: FormulaType.GenericFormulaWithoutScaling,
+                outputType: FormulaOutputType.Time,
+            },
+            'CD': {
+                formulaType: FormulaType.GenericFormulaWithoutScaling,
+                multiplicativeBonusStat: 'Elemental Skill CD Reduction',
+                outputType: FormulaOutputType.Time,
+            }
         },
         'Spirit Soother': {
             'Skill DMG': {
@@ -155,6 +169,21 @@ const abilityScalings: AbilityScaling = {
                 baseStat: 'HP',
                 multiplicativeBonusStat: 'Healing Bonus',
                 outputType: FormulaOutputType.Healing,
+            },
+            'Low HP Skill Regeneration': {
+                formulaType: FormulaType.GenericFormulaWithScaling,
+                baseStat: 'HP',
+                multiplicativeBonusStat: 'Healing Bonus',
+                outputType: FormulaOutputType.Healing,
+            },
+            'CD': {
+                formulaType: FormulaType.GenericFormulaWithoutScaling,
+                multiplicativeBonusStat: 'Elemental Burst CD Reduction',
+                outputType: FormulaOutputType.Time,
+            },
+            'Energy Cost': {
+                formulaType: FormulaType.GenericFormulaWithoutScaling,
+                outputType: FormulaOutputType.Generic,
             },
         },
     },

@@ -5,7 +5,11 @@ import {
     NewBaseStat,
     Character,
 } from '@/types/Character'
-import { damageFormula, genericFormulaWithScaling } from '@/utils'
+import {
+    damageFormula,
+    genericFormulaWithScaling,
+    genericFormulaWithoutScaling,
+} from '@/utils'
 
 function calculateDamage(
     baseStats: NewBaseStat,
@@ -94,13 +98,25 @@ function calculateDamage(
                             : [multiplicativeBonusStat],
                         outputType
                     )
-
                     break
                 case FormulaType.GenericFormulaWithoutScaling:
-                    // Apply generic formula without scaling
+                    if (outputType === undefined) return []
+                    damage = genericFormulaWithoutScaling(
+                        baseStats,
+                        skill,
+                        key,
+                        skillLevels[index],
+                        Array.isArray(additiveBonusStat)
+                            ? additiveBonusStat
+                            : [additiveBonusStat],
+                        Array.isArray(multiplicativeBonusStat)
+                            ? multiplicativeBonusStat
+                            : [multiplicativeBonusStat],
+                        outputType
+                    )
                     break
                 case FormulaType.ElementalReactionFormula:
-                    // Apply elemental reaction formula
+                    // TODO: Implement
                     break
                 default:
                     break

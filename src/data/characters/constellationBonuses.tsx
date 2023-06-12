@@ -12,7 +12,7 @@ const constellationBonuses: Record<string, Bonus[]> = {
             ),
             icon: '/images/constellation-icons/hu-tao-constellation1.png',
             effect: (baseStats) => {
-                baseStats['Charged Attack Stamina Multiplier'] = 0
+                baseStats['Charged Attack Stamina Cost Multiplier'] = -100
                 return baseStats
             },
         },
