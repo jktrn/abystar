@@ -28,12 +28,12 @@ const CharacterBonusToggle = ({
 
     return (
         <label
-            className={`flex items-center justify-between rounded-md bg-main-800 p-2 ${
+            className={`flex flex-col items-center justify-between rounded-md bg-main-800 p-4 md:flex-row md:p-2 ${
                 isDisabled ? 'brightness-50' : ''
             }`}
         >
-            <div className="flex items-center gap-1">
-                <div className="relative h-10 w-10">
+            <div className="flex flex-col items-center gap-2 md:flex-row">
+                <div className="relative h-10 w-10 min-w-min">
                     <Image
                         className="flex flex-none shrink-0"
                         src={bonus.icon}
@@ -42,9 +42,9 @@ const CharacterBonusToggle = ({
                         sizes="100%"
                     />
                 </div>
-                <div className="flex flex-col">
+                <div className="flex flex-col text-center md:text-left">
                     <span className="text-md">{bonus.name}</span>
-                    <span className="w-[21rem] max-w-full break-words text-xs text-lightgray-200">
+                    <span className="max-w-full break-words text-xs text-lightgray-200 md:w-[21rem]">
                         {bonus.description}
                     </span>
                 </div>
@@ -63,7 +63,7 @@ const CharacterBonusToggle = ({
                         onChange={(value) =>
                             handleCurrentStacksChange(parseInt(value))
                         }
-                        disabled={isDisabled} // disable select if bonus is not available
+                        disabled={isDisabled}
                     />
                 </div>
             ) : (
@@ -75,7 +75,8 @@ const CharacterBonusToggle = ({
                     }
                     uncheckedIcon={false}
                     checkedIcon={false}
-                    disabled={isDisabled} // disable switch if bonus is not available
+                    disabled={isDisabled}
+                    className="mt-4 md:mt-0"
                 />
             )}
         </label>

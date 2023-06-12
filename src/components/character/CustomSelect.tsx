@@ -22,7 +22,7 @@ const CustomSelect = ({
             styles={selectStyles}
             maxMenuHeight={200}
             isSearchable={false}
-            className="w-full"
+            className="md:w-full"
             {...props}
         />
     )

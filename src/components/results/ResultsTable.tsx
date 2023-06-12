@@ -126,7 +126,6 @@ const ResultsTable: React.FC<ResultsTableProps> = ({ damageResults }) => {
                     prepareRow(row)
                     return (
                         <tr key={index}>
-                            {/* Merge the cells in rows dedicated to a skill name using the colSpan attribute */}
                             {row.original.nonCrit === '' ? (
                                 <td
                                     colSpan={4}
@@ -155,7 +154,8 @@ const ResultsTable: React.FC<ResultsTableProps> = ({ damageResults }) => {
                                                 row.original.outputType ===
                                                     FormulaOutputType.Healing
                                                     ? '#98db1a'
-                                                    : cell.column.id !== 'name' &&
+                                                    : cell.column.id !==
+                                                          'name' &&
                                                       row.original.damageType &&
                                                       elementColors[
                                                           row.original.damageType.toLowerCase() as keyof typeof elementColors

@@ -27,19 +27,20 @@ const ActiveSkillsSelect = ({
     ]
 
     return (
-        <div className="ml-4 flex flex-col justify-end gap-2">
+        <div className="ml-0 mt-4 flex flex-row flex-wrap justify-center gap-2 md:mt-0 md:flex-col md:justify-normal md:justify-end ">
             {character.activeSkills.map((skill, index) => (
-                <div key={skill.name} className="flex items-center gap-2">
-                    <Image
-                        src={skillIcons[index]}
-                        alt={skill.name}
-                        // bg={
-                        //     elementColors[
-                        //         character.vision.toLowerCase() as keyof typeof elementColors
-                        //     ]
-                        // }
-                        className="!h-8 !w-10 overflow-hidden rounded-full bg-main-700 object-cover p-1"
-                    />
+                <div
+                    key={skill.name}
+                    className="flex flex-col items-center justify-center gap-2 md:flex-row md:justify-normal"
+                >
+                    <div className="flex h-9 w-9 min-w-min flex-none items-center justify-center">
+                        <Image
+                            src={skillIcons[index]}
+                            alt={skill.name}
+                            sizes="100%"
+                            className="rounded-full bg-main-700 object-cover p-1"
+                        />
+                    </div>
                     <Select
                         instanceId={`active-skill-${index}-select`}
                         options={activeSkillOptions}
@@ -52,7 +53,7 @@ const ActiveSkillsSelect = ({
                             newActiveSkills[index] = value?.label ?? ''
                             setActiveSkills(newActiveSkills)
                         }}
-                        className="w-full"
+                        className="md:w-full"
                         styles={selectStyles}
                         isSearchable={false}
                     />
