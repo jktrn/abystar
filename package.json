@@ -30,7 +30,7 @@
         "typescript": "5.0.4"
     },
     "devDependencies": {
-        "@types/react": "^18.2.7",
+        "@types/react": "^18.2.11",
         "@types/react-table": "^7.7.14",
         "prettier": "^2.8.8",
         "prettier-plugin-tailwindcss": "^0.3.0"
