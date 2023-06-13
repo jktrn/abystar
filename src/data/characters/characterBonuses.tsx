@@ -74,9 +74,9 @@ const characterBonuses: Record<string, Bonus[]> = {
             name: "Butterfly's Embrace",
             description: (
                 <span>
-                    (C6) Triggers when receiving fatal blow or below 25% HP. All
-                    Elemental/Physical RES increased by 200%, CRIT Rate
-                    increased by 100%
+                    <span className="min-constellation">C6</span> Triggers when
+                    receiving fatal blow or below 25% HP. All Elemental/Physical
+                    RES increased by 200%, CRIT Rate increased by 100%
                 </span>
             ),
             icon: '/images/skill-icons/constellations/hu-tao-constellation6.png',
@@ -116,7 +116,7 @@ const characterBonuses: Record<string, Bonus[]> = {
                 return baseStats
             },
             maxStacks: 6,
-            stackOptions: ['0', '125', '150', '175', '200', '225', '250'],
+            stackOptions: ['Off', '125', '150', '175', '200', '225', '250'],
         },
         {
             name: 'Awakening Elucidated',
@@ -144,6 +144,47 @@ const characterBonuses: Record<string, Bonus[]> = {
                 baseStats['Elemental Skill CRIT Rate'] += critRate
                 return baseStats
             },
+        },
+        {
+            name: 'The Root of All Fullness',
+            description: (
+                <span>
+                    <span className="min-constellation">C2</span> Burning,
+                    Bloom, Hyperbloom, and Burgeon Reaction DMG can now CRIT on
+                    opponents marked by <b>Seeds of Skanda</b> (CRIT Rate and
+                    CRIT DMG fixed at 20% and 100%, respectively). For 8s after
+                    being hit by Quicken, Aggravate, or Spread, enemies have DEF
+                    decreased by 30%
+                </span>
+            ),
+            icon: '/images/skill-icons/constellations/nahida-constellation2.png',
+            effect: (baseStats) => {
+                return baseStats
+            },
+            minConstellation: 2,
+        },
+        {
+            name: 'The Stem of Manifest Inference',
+            description: (
+                <span>
+                    <span className="min-constellation">C4</span> When 1/2/3/(4
+                    or more) nearby opponents are affected by{' '}
+                    <b>Seeds of Skandha</b>, Nahida&apos;s EM will be increased
+                    by 100/120/140/160
+                </span>
+            ),
+            icon: '/images/skill-icons/constellations/nahida-constellation4.png',
+            effect: (baseStats, currentStacks) => {
+                if (!currentStacks) return baseStats
+                const elementalMasteryOptions = [0, 100, 120, 140, 160]
+                baseStats['Elemental Mastery'] += elementalMasteryOptions[
+                    currentStacks
+                ]
+                return baseStats
+            },
+            minConstellation: 4,
+            maxStacks: 4,
+            stackOptions: ['Off', '100', '120', '140', '160'],
         },
     ],
 }

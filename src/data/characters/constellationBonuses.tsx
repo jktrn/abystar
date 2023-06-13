@@ -118,7 +118,7 @@ const constellationBonuses: Record<string, Bonus[]> = {
             ),
             icon: '/images/constellation-icons/nahida-constellation1.png',
             effect: (baseStats) => {
-                // Handled in characterBonuses.tsx
+                // TODO: Handle
                 return baseStats
             },
         },
@@ -136,7 +136,85 @@ const constellationBonuses: Record<string, Bonus[]> = {
             ),
             icon: '/images/constellation-icons/nahida-constellation2.png',
             effect: (baseStats) => {
+                // TODO: Handle
+                return baseStats
+            },
+        },
+        {
+            name: 'The Shoot of Conscious Attainment',
+            description: (
+                <span>
+                    Increases the Level of All Schemes to Know by 3.
+                    <br />
+                    Maximum upgrade level is 15.
+                </span>
+            ),
+            icon: '/images/constellation-icons/nahida-constellation3.png',
+            effect: (baseStats, currentStacks, activeSkills) => {
+                if (!activeSkills) return baseStats
+                const currentSkillLevel = parseInt(activeSkills[1].slice(2))
+                if (currentSkillLevel >= 13) return baseStats
+                const newSkillLevel = currentSkillLevel + 3
+                activeSkills[1] = `Lv${newSkillLevel}`
+                return baseStats
+            },
+        },
+        {
+            name: 'The Stem of Manifest Inference',
+            description: (
+                <span>
+                    When 1/2/3/(4 or more) nearby opponents are affected by All
+                    Schemes to Know's Seeds of Skandha, Nahida's Elemental
+                    Mastery will be increased by 100/120/140/160.
+                </span>
+            ),
+            icon: '/images/constellation-icons/nahida-constellation4.png',
+            effect: (baseStats) => {
                 // Handled in characterBonuses.tsx
+                return baseStats
+            },
+        },
+        {
+            name: 'The Leaves of Enlightening Speech',
+            description: (
+                <span>
+                    Increase the Level of Illusory Heart by 3.
+                    <br />
+                    Maximum upgrade level is 15.
+                </span>
+            ),
+            icon: '/images/constellation-icons/nahida-constellation5.png',
+            effect: (baseStats, currentStacks, activeSkills) => {
+                if (!activeSkills) return baseStats
+                const currentSkillLevel = parseInt(activeSkills[2].slice(2))
+                if (currentSkillLevel >= 13) return baseStats
+                const newSkillLevel = currentSkillLevel + 3
+                activeSkills[2] = `Lv${newSkillLevel}`
+                return baseStats
+            },
+        },
+        {
+            name: "The Fruit of Reason's Culmination",
+            description: (
+                <span>
+                    When Nahida hits an opponent affected by All Schemes to
+                    Know's Seeds of Skandha with Normal or Charged Attacks after
+                    unleashing Illusory Heart, she will use Tri-Karma
+                    Purification: Karmic Oblivion on this opponent and all
+                    connected opponents, dealing{' '}
+                    <span style={{ color: '#84a02f' }}>Dendro</span> DMG based
+                    on 200% of Nahida's ATK and 400% of her Elemental Mastery.
+                    <br />
+                    DMG dealt by Tri-Karma Purification: Karmic Oblivion is
+                    considered Elemental Skill DMG and can be triggered once
+                    every 0.2s. This effect can last up to 10s and will be
+                    removed after Nahida has unleashed 6 instances of Tri-Karma
+                    Purification: Karmic Oblivion.
+                </span>
+            ),
+            icon: '/images/constellation-icons/nahida-constellation6.png',
+            effect: (baseStats) => {
+                // TODO: Add ability aspects locked behind constellations
                 return baseStats
             },
         },

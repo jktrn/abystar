@@ -52,3 +52,7 @@ body {
 ::-webkit-scrollbar-corner {
     background-color: transparent;
 }
+
+.min-constellation {
+    @apply text-main-700 bg-lightgray-100 rounded-md py-[1px] px-1.5
+}

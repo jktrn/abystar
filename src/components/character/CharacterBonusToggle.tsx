@@ -29,7 +29,7 @@ const CharacterBonusToggle = ({
     return (
         <label
             className={`flex flex-col items-center justify-between rounded-md bg-main-800 p-4 md:flex-row md:p-2 ${
-                isDisabled ? 'brightness-50' : ''
+                isDisabled ? 'brightness-50 pointer-events-none' : ''
             }`}
         >
             <div className="flex flex-col items-center gap-2 md:flex-row">

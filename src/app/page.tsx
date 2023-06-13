@@ -81,7 +81,7 @@ export default function Home() {
     )
 
     return (
-        <div className="flex h-screen flex-col overflow-x-hidden p-2 lg:flex-row">
+        <div className="flex h-screen flex-col overflow-y-hidden p-2 lg:flex-row">
             <div className="m-2 flex-1 rounded-lg bg-main-1000 lg:min-w-max lg:max-w-max">
                 <div className="flex h-full flex-col">
                     <h2 className="rounded-t-lg bg-main-800 px-4 py-3 text-lg font-bold">
