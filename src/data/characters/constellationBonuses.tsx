@@ -10,7 +10,7 @@ const constellationBonuses: Record<string, Bonus[]> = {
                     Attacks do not consume Stamina.
                 </span>
             ),
-            icon: '/images/constellation-icons/hu-tao-constellation1.png',
+            icon: '/images/skill-icons/constellations/hu-tao-constellation1.png',
             effect: (baseStats) => {
                 // TODO: Broken, implement later
                 // baseStats['Charged Attack Stamina Cost Multiplier'] = -100
@@ -27,7 +27,7 @@ const constellationBonuses: Record<string, Bonus[]> = {
                     Blossom effect.
                 </span>
             ),
-            icon: '/images/constellation-icons/hu-tao-constellation2.png',
+            icon: '/images/skill-icons/constellations/hu-tao-constellation2.png',
             effect: (baseStats) => {
                 baseStats['Elemental Skill Additive Bonus'] = 10
                 return baseStats
@@ -41,7 +41,7 @@ const constellationBonuses: Record<string, Bonus[]> = {
                     upgrade level is 15.
                 </span>
             ),
-            icon: '/images/constellation-icons/hu-tao-constellation3.png',
+            icon: '/images/skill-icons/constellations/hu-tao-constellation3.png',
             effect: (baseStats, currentStacks, activeSkills) => {
                 if (!activeSkills) return baseStats
                 const currentSkillLevel = parseInt(activeSkills[1].slice(2))
@@ -61,7 +61,7 @@ const constellationBonuses: Record<string, Bonus[]> = {
                     increased by 12% for 15s.
                 </span>
             ),
-            icon: '/images/constellation-icons/hu-tao-constellation4.png',
+            icon: '/images/skill-icons/constellations/hu-tao-constellation4.png',
             effect: (baseStats) => {
                 return baseStats
             },
@@ -74,7 +74,7 @@ const constellationBonuses: Record<string, Bonus[]> = {
                     level is 15.
                 </span>
             ),
-            icon: '/images/constellation-icons/hu-tao-constellation5.png',
+            icon: '/images/skill-icons/constellations/hu-tao-constellation5.png',
             effect: (baseStats, currentStacks, activeSkills) => {
                 if (!activeSkills) return baseStats
                 const currentSkillLevel = parseInt(activeSkills[2].slice(2))
@@ -98,7 +98,7 @@ const constellationBonuses: Record<string, Bonus[]> = {
                     every 60s.
                 </span>
             ),
-            icon: '/images/constellation-icons/hu-tao-constellation6.png',
+            icon: '/images/skill-icons/constellations/hu-tao-constellation6.png',
             effect: (baseStats) => {
                 // Already handled in characterBonuses.tsx
                 return baseStats
@@ -116,7 +116,7 @@ const constellationBonuses: Record<string, Bonus[]> = {
                     respectively.
                 </span>
             ),
-            icon: '/images/constellation-icons/nahida-constellation1.png',
+            icon: '/images/skill-icons/constellations/nahida-constellation1.png',
             effect: (baseStats) => {
                 // TODO: Handle
                 return baseStats
@@ -134,7 +134,7 @@ const constellationBonuses: Record<string, Bonus[]> = {
                     Aggravate, Spread, DEF is decreased by 30%.
                 </span>
             ),
-            icon: '/images/constellation-icons/nahida-constellation2.png',
+            icon: '/images/skill-icons/constellations/nahida-constellation2.png',
             effect: (baseStats) => {
                 // TODO: Handle
                 return baseStats
@@ -149,7 +149,7 @@ const constellationBonuses: Record<string, Bonus[]> = {
                     Maximum upgrade level is 15.
                 </span>
             ),
-            icon: '/images/constellation-icons/nahida-constellation3.png',
+            icon: '/images/skill-icons/constellations/nahida-constellation3.png',
             effect: (baseStats, currentStacks, activeSkills) => {
                 if (!activeSkills) return baseStats
                 const currentSkillLevel = parseInt(activeSkills[1].slice(2))
@@ -164,11 +164,11 @@ const constellationBonuses: Record<string, Bonus[]> = {
             description: (
                 <span>
                     When 1/2/3/(4 or more) nearby opponents are affected by All
-                    Schemes to Know&apos;s Seeds of Skandha, Nahida&apos;s Elemental
-                    Mastery will be increased by 100/120/140/160.
+                    Schemes to Know&apos;s Seeds of Skandha, Nahida&apos;s
+                    Elemental Mastery will be increased by 100/120/140/160.
                 </span>
             ),
-            icon: '/images/constellation-icons/nahida-constellation4.png',
+            icon: '/images/skill-icons/constellations/nahida-constellation4.png',
             effect: (baseStats) => {
                 // Handled in characterBonuses.tsx
                 return baseStats
@@ -183,7 +183,7 @@ const constellationBonuses: Record<string, Bonus[]> = {
                     Maximum upgrade level is 15.
                 </span>
             ),
-            icon: '/images/constellation-icons/nahida-constellation5.png',
+            icon: '/images/skill-icons/constellations/nahida-constellation5.png',
             effect: (baseStats, currentStacks, activeSkills) => {
                 if (!activeSkills) return baseStats
                 const currentSkillLevel = parseInt(activeSkills[2].slice(2))
@@ -198,12 +198,13 @@ const constellationBonuses: Record<string, Bonus[]> = {
             description: (
                 <span>
                     When Nahida hits an opponent affected by All Schemes to
-                    Know&apos;s Seeds of Skandha with Normal or Charged Attacks after
-                    unleashing Illusory Heart, she will use Tri-Karma
+                    Know&apos;s Seeds of Skandha with Normal or Charged Attacks
+                    after unleashing Illusory Heart, she will use Tri-Karma
                     Purification: Karmic Oblivion on this opponent and all
                     connected opponents, dealing{' '}
                     <span style={{ color: '#84a02f' }}>Dendro</span> DMG based
-                    on 200% of Nahida&apos;s ATK and 400% of her Elemental Mastery.
+                    on 200% of Nahida&apos;s ATK and 400% of her Elemental
+                    Mastery.
                     <br />
                     DMG dealt by Tri-Karma Purification: Karmic Oblivion is
                     considered Elemental Skill DMG and can be triggered once
@@ -212,7 +213,7 @@ const constellationBonuses: Record<string, Bonus[]> = {
                     Purification: Karmic Oblivion.
                 </span>
             ),
-            icon: '/images/constellation-icons/nahida-constellation6.png',
+            icon: '/images/skill-icons/constellations/nahida-constellation6.png',
             effect: (baseStats) => {
                 // TODO: Add ability aspects locked behind constellations
                 return baseStats

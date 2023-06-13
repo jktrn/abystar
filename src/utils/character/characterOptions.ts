@@ -9,9 +9,9 @@ export function getLevelOptions(character: Character) {
 
 export function getConstellationOptions(character: Character) {
     return [
-        { value: '0', label: '0' },
+        { value: 0, label: '0' },
         ...(character.constellations?.map((constellation) => ({
-            value: constellation.level.toString(),
+            value: constellation.level,
             label: constellation.level.toString(),
         })) ?? []),
     ]

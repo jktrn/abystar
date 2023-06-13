@@ -30,6 +30,7 @@ const selectStyles: StylesConfig<OptionTypeBase, false> = {
         color,
         fontSize,
         minHeight: '20px',
+        cursor: 'pointer',
     }),
     valueContainer: (provided) => ({
         ...provided,
@@ -52,6 +53,7 @@ const selectStyles: StylesConfig<OptionTypeBase, false> = {
                 : backgroundColor,
         color,
         fontSize,
+        cursor: 'pointer',
     }),
     input: (provided) => ({
         ...provided,

@@ -177,9 +177,8 @@ const characterBonuses: Record<string, Bonus[]> = {
             effect: (baseStats, currentStacks) => {
                 if (!currentStacks) return baseStats
                 const elementalMasteryOptions = [0, 100, 120, 140, 160]
-                baseStats['Elemental Mastery'] += elementalMasteryOptions[
-                    currentStacks
-                ]
+                baseStats['Elemental Mastery'] +=
+                    elementalMasteryOptions[currentStacks]
                 return baseStats
             },
             minConstellation: 4,

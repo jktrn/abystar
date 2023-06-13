@@ -309,6 +309,17 @@ const abilityScalings: AbilityScaling = {
                 ],
                 damageType: 'Dendro',
             },
+            'Tri-Karma Purification: Karmic Oblivion DMG': {
+                formulaType: FormulaType.DamageFormula,
+                baseStat: ['ATK', 'Elemental Mastery'],
+                additiveBonusStat: 'Elemental Skill Additive Bonus',
+                multiplicativeBonusStat: [
+                    'Dendro DMG Bonus',
+                    'Elemental Skill DMG Bonus',
+                ],
+                damageType: 'Dendro',
+                minConstellation: 6,
+            },
             'Tri-Karma Purification Trigger Interval': {
                 formulaType: FormulaType.GenericFormulaWithoutScaling,
                 outputType: FormulaOutputType.Time,

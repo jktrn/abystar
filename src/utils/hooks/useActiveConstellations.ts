@@ -4,16 +4,16 @@ import { useEffect } from 'react'
 
 export default function useActiveConstellations(
     characterName: string,
-    constellation: string,
+    constellation: number,
     setActiveConstellations: (activeConstellations: Bonus[]) => void
 ) {
     useEffect(() => {
-        if (constellation === '0') {
+        if (!constellation) {
             setActiveConstellations([])
             return
         }
 
-        const currentConstellationIndex = parseInt(constellation) - 1
+        const currentConstellationIndex = constellation - 1
         const newActiveConstellations = constellationBonuses[characterName]
             .slice(0, currentConstellationIndex + 1)
             .map((bonus) => ({

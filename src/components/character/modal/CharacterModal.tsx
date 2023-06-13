@@ -111,7 +111,7 @@ const CharacterModal = ({
                                     className={`cursor-pointer rounded-full object-cover hover:scale-105 ${
                                         availableCharacter(character)
                                             ? ''
-                                            : 'opacity-50 pointer-events-none'
+                                            : 'pointer-events-none opacity-50'
                                     }`}
                                     boxSize="70px"
                                 />

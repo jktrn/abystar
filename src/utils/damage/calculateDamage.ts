@@ -15,6 +15,7 @@ function calculateDamage(
     baseStats: NewBaseStat,
     abilityScaling: AbilityScaling,
     character: Character,
+    constellation: number,
     skillLevels: string[],
     enemyResistances: NewBaseStat,
     activeBonuses: Bonus[]
@@ -52,6 +53,13 @@ function calculateDamage(
             const aspectAbilityScalings =
                 abilityScaling[character.name][skill.name][key]
             if (!aspectAbilityScalings) return []
+
+            // Checks if aspect's minConstellation is met
+            if (
+                aspectAbilityScalings.minConstellation &&
+                constellation < aspectAbilityScalings.minConstellation
+            )
+                return []
 
             const {
                 formulaType,

@@ -80,6 +80,7 @@ export interface AbilityScalingData {
     multiplicativeBonusStat?: string | string[]
     damageType?: string
     outputType?: FormulaOutputType
+    minConstellation?: number
 }
 
 export enum FormulaType {

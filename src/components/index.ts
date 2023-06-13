@@ -4,5 +4,6 @@ export { default as CharacterBonusToggle } from './character/CharacterBonusToggl
 export { default as CustomSelect } from './character/CustomSelect'
 export { default as CharacterImage } from './character/modal/CharacterImage'
 export { default as CharacterModal } from './character/modal/CharacterModal'
+export { default as ConstellationPopover } from './character/modal/ConstellationPopover'
 export { default as FilterAndSort } from './character/modal/FilterAndSort'
 export { default as ResultsTable } from './results/ResultsTable'

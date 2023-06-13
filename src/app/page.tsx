@@ -9,6 +9,7 @@ import {
     CharacterBonusToggle,
     CharacterImage,
     CharacterModal,
+    ConstellationPopover,
     CustomSelect,
     ResultsTable,
 } from '@/components'
@@ -34,8 +35,7 @@ export default function Home() {
     const [level, setLevel] = useState<string>('90/90')
     const levelOptions = getLevelOptions(character)
 
-    const [constellation, setConstellation] = useState<string>('0')
-    const constellationOptions = getConstellationOptions(character)
+    const [constellation, setConstellation] = useState<number>(0)
 
     const [activeBonuses, setActiveBonuses] = useState<Bonus[]>([])
     const [activeConstellations, setActiveConstellations] = useState<Bonus[]>(
@@ -75,13 +75,14 @@ export default function Home() {
         baseStats,
         abilityScalings,
         character,
+        constellation,
         updatedActiveSkills,
         enemyResistances,
         activeBonuses
     )
 
     return (
-        <div className="flex h-screen flex-col overflow-y-hidden p-2 lg:flex-row">
+        <div className="flex h-screen flex-col p-2 lg:flex-row lg:overflow-y-hidden">
             <div className="m-2 flex-1 rounded-lg bg-main-1000 lg:min-w-max lg:max-w-max">
                 <div className="flex h-full flex-col">
                     <h2 className="rounded-t-lg bg-main-800 px-4 py-3 text-lg font-bold">
@@ -105,7 +106,7 @@ export default function Home() {
                                         setActiveBonuses={setActiveBonuses}
                                     />
                                 </form>
-                                <div className="flex flex-col gap-2 md:gap-0">
+                                <div className="flex flex-col gap-2">
                                     <div className="flex flex-col">
                                         <span className="flex justify-center text-xl font-bold md:justify-normal">
                                             {character.name}
@@ -114,8 +115,8 @@ export default function Home() {
                                             {'★'.repeat(character.rarity)}
                                         </span>
                                     </div>
-                                    <div className="flex flex-col gap-2">
-                                        <div className="flex items-center justify-center gap-2">
+                                    <div className="ml-auto mr-auto flex max-w-max flex-col items-center gap-2 md:items-start">
+                                        <div className="flex items-center gap-2">
                                             Ascension:
                                             <CustomSelect
                                                 options={levelOptions}
@@ -124,13 +125,14 @@ export default function Home() {
                                                 instanceId="ascension"
                                             />
                                         </div>
-                                        <div className="flex items-center justify-center gap-2">
+                                        <div className="flex w-full items-center">
                                             Constellation:
-                                            <CustomSelect
-                                                options={constellationOptions}
-                                                value={constellation}
-                                                onChange={setConstellation}
-                                                instanceId="constellation"
+                                            <ConstellationPopover
+                                                characterName={character.name}
+                                                constellation={constellation}
+                                                setConstellation={
+                                                    setConstellation
+                                                }
                                             />
                                         </div>
                                     </div>
@@ -147,6 +149,7 @@ export default function Home() {
                                 {characterBonuses[character.name].map(
                                     (bonus) => (
                                         <CharacterBonusToggle
+                                            character={character}
                                             key={bonus.name}
                                             bonus={bonus}
                                             onToggle={(bonus, bonusStacks) =>
@@ -155,12 +158,10 @@ export default function Home() {
                                                     bonusStacks,
                                                     activeBonuses,
                                                     setActiveBonuses,
-                                                    parseInt(constellation)
+                                                    constellation
                                                 )
                                             }
-                                            constellation={parseInt(
-                                                constellation
-                                            )}
+                                            constellation={constellation}
                                         />
                                     )
                                 )}

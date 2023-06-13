@@ -1,16 +1,19 @@
-import { Bonus } from '@/types/Character'
+import { Bonus, Character } from '@/types/Character'
 import Image from 'next/image'
 import { useState } from 'react'
 import Switch from 'react-switch'
 import CustomSelect from './CustomSelect'
+import { elementColors } from '@/utils'
 
 interface CharacterBonusToggleProps {
+    character: Character
     bonus: Bonus
     onToggle: (bonus: Bonus, currentStacks: number) => void
     constellation: number
 }
 
 const CharacterBonusToggle = ({
+    character,
     bonus,
     onToggle,
     constellation,
@@ -29,7 +32,7 @@ const CharacterBonusToggle = ({
     return (
         <label
             className={`flex flex-col items-center justify-between rounded-md bg-main-800 p-4 md:flex-row md:p-2 ${
-                isDisabled ? 'brightness-50 pointer-events-none' : ''
+                isDisabled ? 'pointer-events-none brightness-50' : ''
             }`}
         >
             <div className="flex flex-col items-center gap-2 md:flex-row">
@@ -76,6 +79,11 @@ const CharacterBonusToggle = ({
                     }
                     uncheckedIcon={false}
                     checkedIcon={false}
+                    onColor={
+                        elementColors[
+                            character.vision.toLowerCase() as keyof typeof elementColors
+                        ]
+                    }
                     disabled={isDisabled}
                     className="mt-4 md:mt-0"
                 />
