@@ -28,7 +28,6 @@ import {
 } from '@/utils'
 
 export default function Home() {
-    // Setting default values for character, ascension/talent level, constellations
     const defaultCharacter = characterData['Hu Tao']
     const [character, setCharacter] = useState<Character>(defaultCharacter)
 
@@ -38,20 +37,18 @@ export default function Home() {
     const [constellation, setConstellation] = useState<string>('0')
     const constellationOptions = getConstellationOptions(character)
 
+    const [activeBonuses, setActiveBonuses] = useState<Bonus[]>([])
+    const [activeConstellations, setActiveConstellations] = useState<Bonus[]>(
+        []
+    )
     const [activeSkills, setActiveSkills] = useState<string[]>([
         'Lv10', // Normal Attack
         'Lv10', // Elemental Skill
         'Lv10', // Elemental Burst
     ])
 
-    // Other state variables
     const characters = Object.values(characterData) as Character[]
-    const [activeBonuses, setActiveBonuses] = useState<Bonus[]>([])
     const initialBaseStats = convertBaseStats(character.baseStats[level])
-    const [activeConstellations, setActiveConstellations] = useState<Bonus[]>(
-        []
-    )
-    // For CharacterModal
     const { isOpen, onOpen, onClose } = useDisclosure()
 
     useActiveConstellations(
@@ -212,7 +209,7 @@ export default function Home() {
                 </div>
             </div>
 
-            <div className="m-2 flex-1 rounded-lg bg-main-1000">
+            <div className="m-2 flex-1 overflow-auto rounded-lg bg-main-1000">
                 <div id="results">
                     <h2 className="rounded-t-lg bg-main-800 px-4 py-3 text-lg font-bold">
                         Results

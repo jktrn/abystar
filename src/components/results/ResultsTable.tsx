@@ -68,6 +68,9 @@ const ResultsTable: React.FC<ResultsTableProps> = ({ damageResults }) => {
                     const outputValue =
                         aspect.damage.outputType === FormulaOutputType.Time
                             ? `${aspect.damage.outputValue?.toFixed(1)}s`
+                            : aspect.damage.outputType ===
+                              FormulaOutputType.Percentage
+                            ? `${aspect.damage.outputValue?.toFixed(1)}%`
                             : aspect.damage.outputValue
                             ? Math.round(aspect.damage.outputValue)
                             : 0

@@ -12,7 +12,8 @@ const constellationBonuses: Record<string, Bonus[]> = {
             ),
             icon: '/images/constellation-icons/hu-tao-constellation1.png',
             effect: (baseStats) => {
-                baseStats['Charged Attack Stamina Cost Multiplier'] = -100
+                // TODO: Broken, implement later
+                // baseStats['Charged Attack Stamina Cost Multiplier'] = -100
                 return baseStats
             },
         },
@@ -100,6 +101,42 @@ const constellationBonuses: Record<string, Bonus[]> = {
             icon: '/images/constellation-icons/hu-tao-constellation6.png',
             effect: (baseStats) => {
                 // Already handled in characterBonuses.tsx
+                return baseStats
+            },
+        },
+    ],
+    Nahida: [
+        {
+            name: 'The Seed of Stored Knowledge',
+            description: (
+                <span>
+                    When the Shrine of Maya is unleashed and the Elemental Types
+                    of the party members are being tabulated, the count will add
+                    1 to the number of Pyro, Electro, and Hydro characters
+                    respectively.
+                </span>
+            ),
+            icon: '/images/constellation-icons/nahida-constellation1.png',
+            effect: (baseStats) => {
+                // Handled in characterBonuses.tsx
+                return baseStats
+            },
+        },
+        {
+            name: 'The Root of All Fullness',
+            description: (
+                <span>
+                    Opponents that are marked by Seeds of Skandha applied by
+                    Nahida herself will be affected by the following effects:
+                    Burning, Bloom, Hyperbloom, and Burgeon Reaction DMG can
+                    score CRIT Hits. CRIT Rate and CRIT DMG are fixed at 20% and
+                    100% respectively. Within 8s of being affected by Quicken,
+                    Aggravate, Spread, DEF is decreased by 30%.
+                </span>
+            ),
+            icon: '/images/constellation-icons/nahida-constellation2.png',
+            effect: (baseStats) => {
+                // Handled in characterBonuses.tsx
                 return baseStats
             },
         },

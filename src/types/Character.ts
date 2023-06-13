@@ -51,6 +51,7 @@ export interface Bonus {
     effect: Effect
     maxStacks?: number
     currentStacks?: number
+    stackOptions?: string[]
     affectsAbilityIndex?: number
     applyToAbilityScaling?: (abilityScaling: AbilityScaling) => void
     minConstellation?: number
@@ -74,7 +75,7 @@ export interface AbilityScaling {
 
 export interface AbilityScalingData {
     formulaType: FormulaType
-    baseStat?: string
+    baseStat?: string | string[]
     additiveBonusStat?: string | string[]
     multiplicativeBonusStat?: string | string[]
     damageType?: string
@@ -91,5 +92,6 @@ export enum FormulaType {
 export enum FormulaOutputType {
     Healing,
     Time,
+    Percentage,
     Generic,
 }

@@ -71,7 +71,7 @@ function calculateDamage(
                         skill,
                         key,
                         skillLevels[index],
-                        baseStat,
+                        Array.isArray(baseStat) ? baseStat : [baseStat],
                         Array.isArray(additiveBonusStat)
                             ? additiveBonusStat
                             : [additiveBonusStat],
@@ -89,7 +89,7 @@ function calculateDamage(
                         skill,
                         key,
                         skillLevels[index],
-                        baseStat,
+                        Array.isArray(baseStat) ? baseStat : [baseStat],
                         Array.isArray(additiveBonusStat)
                             ? additiveBonusStat
                             : [additiveBonusStat],

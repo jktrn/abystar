@@ -79,7 +79,8 @@ const abilityScalings: AbilityScaling = {
             },
             'Charged Attack Stamina Cost': {
                 formulaType: FormulaType.GenericFormulaWithoutScaling,
-                multiplicativeBonusStat: 'Charged Attack Stamina Cost Multiplier',
+                multiplicativeBonusStat:
+                    'Charged Attack Stamina Cost Multiplier',
                 outputType: FormulaOutputType.Generic,
             },
             'Plunge DMG': {
@@ -133,15 +134,15 @@ const abilityScalings: AbilityScaling = {
                 formulaType: FormulaType.GenericFormulaWithoutScaling,
                 outputType: FormulaOutputType.Time,
             },
-            'Duration': {
+            Duration: {
                 formulaType: FormulaType.GenericFormulaWithoutScaling,
                 outputType: FormulaOutputType.Time,
             },
-            'CD': {
+            CD: {
                 formulaType: FormulaType.GenericFormulaWithoutScaling,
                 multiplicativeBonusStat: 'Elemental Skill CD Reduction',
                 outputType: FormulaOutputType.Time,
-            }
+            },
         },
         'Spirit Soother': {
             'Skill DMG': {
@@ -176,7 +177,175 @@ const abilityScalings: AbilityScaling = {
                 multiplicativeBonusStat: 'Healing Bonus',
                 outputType: FormulaOutputType.Healing,
             },
-            'CD': {
+            CD: {
+                formulaType: FormulaType.GenericFormulaWithoutScaling,
+                multiplicativeBonusStat: 'Elemental Burst CD Reduction',
+                outputType: FormulaOutputType.Time,
+            },
+            'Energy Cost': {
+                formulaType: FormulaType.GenericFormulaWithoutScaling,
+                outputType: FormulaOutputType.Generic,
+            },
+        },
+    },
+    Nahida: {
+        'Normal Attack: Akara': {
+            '1-Hit DMG': {
+                formulaType: FormulaType.DamageFormula,
+                baseStat: 'ATK',
+                additiveBonusStat: 'Normal Attack Additive Bonus',
+                multiplicativeBonusStat: [
+                    'Dendro DMG Bonus',
+                    'Normal Attack DMG Bonus',
+                ],
+                damageType: 'Dendro',
+            },
+            '2-Hit DMG': {
+                formulaType: FormulaType.DamageFormula,
+                baseStat: 'ATK',
+                additiveBonusStat: 'Normal Attack Additive Bonus',
+                multiplicativeBonusStat: [
+                    'Dendro DMG Bonus',
+                    'Normal Attack DMG Bonus',
+                ],
+                damageType: 'Dendro',
+            },
+            '3-Hit DMG': {
+                formulaType: FormulaType.DamageFormula,
+                baseStat: 'ATK',
+                additiveBonusStat: 'Normal Attack Additive Bonus',
+                multiplicativeBonusStat: [
+                    'Dendro DMG Bonus',
+                    'Normal Attack DMG Bonus',
+                ],
+                damageType: 'Dendro',
+            },
+            '4-Hit DMG': {
+                formulaType: FormulaType.DamageFormula,
+                baseStat: 'ATK',
+                additiveBonusStat: 'Normal Attack Additive Bonus',
+                multiplicativeBonusStat: [
+                    'Dendro DMG Bonus',
+                    'Normal Attack DMG Bonus',
+                ],
+                damageType: 'Dendro',
+            },
+            'Charged Attack DMG': {
+                formulaType: FormulaType.DamageFormula,
+                baseStat: 'ATK',
+                additiveBonusStat: 'Charged Attack Additive Bonus',
+                multiplicativeBonusStat: [
+                    'Dendro DMG Bonus',
+                    'Charged Attack DMG Bonus',
+                ],
+                damageType: 'Dendro',
+            },
+            'Charged Attack Stamina Cost': {
+                formulaType: FormulaType.GenericFormulaWithoutScaling,
+                multiplicativeBonusStat:
+                    'Charged Attack Stamina Cost Multiplier',
+                outputType: FormulaOutputType.Generic,
+            },
+            'Plunge DMG': {
+                formulaType: FormulaType.DamageFormula,
+                baseStat: 'ATK',
+                additiveBonusStat: 'Plunging Attack Additive Bonus',
+                multiplicativeBonusStat: [
+                    'Dendro DMG Bonus',
+                    'Plunging Attack DMG Bonus',
+                ],
+                damageType: 'Dendro',
+            },
+            'Low Plunge DMG': {
+                formulaType: FormulaType.DamageFormula,
+                baseStat: 'ATK',
+                additiveBonusStat: 'Plunging Attack Additive Bonus',
+                multiplicativeBonusStat: [
+                    'Dendro DMG Bonus',
+                    'Plunging Attack DMG Bonus',
+                ],
+                damageType: 'Dendro',
+            },
+            'High Plunge DMG': {
+                formulaType: FormulaType.DamageFormula,
+                baseStat: 'ATK',
+                additiveBonusStat: 'Plunging Attack Additive Bonus',
+                multiplicativeBonusStat: [
+                    'Dendro DMG Bonus',
+                    'Plunging Attack DMG Bonus',
+                ],
+                damageType: 'Dendro',
+            },
+        },
+        'All Schemes to Know': {
+            'Press DMG': {
+                formulaType: FormulaType.DamageFormula,
+                baseStat: 'ATK',
+                additiveBonusStat: 'Elemental Skill Additive Bonus',
+                multiplicativeBonusStat: [
+                    'Dendro DMG Bonus',
+                    'Elemental Skill DMG Bonus',
+                ],
+                damageType: 'Dendro',
+            },
+            'Hold DMG': {
+                formulaType: FormulaType.DamageFormula,
+                baseStat: 'ATK',
+                additiveBonusStat: 'Elemental Skill Additive Bonus',
+                multiplicativeBonusStat: [
+                    'Dendro DMG Bonus',
+                    'Elemental Skill DMG Bonus',
+                ],
+                damageType: 'Dendro',
+            },
+            'Tri-Karma Purification DMG': {
+                formulaType: FormulaType.DamageFormula,
+                baseStat: ['ATK', 'Elemental Mastery'],
+                additiveBonusStat: 'Elemental Skill Additive Bonus',
+                multiplicativeBonusStat: [
+                    'Dendro DMG Bonus',
+                    'Elemental Skill DMG Bonus',
+                    'Tri-Karma Purification DMG Bonus',
+                ],
+                damageType: 'Dendro',
+            },
+            'Tri-Karma Purification Trigger Interval': {
+                formulaType: FormulaType.GenericFormulaWithoutScaling,
+                outputType: FormulaOutputType.Time,
+            },
+            'Seed of Skandha Duration': {
+                formulaType: FormulaType.GenericFormulaWithoutScaling,
+                outputType: FormulaOutputType.Time,
+            },
+            'Press CD': {
+                formulaType: FormulaType.GenericFormulaWithoutScaling,
+                multiplicativeBonusStat: 'Elemental Skill CD Reduction',
+                outputType: FormulaOutputType.Time,
+            },
+            'Hold CD': {
+                formulaType: FormulaType.GenericFormulaWithoutScaling,
+                multiplicativeBonusStat: 'Elemental Skill CD Reduction',
+                outputType: FormulaOutputType.Time,
+            },
+        },
+        'Illusory Heart': {
+            'Pyro: DMG Bonus': {
+                formulaType: FormulaType.GenericFormulaWithoutScaling,
+                outputType: FormulaOutputType.Percentage,
+            },
+            'Electro: Trigger Interval Decrease': {
+                formulaType: FormulaType.GenericFormulaWithoutScaling,
+                outputType: FormulaOutputType.Time,
+            },
+            'Hydro: Duration Extension': {
+                formulaType: FormulaType.GenericFormulaWithoutScaling,
+                outputType: FormulaOutputType.Time,
+            },
+            'Base Duration': {
+                formulaType: FormulaType.GenericFormulaWithoutScaling,
+                outputType: FormulaOutputType.Time,
+            },
+            CD: {
                 formulaType: FormulaType.GenericFormulaWithoutScaling,
                 multiplicativeBonusStat: 'Elemental Burst CD Reduction',
                 outputType: FormulaOutputType.Time,

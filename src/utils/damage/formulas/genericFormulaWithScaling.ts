@@ -1,4 +1,4 @@
-import { ActiveSkill, NewBaseStat, FormulaOutputType } from '@/types/Character'
+import { ActiveSkill, FormulaOutputType, NewBaseStat } from '@/types/Character'
 import { parseScalingValue } from '@/utils'
 
 const genericFormulaWithScaling = (
@@ -6,15 +6,17 @@ const genericFormulaWithScaling = (
     skill: ActiveSkill,
     key: string,
     skillLevel: string,
-    baseStat: string,
+    baseStat: string | string[],
     additiveBonusStat: string | string[],
     multiplicativeBonusStat: string | string[],
     outputType: FormulaOutputType
 ) => {
     const { [skillLevel]: value } = skill.data[key]
     if (value) {
-        const scalingValue = parseScalingValue(value)
-        const baseStatValue = baseStats[baseStat]
+        const scalingValues = parseScalingValue(value)
+        const baseStatValues = Array.isArray(baseStat)
+            ? baseStat.map((stat) => baseStats[stat])
+            : [baseStats[baseStat]]
         const additiveBonusStatValue = calculateStatValue(
             additiveBonusStat,
             baseStats
@@ -25,8 +27,13 @@ const genericFormulaWithScaling = (
         )
 
         const baseDamage =
-            baseStatValue * (scalingValue / 100) +
-            baseStatValue * (additiveBonusStatValue / 100)
+            baseStatValues.reduce(
+                (acc, statValue, index) =>
+                    acc + statValue * (scalingValues[index] / 100),
+                0
+            ) +
+            baseStatValues.reduce((acc, statValue) => acc + statValue, 0) *
+                (additiveBonusStatValue / 100)
 
         const outputValue =
             baseDamage * (1 + multiplicativeBonusStatValue / 100)
