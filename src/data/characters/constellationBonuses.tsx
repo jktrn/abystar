@@ -164,7 +164,7 @@ const constellationBonuses: Record<string, Bonus[]> = {
             description: (
                 <span>
                     When 1/2/3/(4 or more) nearby opponents are affected by All
-                    Schemes to Know's Seeds of Skandha, Nahida&apos;s Elemental
+                    Schemes to Know&apos;s Seeds of Skandha, Nahida&apos;s Elemental
                     Mastery will be increased by 100/120/140/160.
                 </span>
             ),
