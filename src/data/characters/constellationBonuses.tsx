@@ -164,7 +164,7 @@ const constellationBonuses: Record<string, Bonus[]> = {
             description: (
                 <span>
                     When 1/2/3/(4 or more) nearby opponents are affected by All
-                    Schemes to Know's Seeds of Skandha, Nahida's Elemental
+                    Schemes to Know's Seeds of Skandha, Nahida&apos;s Elemental
                     Mastery will be increased by 100/120/140/160.
                 </span>
             ),
@@ -198,12 +198,12 @@ const constellationBonuses: Record<string, Bonus[]> = {
             description: (
                 <span>
                     When Nahida hits an opponent affected by All Schemes to
-                    Know's Seeds of Skandha with Normal or Charged Attacks after
+                    Know&apos;s Seeds of Skandha with Normal or Charged Attacks after
                     unleashing Illusory Heart, she will use Tri-Karma
                     Purification: Karmic Oblivion on this opponent and all
                     connected opponents, dealing{' '}
                     <span style={{ color: '#84a02f' }}>Dendro</span> DMG based
-                    on 200% of Nahida's ATK and 400% of her Elemental Mastery.
+                    on 200% of Nahida&apos;s ATK and 400% of her Elemental Mastery.
                     <br />
                     DMG dealt by Tri-Karma Purification: Karmic Oblivion is
                     considered Elemental Skill DMG and can be triggered once
