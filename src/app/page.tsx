@@ -81,9 +81,9 @@ export default function Home() {
     )
 
     return (
-        <div className="flex h-screen flex-col p-2 lg:flex-row">
-            <div className="m-2 flex-1 rounded-lg bg-main-1000 lg:min-w-max lg:max-w-max lg:overflow-y-auto">
-                <div id="character">
+        <div className="flex h-screen flex-col overflow-x-hidden p-2 lg:flex-row">
+            <div className="m-2 flex-1 rounded-lg bg-main-1000 lg:min-w-max lg:max-w-max">
+                <div className="flex h-full flex-col">
                     <h2 className="rounded-t-lg bg-main-800 px-4 py-3 text-lg font-bold">
                         Character
                     </h2>
@@ -167,13 +167,11 @@ export default function Home() {
                             </div>
                         )}
                     </div>
-                </div>
 
-                <div id="attributes">
                     <h2 className="bg-main-800 px-4 py-3 text-lg font-bold">
                         Attributes
                     </h2>
-                    <div className="bg-main-900 p-4">
+                    <div className="overflow-auto rounded-b-md bg-main-900 p-4">
                         <div className="overflow-y-auto rounded-md border border-main-700 p-2">
                             <AttributesTable
                                 baseStats={baseStats}
@@ -186,36 +184,30 @@ export default function Home() {
             </div>
 
             <div className="m-2 flex-1 rounded-lg bg-main-1000">
-                <div id="weapon">
-                    <h2 className="rounded-t-lg bg-main-800 px-4 py-3 text-lg font-bold">
-                        Weapon
-                    </h2>
-                    <div className="bg-main-900 p-4">Weapon</div>
-                </div>
+                <h2 className="rounded-t-lg bg-main-800 px-4 py-3 text-lg font-bold">
+                    Weapon
+                </h2>
+                <div className="bg-main-900 p-4">Weapon</div>
 
-                <div id="artifacts">
-                    <h2 className="bg-main-800 px-4 py-3 text-lg font-bold">
-                        Artifacts
-                    </h2>
+                <h2 className="bg-main-800 px-4 py-3 text-lg font-bold">
+                    Artifacts
+                </h2>
 
-                    <div className="bg-main-900 p-4">Artifacts</div>
-                </div>
+                <div className="bg-main-900 p-4">Artifacts</div>
 
-                <div id="party-buffs">
-                    <h2 className="bg-main-800 px-4 py-3 text-lg font-bold">
-                        Party Buffs
-                    </h2>
-                    <div className="bg-main-900 p-4">Party Buffs</div>
-                </div>
+                <h2 className="bg-main-800 px-4 py-3 text-lg font-bold">
+                    Party Buffs
+                </h2>
+                <div className="bg-main-900 p-4">Party Buffs</div>
             </div>
 
-            <div className="m-2 flex-1 overflow-auto rounded-lg bg-main-1000">
-                <div id="results">
+            <div className="m-2 flex-1 rounded-lg bg-main-1000">
+                <div className="flex h-full flex-col">
                     <h2 className="rounded-t-lg bg-main-800 px-4 py-3 text-lg font-bold">
                         Results
                     </h2>
-                    <div className="bg-main-900 p-4">
-                        <div className="overflow-auto rounded-md border border-main-700 p-2">
+                    <div className="overflow-auto rounded-b-md bg-main-900 p-4">
+                        <div className="rounded-md border border-main-700 p-2">
                             <ResultsTable damageResults={damageResults} />
                         </div>
                     </div>
