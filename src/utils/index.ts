@@ -3,7 +3,12 @@ export {
     availableIcons,
     displayStats,
 } from './attributes/attributeSections'
-export { default as getLevelOptions } from './character/getLevelOptions'
+export {
+    getConstellationOptions,
+    getLevelOptions,
+    handleConstellationChange,
+    handleLevelChange,
+} from './character/characterOptions'
 export { default as handleBonusToggle } from './character/handleBonusToggle'
 export { default as compareElement } from './character/modal/compareElement'
 export { default as elementColors } from './character/modal/elementColors'

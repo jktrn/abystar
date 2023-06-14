@@ -1,7 +1,7 @@
 'use client'
 
-import { useState } from 'react'
 import { useDisclosure } from '@chakra-ui/react'
+import { useState } from 'react'
 
 import {
     ActiveSkillsSelect,
@@ -21,10 +21,13 @@ import {
     calculateDamage,
     convertBaseStats,
     displayStats,
+    getConstellationOptions,
     getLevelOptions,
     handleBonusToggle,
-    useBaseStats,
+    handleConstellationChange,
+    handleLevelChange,
     useActiveConstellations,
+    useBaseStats,
 } from '@/utils'
 
 export default function Home() {
@@ -35,6 +38,8 @@ export default function Home() {
     const levelOptions = getLevelOptions(character)
 
     const [constellation, setConstellation] = useState<number>(0)
+    const constellationOptions = getConstellationOptions(character)
+
     const [activeConstellations, setActiveConstellations] = useState<Bonus[]>([])
     const [activeBonuses, setActiveBonuses] = useState<Bonus[]>([])
     const [activeSkills, setActiveSkills] = useState<string[]>([
@@ -113,11 +118,24 @@ export default function Home() {
                                             <CustomSelect
                                                 options={levelOptions}
                                                 value={level}
-                                                onChange={setLevel}
+                                                onChange={handleLevelChange(
+                                                    setLevel
+                                                )}
                                                 instanceId="ascension"
                                             />
                                         </div>
-                                        <div className="flex w-full items-center">
+                                        <div className="flex items-center gap-2 md:hidden">
+                                            Constellation:
+                                            <CustomSelect
+                                                options={constellationOptions}
+                                                value={constellation.toString()}
+                                                onChange={handleConstellationChange(
+                                                    setConstellation
+                                                )}
+                                                instanceId="ascension"
+                                            />
+                                        </div>
+                                        <div className="hidden md:flex md:w-full md:items-center">
                                             Constellation:
                                             <ConstellationPopover
                                                 characterName={character.name}

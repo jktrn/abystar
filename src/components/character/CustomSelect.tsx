@@ -2,9 +2,9 @@ import { selectStyles } from '@/styles'
 import Select from 'react-select'
 
 interface CustomSelectProps {
-    options: { value: string; label: string }[]
-    value: string
-    onChange: (value: string) => void
+    options: { value: string | number; label: string }[]
+    value: string | number
+    onChange: (value: string | number) => void
     [key: string]: any
 }
 

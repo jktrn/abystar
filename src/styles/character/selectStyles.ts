@@ -12,7 +12,7 @@ interface TailwindConfig {
 }
 
 type OptionTypeBase = {
-    value: string
+    value: string | number
     label: string
 }
 
