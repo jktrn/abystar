@@ -44,17 +44,17 @@ const genericFormulaWithScaling = (
     }
 }
 
-const calculateStatValue = (
+function calculateStatValue(
     stat: string | string[],
     baseStats: NewBaseStat
-): number => {
+): number {
     return Array.isArray(stat) && stat[0] !== ''
         ? Array.isArray(stat)
             ? stat.reduce(
-                  (accumulator, statKey) => accumulator + baseStats[statKey],
+                  (accumulator, statKey) => accumulator + (baseStats[statKey] || 0),
                   0
               )
-            : baseStats[stat]
+            : baseStats[stat] || 0
         : 0
 }
 

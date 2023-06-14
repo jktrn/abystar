@@ -12,8 +12,7 @@ const constellationBonuses: Record<string, Bonus[]> = {
             ),
             icon: '/images/skill-icons/constellations/hu-tao-constellation1.png',
             effect: (baseStats) => {
-                if (!baseStats['Crimson Bouquet Stamina Reduction']) return baseStats
-                baseStats['Crimson Bouquet Stamina Reduction'] = -1
+                baseStats['Crimson Bouquet Stamina Reduction'] = -100
                 return baseStats
             },
         },
