@@ -22,10 +22,8 @@ jobs:
           node-version: '18'
       - name: Install dependencies
         run: npm ci
-      ## Build Step to Output dist/index.js
       - name: Build
         run: npm run build
-      ## With the above semantic-release configuration, will create a release and push the dist/index.js file as well as all the tags required
       - name: Semantic Release
         run: npx semantic-release
         env:
