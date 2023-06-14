@@ -30,9 +30,12 @@
         "typescript": "5.0.4"
     },
     "devDependencies": {
+        "@semantic-release/git": "^10.0.1",
+        "@semantic-release/github": "^9.0.3",
         "@types/react": "^18.2.7",
         "@types/react-table": "^7.7.14",
         "prettier": "^2.8.8",
-        "prettier-plugin-tailwindcss": "^0.3.0"
+        "prettier-plugin-tailwindcss": "^0.3.0",
+        "semantic-release": "^21.0.5"
     }
 }
