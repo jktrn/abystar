@@ -140,11 +140,13 @@ const characterBonuses: Record<string, Bonus[]> = {
             name: 'The Root of All Fullness',
             description: (
                 <span>
-                    <span className="min-constellation">C2</span> Burning, Bloom,
-                    Hyperbloom, and Burgeon Reaction DMG can now CRIT on opponents
-                    marked by <b>Seeds of Skanda</b> (CRIT Rate and CRIT DMG fixed at
-                    20% and 100%, respectively). For 8s after being hit by Quicken,
-                    Aggravate, or Spread, enemies have DEF decreased by 30%
+                    <span className="min-constellation">C2</span>{' '}
+                    <span className="unimplemented">UNIMPLEMENTED</span> Burning,
+                    Bloom, Hyperbloom, and Burgeon Reaction DMG can now CRIT on
+                    opponents marked by <b>Seeds of Skanda</b> (CRIT Rate and CRIT
+                    DMG fixed at 20% and 100%, respectively). For 8s after being hit
+                    by Quicken, Aggravate, or Spread, enemies have DEF decreased by
+                    30%
                 </span>
             ),
             icon: '/images/skill-icons/constellations/nahida-constellation2.png',
