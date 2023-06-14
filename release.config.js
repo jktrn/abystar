@@ -1,7 +1,5 @@
 const config = {
-    branches: [
-        {name: 'main', prerelease: true}
-    ],
+    branches: ['main'],
     plugins: [
         '@semantic-release/commit-analyzer',
         '@semantic-release/release-notes-generator',
@@ -11,7 +9,8 @@ const config = {
         }],
         '@semantic-release/github',
         'semantic-release-github-actions-tags'
-    ]
+    ],
+    tagFormat: `v\${version}-alpha`
 };
 
 module.exports = config;
