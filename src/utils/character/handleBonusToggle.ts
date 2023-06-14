@@ -7,14 +7,11 @@ export default function handleBonusToggle(
     setActiveBonuses: (bonuses: Bonus[]) => void,
     constellationLevel: number
 ) {
-    const updatedActiveBonuses = activeBonuses.filter(
-        (b) => b.name !== bonus.name
-    )
+    const updatedActiveBonuses = activeBonuses.filter((b) => b.name !== bonus.name)
 
     if (
         bonusStacks > 0 &&
-        (!bonus.minConstellation ||
-            bonus.minConstellation <= constellationLevel)
+        (!bonus.minConstellation || bonus.minConstellation <= constellationLevel)
     ) {
         updatedActiveBonuses.push({ ...bonus, currentStacks: bonusStacks })
     }

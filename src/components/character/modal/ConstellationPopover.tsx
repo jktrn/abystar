@@ -52,9 +52,7 @@ const ConstellationPopover = ({
                                 />
                                 <Box className="ml-4">
                                     <Text className="mb-1">
-                                        <span className="min-constellation">
-                                            C0
-                                        </span>{' '}
+                                        <span className="min-constellation">C0</span>{' '}
                                         No Constellations
                                     </Text>
                                     <Text className="text-xs text-lightgray-200">
@@ -62,41 +60,35 @@ const ConstellationPopover = ({
                                     </Text>
                                 </Box>
                             </Flex>
-                            {constellations.map(
-                                (currentConstellation, index) => (
-                                    <Flex
-                                        key={currentConstellation.name}
-                                        onClick={() =>
-                                            setConstellation(index + 1)
-                                        }
-                                        className={`cursor-pointer p-2 ${
-                                            index + 1 <= constellation
-                                                ? 'bg-main-600'
-                                                : ''
-                                        } hover:bg-main-500`}
-                                    >
-                                        <Image
-                                            src={currentConstellation.icon}
-                                            alt={currentConstellation.name}
-                                            boxSize="50px"
-                                            className="rounded-md"
-                                        />
-                                        <Box className="ml-4">
-                                            <Text className="mb-1">
-                                                <span className="min-constellation">{`C${
-                                                    index + 1
-                                                }`}</span>{' '}
-                                                {currentConstellation.name}
-                                            </Text>
-                                            <Text className="text-xs text-lightgray-200">
-                                                {
-                                                    currentConstellation.description
-                                                }
-                                            </Text>
-                                        </Box>
-                                    </Flex>
-                                )
-                            )}
+                            {constellations.map((currentConstellation, index) => (
+                                <Flex
+                                    key={currentConstellation.name}
+                                    onClick={() => setConstellation(index + 1)}
+                                    className={`cursor-pointer p-2 ${
+                                        index + 1 <= constellation
+                                            ? 'bg-main-600'
+                                            : ''
+                                    } hover:bg-main-500`}
+                                >
+                                    <Image
+                                        src={currentConstellation.icon}
+                                        alt={currentConstellation.name}
+                                        boxSize="50px"
+                                        className="rounded-md"
+                                    />
+                                    <Box className="ml-4">
+                                        <Text className="mb-1">
+                                            <span className="min-constellation">{`C${
+                                                index + 1
+                                            }`}</span>{' '}
+                                            {currentConstellation.name}
+                                        </Text>
+                                        <Text className="text-xs text-lightgray-200">
+                                            {currentConstellation.description}
+                                        </Text>
+                                    </Box>
+                                </Flex>
+                            ))}
                         </Flex>
                     </PopoverBody>
                 </PopoverContent>

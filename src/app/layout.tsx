@@ -8,11 +8,7 @@ export const metadata = {
     description: 'A Genshin Impact Damage Calculator',
 }
 
-export default function RootLayout({
-    children,
-}: {
-    children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang="en" className="select-none">
             <body className={font.className}>{children}</body>

@@ -43,9 +43,7 @@ const FilterAndSort = ({
                             filterValue.includes(option.value)
                         )}
                         onChange={(options) =>
-                            setFilterValue(
-                                options.map((option) => option.value)
-                            )
+                            setFilterValue(options.map((option) => option.value))
                         }
                         options={filterOptions}
                         formatOptionLabel={({ value, label }) => (

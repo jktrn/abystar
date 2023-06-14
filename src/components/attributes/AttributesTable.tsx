@@ -24,22 +24,16 @@ const AttributesTable: React.FC<AttributesTableProps> = ({
                     let formattedValue
                     let formattedInitialValue
                     let difference
-                    if (
-                        ['HP', 'DEF', 'Elemental Mastery', 'ATK'].includes(key)
-                    ) {
+                    if (['HP', 'DEF', 'Elemental Mastery', 'ATK'].includes(key)) {
                         formattedValue = Math.round(value)
-                        formattedInitialValue = Math.round(
-                            initialBaseStats[key]
-                        )
+                        formattedInitialValue = Math.round(initialBaseStats[key])
                         difference = formattedValue - formattedInitialValue
                     } else {
                         formattedValue = `${value.toFixed(1)}%`
-                        formattedInitialValue = `${initialBaseStats[
-                            key
-                        ].toFixed(1)}%`
-                        difference = `${(value - initialBaseStats[key]).toFixed(
+                        formattedInitialValue = `${initialBaseStats[key].toFixed(
                             1
                         )}%`
+                        difference = `${(value - initialBaseStats[key]).toFixed(1)}%`
                     }
                     return {
                         stat: key,
@@ -58,10 +52,7 @@ const AttributesTable: React.FC<AttributesTableProps> = ({
                 accessor: 'stat',
                 Cell: ({ row }) => {
                     const attributeName = row.values.stat
-                    const iconName = attributeName
-                        .toLowerCase()
-                        .split(' ')
-                        .join('-')
+                    const iconName = attributeName.toLowerCase().split(' ').join('-')
                     const iconPath = `/images/attributes/${iconName}.png`
                     return (
                         <span className="flex items-center gap-2">
@@ -95,9 +86,7 @@ const AttributesTable: React.FC<AttributesTableProps> = ({
                             formattedDifference = <span>{difference}</span>
                         } else {
                             formattedDifference = (
-                                <span className="brightness-50">
-                                    {difference}
-                                </span>
+                                <span className="brightness-50">{difference}</span>
                             )
                         }
                     } else if (
@@ -105,15 +94,11 @@ const AttributesTable: React.FC<AttributesTableProps> = ({
                         parseScalingValue(difference)[0] > 0
                     ) {
                         formattedDifference = (
-                            <span style={{ color: '#34D399' }}>
-                                +{difference}
-                            </span>
+                            <span style={{ color: '#34D399' }}>+{difference}</span>
                         )
                     } else {
                         formattedDifference = (
-                            <span style={{ color: '#F87171' }}>
-                                {difference}
-                            </span>
+                            <span style={{ color: '#F87171' }}>{difference}</span>
                         )
                     }
                     return formattedDifference

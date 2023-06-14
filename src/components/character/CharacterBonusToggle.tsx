@@ -56,12 +56,10 @@ const CharacterBonusToggle = ({
                 <div className="!min-w-max">
                     <CustomSelect
                         options={[
-                            ...(bonus.stackOptions || []).map(
-                                (option, index) => ({
-                                    value: index.toString(),
-                                    label: option,
-                                })
-                            ),
+                            ...(bonus.stackOptions || []).map((option, index) => ({
+                                value: index.toString(),
+                                label: option,
+                            })),
                         ]}
                         value={currentStacks.toString()}
                         onChange={(value) =>

@@ -97,8 +97,7 @@ const CharacterModal = ({
                                     src={character.icon}
                                     alt={character.name}
                                     onClick={() => {
-                                        if (!availableCharacter(character))
-                                            return
+                                        if (!availableCharacter(character)) return
                                         setCharacter(character)
                                         setActiveBonuses([])
                                         onClose()

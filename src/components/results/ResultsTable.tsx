@@ -159,8 +159,7 @@ const ResultsTable: React.FC<ResultsTableProps> = ({ damageResults }) => {
                                                 row.original.outputType ===
                                                     FormulaOutputType.Healing
                                                     ? '#98db1a'
-                                                    : cell.column.id !==
-                                                          'name' &&
+                                                    : cell.column.id !== 'name' &&
                                                       row.original.damageType &&
                                                       elementColors[
                                                           row.original.damageType.toLowerCase() as keyof typeof elementColors

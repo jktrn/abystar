@@ -30,9 +30,7 @@ function calculateDamage(
         if (!skillAbilityScaling) return []
 
         // Makes deep copy of ability scaling
-        const originalAbilityScaling = JSON.parse(
-            JSON.stringify(abilityScaling)
-        )
+        const originalAbilityScaling = JSON.parse(JSON.stringify(abilityScaling))
 
         // Calculates damage for each aspect of the skill
         const skillDamageResults = Object.keys(skill.data).flatMap((key) => {

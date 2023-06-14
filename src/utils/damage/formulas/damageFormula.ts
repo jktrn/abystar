@@ -80,8 +80,7 @@ function calculateStatValue(
     return Array.isArray(stat) && stat[0] !== ''
         ? Array.isArray(stat)
             ? stat.reduce(
-                  (accumulator, statKey) =>
-                      accumulator + (baseStats[statKey] || 0),
+                  (accumulator, statKey) => accumulator + (baseStats[statKey] || 0),
                   0
               )
             : baseStats[stat] || 0

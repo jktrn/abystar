@@ -21,7 +21,6 @@ import {
     calculateDamage,
     convertBaseStats,
     displayStats,
-    getConstellationOptions,
     getLevelOptions,
     handleBonusToggle,
     useBaseStats,
@@ -36,11 +35,8 @@ export default function Home() {
     const levelOptions = getLevelOptions(character)
 
     const [constellation, setConstellation] = useState<number>(0)
-
+    const [activeConstellations, setActiveConstellations] = useState<Bonus[]>([])
     const [activeBonuses, setActiveBonuses] = useState<Bonus[]>([])
-    const [activeConstellations, setActiveConstellations] = useState<Bonus[]>(
-        []
-    )
     const [activeSkills, setActiveSkills] = useState<string[]>([
         'Lv10', // Normal Attack
         'Lv10', // Elemental Skill
@@ -51,11 +47,7 @@ export default function Home() {
     const initialBaseStats = convertBaseStats(character.baseStats[level])
     const { isOpen, onOpen, onClose } = useDisclosure()
 
-    useActiveConstellations(
-        character.name,
-        constellation,
-        setActiveConstellations
-    )
+    useActiveConstellations(character.name, constellation, setActiveConstellations)
 
     const { baseStats, updatedActiveSkills } = useBaseStats(
         character,
@@ -130,9 +122,7 @@ export default function Home() {
                                             <ConstellationPopover
                                                 characterName={character.name}
                                                 constellation={constellation}
-                                                setConstellation={
-                                                    setConstellation
-                                                }
+                                                setConstellation={setConstellation}
                                             />
                                         </div>
                                     </div>
@@ -146,25 +136,23 @@ export default function Home() {
                         </div>
                         {characterBonuses[character.name] && (
                             <div className="mt-4 flex flex-col gap-2">
-                                {characterBonuses[character.name].map(
-                                    (bonus) => (
-                                        <CharacterBonusToggle
-                                            character={character}
-                                            key={bonus.name}
-                                            bonus={bonus}
-                                            onToggle={(bonus, bonusStacks) =>
-                                                handleBonusToggle(
-                                                    bonus,
-                                                    bonusStacks,
-                                                    activeBonuses,
-                                                    setActiveBonuses,
-                                                    constellation
-                                                )
-                                            }
-                                            constellation={constellation}
-                                        />
-                                    )
-                                )}
+                                {characterBonuses[character.name].map((bonus) => (
+                                    <CharacterBonusToggle
+                                        character={character}
+                                        key={bonus.name}
+                                        bonus={bonus}
+                                        onToggle={(bonus, bonusStacks) =>
+                                            handleBonusToggle(
+                                                bonus,
+                                                bonusStacks,
+                                                activeBonuses,
+                                                setActiveBonuses,
+                                                constellation
+                                            )
+                                        }
+                                        constellation={constellation}
+                                    />
+                                ))}
                             </div>
                         )}
                     </div>

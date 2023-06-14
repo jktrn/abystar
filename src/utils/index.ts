@@ -3,10 +3,7 @@ export {
     availableIcons,
     displayStats,
 } from './attributes/attributeSections'
-export {
-    getConstellationOptions,
-    getLevelOptions,
-} from './character/characterOptions'
+export { default as getLevelOptions } from './character/getLevelOptions'
 export { default as handleBonusToggle } from './character/handleBonusToggle'
 export { default as compareElement } from './character/modal/compareElement'
 export { default as elementColors } from './character/modal/elementColors'

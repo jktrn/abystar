@@ -5,8 +5,7 @@ const convertBaseStats = (baseStats: BaseStat): NewBaseStat => {
     const newBaseStats = { ...fullBaseStats }
 
     for (const [key, value] of Object.entries(baseStats)) {
-        const newKey =
-            attributeKeyMap[key.replace('Bonus ', '').replace('%', '')]
+        const newKey = attributeKeyMap[key.replace('Bonus ', '').replace('%', '')]
         if (newKey) {
             newBaseStats[newKey] += parseFloat(value.replace('%', ''))
         }

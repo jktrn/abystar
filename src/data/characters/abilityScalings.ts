@@ -1,8 +1,4 @@
-import {
-    AbilityScaling,
-    FormulaType,
-    FormulaOutputType,
-} from '@/types/Character'
+import { AbilityScaling, FormulaType, FormulaOutputType } from '@/types/Character'
 
 const abilityScalings: AbilityScaling = {
     'Hu Tao': {
@@ -79,8 +75,7 @@ const abilityScalings: AbilityScaling = {
             },
             'Charged Attack Stamina Cost': {
                 formulaType: FormulaType.GenericFormulaWithoutScaling,
-                multiplicativeBonusStat:
-                    'Charged Attack Stamina Cost Multiplier',
+                multiplicativeBonusStat: 'Charged Attack Stamina Cost Multiplier',
                 outputType: FormulaOutputType.Generic,
             },
             'Plunge DMG': {
@@ -242,8 +237,7 @@ const abilityScalings: AbilityScaling = {
             },
             'Charged Attack Stamina Cost': {
                 formulaType: FormulaType.GenericFormulaWithoutScaling,
-                multiplicativeBonusStat:
-                    'Charged Attack Stamina Cost Multiplier',
+                multiplicativeBonusStat: 'Charged Attack Stamina Cost Multiplier',
                 outputType: FormulaOutputType.Generic,
             },
             'Plunge DMG': {

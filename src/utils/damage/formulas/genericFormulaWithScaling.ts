@@ -35,8 +35,7 @@ const genericFormulaWithScaling = (
             baseStatValues.reduce((acc, statValue) => acc + statValue, 0) *
                 (additiveBonusStatValue / 100)
 
-        const outputValue =
-            baseDamage * (1 + multiplicativeBonusStatValue / 100)
+        const outputValue = baseDamage * (1 + multiplicativeBonusStatValue / 100)
 
         return {
             outputValue,

@@ -8,12 +8,7 @@ interface CustomSelectProps {
     [key: string]: any
 }
 
-const CustomSelect = ({
-    options,
-    value,
-    onChange,
-    ...props
-}: CustomSelectProps) => {
+const CustomSelect = ({ options, value, onChange, ...props }: CustomSelectProps) => {
     return (
         <Select
             value={options.find((option) => option.value === value)}
