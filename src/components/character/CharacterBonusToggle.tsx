@@ -63,7 +63,7 @@ const CharacterBonusToggle = ({
                         ]}
                         value={currentStacks.toString()}
                         onChange={(value) =>
-                            handleCurrentStacksChange(parseInt(value))
+                            handleCurrentStacksChange(parseInt(String(value)))
                         }
                         disabled={isDisabled}
                     />
