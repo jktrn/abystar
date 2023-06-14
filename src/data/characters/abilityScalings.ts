@@ -75,7 +75,7 @@ const abilityScalings: AbilityScaling = {
             },
             'Charged Attack Stamina Cost': {
                 formulaType: FormulaType.GenericFormulaWithoutScaling,
-                multiplicativeBonusStat: 'Charged Attack Stamina Cost Multiplier',
+                multiplicativeBonusStat: ['Charged Attack Stamina Cost Multiplier'], // Array because of C1 adding unique baseStat
                 outputType: FormulaOutputType.Generic,
             },
             'Plunge DMG': {

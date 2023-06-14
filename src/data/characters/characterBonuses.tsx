@@ -1,4 +1,4 @@
-import { Bonus } from '@/types/Character'
+import { Bonus, FormulaType } from '@/types/Character'
 import { characterData } from '@/data'
 
 const characterBonuses: Record<string, Bonus[]> = {
@@ -46,9 +46,19 @@ const characterBonuses: Record<string, Bonus[]> = {
                     ]
                 if (normalAttackScaling) {
                     Object.values(normalAttackScaling).forEach((aspect) => {
+                        if (aspect.formulaType !== FormulaType.DamageFormula) return
                         aspect.multiplicativeBonusStat = 'Pyro DMG Bonus'
                         aspect.damageType = 'Pyro'
                     })
+                }
+
+                const chargedAttackScaling =
+                    abilityScaling['Hu Tao'][
+                        'Normal Attack: Secret Spear of Wangsheng'
+                    ]['Charged Attack Stamina Cost'].multiplicativeBonusStat
+
+                if (chargedAttackScaling && Array.isArray(chargedAttackScaling)) {
+                    chargedAttackScaling.push('Crimson Bouquet Stamina Reduction')
                 }
             },
         },
