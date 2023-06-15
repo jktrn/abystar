@@ -131,10 +131,10 @@ const characterBonuses: Record<string, Bonus[]> = {
                 )
                 const newBaseStats = { ...baseStats }
                 newBaseStats['Tri-Karma Purification DMG Bonus'] =
-                    (baseStats['Tri-Karma Purification DMG Bonus'] || 0) +
+                    (initialBaseStats['Tri-Karma Purification DMG Bonus'] || 0) +
                     bonusDMG
                 newBaseStats['Elemental Skill CRIT Rate'] =
-                    baseStats['Elemental Skill CRIT Rate'] + bonusCritRate
+                    initialBaseStats['Elemental Skill CRIT Rate'] + bonusCritRate
                 return newBaseStats
             },
             enabled: true,
