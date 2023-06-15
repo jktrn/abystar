@@ -99,9 +99,11 @@ const CharacterModal = ({
                                     onClick={() => {
                                         if (!availableCharacter(character)) return
                                         setCharacter(character)
-                                        setActiveBonuses(characterBonuses[character.name].filter(
-                                            (bonus) => bonus.enabled
-                                        ))
+                                        setActiveBonuses(
+                                            characterBonuses[character.name].filter(
+                                                (bonus) => bonus.enabled
+                                            )
+                                        )
                                         onClose()
                                     }}
                                     bg={

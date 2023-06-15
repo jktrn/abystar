@@ -25,10 +25,6 @@ const CharacterBonusToggle = ({
         onToggle(bonus, newCurrentStacks)
     }
 
-    useEffect(() => {
-        onToggle(bonus, currentStacks)
-    }, [])
-
     const isDisabled = Boolean(
         bonus.minConstellation && bonus.minConstellation > constellation
     )

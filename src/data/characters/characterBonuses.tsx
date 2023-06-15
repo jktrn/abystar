@@ -92,7 +92,7 @@ const characterBonuses: Record<string, Bonus[]> = {
             ),
             icon: '/images/skill-icons/constellations/hu-tao-constellation6.png',
             effect: (baseStats, currentStacks, activeSkills, initialBaseStats) => {
-                if(!initialBaseStats) return baseStats
+                if (!initialBaseStats) return baseStats
                 const newBaseStats = { ...baseStats }
                 newBaseStats['Pyro RES'] = initialBaseStats['Pyro RES'] + 200
                 newBaseStats['Cryo RES'] = initialBaseStats['Cryo RES'] + 200
@@ -113,9 +113,9 @@ const characterBonuses: Record<string, Bonus[]> = {
             name: 'Awakening Elucidated',
             description: (
                 <span>
-                    Each point of Nahida's EM beyond 200 will grant 0.1% Bonus DMG
-                    and 0.03% CRIT Rate to <b>Tri-Karma Purification</b> (Elemental
-                    Skill) (capped at 80% Bonus DMG and 24% CRIT Rate)
+                    Each point of Nahida&apos;s EM beyond 200 will grant 0.1% Bonus
+                    DMG and 0.03% CRIT Rate to <b>Tri-Karma Purification</b>{' '}
+                    (Elemental Skill) (capped at 80% Bonus DMG and 24% CRIT Rate)
                 </span>
             ),
             icon: '/images/skill-icons/passives/nahida-passive2.png',
@@ -189,11 +189,12 @@ const characterBonuses: Record<string, Bonus[]> = {
                 </span>
             ),
             icon: '/images/skill-icons/constellations/nahida-constellation4.png',
-            effect: (baseStats, currentStacks) => {
-                if (!currentStacks) return baseStats
+            effect: (baseStats, currentStacks, activeSkills, initialBaseStats) => {
+                if (!currentStacks || !initialBaseStats) return baseStats
                 const newBaseStats = { ...baseStats }
                 const elementalMasteryOptions = [0, 100, 120, 140, 160]
-                newBaseStats['Elemental Mastery'] +=
+                newBaseStats['Elemental Mastery'] =
+                    initialBaseStats['Elemental Mastery'] +
                     elementalMasteryOptions[currentStacks]
                 return newBaseStats
             },
