@@ -52,6 +52,7 @@ export interface Bonus {
     maxStacks?: number
     currentStacks?: number
     stackOptions?: string[]
+    dependencies?: string[]
     affectsAbilityIndex?: number
     applyToAbilityScaling?: (abilityScaling: AbilityScaling) => void
     minConstellation?: number

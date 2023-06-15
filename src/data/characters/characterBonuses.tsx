@@ -43,7 +43,7 @@ const characterBonuses: Record<string, Bonus[]> = {
             applyToAbilityScaling: (abilityScaling) => {
                 const normalAttackScaling =
                     abilityScaling['Hu Tao'][
-                        'Normal Attack: Secret Spear of Wangsheng'
+                    'Normal Attack: Secret Spear of Wangsheng'
                     ]
                 if (normalAttackScaling) {
                     Object.values(normalAttackScaling).forEach((aspect) => {
@@ -125,7 +125,7 @@ const characterBonuses: Record<string, Bonus[]> = {
                     80,
                     Math.max(0, baseStats['Elemental Mastery'] - 200) * 0.1
                 )
-                const critRate = Math.min(
+                const bonusCritRate = Math.min(
                     24,
                     Math.max(0, baseStats['Elemental Mastery'] - 200) * 0.03
                 )
@@ -134,10 +134,11 @@ const characterBonuses: Record<string, Bonus[]> = {
                     (initialBaseStats['Tri-Karma Purification DMG Bonus'] || 0) +
                     bonusDMG
                 newBaseStats['Elemental Skill CRIT Rate'] =
-                    initialBaseStats['Elemental Skill CRIT Rate'] + critRate
+                    initialBaseStats['Elemental Skill CRIT Rate'] + bonusCritRate
                 return newBaseStats
             },
             enabled: true,
+            dependencies: ['Elemental Mastery'],
         },
         {
             name: 'Compassion Illuminated',
@@ -153,7 +154,7 @@ const characterBonuses: Record<string, Bonus[]> = {
                 const newBaseStats = { ...baseStats }
                 const elementalMasteryOptions = [0, 125, 150, 175, 200, 225, 250]
                 newBaseStats['Elemental Mastery'] =
-                    initialBaseStats['Elemental Mastery'] +
+                    baseStats['Elemental Mastery'] +
                     elementalMasteryOptions[currentStacks]
                 return newBaseStats
             },
@@ -194,7 +195,7 @@ const characterBonuses: Record<string, Bonus[]> = {
                 const newBaseStats = { ...baseStats }
                 const elementalMasteryOptions = [0, 100, 120, 140, 160]
                 newBaseStats['Elemental Mastery'] =
-                    initialBaseStats['Elemental Mastery'] +
+                    baseStats['Elemental Mastery'] +
                     elementalMasteryOptions[currentStacks]
                 return newBaseStats
             },
