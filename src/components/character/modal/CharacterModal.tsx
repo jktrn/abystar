@@ -1,5 +1,5 @@
 import { FilterAndSort } from '@/components'
-import { abilityScalings } from '@/data'
+import { characterBonuses } from '@/data'
 import { Bonus, Character } from '@/types/Character'
 import { compareElement, elementColors } from '@/utils'
 import {
@@ -63,7 +63,7 @@ const CharacterModal = ({
     }
 
     const availableCharacter = (character: Character) =>
-        !!abilityScalings[character.name]
+        !!characterBonuses[character.name]
 
     return (
         <Modal isOpen={isOpen} onClose={onClose}>
@@ -99,7 +99,9 @@ const CharacterModal = ({
                                     onClick={() => {
                                         if (!availableCharacter(character)) return
                                         setCharacter(character)
-                                        setActiveBonuses([])
+                                        setActiveBonuses(characterBonuses[character.name].filter(
+                                            (bonus) => bonus.enabled
+                                        ))
                                         onClose()
                                     }}
                                     bg={

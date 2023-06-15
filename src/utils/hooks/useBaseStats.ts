@@ -15,18 +15,26 @@ export default function useBaseStats(
         [currentBaseStats]
     )
 
-    const { baseStats, updatedActiveSkills } = useMemo(() => {
-        let newBaseStats = { ...initialBaseStats }
-        let newActiveSkills = [...activeSkills]
+    let newBaseStats = { ...initialBaseStats }
+    let newActiveSkills = [...activeSkills]
+    let hasChanged = true
+    
+    while (hasChanged) {
+        hasChanged = false
         for (const bonus of [...activeBonuses, ...activeConstellations]) {
+            console.log("Updating bonuses")
+            const oldBaseStats = { ...newBaseStats }
             newBaseStats = bonus.effect(
                 newBaseStats,
                 bonus.currentStacks,
-                newActiveSkills
+                newActiveSkills,
+                initialBaseStats
             )
+            if (JSON.stringify(oldBaseStats) !== JSON.stringify(newBaseStats)) {
+                hasChanged = true
+            }
         }
-        return { baseStats: newBaseStats, updatedActiveSkills: newActiveSkills }
-    }, [activeBonuses, initialBaseStats, activeSkills, activeConstellations])
+    }    
 
-    return { baseStats, updatedActiveSkills }
+    return { baseStats: newBaseStats, updatedActiveSkills: newActiveSkills }
 }

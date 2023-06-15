@@ -11,9 +11,13 @@ const constellationBonuses: Record<string, Bonus[]> = {
                 </span>
             ),
             icon: '/images/skill-icons/constellations/hu-tao-constellation1.png',
-            effect: (baseStats) => {
-                baseStats['Crimson Bouquet Stamina Reduction'] = -100
-                return baseStats
+            effect: (baseStats, currentStacks, activeSkills, initialBaseStats) => {
+                if (!initialBaseStats) return baseStats
+                const newBaseStats = { ...baseStats }
+                newBaseStats['Crimson Bouquet Stamina Reduction'] = initialBaseStats[
+                    'Crimson Bouquet Stamina Reduction'
+                ] - 100
+                return newBaseStats
             },
         },
         {
@@ -27,9 +31,13 @@ const constellationBonuses: Record<string, Bonus[]> = {
                 </span>
             ),
             icon: '/images/skill-icons/constellations/hu-tao-constellation2.png',
-            effect: (baseStats) => {
-                baseStats['Elemental Skill Additive Bonus'] = 10
-                return baseStats
+            effect: (baseStats, currentStacks, activeSkills, initialBaseStats) => {
+                if (!initialBaseStats) return baseStats
+                const newBaseStats = { ...baseStats }
+                newBaseStats['Elemental Skill Additive Bonus'] = initialBaseStats[
+                    'Elemental Skill Additive Bonus'
+                ] + 10
+                return newBaseStats
             },
         },
         {
@@ -61,6 +69,7 @@ const constellationBonuses: Record<string, Bonus[]> = {
             ),
             icon: '/images/skill-icons/constellations/hu-tao-constellation4.png',
             effect: (baseStats) => {
+                // TODO: Handle
                 return baseStats
             },
         },

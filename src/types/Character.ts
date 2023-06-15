@@ -55,13 +55,15 @@ export interface Bonus {
     affectsAbilityIndex?: number
     applyToAbilityScaling?: (abilityScaling: AbilityScaling) => void
     minConstellation?: number
+    enabled?: boolean
 }
 
 export interface Effect {
     (
         baseStats: NewBaseStat,
         currentStacks?: number,
-        activeSkills?: string[]
+        activeSkills?: string[],
+        initialBaseStats?: NewBaseStat
     ): NewBaseStat
 }
 

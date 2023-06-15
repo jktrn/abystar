@@ -41,7 +41,11 @@ export default function Home() {
     const constellationOptions = getConstellationOptions(character)
 
     const [activeConstellations, setActiveConstellations] = useState<Bonus[]>([])
-    const [activeBonuses, setActiveBonuses] = useState<Bonus[]>([])
+
+    const defaultActiveBonuses = characterBonuses[character.name].filter(
+        (bonus) => bonus.enabled
+    )
+    const [activeBonuses, setActiveBonuses] = useState<Bonus[]>(defaultActiveBonuses)
     const [activeSkills, setActiveSkills] = useState<string[]>([
         'Lv10', // Normal Attack
         'Lv10', // Elemental Skill

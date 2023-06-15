@@ -1,9 +1,9 @@
 import { Bonus, Character } from '@/types/Character'
+import { elementColors } from '@/utils'
 import Image from 'next/image'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Switch from 'react-switch'
 import CustomSelect from './CustomSelect'
-import { elementColors } from '@/utils'
 
 interface CharacterBonusToggleProps {
     character: Character
@@ -18,12 +18,16 @@ const CharacterBonusToggle = ({
     onToggle,
     constellation,
 }: CharacterBonusToggleProps) => {
-    const [currentStacks, setCurrentStacks] = useState(0)
+    const [currentStacks, setCurrentStacks] = useState(bonus.enabled ? 1 : 0)
 
     const handleCurrentStacksChange = (newCurrentStacks: number) => {
         setCurrentStacks(newCurrentStacks)
         onToggle(bonus, newCurrentStacks)
     }
+
+    useEffect(() => {
+        onToggle(bonus, currentStacks)
+    }, [])
 
     const isDisabled = Boolean(
         bonus.minConstellation && bonus.minConstellation > constellation

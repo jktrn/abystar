@@ -38,7 +38,7 @@ const damageFormula = (
                 0
             ) +
             baseStatValues.reduce((acc, statValue) => acc + statValue, 0) *
-                (additiveBonusStatValue / 100)
+                additiveBonusStatValue
 
         const nonCritDamage =
             baseDamage *
@@ -59,6 +59,7 @@ const damageFormula = (
                     (baseStats['CRIT DMG'] / 100)) *
             (enemyResistances.defenseMultiplier / 100) *
             (enemyResistances.resistance / 100)
+
         return {
             nonCritDamage,
             critDamage,

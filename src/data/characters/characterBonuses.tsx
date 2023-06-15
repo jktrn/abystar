@@ -15,8 +15,8 @@ const characterBonuses: Record<string, Bonus[]> = {
                 </span>
             ),
             icon: '/images/skill-icons/skills/hu-tao-skill.png',
-            effect: (baseStats, currentStacks, activeSkills) => {
-                if (!activeSkills) return baseStats
+            effect: (baseStats, currentStacks, activeSkills, initialBaseStats) => {
+                if (!activeSkills || !initialBaseStats) return baseStats
                 const skillData: any = characterData['Hu Tao'].activeSkills.find(
                     (skill) => skill.name === 'Guide to Afterlife'
                 )?.data
@@ -28,15 +28,16 @@ const characterBonuses: Record<string, Bonus[]> = {
 
                 const bonusFloat = bonusString ? parseFloat(bonusString[0]) : null
 
+                const newBaseStats = { ...baseStats }
                 if (bonusFloat) {
-                    let bonus = baseStats['HP'] * (bonusFloat / 100)
-                    const maxBonus = baseStats['ATK'] * 4
+                    let bonus = initialBaseStats['HP'] * (bonusFloat / 100)
+                    const maxBonus = initialBaseStats['ATK'] * 4
                     if (bonus > maxBonus) {
                         bonus = maxBonus
                     }
-                    baseStats['ATK'] += bonus
+                    newBaseStats['ATK'] = initialBaseStats['ATK'] + bonus
                 }
-                return baseStats
+                return newBaseStats
             },
             affectsAbilityIndex: 0,
             applyToAbilityScaling: (abilityScaling) => {
@@ -61,6 +62,7 @@ const characterBonuses: Record<string, Bonus[]> = {
                     chargedAttackScaling.push('Crimson Bouquet Stamina Reduction')
                 }
             },
+            enabled: true,
         },
         {
             name: 'Sanguine Rogue',
@@ -71,9 +73,12 @@ const characterBonuses: Record<string, Bonus[]> = {
                 </span>
             ),
             icon: '/images/skill-icons/passives/hu-tao-passive2.png',
-            effect: (baseStats) => {
-                baseStats['Pyro DMG Bonus'] += 33
-                return baseStats
+            effect: (baseStats, currentStacks, activeSkills, initialBaseStats) => {
+                if (!initialBaseStats) return baseStats
+                const newBaseStats = { ...baseStats }
+                newBaseStats['Pyro DMG Bonus'] =
+                    initialBaseStats['Pyro DMG Bonus'] + 33
+                return newBaseStats
             },
         },
         {
@@ -86,22 +91,54 @@ const characterBonuses: Record<string, Bonus[]> = {
                 </span>
             ),
             icon: '/images/skill-icons/constellations/hu-tao-constellation6.png',
-            effect: (baseStats) => {
-                baseStats['Pyro RES'] += 200
-                baseStats['Cryo RES'] += 200
-                baseStats['Electro RES'] += 200
-                baseStats['Hydro RES'] += 200
-                baseStats['Geo RES'] += 200
-                baseStats['Anemo RES'] += 200
-                baseStats['Dendro RES'] += 200
-                baseStats['Physical RES'] += 200
-                baseStats['CRIT Rate'] += 100
-                return baseStats
+            effect: (baseStats, currentStacks, activeSkills, initialBaseStats) => {
+                if(!initialBaseStats) return baseStats
+                const newBaseStats = { ...baseStats }
+                newBaseStats['Pyro RES'] = initialBaseStats['Pyro RES'] + 200
+                newBaseStats['Cryo RES'] = initialBaseStats['Cryo RES'] + 200
+                newBaseStats['Electro RES'] = initialBaseStats['Electro RES'] + 200
+                newBaseStats['Hydro RES'] = initialBaseStats['Hydro RES'] + 200
+                newBaseStats['Geo RES'] = initialBaseStats['Geo RES'] + 200
+                newBaseStats['Anemo RES'] = initialBaseStats['Anemo RES'] + 200
+                newBaseStats['Dendro RES'] = initialBaseStats['Dendro RES'] + 200
+                newBaseStats['Physical RES'] = initialBaseStats['Physical RES'] + 200
+                newBaseStats['CRIT Rate'] = initialBaseStats['CRIT Rate'] + 100
+                return newBaseStats
             },
             minConstellation: 6,
         },
     ],
     Nahida: [
+        {
+            name: 'Awakening Elucidated',
+            description: (
+                <span>
+                    Each point of Nahida's EM beyond 200 will grant 0.1% Bonus DMG
+                    and 0.03% CRIT Rate to <b>Tri-Karma Purification</b> (Elemental
+                    Skill) (capped at 80% Bonus DMG and 24% CRIT Rate)
+                </span>
+            ),
+            icon: '/images/skill-icons/passives/nahida-passive2.png',
+            effect: (baseStats, currentStacks, activeSkills, initialBaseStats) => {
+                if (!initialBaseStats) return baseStats
+                const bonusDMG = Math.min(
+                    80,
+                    Math.max(0, baseStats['Elemental Mastery'] - 200) * 0.1
+                )
+                const critRate = Math.min(
+                    24,
+                    Math.max(0, baseStats['Elemental Mastery'] - 200) * 0.03
+                )
+                const newBaseStats = { ...baseStats }
+                newBaseStats['Tri-Karma Purification DMG Bonus'] =
+                    (initialBaseStats['Tri-Karma Purification DMG Bonus'] || 0) +
+                    bonusDMG
+                newBaseStats['Elemental Skill CRIT Rate'] =
+                    initialBaseStats['Elemental Skill CRIT Rate'] + critRate
+                return newBaseStats
+            },
+            enabled: true,
+        },
         {
             name: 'Compassion Illuminated',
             description: (
@@ -111,40 +148,17 @@ const characterBonuses: Record<string, Bonus[]> = {
                 </span>
             ),
             icon: '/images/skill-icons/passives/nahida-passive1.png',
-            effect: (baseStats, currentStacks) => {
-                if (!currentStacks) return baseStats
+            effect: (baseStats, currentStacks, activeSkills, initialBaseStats) => {
+                if (!currentStacks || !initialBaseStats) return baseStats
+                const newBaseStats = { ...baseStats }
                 const elementalMasteryOptions = [0, 125, 150, 175, 200, 225, 250]
-                baseStats['Elemental Mastery'] +=
+                newBaseStats['Elemental Mastery'] =
+                    initialBaseStats['Elemental Mastery'] +
                     elementalMasteryOptions[currentStacks]
-                return baseStats
+                return newBaseStats
             },
             maxStacks: 6,
             stackOptions: ['Off', '125', '150', '175', '200', '225', '250'],
-        },
-        {
-            name: 'Awakening Elucidated',
-            description: (
-                <span>
-                    Each point of Nahida&apos;s EM beyond 200 will grant 0.1% Bonus
-                    DMG and 0.03% CRIT Rate to <b>Tri-Karma Purification</b>{' '}
-                    (Elemental Skill) (capped at 80% Bonus DMG and 24% CRIT Rate)
-                </span>
-            ),
-            icon: '/images/skill-icons/passives/nahida-passive2.png',
-            effect: (baseStats) => {
-                const bonusDMG = Math.min(
-                    80,
-                    Math.max(0, baseStats['Elemental Mastery'] - 200) * 0.1
-                )
-                const critRate = Math.min(
-                    24,
-                    Math.max(0, baseStats['Elemental Mastery'] - 200) * 0.03
-                )
-                baseStats['Tri-Karma Purification DMG Bonus'] =
-                    (baseStats['Tri-Karma Purification DMG Bonus'] || 0) + bonusDMG
-                baseStats['Elemental Skill CRIT Rate'] += critRate
-                return baseStats
-            },
         },
         {
             name: 'The Root of All Fullness',
@@ -177,10 +191,11 @@ const characterBonuses: Record<string, Bonus[]> = {
             icon: '/images/skill-icons/constellations/nahida-constellation4.png',
             effect: (baseStats, currentStacks) => {
                 if (!currentStacks) return baseStats
+                const newBaseStats = { ...baseStats }
                 const elementalMasteryOptions = [0, 100, 120, 140, 160]
-                baseStats['Elemental Mastery'] +=
+                newBaseStats['Elemental Mastery'] +=
                     elementalMasteryOptions[currentStacks]
-                return baseStats
+                return newBaseStats
             },
             minConstellation: 4,
             maxStacks: 4,
