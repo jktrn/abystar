@@ -1,6 +1,7 @@
 export { default as AttributesTable } from './attributes/AttributesTable'
 export { default as ActiveSkillsSelect } from './character/ActiveSkillsSelect'
 export { default as CharacterBonusToggle } from './character/CharacterBonusToggle'
+export { default as CharacterBonuses } from './character/CharacterBonuses'
 export { default as ConstellationPopover } from './character/ConstellationPopover'
 export { default as CustomSelect } from './character/CustomSelect'
 export { default as CharacterImage } from './character/modal/CharacterImage'

@@ -36,9 +36,7 @@ const damageFormula = (
                 (acc, statValue, index) =>
                     acc + statValue * (scalingValues[index] / 100),
                 0
-            ) +
-            baseStatValues.reduce((acc, statValue) => acc + statValue, 0) *
-                additiveBonusStatValue
+            ) + additiveBonusStatValue
 
         const nonCritDamage =
             baseDamage *

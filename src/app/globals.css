@@ -60,3 +60,11 @@ body {
 .unimplemented {
     @apply text-main-700 bg-red-400 rounded-md py-[1px] px-1.5;
 }
+
+.hidden-bonuses {
+    @apply overflow-hidden transition-all duration-300 ease-in-out h-0 opacity-0;
+}
+
+.hidden-bonuses.expanded {
+    @apply h-auto opacity-100;
+}

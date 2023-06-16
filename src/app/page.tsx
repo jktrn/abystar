@@ -6,7 +6,7 @@ import { useState } from 'react'
 import {
     ActiveSkillsSelect,
     AttributesTable,
-    CharacterBonusToggle,
+    CharacterBonuses,
     CharacterImage,
     CharacterModal,
     ConstellationPopover,
@@ -23,7 +23,6 @@ import {
     displayStats,
     getConstellationOptions,
     getLevelOptions,
-    handleBonusToggle,
     handleConstellationChange,
     handleLevelChange,
     useActiveConstellations,
@@ -47,9 +46,9 @@ export default function Home() {
     )
     const [activeBonuses, setActiveBonuses] = useState<Bonus[]>(defaultActiveBonuses)
     const [activeSkills, setActiveSkills] = useState<string[]>([
-        'Lv10', // Normal Attack
-        'Lv10', // Elemental Skill
-        'Lv10', // Elemental Burst
+        'Lv10',
+        'Lv10',
+        'Lv10',
     ])
 
     const characters = Object.values(characterData) as Character[]
@@ -156,27 +155,12 @@ export default function Home() {
                                 setActiveSkills={setActiveSkills}
                             />
                         </div>
-                        {characterBonuses[character.name] && (
-                            <div className="mt-4 flex flex-col gap-2">
-                                {characterBonuses[character.name].map((bonus) => (
-                                    <CharacterBonusToggle
-                                        character={character}
-                                        key={bonus.name}
-                                        bonus={bonus}
-                                        onToggle={(bonus, bonusStacks) =>
-                                            handleBonusToggle(
-                                                bonus,
-                                                bonusStacks,
-                                                activeBonuses,
-                                                setActiveBonuses,
-                                                constellation
-                                            )
-                                        }
-                                        constellation={constellation}
-                                    />
-                                ))}
-                            </div>
-                        )}
+                        <CharacterBonuses
+                            character={character}
+                            activeBonuses={activeBonuses}
+                            setActiveBonuses={setActiveBonuses}
+                            constellation={constellation}
+                        />
                     </div>
 
                     <h2 className="bg-main-800 px-4 py-3 text-lg font-bold">

@@ -1,6 +1,14 @@
 import { Bonus, FormulaType } from '@/types/Character'
 import { characterData } from '@/data'
 
+interface SkillData {
+    [key: string]:
+        | {
+              [key: string]: string | undefined
+          }
+        | undefined
+}
+
 const characterBonuses: Record<string, Bonus[]> = {
     'Hu Tao': [
         {
@@ -62,7 +70,6 @@ const characterBonuses: Record<string, Bonus[]> = {
                     chargedAttackScaling.push('Crimson Bouquet Stamina Reduction')
                 }
             },
-            enabled: true,
             dependencies: ['HP'],
         },
         {
@@ -132,14 +139,77 @@ const characterBonuses: Record<string, Bonus[]> = {
                 )
                 const newBaseStats = { ...baseStats }
                 newBaseStats['Tri-Karma Purification DMG Bonus'] =
-                    (initialBaseStats['Tri-Karma Purification DMG Bonus'] || 0) +
-                    bonusDMG
+                    (baseStats['Tri-Karma Purification DMG Bonus'] || 0) + bonusDMG
                 newBaseStats['Elemental Skill CRIT Rate'] =
                     initialBaseStats['Elemental Skill CRIT Rate'] + bonusCritRate
                 return newBaseStats
             },
             enabled: true,
             dependencies: ['Elemental Mastery'],
+        },
+        {
+            name: 'Illusory Heart',
+            description: (
+                <span>
+                    Applies effects based on party's elements. <br />
+                    <span style={{ color: '#bf612d' }}>Pyro</span>: Tri-Karma
+                    Purification DMG increased;{' '}
+                    <span style={{ color: '#3d9bc1' }}>Hydro</span>: Shrine of Maya's
+                    duration increased;{' '}
+                    <span style={{ color: '#b45bff' }}>Electro</span>: Tri-Karma
+                    Purification Trigger Interval decreased
+                </span>
+            ),
+            icon: '/images/skill-icons/bursts/nahida-burst.png',
+            effect: (baseStats, currentStacks, activeSkills, initialBaseStats) => {
+                if (!activeSkills || !initialBaseStats || !currentStacks)
+                    return baseStats
+                const newBaseStats = { ...baseStats }
+                const skillData: SkillData | undefined = characterData[
+                    'Nahida'
+                ].activeSkills.find((skill) => skill.name === 'Illusory Heart')?.data
+                const effectKeys = [
+                    'Pyro: DMG Bonus (1 Character)',
+                    'Pyro: DMG Bonus (2 Characters)',
+                    'Hydro: Duration Extension (1 Character)',
+                    'Hydro: Duration Extension (2 Characters)',
+                    'Electro: Trigger Interval Decrease (1 Character)',
+                    'Electro: Trigger Interval Decrease (2 Characters)',
+                ]
+                const effectMultipliers = effectKeys.map((key) => {
+                    const value = skillData?.[key]?.[activeSkills[2]]
+                    const bonusString = value
+                        ? value.match(/\d+(\.\d+)?/)?.[0]
+                        : null
+                    return bonusString ? parseFloat(bonusString) : 0
+                })
+
+                if (currentStacks === 1 || currentStacks === 2) {
+                    newBaseStats['Tri-Karma Purification DMG Bonus'] =
+                        (baseStats['Tri-Karma Purification DMG Bonus'] || 0) +
+                        effectMultipliers[currentStacks - 1]
+                } else if (currentStacks === 3 || currentStacks === 4) {
+                    newBaseStats['Shrine of Maya Duration Bonus'] =
+                        (initialBaseStats['Shrine of Maya Duration Bonus'] || 0) +
+                        effectMultipliers[currentStacks - 1]
+                } else if (currentStacks === 5 || currentStacks === 6) {
+                    newBaseStats['Tri-Karma Purification Trigger Interval'] =
+                        (initialBaseStats[
+                            'Tri-Karma Purification Trigger Interval'
+                        ] || 0) - effectMultipliers[currentStacks - 1]
+                }
+                return newBaseStats
+            },
+            maxStacks: 6,
+            stackOptions: [
+                'Off',
+                'Pyro (1)',
+                'Pyro (2)',
+                'Hydro (1)',
+                'Hydro (2)',
+                'Electro (1)',
+                'Electro (2)',
+            ],
         },
         {
             name: 'Compassion Illuminated',

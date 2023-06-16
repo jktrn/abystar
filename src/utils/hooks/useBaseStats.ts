@@ -23,7 +23,7 @@ export default function useBaseStats(
     let appliedBonuses: Bonus[] = [...activeBonuses, ...activeConstellations]
     let redoBonuses: Bonus[] = []
     let dependencyMap: { [key: string]: Bonus[] } = {}
-    
+
     while (hasChanged && maxIterations--) {
         hasChanged = false
         for (const bonus of appliedBonuses) {

@@ -23,7 +23,7 @@ const genericFormulaWithoutScaling = (
         )
 
         const outputValue =
-            (scalingValue + additiveBonusStatValue / 100) *
+            (scalingValue + additiveBonusStatValue) *
             (1 + multiplicativeBonusStatValue / 100)
 
         return {

@@ -21022,7 +21022,24 @@
                 "image": "https://genshin.honeyhunterworld.com/img/s_733901.webp",
                 "description": "Manifests the Court of Dreams and expands the Shrine of Maya.\nWhen the Shrine of Maya field is unleashed, the following effects will be separately unleashed based on the Elemental Types present within the party.\n\u00b7\nPyro\n: While Nahida remains within the Shrine of Maya, the DMG dealt by Tri-Karma Purification from \"All Schemes to Know\" is increased.\n\u00b7\nElectro\n: While Nahida remains within the Shrine of Maya, the interval between each Tri-Karma Purification from \"All Schemes to Know\" is decreased.\n\u00b7\nHydro\n: The Shrine of Maya's duration is increased.\nIf there are at least 2 party members of the aforementioned Elemental Types present when the field is deployed, the aforementioned effects will be increased further.\nEven if Nahida is not on the field, these bonuses will still take effect so long as party members are within the Shrine of Maya.\nPerhaps all that dwell under the bowers of trees are naught but a fleeting upside-down dream in the eyes of the God of Wisdom.",
                 "data": {
-                    "Pyro: DMG Bonus": {
+                    "Pyro: DMG Bonus (1 Character)": {
+                        "Lv1": "14.88%",
+                        "Lv2": "16%",
+                        "Lv3": "17.11%",
+                        "Lv4": "18.6%",
+                        "Lv5": "19.72%",
+                        "Lv6": "20.83%",
+                        "Lv7": "22.32%",
+                        "Lv8": "23.81%",
+                        "Lv9": "25.3%",
+                        "Lv10": "26.78%",
+                        "Lv11": "28.27%",
+                        "Lv12": "29.76%",
+                        "Lv13": "31.62%",
+                        "Lv14": "33.48%",
+                        "Lv15": "35.34%"
+                    },
+                    "Pyro: DMG Bonus (2 Characters)": {
                         "Lv1": "22.32%",
                         "Lv2": "23.99%",
                         "Lv3": "25.67%",
@@ -21039,7 +21056,24 @@
                         "Lv14": "50.22%",
                         "Lv15": "53.01%"
                     },
-                    "Electro: Trigger Interval Decrease": {
+                    "Electro: Trigger Interval Decrease (1 Character)": {
+                        "Lv1": "0.25s",
+                        "Lv2": "0.27s",
+                        "Lv3": "0.29s",
+                        "Lv4": "0.31s",
+                        "Lv5": "0.33s",
+                        "Lv6": "0.35s",
+                        "Lv7": "0.37s",
+                        "Lv8": "0.4s",
+                        "Lv9": "0.42s",
+                        "Lv10": "0.45s",
+                        "Lv11": "0.47s",
+                        "Lv12": "0.5s",
+                        "Lv13": "0.53s",
+                        "Lv14": "0.56s",
+                        "Lv15": "0.59s"
+                    },
+                    "Electro: Trigger Interval Decrease (2 Characters)": {
                         "Lv1": "0.37s",
                         "Lv2": "0.4s",
                         "Lv3": "0.43s",
@@ -21056,7 +21090,24 @@
                         "Lv14": "0.84s",
                         "Lv15": "0.88s"
                     },
-                    "Hydro: Duration Extension": {
+                    "Hydro: Duration Extension (1 Character)": {
+                        "Lv1": "3.34s",
+                        "Lv2": "3.59s",
+                        "Lv3": "3.85s",
+                        "Lv4": "4.18s",
+                        "Lv5": "4.43s",
+                        "Lv6": "4.68s",
+                        "Lv7": "5.02s",
+                        "Lv8": "5.35s",
+                        "Lv9": "5.68s",
+                        "Lv10": "6.02s",
+                        "Lv11": "6.35s",
+                        "Lv12": "6.69s",
+                        "Lv13": "7.11s",
+                        "Lv14": "7.52s",
+                        "Lv15": "7.94s"
+                    },
+                    "Hydro: Duration Extension (2 Characters)": {
                         "Lv1": "5.02s",
                         "Lv2": "5.39s",
                         "Lv3": "5.77s",

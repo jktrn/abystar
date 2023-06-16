@@ -1,7 +1,7 @@
 import { Bonus, Character } from '@/types/Character'
 import { elementColors } from '@/utils'
 import Image from 'next/image'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import Switch from 'react-switch'
 import CustomSelect from './CustomSelect'
 
