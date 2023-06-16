@@ -43,7 +43,7 @@ const characterBonuses: Record<string, Bonus[]> = {
             applyToAbilityScaling: (abilityScaling) => {
                 const normalAttackScaling =
                     abilityScaling['Hu Tao'][
-                    'Normal Attack: Secret Spear of Wangsheng'
+                        'Normal Attack: Secret Spear of Wangsheng'
                     ]
                 if (normalAttackScaling) {
                     Object.values(normalAttackScaling).forEach((aspect) => {
@@ -63,6 +63,7 @@ const characterBonuses: Record<string, Bonus[]> = {
                 }
             },
             enabled: true,
+            dependencies: ['HP'],
         },
         {
             name: 'Sanguine Rogue',
@@ -176,6 +177,7 @@ const characterBonuses: Record<string, Bonus[]> = {
             ),
             icon: '/images/skill-icons/constellations/nahida-constellation2.png',
             effect: (baseStats) => {
+                // TODO: Implement
                 return baseStats
             },
             minConstellation: 2,

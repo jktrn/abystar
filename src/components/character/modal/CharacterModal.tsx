@@ -117,6 +117,7 @@ const CharacterModal = ({
                                             : 'pointer-events-none opacity-50'
                                     }`}
                                     boxSize="70px"
+                                    placeholder="blur"
                                 />
                             ))}
                         </Flex>
