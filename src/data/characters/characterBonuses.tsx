@@ -151,10 +151,10 @@ const characterBonuses: Record<string, Bonus[]> = {
             name: 'Illusory Heart',
             description: (
                 <span>
-                    Applies effects based on party's elements. <br />
+                    Applies effects based on party&apos;s elements. <br />
                     <span style={{ color: '#bf612d' }}>Pyro</span>: Tri-Karma
                     Purification DMG increased;{' '}
-                    <span style={{ color: '#3d9bc1' }}>Hydro</span>: Shrine of Maya's
+                    <span style={{ color: '#3d9bc1' }}>Hydro</span>: Shrine of Maya&apos;s
                     duration increased;{' '}
                     <span style={{ color: '#b45bff' }}>Electro</span>: Tri-Karma
                     Purification Trigger Interval decreased
