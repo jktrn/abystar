@@ -20,16 +20,21 @@ const CharacterBonuses = ({
 }: CharacterBonusesProps) => {
     const [isHiddenCollapsed, setIsHiddenCollapsed] = useState(true)
 
+    const allBonuses = characterBonuses[character.name]
+    const hiddenBonuses = allBonuses.filter(
+        (bonus) =>
+            bonus.enabled ||
+            (bonus.minConstellation && bonus.minConstellation > constellation)
+    )
+    const visibleBonuses = allBonuses.filter(
+        (bonus) =>
+            !bonus.enabled &&
+            (!bonus.minConstellation || bonus.minConstellation <= constellation)
+    )
+
     useEffect(() => {
         setIsHiddenCollapsed(true)
     }, [character])
-
-    const hiddenBonuses = characterBonuses[character.name].filter(
-        (bonus) => bonus.enabled
-    )
-    const visibleBonuses = characterBonuses[character.name].filter(
-        (bonus) => !bonus.enabled
-    )
 
     const handleCollapseClick = () => {
         const hiddenBonusesElement = document.getElementById('hidden-bonuses')
