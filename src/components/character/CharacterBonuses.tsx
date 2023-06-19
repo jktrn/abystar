@@ -3,124 +3,134 @@ import { characterBonuses } from '@/data'
 import { Bonus, Character } from '@/types/Character'
 import { handleBonusToggle } from '@/utils'
 import { ChevronDownIcon, ChevronUpIcon } from '@chakra-ui/icons'
-import { Fragment, useEffect, useState } from 'react'
+import { Fragment, useRef, useEffect, useState } from 'react'
 
 interface CharacterBonusesProps {
-    character: Character
-    activeBonuses: Bonus[]
-    setActiveBonuses: (bonuses: Bonus[]) => void
-    constellation: number
+  character: Character
+  activeBonuses: Bonus[]
+  setActiveBonuses: (bonuses: Bonus[]) => void
+  constellation: number
 }
 
 const CharacterBonuses = ({
-    character,
-    activeBonuses,
-    setActiveBonuses,
-    constellation,
+  character,
+  activeBonuses,
+  setActiveBonuses,
+  constellation,
 }: CharacterBonusesProps) => {
-    const [isHiddenCollapsed, setIsHiddenCollapsed] = useState(true)
+  const hiddenBonusesRef = useRef<HTMLDivElement>(null)
+  const [isHiddenCollapsed, setIsHiddenCollapsed] = useState(true)
+  const [hiddenBonuses, setHiddenBonuses] = useState<Bonus[]>([])
 
-    const allBonuses = characterBonuses[character.name]
-    const hiddenBonuses = allBonuses.filter(
+  const allBonuses = characterBonuses[character.name]
+  const visibleBonuses = allBonuses.filter(
+    (bonus) =>
+      !bonus.enabled &&
+      (!bonus.minConstellation || bonus.minConstellation <= constellation)
+  )
+
+  useEffect(() => {
+    setHiddenBonuses(
+      allBonuses.filter(
         (bonus) =>
-            bonus.enabled ||
-            (bonus.minConstellation && bonus.minConstellation > constellation)
+          bonus.enabled ||
+          (bonus.minConstellation && bonus.minConstellation > constellation)
+      )
     )
-    const visibleBonuses = allBonuses.filter(
-        (bonus) =>
-            !bonus.enabled &&
-            (!bonus.minConstellation || bonus.minConstellation <= constellation)
-    )
+  }, [character, constellation])
 
-    useEffect(() => {
-        setIsHiddenCollapsed(true)
-    }, [character])
-
-    const handleCollapseClick = () => {
-        const hiddenBonusesElement = document.getElementById('hidden-bonuses')
-        if (hiddenBonusesElement) {
-            if (hiddenBonusesElement.classList.contains('expanded')) {
-                hiddenBonusesElement.style.height = `${hiddenBonusesElement.scrollHeight}px`
-                requestAnimationFrame(() => {
-                    hiddenBonusesElement.classList.remove('expanded')
-                    hiddenBonusesElement.style.height = '0'
-                    hiddenBonusesElement.style.opacity = '0'
-                })
-            } else {
-                hiddenBonusesElement.style.height = 'auto'
-                const scrollHeight = hiddenBonusesElement.scrollHeight
-                hiddenBonusesElement.style.height = '0'
-                requestAnimationFrame(() => {
-                    hiddenBonusesElement.classList.add('expanded')
-                    hiddenBonusesElement.style.height = `${scrollHeight}px`
-                    hiddenBonusesElement.style.opacity = '1'
-                })
-            }
-        }
-        setIsHiddenCollapsed(!isHiddenCollapsed)
+  useEffect(() => {
+    const hiddenBonusesElement = hiddenBonusesRef.current
+    if (hiddenBonusesElement) {
+      if (isHiddenCollapsed) {
+        hiddenBonusesElement.style.height = '0'
+        hiddenBonusesElement.style.opacity = '0'
+      } else {
+        hiddenBonusesElement.style.height = 'auto'
+        const scrollHeight = hiddenBonusesElement.scrollHeight
+        hiddenBonusesElement.style.height = '0'
+        hiddenBonusesElement.style.opacity = '0'
+        setTimeout(() => {
+          hiddenBonusesElement.style.height = `${scrollHeight}px`
+          hiddenBonusesElement.style.opacity = '1'
+        }, 0)
+      }
     }
+  }, [isHiddenCollapsed, hiddenBonuses.length])
 
-    return (
-        <div className="mt-4 flex flex-col gap-2">
-            {visibleBonuses.map((bonus) => (
-                <CharacterBonusToggle
-                    character={character}
-                    key={bonus.name}
-                    bonus={bonus}
-                    onToggle={(bonus, bonusStacks) =>
-                        handleBonusToggle(
-                            bonus,
-                            bonusStacks,
-                            activeBonuses,
-                            setActiveBonuses,
-                            constellation
-                        )
-                    }
-                    constellation={constellation}
-                />
-            ))}
+  const handleCollapseClick = () => {
+    setIsHiddenCollapsed(!isHiddenCollapsed)
+  }
 
-            {hiddenBonuses.length > 0 && (
-                <Fragment>
-                    <button
-                        onClick={handleCollapseClick}
-                        className="w-full rounded-md bg-main-700 py-2"
-                    >
-                        {isHiddenCollapsed ? (
-                            <Fragment>
-                                Show Hidden Bonuses{' '}
-                                <ChevronDownIcon className="inline-block h-5 w-5" />
-                            </Fragment>
-                        ) : (
-                            <Fragment>
-                                Hide Hidden Bonuses{' '}
-                                <ChevronUpIcon className="inline-block h-5 w-5" />
-                            </Fragment>
-                        )}
-                    </button>
-                    <div id="hidden-bonuses" className="hidden-bonuses">
-                        {hiddenBonuses.map((bonus) => (
-                            <CharacterBonusToggle
-                                character={character}
-                                key={bonus.name}
-                                bonus={bonus}
-                                onToggle={(bonus, bonusStacks) =>
-                                    handleBonusToggle(
-                                        bonus,
-                                        bonusStacks,
-                                        activeBonuses,
-                                        setActiveBonuses,
-                                        constellation
-                                    )
-                                }
-                                constellation={constellation}
-                            />
-                        ))}
-                    </div>
-                </Fragment>
+  return (
+    <div className="mt-4 flex flex-col gap-2">
+      {visibleBonuses.map((bonus) => (
+        <CharacterBonusToggle
+          character={character}
+          key={bonus.name}
+          bonus={bonus}
+          onToggle={(bonus, bonusStacks) =>
+            handleBonusToggle(
+              bonus,
+              bonusStacks,
+              activeBonuses,
+              setActiveBonuses,
+              constellation
+            )
+          }
+          constellation={constellation}
+        />
+      ))}
+
+      {hiddenBonuses.length > 0 && (
+        <Fragment>
+          <button
+            onClick={handleCollapseClick}
+            className="w-full rounded-md bg-main-700 py-2"
+          >
+            {isHiddenCollapsed ? (
+              <Fragment>
+                Show Hidden Bonuses{' '}
+                <ChevronDownIcon className="inline-block h-5 w-5" />
+              </Fragment>
+            ) : (
+              <Fragment>
+                Hide Hidden Bonuses{' '}
+                <ChevronUpIcon className="inline-block h-5 w-5" />
+              </Fragment>
             )}
-        </div>
-    )
+          </button>
+          <div
+            id="hidden-bonuses"
+            className="hidden-bonuses"
+            ref={hiddenBonusesRef}
+            style={{
+              height: isHiddenCollapsed ? '0' : 'auto',
+              opacity: isHiddenCollapsed ? '0' : '1',
+            }}
+          >
+            {hiddenBonuses.map((bonus) => (
+              <CharacterBonusToggle
+                character={character}
+                key={bonus.name}
+                bonus={bonus}
+                onToggle={(bonus, bonusStacks) =>
+                  handleBonusToggle(
+                    bonus,
+                    bonusStacks,
+                    activeBonuses,
+                    setActiveBonuses,
+                    constellation
+                  )
+                }
+                constellation={constellation}
+              />
+            ))}
+          </div>
+        </Fragment>
+      )}
+    </div>
+  )
 }
 
 export default CharacterBonuses
