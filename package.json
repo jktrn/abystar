@@ -34,7 +34,7 @@
     "devDependencies": {
         "@semantic-release/git": "^10.0.1",
         "@semantic-release/github": "^9.0.3",
-        "@types/react": "^18.2.7",
+        "@types/react": "^18.2.16",
         "@types/react-table": "^7.7.14",
         "prettier": "^2.8.8",
         "prettier-plugin-tailwindcss": "^0.3.0",
