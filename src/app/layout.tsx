@@ -1,5 +1,3 @@
-'use client'
-
 import { JetBrains_Mono } from 'next/font/google'
 import { ThemeProvider } from '@/components'
 import './globals.css'
