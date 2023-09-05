@@ -1,7 +1,12 @@
-import { selectStyles } from '@/styles'
 import { Character } from '@/types/Character'
 import { Image } from '@chakra-ui/react'
-import Select from 'react-select'
+import {
+    Select as ShadcnSelect,
+    SelectContent,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+} from '@/components/ui/select'
 
 interface ActiveSkillsSelectProps {
     character: Character
@@ -38,25 +43,28 @@ const ActiveSkillsSelect = ({
                             src={skillIcons[index]}
                             alt={skill.name}
                             sizes="100%"
-                            className="rounded-full bg-main-700 object-cover p-1"
+                            className="rounded-full bg-secondary/25 object-cover p-1"
                         />
                     </div>
-                    <Select
-                        instanceId={`active-skill-${index}-select`}
-                        options={activeSkillOptions}
-                        defaultValue={{
-                            value: activeSkills[index],
-                            label: activeSkills[index],
-                        }}
-                        onChange={(value) => {
+                    <ShadcnSelect
+                        onValueChange={(value: any) => {
                             const newActiveSkills = [...activeSkills]
-                            newActiveSkills[index] = value?.label ?? ''
+                            newActiveSkills[index] = `Lv${value}` ?? ''
                             setActiveSkills(newActiveSkills)
+                            console.log(newActiveSkills)
                         }}
-                        className="md:w-full"
-                        styles={selectStyles}
-                        isSearchable={false}
-                    />
+                    >
+                        <SelectTrigger>
+                            <SelectValue placeholder={activeSkills[index]} />
+                        </SelectTrigger>
+                        <SelectContent>
+                            {activeSkillOptions.map((option) => (
+                                <SelectItem key={option.value} value={option.value}>
+                                    {option.label}
+                                </SelectItem>
+                            ))}
+                        </SelectContent>
+                    </ShadcnSelect>
                 </div>
             ))}
         </div>

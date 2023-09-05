@@ -62,9 +62,11 @@ const ResultsTable: React.FC<ResultsTableProps> = ({ damageResults }) => {
             })
             skill.aspects.forEach((aspect: Aspect) => {
                 if (
+                    aspect.damage &&
                     'outputValue' in aspect.damage &&
                     'outputType' in aspect.damage
                 ) {
+                
                     const outputValue =
                         aspect.damage.outputType === FormulaOutputType.Time
                             ? `${aspect.damage.outputValue?.toFixed(1)}s`
@@ -112,7 +114,7 @@ const ResultsTable: React.FC<ResultsTableProps> = ({ damageResults }) => {
                         {headerGroup.headers.map((column) => (
                             <th
                                 key={column.id}
-                                className={`border-b border-main-700 pb-2 font-bold ${
+                                className={`border-b py-2 font-bold ${
                                     column.id === 'nonCrit' ||
                                     column.id === 'crit' ||
                                     column.id === 'average'
@@ -134,7 +136,7 @@ const ResultsTable: React.FC<ResultsTableProps> = ({ damageResults }) => {
                             {row.original.nonCrit === '' ? (
                                 <td
                                     colSpan={4}
-                                    className="border-b border-main-700 bg-main-800 px-2 py-1 font-bold"
+                                    className="border-b bg-secondary/25 px-2 py-1 font-bold"
                                 >
                                     {row.cells[0].render('Cell')}
                                 </td>
@@ -142,9 +144,9 @@ const ResultsTable: React.FC<ResultsTableProps> = ({ damageResults }) => {
                                 row.cells.map((cell) => (
                                     <td
                                         key={cell.getCellProps().key}
-                                        className={`border-b border-main-700 py-1 ${
+                                        className={`border-b py-1 ${
                                             row.original.nonCrit === ''
-                                                ? `bg-main-800 px-2 font-bold`
+                                                ? `px-2 font-bold`
                                                 : `px-4 py-1`
                                         } ${
                                             cell.column.id === 'nonCrit' ||

@@ -123,7 +123,7 @@ const AttributesTable: React.FC<AttributesTableProps> = ({
                         {headerGroup.headers.map((column) => (
                             <th
                                 key={column.id}
-                                className="border-b border-main-700 pb-2 font-bold"
+                                className="border-b py-2 font-bold"
                                 style={{
                                     width:
                                         column.id === 'initialValue' ||
@@ -145,7 +145,7 @@ const AttributesTable: React.FC<AttributesTableProps> = ({
                         <tr>
                             <td
                                 colSpan={4}
-                                className="border-b border-main-700 bg-main-800 px-2 py-1 font-bold"
+                                className="border-b bg-secondary/25 px-2 py-1 font-bold"
                             >
                                 {section.name}
                             </td>
@@ -168,7 +168,7 @@ const AttributesTable: React.FC<AttributesTableProps> = ({
                                         {row.cells.map((cell) => (
                                             <td
                                                 key={cell.getCellProps().key}
-                                                className={`border-b border-main-700 py-1 ${
+                                                className={`border-b py-1 ${
                                                     cell.column.id ===
                                                         'initialValue' ||
                                                     cell.column.id ===

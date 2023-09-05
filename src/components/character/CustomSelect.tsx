@@ -1,5 +1,10 @@
-import { selectStyles } from '@/styles'
-import Select from 'react-select'
+import {
+    Select as ShadcnSelect,
+    SelectContent,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+} from '@/components/ui/select'
 
 interface CustomSelectProps {
     options: { value: string | number; label: string }[]
@@ -10,16 +15,22 @@ interface CustomSelectProps {
 
 const CustomSelect = ({ options, value, onChange, ...props }: CustomSelectProps) => {
     return (
-        <Select
-            value={options.find((option) => option.value === value)}
-            onChange={(option) => onChange(option?.value ?? '')}
-            options={options}
-            styles={selectStyles}
-            maxMenuHeight={200}
-            isSearchable={false}
-            className="md:w-full"
+        <ShadcnSelect
+            onValueChange={onChange}
+            defaultValue={value}
             {...props}
-        />
+        >
+            <SelectTrigger>
+                <SelectValue placeholder={options.find((option) => option.value === value)?.label} />
+            </SelectTrigger>
+            <SelectContent>
+                {options.map((option) => (
+                    <SelectItem key={option.value} value={option.value}>
+                        {option.label}
+                    </SelectItem>
+                ))}
+            </SelectContent>
+        </ShadcnSelect>
     )
 }
 

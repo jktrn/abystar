@@ -97,11 +97,11 @@
 }
 
 .min-constellation {
-    @apply text-main-700 bg-lightgray-100 rounded-md py-[1px] px-1.5;
+    @apply bg-lightgray-100 rounded-md py-[1px] px-1.5;
 }
 
 .unimplemented {
-    @apply text-main-700 bg-red-400 rounded-md py-[1px] px-1.5;
+    @apply bg-red-400 rounded-md py-[1px] px-1.5;
 }
 
 .hidden-bonuses {

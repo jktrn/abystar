@@ -79,7 +79,7 @@ const CharacterModal = ({
                     as={ModalBody}
                     className="h-screen items-center justify-center"
                 >
-                    <Box className="max-h-[80vh] w-[80vw] overflow-auto overflow-x-hidden rounded-lg bg-main-900 p-4 xl:h-auto xl:w-[80vw]">
+                    <Box className="max-h-[80vh] w-[80vw] overflow-auto overflow-x-hidden rounded-lg bg-background border p-4 xl:h-auto xl:w-[80vw]">
                         <ModalHeader className="mb-4 flex items-center justify-between">
                             Select a Character
                             <ModalCloseButton />

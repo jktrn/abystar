@@ -85,12 +85,12 @@ export default function Home() {
     return (
         <div className="flex h-screen flex-col p-2 lg:flex-row lg:overflow-y-hidden">
             <ModeToggle />
-            <div className="m-2 flex-1 rounded-lg bg-main-1000 lg:min-w-max lg:max-w-max lg:overflow-auto">
-                <div className="flex h-full flex-col">
-                    <h2 className="rounded-t-lg bg-main-800 px-4 py-3 text-lg font-bold">
+            <div className="m-2 flex-1 rounded-lg lg:min-w-max lg:max-w-max lg:overflow-auto">
+                <div className="flex flex-col border rounded-lg">
+                    <h2 className="rounded-t-lg border-b px-4 py-3 text-lg font-bold bg-secondary/25">
                         Character
                     </h2>
-                    <div className="bg-main-900 p-4">
+                    <div className="p-4">
                         <div className="flex flex-col justify-between md:flex-row">
                             <div className="flex flex-col justify-center gap-4 md:flex-row md:justify-normal">
                                 <form className="flex justify-center md:justify-normal">
@@ -113,7 +113,7 @@ export default function Home() {
                                         <span className="flex justify-center text-xl font-bold md:justify-normal">
                                             {character.name}
                                         </span>
-                                        <span className="text-md flex justify-center md:justify-normal">
+                                        <span className="text-md text-muted-foreground flex justify-center md:justify-normal">
                                             {'★'.repeat(character.rarity)}
                                         </span>
                                     </div>
@@ -165,48 +165,42 @@ export default function Home() {
                         />
                     </div>
 
-                    <h2 className="bg-main-800 px-4 py-3 text-lg font-bold">
+                    <h2 className="px-4 py-3 border-y text-lg font-bold bg-secondary/25">
                         Attributes
                     </h2>
-                    <div className="rounded-b-md bg-main-900 p-4">
-                        <div className="rounded-md border border-main-700 p-2">
-                            <AttributesTable
-                                baseStats={baseStats}
-                                displayStats={displayStats}
-                                initialBaseStats={initialBaseStats}
-                            />
-                        </div>
-                    </div>
+                    <AttributesTable
+                        baseStats={baseStats}
+                        displayStats={displayStats}
+                        initialBaseStats={initialBaseStats}
+                    />
                 </div>
             </div>
 
-            <div className="m-2 flex-1 rounded-lg bg-main-1000">
-                <h2 className="rounded-t-lg bg-main-800 px-4 py-3 text-lg font-bold">
+            <div className="m-2 flex-1 border rounded-lg">
+                <h2 className="rounded-t-lg border-b px-4 py-3 text-lg font-bold bg-secondary/25">
                     Weapon
                 </h2>
-                <div className="bg-main-900 p-4">Weapon</div>
+                <div className="p-4">Weapon</div>
 
-                <h2 className="bg-main-800 px-4 py-3 text-lg font-bold">
+                <h2 className="border-y px-4 py-3 text-lg font-bold bg-secondary/25">
                     Artifacts
                 </h2>
 
-                <div className="bg-main-900 p-4">Artifacts</div>
+                <div className="p-4">Artifacts</div>
 
-                <h2 className="bg-main-800 px-4 py-3 text-lg font-bold">
+                <h2 className="border-y px-4 py-3 text-lg font-bold bg-secondary/25">
                     Party Buffs
                 </h2>
-                <div className="bg-main-900 p-4">Party Buffs</div>
+                <div className="p-4">Party Buffs</div>
             </div>
 
-            <div className="m-2 flex-1 rounded-lg bg-main-1000">
-                <div className="flex h-full flex-col">
-                    <h2 className="rounded-t-lg bg-main-800 px-4 py-3 text-lg font-bold">
+            <div className="m-2 flex-1 rounded-lg">
+                <div className="flex h-full flex-col rounded-lg border">
+                    <h2 className="rounded-t-lg border-b px-4 py-3 text-lg font-bold bg-secondary/25">
                         Results
                     </h2>
-                    <div className="overflow-auto rounded-b-md bg-main-900 p-4">
-                        <div className="rounded-md border border-main-700 p-2">
-                            <ResultsTable damageResults={damageResults} />
-                        </div>
+                    <div className="overflow-auto">
+                        <ResultsTable damageResults={damageResults} />
                     </div>
                 </div>
             </div>

@@ -21,19 +21,19 @@ const CharacterImage = ({
             style={{
                 backgroundImage: `url(${backgroundImage})`,
             }}
-            className="relative h-32 w-32 cursor-pointer rounded-lg bg-cover bg-center duration-100 ease-in hover:scale-105"
+            className="relative cursor-pointer rounded-lg bg-cover bg-center duration-100 ease-in hover:scale-105"
             {...props}
         >
             <Image
                 src={icon}
                 alt="character"
                 className="cursor-pointer rounded-lg object-cover duration-100 ease-in"
-                width={128}
-                height={128}
+                width={148}
+                height={148}
                 unoptimized={true}
                 priority={true}
             />
-            <div className="absolute bottom-0.5 right-0.5 flex h-8 w-8 items-center justify-center rounded-full bg-main-900">
+            <div className="absolute bottom-0.5 right-0.5 flex h-8 w-8 items-center justify-center rounded-full bg-background">
                 <Image
                     src={elementIcon}
                     alt={`${element} element`}
