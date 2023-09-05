@@ -11,6 +11,7 @@ import {
     CharacterModal,
     ConstellationPopover,
     CustomSelect,
+    ModeToggle,
     ResultsTable,
 } from '@/components'
 
@@ -83,6 +84,7 @@ export default function Home() {
 
     return (
         <div className="flex h-screen flex-col p-2 lg:flex-row lg:overflow-y-hidden">
+            <ModeToggle />
             <div className="m-2 flex-1 rounded-lg bg-main-1000 lg:min-w-max lg:max-w-max lg:overflow-auto">
                 <div className="flex h-full flex-col">
                     <h2 className="rounded-t-lg bg-main-800 px-4 py-3 text-lg font-bold">

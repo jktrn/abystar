@@ -1,3 +1,6 @@
+import { type ClassValue, clsx } from "clsx"
+import { twMerge } from "tailwind-merge"
+
 const compareObjects = (a: any, b: any) => {
     const diff: any = {}
     for (const key in a) {
@@ -24,4 +27,8 @@ const elementColors = {
     electro: '#8c729a',
 }
 
-export { compareObjects, parseScalingValue, elementColors }
+const cn = (...inputs: ClassValue[]) => {
+    return twMerge(clsx(inputs))
+}
+
+export { compareObjects, parseScalingValue, elementColors, cn }

@@ -19,5 +19,5 @@ export { default as genericFormulaWithScaling } from './damage/formulas/genericF
 export { default as genericFormulaWithoutScaling } from './damage/formulas/genericFormulaWithoutScaling'
 export { default as useActiveConstellations } from './hooks/useActiveConstellations'
 export { default as useBaseStats } from './hooks/useBaseStats'
-export { compareObjects, parseScalingValue, elementColors } from './utils'
+export { compareObjects, parseScalingValue, elementColors, cn } from './utils'
 
