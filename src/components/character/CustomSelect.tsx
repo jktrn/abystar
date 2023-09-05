@@ -1,5 +1,5 @@
 import {
-    Select as ShadcnSelect,
+    Select,
     SelectContent,
     SelectItem,
     SelectTrigger,
@@ -7,21 +7,21 @@ import {
 } from '@/components/ui/select'
 
 interface CustomSelectProps {
-    options: { value: string | number; label: string }[]
-    value: string | number
-    onChange: (value: string | number) => void
+    options: { value: string; label: string }[]
+    value: string
+    onChange: (value: string) => void
     [key: string]: any
 }
 
 const CustomSelect = ({ options, value, onChange, ...props }: CustomSelectProps) => {
     return (
-        <ShadcnSelect
-            onValueChange={onChange}
-            defaultValue={value}
-            {...props}
-        >
+        <Select onValueChange={onChange} defaultValue={value} {...props}>
             <SelectTrigger>
-                <SelectValue placeholder={options.find((option) => option.value === value)?.label} />
+                <SelectValue
+                    placeholder={
+                        options.find((option) => option.value === value)?.label
+                    }
+                />
             </SelectTrigger>
             <SelectContent>
                 {options.map((option) => (
@@ -30,7 +30,7 @@ const CustomSelect = ({ options, value, onChange, ...props }: CustomSelectProps)
                     </SelectItem>
                 ))}
             </SelectContent>
-        </ShadcnSelect>
+        </Select>
     )
 }
 

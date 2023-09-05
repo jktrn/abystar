@@ -1,8 +1,10 @@
+'use client'
+
 import { CharacterBonusToggle } from '@/components'
 import { characterBonuses } from '@/data'
 import { Bonus, Character } from '@/types/Character'
 import { handleBonusToggle } from '@/utils'
-import { ChevronDownIcon, ChevronUpIcon } from '@chakra-ui/icons'
+import { ChevronUp, ChevronDown } from 'lucide-react'
 import { Fragment, useEffect, useState } from 'react'
 
 interface CharacterBonusesProps {
@@ -89,12 +91,12 @@ const CharacterBonuses = ({
                         {isHiddenCollapsed ? (
                             <Fragment>
                                 Show Hidden Bonuses{' '}
-                                <ChevronDownIcon className="inline-block h-5 w-5" />
+                                <ChevronDown className="inline-block h-5 w-5" />
                             </Fragment>
                         ) : (
                             <Fragment>
                                 Hide Hidden Bonuses{' '}
-                                <ChevronUpIcon className="inline-block h-5 w-5" />
+                                <ChevronUp className="inline-block h-5 w-5" />
                             </Fragment>
                         )}
                     </button>

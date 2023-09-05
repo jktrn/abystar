@@ -1,3 +1,5 @@
+export { default as ModeToggle } from './ModeToggle'
+export { default as ThemeProvider } from './ThemeProvider'
 export { default as AttributesTable } from './attributes/AttributesTable'
 export { default as ActiveSkillsSelect } from './character/ActiveSkillsSelect'
 export { default as CharacterBonusToggle } from './character/CharacterBonusToggle'
@@ -6,7 +8,4 @@ export { default as ConstellationPopover } from './character/ConstellationPopove
 export { default as CustomSelect } from './character/CustomSelect'
 export { default as CharacterImage } from './character/modal/CharacterImage'
 export { default as CharacterModal } from './character/modal/CharacterModal'
-export { default as FilterAndSort } from './character/modal/FilterAndSort'
 export { default as ResultsTable } from './results/ResultsTable'
-export { default as ThemeProvider } from './ThemeProvider'
-export { default as ModeToggle } from './ModeToggle'

@@ -1,3 +1,5 @@
+'use client'
+
 import { constellationBonuses } from '@/data'
 import { Bonus } from '@/types/Character'
 import { useEffect } from 'react'

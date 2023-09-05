@@ -66,7 +66,6 @@ const ResultsTable: React.FC<ResultsTableProps> = ({ damageResults }) => {
                     'outputValue' in aspect.damage &&
                     'outputType' in aspect.damage
                 ) {
-                
                     const outputValue =
                         aspect.damage.outputType === FormulaOutputType.Time
                             ? `${aspect.damage.outputValue?.toFixed(1)}s`

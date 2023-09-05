@@ -1,9 +1,16 @@
 import { NewBaseStat } from '@/types/Character'
 import Image from 'next/image'
 import { useMemo } from 'react'
-import { Column, useTable } from 'react-table'
 import { attributeSections, availableIcons, parseScalingValue } from '@/utils'
 import { Fragment } from 'react'
+import {
+    Table,
+    TableBody,
+    TableCell,
+    TableHead,
+    TableHeader,
+    TableRow,
+} from "@/components/ui/table"
 
 interface AttributesTableProps {
     baseStats: NewBaseStat
@@ -45,149 +52,92 @@ const AttributesTable: React.FC<AttributesTableProps> = ({
         [baseStats, displayStats, initialBaseStats]
     )
 
-    const columns: Column[] = useMemo(
-        () => [
-            {
-                Header: 'Stat',
-                accessor: 'stat',
-                Cell: ({ row }) => {
-                    const attributeName = row.values.stat
-                    const iconName = attributeName.toLowerCase().split(' ').join('-')
-                    const iconPath = `/images/attributes/${iconName}.png`
-                    return (
-                        <span className="flex items-center gap-2">
-                            {availableIcons.includes(iconName) && (
-                                <Image
-                                    className="h-auto w-auto"
-                                    src={iconPath}
-                                    alt={attributeName}
-                                    width={12}
-                                    height={12}
-                                    style={{ width: 12, height: 12 }}
-                                />
-                            )}
-                            {attributeName}
-                        </span>
-                    )
-                },
-            },
-            {
-                Header: 'Initial',
-                accessor: 'initialValue',
-            },
-            {
-                Header: 'Bonus',
-                accessor: 'difference',
-                Cell: ({ row }) => {
-                    const difference = row.values.difference
-                    let formattedDifference
-                    if (difference === 0 || difference === '0.0%') {
-                        if (baseStats[row.values.stat] === 0) {
-                            formattedDifference = <span>{difference}</span>
-                        } else {
-                            formattedDifference = (
-                                <span className="brightness-50">{difference}</span>
-                            )
-                        }
-                    } else if (
-                        difference > 0 ||
-                        parseScalingValue(difference)[0] > 0
-                    ) {
-                        formattedDifference = (
-                            <span style={{ color: '#34D399' }}>+{difference}</span>
-                        )
-                    } else {
-                        formattedDifference = (
-                            <span style={{ color: '#F87171' }}>{difference}</span>
-                        )
-                    }
-                    return formattedDifference
-                },
-            },
-            {
-                Header: 'Current',
-                accessor: 'value',
-            },
-        ],
-        [baseStats]
-    )
-
-    const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
-        useTable({ columns, data })
-
     return (
-        <table {...getTableProps()} className="w-full text-sm">
-            <thead>
-                {headerGroups.map((headerGroup, index) => (
-                    <tr key={index}>
-                        {headerGroup.headers.map((column) => (
-                            <th
-                                key={column.id}
-                                className="border-b py-2 font-bold"
-                                style={{
-                                    width:
-                                        column.id === 'initialValue' ||
-                                        column.id === 'difference' ||
-                                        column.id === 'value'
-                                            ? '85px'
-                                            : undefined,
-                                }}
-                            >
-                                {column.render('Header')}
-                            </th>
-                        ))}
-                    </tr>
-                ))}
-            </thead>
-            <tbody {...getTableBodyProps()}>
+        <Table className="w-full text-sm">
+            <TableHeader>
+                <TableRow>
+                    <TableHead className="px-4">Stat</TableHead>
+                    <TableHead className="px-4 text-right">Initial</TableHead>
+                    <TableHead className="px-4 text-right">Bonus</TableHead>
+                    <TableHead className="px-4 text-right">Current</TableHead>
+                </TableRow>
+            </TableHeader>
+            <TableBody>
                 {attributeSections.map((section, sectionIndex) => (
                     <Fragment key={sectionIndex}>
-                        <tr>
-                            <td
-                                colSpan={4}
-                                className="border-b bg-secondary/25 px-2 py-1 font-bold"
-                            >
+                        <TableRow>
+                            <TableCell colSpan={4} className="border-b bg-secondary/25 px-4 py-3 font-bold">
                                 {section.name}
-                            </td>
-                        </tr>
-                        {rows
+                            </TableCell>
+                        </TableRow>
+                        {data
                             .filter((row) =>
-                                section.attributes.includes(row.values.stat)
+                                section.attributes.includes(row.stat)
                             )
-                            .map((row, rowIndex) => {
-                                prepareRow(row)
-                                return (
-                                    <tr
-                                        key={rowIndex}
-                                        className={
-                                            baseStats[row.values.stat] === 0
-                                                ? 'brightness-50'
-                                                : ''
-                                        }
+                            .map((row, rowIndex) => (
+                                <TableRow
+                                    key={rowIndex}
+                                    className={
+                                        baseStats[row.stat] === 0
+                                            ? 'brightness-50'
+                                            : ''
+                                    }
+                                >
+                                    <TableCell className="px-4">
+                                        <span className="flex items-center gap-2">
+                                            {availableIcons.includes(row.stat.toLowerCase().split(' ').join('-')) && (
+                                                <Image
+                                                    className="h-auto w-auto"
+                                                    src={`/images/attributes/${row.stat.toLowerCase().split(' ').join('-')}.png`}
+                                                    alt={row.stat}
+                                                    width={12}
+                                                    height={12}
+                                                />
+                                            )}
+                                            {row.stat}
+                                        </span>
+                                    </TableCell>
+                                    <TableCell className="text-right font-bold px-4">
+                                        {row.initialValue}
+                                    </TableCell>
+                                    <TableCell
+                                        className="text-right font-bold px-4"
+                                        style={{
+                                            color:
+                                                row.difference === 0 || row.difference === '0.0%'
+                                                    ? baseStats[row.stat] === 0
+                                                        ? undefined
+                                                        : '#A1A1AA'
+                                                    : typeof row.difference === 'number'
+                                                        ? row.difference > 0
+                                                            ? '#34D399'
+                                                            : '#F87171'
+                                                        : typeof row.difference === 'string' && parseScalingValue(row.difference)[0] > 0
+                                                            ? '#34D399'
+                                                            : '#F87171',
+                                        }}
                                     >
-                                        {row.cells.map((cell) => (
-                                            <td
-                                                key={cell.getCellProps().key}
-                                                className={`border-b py-1 ${
-                                                    cell.column.id ===
-                                                        'initialValue' ||
-                                                    cell.column.id ===
-                                                        'difference' ||
-                                                    cell.column.id === 'value'
-                                                        ? `text-right font-bold`
-                                                        : ''
-                                                } px-4`}
-                                            >
-                                                {cell.render('Cell')}
-                                            </td>
-                                        ))}
-                                    </tr>
-                                )
-                            })}
+                                        {row.difference === 0 || row.difference === '0.0%'
+                                            ? baseStats[row.stat] === 0
+                                                ? row.difference
+                                                : '+0'
+                                            : typeof row.difference === 'number'
+                                                ? row.difference > 0
+                                                    ? `+${row.difference}`
+                                                    : row.difference
+                                                : typeof row.difference === 'string' && parseScalingValue(row.difference)[0] > 0
+                                                    ? `+${row.difference}`
+                                                    : row.difference}
+                                    </TableCell>
+                                    <TableCell className="text-right font-bold px-4">
+                                        {row.value}
+                                    </TableCell>
+                                </TableRow>
+                            ))}
                     </Fragment>
                 ))}
-            </tbody>
-        </table>
+            </TableBody>
+        </Table>
     )
 }
 

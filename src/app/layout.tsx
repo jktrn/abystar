@@ -1,4 +1,4 @@
-"use client"
+'use client'
 
 import { JetBrains_Mono } from 'next/font/google'
 import { ThemeProvider } from '@/components'

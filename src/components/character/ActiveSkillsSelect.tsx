@@ -1,12 +1,6 @@
 import { Character } from '@/types/Character'
-import { Image } from '@chakra-ui/react'
-import {
-    Select as ShadcnSelect,
-    SelectContent,
-    SelectItem,
-    SelectTrigger,
-    SelectValue,
-} from '@/components/ui/select'
+import CustomSelect from './CustomSelect'
+import Image from 'next/image'
 
 interface ActiveSkillsSelectProps {
     character: Character
@@ -32,7 +26,7 @@ const ActiveSkillsSelect = ({
     ]
 
     return (
-        <div className="ml-0 mt-4 flex flex-row flex-wrap justify-center gap-2 md:mt-0 md:flex-col md:justify-normal md:justify-end ">
+        <div className="ml-4 mt-4 flex flex-row flex-wrap justify-center gap-2 md:mt-0 md:flex-col md:justify-normal md:justify-end ">
             {character.activeSkills.map((skill, index) => (
                 <div
                     key={skill.name}
@@ -42,29 +36,20 @@ const ActiveSkillsSelect = ({
                         <Image
                             src={skillIcons[index]}
                             alt={skill.name}
-                            sizes="100%"
+                            width={36}
+                            height={36}
                             className="rounded-full bg-secondary/25 object-cover p-1"
                         />
                     </div>
-                    <ShadcnSelect
-                        onValueChange={(value: any) => {
+                    <CustomSelect
+                        options={activeSkillOptions}
+                        value={activeSkills[index].slice(2)}
+                        onChange={(value) => {
                             const newActiveSkills = [...activeSkills]
                             newActiveSkills[index] = `Lv${value}` ?? ''
                             setActiveSkills(newActiveSkills)
-                            console.log(newActiveSkills)
                         }}
-                    >
-                        <SelectTrigger>
-                            <SelectValue placeholder={activeSkills[index]} />
-                        </SelectTrigger>
-                        <SelectContent>
-                            {activeSkillOptions.map((option) => (
-                                <SelectItem key={option.value} value={option.value}>
-                                    {option.label}
-                                </SelectItem>
-                            ))}
-                        </SelectContent>
-                    </ShadcnSelect>
+                    />
                 </div>
             ))}
         </div>

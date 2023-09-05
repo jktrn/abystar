@@ -1,3 +1,5 @@
+'use client'
+
 import { Bonus, Character } from '@/types/Character'
 import { elementColors } from '@/utils'
 import Image from 'next/image'
@@ -47,7 +49,7 @@ const CharacterBonusToggle = ({
                 </div>
                 <div className="flex flex-col text-center md:text-left">
                     <span className="text-md">{bonus.name}</span>
-                    <span className="max-w-full break-words text-xs text-lightgray-200 md:w-[21rem]">
+                    <span className="max-w-full break-words text-xs text-muted-foreground md:w-[21rem]">
                         {bonus.description}
                     </span>
                 </div>

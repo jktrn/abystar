@@ -1,6 +1,5 @@
 'use client'
 
-import { useDisclosure } from '@chakra-ui/react'
 import { useState } from 'react'
 
 import {
@@ -54,7 +53,6 @@ export default function Home() {
 
     const characters = Object.values(characterData) as Character[]
     const initialBaseStats = convertBaseStats(character.baseStats[level])
-    const { isOpen, onOpen, onClose } = useDisclosure()
 
     useActiveConstellations(character.name, constellation, setActiveConstellations)
 
@@ -72,6 +70,11 @@ export default function Home() {
         resistance: 90,
     }
 
+    const [isOpen, setIsOpen] = useState(false)
+
+    const onOpen = () => setIsOpen(true)
+    const onClose = () => setIsOpen(false)
+
     const damageResults = calculateDamage(
         baseStats,
         abilityScalings,
@@ -84,10 +87,10 @@ export default function Home() {
 
     return (
         <div className="flex h-screen flex-col p-2 lg:flex-row lg:overflow-y-hidden">
-            <ModeToggle />
-            <div className="m-2 flex-1 rounded-lg lg:min-w-max lg:max-w-max lg:overflow-auto">
-                <div className="flex flex-col border rounded-lg">
-                    <h2 className="rounded-t-lg border-b px-4 py-3 text-lg font-bold bg-secondary/25">
+            {/* <ModeToggle /> */}
+            <div className="m-2 flex-1 rounded-lg border lg:min-w-max lg:max-w-max lg:overflow-auto">
+                <div className="flex flex-col rounded-lg">
+                    <h2 className="rounded-t-lg border-b bg-secondary/25 px-4 py-3 text-lg font-bold">
                         Character
                     </h2>
                     <div className="p-4">
@@ -101,8 +104,8 @@ export default function Home() {
                                         onClick={onOpen}
                                     />
                                     <CharacterModal
-                                        isOpen={isOpen}
-                                        onClose={onClose}
+                                        open={isOpen}
+                                        onOpenChange={onClose}
                                         characters={characters}
                                         setCharacter={setCharacter}
                                         setActiveBonuses={setActiveBonuses}
@@ -113,7 +116,7 @@ export default function Home() {
                                         <span className="flex justify-center text-xl font-bold md:justify-normal">
                                             {character.name}
                                         </span>
-                                        <span className="text-md text-muted-foreground flex justify-center md:justify-normal">
+                                        <span className="text-md flex justify-center text-muted-foreground md:justify-normal">
                                             {'★'.repeat(character.rarity)}
                                         </span>
                                     </div>
@@ -165,7 +168,7 @@ export default function Home() {
                         />
                     </div>
 
-                    <h2 className="px-4 py-3 border-y text-lg font-bold bg-secondary/25">
+                    <h2 className="border-y bg-secondary/25 px-4 py-3 text-lg font-bold">
                         Attributes
                     </h2>
                     <AttributesTable
@@ -176,19 +179,19 @@ export default function Home() {
                 </div>
             </div>
 
-            <div className="m-2 flex-1 border rounded-lg">
-                <h2 className="rounded-t-lg border-b px-4 py-3 text-lg font-bold bg-secondary/25">
+            <div className="m-2 flex-1 rounded-lg border">
+                <h2 className="rounded-t-lg border-b bg-secondary/25 px-4 py-3 text-lg font-bold">
                     Weapon
                 </h2>
                 <div className="p-4">Weapon</div>
 
-                <h2 className="border-y px-4 py-3 text-lg font-bold bg-secondary/25">
+                <h2 className="border-y bg-secondary/25 px-4 py-3 text-lg font-bold">
                     Artifacts
                 </h2>
 
                 <div className="p-4">Artifacts</div>
 
-                <h2 className="border-y px-4 py-3 text-lg font-bold bg-secondary/25">
+                <h2 className="border-y bg-secondary/25 px-4 py-3 text-lg font-bold">
                     Party Buffs
                 </h2>
                 <div className="p-4">Party Buffs</div>
@@ -196,7 +199,7 @@ export default function Home() {
 
             <div className="m-2 flex-1 rounded-lg">
                 <div className="flex h-full flex-col rounded-lg border">
-                    <h2 className="rounded-t-lg border-b px-4 py-3 text-lg font-bold bg-secondary/25">
+                    <h2 className="rounded-t-lg border-b bg-secondary/25 px-4 py-3 text-lg font-bold">
                         Results
                     </h2>
                     <div className="overflow-auto">

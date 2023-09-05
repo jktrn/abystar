@@ -1,32 +1,29 @@
-import { FilterAndSort } from '@/components'
+'use client'
+
 import { characterBonuses } from '@/data'
 import { Bonus, Character } from '@/types/Character'
 import { compareElement, elementColors } from '@/utils'
-import {
-    Box,
-    Flex,
-    Image,
-    Modal,
-    ModalBody,
-    ModalCloseButton,
-    ModalContent,
-    ModalHeader,
-    ModalOverlay,
-    useColorModeValue,
-} from '@chakra-ui/react'
+import Image from 'next/image'
 import { useState } from 'react'
+import {
+    Dialog,
+    DialogContent,
+    DialogDescription,
+    DialogHeader,
+    DialogTitle,
+} from "@/components/ui/dialog"
 
 interface CharacterModalProps {
-    isOpen: boolean
-    onClose: () => void
+    open: boolean
+    onOpenChange: (open: boolean) => void
     characters: Character[]
     setCharacter: (character: Character) => void
     setActiveBonuses: (activeBonuses: Bonus[]) => void
 }
 
 const CharacterModal = ({
-    isOpen,
-    onClose,
+    open,
+    onOpenChange,
     characters,
     setCharacter,
     setActiveBonuses,
@@ -41,8 +38,8 @@ const CharacterModal = ({
             filterValue.includes('all') || !filterValue.length
                 ? characters
                 : characters.filter((character) =>
-                      filterValue.includes(character.vision.toLowerCase())
-                  )
+                    filterValue.includes(character.vision.toLowerCase())
+                )
         // Sorts characters by name and element
         const sortedCharacters = filteredCharacters.sort((a, b) => {
             switch (sortOrder) {
@@ -66,65 +63,53 @@ const CharacterModal = ({
         !!characterBonuses[character.name]
 
     return (
-        <Modal isOpen={isOpen} onClose={onClose}>
-            <ModalOverlay
-                sx={{ backdropFilter: 'blur(5px)' }}
-                bg={useColorModeValue(
-                    'rgba(0, 0, 0, 0.5)',
-                    'rgba(255, 255, 255, 0.2)'
-                )}
-            />
-            <ModalContent>
-                <Flex
-                    as={ModalBody}
-                    className="h-screen items-center justify-center"
-                >
-                    <Box className="max-h-[80vh] w-[80vw] overflow-auto overflow-x-hidden rounded-lg bg-background border p-4 xl:h-auto xl:w-[80vw]">
-                        <ModalHeader className="mb-4 flex items-center justify-between">
-                            Select a Character
-                            <ModalCloseButton />
-                        </ModalHeader>
-                        <FilterAndSort
-                            filterValue={filterValue}
-                            setFilterValue={setFilterValue}
-                            sortOrder={sortOrder}
-                            setSortOrder={setSortOrder}
+        <Dialog open={open} onOpenChange={onOpenChange}>
+            <DialogContent>
+                <DialogHeader className="mb-4 flex items-center justify-between">
+                    <DialogTitle>Select a Character</DialogTitle>
+                    <DialogDescription>
+                        {`${characters.filter(availableCharacter).length} implemented characters of ${characters.length} available characters`}
+                    </DialogDescription>
+                </DialogHeader>
+                {/* <FilterAndSort
+                    filterValue={filterValue}
+                    setFilterValue={setFilterValue}
+                    sortOrder={sortOrder}
+                    setSortOrder={setSortOrder}
+                /> */}
+                <div className="flex flex-wrap justify-center gap-[6px]">
+                    {filterAndSortCharacters().map((character) => (
+                        <Image
+                            key={character.name}
+                            src={character.icon}
+                            alt={character.name}
+                            onClick={() => {
+                                if (!availableCharacter(character)) return
+                                setCharacter(character)
+                                setActiveBonuses(
+                                    characterBonuses[character.name].filter(
+                                        (bonus) => bonus.enabled
+                                    )
+                                )
+                                onOpenChange(false)
+                            }}
+                            style={{
+                                backgroundColor:
+                                    elementColors[
+                                    character.vision.toLowerCase() as keyof typeof elementColors
+                                    ],
+                            }}
+                            className={`cursor-pointer rounded-full object-cover hover:scale-105 ${availableCharacter(character)
+                                ? ''
+                                : 'pointer-events-none opacity-50'
+                                }`}
+                            width={70}
+                            height={70}
                         />
-                        <Flex className="flex-wrap justify-center gap-[6px]">
-                            {filterAndSortCharacters().map((character) => (
-                                <Image
-                                    key={character.name}
-                                    src={character.icon}
-                                    alt={character.name}
-                                    onClick={() => {
-                                        if (!availableCharacter(character)) return
-                                        setCharacter(character)
-                                        setActiveBonuses(
-                                            characterBonuses[character.name].filter(
-                                                (bonus) => bonus.enabled
-                                            )
-                                        )
-                                        onClose()
-                                    }}
-                                    bg={
-                                        elementColors[
-                                            character.vision.toLowerCase() as keyof typeof elementColors
-                                        ]
-                                    }
-                                    className={`cursor-pointer rounded-full object-cover hover:scale-105 ${
-                                        availableCharacter(character)
-                                            ? ''
-                                            : 'pointer-events-none opacity-50'
-                                    }`}
-                                    boxSize="70px"
-                                    placeholder="blur"
-                                />
-                            ))}
-                        </Flex>
-                    </Box>
-                </Flex>
-            </ModalContent>
-        </Modal>
+                    ))}
+                </div>
+            </DialogContent>
+        </Dialog>
     )
 }
 

@@ -1,4 +1,5 @@
 import { Bonus, FormulaType } from '@/types/Character'
+import { Badge } from '@/components/ui/badge'
 import { characterData } from '@/data'
 
 interface SkillData {
@@ -93,7 +94,7 @@ const characterBonuses: Record<string, Bonus[]> = {
             name: "Butterfly's Embrace",
             description: (
                 <span>
-                    <span className="min-constellation">C6</span> Triggers when
+                    <Badge variant="secondary">C6</Badge> Triggers when
                     receiving fatal blow or below 25% HP. All Elemental/Physical RES
                     increased by 200%, CRIT Rate increased by 100%
                 </span>
@@ -236,8 +237,8 @@ const characterBonuses: Record<string, Bonus[]> = {
             name: 'The Root of All Fullness',
             description: (
                 <span>
-                    <span className="min-constellation">C2</span>{' '}
-                    <span className="unimplemented">UNIMPLEMENTED</span> Burning,
+                    <Badge variant="secondary">C2</Badge>{' '}
+                    <Badge variant="destructive">Unimplemented</Badge> Burning,
                     Bloom, Hyperbloom, and Burgeon Reaction DMG can now CRIT on
                     opponents marked by <b>Seeds of Skanda</b> (CRIT Rate and CRIT
                     DMG fixed at 20% and 100%, respectively). For 8s after being hit
@@ -256,7 +257,7 @@ const characterBonuses: Record<string, Bonus[]> = {
             name: 'The Stem of Manifest Inference',
             description: (
                 <span>
-                    <span className="min-constellation">C4</span> When 1/2/3/(4 or
+                    <Badge variant="secondary">C4</Badge> When 1/2/3/(4 or
                     more) nearby opponents are affected by <b>Seeds of Skandha</b>,
                     Nahida&apos;s EM will be increased by 100/120/140/160
                 </span>

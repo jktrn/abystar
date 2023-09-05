@@ -1,13 +1,13 @@
 export {
     attributeSections,
     availableIcons,
-    displayStats
+    displayStats,
 } from './attributes/attributeSections'
 export {
     getConstellationOptions,
     getLevelOptions,
     handleConstellationChange,
-    handleLevelChange
+    handleLevelChange,
 } from './character/characterOptions'
 export { default as handleBonusToggle } from './character/handleBonusToggle'
 export { default as compareElement } from './character/modal/compareElement'
@@ -20,4 +20,3 @@ export { default as genericFormulaWithoutScaling } from './damage/formulas/gener
 export { default as useActiveConstellations } from './hooks/useActiveConstellations'
 export { default as useBaseStats } from './hooks/useBaseStats'
 export { compareObjects, parseScalingValue, elementColors, cn } from './utils'
-
