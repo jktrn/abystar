@@ -28,7 +28,7 @@ export interface Constellation {
     level: number
 }
 
-export interface Character {
+export interface RawCharacter {
     name: string
     icon: string
     weapon: string
@@ -42,6 +42,9 @@ export interface Character {
     activeSkills: ActiveSkill[]
     passiveSkills?: PassiveSkill[]
     constellations: Constellation[]
+}
+
+export interface Character extends RawCharacter {
     abilityScalings: AbilityScaling
     characterBonuses: Bonus[]
     constellationBonuses: Bonus[]
