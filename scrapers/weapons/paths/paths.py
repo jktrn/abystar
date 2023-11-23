@@ -2,39 +2,52 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from bs4 import BeautifulSoup
 import json
+import time
 
 url = 'https://genshin.honeyhunterworld.com/fam_weapon/'
 
 driver = webdriver.Chrome()
 driver.get(url)
 
-dropdown = driver.find_element(By.CLASS_NAME, 'sorttable_per_page')
-for option in dropdown.find_elements(By.TAG_NAME, 'option'):
-    if option.text == '100':
-        option.click()
-        break
-
-driver.implicitly_wait(10)
-
-soup = BeautifulSoup(driver.page_source, 'html.parser')
-table = soup.find('table', {'class': 'weapon_table'})
-
 weapon_data = {}
 
-# Find <a> elements and pair them with their texts as key-value pairs
-for row in table.find_all('tr'):
-    cells = row.find_all('td')
-    if len(cells) > 1:
-        name_cell = cells[1]
-        a_element = name_cell.find('a')
-        if a_element:
-            href = a_element.get('href')
-            weapon_name = a_element.text
-            if href:
-                weapon_url = href.split('/')[1]
-                weapon_data[weapon_url] = weapon_name
+def scrape_current_page():
+    soup = BeautifulSoup(driver.page_source, 'html.parser')
+    table = soup.find('table', {'class': 'weapon_table'})
 
-# Sort the dictionary by values/attributes
+    for row in table.find_all('tr'):
+        cells = row.find_all('td')
+        if len(cells) > 1:
+            name_cell = cells[1]
+            a_element = name_cell.find('a')
+            if a_element:
+                href = a_element.get('href')
+                weapon_name = a_element.text
+                if href:
+                    weapon_url = href.split('/')[1]
+                    weapon_data[weapon_url] = weapon_name
+
+scrape_current_page()
+
+page_count = 1
+
+# Hardcoded; please change accordingly
+while page_count < 19:
+    try:
+        next_td = driver.find_element(By.XPATH, "//td[contains(text(), 'Next')]")
+
+        if next_td.is_displayed():
+            next_td.click()
+            time.sleep(1)
+            scrape_current_page()
+            page_count += 1
+        else:
+            print("Reached the last page.")
+            break
+    except Exception as e:
+        print("No more pages or error occurred:", e)
+        break
+
 sorted_weapon_data = dict(sorted(weapon_data.items(), key=lambda item: item[1]))
 
 with open('paths.json', 'w') as f:

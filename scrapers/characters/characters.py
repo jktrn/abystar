@@ -44,7 +44,6 @@ def fetch_character_data(character: str) -> dict[str, dict[str, dict[str, str]]]
 
     all_data = {}
 
-    # Fetch character info
     info_table = soup.find('table', {'class': 'main_table'})
     rows = info_table.find_all('tr')
     data = {row.find_all('td')[0].text: row.find_all('td')[-1].text for row in rows[1:]}
@@ -63,10 +62,8 @@ def fetch_character_data(character: str) -> dict[str, dict[str, dict[str, str]]]
         all_data["title"] = data["Title"]
     all_data["occupation"] = data["Occupation"]
 
-    # Fetch character stats and add them to the `baseStats` object
     stats_table = soup.find('table', {'class': 'stat_table'})
 
-    # Map level to ascension
     ascension_map = {
         '1': '1/20',
         '20': '20/20',
@@ -92,7 +89,6 @@ def fetch_character_data(character: str) -> dict[str, dict[str, dict[str, str]]]
 
     all_data["baseStats"] = data_dict
 
-    # Fetch character skills and add them to the `activeSkills`, `passiveSkills`, and `constellations` arrays
     tables = soup.find_all('table', {'class': 'skill_table'})
     all_data["activeSkills"] = []
     all_data["passiveSkills"] = []
@@ -189,7 +185,7 @@ if __name__ == '__main__':
     # Comment this out if you want to test with a single character
     all_data = fetch_all_characters_data()
     save_data_to_file(all_data)
-    fix_traveler.fix_traveler()
+    # fix_traveler.fix_traveler()
 
     # Uncomment these if you want to test a single character
     # ayaka_data = fetch_character_data('ayaka')

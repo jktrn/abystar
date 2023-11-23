@@ -10,8 +10,8 @@ def fix_traveler():
         data = json.load(f)
         traveler_data = data["Traveler"]
     
-    # Split the Traveler into four separate characters differentiated by their element
-    elements = ["Anemo", "Geo", "Electro", "Dendro"]
+    # Split the Traveler into five separate characters differentiated by their element
+    elements = ["Hydro", "Anemo", "Geo", "Electro", "Dendro"]
     travelers_data = {}
     
     for i, element in enumerate(elements):
