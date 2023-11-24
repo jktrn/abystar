@@ -108,7 +108,7 @@ const Wriothesley: Character = {
             'Base DEF': 620.1,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus CRIT DMG': 0.28800000000000003,
+            'Bonus CRIT DMG': 0.288,
         },
         '80/80': {
             'Base HP': 11993.0,
@@ -116,7 +116,7 @@ const Wriothesley: Character = {
             'Base DEF': 673.33,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus CRIT DMG': 0.28800000000000003,
+            'Bonus CRIT DMG': 0.288,
         },
         '80/90': {
             'Base HP': 12637.0,

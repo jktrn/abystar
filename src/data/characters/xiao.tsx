@@ -108,7 +108,7 @@ const Xiao: Character = {
             'Base DEF': 649.45,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus CRIT Rate': 0.14400000000000002,
+            'Bonus CRIT Rate': 0.144,
         },
         '80/80': {
             'Base HP': 11236.0,
@@ -116,7 +116,7 @@ const Xiao: Character = {
             'Base DEF': 705.2,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus CRIT Rate': 0.14400000000000002,
+            'Bonus CRIT Rate': 0.144,
         },
         '80/90': {
             'Base HP': 11840.0,

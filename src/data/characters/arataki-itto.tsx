@@ -108,7 +108,7 @@ const AratakiItto: Character = {
             'Base DEF': 779.34,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus CRIT Rate': 0.14400000000000002,
+            'Bonus CRIT Rate': 0.144,
         },
         '80/80': {
             'Base HP': 11345.0,
@@ -116,7 +116,7 @@ const AratakiItto: Character = {
             'Base DEF': 846.24,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus CRIT Rate': 0.14400000000000002,
+            'Bonus CRIT Rate': 0.144,
         },
         '80/90': {
             'Base HP': 11954.0,

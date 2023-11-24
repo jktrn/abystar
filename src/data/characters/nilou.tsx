@@ -60,7 +60,7 @@ const Nilou: Character = {
             'Base DEF': 327.48,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus HP': 0.07200000000000001,
+            'Bonus HP': 0.072,
         },
         '50/50': {
             'Base HP': 7852.0,
@@ -68,7 +68,7 @@ const Nilou: Character = {
             'Base DEF': 376.76,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus HP': 0.07200000000000001,
+            'Bonus HP': 0.072,
         },
         '50/60': {
             'Base HP': 8813.0,
@@ -76,7 +76,7 @@ const Nilou: Character = {
             'Base DEF': 422.84,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus HP': 0.14400000000000002,
+            'Bonus HP': 0.144,
         },
         '60/60': {
             'Base HP': 9850.0,
@@ -84,7 +84,7 @@ const Nilou: Character = {
             'Base DEF': 472.64,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus HP': 0.14400000000000002,
+            'Bonus HP': 0.144,
         },
         '60/70': {
             'Base HP': 10571.0,
@@ -92,7 +92,7 @@ const Nilou: Character = {
             'Base DEF': 507.19,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus HP': 0.14400000000000002,
+            'Bonus HP': 0.144,
         },
         '70/70': {
             'Base HP': 11618.0,
@@ -100,7 +100,7 @@ const Nilou: Character = {
             'Base DEF': 557.44,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus HP': 0.14400000000000002,
+            'Bonus HP': 0.144,
         },
         '70/80': {
             'Base HP': 12338.0,
@@ -108,7 +108,7 @@ const Nilou: Character = {
             'Base DEF': 592.0,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus HP': 0.21600000000000003,
+            'Bonus HP': 0.216,
         },
         '80/80': {
             'Base HP': 13397.0,
@@ -116,7 +116,7 @@ const Nilou: Character = {
             'Base DEF': 642.82,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus HP': 0.21600000000000003,
+            'Bonus HP': 0.216,
         },
         '80/90': {
             'Base HP': 14117.0,
@@ -124,7 +124,7 @@ const Nilou: Character = {
             'Base DEF': 677.37,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus HP': 0.28800000000000003,
+            'Bonus HP': 0.288,
         },
         '90/90': {
             'Base HP': 15185.0,
@@ -132,7 +132,7 @@ const Nilou: Character = {
             'Base DEF': 728.59,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus HP': 0.28800000000000003,
+            'Bonus HP': 0.288,
         },
     },
     activeSkills: [

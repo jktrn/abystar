@@ -108,7 +108,7 @@ const Keqing: Character = {
             'Base DEF': 649.45,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus CRIT DMG': 0.28800000000000003,
+            'Bonus CRIT DMG': 0.288,
         },
         '80/80': {
             'Base HP': 11561.0,
@@ -116,7 +116,7 @@ const Keqing: Character = {
             'Base DEF': 705.2,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus CRIT DMG': 0.28800000000000003,
+            'Bonus CRIT DMG': 0.288,
         },
         '80/90': {
             'Base HP': 12182.0,

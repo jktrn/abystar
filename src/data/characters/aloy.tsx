@@ -60,7 +60,7 @@ const Aloy: Character = {
             'Base DEF': 303.99,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Cryo DMG Bonus': 0.07200000000000001,
+            'Cryo DMG Bonus': 0.072,
         },
         '50/50': {
             'Base HP': 5636.0,
@@ -68,7 +68,7 @@ const Aloy: Character = {
             'Base DEF': 349.74,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Cryo DMG Bonus': 0.07200000000000001,
+            'Cryo DMG Bonus': 0.072,
         },
         '50/60': {
             'Base HP': 6325.0,
@@ -76,7 +76,7 @@ const Aloy: Character = {
             'Base DEF': 392.51,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Cryo DMG Bonus': 0.14400000000000002,
+            'Cryo DMG Bonus': 0.144,
         },
         '60/60': {
             'Base HP': 7070.0,
@@ -84,7 +84,7 @@ const Aloy: Character = {
             'Base DEF': 438.73,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Cryo DMG Bonus': 0.14400000000000002,
+            'Cryo DMG Bonus': 0.144,
         },
         '60/70': {
             'Base HP': 7587.0,
@@ -92,7 +92,7 @@ const Aloy: Character = {
             'Base DEF': 470.81,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Cryo DMG Bonus': 0.14400000000000002,
+            'Cryo DMG Bonus': 0.144,
         },
         '70/70': {
             'Base HP': 8339.0,
@@ -100,7 +100,7 @@ const Aloy: Character = {
             'Base DEF': 517.46,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Cryo DMG Bonus': 0.14400000000000002,
+            'Cryo DMG Bonus': 0.144,
         },
         '70/80': {
             'Base HP': 8856.0,
@@ -108,7 +108,7 @@ const Aloy: Character = {
             'Base DEF': 549.53,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Cryo DMG Bonus': 0.21600000000000003,
+            'Cryo DMG Bonus': 0.216,
         },
         '80/80': {
             'Base HP': 9616.0,
@@ -116,7 +116,7 @@ const Aloy: Character = {
             'Base DEF': 596.71,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Cryo DMG Bonus': 0.21600000000000003,
+            'Cryo DMG Bonus': 0.216,
         },
         '80/90': {
             'Base HP': 10133.0,
@@ -124,7 +124,7 @@ const Aloy: Character = {
             'Base DEF': 628.78,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Cryo DMG Bonus': 0.28800000000000003,
+            'Cryo DMG Bonus': 0.288,
         },
         '90/90': {
             'Base HP': 10899.0,
@@ -132,7 +132,7 @@ const Aloy: Character = {
             'Base DEF': 676.33,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Cryo DMG Bonus': 0.28800000000000003,
+            'Cryo DMG Bonus': 0.288,
         },
     },
     activeSkills: [

@@ -108,7 +108,7 @@ const Furina: Character = {
             'Base DEF': 565.15,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus CRIT Rate': 0.14400000000000002,
+            'Bonus CRIT Rate': 0.144,
         },
         '80/80': {
             'Base HP': 13505.0,
@@ -116,7 +116,7 @@ const Furina: Character = {
             'Base DEF': 613.66,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus CRIT Rate': 0.14400000000000002,
+            'Bonus CRIT Rate': 0.144,
         },
         '80/90': {
             'Base HP': 14231.0,

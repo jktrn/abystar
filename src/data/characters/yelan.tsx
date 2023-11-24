@@ -108,7 +108,7 @@ const Yelan: Character = {
             'Base DEF': 445.25,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus CRIT Rate': 0.14400000000000002,
+            'Bonus CRIT Rate': 0.144,
         },
         '80/80': {
             'Base HP': 12749.0,
@@ -116,7 +116,7 @@ const Yelan: Character = {
             'Base DEF': 483.47,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus CRIT Rate': 0.14400000000000002,
+            'Bonus CRIT Rate': 0.144,
         },
         '80/90': {
             'Base HP': 13434.0,

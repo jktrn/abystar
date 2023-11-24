@@ -60,7 +60,7 @@ const Zhongli: Character = {
             'Base DEF': 331.62,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Geo DMG Bonus': 0.07200000000000001,
+            'Geo DMG Bonus': 0.072,
         },
         '50/50': {
             'Base HP': 7599.0,
@@ -68,7 +68,7 @@ const Zhongli: Character = {
             'Base DEF': 381.53,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Geo DMG Bonus': 0.07200000000000001,
+            'Geo DMG Bonus': 0.072,
         },
         '50/60': {
             'Base HP': 8528.0,
@@ -76,7 +76,7 @@ const Zhongli: Character = {
             'Base DEF': 428.19,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Geo DMG Bonus': 0.14400000000000002,
+            'Geo DMG Bonus': 0.144,
         },
         '60/60': {
             'Base HP': 9533.0,
@@ -84,7 +84,7 @@ const Zhongli: Character = {
             'Base DEF': 478.62,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Geo DMG Bonus': 0.14400000000000002,
+            'Geo DMG Bonus': 0.144,
         },
         '60/70': {
             'Base HP': 10230.0,
@@ -92,7 +92,7 @@ const Zhongli: Character = {
             'Base DEF': 513.61,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Geo DMG Bonus': 0.14400000000000002,
+            'Geo DMG Bonus': 0.144,
         },
         '70/70': {
             'Base HP': 11243.0,
@@ -100,7 +100,7 @@ const Zhongli: Character = {
             'Base DEF': 564.5,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Geo DMG Bonus': 0.14400000000000002,
+            'Geo DMG Bonus': 0.144,
         },
         '70/80': {
             'Base HP': 11940.0,
@@ -108,7 +108,7 @@ const Zhongli: Character = {
             'Base DEF': 599.49,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Geo DMG Bonus': 0.21600000000000003,
+            'Geo DMG Bonus': 0.216,
         },
         '80/80': {
             'Base HP': 12965.0,
@@ -116,7 +116,7 @@ const Zhongli: Character = {
             'Base DEF': 650.95,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Geo DMG Bonus': 0.21600000000000003,
+            'Geo DMG Bonus': 0.216,
         },
         '80/90': {
             'Base HP': 13662.0,
@@ -124,7 +124,7 @@ const Zhongli: Character = {
             'Base DEF': 685.95,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Geo DMG Bonus': 0.28800000000000003,
+            'Geo DMG Bonus': 0.288,
         },
         '90/90': {
             'Base HP': 14695.0,
@@ -132,7 +132,7 @@ const Zhongli: Character = {
             'Base DEF': 737.81,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Geo DMG Bonus': 0.28800000000000003,
+            'Geo DMG Bonus': 0.288,
         },
     },
     activeSkills: [

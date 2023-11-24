@@ -60,7 +60,7 @@ const KaedeharaKazuha: Character = {
             'Base DEF': 362.71,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus Elemental Mastery': 28.799999237061,
+            'Bonus Elemental Mastery': 28.8,
         },
         '50/50': {
             'Base HP': 6902.0,
@@ -68,7 +68,7 @@ const KaedeharaKazuha: Character = {
             'Base DEF': 417.3,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus Elemental Mastery': 28.799999237061,
+            'Bonus Elemental Mastery': 28.8,
         },
         '50/60': {
             'Base HP': 7747.0,
@@ -76,7 +76,7 @@ const KaedeharaKazuha: Character = {
             'Base DEF': 468.33,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus Elemental Mastery': 57.599998474121,
+            'Bonus Elemental Mastery': 57.6,
         },
         '60/60': {
             'Base HP': 8659.0,
@@ -84,7 +84,7 @@ const KaedeharaKazuha: Character = {
             'Base DEF': 523.49,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus Elemental Mastery': 57.599998474121,
+            'Bonus Elemental Mastery': 57.6,
         },
         '60/70': {
             'Base HP': 9292.0,
@@ -92,7 +92,7 @@ const KaedeharaKazuha: Character = {
             'Base DEF': 561.76,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus Elemental Mastery': 57.599998474121,
+            'Bonus Elemental Mastery': 57.6,
         },
         '70/70': {
             'Base HP': 10213.0,
@@ -100,7 +100,7 @@ const KaedeharaKazuha: Character = {
             'Base DEF': 617.42,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus Elemental Mastery': 57.599998474121,
+            'Bonus Elemental Mastery': 57.6,
         },
         '70/80': {
             'Base HP': 10846.0,
@@ -108,7 +108,7 @@ const KaedeharaKazuha: Character = {
             'Base DEF': 655.69,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus Elemental Mastery': 86.400001525879,
+            'Bonus Elemental Mastery': 86.4,
         },
         '80/80': {
             'Base HP': 11777.0,
@@ -116,7 +116,7 @@ const KaedeharaKazuha: Character = {
             'Base DEF': 711.98,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus Elemental Mastery': 86.400001525879,
+            'Bonus Elemental Mastery': 86.4,
         },
         '80/90': {
             'Base HP': 12410.0,
@@ -124,7 +124,7 @@ const KaedeharaKazuha: Character = {
             'Base DEF': 750.25,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus Elemental Mastery': 115.19999694824,
+            'Bonus Elemental Mastery': 115.2,
         },
         '90/90': {
             'Base HP': 13348.0,
@@ -132,7 +132,7 @@ const KaedeharaKazuha: Character = {
             'Base DEF': 806.98,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus Elemental Mastery': 115.19999694824,
+            'Bonus Elemental Mastery': 115.2,
         },
     },
     activeSkills: [

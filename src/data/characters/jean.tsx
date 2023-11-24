@@ -108,7 +108,7 @@ const Jean: Character = {
             'Base DEF': 624.47,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Healing Bonus': 0.16620000000000001,
+            'Healing Bonus': 0.1662,
         },
         '80/80': {
             'Base HP': 12965.0,
@@ -116,7 +116,7 @@ const Jean: Character = {
             'Base DEF': 678.08,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Healing Bonus': 0.16620000000000001,
+            'Healing Bonus': 0.1662,
         },
         '80/90': {
             'Base HP': 13662.0,
@@ -124,7 +124,7 @@ const Jean: Character = {
             'Base DEF': 714.53,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Healing Bonus': 0.22149999999999997,
+            'Healing Bonus': 0.2215,
         },
         '90/90': {
             'Base HP': 14695.0,
@@ -132,7 +132,7 @@ const Jean: Character = {
             'Base DEF': 768.55,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Healing Bonus': 0.22149999999999997,
+            'Healing Bonus': 0.2215,
         },
     },
     activeSkills: [

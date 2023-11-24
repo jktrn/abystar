@@ -108,7 +108,7 @@ const Yoimiya: Character = {
             'Base DEF': 499.58,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus CRIT Rate': 0.14400000000000002,
+            'Bonus CRIT Rate': 0.144,
         },
         '80/80': {
             'Base HP': 8968.0,
@@ -116,7 +116,7 @@ const Yoimiya: Character = {
             'Base DEF': 542.46,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus CRIT Rate': 0.14400000000000002,
+            'Bonus CRIT Rate': 0.144,
         },
         '80/90': {
             'Base HP': 9450.0,

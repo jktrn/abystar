@@ -22,13 +22,14 @@ const CharacterModal = ({
     setCharacter,
 }: CharacterModalProps) => {
     const [rawCharacters, setRawCharacters] = useState<RawCharacter[]>([])
+    const DEFAULT_CHARACTER = 'Hu Tao'
 
     useEffect(() => {
         import('@/data/characters/characters.json').then(
             ({ default: charactersData }) => {
                 const charactersArray = Object.values(charactersData)
                 setRawCharacters(charactersArray)
-                selectDefaultCharacter('Hu Tao', charactersArray)
+                selectDefaultCharacter(DEFAULT_CHARACTER, charactersArray)
             }
         )
     }, [])

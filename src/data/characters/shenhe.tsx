@@ -60,7 +60,7 @@ const Shenhe: Character = {
             'Base DEF': 373.07,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus ATK': 0.07200000000000001,
+            'Bonus ATK': 0.072,
         },
         '50/50': {
             'Base HP': 6719.0,
@@ -68,7 +68,7 @@ const Shenhe: Character = {
             'Base DEF': 429.22,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus ATK': 0.07200000000000001,
+            'Bonus ATK': 0.072,
         },
         '50/60': {
             'Base HP': 7540.0,
@@ -76,7 +76,7 @@ const Shenhe: Character = {
             'Base DEF': 481.71,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus ATK': 0.14400000000000002,
+            'Bonus ATK': 0.144,
         },
         '60/60': {
             'Base HP': 8429.0,
@@ -84,7 +84,7 @@ const Shenhe: Character = {
             'Base DEF': 538.45,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus ATK': 0.14400000000000002,
+            'Bonus ATK': 0.144,
         },
         '60/70': {
             'Base HP': 9045.0,
@@ -92,7 +92,7 @@ const Shenhe: Character = {
             'Base DEF': 577.81,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus ATK': 0.14400000000000002,
+            'Bonus ATK': 0.144,
         },
         '70/70': {
             'Base HP': 9941.0,
@@ -100,7 +100,7 @@ const Shenhe: Character = {
             'Base DEF': 635.06,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus ATK': 0.14400000000000002,
+            'Bonus ATK': 0.144,
         },
         '70/80': {
             'Base HP': 10557.0,
@@ -108,7 +108,7 @@ const Shenhe: Character = {
             'Base DEF': 674.43,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus ATK': 0.21600000000000003,
+            'Bonus ATK': 0.216,
         },
         '80/80': {
             'Base HP': 11463.0,
@@ -116,7 +116,7 @@ const Shenhe: Character = {
             'Base DEF': 732.32,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus ATK': 0.21600000000000003,
+            'Bonus ATK': 0.216,
         },
         '80/90': {
             'Base HP': 12080.0,
@@ -124,7 +124,7 @@ const Shenhe: Character = {
             'Base DEF': 771.69,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus ATK': 0.28800000000000003,
+            'Bonus ATK': 0.288,
         },
         '90/90': {
             'Base HP': 12993.0,
@@ -132,7 +132,7 @@ const Shenhe: Character = {
             'Base DEF': 830.04,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus ATK': 0.28800000000000003,
+            'Bonus ATK': 0.288,
         },
     },
     activeSkills: [

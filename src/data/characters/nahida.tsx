@@ -60,7 +60,7 @@ const Nahida: Character = {
             'Base DEF': 283.26,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus Elemental Mastery': 28.799999237061,
+            'Bonus Elemental Mastery': 28.8,
         },
         '50/50': {
             'Base HP': 5357.0,
@@ -68,7 +68,7 @@ const Nahida: Character = {
             'Base DEF': 325.89,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus Elemental Mastery': 28.799999237061,
+            'Bonus Elemental Mastery': 28.8,
         },
         '50/60': {
             'Base HP': 6012.0,
@@ -76,7 +76,7 @@ const Nahida: Character = {
             'Base DEF': 365.74,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus Elemental Mastery': 57.599998474121,
+            'Bonus Elemental Mastery': 57.6,
         },
         '60/60': {
             'Base HP': 6721.0,
@@ -84,7 +84,7 @@ const Nahida: Character = {
             'Base DEF': 408.82,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus Elemental Mastery': 57.599998474121,
+            'Bonus Elemental Mastery': 57.6,
         },
         '60/70': {
             'Base HP': 7212.0,
@@ -92,7 +92,7 @@ const Nahida: Character = {
             'Base DEF': 438.71,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus Elemental Mastery': 57.599998474121,
+            'Bonus Elemental Mastery': 57.6,
         },
         '70/70': {
             'Base HP': 7926.0,
@@ -100,7 +100,7 @@ const Nahida: Character = {
             'Base DEF': 482.18,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus Elemental Mastery': 57.599998474121,
+            'Bonus Elemental Mastery': 57.6,
         },
         '70/80': {
             'Base HP': 8418.0,
@@ -108,7 +108,7 @@ const Nahida: Character = {
             'Base DEF': 512.07,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus Elemental Mastery': 86.400001525879,
+            'Bonus Elemental Mastery': 86.4,
         },
         '80/80': {
             'Base HP': 9140.0,
@@ -116,7 +116,7 @@ const Nahida: Character = {
             'Base DEF': 556.02,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus Elemental Mastery': 86.400001525879,
+            'Bonus Elemental Mastery': 86.4,
         },
         '80/90': {
             'Base HP': 9632.0,
@@ -124,7 +124,7 @@ const Nahida: Character = {
             'Base DEF': 585.91,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus Elemental Mastery': 115.19999694824,
+            'Bonus Elemental Mastery': 115.2,
         },
         '90/90': {
             'Base HP': 10360.0,
@@ -132,7 +132,7 @@ const Nahida: Character = {
             'Base DEF': 630.21,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus Elemental Mastery': 115.19999694824,
+            'Bonus Elemental Mastery': 115.2,
         },
     },
     activeSkills: [

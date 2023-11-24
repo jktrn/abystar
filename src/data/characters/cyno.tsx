@@ -108,7 +108,7 @@ const Cyno: Character = {
             'Base DEF': 698.16,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus CRIT DMG': 0.28800000000000003,
+            'Bonus CRIT DMG': 0.288,
         },
         '80/80': {
             'Base HP': 11020.0,
@@ -116,7 +116,7 @@ const Cyno: Character = {
             'Base DEF': 758.09,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus CRIT DMG': 0.28800000000000003,
+            'Bonus CRIT DMG': 0.288,
         },
         '80/90': {
             'Base HP': 11613.0,

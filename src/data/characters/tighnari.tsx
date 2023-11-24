@@ -60,7 +60,7 @@ const Tighnari: Character = {
             'Base DEF': 283.26,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Dendro DMG Bonus': 0.07200000000000001,
+            'Dendro DMG Bonus': 0.072,
         },
         '50/50': {
             'Base HP': 5611.0,
@@ -68,7 +68,7 @@ const Tighnari: Character = {
             'Base DEF': 325.89,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Dendro DMG Bonus': 0.07200000000000001,
+            'Dendro DMG Bonus': 0.072,
         },
         '50/60': {
             'Base HP': 6297.0,
@@ -76,7 +76,7 @@ const Tighnari: Character = {
             'Base DEF': 365.74,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Dendro DMG Bonus': 0.14400000000000002,
+            'Dendro DMG Bonus': 0.144,
         },
         '60/60': {
             'Base HP': 7038.0,
@@ -84,7 +84,7 @@ const Tighnari: Character = {
             'Base DEF': 408.82,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Dendro DMG Bonus': 0.14400000000000002,
+            'Dendro DMG Bonus': 0.144,
         },
         '60/70': {
             'Base HP': 7553.0,
@@ -92,7 +92,7 @@ const Tighnari: Character = {
             'Base DEF': 438.71,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Dendro DMG Bonus': 0.14400000000000002,
+            'Dendro DMG Bonus': 0.144,
         },
         '70/70': {
             'Base HP': 8301.0,
@@ -100,7 +100,7 @@ const Tighnari: Character = {
             'Base DEF': 482.18,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Dendro DMG Bonus': 0.14400000000000002,
+            'Dendro DMG Bonus': 0.144,
         },
         '70/80': {
             'Base HP': 8816.0,
@@ -108,7 +108,7 @@ const Tighnari: Character = {
             'Base DEF': 512.07,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Dendro DMG Bonus': 0.21600000000000003,
+            'Dendro DMG Bonus': 0.216,
         },
         '80/80': {
             'Base HP': 9573.0,
@@ -116,7 +116,7 @@ const Tighnari: Character = {
             'Base DEF': 556.02,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Dendro DMG Bonus': 0.21600000000000003,
+            'Dendro DMG Bonus': 0.216,
         },
         '80/90': {
             'Base HP': 10087.0,
@@ -124,7 +124,7 @@ const Tighnari: Character = {
             'Base DEF': 585.91,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Dendro DMG Bonus': 0.28800000000000003,
+            'Dendro DMG Bonus': 0.288,
         },
         '90/90': {
             'Base HP': 10850.0,
@@ -132,7 +132,7 @@ const Tighnari: Character = {
             'Base DEF': 630.21,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Dendro DMG Bonus': 0.28800000000000003,
+            'Dendro DMG Bonus': 0.288,
         },
     },
     activeSkills: [

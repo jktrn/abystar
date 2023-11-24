@@ -60,7 +60,7 @@ const Tartaglia: Character = {
             'Base DEF': 366.16,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Hydro DMG Bonus': 0.07200000000000001,
+            'Hydro DMG Bonus': 0.072,
         },
         '50/50': {
             'Base HP': 6776.0,
@@ -68,7 +68,7 @@ const Tartaglia: Character = {
             'Base DEF': 421.28,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Hydro DMG Bonus': 0.07200000000000001,
+            'Hydro DMG Bonus': 0.072,
         },
         '50/60': {
             'Base HP': 7604.0,
@@ -76,7 +76,7 @@ const Tartaglia: Character = {
             'Base DEF': 472.79,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Hydro DMG Bonus': 0.14400000000000002,
+            'Hydro DMG Bonus': 0.144,
         },
         '60/60': {
             'Base HP': 8500.0,
@@ -84,7 +84,7 @@ const Tartaglia: Character = {
             'Base DEF': 528.47,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Hydro DMG Bonus': 0.14400000000000002,
+            'Hydro DMG Bonus': 0.144,
         },
         '60/70': {
             'Base HP': 9121.0,
@@ -92,7 +92,7 @@ const Tartaglia: Character = {
             'Base DEF': 567.11,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Hydro DMG Bonus': 0.14400000000000002,
+            'Hydro DMG Bonus': 0.144,
         },
         '70/70': {
             'Base HP': 10025.0,
@@ -100,7 +100,7 @@ const Tartaglia: Character = {
             'Base DEF': 623.3,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Hydro DMG Bonus': 0.14400000000000002,
+            'Hydro DMG Bonus': 0.144,
         },
         '70/80': {
             'Base HP': 10647.0,
@@ -108,7 +108,7 @@ const Tartaglia: Character = {
             'Base DEF': 661.94,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Hydro DMG Bonus': 0.21600000000000003,
+            'Hydro DMG Bonus': 0.216,
         },
         '80/80': {
             'Base HP': 11561.0,
@@ -116,7 +116,7 @@ const Tartaglia: Character = {
             'Base DEF': 718.76,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Hydro DMG Bonus': 0.21600000000000003,
+            'Hydro DMG Bonus': 0.216,
         },
         '80/90': {
             'Base HP': 12182.0,
@@ -124,7 +124,7 @@ const Tartaglia: Character = {
             'Base DEF': 757.4,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Hydro DMG Bonus': 0.28800000000000003,
+            'Hydro DMG Bonus': 0.288,
         },
         '90/90': {
             'Base HP': 13103.0,
@@ -132,7 +132,7 @@ const Tartaglia: Character = {
             'Base DEF': 814.67,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Hydro DMG Bonus': 0.28800000000000003,
+            'Hydro DMG Bonus': 0.288,
         },
     },
     activeSkills: [

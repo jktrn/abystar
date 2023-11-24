@@ -108,7 +108,7 @@ const Qiqi: Character = {
             'Base DEF': 749.36,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Healing Bonus': 0.16620000000000001,
+            'Healing Bonus': 0.1662,
         },
         '80/80': {
             'Base HP': 10912.0,
@@ -116,7 +116,7 @@ const Qiqi: Character = {
             'Base DEF': 813.69,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Healing Bonus': 0.16620000000000001,
+            'Healing Bonus': 0.1662,
         },
         '80/90': {
             'Base HP': 11499.0,
@@ -124,7 +124,7 @@ const Qiqi: Character = {
             'Base DEF': 857.43,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Healing Bonus': 0.22149999999999997,
+            'Healing Bonus': 0.2215,
         },
         '90/90': {
             'Base HP': 12368.0,
@@ -132,7 +132,7 @@ const Qiqi: Character = {
             'Base DEF': 922.27,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Healing Bonus': 0.22149999999999997,
+            'Healing Bonus': 0.2215,
         },
     },
     activeSkills: [

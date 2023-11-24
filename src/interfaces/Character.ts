@@ -86,6 +86,14 @@ export interface AbilityScalingData {
     minConstellation?: number
 }
 
+export interface CharacterState {
+    character: Character
+    characterLevel: string
+    characterConstellation: number
+    characterActiveBonuses: Bonus[]
+    characterActiveSkillLevels: number[]
+}
+
 export enum FormulaType {
     DamageFormula,
     GenericFormulaWithScaling,

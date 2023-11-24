@@ -108,7 +108,7 @@ const HuTao: Character = {
             'Base DEF': 711.9,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus CRIT DMG': 0.28800000000000003,
+            'Bonus CRIT DMG': 0.288,
         },
         '80/80': {
             'Base HP': 13721.0,
@@ -116,7 +116,7 @@ const HuTao: Character = {
             'Base DEF': 773.01,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus CRIT DMG': 0.28800000000000003,
+            'Bonus CRIT DMG': 0.288,
         },
         '80/90': {
             'Base HP': 14459.0,

@@ -60,7 +60,7 @@ const Albedo: Character = {
             'Base DEF': 393.8,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Geo DMG Bonus': 0.07200000000000001,
+            'Geo DMG Bonus': 0.072,
         },
         '50/50': {
             'Base HP': 6839.0,
@@ -68,7 +68,7 @@ const Albedo: Character = {
             'Base DEF': 453.07,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Geo DMG Bonus': 0.07200000000000001,
+            'Geo DMG Bonus': 0.072,
         },
         '50/60': {
             'Base HP': 7675.0,
@@ -76,7 +76,7 @@ const Albedo: Character = {
             'Base DEF': 508.47,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Geo DMG Bonus': 0.14400000000000002,
+            'Geo DMG Bonus': 0.144,
         },
         '60/60': {
             'Base HP': 8579.0,
@@ -84,7 +84,7 @@ const Albedo: Character = {
             'Base DEF': 568.36,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Geo DMG Bonus': 0.14400000000000002,
+            'Geo DMG Bonus': 0.144,
         },
         '60/70': {
             'Base HP': 9207.0,
@@ -92,7 +92,7 @@ const Albedo: Character = {
             'Base DEF': 609.91,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Geo DMG Bonus': 0.14400000000000002,
+            'Geo DMG Bonus': 0.144,
         },
         '70/70': {
             'Base HP': 10119.0,
@@ -100,7 +100,7 @@ const Albedo: Character = {
             'Base DEF': 670.34,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Geo DMG Bonus': 0.14400000000000002,
+            'Geo DMG Bonus': 0.144,
         },
         '70/80': {
             'Base HP': 10746.0,
@@ -108,7 +108,7 @@ const Albedo: Character = {
             'Base DEF': 711.9,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Geo DMG Bonus': 0.21600000000000003,
+            'Geo DMG Bonus': 0.216,
         },
         '80/80': {
             'Base HP': 11669.0,
@@ -116,7 +116,7 @@ const Albedo: Character = {
             'Base DEF': 773.01,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Geo DMG Bonus': 0.21600000000000003,
+            'Geo DMG Bonus': 0.216,
         },
         '80/90': {
             'Base HP': 12296.0,
@@ -124,7 +124,7 @@ const Albedo: Character = {
             'Base DEF': 814.56,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Geo DMG Bonus': 0.28800000000000003,
+            'Geo DMG Bonus': 0.288,
         },
         '90/90': {
             'Base HP': 13226.0,
@@ -132,7 +132,7 @@ const Albedo: Character = {
             'Base DEF': 876.15,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Geo DMG Bonus': 0.28800000000000003,
+            'Geo DMG Bonus': 0.288,
         },
     },
     activeSkills: [

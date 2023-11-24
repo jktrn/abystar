@@ -60,7 +60,7 @@ const SangonomiyaKokomi: Character = {
             'Base DEF': 295.35,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Hydro DMG Bonus': 0.07200000000000001,
+            'Hydro DMG Bonus': 0.072,
         },
         '50/50': {
             'Base HP': 6966.0,
@@ -68,7 +68,7 @@ const SangonomiyaKokomi: Character = {
             'Base DEF': 339.8,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Hydro DMG Bonus': 0.07200000000000001,
+            'Hydro DMG Bonus': 0.072,
         },
         '50/60': {
             'Base HP': 7818.0,
@@ -76,7 +76,7 @@ const SangonomiyaKokomi: Character = {
             'Base DEF': 381.36,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Hydro DMG Bonus': 0.14400000000000002,
+            'Hydro DMG Bonus': 0.144,
         },
         '60/60': {
             'Base HP': 8738.0,
@@ -84,7 +84,7 @@ const SangonomiyaKokomi: Character = {
             'Base DEF': 426.27,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Hydro DMG Bonus': 0.14400000000000002,
+            'Hydro DMG Bonus': 0.144,
         },
         '60/70': {
             'Base HP': 9377.0,
@@ -92,7 +92,7 @@ const SangonomiyaKokomi: Character = {
             'Base DEF': 457.43,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Hydro DMG Bonus': 0.14400000000000002,
+            'Hydro DMG Bonus': 0.144,
         },
         '70/70': {
             'Base HP': 10306.0,
@@ -100,7 +100,7 @@ const SangonomiyaKokomi: Character = {
             'Base DEF': 502.76,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Hydro DMG Bonus': 0.14400000000000002,
+            'Hydro DMG Bonus': 0.144,
         },
         '70/80': {
             'Base HP': 10945.0,
@@ -108,7 +108,7 @@ const SangonomiyaKokomi: Character = {
             'Base DEF': 533.92,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Hydro DMG Bonus': 0.21600000000000003,
+            'Hydro DMG Bonus': 0.216,
         },
         '80/80': {
             'Base HP': 11885.0,
@@ -116,7 +116,7 @@ const SangonomiyaKokomi: Character = {
             'Base DEF': 579.76,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Hydro DMG Bonus': 0.21600000000000003,
+            'Hydro DMG Bonus': 0.216,
         },
         '80/90': {
             'Base HP': 12524.0,
@@ -124,7 +124,7 @@ const SangonomiyaKokomi: Character = {
             'Base DEF': 610.92,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Hydro DMG Bonus': 0.28800000000000003,
+            'Hydro DMG Bonus': 0.288,
         },
         '90/90': {
             'Base HP': 13471.0,
@@ -132,7 +132,7 @@ const SangonomiyaKokomi: Character = {
             'Base DEF': 657.11,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Hydro DMG Bonus': 0.28800000000000003,
+            'Hydro DMG Bonus': 0.288,
         },
     },
     activeSkills: [

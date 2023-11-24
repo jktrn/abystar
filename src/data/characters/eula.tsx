@@ -108,7 +108,7 @@ const Eula: Character = {
             'Base DEF': 610.11,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus CRIT DMG': 0.28800000000000003,
+            'Bonus CRIT DMG': 0.288,
         },
         '80/80': {
             'Base HP': 11669.0,
@@ -116,7 +116,7 @@ const Eula: Character = {
             'Base DEF': 662.48,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus CRIT DMG': 0.28800000000000003,
+            'Bonus CRIT DMG': 0.288,
         },
         '80/90': {
             'Base HP': 12296.0,

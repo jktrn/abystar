@@ -108,7 +108,7 @@ const Neuvillette: Character = {
             'Base DEF': 468.35,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus CRIT DMG': 0.28800000000000003,
+            'Bonus CRIT DMG': 0.288,
         },
         '80/80': {
             'Base HP': 12965.0,
@@ -116,7 +116,7 @@ const Neuvillette: Character = {
             'Base DEF': 508.56,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus CRIT DMG': 0.28800000000000003,
+            'Bonus CRIT DMG': 0.288,
         },
         '80/90': {
             'Base HP': 13662.0,

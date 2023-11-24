@@ -108,7 +108,7 @@ const KamisatoAyaka: Character = {
             'Base DEF': 636.96,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus CRIT DMG': 0.28800000000000003,
+            'Bonus CRIT DMG': 0.288,
         },
         '80/80': {
             'Base HP': 11345.0,
@@ -116,7 +116,7 @@ const KamisatoAyaka: Character = {
             'Base DEF': 691.64,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus CRIT DMG': 0.28800000000000003,
+            'Bonus CRIT DMG': 0.288,
         },
         '80/90': {
             'Base HP': 11954.0,

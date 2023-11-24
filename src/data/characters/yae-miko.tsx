@@ -108,7 +108,7 @@ const YaeMiko: Character = {
             'Base DEF': 462.11,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus CRIT Rate': 0.14400000000000002,
+            'Bonus CRIT Rate': 0.144,
         },
         '80/80': {
             'Base HP': 9151.0,
@@ -116,7 +116,7 @@ const YaeMiko: Character = {
             'Base DEF': 501.78,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus CRIT Rate': 0.14400000000000002,
+            'Bonus CRIT Rate': 0.144,
         },
         '80/90': {
             'Base HP': 9643.0,

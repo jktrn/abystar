@@ -60,7 +60,7 @@ const Klee: Character = {
             'Base DEF': 276.35,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Pyro DMG Bonus': 0.07200000000000001,
+            'Pyro DMG Bonus': 0.072,
         },
         '50/50': {
             'Base HP': 5319.0,
@@ -68,7 +68,7 @@ const Klee: Character = {
             'Base DEF': 317.94,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Pyro DMG Bonus': 0.07200000000000001,
+            'Pyro DMG Bonus': 0.072,
         },
         '50/60': {
             'Base HP': 5970.0,
@@ -76,7 +76,7 @@ const Klee: Character = {
             'Base DEF': 356.82,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Pyro DMG Bonus': 0.14400000000000002,
+            'Pyro DMG Bonus': 0.144,
         },
         '60/60': {
             'Base HP': 6673.0,
@@ -84,7 +84,7 @@ const Klee: Character = {
             'Base DEF': 398.85,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Pyro DMG Bonus': 0.14400000000000002,
+            'Pyro DMG Bonus': 0.144,
         },
         '60/70': {
             'Base HP': 7161.0,
@@ -92,7 +92,7 @@ const Klee: Character = {
             'Base DEF': 428.01,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Pyro DMG Bonus': 0.14400000000000002,
+            'Pyro DMG Bonus': 0.144,
         },
         '70/70': {
             'Base HP': 7870.0,
@@ -100,7 +100,7 @@ const Klee: Character = {
             'Base DEF': 470.42,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Pyro DMG Bonus': 0.14400000000000002,
+            'Pyro DMG Bonus': 0.144,
         },
         '70/80': {
             'Base HP': 8358.0,
@@ -108,7 +108,7 @@ const Klee: Character = {
             'Base DEF': 499.58,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Pyro DMG Bonus': 0.21600000000000003,
+            'Pyro DMG Bonus': 0.216,
         },
         '80/80': {
             'Base HP': 9076.0,
@@ -116,7 +116,7 @@ const Klee: Character = {
             'Base DEF': 542.46,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Pyro DMG Bonus': 0.21600000000000003,
+            'Pyro DMG Bonus': 0.216,
         },
         '80/90': {
             'Base HP': 9563.0,
@@ -124,7 +124,7 @@ const Klee: Character = {
             'Base DEF': 571.62,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Pyro DMG Bonus': 0.28800000000000003,
+            'Pyro DMG Bonus': 0.288,
         },
         '90/90': {
             'Base HP': 10287.0,
@@ -132,7 +132,7 @@ const Klee: Character = {
             'Base DEF': 614.84,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Pyro DMG Bonus': 0.28800000000000003,
+            'Pyro DMG Bonus': 0.288,
         },
     },
     activeSkills: [

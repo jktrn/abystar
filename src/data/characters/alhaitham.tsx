@@ -60,7 +60,7 @@ const Alhaitham: Character = {
             'Base DEF': 351.31,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Dendro DMG Bonus': 0.07200000000000001,
+            'Dendro DMG Bonus': 0.072,
         },
         '50/50': {
             'Base HP': 6902.0,
@@ -68,7 +68,7 @@ const Alhaitham: Character = {
             'Base DEF': 404.19,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Dendro DMG Bonus': 0.07200000000000001,
+            'Dendro DMG Bonus': 0.072,
         },
         '50/60': {
             'Base HP': 7747.0,
@@ -76,7 +76,7 @@ const Alhaitham: Character = {
             'Base DEF': 453.61,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Dendro DMG Bonus': 0.14400000000000002,
+            'Dendro DMG Bonus': 0.144,
         },
         '60/60': {
             'Base HP': 8659.0,
@@ -84,7 +84,7 @@ const Alhaitham: Character = {
             'Base DEF': 507.04,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Dendro DMG Bonus': 0.14400000000000002,
+            'Dendro DMG Bonus': 0.144,
         },
         '60/70': {
             'Base HP': 9292.0,
@@ -92,7 +92,7 @@ const Alhaitham: Character = {
             'Base DEF': 544.11,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Dendro DMG Bonus': 0.14400000000000002,
+            'Dendro DMG Bonus': 0.144,
         },
         '70/70': {
             'Base HP': 10213.0,
@@ -100,7 +100,7 @@ const Alhaitham: Character = {
             'Base DEF': 598.02,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Dendro DMG Bonus': 0.14400000000000002,
+            'Dendro DMG Bonus': 0.144,
         },
         '70/80': {
             'Base HP': 10846.0,
@@ -108,7 +108,7 @@ const Alhaitham: Character = {
             'Base DEF': 635.09,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Dendro DMG Bonus': 0.21600000000000003,
+            'Dendro DMG Bonus': 0.216,
         },
         '80/80': {
             'Base HP': 11777.0,
@@ -116,7 +116,7 @@ const Alhaitham: Character = {
             'Base DEF': 689.61,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Dendro DMG Bonus': 0.21600000000000003,
+            'Dendro DMG Bonus': 0.216,
         },
         '80/90': {
             'Base HP': 12410.0,
@@ -124,7 +124,7 @@ const Alhaitham: Character = {
             'Base DEF': 726.67,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Dendro DMG Bonus': 0.28800000000000003,
+            'Dendro DMG Bonus': 0.288,
         },
         '90/90': {
             'Base HP': 13348.0,
@@ -132,7 +132,7 @@ const Alhaitham: Character = {
             'Base DEF': 781.62,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Dendro DMG Bonus': 0.28800000000000003,
+            'Dendro DMG Bonus': 0.288,
         },
     },
     activeSkills: [

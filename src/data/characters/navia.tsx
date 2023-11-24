@@ -107,7 +107,7 @@ const Navia: Character = {
             'Base DEF': 644.45,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus CRIT DMG': 0.28800000000000003,
+            'Bonus CRIT DMG': 0.288,
         },
         '80/80': {
             'Base HP': 11161.0,
@@ -115,7 +115,7 @@ const Navia: Character = {
             'Base DEF': 699.78,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus CRIT DMG': 0.28800000000000003,
+            'Bonus CRIT DMG': 0.288,
         },
         '80/90': {
             'Base HP': 11761.0,

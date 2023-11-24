@@ -108,7 +108,7 @@ const Diluc: Character = {
             'Base DEF': 636.96,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus CRIT Rate': 0.14400000000000002,
+            'Bonus CRIT Rate': 0.144,
         },
         '80/80': {
             'Base HP': 11453.0,
@@ -116,7 +116,7 @@ const Diluc: Character = {
             'Base DEF': 691.64,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus CRIT Rate': 0.14400000000000002,
+            'Bonus CRIT Rate': 0.144,
         },
         '80/90': {
             'Base HP': 12068.0,

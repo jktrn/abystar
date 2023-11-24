@@ -60,7 +60,7 @@ const Dehya: Character = {
             'Base DEF': 282.22,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus HP': 0.07200000000000001,
+            'Bonus HP': 0.072,
         },
         '50/50': {
             'Base HP': 8106.0,
@@ -68,7 +68,7 @@ const Dehya: Character = {
             'Base DEF': 324.7,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus HP': 0.07200000000000001,
+            'Bonus HP': 0.072,
         },
         '50/60': {
             'Base HP': 9097.0,
@@ -76,7 +76,7 @@ const Dehya: Character = {
             'Base DEF': 364.41,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus HP': 0.14400000000000002,
+            'Bonus HP': 0.144,
         },
         '60/60': {
             'Base HP': 10168.0,
@@ -84,7 +84,7 @@ const Dehya: Character = {
             'Base DEF': 407.32,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus HP': 0.14400000000000002,
+            'Bonus HP': 0.144,
         },
         '60/70': {
             'Base HP': 10912.0,
@@ -92,7 +92,7 @@ const Dehya: Character = {
             'Base DEF': 437.1,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus HP': 0.14400000000000002,
+            'Bonus HP': 0.144,
         },
         '70/70': {
             'Base HP': 11993.0,
@@ -100,7 +100,7 @@ const Dehya: Character = {
             'Base DEF': 480.41,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus HP': 0.14400000000000002,
+            'Bonus HP': 0.144,
         },
         '70/80': {
             'Base HP': 12736.0,
@@ -108,7 +108,7 @@ const Dehya: Character = {
             'Base DEF': 510.19,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus HP': 0.21600000000000003,
+            'Bonus HP': 0.216,
         },
         '80/80': {
             'Base HP': 13829.0,
@@ -116,7 +116,7 @@ const Dehya: Character = {
             'Base DEF': 553.99,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus HP': 0.21600000000000003,
+            'Bonus HP': 0.216,
         },
         '80/90': {
             'Base HP': 14573.0,
@@ -124,7 +124,7 @@ const Dehya: Character = {
             'Base DEF': 583.77,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus HP': 0.28800000000000003,
+            'Bonus HP': 0.288,
         },
         '90/90': {
             'Base HP': 15675.0,
@@ -132,7 +132,7 @@ const Dehya: Character = {
             'Base DEF': 627.91,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Bonus HP': 0.28800000000000003,
+            'Bonus HP': 0.288,
         },
     },
     activeSkills: [
