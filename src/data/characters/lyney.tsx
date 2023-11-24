@@ -135,7 +135,7 @@ const Lyney: Character = {
             'Bonus CRIT Rate': 0.192,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: Card Force Translocation',
             image: 'https://genshin.honeyhunterworld.com/img/s_843101.webp',

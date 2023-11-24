@@ -135,7 +135,7 @@ const Jean: Character = {
             'Healing Bonus': 0.2215,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: Favonius Bladework',
             image: 'https://genshin.honeyhunterworld.com/img/s_33101.webp',

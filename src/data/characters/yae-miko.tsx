@@ -135,7 +135,7 @@ const YaeMiko: Character = {
             'Bonus CRIT Rate': 0.192,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: Spiritfox Sin-Eater',
             image: 'https://genshin.honeyhunterworld.com/img/s_583101.webp',

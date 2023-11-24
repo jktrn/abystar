@@ -135,7 +135,7 @@ const KaedeharaKazuha: Character = {
             'Bonus Elemental Mastery': 115.2,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: Garyuu Bladework',
             image: 'https://genshin.honeyhunterworld.com/img/s_473101.webp',

@@ -135,7 +135,7 @@ const Kirara: Character = {
             'Bonus HP': 0.24,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: Boxcutter',
             image: 'https://genshin.honeyhunterworld.com/img/s_613101.webp',

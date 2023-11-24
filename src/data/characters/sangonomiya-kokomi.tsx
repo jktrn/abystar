@@ -135,7 +135,7 @@ const SangonomiyaKokomi: Character = {
             'Hydro DMG Bonus': 0.288,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: The Shape of Water',
             image: 'https://genshin.honeyhunterworld.com/img/s_543101.webp',

@@ -135,7 +135,7 @@ const ShikanoinHeizou: Character = {
             'Anemo DMG Bonus': 0.24,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: Fudou Style Martial Arts',
             image: 'https://genshin.honeyhunterworld.com/img/s_593101.webp',

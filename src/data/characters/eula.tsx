@@ -135,7 +135,7 @@ const Eula: Character = {
             'Bonus CRIT DMG': 0.384,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: Favonius Bladework - Edel',
             image: 'https://genshin.honeyhunterworld.com/img/s_513101.webp',

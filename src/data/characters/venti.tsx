@@ -135,7 +135,7 @@ const Venti: Character = {
             'Bonus Energy Recharge': 0.32,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: Divine Marksmanship',
             image: 'https://genshin.honeyhunterworld.com/img/s_223101.webp',

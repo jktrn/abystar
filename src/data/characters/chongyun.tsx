@@ -135,7 +135,7 @@ const Chongyun: Character = {
             'Bonus ATK': 0.24,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: Demonbane',
             image: 'https://genshin.honeyhunterworld.com/img/s_363101.webp',

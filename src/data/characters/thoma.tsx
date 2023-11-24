@@ -135,7 +135,7 @@ const Thoma: Character = {
             'Bonus ATK': 0.24,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: Swiftshatter Spear',
             image: 'https://genshin.honeyhunterworld.com/img/s_503101.webp',

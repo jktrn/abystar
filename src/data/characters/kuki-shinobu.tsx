@@ -135,7 +135,7 @@ const KukiShinobu: Character = {
             'Bonus HP': 0.24,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: "Normal Attack: Shinobu's Shadowsword",
             image: 'https://genshin.honeyhunterworld.com/img/s_653101.webp',

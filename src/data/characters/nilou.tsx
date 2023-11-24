@@ -135,7 +135,7 @@ const Nilou: Character = {
             'Bonus HP': 0.288,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: Dance of Samser',
             image: 'https://genshin.honeyhunterworld.com/img/s_703101.webp',

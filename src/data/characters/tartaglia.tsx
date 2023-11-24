@@ -135,7 +135,7 @@ const Tartaglia: Character = {
             'Hydro DMG Bonus': 0.288,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: Cutting Torrent',
             image: 'https://genshin.honeyhunterworld.com/img/s_333101.webp',

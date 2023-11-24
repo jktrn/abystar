@@ -135,7 +135,7 @@ const Diluc: Character = {
             'Bonus CRIT Rate': 0.192,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: Tempered Sword',
             image: 'https://genshin.honeyhunterworld.com/img/s_163101.webp',

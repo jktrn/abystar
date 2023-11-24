@@ -135,7 +135,7 @@ const Lisa: Character = {
             'Bonus Elemental Mastery': 96.0,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: Lightning Touch',
             image: 'https://genshin.honeyhunterworld.com/img/s_43101.webp',

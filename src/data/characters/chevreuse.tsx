@@ -134,7 +134,7 @@ const Chevreuse: Character = {
             'Bonus HP': 0.24,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: Line Bayonet Thrust EX',
             image: 'https://genshin.honeyhunterworld.com/img/s_903101.webp',

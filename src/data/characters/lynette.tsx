@@ -135,7 +135,7 @@ const Lynette: Character = {
             'Anemo DMG Bonus': 0.24,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: Rapid Ritesword',
             image: 'https://genshin.honeyhunterworld.com/img/s_833101.webp',

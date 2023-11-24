@@ -135,7 +135,7 @@ const Freminet: Character = {
             'Bonus ATK': 0.24,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: Flowing Eddies',
             image: 'https://genshin.honeyhunterworld.com/img/s_853101.webp',

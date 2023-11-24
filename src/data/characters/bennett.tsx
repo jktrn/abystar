@@ -135,7 +135,7 @@ const Bennett: Character = {
             'Bonus Energy Recharge': 0.2667,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: Strike of Fortune',
             image: 'https://genshin.honeyhunterworld.com/img/s_323101.webp',

@@ -135,7 +135,7 @@ const Aloy: Character = {
             'Cryo DMG Bonus': 0.288,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: Rapid Fire',
             image: 'https://genshin.honeyhunterworld.com/img/s_623101.webp',

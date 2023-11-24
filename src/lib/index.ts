@@ -7,5 +7,5 @@ export {
     kebabCase,
     getLevelOptions,
     getConstellationOptions,
-    getActiveSkillOptions,
+    getTalentOptions,
 } from './utils'

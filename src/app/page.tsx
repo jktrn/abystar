@@ -6,7 +6,7 @@ import { Character, CharacterState } from '@/interfaces/Character'
 import {
     getLevelOptions,
     getConstellationOptions,
-    getActiveSkillOptions,
+    getTalentOptions,
 } from '@/lib'
 
 export default function Home() {
@@ -21,7 +21,7 @@ export default function Home() {
             characterActiveBonuses: selectedCharacter.characterBonuses.filter(
                 (bonus) => bonus.enabled ?? false
             ),
-            characterActiveSkillLevels: [10, 10, 10],
+            characterTalentLevels: [10, 10, 10],
         }
         setCharacterState(defaultState)
         setCharacterModalOpen(false)
@@ -55,6 +55,7 @@ export default function Home() {
 
                     {/* Character Level Select */}
                     <CustomSelect
+                        key={`level-select-${characterState.character.name}`}
                         options={getLevelOptions(characterState.character)}
                         value={characterState.characterLevel}
                         onChange={(newLevel) =>
@@ -64,6 +65,7 @@ export default function Home() {
 
                     {/* Character Constellation Select */}
                     <CustomSelect
+                        key={`constellation-select-${characterState.character.name}`}
                         options={getConstellationOptions}
                         value={characterState.characterConstellation.toString()}
                         onChange={(newConstellation) =>
@@ -74,20 +76,20 @@ export default function Home() {
                         }
                     />
 
-                    {/* Character Active Skill Levels Select (for each skill) */}
-                    {characterState.characterActiveSkillLevels.map(
+                    {/* Character Talent Levels Select (for each skill) */}
+                    {characterState.characterTalentLevels.map(
                         (skillLevel, index) => (
                             <CustomSelect
-                                key={index}
-                                options={getActiveSkillOptions}
+                                key={`skill-${index + 1}-select-${characterState.character.name}`}
+                                options={getTalentOptions}
                                 value={skillLevel.toString()}
                                 onChange={(newLevel) => {
                                     const newSkills = [
-                                        ...characterState.characterActiveSkillLevels,
+                                        ...characterState.characterTalentLevels,
                                     ]
                                     newSkills[index] = parseInt(newLevel, 10)
                                     updateCharacterState(
-                                        'characterActiveSkillLevels',
+                                        'characterTalentLevels',
                                         newSkills.map(Number)
                                     )
                                 }}

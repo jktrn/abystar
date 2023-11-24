@@ -135,7 +135,7 @@ const Alhaitham: Character = {
             'Dendro DMG Bonus': 0.288,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: Abductive Reasoning',
             image: 'https://genshin.honeyhunterworld.com/img/s_783101.webp',

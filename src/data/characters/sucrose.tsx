@@ -135,7 +135,7 @@ const Sucrose: Character = {
             'Anemo DMG Bonus': 0.24,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: Wind Spirit Creation',
             image: 'https://genshin.honeyhunterworld.com/img/s_433101.webp',

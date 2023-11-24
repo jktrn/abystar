@@ -135,7 +135,7 @@ const RaidenShogun: Character = {
             'Bonus Energy Recharge': 0.32,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: Origin',
             image: 'https://genshin.honeyhunterworld.com/img/s_523101.webp',

@@ -135,7 +135,7 @@ const Faruzan: Character = {
             'Bonus ATK': 0.24,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: Parthian Shot',
             image: 'https://genshin.honeyhunterworld.com/img/s_763101.webp',

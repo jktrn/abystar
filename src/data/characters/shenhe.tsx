@@ -135,7 +135,7 @@ const Shenhe: Character = {
             'Bonus ATK': 0.288,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: Dawnstar Piercer',
             image: 'https://genshin.honeyhunterworld.com/img/s_633101.webp',

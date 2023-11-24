@@ -135,7 +135,7 @@ const Klee: Character = {
             'Pyro DMG Bonus': 0.288,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: Kaboom!',
             image: 'https://genshin.honeyhunterworld.com/img/s_293101.webp',

@@ -135,7 +135,7 @@ const Mika: Character = {
             'Bonus HP': 0.24,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: "Normal Attack: Spear of Favonius - Arrow's Passage",
             image: 'https://genshin.honeyhunterworld.com/img/s_803101.webp',

@@ -135,7 +135,7 @@ const HuTao: Character = {
             'Bonus CRIT DMG': 0.384,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: Secret Spear of Wangsheng',
             image: 'https://genshin.honeyhunterworld.com/img/s_463101.webp',

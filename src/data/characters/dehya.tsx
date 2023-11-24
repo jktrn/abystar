@@ -135,7 +135,7 @@ const Dehya: Character = {
             'Bonus HP': 0.288,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: Sandstorm Assault',
             image: 'https://genshin.honeyhunterworld.com/img/s_793101.webp',

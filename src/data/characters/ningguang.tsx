@@ -135,7 +135,7 @@ const Ningguang: Character = {
             'Geo DMG Bonus': 0.24,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: Sparkling Scatter',
             image: 'https://genshin.honeyhunterworld.com/img/s_273101.webp',

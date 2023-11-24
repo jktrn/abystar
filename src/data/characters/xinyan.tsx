@@ -135,7 +135,7 @@ const Xinyan: Character = {
             'Bonus ATK': 0.24,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: Dance on Fire',
             image: 'https://genshin.honeyhunterworld.com/img/s_443101.webp',

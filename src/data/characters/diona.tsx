@@ -135,7 +135,7 @@ const Diona: Character = {
             'Cryo DMG Bonus': 0.24,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: K\u00e4tzlein Style',
             image: 'https://genshin.honeyhunterworld.com/img/s_393101.webp',

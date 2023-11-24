@@ -135,7 +135,7 @@ const Beidou: Character = {
             'Electro DMG Bonus': 0.24,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: Oceanborne',
             image: 'https://genshin.honeyhunterworld.com/img/s_243101.webp',

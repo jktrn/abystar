@@ -135,7 +135,7 @@ const Kaveh: Character = {
             'Bonus Elemental Mastery': 96.0,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: Schematic Setup',
             image: 'https://genshin.honeyhunterworld.com/img/s_813101.webp',

@@ -2,7 +2,7 @@ export interface BaseStat {
     [key: string]: number
 }
 
-export interface ActiveSkill {
+export interface Talent {
     name: string
     image: string
     description: string
@@ -35,7 +35,7 @@ export interface RawCharacter {
     baseStats: {
         [key: string]: BaseStat
     }
-    activeSkills: ActiveSkill[]
+    talents: Talent[]
     passiveSkills?: PassiveSkill[]
     constellations: Constellation[]
 }
@@ -65,7 +65,7 @@ export interface Effect {
     (
         baseStats: BaseStat,
         currentStacks?: number,
-        activeSkills?: string[],
+        talents?: string[],
         initialBaseStats?: BaseStat
     ): BaseStat
 }
@@ -91,7 +91,7 @@ export interface CharacterState {
     characterLevel: string
     characterConstellation: number
     characterActiveBonuses: Bonus[]
-    characterActiveSkillLevels: number[]
+    characterTalentLevels: number[]
 }
 
 export enum FormulaType {

@@ -135,7 +135,7 @@ const KamisatoAyato: Character = {
             'Bonus CRIT DMG': 0.384,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: Kamisato Art - Marobashi',
             image: 'https://genshin.honeyhunterworld.com/img/s_663101.webp',

@@ -135,7 +135,7 @@ const Collei: Character = {
             'Bonus ATK': 0.24,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: "Normal Attack: Supplicant's Bowmanship",
             image: 'https://genshin.honeyhunterworld.com/img/s_673101.webp',

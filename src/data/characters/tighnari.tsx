@@ -135,7 +135,7 @@ const Tighnari: Character = {
             'Dendro DMG Bonus': 0.288,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: Khanda Barrier-Buster',
             image: 'https://genshin.honeyhunterworld.com/img/s_693101.webp',

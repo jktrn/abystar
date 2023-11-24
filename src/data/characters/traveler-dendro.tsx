@@ -135,7 +135,7 @@ const TravelerDendro: Character = {
             'Bonus ATK': 0.24,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: Foreign Fieldcleaver',
             image: 'https://genshin.honeyhunterworld.com/img/s_113001.webp',

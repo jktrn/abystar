@@ -135,7 +135,7 @@ const Furina: Character = {
             'Bonus CRIT Rate': 0.192,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: "Normal Attack: Soloist's Solicitation",
             image: 'https://genshin.honeyhunterworld.com/img/s_893101.webp',

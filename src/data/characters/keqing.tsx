@@ -135,7 +135,7 @@ const Keqing: Character = {
             'Bonus CRIT DMG': 0.384,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: Yunlai Swordsmanship',
             image: 'https://genshin.honeyhunterworld.com/img/s_423101.webp',

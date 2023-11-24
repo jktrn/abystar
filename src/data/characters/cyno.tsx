@@ -135,7 +135,7 @@ const Cyno: Character = {
             'Bonus CRIT DMG': 0.384,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: "Normal Attack: Invoker's Spear",
             image: 'https://genshin.honeyhunterworld.com/img/s_713101.webp',

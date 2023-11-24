@@ -134,7 +134,7 @@ const Dori: Character = {
             'Bonus HP': 0.24,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: Marvelous Sword-Dance (Modified)',
             image: 'https://genshin.honeyhunterworld.com/img/s_683101.webp',

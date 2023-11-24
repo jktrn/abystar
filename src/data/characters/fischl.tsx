@@ -135,7 +135,7 @@ const Fischl: Character = {
             'Bonus ATK': 0.24,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: Bolts of Downfall',
             image: 'https://genshin.honeyhunterworld.com/img/s_313101.webp',

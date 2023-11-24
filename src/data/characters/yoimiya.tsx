@@ -135,7 +135,7 @@ const Yoimiya: Character = {
             'Bonus CRIT Rate': 0.192,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: Firework Flare-Up',
             image: 'https://genshin.honeyhunterworld.com/img/s_493101.webp',

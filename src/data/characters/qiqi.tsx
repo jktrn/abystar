@@ -135,7 +135,7 @@ const Qiqi: Character = {
             'Healing Bonus': 0.2215,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: Ancient Sword Art',
             image: 'https://genshin.honeyhunterworld.com/img/s_353101.webp',

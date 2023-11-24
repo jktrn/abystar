@@ -135,7 +135,7 @@ const YunJin: Character = {
             'Bonus Energy Recharge': 0.2667,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: Cloud-Grazing Strike',
             image: 'https://genshin.honeyhunterworld.com/img/s_643101.webp',

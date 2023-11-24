@@ -135,7 +135,7 @@ const Xingqiu: Character = {
             'Bonus ATK': 0.24,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: Guhua Style',
             image: 'https://genshin.honeyhunterworld.com/img/s_253101.webp',

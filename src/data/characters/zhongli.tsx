@@ -135,7 +135,7 @@ const Zhongli: Character = {
             'Geo DMG Bonus': 0.288,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: Rain of Stone',
             image: 'https://genshin.honeyhunterworld.com/img/s_303101.webp',

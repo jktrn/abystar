@@ -135,7 +135,7 @@ const Charlotte: Character = {
             'Bonus ATK': 0.24,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: Cool-Color Capture',
             image: 'https://genshin.honeyhunterworld.com/img/s_883101.webp',

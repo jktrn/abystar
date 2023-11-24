@@ -135,7 +135,7 @@ const TravelerHydro: Character = {
             'Bonus ATK': 0.24,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: Foreign Stream',
             image: 'https://genshin.honeyhunterworld.com/img/s_63001.webp',

@@ -135,7 +135,7 @@ const TravelerAnemo: Character = {
             'Bonus ATK': 0.24,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: Foreign Ironwind',
             image: 'https://genshin.honeyhunterworld.com/img/s_73001.webp',

@@ -135,7 +135,7 @@ const Barbara: Character = {
             'Bonus HP': 0.24,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: Whisper of Water',
             image: 'https://genshin.honeyhunterworld.com/img/s_143101.webp',

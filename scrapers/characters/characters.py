@@ -90,7 +90,7 @@ def fetch_character_data(character: str) -> dict[str, dict[str, dict[str, str]]]
     all_data["baseStats"] = data_dict
 
     tables = soup.find_all('table', {'class': 'skill_table'})
-    all_data["activeSkills"] = []
+    all_data["talents"] = []
     all_data["passiveSkills"] = []
 
     for table in tables:
@@ -113,7 +113,7 @@ def fetch_character_data(character: str) -> dict[str, dict[str, dict[str, str]]]
                     for key, values in parsed_rows:
                         data_dict[key] = {header[i]: values[i-1] for i in range(1, len(header))}
 
-                all_data["activeSkills"].append({
+                all_data["talents"].append({
                     "name": skill_name,
                     "image": skill_image,
                     "description": skill_description,
@@ -127,8 +127,8 @@ def fetch_character_data(character: str) -> dict[str, dict[str, dict[str, str]]]
                 })
 
     # Deletes the passive sprint skill on Ayaka and Mona
-    if len(all_data['activeSkills']) == 4:
-        del all_data['activeSkills'][2]
+    if len(all_data['talents']) == 4:
+        del all_data['talents'][2]
 
     if all_data["name"] != "Traveler":
         # Move the bottom six skills into the `constellations` array

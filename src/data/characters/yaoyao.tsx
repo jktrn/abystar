@@ -135,7 +135,7 @@ const Yaoyao: Character = {
             'Bonus HP': 0.24,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: "Normal Attack: Toss 'N' Turn Spear",
             image: 'https://genshin.honeyhunterworld.com/img/s_773101.webp',

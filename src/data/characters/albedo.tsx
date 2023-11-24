@@ -135,7 +135,7 @@ const Albedo: Character = {
             'Geo DMG Bonus': 0.288,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: Favonius Bladework - Weiss',
             image: 'https://genshin.honeyhunterworld.com/img/s_383101.webp',

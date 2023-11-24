@@ -135,7 +135,7 @@ const Wriothesley: Character = {
             'Bonus CRIT DMG': 0.384,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: Forceful Fists of Frost',
             image: 'https://genshin.honeyhunterworld.com/img/s_863101.webp',

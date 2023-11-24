@@ -135,7 +135,7 @@ const AratakiItto: Character = {
             'Bonus CRIT Rate': 0.192,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: Fight Club Legend',
             image: 'https://genshin.honeyhunterworld.com/img/s_573101.webp',

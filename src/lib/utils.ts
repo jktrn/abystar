@@ -58,7 +58,7 @@ const getLevelOptions = (character: Character) => {
 
 const getConstellationOptions = Array.from(Array(7).keys()).map((i) => i.toString())
 
-const getActiveSkillOptions = [...Array(15)].map((_, i) => (i + 1).toString())
+const getTalentOptions = [...Array(15)].map((_, i) => (i + 1).toString())
 
 export {
     compareObjects,
@@ -69,5 +69,5 @@ export {
     kebabCase,
     getLevelOptions,
     getConstellationOptions,
-    getActiveSkillOptions,
+    getTalentOptions,
 }

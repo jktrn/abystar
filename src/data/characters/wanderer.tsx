@@ -135,7 +135,7 @@ const Wanderer: Character = {
             'Bonus CRIT Rate': 0.192,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: Yuuban Meigen',
             image: 'https://genshin.honeyhunterworld.com/img/s_753101.webp',

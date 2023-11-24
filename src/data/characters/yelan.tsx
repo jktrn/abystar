@@ -135,7 +135,7 @@ const Yelan: Character = {
             'Bonus CRIT Rate': 0.192,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: Stealthy Bowshot',
             image: 'https://genshin.honeyhunterworld.com/img/s_603101.webp',

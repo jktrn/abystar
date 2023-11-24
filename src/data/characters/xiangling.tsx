@@ -135,7 +135,7 @@ const Xiangling: Character = {
             'Bonus Elemental Mastery': 96.0,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: Dough-Fu',
             image: 'https://genshin.honeyhunterworld.com/img/s_233101.webp',

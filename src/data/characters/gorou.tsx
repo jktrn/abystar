@@ -135,7 +135,7 @@ const Gorou: Character = {
             'Geo DMG Bonus': 0.24,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: Ripping Fang Fletching',
             image: 'https://genshin.honeyhunterworld.com/img/s_553101.webp',

@@ -135,7 +135,7 @@ const Noelle: Character = {
             'Bonus Def': 0.3,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: Favonius Bladework - Maid',
             image: 'https://genshin.honeyhunterworld.com/img/s_343101.webp',

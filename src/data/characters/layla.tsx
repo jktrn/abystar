@@ -135,7 +135,7 @@ const Layla: Character = {
             'Bonus HP': 0.24,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: Sword of the Radiant Path',
             image: 'https://genshin.honeyhunterworld.com/img/s_743101.webp',

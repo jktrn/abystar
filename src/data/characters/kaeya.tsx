@@ -135,7 +135,7 @@ const Kaeya: Character = {
             'Bonus Energy Recharge': 0.2667,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: Ceremonial Bladework',
             image: 'https://genshin.honeyhunterworld.com/img/s_153101.webp',

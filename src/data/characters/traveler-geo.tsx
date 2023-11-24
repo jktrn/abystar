@@ -135,7 +135,7 @@ const TravelerGeo: Character = {
             'Bonus ATK': 0.24,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: Foreign Rockblade',
             image: 'https://genshin.honeyhunterworld.com/img/s_73001.webp',

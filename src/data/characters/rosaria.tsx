@@ -135,7 +135,7 @@ const Rosaria: Character = {
             'Bonus ATK': 0.24,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: Spear of the Church',
             image: 'https://genshin.honeyhunterworld.com/img/s_453101.webp',

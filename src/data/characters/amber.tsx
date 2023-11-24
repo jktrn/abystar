@@ -135,7 +135,7 @@ const Amber: Character = {
             'Bonus ATK': 0.24,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: Sharpshooter',
             image: 'https://genshin.honeyhunterworld.com/img/s_213101.webp',

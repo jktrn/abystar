@@ -135,7 +135,7 @@ const Baizhu: Character = {
             'Bonus HP': 0.288,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: The Classics of Acupuncture',
             image: 'https://genshin.honeyhunterworld.com/img/s_823101.webp',

@@ -135,7 +135,7 @@ const Mona: Character = {
             'Bonus Energy Recharge': 0.32,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: Ripple of Fate',
             image: 'https://genshin.honeyhunterworld.com/img/s_413101.webp',

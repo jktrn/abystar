@@ -135,7 +135,7 @@ const Nahida: Character = {
             'Bonus Elemental Mastery': 115.2,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: Akara',
             image: 'https://genshin.honeyhunterworld.com/img/s_733101.webp',

@@ -121,7 +121,7 @@
                 "Geo DMG Bonus": 0.288
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Favonius Bladework - Weiss",
                 "image": "https://genshin.honeyhunterworld.com/img/s_383101.webp",
@@ -628,7 +628,7 @@
                 "Dendro DMG Bonus": 0.288
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Abductive Reasoning",
                 "image": "https://genshin.honeyhunterworld.com/img/s_783101.webp",
@@ -1237,7 +1237,7 @@
                 "Cryo DMG Bonus": 0.288
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Rapid Fire",
                 "image": "https://genshin.honeyhunterworld.com/img/s_623101.webp",
@@ -1778,7 +1778,7 @@
                 "Bonus ATK": 0.24
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Sharpshooter",
                 "image": "https://genshin.honeyhunterworld.com/img/s_213101.webp",
@@ -2285,7 +2285,7 @@
                 "Bonus CRIT Rate": 0.192
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Fight Club Legend",
                 "image": "https://genshin.honeyhunterworld.com/img/s_573101.webp",
@@ -2843,7 +2843,7 @@
                 "Bonus HP": 0.288
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: The Classics of Acupuncture",
                 "image": "https://genshin.honeyhunterworld.com/img/s_823101.webp",
@@ -3367,7 +3367,7 @@
                 "Bonus HP": 0.24
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Whisper of Water",
                 "image": "https://genshin.honeyhunterworld.com/img/s_143101.webp",
@@ -3857,7 +3857,7 @@
                 "Electro DMG Bonus": 0.24
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Oceanborne",
                 "image": "https://genshin.honeyhunterworld.com/img/s_243101.webp",
@@ -4432,7 +4432,7 @@
                 "Bonus Energy Recharge": 0.2667
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Strike of Fortune",
                 "image": "https://genshin.honeyhunterworld.com/img/s_323101.webp",
@@ -4990,7 +4990,7 @@
                 "Bonus HP": 0.24
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Gleaming Spear - Guardian Stance",
                 "image": "https://genshin.honeyhunterworld.com/img/s_723101.webp",
@@ -5548,7 +5548,7 @@
                 "Bonus ATK": 0.24
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Cool-Color Capture",
                 "image": "https://genshin.honeyhunterworld.com/img/s_883101.webp",
@@ -6208,7 +6208,7 @@
                 "Bonus HP": 0.24
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Line Bayonet Thrust EX",
                 "image": "https://genshin.honeyhunterworld.com/img/s_903101.webp",
@@ -6766,7 +6766,7 @@
                 "Bonus ATK": 0.24
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Demonbane",
                 "image": "https://genshin.honeyhunterworld.com/img/s_363101.webp",
@@ -7273,7 +7273,7 @@
                 "Bonus ATK": 0.24
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Supplicant's Bowmanship",
                 "image": "https://genshin.honeyhunterworld.com/img/s_673101.webp",
@@ -7746,7 +7746,7 @@
                 "Bonus CRIT DMG": 0.384
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Invoker's Spear",
                 "image": "https://genshin.honeyhunterworld.com/img/s_713101.webp",
@@ -8423,7 +8423,7 @@
                 "Bonus HP": 0.288
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Sandstorm Assault",
                 "image": "https://genshin.honeyhunterworld.com/img/s_793101.webp",
@@ -9015,7 +9015,7 @@
                 "Bonus CRIT Rate": 0.192
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Tempered Sword",
                 "image": "https://genshin.honeyhunterworld.com/img/s_163101.webp",
@@ -9573,7 +9573,7 @@
                 "Cryo DMG Bonus": 0.24
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: K\u00e4tzlein Style",
                 "image": "https://genshin.honeyhunterworld.com/img/s_393101.webp",
@@ -10131,7 +10131,7 @@
                 "Bonus HP": 0.24
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Marvelous Sword-Dance (Modified)",
                 "image": "https://genshin.honeyhunterworld.com/img/s_683101.webp",
@@ -10655,7 +10655,7 @@
                 "Bonus CRIT DMG": 0.384
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Favonius Bladework - Edel",
                 "image": "https://genshin.honeyhunterworld.com/img/s_513101.webp",
@@ -11332,7 +11332,7 @@
                 "Bonus ATK": 0.24
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Parthian Shot",
                 "image": "https://genshin.honeyhunterworld.com/img/s_763101.webp",
@@ -11890,7 +11890,7 @@
                 "Bonus ATK": 0.24
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Bolts of Downfall",
                 "image": "https://genshin.honeyhunterworld.com/img/s_313101.webp",
@@ -12380,7 +12380,7 @@
                 "Bonus ATK": 0.24
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Flowing Eddies",
                 "image": "https://genshin.honeyhunterworld.com/img/s_853101.webp",
@@ -13006,7 +13006,7 @@
                 "Bonus CRIT Rate": 0.192
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Soloist's Solicitation",
                 "image": "https://genshin.honeyhunterworld.com/img/s_893101.webp",
@@ -13683,7 +13683,7 @@
                 "Bonus CRIT DMG": 0.384
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Liutian Archery",
                 "image": "https://genshin.honeyhunterworld.com/img/s_373101.webp",
@@ -14241,7 +14241,7 @@
                 "Geo DMG Bonus": 0.24
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Ripping Fang Fletching",
                 "image": "https://genshin.honeyhunterworld.com/img/s_553101.webp",
@@ -14765,7 +14765,7 @@
                 "Bonus CRIT DMG": 0.384
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Secret Spear of Wangsheng",
                 "image": "https://genshin.honeyhunterworld.com/img/s_463101.webp",
@@ -15357,7 +15357,7 @@
                 "Healing Bonus": 0.2215
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Favonius Bladework",
                 "image": "https://genshin.honeyhunterworld.com/img/s_33101.webp",
@@ -15898,7 +15898,7 @@
                 "Bonus Elemental Mastery": 115.2
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Garyuu Bladework",
                 "image": "https://genshin.honeyhunterworld.com/img/s_473101.webp",
@@ -16439,7 +16439,7 @@
                 "Bonus Energy Recharge": 0.2667
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Ceremonial Bladework",
                 "image": "https://genshin.honeyhunterworld.com/img/s_153101.webp",
@@ -16912,7 +16912,7 @@
                 "Bonus CRIT DMG": 0.384
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Kamisato Art - Kabuki",
                 "image": "https://genshin.honeyhunterworld.com/img/s_23101.webp",
@@ -17402,7 +17402,7 @@
                 "Bonus CRIT DMG": 0.384
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Kamisato Art - Marobashi",
                 "image": "https://genshin.honeyhunterworld.com/img/s_663101.webp",
@@ -17994,7 +17994,7 @@
                 "Bonus Elemental Mastery": 96.0
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Schematic Setup",
                 "image": "https://genshin.honeyhunterworld.com/img/s_813101.webp",
@@ -18501,7 +18501,7 @@
                 "Bonus CRIT DMG": 0.384
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Yunlai Swordsmanship",
                 "image": "https://genshin.honeyhunterworld.com/img/s_423101.webp",
@@ -19025,7 +19025,7 @@
                 "Bonus HP": 0.24
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Boxcutter",
                 "image": "https://genshin.honeyhunterworld.com/img/s_613101.webp",
@@ -19600,7 +19600,7 @@
                 "Pyro DMG Bonus": 0.288
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Kaboom!",
                 "image": "https://genshin.honeyhunterworld.com/img/s_293101.webp",
@@ -20073,7 +20073,7 @@
                 "Bonus ATK": 0.24
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Tengu Bowmanship",
                 "image": "https://genshin.honeyhunterworld.com/img/s_563101.webp",
@@ -20580,7 +20580,7 @@
                 "Bonus HP": 0.24
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Shinobu's Shadowsword",
                 "image": "https://genshin.honeyhunterworld.com/img/s_653101.webp",
@@ -21121,7 +21121,7 @@
                 "Bonus HP": 0.24
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Sword of the Radiant Path",
                 "image": "https://genshin.honeyhunterworld.com/img/s_743101.webp",
@@ -21611,7 +21611,7 @@
                 "Bonus Elemental Mastery": 96.0
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Lightning Touch",
                 "image": "https://genshin.honeyhunterworld.com/img/s_43101.webp",
@@ -22152,7 +22152,7 @@
                 "Anemo DMG Bonus": 0.24
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Rapid Ritesword",
                 "image": "https://genshin.honeyhunterworld.com/img/s_833101.webp",
@@ -22727,7 +22727,7 @@
                 "Bonus CRIT Rate": 0.192
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Card Force Translocation",
                 "image": "https://genshin.honeyhunterworld.com/img/s_843101.webp",
@@ -23353,7 +23353,7 @@
                 "Bonus HP": 0.24
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Spear of Favonius - Arrow's Passage",
                 "image": "https://genshin.honeyhunterworld.com/img/s_803101.webp",
@@ -23928,7 +23928,7 @@
                 "Bonus Energy Recharge": 0.32
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Ripple of Fate",
                 "image": "https://genshin.honeyhunterworld.com/img/s_413101.webp",
@@ -24435,7 +24435,7 @@
                 "Bonus Elemental Mastery": 115.2
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Akara",
                 "image": "https://genshin.honeyhunterworld.com/img/s_733101.webp",
@@ -25010,7 +25010,7 @@
                 "Bonus CRIT DMG": 0.384
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Blunt Refusal",
                 "image": "https://genshin.honeyhunterworld.com/img/s_913101.webp",
@@ -25568,7 +25568,7 @@
                 "Bonus CRIT DMG": 0.384
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: As Water Seeks Equilibrium",
                 "image": "https://genshin.honeyhunterworld.com/img/s_873101.webp",
@@ -26109,7 +26109,7 @@
                 "Bonus HP": 0.288
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Dance of Samser",
                 "image": "https://genshin.honeyhunterworld.com/img/s_703101.webp",
@@ -26650,7 +26650,7 @@
                 "Geo DMG Bonus": 0.24
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Sparkling Scatter",
                 "image": "https://genshin.honeyhunterworld.com/img/s_273101.webp",
@@ -27072,7 +27072,7 @@
                 "Bonus Def": 0.3
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Favonius Bladework - Maid",
                 "image": "https://genshin.honeyhunterworld.com/img/s_343101.webp",
@@ -27664,7 +27664,7 @@
                 "Healing Bonus": 0.2215
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Ancient Sword Art",
                 "image": "https://genshin.honeyhunterworld.com/img/s_353101.webp",
@@ -28222,7 +28222,7 @@
                 "Bonus Energy Recharge": 0.32
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Origin",
                 "image": "https://genshin.honeyhunterworld.com/img/s_523101.webp",
@@ -28972,7 +28972,7 @@
                 "Physical DMG Bonus": 0.3
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Steel Fang",
                 "image": "https://genshin.honeyhunterworld.com/img/s_203101.webp",
@@ -29598,7 +29598,7 @@
                 "Bonus ATK": 0.24
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Spear of the Church",
                 "image": "https://genshin.honeyhunterworld.com/img/s_453101.webp",
@@ -30088,7 +30088,7 @@
                 "Hydro DMG Bonus": 0.288
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: The Shape of Water",
                 "image": "https://genshin.honeyhunterworld.com/img/s_543101.webp",
@@ -30634,7 +30634,7 @@
                 "Bonus Elemental Mastery": 96.0
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Shuumatsuban Ninja Blade",
                 "image": "https://genshin.honeyhunterworld.com/img/s_533101.webp",
@@ -31260,7 +31260,7 @@
                 "Bonus ATK": 0.288
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Dawnstar Piercer",
                 "image": "https://genshin.honeyhunterworld.com/img/s_633101.webp",
@@ -31852,7 +31852,7 @@
                 "Anemo DMG Bonus": 0.24
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Fudou Style Martial Arts",
                 "image": "https://genshin.honeyhunterworld.com/img/s_593101.webp",
@@ -32376,7 +32376,7 @@
                 "Anemo DMG Bonus": 0.24
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Wind Spirit Creation",
                 "image": "https://genshin.honeyhunterworld.com/img/s_433101.webp",
@@ -32849,7 +32849,7 @@
                 "Hydro DMG Bonus": 0.288
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Cutting Torrent",
                 "image": "https://genshin.honeyhunterworld.com/img/s_333101.webp",
@@ -33611,7 +33611,7 @@
                 "Bonus ATK": 0.24
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Swiftshatter Spear",
                 "image": "https://genshin.honeyhunterworld.com/img/s_503101.webp",
@@ -34169,7 +34169,7 @@
                 "Dendro DMG Bonus": 0.288
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Khanda Barrier-Buster",
                 "image": "https://genshin.honeyhunterworld.com/img/s_693101.webp",
@@ -34693,7 +34693,7 @@
                 "Bonus ATK": 0.24
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Foreign Ironwind",
                 "image": "https://genshin.honeyhunterworld.com/img/s_73001.webp",
@@ -35246,7 +35246,7 @@
                 "Bonus ATK": 0.24
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Foreign Fieldcleaver",
                 "image": "https://genshin.honeyhunterworld.com/img/s_113001.webp",
@@ -35731,7 +35731,7 @@
                 "Bonus ATK": 0.24
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Foreign Thundershock",
                 "image": "https://genshin.honeyhunterworld.com/img/s_103001.webp",
@@ -36301,7 +36301,7 @@
                 "Bonus ATK": 0.24
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Foreign Rockblade",
                 "image": "https://genshin.honeyhunterworld.com/img/s_73001.webp",
@@ -36786,7 +36786,7 @@
                 "Bonus ATK": 0.24
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Foreign Stream",
                 "image": "https://genshin.honeyhunterworld.com/img/s_63001.webp",
@@ -37356,7 +37356,7 @@
                 "Bonus Energy Recharge": 0.32
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Divine Marksmanship",
                 "image": "https://genshin.honeyhunterworld.com/img/s_223101.webp",
@@ -37897,7 +37897,7 @@
                 "Bonus CRIT Rate": 0.192
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Yuuban Meigen",
                 "image": "https://genshin.honeyhunterworld.com/img/s_753101.webp",
@@ -38370,7 +38370,7 @@
                 "Bonus CRIT DMG": 0.384
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Forceful Fists of Frost",
                 "image": "https://genshin.honeyhunterworld.com/img/s_863101.webp",
@@ -38894,7 +38894,7 @@
                 "Bonus Elemental Mastery": 96.0
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Dough-Fu",
                 "image": "https://genshin.honeyhunterworld.com/img/s_233101.webp",
@@ -39418,7 +39418,7 @@
                 "Bonus CRIT Rate": 0.192
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Whirlwind Thrust",
                 "image": "https://genshin.honeyhunterworld.com/img/s_263101.webp",
@@ -39925,7 +39925,7 @@
                 "Bonus ATK": 0.24
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Guhua Style",
                 "image": "https://genshin.honeyhunterworld.com/img/s_253101.webp",
@@ -40432,7 +40432,7 @@
                 "Bonus ATK": 0.24
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Dance on Fire",
                 "image": "https://genshin.honeyhunterworld.com/img/s_443101.webp",
@@ -41024,7 +41024,7 @@
                 "Bonus CRIT Rate": 0.192
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Spiritfox Sin-Eater",
                 "image": "https://genshin.honeyhunterworld.com/img/s_583101.webp",
@@ -41531,7 +41531,7 @@
                 "Pyro DMG Bonus": 0.24
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Seal of Approval",
                 "image": "https://genshin.honeyhunterworld.com/img/s_483101.webp",
@@ -42038,7 +42038,7 @@
                 "Bonus HP": 0.24
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Toss 'N' Turn Spear",
                 "image": "https://genshin.honeyhunterworld.com/img/s_773101.webp",
@@ -42596,7 +42596,7 @@
                 "Bonus CRIT Rate": 0.192
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Stealthy Bowshot",
                 "image": "https://genshin.honeyhunterworld.com/img/s_603101.webp",
@@ -43103,7 +43103,7 @@
                 "Bonus CRIT Rate": 0.192
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Firework Flare-Up",
                 "image": "https://genshin.honeyhunterworld.com/img/s_493101.webp",
@@ -43627,7 +43627,7 @@
                 "Bonus Energy Recharge": 0.2667
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Cloud-Grazing Strike",
                 "image": "https://genshin.honeyhunterworld.com/img/s_643101.webp",
@@ -44185,7 +44185,7 @@
                 "Geo DMG Bonus": 0.288
             }
         },
-        "activeSkills": [
+        "talents": [
             {
                 "name": "Normal Attack: Rain of Stone",
                 "image": "https://genshin.honeyhunterworld.com/img/s_303101.webp",

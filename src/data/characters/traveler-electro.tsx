@@ -135,7 +135,7 @@ const TravelerElectro: Character = {
             'Bonus ATK': 0.24,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: Foreign Thundershock',
             image: 'https://genshin.honeyhunterworld.com/img/s_103001.webp',

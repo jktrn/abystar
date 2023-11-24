@@ -135,7 +135,7 @@ const Yanfei: Character = {
             'Pyro DMG Bonus': 0.24,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: Seal of Approval',
             image: 'https://genshin.honeyhunterworld.com/img/s_483101.webp',

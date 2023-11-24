@@ -135,7 +135,7 @@ const Neuvillette: Character = {
             'Bonus CRIT DMG': 0.384,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: As Water Seeks Equilibrium',
             image: 'https://genshin.honeyhunterworld.com/img/s_873101.webp',

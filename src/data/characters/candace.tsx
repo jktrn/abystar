@@ -135,7 +135,7 @@ const Candace: Character = {
             'Bonus HP': 0.24,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: Gleaming Spear - Guardian Stance',
             image: 'https://genshin.honeyhunterworld.com/img/s_723101.webp',

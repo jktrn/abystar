@@ -135,7 +135,7 @@ const KujouSara: Character = {
             'Bonus ATK': 0.24,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: Tengu Bowmanship',
             image: 'https://genshin.honeyhunterworld.com/img/s_563101.webp',

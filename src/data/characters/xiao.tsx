@@ -135,7 +135,7 @@ const Xiao: Character = {
             'Bonus CRIT Rate': 0.192,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: Whirlwind Thrust',
             image: 'https://genshin.honeyhunterworld.com/img/s_263101.webp',

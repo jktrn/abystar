@@ -20,7 +20,7 @@ def fix_traveler():
         new_traveler_data["vision"] = element
         new_traveler_data["weapon"] = "Sword"
         new_traveler_data["rarity"] = 5
-        new_traveler_data["activeSkills"] = traveler_data["activeSkills"][i*3:(i+1)*3]
+        new_traveler_data["talents"] = traveler_data["talents"][i*3:(i+1)*3]
         new_traveler_data["passiveSkills"] = traveler_data["passiveSkills"][i*8:i*8+2]
         new_traveler_data["constellations"] = traveler_data["passiveSkills"][i*8+2:(i+1)*8]
         

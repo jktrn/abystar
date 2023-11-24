@@ -135,7 +135,7 @@ const Razor: Character = {
             'Physical DMG Bonus': 0.3,
         },
     },
-    activeSkills: [
+    talents: [
         {
             name: 'Normal Attack: Steel Fang',
             image: 'https://genshin.honeyhunterworld.com/img/s_203101.webp',
