@@ -1,5 +1,6 @@
 import { type ClassValue, clsx } from 'clsx'
 import { twMerge } from 'tailwind-merge'
+import { Character } from '@/interfaces/Character'
 
 function cn(...inputs: ClassValue[]) {
     return twMerge(clsx(inputs))
@@ -51,6 +52,14 @@ const kebabCase = (str: string) => {
     return cleanedString.replace(/\s+/g, '-').toLowerCase()
 }
 
+const getLevelOptions = (character: Character) => {
+    return Object.keys(character.baseStats)
+}
+
+const getConstellationOptions = Array.from(Array(7).keys()).map((i) => i.toString())
+
+const getActiveSkillOptions = [...Array(15)].map((_, i) => (i + 1).toString())
+
 export {
     compareObjects,
     compareElement,
@@ -58,4 +67,7 @@ export {
     elementColors,
     cn,
     kebabCase,
+    getLevelOptions,
+    getConstellationOptions,
+    getActiveSkillOptions,
 }
