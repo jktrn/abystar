@@ -36,5 +36,5 @@ def generate_tsx_files(json_path, output_directory):
             tsx_file.write(f"export default {pascal_case(character_name)}\n")
 
 json_path = 'characters.json'
-output_directory = 'output'
+output_directory = '../../src/data/characters'
 generate_tsx_files(json_path, output_directory)

@@ -1,8 +1,17 @@
 import json
 import os
 
-# Function to map base stats keys
-def map_base_stats_keys(character_data):
+def parse_stat_value(value):
+    value_str = str(value)
+
+    if value_str.endswith('%'):
+        return round(float(value_str.strip('%')) / 100, 5)
+    try:
+        return round(float(value_str), 5)
+    except ValueError:
+        return value
+
+def process_character_data(character_data):
     attribute_key_map = {
         'HP': 'Base HP',
         'Atk': 'Base ATK',
@@ -32,13 +41,9 @@ def map_base_stats_keys(character_data):
     for level, stats in character_data.get('baseStats', {}).items():
         new_stats = {}
         for key, value in stats.items():
-            # Map the key using the attributeKeyMap
             mapped_key = attribute_key_map.get(key, key)
-
-            # Add the mapped key-value pair to the new_stats
-            new_stats[mapped_key] = value
-
-        # Update the baseStats with the new mapped stats
+            parsed_value = parse_stat_value(value)
+            new_stats[mapped_key] = parsed_value
         character_data['baseStats'][level] = new_stats
 
     return character_data
@@ -50,12 +55,9 @@ def main():
     with open(file_path, 'r') as f:
         data = json.load(f)
 
-    # Process each character in the data
     for character_name, character_data in data.items():
-        # Map base stats keys for each character
-        data[character_name] = map_base_stats_keys(character_data)
+        data[character_name] = process_character_data(character_data)
 
-    # Write the updated data back to characters.json
     with open(file_path, 'w') as f:
         json.dump(data, f, indent=4)
 

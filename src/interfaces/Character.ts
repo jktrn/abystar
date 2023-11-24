@@ -1,8 +1,4 @@
 export interface BaseStat {
-    [key: string]: string
-}
-
-export interface NewBaseStat {
     [key: string]: number
 }
 
@@ -67,11 +63,11 @@ export interface Bonus {
 
 export interface Effect {
     (
-        baseStats: NewBaseStat,
+        baseStats: BaseStat,
         currentStacks?: number,
         activeSkills?: string[],
-        initialBaseStats?: NewBaseStat
-    ): NewBaseStat
+        initialBaseStats?: BaseStat
+    ): BaseStat
 }
 
 export interface AbilityScaling {
