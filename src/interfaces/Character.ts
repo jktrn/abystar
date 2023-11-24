@@ -41,7 +41,7 @@ export interface RawCharacter {
 }
 
 export interface Character extends RawCharacter {
-    abilityScalings: AbilityScaling
+    talentScalings: TalentScaling
     characterBonuses: Bonus[]
     constellationBonuses: Bonus[]
 }
@@ -55,8 +55,8 @@ export interface Bonus {
     currentStacks?: number
     stackOptions?: string[]
     dependencies?: string[]
-    affectsAbilityIndex?: number
-    applyToAbilityScaling?: (abilityScaling: AbilityScaling) => void
+    affectsTalentIndex?: number
+    applyToTalentScaling?: (talentScaling: TalentScaling) => void
     minConstellation?: number
     enabled?: boolean
 }
@@ -70,13 +70,13 @@ export interface Effect {
     ): BaseStat
 }
 
-export interface AbilityScaling {
+export interface TalentScaling {
     [skillName: string]: {
-        [aspectName: string]: AbilityScalingData
+        [aspectName: string]: TalentScalingData
     }
 }
 
-export interface AbilityScalingData {
+export interface TalentScalingData {
     formulaType: FormulaType
     baseStat?: string | string[]
     additiveBonusStat?: string | string[]
@@ -92,6 +92,84 @@ export interface CharacterState {
     characterConstellation: number
     characterActiveBonuses: Bonus[]
     characterTalentLevels: number[]
+}
+
+export interface CharacterAttributes {
+    'Base HP': number
+    'Bonus HP': number
+    'Base ATK': number
+    'Bonus ATK': number
+    'Base DEF': number
+    'Bonus DEF': number
+    'Elemental Mastery': number
+    'Bonus Elemental Mastery': number
+    'Energy Recharge': number
+    'Bonus Energy Recharge': number
+    'CRIT Rate': number
+    'Bonus CRIT Rate': number
+    'CRIT DMG': number
+    'Bonus CRIT DMG': number
+    'Pyro DMG Bonus': number
+    'Cryo DMG Bonus': number
+    'Hydro DMG Bonus': number
+    'Electro DMG Bonus': number
+    'Anemo DMG Bonus': number
+    'Geo DMG Bonus': number
+    'Dendro DMG Bonus': number
+    'Physical DMG Bonus': number
+    'Healing Bonus': number
+    'Shield Strength': number
+    'Normal Attack DMG Bonus': number
+    'Normal Attack Additive Bonus': number
+    'Charged Attack DMG Bonus': number
+    'Charged Attack Additive Bonus': number
+    'Charged Attack Stamina Cost Multiplier': number
+    'Plunging Attack DMG Bonus': number
+    'Plunging Attack Additive Bonus': number
+    'Elemental Skill DMG Bonus': number
+    'Elemental Skill CRIT Rate': number
+    'Elemental Skill CRIT DMG': number
+    'Elemental Skill Additive Bonus': number
+    'Elemental Skill CD Reduction': number
+    'Elemental Burst DMG Bonus': number
+    'Elemental Burst CRIT Rate': number
+    'Elemental Burst CRIT DMG': number
+    'Elemental Burst Additive Bonus': number
+    'Elemental Burst CD Reduction': number
+    'All CD Reduction': number
+    'All DMG Bonus': number
+    'All Elemental DMG Bonus': number
+    'Overloaded DMG Bonus': number
+    'Burning DMG Bonus': number
+    'Vaporize DMG Bonus': number
+    'Melt DMG Bonus': number
+    'Superconduct DMG Bonus': number
+    'Swirl DMG Bonus': number
+    'Electro-Charged DMG Bonus': number
+    'Shattered DMG Bonus': number
+    'Aggravate DMG Bonus': number
+    'Spread DMG Bonus': number
+    'Bloom DMG Bonus': number
+    'Burgeon DMG Bonus': number
+    'Hyperbloom DMG Bonus': number
+    'Bountiful Core DMG Bonus': number
+    'Pyro RES': number
+    'Pyro RES Shred': number
+    'Cryo RES': number
+    'Cryo RES Shred': number
+    'Hydro RES': number
+    'Hydro RES Shred': number
+    'Electro RES': number
+    'Electro RES Shred': number
+    'Anemo RES': number
+    'Anemo RES Shred': number
+    'Geo RES': number
+    'Geo RES Shred': number
+    'Dendro RES': number
+    'Dendro RES Shred': number
+    'Physical RES': number
+    'Physical RES Shred': number
+    [key: string]: number
 }
 
 export enum FormulaType {

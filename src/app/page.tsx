@@ -2,19 +2,28 @@
 
 import React, { useEffect, useState } from 'react'
 import { CharacterImage, CharacterModal, CustomSelect } from '@/components'
-import { Character, CharacterState } from '@/interfaces/Character'
 import {
+    Character,
+    CharacterAttributes,
+    CharacterState,
+} from '@/interfaces/Character'
+import {
+    applyAttributeBonuses,
+    defaultCharacterAttributes,
     getLevelOptions,
     getConstellationOptions,
     getTalentOptions,
+    kebabCase,
 } from '@/lib'
 
 export default function Home() {
     const [characterState, setCharacterState] = useState<CharacterState | null>(null)
+    const [characterAttributes, setCharacterAttributes] =
+        useState<CharacterAttributes | null>(null)
     const [isCharacterModalOpen, setCharacterModalOpen] = useState(false)
 
     const handleCharacterSelect = (selectedCharacter: Character) => {
-        const defaultState: CharacterState = {
+        const initialState: CharacterState = {
             character: selectedCharacter,
             characterLevel: '90/90',
             characterConstellation: 0,
@@ -23,24 +32,56 @@ export default function Home() {
             ),
             characterTalentLevels: [10, 10, 10],
         }
-        setCharacterState(defaultState)
+
+        setCharacterState(initialState)
         setCharacterModalOpen(false)
+
+        const initialAttributes: CharacterAttributes = applyAttributeBonuses({
+            ...defaultCharacterAttributes,
+            ...initialState.character.baseStats[initialState.characterLevel],
+        })
+
+        setCharacterAttributes(initialAttributes)
     }
 
-    const updateCharacterState = <K extends keyof CharacterState>(
+    const updateCharacterStateAndAttributes = <K extends keyof CharacterState>(
         key: K,
         newValue: CharacterState[K]
     ) => {
         setCharacterState((prevState) => {
             if (prevState === null) return null
 
-            return { ...prevState, [key]: newValue }
+            const updatedState = { ...prevState, [key]: newValue }
+
+            const newAttributes = recalculateAttributes(updatedState)
+            setCharacterAttributes(newAttributes)
+
+            return updatedState
         })
     }
 
+    const recalculateAttributes = (state: CharacterState): CharacterAttributes => {
+        let newAttributes = applyAttributeBonuses({
+            ...defaultCharacterAttributes,
+            ...state.character.baseStats[state.characterLevel],
+        })
+
+        // TODO: Apply any active bonuses
+        // ...
+
+        // TODO: Apply constellation effects
+        // ...
+
+        return newAttributes
+    }
+
     useEffect(() => {
-        console.log("Character State has been updated: ", characterState)
+        console.log('Character State has been updated: ', characterState)
     }, [characterState])
+
+    useEffect(() => {
+        console.log('Character Attributes has been updated: ', characterAttributes)
+    }, [characterAttributes])
 
     return (
         <main className="flex min-h-screen flex-col items-center justify-between p-24">
@@ -53,34 +94,40 @@ export default function Home() {
                         onClick={() => setCharacterModalOpen(true)}
                     />
 
-                    {/* Character Level Select */}
                     <CustomSelect
-                        key={`level-select-${characterState.character.name}`}
+                        key={`level-select-${kebabCase(
+                            characterState.character.name
+                        )}`}
                         options={getLevelOptions(characterState.character)}
                         value={characterState.characterLevel}
                         onChange={(newLevel) =>
-                            updateCharacterState('characterLevel', newLevel)
+                            updateCharacterStateAndAttributes(
+                                'characterLevel',
+                                newLevel
+                            )
                         }
                     />
 
-                    {/* Character Constellation Select */}
                     <CustomSelect
-                        key={`constellation-select-${characterState.character.name}`}
+                        key={`constellation-select-${kebabCase(
+                            characterState.character.name
+                        )}`}
                         options={getConstellationOptions}
                         value={characterState.characterConstellation.toString()}
                         onChange={(newConstellation) =>
-                            updateCharacterState(
+                            updateCharacterStateAndAttributes(
                                 'characterConstellation',
                                 parseInt(newConstellation, 10)
                             )
                         }
                     />
 
-                    {/* Character Talent Levels Select (for each skill) */}
                     {characterState.characterTalentLevels.map(
                         (skillLevel, index) => (
                             <CustomSelect
-                                key={`skill-${index + 1}-select-${characterState.character.name}`}
+                                key={`skill-${index + 1}-select-${kebabCase(
+                                    characterState.character.name
+                                )}`}
                                 options={getTalentOptions}
                                 value={skillLevel.toString()}
                                 onChange={(newLevel) => {
@@ -88,9 +135,9 @@ export default function Home() {
                                         ...characterState.characterTalentLevels,
                                     ]
                                     newSkills[index] = parseInt(newLevel, 10)
-                                    updateCharacterState(
+                                    updateCharacterStateAndAttributes(
                                         'characterTalentLevels',
-                                        newSkills.map(Number)
+                                        newSkills
                                     )
                                 }}
                             />

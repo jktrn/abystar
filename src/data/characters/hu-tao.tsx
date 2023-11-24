@@ -1,11 +1,113 @@
-import { AbilityScaling, Bonus, Character } from '@/interfaces/Character'
+import { TalentScaling, Bonus, Character, FormulaType } from '@/interfaces/Character'
+import { Badge } from '@/components/ui/badge'
+import { characterData } from '@/data'
 
-const abilityScalings: AbilityScaling = {
+const talentScalings: TalentScaling = {
     // ...
 }
 
 const characterBonuses: Bonus[] = [
-    // ...
+    {
+        name: 'Guide to Afterlife',
+        description: (
+            <span>
+                Activates <b>Paramita Papilio</b> (Elemental Skill) stance,
+                converting damage to <span style={{ color: '#bf612d' }}>Pyro</span>.
+                Increases ATK based on Max HP (maximum gained this way cannot exceed
+                400% original ATK)
+            </span>
+        ),
+        icon: '/images/skill-icons/skills/hu-tao-skill.png',
+        effect: (attributes, currentStacks, talents, initialAttributes) => {
+            if (!talents || !initialAttributes) return attributes
+            const talentData: any = characterData['Hu Tao'].talents.find(
+                (talent) => talent.name === 'Guide to Afterlife'
+            )?.data
+
+            const bonusString =
+                talentData?.['ATK Increase']?.[
+                    talents[1] as keyof (typeof talentData)['ATK Increase']
+                ].match(/\d+(\.\d+)?/)
+
+            const bonusFloat = bonusString ? parseFloat(bonusString[0]) : null
+
+            const newAttributes = { ...attributes }
+            if (bonusFloat) {
+                let bonus = initialAttributes['HP'] * (bonusFloat / 100)
+                const maxBonus = initialAttributes['ATK'] * 4
+                if (bonus > maxBonus) {
+                    bonus = maxBonus
+                }
+                newAttributes['ATK'] = initialAttributes['ATK'] + bonus
+            }
+            return newAttributes
+        },
+        affectsTalentIndex: 0,
+        applyToTalentScaling: (talentScaling) => {
+            // const normalAttackScaling =
+            //     talentScaling['Hu Tao'][
+            //         'Normal Attack: Secret Spear of Wangsheng'
+            //     ]
+            // if (normalAttackScaling) {
+            //     Object.values(normalAttackScaling).forEach((aspect) => {
+            //         if (aspect.formulaType !== FormulaType.DamageFormula) return
+            //         aspect.multiplicativeBonusStat = 'Pyro DMG Bonus'
+            //         aspect.damageType = 'Pyro'
+            //     })
+            // }
+            // const chargedAttackScaling =
+            //     talentScaling['Hu Tao'][
+            //         'Normal Attack: Secret Spear of Wangsheng'
+            //     ]['Charged Attack Stamina Cost'].multiplicativeBonusStat
+            // if (chargedAttackScaling && Array.isArray(chargedAttackScaling)) {
+            //     chargedAttackScaling.push('Crimson Bouquet Stamina Reduction')
+            // }
+        },
+        dependencies: ['HP'],
+    },
+    {
+        name: 'Sanguine Rogue',
+        description: (
+            <span>
+                +33% <span style={{ color: '#bf612d' }}>Pyro</span> DMG Bonus when
+                under 50% Max HP
+            </span>
+        ),
+        icon: '/images/skill-icons/passives/hu-tao-passive2.png',
+        effect: (attributes, currentStacks, talents, initialAttributes) => {
+            if (!initialAttributes) return attributes
+            const newAttributes = { ...attributes }
+            newAttributes['Pyro DMG Bonus'] =
+                initialAttributes['Pyro DMG Bonus'] + 33
+            return newAttributes
+        },
+    },
+    {
+        name: "Butterfly's Embrace",
+        description: (
+            <span>
+                <Badge variant="secondary">C6</Badge> Triggers when receiving fatal
+                blow or below 25% HP. All Elemental/Physical RES increased by 200%,
+                CRIT Rate increased by 100%
+            </span>
+        ),
+        icon: '/images/skill-icons/constellations/hu-tao-constellation6.png',
+        effect: (attributes, currentStacks, talents, initialAttributes) => {
+            if (!initialAttributes) return attributes
+            const newAttributes = { ...attributes }
+            newAttributes['Pyro RES'] = initialAttributes['Pyro RES'] + 200
+            newAttributes['Cryo RES'] = initialAttributes['Cryo RES'] + 200
+            newAttributes['Electro RES'] = initialAttributes['Electro RES'] + 200
+            newAttributes['Hydro RES'] = initialAttributes['Hydro RES'] + 200
+            newAttributes['Geo RES'] = initialAttributes['Geo RES'] + 200
+            newAttributes['Anemo RES'] = initialAttributes['Anemo RES'] + 200
+            newAttributes['Dendro RES'] = initialAttributes['Dendro RES'] + 200
+            newAttributes['Physical RES'] = initialAttributes['Physical RES'] + 200
+            newAttributes['CRIT Rate'] = initialAttributes['CRIT Rate'] + 100
+            return newAttributes
+        },
+        minConstellation: 6,
+    },
 ]
 
 const constellationBonuses: Bonus[] = [
@@ -616,7 +718,7 @@ const HuTao: Character = {
             level: 6,
         },
     ],
-    abilityScalings,
+    talentScalings,
     characterBonuses,
     constellationBonuses,
 }

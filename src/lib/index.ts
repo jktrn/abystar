@@ -9,3 +9,8 @@ export {
     getConstellationOptions,
     getTalentOptions,
 } from './utils'
+
+export {
+    defaultCharacterAttributes,
+    applyAttributeBonuses,
+} from './characterAttributes'
