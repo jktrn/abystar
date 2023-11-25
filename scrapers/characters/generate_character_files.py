@@ -20,8 +20,8 @@ def generate_tsx_files(json_path, output_directory):
         filepath = os.path.join(output_directory, filename)
 
         with open(filepath, 'w') as tsx_file:
-            tsx_file.write("import { AbilityScaling, Bonus, Character } from '@/interfaces/Character'\n\n")
-            tsx_file.write("const abilityScalings: AbilityScaling = {\n// ...\n}\n\n")
+            tsx_file.write("import { TalentScaling, Bonus, Character } from '@/interfaces/Character'\n\n")
+            tsx_file.write("const talentScalings: TalentScaling = {\n// ...\n}\n\n")
             tsx_file.write("const characterBonuses: Bonus[] = [\n// ...\n]\n\n")
             tsx_file.write("const constellationBonuses: Bonus[] = [\n// ...\n]\n\n")
             
@@ -32,7 +32,7 @@ def generate_tsx_files(json_path, output_directory):
                 json.dump(value, tsx_file, indent=4)
                 tsx_file.write(",\n")
 
-            tsx_file.write("    abilityScalings,\n    characterBonuses,\n    constellationBonuses\n}\n\n")
+            tsx_file.write("    talentScalings,\n    characterBonuses,\n    constellationBonuses\n}\n\n")
             tsx_file.write(f"export default {pascal_case(character_name)}\n")
 
 json_path = 'characters.json'

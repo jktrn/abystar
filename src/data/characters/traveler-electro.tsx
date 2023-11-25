@@ -1,6 +1,6 @@
-import { AbilityScaling, Bonus, Character } from '@/interfaces/Character'
+import { TalentScaling, Bonus, Character } from '@/interfaces/Character'
 
-const abilityScalings: AbilityScaling = {
+const talentScalings: TalentScaling = {
     // ...
 }
 
@@ -593,7 +593,7 @@ const TravelerElectro: Character = {
             level: 6,
         },
     ],
-    abilityScalings,
+    talentScalings,
     characterBonuses,
     constellationBonuses,
 }
