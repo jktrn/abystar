@@ -1,16 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Bonus, Character } from '@/interfaces/Character'
 import Image from 'next/image'
 import Switch from 'react-switch'
 import CustomSelect from './CustomSelect'
-import { elementColors, getTalentOptions } from '@/lib'
+import { elementColors } from '@/lib'
 
 interface CharacterBonusToggleProps {
     character: Character
     bonus: Bonus
     onToggle: (bonus: Bonus, currentStacks: number) => void
     constellation: number
-    currentStacks: number
 }
 
 const CharacterBonusToggle = ({
@@ -18,13 +17,14 @@ const CharacterBonusToggle = ({
     bonus,
     onToggle,
     constellation,
-    currentStacks,
 }: CharacterBonusToggleProps) => {
+    const [currentStacks, setCurrentStacks] = useState(bonus.enabled ? 1 : 0)
     const isDisabled = Boolean(
         bonus.minConstellation && bonus.minConstellation > constellation
     )
 
     const handleStackChange = (newStacks: number) => {
+        setCurrentStacks(newStacks)
         onToggle(bonus, newStacks)
     }
 
@@ -51,9 +51,14 @@ const CharacterBonusToggle = ({
                     </span>
                 </div>
             </div>
-            {bonus.maxStacks && bonus.maxStacks > 1 ? (
+            {bonus.maxStacks ? (
                 <CustomSelect
-                    options={getTalentOptions}
+                    options={[
+                        ...(bonus.stackOptions || []).map((option, index) => ({
+                            value: index.toString(),
+                            label: option,
+                        })),
+                    ]}
                     value={currentStacks.toString()}
                     onChange={(value) => handleStackChange(parseInt(value, 10))}
                     disabled={isDisabled}

@@ -1,7 +1,7 @@
-import React, { Fragment, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import CharacterBonusToggle from './CharacterBonusToggle'
 import { Bonus, Character } from '@/interfaces/Character'
-import { ChevronUp, ChevronDown } from 'lucide-react'
+import { ChevronDown } from 'lucide-react'
 import { handleBonusToggle } from '@/lib'
 
 interface CharacterBonusesProps {
@@ -19,13 +19,30 @@ const CharacterBonuses = ({
 }: CharacterBonusesProps) => {
     const [isHiddenCollapsed, setIsHiddenCollapsed] = useState(true)
 
-    const allBonuses = character.characterBonuses
-    const hiddenBonuses = allBonuses.filter(
-        (bonus) => bonus.minConstellation && bonus.minConstellation > constellation
-    )
-    const visibleBonuses = allBonuses.filter(
-        (bonus) => !bonus.minConstellation || bonus.minConstellation <= constellation
-    )
+    // Update active bonuses when constellation changes (removing bonuses that are no longer available)
+    useEffect(() => {
+        const updatedActiveBonuses = activeBonuses.filter(
+            (bonus) =>
+                !bonus.minConstellation || bonus.minConstellation <= constellation
+        )
+
+        const isChange =
+            updatedActiveBonuses.length !== activeBonuses.length ||
+            updatedActiveBonuses.some(
+                (bonus, index) => bonus.name !== activeBonuses[index].name
+            )
+
+        if (isChange) {
+            setActiveBonuses(updatedActiveBonuses)
+        }
+    }, [constellation, activeBonuses])
+
+    const filterBonuses = (isHidden: boolean) =>
+        character.characterBonuses.filter((bonus) =>
+            isHidden
+                ? bonus.minConstellation && bonus.minConstellation > constellation
+                : !bonus.minConstellation || bonus.minConstellation <= constellation
+        )
 
     const handleToggle = (bonus: Bonus, bonusStacks: number) => {
         handleBonusToggle(
@@ -39,57 +56,43 @@ const CharacterBonuses = ({
 
     return (
         <div className="mt-4 flex flex-col gap-2">
-            {visibleBonuses.map((bonus) => (
+            {filterBonuses(false).map((bonus) => (
                 <CharacterBonusToggle
                     key={bonus.name}
                     character={character}
                     bonus={bonus}
                     onToggle={handleToggle}
                     constellation={constellation}
-                    currentStacks={
-                        activeBonuses.find((b) => b.name === bonus.name)
-                            ?.currentStacks || 0
-                    }
                 />
             ))}
 
-            {hiddenBonuses.length > 0 && (
-                <Fragment>
+            {filterBonuses(true).length > 0 && (
+                <>
                     <button
                         onClick={() => setIsHiddenCollapsed(!isHiddenCollapsed)}
                         className="w-full rounded-md bg-secondary/25 py-2"
                     >
-                        {isHiddenCollapsed ? (
-                            <Fragment>
-                                Show Hidden Bonuses{' '}
-                                <ChevronDown className="inline-block h-5 w-5" />
-                            </Fragment>
-                        ) : (
-                            <Fragment>
-                                Hide Hidden Bonuses{' '}
-                                <ChevronUp className="inline-block h-5 w-5" />
-                            </Fragment>
-                        )}
+                        {isHiddenCollapsed ? 'Show' : 'Hide'} Hidden Bonuses
+                        <ChevronDown
+                            className={`inline-block h-5 w-5 ${
+                                isHiddenCollapsed ? '' : 'rotate-180'
+                            }`}
+                        />
                     </button>
                     {!isHiddenCollapsed && (
                         <div id="hidden-bonuses">
-                            {hiddenBonuses.map((bonus) => (
+                            {filterBonuses(true).map((bonus) => (
                                 <CharacterBonusToggle
                                     key={bonus.name}
                                     character={character}
                                     bonus={bonus}
                                     onToggle={handleToggle}
                                     constellation={constellation}
-                                    currentStacks={
-                                        activeBonuses.find(
-                                            (b) => b.name === bonus.name
-                                        )?.currentStacks || 0
-                                    }
                                 />
                             ))}
                         </div>
                     )}
-                </Fragment>
+                </>
             )}
         </div>
     )

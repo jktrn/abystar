@@ -117,7 +117,7 @@ export default function Home() {
                         key={`constellation-select-${kebabCase(
                             characterState.character.name
                         )}`}
-                        options={getConstellationOptions}
+                        options={getConstellationOptions(characterState.character)}
                         value={characterState.characterConstellation.toString()}
                         onChange={(newConstellation) =>
                             updateCharacterStateAndAttributes(

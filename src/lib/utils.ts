@@ -52,13 +52,27 @@ const kebabCase = (str: string) => {
     return cleanedString.replace(/\s+/g, '-').toLowerCase()
 }
 
-const getLevelOptions = (character: Character) => {
-    return Object.keys(character.baseStats)
+function getLevelOptions(character: Character) {
+    return Object.keys(character.baseStats).map((level) => ({
+        value: level,
+        label: level,
+    }))
 }
 
-const getConstellationOptions = Array.from(Array(7).keys()).map((i) => i.toString())
+function getConstellationOptions(character: Character) {
+    return [
+        { value: '0', label: '0' },
+        ...character.constellations?.map((constellation) => ({
+            value: constellation.level.toString(),
+            label: constellation.level.toString(),
+        })),
+    ]
+}
 
-const getTalentOptions = [...Array(15)].map((_, i) => (i + 1).toString())
+const getTalentOptions = [...Array(15)].map((_, i) => ({
+    value: (i + 1).toString(),
+    label: `Lv${i + 1}`,
+}))
 
 export {
     compareObjects,

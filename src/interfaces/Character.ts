@@ -6,9 +6,15 @@ export interface Talent {
     name: string
     image: string
     description: string
-    data: {
-        [key: string]: any
-    }
+    data: TalentRawData
+}
+
+export interface TalentRawData {
+    [key: string]:
+        | {
+              [key: string]: string | undefined
+          }
+        | undefined
 }
 
 export interface PassiveSkill {
