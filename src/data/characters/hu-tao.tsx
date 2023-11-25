@@ -1,6 +1,11 @@
-import { TalentScaling, Bonus, Character, FormulaType } from '@/interfaces/Character'
+import {
+    TalentScaling,
+    TalentRawData,
+    Bonus,
+    Character,
+    FormulaType,
+} from '@/interfaces/Character'
 import { Badge } from '@/components/ui/badge'
-import { characterData } from '@/data'
 
 const talentScalings: TalentScaling = {
     // ...
@@ -18,29 +23,37 @@ const characterBonuses: Bonus[] = [
             </span>
         ),
         icon: '/images/skill-icons/skills/hu-tao-skill.png',
-        effect: (attributes, currentStacks, talents, initialAttributes) => {
-            if (!talents || !initialAttributes) return attributes
-            const talentData: any = characterData['Hu Tao'].talents.find(
-                (talent) => talent.name === 'Guide to Afterlife'
-            )?.data
+        effect: (
+            attributes,
+            currentStacks,
+            talentLevels,
+            initialAttributes,
+            state
+        ) => {
+            if (!talentLevels || !initialAttributes) return attributes
 
-            const bonusString =
-                talentData?.['ATK Increase']?.[
-                    talents[1] as keyof (typeof talentData)['ATK Increase']
-                ].match(/\d+(\.\d+)?/)
+            // Getting raw talent scalings
+            const talentData: TalentRawData = state!.character.talents.find(
+                (t) => t.name === 'Guide to Afterlife'
+            )!.data
 
-            const bonusFloat = bonusString ? parseFloat(bonusString[0]) : null
+            // Scalings are stored as strings (e.g. "3.86% Max HP")
+            const bonusMatch =
+                talentData['ATK Increase']![`Lv${talentLevels[1]}`]!.match(
+                    /\d+(\.\d+)?/
+                )
+            const bonusFloat = bonusMatch ? parseFloat(bonusMatch[0]) : 0
 
-            const newAttributes = { ...attributes }
-            if (bonusFloat) {
-                let bonus = initialAttributes['HP'] * (bonusFloat / 100)
-                const maxBonus = initialAttributes['ATK'] * 4
-                if (bonus > maxBonus) {
-                    bonus = maxBonus
-                }
-                newAttributes['ATK'] = initialAttributes['ATK'] + bonus
+            // Buff caps at 400% of base ATK
+            const bonus = Math.min(
+                initialAttributes['HP'] * (bonusFloat / 100),
+                initialAttributes['ATK'] * 4
+            )
+
+            return {
+                ...attributes,
+                ATK: initialAttributes['ATK'] + (bonus || 0),
             }
-            return newAttributes
         },
         affectsTalentIndex: 0,
         applyToTalentScaling: (talentScaling) => {
@@ -74,12 +87,13 @@ const characterBonuses: Bonus[] = [
             </span>
         ),
         icon: '/images/skill-icons/passives/hu-tao-passive2.png',
-        effect: (attributes, currentStacks, talents, initialAttributes) => {
+        effect: (attributes, currentStacks, talentLevels, initialAttributes) => {
             if (!initialAttributes) return attributes
-            const newAttributes = { ...attributes }
-            newAttributes['Pyro DMG Bonus'] =
-                initialAttributes['Pyro DMG Bonus'] + 33
-            return newAttributes
+
+            return {
+                ...attributes,
+                'Pyro DMG Bonus': initialAttributes['Pyro DMG Bonus'] + 33,
+            }
         },
     },
     {
@@ -92,19 +106,21 @@ const characterBonuses: Bonus[] = [
             </span>
         ),
         icon: '/images/skill-icons/constellations/hu-tao-constellation6.png',
-        effect: (attributes, currentStacks, talents, initialAttributes) => {
+        effect: (attributes, currentStacks, talentLevels, initialAttributes) => {
             if (!initialAttributes) return attributes
-            const newAttributes = { ...attributes }
-            newAttributes['Pyro RES'] = initialAttributes['Pyro RES'] + 200
-            newAttributes['Cryo RES'] = initialAttributes['Cryo RES'] + 200
-            newAttributes['Electro RES'] = initialAttributes['Electro RES'] + 200
-            newAttributes['Hydro RES'] = initialAttributes['Hydro RES'] + 200
-            newAttributes['Geo RES'] = initialAttributes['Geo RES'] + 200
-            newAttributes['Anemo RES'] = initialAttributes['Anemo RES'] + 200
-            newAttributes['Dendro RES'] = initialAttributes['Dendro RES'] + 200
-            newAttributes['Physical RES'] = initialAttributes['Physical RES'] + 200
-            newAttributes['CRIT Rate'] = initialAttributes['CRIT Rate'] + 100
-            return newAttributes
+
+            return {
+                ...attributes,
+                'Pyro RES': initialAttributes['Pyro RES'] + 200,
+                'Cryo RES': initialAttributes['Cryo RES'] + 200,
+                'Electro RES': initialAttributes['Electro RES'] + 200,
+                'Hydro RES': initialAttributes['Hydro RES'] + 200,
+                'Geo RES': initialAttributes['Geo RES'] + 200,
+                'Anemo RES': initialAttributes['Anemo RES'] + 200,
+                'Dendro RES': initialAttributes['Dendro RES'] + 200,
+                'Physical RES': initialAttributes['Physical RES'] + 200,
+                'CRIT Rate': initialAttributes['CRIT Rate'] + 100,
+            }
         },
         minConstellation: 6,
     },

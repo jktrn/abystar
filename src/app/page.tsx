@@ -14,11 +14,10 @@ import {
     CharacterState,
 } from '@/interfaces/Character'
 import {
-    applySpecialBonuses,
-    defaultCharacterAttributes,
     getLevelOptions,
     getConstellationOptions,
     kebabCase,
+    recalculateAttributes,
 } from '@/lib'
 
 export default function Home() {
@@ -40,16 +39,10 @@ export default function Home() {
 
         setCharacterState(initialState)
         setCharacterModalOpen(false)
-
-        const initialAttributes: CharacterAttributes = applySpecialBonuses({
-            ...defaultCharacterAttributes,
-            ...initialState.character.baseStats[initialState.characterLevel],
-        })
-
-        setCharacterAttributes(initialAttributes)
+        setCharacterAttributes(recalculateAttributes(initialState))
     }
 
-    const updateCharacterStateAndAttributes = <K extends keyof CharacterState>(
+    const updateCharacterState = <K extends keyof CharacterState>(
         key: K,
         newValue: CharacterState[K]
     ) => {
@@ -65,27 +58,12 @@ export default function Home() {
         })
     }
 
-    const recalculateAttributes = (state: CharacterState): CharacterAttributes => {
-        let newAttributes = applySpecialBonuses({
-            ...defaultCharacterAttributes,
-            ...state.character.baseStats[state.characterLevel],
-        })
-
-        // TODO: Apply any active bonuses
-        // ...
-
-        // TODO: Apply constellation effects
-        // ...
-
-        return newAttributes
-    }
-
     useEffect(() => {
         console.log('Character State has been updated: ', characterState)
     }, [characterState])
 
     useEffect(() => {
-        console.log('Character Attributes has been updated: ', characterAttributes)
+        console.log('Character Attributes have been updated: ', characterAttributes)
     }, [characterAttributes])
 
     return (
@@ -100,16 +78,14 @@ export default function Home() {
                     />
 
                     <CustomSelect
+                        // Changing keys forces re-render
                         key={`level-select-${kebabCase(
                             characterState.character.name
                         )}`}
                         options={getLevelOptions(characterState.character)}
                         value={characterState.characterLevel}
                         onChange={(newLevel) =>
-                            updateCharacterStateAndAttributes(
-                                'characterLevel',
-                                newLevel
-                            )
+                            updateCharacterState('characterLevel', newLevel)
                         }
                     />
 
@@ -120,7 +96,7 @@ export default function Home() {
                         options={getConstellationOptions(characterState.character)}
                         value={characterState.characterConstellation.toString()}
                         onChange={(newConstellation) =>
-                            updateCharacterStateAndAttributes(
+                            updateCharacterState(
                                 'characterConstellation',
                                 parseInt(newConstellation, 10)
                             )
@@ -131,7 +107,7 @@ export default function Home() {
                         character={characterState.character}
                         talentLevels={characterState.characterTalentLevels}
                         setTalentLevels={(newTalentLevels) =>
-                            updateCharacterStateAndAttributes(
+                            updateCharacterState(
                                 'characterTalentLevels',
                                 newTalentLevels
                             )
@@ -142,7 +118,7 @@ export default function Home() {
                         character={characterState.character}
                         activeBonuses={characterState.characterActiveBonuses}
                         setActiveBonuses={(newActiveBonuses) =>
-                            updateCharacterStateAndAttributes(
+                            updateCharacterState(
                                 'characterActiveBonuses',
                                 newActiveBonuses
                             )

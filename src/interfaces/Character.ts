@@ -69,11 +69,12 @@ export interface Bonus {
 
 export interface Effect {
     (
-        baseStats: BaseStat,
-        currentStacks?: number,
-        talents?: string[],
-        initialBaseStats?: BaseStat
-    ): BaseStat
+        attributes: CharacterAttributes,
+        currentStacks?: number | undefined,
+        talentLevels?: number[] | undefined,
+        initialAttributes?: CharacterAttributes | undefined,
+        state?: CharacterState | undefined
+    ): CharacterAttributes
 }
 
 export interface TalentScaling {

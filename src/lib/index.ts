@@ -16,3 +16,4 @@ export {
 } from './characterAttributes'
 
 export { default as handleBonusToggle } from './handleBonusToggle'
+export { default as recalculateAttributes } from './recalculateAttributes'

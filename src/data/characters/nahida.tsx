@@ -6,7 +6,6 @@ import {
     TalentRawData,
 } from '@/interfaces/Character'
 import { Badge } from '@/components/ui/badge'
-import { characterData } from '@/data'
 
 const talentScalings: TalentScaling = {
     // ...
@@ -23,7 +22,7 @@ const characterBonuses: Bonus[] = [
             </span>
         ),
         icon: '/images/skill-icons/passives/nahida-passive2.png',
-        effect: (attributes, currentStacks, talents, initialAttributes) => {
+        effect: (attributes, currentStacks, talentLevels, initialAttributes) => {
             if (!initialAttributes) return attributes
             const bonusDMG = Math.min(
                 80,
@@ -33,12 +32,15 @@ const characterBonuses: Bonus[] = [
                 24,
                 Math.max(0, attributes['Elemental Mastery'] - 200) * 0.03
             )
-            const newAttributes = { ...attributes }
-            newAttributes['Tri-Karma Purification DMG Bonus'] =
-                (attributes['Tri-Karma Purification DMG Bonus'] || 0) + bonusDMG
-            newAttributes['Elemental Skill CRIT Rate'] =
-                initialAttributes['Elemental Skill CRIT Rate'] + bonusCritRate
-            return newAttributes
+
+            return {
+                ...attributes,
+                'Tri-Karma Purification DMG Bonus':
+                    (initialAttributes['Tri-Karma Purification DMG Bonus'] || 0) +
+                    bonusDMG,
+                'Elemental Skill CRIT Rate':
+                    initialAttributes['Elemental Skill CRIT Rate'] + bonusCritRate,
+            }
         },
         enabled: true,
         dependencies: ['Elemental Mastery'],
@@ -57,12 +59,21 @@ const characterBonuses: Bonus[] = [
             </span>
         ),
         icon: '/images/skill-icons/bursts/nahida-burst.png',
-        effect: (attributes, currentStacks, talents, initialAttributes) => {
-            if (!talents || !initialAttributes || !currentStacks) return attributes
+        effect: (
+            attributes,
+            currentStacks,
+            talentLevels,
+            initialAttributes,
+            state
+        ) => {
+            if (!talentLevels || !initialAttributes || !currentStacks)
+                return attributes
+
             const newAttributes = { ...attributes }
-            const talentData: TalentRawData | undefined = characterData[
-                'Nahida'
-            ].talents.find((skill) => skill.name === 'Illusory Heart')?.data
+            const talentData: TalentRawData = state!.character.talents.find(
+                (skill) => skill.name === 'Illusory Heart'
+            )!.data
+
             const effectKeys = [
                 'Pyro: DMG Bonus (1 Character)',
                 'Pyro: DMG Bonus (2 Characters)',
@@ -71,8 +82,9 @@ const characterBonuses: Bonus[] = [
                 'Electro: Trigger Interval Decrease (1 Character)',
                 'Electro: Trigger Interval Decrease (2 Characters)',
             ]
+
             const effectMultipliers = effectKeys.map((key) => {
-                const value = talentData?.[key]?.[talents[2]]
+                const value = talentData?.[key]?.[talentLevels[2]]
                 const bonusString = value ? value.match(/\d+(\.\d+)?/)?.[0] : null
                 return bonusString ? parseFloat(bonusString) : 0
             })
@@ -90,6 +102,7 @@ const characterBonuses: Bonus[] = [
                     (initialAttributes['Tri-Karma Purification Trigger Interval'] ||
                         0) - effectMultipliers[currentStacks - 1]
             }
+            
             return newAttributes
         },
         maxStacks: 6,
@@ -114,15 +127,19 @@ const characterBonuses: Bonus[] = [
         icon: '/images/skill-icons/passives/nahida-passive1.png',
         effect: (attributes, currentStacks, talents, initialAttributes) => {
             if (!currentStacks || !initialAttributes) return attributes
-            const newAttributes = { ...attributes }
+
             const elementalMasteryOptions = [0, 125, 150, 175, 200, 225, 250]
-            newAttributes['Elemental Mastery'] =
-                attributes['Elemental Mastery'] +
-                elementalMasteryOptions[currentStacks]
-            return newAttributes
+
+            return {
+                ...attributes,
+                'Elemental Mastery':
+                    initialAttributes['Elemental Mastery'] +
+                    elementalMasteryOptions[currentStacks],
+            }
         },
         maxStacks: 6,
         stackOptions: ['Off', '125', '150', '175', '200', '225', '250'],
+        dependencies: ['Elemental Mastery'],
     },
     {
         name: 'The Root of All Fullness',
