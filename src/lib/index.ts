@@ -12,5 +12,7 @@ export {
 
 export {
     defaultCharacterAttributes,
-    applyAttributeBonuses,
+    applySpecialBonuses,
 } from './characterAttributes'
+
+export { default as handleBonusToggle } from './handleBonusToggle'

@@ -1,18 +1,23 @@
 'use client'
 
 import React, { useEffect, useState } from 'react'
-import { CharacterImage, CharacterModal, CustomSelect } from '@/components'
+import {
+    CharacterBonuses,
+    CharacterImage,
+    CharacterModal,
+    CustomSelect,
+    TalentSelect,
+} from '@/components'
 import {
     Character,
     CharacterAttributes,
     CharacterState,
 } from '@/interfaces/Character'
 import {
-    applyAttributeBonuses,
+    applySpecialBonuses,
     defaultCharacterAttributes,
     getLevelOptions,
     getConstellationOptions,
-    getTalentOptions,
     kebabCase,
 } from '@/lib'
 
@@ -36,7 +41,7 @@ export default function Home() {
         setCharacterState(initialState)
         setCharacterModalOpen(false)
 
-        const initialAttributes: CharacterAttributes = applyAttributeBonuses({
+        const initialAttributes: CharacterAttributes = applySpecialBonuses({
             ...defaultCharacterAttributes,
             ...initialState.character.baseStats[initialState.characterLevel],
         })
@@ -61,7 +66,7 @@ export default function Home() {
     }
 
     const recalculateAttributes = (state: CharacterState): CharacterAttributes => {
-        let newAttributes = applyAttributeBonuses({
+        let newAttributes = applySpecialBonuses({
             ...defaultCharacterAttributes,
             ...state.character.baseStats[state.characterLevel],
         })
@@ -122,27 +127,28 @@ export default function Home() {
                         }
                     />
 
-                    {characterState.characterTalentLevels.map(
-                        (skillLevel, index) => (
-                            <CustomSelect
-                                key={`skill-${index + 1}-select-${kebabCase(
-                                    characterState.character.name
-                                )}`}
-                                options={getTalentOptions}
-                                value={skillLevel.toString()}
-                                onChange={(newLevel) => {
-                                    const newSkills = [
-                                        ...characterState.characterTalentLevels,
-                                    ]
-                                    newSkills[index] = parseInt(newLevel, 10)
-                                    updateCharacterStateAndAttributes(
-                                        'characterTalentLevels',
-                                        newSkills
-                                    )
-                                }}
-                            />
-                        )
-                    )}
+                    <TalentSelect
+                        character={characterState.character}
+                        talentLevels={characterState.characterTalentLevels}
+                        setTalentLevels={(newTalentLevels) =>
+                            updateCharacterStateAndAttributes(
+                                'characterTalentLevels',
+                                newTalentLevels
+                            )
+                        }
+                    />
+
+                    <CharacterBonuses
+                        character={characterState.character}
+                        activeBonuses={characterState.characterActiveBonuses}
+                        setActiveBonuses={(newActiveBonuses) =>
+                            updateCharacterStateAndAttributes(
+                                'characterActiveBonuses',
+                                newActiveBonuses
+                            )
+                        }
+                        constellation={characterState.characterConstellation}
+                    />
                 </>
             )}
 

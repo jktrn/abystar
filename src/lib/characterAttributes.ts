@@ -80,7 +80,7 @@ export const defaultCharacterAttributes = {
     'Physical RES Shred': 0,
 }
 
-export const applyAttributeBonuses = (
+export const applySpecialBonuses = (
     attributes: CharacterAttributes
 ): CharacterAttributes => {
     return {
