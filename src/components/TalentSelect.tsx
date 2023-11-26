@@ -38,7 +38,10 @@ const TalentSelect = ({
                         />
                     </div>
                     <CustomSelect
-                        key={`talent-select-${kebabCase(talent.name)}`}
+                        // Changing keys forces re-render
+                        key={`talent-select-${kebabCase(talent.name)}-${
+                            talentLevels[index]
+                        }`}
                         options={getTalentOptions}
                         value={talentLevels[index].toString()}
                         onChange={(value) => {

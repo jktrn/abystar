@@ -5,9 +5,6 @@ export {
     elementColors,
     cn,
     kebabCase,
-    getLevelOptions,
-    getConstellationOptions,
-    getTalentOptions,
 } from './utils'
 
 export {
@@ -15,5 +12,12 @@ export {
     applySpecialBonuses,
 } from './characterAttributes'
 
+export {
+    getTalentOptions,
+    getLevelOptions,
+    getConstellationOptions,
+} from './getAttributeOptions'
+
 export { default as handleBonusToggle } from './handleBonusToggle'
-export { default as recalculateAttributes } from './recalculateAttributes'
+export { default as recalculateStateAndAttributes } from './recalculateStateAndAttributes'
+export { default as getUpdatedBonuses } from './getUpdatedBonuses'

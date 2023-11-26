@@ -17,7 +17,8 @@ import {
     getLevelOptions,
     getConstellationOptions,
     kebabCase,
-    recalculateAttributes,
+    recalculateStateAndAttributes,
+    getUpdatedBonuses,
 } from '@/lib'
 
 export default function Home() {
@@ -37,9 +38,12 @@ export default function Home() {
             characterTalentLevels: [10, 10, 10],
         }
 
-        setCharacterState(initialState)
+        const [updatedState, updatedAttributes] =
+            recalculateStateAndAttributes(initialState)
+
+        setCharacterState(updatedState)
+        setCharacterAttributes(updatedAttributes)
         setCharacterModalOpen(false)
-        setCharacterAttributes(recalculateAttributes(initialState))
     }
 
     const updateCharacterState = <K extends keyof CharacterState>(
@@ -49,14 +53,29 @@ export default function Home() {
         setCharacterState((prevState) => {
             if (prevState === null) return null
 
-            const updatedState = { ...prevState, [key]: newValue }
+            const modifiedState = { ...prevState, [key]: newValue }
+            const updatedBonuses = getUpdatedBonuses(modifiedState)
+            modifiedState.characterActiveBonuses = updatedBonuses
 
-            const newAttributes = recalculateAttributes(updatedState)
+            const [updatedState, newAttributes] =
+                recalculateStateAndAttributes(modifiedState)
             setCharacterAttributes(newAttributes)
 
             return updatedState
         })
     }
+
+    //TODO: Add form for enemy resistances
+    const ENEMY_RESISTANCES = {
+        defenseMultiplier: 0.5,
+        resistance: 0.9,
+    }
+
+    // const damageResults = calculateDamage(
+    //     characterState,
+    //     characterAttributes,
+    //     ENEMY_RESISTANCES
+    // )
 
     useEffect(() => {
         console.log('Character State has been updated: ', characterState)

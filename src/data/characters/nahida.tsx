@@ -102,7 +102,7 @@ const characterBonuses: Bonus[] = [
                     (initialAttributes['Tri-Karma Purification Trigger Interval'] ||
                         0) - effectMultipliers[currentStacks - 1]
             }
-            
+
             return newAttributes
         },
         maxStacks: 6,

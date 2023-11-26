@@ -5,22 +5,30 @@ interface DependencyMap {
     [dependency: string]: Bonus[]
 }
 
-const recalculateAttributes = (state: CharacterState): CharacterAttributes => {
+const recalculateStateAndAttributes = (
+    state: CharacterState
+): [CharacterState, CharacterAttributes] => {
+    // Generate new attributes object
     const baseStats = state.character.baseStats[state.characterLevel]
     const updatedAttributes = applySpecialBonuses({
         ...defaultCharacterAttributes,
         ...baseStats,
     })
 
-    console.log('recalculateAttributes has received the following updatedAttributes: ', updatedAttributes)
-
     // Initializes current attributes as updated attributes before iterating through bonuses
     let currentAttributes = { ...updatedAttributes }
+    // Constellations can change talent levels so they need to be returned as well
+    let updatedTalentLevels = [...state.characterTalentLevels]
+    // Flag to check if attributes have changed from previous iteration
     let isAttributesUpdated = true
-    let bonusesToApply = [...state.characterActiveBonuses] // TODO: ADD CONSTELLATIONS
+    // Add all future bonus arrays (e.g. artifacts, weapons, party buffs) here
+    // TODO: Add constellations
+    let bonusesToApply = [...state.characterActiveBonuses]
+    // Array to store bonuses that need to be applied in the next iteration
     let bonusesForNextIteration = []
-    let dependencyMap: DependencyMap = {}
 
+    let dependencyMap: DependencyMap = {}
+    // Max iterations for effect application to prevent infinite loops
     let MAX_ITERATIONS = 15
 
     // Iterates through bonuses until attributes stop changing (to account for dependencies)
@@ -33,7 +41,7 @@ const recalculateAttributes = (state: CharacterState): CharacterAttributes => {
             currentAttributes = bonus.effect(
                 currentAttributes,
                 bonus.currentStacks,
-                state.characterTalentLevels,
+                updatedTalentLevels,
                 updatedAttributes,
                 state
             )
@@ -66,7 +74,12 @@ const recalculateAttributes = (state: CharacterState): CharacterAttributes => {
         console.error('Max iterations reached! Possible infinite loop detected.')
     }
 
-    return currentAttributes
+    const updatedState = {
+        ...state,
+        characterTalentLevels: updatedTalentLevels,
+    }
+
+    return [updatedState, currentAttributes]
 }
 
-export default recalculateAttributes
+export default recalculateStateAndAttributes
