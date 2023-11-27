@@ -323,6 +323,7 @@ const constellationBonuses: Bonus[] = [
             }
             return { attributes: newAttributes }
         },
+        minConstellation: 1,
     },
     {
         name: 'Ominous Rainfall',
@@ -347,6 +348,7 @@ const constellationBonuses: Bonus[] = [
             return { attributes: newAttributes }
         },
         dependencies: ['HP'],
+        minConstellation: 2,
     },
     {
         name: 'Lingering Carmine',
@@ -365,6 +367,7 @@ const constellationBonuses: Bonus[] = [
 
             return { attributes: attributes, updatedTalentLevels: newTalentLevels }
         },
+        minConstellation: 3,
     },
     {
         name: 'Garden of Eternal Rest',
@@ -380,6 +383,7 @@ const constellationBonuses: Bonus[] = [
             // TODO: Handle
             return { attributes }
         },
+        minConstellation: 4,
     },
     {
         name: 'Floral Incense',
@@ -398,6 +402,7 @@ const constellationBonuses: Bonus[] = [
 
             return { attributes: attributes, updatedTalentLevels: newTalentLevels }
         },
+        minConstellation: 5,
     },
     {
         name: "Butterfly's Embrace",
@@ -417,6 +422,7 @@ const constellationBonuses: Bonus[] = [
             // Already handled in characterBonuses.tsx
             return { attributes }
         },
+        minConstellation: 6,
     },
 ]
 

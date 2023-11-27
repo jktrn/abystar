@@ -12,177 +12,177 @@ const talentScalings: TalentScaling = {
 }
 
 const characterBonuses: Bonus[] = [
-    {
-        name: 'Awakening Elucidated',
-        description: (
-            <span>
-                Each point of Nahida&apos;s EM beyond 200 will grant 0.1% Bonus DMG
-                and 0.03% CRIT Rate to <b>Tri-Karma Purification</b> (Elemental
-                Skill) (capped at 80% Bonus DMG and 24% CRIT Rate)
-            </span>
-        ),
-        icon: '/images/skill-icons/passives/nahida-passive2.png',
-        effect: (attributes, currentStacks, talentLevels, initialAttributes) => {
-            if (!initialAttributes) return attributes
-            const bonusDMG = Math.min(
-                80,
-                Math.max(0, attributes['Elemental Mastery'] - 200) * 0.1
-            )
-            const bonusCritRate = Math.min(
-                24,
-                Math.max(0, attributes['Elemental Mastery'] - 200) * 0.03
-            )
+    // {
+    //     name: 'Awakening Elucidated',
+    //     description: (
+    //         <span>
+    //             Each point of Nahida&apos;s EM beyond 200 will grant 0.1% Bonus DMG
+    //             and 0.03% CRIT Rate to <b>Tri-Karma Purification</b> (Elemental
+    //             Skill) (capped at 80% Bonus DMG and 24% CRIT Rate)
+    //         </span>
+    //     ),
+    //     icon: '/images/skill-icons/passives/nahida-passive2.png',
+    //     effect: (attributes, currentStacks, talentLevels, initialAttributes) => {
+    //         if (!initialAttributes) return attributes
+    //         const bonusDMG = Math.min(
+    //             80,
+    //             Math.max(0, attributes['Elemental Mastery'] - 200) * 0.1
+    //         )
+    //         const bonusCritRate = Math.min(
+    //             24,
+    //             Math.max(0, attributes['Elemental Mastery'] - 200) * 0.03
+    //         )
 
-            return {
-                ...attributes,
-                'Tri-Karma Purification DMG Bonus':
-                    (initialAttributes['Tri-Karma Purification DMG Bonus'] || 0) +
-                    bonusDMG,
-                'Elemental Skill CRIT Rate':
-                    initialAttributes['Elemental Skill CRIT Rate'] + bonusCritRate,
-            }
-        },
-        enabled: true,
-        dependencies: ['Elemental Mastery'],
-    },
-    {
-        name: 'Illusory Heart',
-        description: (
-            <span>
-                Applies effects based on party&apos;s elements. <br />
-                <span style={{ color: '#bf612d' }}>Pyro</span>: Tri-Karma
-                Purification DMG increased;{' '}
-                <span style={{ color: '#3d9bc1' }}>Hydro</span>: Shrine of
-                Maya&apos;s duration increased;{' '}
-                <span style={{ color: '#b45bff' }}>Electro</span>: Tri-Karma
-                Purification Trigger Interval decreased
-            </span>
-        ),
-        icon: '/images/skill-icons/bursts/nahida-burst.png',
-        effect: (
-            attributes,
-            currentStacks,
-            talentLevels,
-            initialAttributes,
-            state
-        ) => {
-            if (!talentLevels || !initialAttributes || !currentStacks)
-                return attributes
+    //         return {
+    //             ...attributes,
+    //             'Tri-Karma Purification DMG Bonus':
+    //                 (initialAttributes['Tri-Karma Purification DMG Bonus'] || 0) +
+    //                 bonusDMG,
+    //             'Elemental Skill CRIT Rate':
+    //                 initialAttributes['Elemental Skill CRIT Rate'] + bonusCritRate,
+    //         }
+    //     },
+    //     enabled: true,
+    //     dependencies: ['Elemental Mastery'],
+    // },
+    // {
+    //     name: 'Illusory Heart',
+    //     description: (
+    //         <span>
+    //             Applies effects based on party&apos;s elements. <br />
+    //             <span style={{ color: '#bf612d' }}>Pyro</span>: Tri-Karma
+    //             Purification DMG increased;{' '}
+    //             <span style={{ color: '#3d9bc1' }}>Hydro</span>: Shrine of
+    //             Maya&apos;s duration increased;{' '}
+    //             <span style={{ color: '#b45bff' }}>Electro</span>: Tri-Karma
+    //             Purification Trigger Interval decreased
+    //         </span>
+    //     ),
+    //     icon: '/images/skill-icons/bursts/nahida-burst.png',
+    //     effect: (
+    //         attributes,
+    //         currentStacks,
+    //         talentLevels,
+    //         initialAttributes,
+    //         state
+    //     ) => {
+    //         if (!talentLevels || !initialAttributes || !currentStacks)
+    //             return attributes
 
-            const newAttributes = { ...attributes }
-            const talentData: TalentRawData = state!.character.talents.find(
-                (skill) => skill.name === 'Illusory Heart'
-            )!.data
+    //         const newAttributes = { ...attributes }
+    //         const talentData: TalentRawData = state!.character.talents.find(
+    //             (skill) => skill.name === 'Illusory Heart'
+    //         )!.data
 
-            const effectKeys = [
-                'Pyro: DMG Bonus (1 Character)',
-                'Pyro: DMG Bonus (2 Characters)',
-                'Hydro: Duration Extension (1 Character)',
-                'Hydro: Duration Extension (2 Characters)',
-                'Electro: Trigger Interval Decrease (1 Character)',
-                'Electro: Trigger Interval Decrease (2 Characters)',
-            ]
+    //         const effectKeys = [
+    //             'Pyro: DMG Bonus (1 Character)',
+    //             'Pyro: DMG Bonus (2 Characters)',
+    //             'Hydro: Duration Extension (1 Character)',
+    //             'Hydro: Duration Extension (2 Characters)',
+    //             'Electro: Trigger Interval Decrease (1 Character)',
+    //             'Electro: Trigger Interval Decrease (2 Characters)',
+    //         ]
 
-            const effectMultipliers = effectKeys.map((key) => {
-                const value = talentData?.[key]?.[talentLevels[2]]
-                const bonusString = value ? value.match(/\d+(\.\d+)?/)?.[0] : null
-                return bonusString ? parseFloat(bonusString) : 0
-            })
+    //         const effectMultipliers = effectKeys.map((key) => {
+    //             const value = talentData?.[key]?.[talentLevels[2]]
+    //             const bonusString = value ? value.match(/\d+(\.\d+)?/)?.[0] : null
+    //             return bonusString ? parseFloat(bonusString) : 0
+    //         })
 
-            if (currentStacks === 1 || currentStacks === 2) {
-                newAttributes['Tri-Karma Purification DMG Bonus'] =
-                    (attributes['Tri-Karma Purification DMG Bonus'] || 0) +
-                    effectMultipliers[currentStacks - 1]
-            } else if (currentStacks === 3 || currentStacks === 4) {
-                newAttributes['Shrine of Maya Duration Bonus'] =
-                    (initialAttributes['Shrine of Maya Duration Bonus'] || 0) +
-                    effectMultipliers[currentStacks - 1]
-            } else if (currentStacks === 5 || currentStacks === 6) {
-                newAttributes['Tri-Karma Purification Trigger Interval'] =
-                    (initialAttributes['Tri-Karma Purification Trigger Interval'] ||
-                        0) - effectMultipliers[currentStacks - 1]
-            }
+    //         if (currentStacks === 1 || currentStacks === 2) {
+    //             newAttributes['Tri-Karma Purification DMG Bonus'] =
+    //                 (attributes['Tri-Karma Purification DMG Bonus'] || 0) +
+    //                 effectMultipliers[currentStacks - 1]
+    //         } else if (currentStacks === 3 || currentStacks === 4) {
+    //             newAttributes['Shrine of Maya Duration Bonus'] =
+    //                 (initialAttributes['Shrine of Maya Duration Bonus'] || 0) +
+    //                 effectMultipliers[currentStacks - 1]
+    //         } else if (currentStacks === 5 || currentStacks === 6) {
+    //             newAttributes['Tri-Karma Purification Trigger Interval'] =
+    //                 (initialAttributes['Tri-Karma Purification Trigger Interval'] ||
+    //                     0) - effectMultipliers[currentStacks - 1]
+    //         }
 
-            return newAttributes
-        },
-        maxStacks: 6,
-        stackOptions: [
-            'Off',
-            'Pyro (1)',
-            'Pyro (2)',
-            'Hydro (1)',
-            'Hydro (2)',
-            'Electro (1)',
-            'Electro (2)',
-        ],
-    },
-    {
-        name: 'Compassion Illuminated',
-        description: (
-            <span>
-                While inside <b>Illusory Heart</b>: Increases Elemental Mastery by
-                25% of the EM of the party member with the highest EM
-            </span>
-        ),
-        icon: '/images/skill-icons/passives/nahida-passive1.png',
-        effect: (attributes, currentStacks, talents, initialAttributes) => {
-            if (!currentStacks || !initialAttributes) return attributes
+    //         return newAttributes
+    //     },
+    //     maxStacks: 6,
+    //     stackOptions: [
+    //         'Off',
+    //         'Pyro (1)',
+    //         'Pyro (2)',
+    //         'Hydro (1)',
+    //         'Hydro (2)',
+    //         'Electro (1)',
+    //         'Electro (2)',
+    //     ],
+    // },
+    // {
+    //     name: 'Compassion Illuminated',
+    //     description: (
+    //         <span>
+    //             While inside <b>Illusory Heart</b>: Increases Elemental Mastery by
+    //             25% of the EM of the party member with the highest EM
+    //         </span>
+    //     ),
+    //     icon: '/images/skill-icons/passives/nahida-passive1.png',
+    //     effect: (attributes, currentStacks, talents, initialAttributes) => {
+    //         if (!currentStacks || !initialAttributes) return attributes
 
-            const elementalMasteryOptions = [0, 125, 150, 175, 200, 225, 250]
+    //         const elementalMasteryOptions = [0, 125, 150, 175, 200, 225, 250]
 
-            return {
-                ...attributes,
-                'Elemental Mastery':
-                    initialAttributes['Elemental Mastery'] +
-                    elementalMasteryOptions[currentStacks],
-            }
-        },
-        maxStacks: 6,
-        stackOptions: ['Off', '125', '150', '175', '200', '225', '250'],
-        dependencies: ['Elemental Mastery'],
-    },
-    {
-        name: 'The Root of All Fullness',
-        description: (
-            <span>
-                <Badge variant="secondary">C2</Badge>{' '}
-                <Badge variant="destructive">Unimplemented</Badge> Burning, Bloom,
-                Hyperbloom, and Burgeon Reaction DMG can now CRIT on opponents marked
-                by <b>Seeds of Skanda</b> (CRIT Rate and CRIT DMG fixed at 20% and
-                100%, respectively). For 8s after being hit by Quicken, Aggravate, or
-                Spread, enemies have DEF decreased by 30%
-            </span>
-        ),
-        icon: '/images/skill-icons/constellations/nahida-constellation2.png',
-        effect: (attributes) => {
-            // TODO: Implement
-            return attributes
-        },
-        minConstellation: 2,
-    },
-    {
-        name: 'The Stem of Manifest Inference',
-        description: (
-            <span>
-                <Badge variant="secondary">C4</Badge> When 1/2/3/(4 or more) nearby
-                opponents are affected by <b>Seeds of Skandha</b>, Nahida&apos;s EM
-                will be increased by 100/120/140/160
-            </span>
-        ),
-        icon: '/images/skill-icons/constellations/nahida-constellation4.png',
-        effect: (attributes, currentStacks, talents, initialAttributes) => {
-            if (!currentStacks || !initialAttributes) return attributes
-            const newAttributes = { ...attributes }
-            const elementalMasteryOptions = [0, 100, 120, 140, 160]
-            newAttributes['Elemental Mastery'] =
-                attributes['Elemental Mastery'] +
-                elementalMasteryOptions[currentStacks]
-            return newAttributes
-        },
-        minConstellation: 4,
-        maxStacks: 4,
-        stackOptions: ['Off', '100', '120', '140', '160'],
-    },
+    //         return {
+    //             ...attributes,
+    //             'Elemental Mastery':
+    //                 initialAttributes['Elemental Mastery'] +
+    //                 elementalMasteryOptions[currentStacks],
+    //         }
+    //     },
+    //     maxStacks: 6,
+    //     stackOptions: ['Off', '125', '150', '175', '200', '225', '250'],
+    //     dependencies: ['Elemental Mastery'],
+    // },
+    // {
+    //     name: 'The Root of All Fullness',
+    //     description: (
+    //         <span>
+    //             <Badge variant="secondary">C2</Badge>{' '}
+    //             <Badge variant="destructive">Unimplemented</Badge> Burning, Bloom,
+    //             Hyperbloom, and Burgeon Reaction DMG can now CRIT on opponents marked
+    //             by <b>Seeds of Skanda</b> (CRIT Rate and CRIT DMG fixed at 20% and
+    //             100%, respectively). For 8s after being hit by Quicken, Aggravate, or
+    //             Spread, enemies have DEF decreased by 30%
+    //         </span>
+    //     ),
+    //     icon: '/images/skill-icons/constellations/nahida-constellation2.png',
+    //     effect: (attributes) => {
+    //         // TODO: Implement
+    //         return attributes
+    //     },
+    //     minConstellation: 2,
+    // },
+    // {
+    //     name: 'The Stem of Manifest Inference',
+    //     description: (
+    //         <span>
+    //             <Badge variant="secondary">C4</Badge> When 1/2/3/(4 or more) nearby
+    //             opponents are affected by <b>Seeds of Skandha</b>, Nahida&apos;s EM
+    //             will be increased by 100/120/140/160
+    //         </span>
+    //     ),
+    //     icon: '/images/skill-icons/constellations/nahida-constellation4.png',
+    //     effect: (attributes, currentStacks, talents, initialAttributes) => {
+    //         if (!currentStacks || !initialAttributes) return attributes
+    //         const newAttributes = { ...attributes }
+    //         const elementalMasteryOptions = [0, 100, 120, 140, 160]
+    //         newAttributes['Elemental Mastery'] =
+    //             attributes['Elemental Mastery'] +
+    //             elementalMasteryOptions[currentStacks]
+    //         return newAttributes
+    //     },
+    //     minConstellation: 4,
+    //     maxStacks: 4,
+    //     stackOptions: ['Off', '100', '120', '140', '160'],
+    // },
 ]
 
 const constellationBonuses: Bonus[] = [
