@@ -40,8 +40,8 @@ const CharacterBonuses = ({
     const filterBonuses = (isHidden: boolean) =>
         character.characterBonuses.filter((bonus) =>
             isHidden
-                ? bonus.minConstellation && bonus.minConstellation > constellation
-                : !bonus.minConstellation || bonus.minConstellation <= constellation
+                ? bonus.minConstellation && bonus.minConstellation > constellation || bonus.enabled
+                : (!bonus.minConstellation || bonus.minConstellation <= constellation) && !bonus.enabled
         )
 
     const handleToggle = (bonus: Bonus, bonusStacks: number) => {
@@ -80,7 +80,7 @@ const CharacterBonuses = ({
                         />
                     </button>
                     {!isHiddenCollapsed && (
-                        <div id="hidden-bonuses">
+                        <div className="mt-4 flex flex-col gap-2">
                             {filterBonuses(true).map((bonus) => (
                                 <CharacterBonusToggle
                                     key={bonus.name}

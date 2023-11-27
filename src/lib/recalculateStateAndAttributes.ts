@@ -21,8 +21,7 @@ const recalculateStateAndAttributes = (
     let updatedTalentLevels = [...state.characterTalentLevels]
     // Flag to check if attributes have changed from previous iteration
     let isAttributesUpdated = true
-    // Add all future bonus arrays (e.g. artifacts, weapons, party buffs) here
-    // TODO: Add constellations
+    // TODO: Add all future bonus arrays (e.g. artifacts, weapons, party buffs) here
     let bonusesToApply = [...state.characterActiveBonuses]
     // Array to store bonuses that need to be applied in the next iteration
     let bonusesForNextIteration = []
