@@ -4,7 +4,7 @@ import {
     Bonus,
     Character,
     FormulaType,
-    FormulaOutputType
+    FormulaOutputType,
 } from '@/interfaces/Character'
 import { Badge } from '@/components/ui/badge'
 
@@ -126,10 +126,7 @@ const talentScalings: TalentScaling = {
             formulaType: FormulaType.DamageFormula,
             baseStat: 'ATK',
             additiveBonusStat: 'Elemental Skill Additive Bonus',
-            multiplicativeBonusStat: [
-                'Pyro DMG Bonus',
-                'Elemental Skill DMG Bonus',
-            ],
+            multiplicativeBonusStat: ['Pyro DMG Bonus', 'Elemental Skill DMG Bonus'],
             damageType: 'Pyro',
         },
         'Blood Blossom Duration': {
@@ -151,20 +148,14 @@ const talentScalings: TalentScaling = {
             formulaType: FormulaType.DamageFormula,
             baseStat: 'ATK',
             additiveBonusStat: 'Elemental Burst Additive Bonus',
-            multiplicativeBonusStat: [
-                'Pyro DMG Bonus',
-                'Elemental Burst DMG Bonus',
-            ],
+            multiplicativeBonusStat: ['Pyro DMG Bonus', 'Elemental Burst DMG Bonus'],
             damageType: 'Pyro',
         },
         'Low HP Skill DMG': {
             formulaType: FormulaType.DamageFormula,
             baseStat: 'ATK',
             additiveBonusStat: 'Elemental Burst Additive Bonus',
-            multiplicativeBonusStat: [
-                'Pyro DMG Bonus',
-                'Elemental Burst DMG Bonus',
-            ],
+            multiplicativeBonusStat: ['Pyro DMG Bonus', 'Elemental Burst DMG Bonus'],
             damageType: 'Pyro',
         },
         'Skill HP Regeneration': {
@@ -205,12 +196,12 @@ const characterBonuses: Bonus[] = [
         icon: '/images/skill-icons/skills/hu-tao-skill.png',
         effect: (
             attributes,
-            currentStacks,
-            talentLevels,
             initialAttributes,
+            talentLevels,
+            currentStacks,
             state
         ) => {
-            if (!talentLevels || !initialAttributes) return attributes
+            if (!talentLevels || !initialAttributes) return { attributes }
 
             // Getting raw talent scalings
             const talentData: TalentRawData = state!.character.talents.find(
@@ -230,17 +221,17 @@ const characterBonuses: Bonus[] = [
                 initialAttributes['ATK'] * 4
             )
 
-            return {
+            const newAttributes = {
                 ...attributes,
                 ATK: initialAttributes['ATK'] + (bonus || 0),
             }
+
+            return { attributes: newAttributes }
         },
         affectsTalentIndex: 0,
         applyToTalentScaling: (talentScaling) => {
             const normalAttackScaling =
-                talentScaling[
-                    'Normal Attack: Secret Spear of Wangsheng'
-                ]
+                talentScaling['Normal Attack: Secret Spear of Wangsheng']
             // Infuses normal attacks with Pyro
             if (normalAttackScaling) {
                 Object.values(normalAttackScaling).forEach((aspect) => {
@@ -250,9 +241,9 @@ const characterBonuses: Bonus[] = [
                 })
             }
             const chargedAttackScaling =
-                talentScaling[
-                    'Normal Attack: Secret Spear of Wangsheng'
-                ]['Charged Attack Stamina Cost'].multiplicativeBonusStat
+                talentScaling['Normal Attack: Secret Spear of Wangsheng'][
+                    'Charged Attack Stamina Cost'
+                ].multiplicativeBonusStat
             if (chargedAttackScaling && Array.isArray(chargedAttackScaling)) {
                 chargedAttackScaling.push('Crimson Bouquet Stamina Reduction')
             }
@@ -268,13 +259,15 @@ const characterBonuses: Bonus[] = [
             </span>
         ),
         icon: '/images/skill-icons/passives/hu-tao-passive2.png',
-        effect: (attributes, currentStacks, talentLevels, initialAttributes) => {
-            if (!initialAttributes) return attributes
+        effect: (attributes, initialAttributes) => {
+            if (!initialAttributes) return { attributes }
 
-            return {
+            const newAttributes = {
                 ...attributes,
                 'Pyro DMG Bonus': initialAttributes['Pyro DMG Bonus'] + 0.33,
             }
+
+            return { attributes: newAttributes }
         },
     },
     {
@@ -287,10 +280,10 @@ const characterBonuses: Bonus[] = [
             </span>
         ),
         icon: '/images/skill-icons/constellations/hu-tao-constellation6.png',
-        effect: (attributes, currentStacks, talentLevels, initialAttributes) => {
-            if (!initialAttributes) return attributes
+        effect: (attributes, initialAttributes) => {
+            if (!initialAttributes) return { attributes }
 
-            return {
+            const newAttributes = {
                 ...attributes,
                 'Pyro RES': initialAttributes['Pyro RES'] + 2,
                 'Cryo RES': initialAttributes['Cryo RES'] + 2,
@@ -302,6 +295,8 @@ const characterBonuses: Bonus[] = [
                 'Physical RES': initialAttributes['Physical RES'] + 2,
                 'CRIT Rate': initialAttributes['CRIT Rate'] + 1,
             }
+
+            return { attributes: newAttributes }
         },
         minConstellation: 6,
     },
@@ -317,15 +312,16 @@ const constellationBonuses: Bonus[] = [
             </span>
         ),
         icon: '/images/skill-icons/constellations/hu-tao-constellation1.png',
-        effect: (attributes, currentStacks, talentLevels, initialAttributes) => {
-            if (!initialAttributes) return attributes
+        effect: (attributes, initialAttributes) => {
+            if (!initialAttributes) return { attributes }
 
-            return {
+            const newAttributes = {
                 ...attributes,
                 'Crimson Bouquet Stamina Reduction':
                     (initialAttributes['Crimson Bouquet Stamina Reduction'] || 0) -
                     1,
             }
+            return { attributes: newAttributes }
         },
     },
     {
@@ -338,15 +334,17 @@ const constellationBonuses: Bonus[] = [
             </span>
         ),
         icon: '/images/skill-icons/constellations/hu-tao-constellation2.png',
-        effect: (attributes, currentStacks, talentLevels, initialAttributes) => {
-            if (!initialAttributes) return attributes
+        effect: (attributes, initialAttributes) => {
+            if (!initialAttributes) return { attributes }
 
-            return {
+            const newAttributes = {
                 ...attributes,
                 'Elemental Skill Additive Bonus':
                     initialAttributes['Elemental Skill Additive Bonus'] +
                     initialAttributes['HP'] * 0.1,
             }
+
+            return { attributes: newAttributes }
         },
         dependencies: ['HP'],
     },
@@ -359,12 +357,13 @@ const constellationBonuses: Bonus[] = [
             </span>
         ),
         icon: '/images/skill-icons/constellations/hu-tao-constellation3.png',
-        effect: (attributes, currentStacks, talentLevels) => {
-            if (!talentLevels) return attributes
+        effect: (attributes, initialAttributes, talentLevels) => {
+            if (!talentLevels) return { attributes }
 
-            talentLevels[1] = Math.min(talentLevels[1] + 3, 13)
+            const newTalentLevels = [...talentLevels]
+            newTalentLevels[1] = Math.min(newTalentLevels[1] + 3, 13)
 
-            return attributes
+            return { attributes: attributes, updatedTalentLevels: newTalentLevels }
         },
     },
     {
@@ -377,9 +376,9 @@ const constellationBonuses: Bonus[] = [
             </span>
         ),
         icon: '/images/skill-icons/constellations/hu-tao-constellation4.png',
-        effect: (baseStats) => {
+        effect: (attributes) => {
             // TODO: Handle
-            return baseStats
+            return { attributes }
         },
     },
     {
@@ -391,12 +390,13 @@ const constellationBonuses: Bonus[] = [
             </span>
         ),
         icon: '/images/skill-icons/constellations/hu-tao-constellation5.png',
-        effect: (attributes, currentStacks, talentLevels) => {
-            if (!talentLevels) return attributes
+        effect: (attributes, initialAttributes, talentLevels) => {
+            if (!talentLevels) return { attributes }
 
-            talentLevels[2] = Math.min(talentLevels[2] + 3, 13)
+            const newTalentLevels = [...talentLevels]
+            newTalentLevels[2] = Math.min(newTalentLevels[2] + 3, 13)
 
-            return attributes
+            return { attributes: attributes, updatedTalentLevels: newTalentLevels }
         },
     },
     {
@@ -413,9 +413,9 @@ const constellationBonuses: Bonus[] = [
             </span>
         ),
         icon: '/images/skill-icons/constellations/hu-tao-constellation6.png',
-        effect: (baseStats) => {
+        effect: (attributes) => {
             // Already handled in characterBonuses.tsx
-            return baseStats
+            return { attributes }
         },
     },
 ]

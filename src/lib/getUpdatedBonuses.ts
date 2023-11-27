@@ -12,9 +12,7 @@ function getUpdatedBonuses(state: CharacterState): Bonus[] {
     // Additional bonus types can be added here
 
     return [
-        ...state.character.characterBonuses.filter(
-            (bonus) => bonus.enabled ?? false
-        ),
+        ...state.characterActiveBonuses,
         ...constellationBonuses,
         // ... more!
     ]

@@ -40,8 +40,12 @@ const CharacterBonuses = ({
     const filterBonuses = (isHidden: boolean) =>
         character.characterBonuses.filter((bonus) =>
             isHidden
-                ? bonus.minConstellation && bonus.minConstellation > constellation || bonus.enabled
-                : (!bonus.minConstellation || bonus.minConstellation <= constellation) && !bonus.enabled
+                ? (bonus.minConstellation &&
+                      bonus.minConstellation > constellation) ||
+                  bonus.enabled
+                : (!bonus.minConstellation ||
+                      bonus.minConstellation <= constellation) &&
+                  !bonus.enabled
         )
 
     const handleToggle = (bonus: Bonus, bonusStacks: number) => {

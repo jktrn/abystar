@@ -37,13 +37,20 @@ const recalculateStateAndAttributes = (
             // Previous as in the previous iteration
             const previousAttributes = { ...currentAttributes }
             // Current as in the current iteration
-            currentAttributes = bonus.effect(
+            const result = bonus.effect(
                 currentAttributes,
-                bonus.currentStacks,
-                updatedTalentLevels,
                 updatedAttributes,
+                updatedTalentLevels,
+                bonus.currentStacks,
                 state
             )
+
+            // Update talent levels only if they are returned
+            if (result.updatedTalentLevels) {
+                updatedTalentLevels = result.updatedTalentLevels
+            }
+
+            currentAttributes = result.attributes
 
             if (bonus.dependencies) {
                 for (const dependency of bonus.dependencies) {

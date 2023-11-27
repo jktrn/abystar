@@ -11,8 +11,6 @@ function calculateDamage(
     characterState: CharacterState,
     characterAttributes: CharacterAttributes,
     enemyResistances: BaseStat
-) {
-    
-}
+) {}
 
 export default calculateDamage
