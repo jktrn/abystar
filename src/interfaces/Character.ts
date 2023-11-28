@@ -102,6 +102,7 @@ export interface CharacterState {
     characterConstellation: number
     characterActiveBonuses: Bonus[]
     characterTalentLevels: number[]
+    effectiveTalentLevels: number[]
 }
 
 export interface CharacterAttributes {

@@ -32,7 +32,6 @@ const characterBonuses: Bonus[] = [
     //             24,
     //             Math.max(0, attributes['Elemental Mastery'] - 200) * 0.03
     //         )
-
     //         return {
     //             ...attributes,
     //             'Tri-Karma Purification DMG Bonus':
@@ -68,12 +67,10 @@ const characterBonuses: Bonus[] = [
     //     ) => {
     //         if (!talentLevels || !initialAttributes || !currentStacks)
     //             return attributes
-
     //         const newAttributes = { ...attributes }
     //         const talentData: TalentRawData = state!.character.talents.find(
     //             (skill) => skill.name === 'Illusory Heart'
     //         )!.data
-
     //         const effectKeys = [
     //             'Pyro: DMG Bonus (1 Character)',
     //             'Pyro: DMG Bonus (2 Characters)',
@@ -82,13 +79,11 @@ const characterBonuses: Bonus[] = [
     //             'Electro: Trigger Interval Decrease (1 Character)',
     //             'Electro: Trigger Interval Decrease (2 Characters)',
     //         ]
-
     //         const effectMultipliers = effectKeys.map((key) => {
     //             const value = talentData?.[key]?.[talentLevels[2]]
     //             const bonusString = value ? value.match(/\d+(\.\d+)?/)?.[0] : null
     //             return bonusString ? parseFloat(bonusString) : 0
     //         })
-
     //         if (currentStacks === 1 || currentStacks === 2) {
     //             newAttributes['Tri-Karma Purification DMG Bonus'] =
     //                 (attributes['Tri-Karma Purification DMG Bonus'] || 0) +
@@ -102,7 +97,6 @@ const characterBonuses: Bonus[] = [
     //                 (initialAttributes['Tri-Karma Purification Trigger Interval'] ||
     //                     0) - effectMultipliers[currentStacks - 1]
     //         }
-
     //         return newAttributes
     //     },
     //     maxStacks: 6,
@@ -127,9 +121,7 @@ const characterBonuses: Bonus[] = [
     //     icon: '/images/skill-icons/passives/nahida-passive1.png',
     //     effect: (attributes, currentStacks, talents, initialAttributes) => {
     //         if (!currentStacks || !initialAttributes) return attributes
-
     //         const elementalMasteryOptions = [0, 125, 150, 175, 200, 225, 250]
-
     //         return {
     //             ...attributes,
     //             'Elemental Mastery':

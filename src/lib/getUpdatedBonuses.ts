@@ -11,11 +11,17 @@ function getUpdatedBonuses(state: CharacterState): Bonus[] {
     const constellationBonuses = applyConstellationBonuses(state)
     // Additional bonus types can be added here
 
-    return [
+    const mergedBonuses = [
         ...state.characterActiveBonuses,
         ...constellationBonuses,
         // ... more!
     ]
+
+    // Ensures all bonuses are unique
+    return mergedBonuses.filter(
+        (bonus, index, self) =>
+            index === self.findIndex((b) => b.name === bonus.name)
+    )
 }
 
 export default getUpdatedBonuses

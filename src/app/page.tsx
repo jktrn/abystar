@@ -35,7 +35,10 @@ export default function Home() {
             characterActiveBonuses: selectedCharacter.characterBonuses.filter(
                 (bonus) => bonus.enabled ?? false
             ),
+            // User-selected talent levels (capped at 1-10)
             characterTalentLevels: [10, 10, 10],
+            // Talent levels post-bonus (e.g. C3, C5, Childe passive)
+            effectiveTalentLevels: [10, 10, 10],
         }
 
         const [updatedState, updatedAttributes] =
@@ -125,6 +128,7 @@ export default function Home() {
                     <TalentSelect
                         character={characterState.character}
                         talentLevels={characterState.characterTalentLevels}
+                        effectiveTalentLevels={characterState.effectiveTalentLevels}
                         setTalentLevels={(newTalentLevels) =>
                             updateCharacterState(
                                 'characterTalentLevels',

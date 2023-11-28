@@ -17,9 +17,12 @@ const getConstellationOptions = (character: Character) => {
     ]
 }
 
-const getTalentOptions = [...Array(15)].map((_, i) => ({
-    value: (i + 1).toString(),
-    label: `Lv. ${i + 1}`,
-}))
+const getTalentOptions = [...Array(13)].map((_, i) => {
+    return {
+        value: (i + 1).toString(),
+        label: `Lv. ${i + 1}`,
+        disabled: i >= 10,
+    }
+})
 
 export { getLevelOptions, getConstellationOptions, getTalentOptions }

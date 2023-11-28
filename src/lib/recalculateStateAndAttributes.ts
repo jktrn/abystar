@@ -19,6 +19,8 @@ const recalculateStateAndAttributes = (
     let currentAttributes = { ...updatedAttributes }
     // Constellations can change talent levels so they need to be returned as well
     let updatedTalentLevels = [...state.characterTalentLevels]
+    // Reset effective talent levels
+    state.effectiveTalentLevels = updatedTalentLevels
     // Flag to check if attributes have changed from previous iteration
     let isAttributesUpdated = true
     // TODO: Add all future bonus arrays (e.g. artifacts, weapons, party buffs) here
@@ -82,7 +84,7 @@ const recalculateStateAndAttributes = (
 
     const updatedState = {
         ...state,
-        characterTalentLevels: updatedTalentLevels,
+        effectiveTalentLevels: updatedTalentLevels,
     }
 
     return [updatedState, currentAttributes]
