@@ -12,6 +12,7 @@ import {
     Character,
     CharacterAttributes,
     CharacterState,
+    DamageResult,
 } from '@/interfaces/Character'
 import {
     calculateDamage,
@@ -27,6 +28,7 @@ export default function Home() {
     const [characterAttributes, setCharacterAttributes] =
         useState<CharacterAttributes | null>(null)
     const [isCharacterModalOpen, setCharacterModalOpen] = useState(false)
+    const [damageResults, setDamageResults] = useState<DamageResult[] | null>(null)
 
     const handleCharacterSelect = (selectedCharacter: Character) => {
         const initialState: CharacterState = {
@@ -69,27 +71,25 @@ export default function Home() {
         })
     }
 
-    //TODO: Add form for enemy resistances
-    const ENEMY_RESISTANCES = {
-        defenseMultiplier: 0.5,
-        resistance: 0.9,
-    }
-
-    const damageResults = calculateDamage(
-        characterState,
-        characterAttributes,
-        ENEMY_RESISTANCES
-    )
-
-    console.log('Damage Results: ', damageResults)
-
     useEffect(() => {
-        console.log('Character State has been updated: ', characterState)
-    }, [characterState])
+        if (characterState && characterAttributes) {
+            const newDamageResults = calculateDamage(
+                characterState,
+                characterAttributes,
+                ENEMY_RESISTANCES
+            )
+            setDamageResults(newDamageResults)
+            console.log('Damage Results: ', newDamageResults)
+        }
+    }, [characterState, characterAttributes])
 
-    useEffect(() => {
-        console.log('Character Attributes have been updated: ', characterAttributes)
-    }, [characterAttributes])
+    // useEffect(() => {
+    //     console.log('Character State has been updated: ', characterState)
+    // }, [characterState])
+
+    // useEffect(() => {
+    //     console.log('Character Attributes have been updated: ', characterAttributes)
+    // }, [characterAttributes])
 
     return (
         <main className="flex min-h-screen flex-col items-center justify-between p-24">
@@ -161,4 +161,10 @@ export default function Home() {
             />
         </main>
     )
+}
+
+//TODO: Add form for enemy resistances
+const ENEMY_RESISTANCES = {
+    defenseMultiplier: 0.5,
+    resistance: 0.9,
 }

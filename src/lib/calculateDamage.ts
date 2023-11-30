@@ -2,6 +2,7 @@ import {
     BaseStat,
     CharacterState,
     CharacterAttributes,
+    DamageResult,
     FormulaType,
 } from '@/interfaces/Character'
 
@@ -11,42 +12,33 @@ function calculateDamage(
     characterState: CharacterState | null,
     characterAttributes: CharacterAttributes | null,
     enemyResistances: BaseStat
-) {
+): DamageResult[] {
     if (!characterState || !characterAttributes) return []
 
     const characterTalentScaling = characterState.character.talentScalings
     if (!characterTalentScaling) return []
 
+    // Deep copy to prevent mutation
+    const effectiveTalentScaling = structuredClone(characterTalentScaling)
+
     const damageResults = characterState.character.talents.map((talent, index) => {
-        const talentScaling = characterTalentScaling[talent.name]
+        const talentScaling = effectiveTalentScaling[talent.name]
         if (!talentScaling) return []
 
-        // To restore the original talent scaling after applying bonuses (e.g. infusions)
-        const originalTalentScaling = JSON.parse(JSON.stringify(talentScaling))
-
         const talentDamageResults = Object.keys(talent.data).flatMap((key) => {
-            // Restores the original talent scaling
-            characterState.character.talentScalings = JSON.parse(
-                JSON.stringify(originalTalentScaling)
-            )
-
             // Applies any changes activeBonuses make to talentScaling
             characterState.characterActiveBonuses.forEach((bonus) => {
                 if (
                     bonus.affectsTalentIndex === index &&
                     bonus.applyToTalentScaling
                 ) {
-                    bonus.applyToTalentScaling(
-                        characterState.character.talentScalings
-                    )
+                    bonus.applyToTalentScaling(effectiveTalentScaling)
                 }
             })
 
             // Checks to see if the aspect's talentScalings have been implemented
             const aspectTalentScalings = talentScaling[key]
             if (!aspectTalentScalings) return []
-
-            console.log(aspectTalentScalings)
 
             if (
                 aspectTalentScalings.minConstellation &&
@@ -124,10 +116,10 @@ function calculateDamage(
                     break
             }
 
-            return [{ aspectName: key, damage }]
+            return { aspectName: key, damage }
         })
 
-        return [{ talentName: talent.name, aspects: talentDamageResults }]
+        return { talentName: talent.name, aspects: talentDamageResults }
     })
 
     return damageResults

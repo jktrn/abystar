@@ -1,37 +1,38 @@
-// import { ActiveSkill, FormulaOutputType, NewBaseStat } from '@/types/Character'
-// import { parseScalingValue } from '@/utils'
+// import { Talent, CharacterAttributes, BaseStat } from '@/interfaces/Character'
+// import { parseScalingValue } from '@/lib'
 
 // const genericFormulaWithScaling = (
-//     baseStats: NewBaseStat,
-//     skill: ActiveSkill,
+//     characterAttributes: CharacterAttributes,
+//     talent: Talent,
 //     key: string,
-//     skillLevel: string,
-//     baseStat: string | string[],
+//     talentLevel: number,
+//     attribute: string | string[],
 //     additiveBonusStat: string | string[],
 //     multiplicativeBonusStat: string | string[],
-//     outputType: FormulaOutputType
+//     enemyResistances: BaseStat,
+//     damageType: string
 // ) => {
-//     const { [skillLevel]: value } = skill.data[key]
+//     const { [`Lv${talentLevel}`]: value } = talent.data[key]
 //     if (value) {
 //         const scalingValues = parseScalingValue(value)
-//         const baseStatValues = Array.isArray(baseStat)
-//             ? baseStat.map((stat) => baseStats[stat])
-//             : [baseStats[baseStat]]
+//         const attributeValues = Array.isArray(attribute)
+//             ? attribute.map((stat) => characterAttributes[stat])
+//             : [characterAttributes[attribute]]
 //         const additiveBonusStatValue = calculateStatValue(
 //             additiveBonusStat,
-//             baseStats
+//             characterAttributes
 //         )
 //         const multiplicativeBonusStatValue = calculateStatValue(
 //             multiplicativeBonusStat,
-//             baseStats
+//             characterAttributes
 //         )
 
 //         const baseDamage =
-//             baseStatValues.reduce(
-//                 (acc, statValue, index) =>
-//                     acc + statValue * (scalingValues[index] / 100),
-//                 0
-//             ) + additiveBonusStatValue
+//         attributeValues.reduce(
+//             (acc, statValue, index) =>
+//                 acc + statValue * (scalingValues[index] / 100),
+//             0
+//         ) + additiveBonusStatValue
 
 //         const outputValue = baseDamage * (1 + multiplicativeBonusStatValue / 100)
 

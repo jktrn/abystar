@@ -185,6 +185,25 @@ export interface CharacterAttributes {
     [key: string]: number
 }
 
+interface DamageResultAspect {
+    aspectName: string
+    damage:
+        | {
+              nonCritDamage: number
+              critDamage: number
+              averageDamage: number
+              damageType: string
+          }
+        | undefined
+}
+
+export type DamageResult =
+    | {
+          talentName: string
+          aspects: DamageResultAspect[]
+      }
+    | never[]
+
 export enum FormulaType {
     DamageFormula,
     GenericFormulaWithScaling,

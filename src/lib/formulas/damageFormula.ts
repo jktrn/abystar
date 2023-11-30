@@ -33,25 +33,24 @@ const damageFormula = (
 
         const baseDamage =
             attributeValues.reduce(
-                (acc, statValue, index) =>
-                    acc + statValue * (scalingValues[index] / 100),
+                (acc, statValue, index) => acc + statValue * scalingValues[index],
                 0
             ) + additiveBonusStatValue
 
         const nonCritDamage =
             baseDamage *
-            (1 + multiplicativeBonusStatValue / 100) *
+            (1 + multiplicativeBonusStatValue) *
             enemyResistances.defenseMultiplier *
             enemyResistances.resistance
         const critDamage =
             baseDamage *
-            (1 + multiplicativeBonusStatValue / 100) *
+            (1 + multiplicativeBonusStatValue) *
             (1 + characterAttributes['CRIT DMG']) *
             enemyResistances.defenseMultiplier *
             enemyResistances.resistance
         const averageDamage =
             baseDamage *
-            (1 + multiplicativeBonusStatValue / 100) *
+            (1 + multiplicativeBonusStatValue) *
             (1 +
                 clamp(characterAttributes['CRIT Rate'], 0, 1) *
                     characterAttributes['CRIT DMG']) *

@@ -80,41 +80,41 @@ const talentScalings: TalentScaling = {
             ],
             damageType: 'Physical',
         },
-        //     'Charged Attack Stamina Cost': {
-        //         formulaType: FormulaType.GenericFormulaWithoutScaling,
-        //         multiplicativeBonusStat: ['Charged Attack Stamina Cost Multiplier'], // Array because of C1 adding unique attribute
-        //         outputType: FormulaOutputType.Generic,
-        //     },
-        //     'Plunge DMG': {
-        //         formulaType: FormulaType.DamageFormula,
-        //         attribute: 'ATK',
-        //         additiveBonusStat: 'Plunging Attack Additive Bonus',
-        //         multiplicativeBonusStat: [
-        //             'Physical DMG Bonus',
-        //             'Plunging Attack DMG Bonus',
-        //         ],
-        //         damageType: 'Physical',
-        //     },
-        //     'Low Plunge DMG': {
-        //         formulaType: FormulaType.DamageFormula,
-        //         attribute: 'ATK',
-        //         additiveBonusStat: 'Plunging Attack Additive Bonus',
-        //         multiplicativeBonusStat: [
-        //             'Physical DMG Bonus',
-        //             'Plunging Attack DMG Bonus',
-        //         ],
-        //         damageType: 'Physical',
-        //     },
-        //     'High Plunge DMG': {
-        //         formulaType: FormulaType.DamageFormula,
-        //         attribute: 'ATK',
-        //         additiveBonusStat: 'Plunging Attack Additive Bonus',
-        //         multiplicativeBonusStat: [
-        //             'Physical DMG Bonus',
-        //             'Plunging Attack DMG Bonus',
-        //         ],
-        //         damageType: 'Physical',
-        //     },
+        'Charged Attack Stamina Cost': {
+            formulaType: FormulaType.DamageFormula, //! TEMPORARY
+            multiplicativeBonusStat: ['Charged Attack Stamina Cost Multiplier'], // Array because of C1 adding unique attribute
+            outputType: FormulaOutputType.Generic,
+        },
+        'Plunge DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: 'ATK',
+            additiveBonusStat: 'Plunging Attack Additive Bonus',
+            multiplicativeBonusStat: [
+                'Physical DMG Bonus',
+                'Plunging Attack DMG Bonus',
+            ],
+            damageType: 'Physical',
+        },
+        'Low Plunge DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: 'ATK',
+            additiveBonusStat: 'Plunging Attack Additive Bonus',
+            multiplicativeBonusStat: [
+                'Physical DMG Bonus',
+                'Plunging Attack DMG Bonus',
+            ],
+            damageType: 'Physical',
+        },
+        'High Plunge DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: 'ATK',
+            additiveBonusStat: 'Plunging Attack Additive Bonus',
+            multiplicativeBonusStat: [
+                'Physical DMG Bonus',
+                'Plunging Attack DMG Bonus',
+            ],
+            damageType: 'Physical',
+        },
     },
     'Guide to Afterlife': {
         // 'ATK Increase': {
@@ -232,7 +232,7 @@ const characterBonuses: Bonus[] = [
         applyToTalentScaling: (talentScaling) => {
             const normalAttackScaling =
                 talentScaling['Normal Attack: Secret Spear of Wangsheng']
-            // Infuses normal attacks with Pyro
+
             if (normalAttackScaling) {
                 Object.values(normalAttackScaling).forEach((aspect) => {
                     if (aspect.formulaType !== FormulaType.DamageFormula) return
