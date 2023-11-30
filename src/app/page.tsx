@@ -14,6 +14,7 @@ import {
     CharacterState,
 } from '@/interfaces/Character'
 import {
+    calculateDamage,
     getLevelOptions,
     getConstellationOptions,
     kebabCase,
@@ -74,11 +75,13 @@ export default function Home() {
         resistance: 0.9,
     }
 
-    // const damageResults = calculateDamage(
-    //     characterState,
-    //     characterAttributes,
-    //     ENEMY_RESISTANCES
-    // )
+    const damageResults = calculateDamage(
+        characterState,
+        characterAttributes,
+        ENEMY_RESISTANCES
+    )
+
+    console.log('Damage Results: ', damageResults)
 
     useEffect(() => {
         console.log('Character State has been updated: ', characterState)

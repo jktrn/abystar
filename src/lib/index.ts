@@ -21,3 +21,5 @@ export {
 export { default as handleBonusToggle } from './handleBonusToggle'
 export { default as recalculateStateAndAttributes } from './recalculateStateAndAttributes'
 export { default as getUpdatedBonuses } from './getUpdatedBonuses'
+export { default as damageFormula } from './formulas/damageFormula'
+export { default as calculateDamage } from './calculateDamage'

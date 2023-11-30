@@ -6,7 +6,9 @@ export interface Talent {
     name: string
     image: string
     description: string
-    data: TalentRawData
+    data: {
+        [key: string]: any
+    }
 }
 
 export interface TalentRawData {
@@ -88,7 +90,7 @@ export interface TalentScaling {
 
 export interface TalentScalingData {
     formulaType: FormulaType
-    baseStat?: string | string[]
+    attribute?: string | string[]
     additiveBonusStat?: string | string[]
     multiplicativeBonusStat?: string | string[]
     damageType?: string

@@ -12,7 +12,7 @@ const talentScalings: TalentScaling = {
     'Normal Attack: Secret Spear of Wangsheng': {
         '1-Hit DMG': {
             formulaType: FormulaType.DamageFormula,
-            baseStat: 'ATK',
+            attribute: 'ATK',
             additiveBonusStat: 'Normal Attack Additive Bonus',
             multiplicativeBonusStat: [
                 'Physical DMG Bonus',
@@ -22,7 +22,7 @@ const talentScalings: TalentScaling = {
         },
         '2-Hit DMG': {
             formulaType: FormulaType.DamageFormula,
-            baseStat: 'ATK',
+            attribute: 'ATK',
             additiveBonusStat: 'Normal Attack Additive Bonus',
             multiplicativeBonusStat: [
                 'Physical DMG Bonus',
@@ -32,7 +32,7 @@ const talentScalings: TalentScaling = {
         },
         '3-Hit DMG': {
             formulaType: FormulaType.DamageFormula,
-            baseStat: 'ATK',
+            attribute: 'ATK',
             additiveBonusStat: 'Normal Attack Additive Bonus',
             multiplicativeBonusStat: [
                 'Physical DMG Bonus',
@@ -42,7 +42,7 @@ const talentScalings: TalentScaling = {
         },
         '4-Hit DMG': {
             formulaType: FormulaType.DamageFormula,
-            baseStat: 'ATK',
+            attribute: 'ATK',
             additiveBonusStat: 'Normal Attack Additive Bonus',
             multiplicativeBonusStat: [
                 'Physical DMG Bonus',
@@ -52,7 +52,7 @@ const talentScalings: TalentScaling = {
         },
         '5-Hit DMG': {
             formulaType: FormulaType.DamageFormula,
-            baseStat: 'ATK',
+            attribute: 'ATK',
             additiveBonusStat: 'Normal Attack Additive Bonus',
             multiplicativeBonusStat: [
                 'Physical DMG Bonus',
@@ -62,7 +62,7 @@ const talentScalings: TalentScaling = {
         },
         '6-Hit DMG': {
             formulaType: FormulaType.DamageFormula,
-            baseStat: 'ATK',
+            attribute: 'ATK',
             additiveBonusStat: 'Normal Attack Additive Bonus',
             multiplicativeBonusStat: [
                 'Physical DMG Bonus',
@@ -72,7 +72,7 @@ const talentScalings: TalentScaling = {
         },
         'Charged Attack': {
             formulaType: FormulaType.DamageFormula,
-            baseStat: 'ATK',
+            attribute: 'ATK',
             additiveBonusStat: 'Charged Attack Additive Bonus',
             multiplicativeBonusStat: [
                 'Physical DMG Bonus',
@@ -80,106 +80,106 @@ const talentScalings: TalentScaling = {
             ],
             damageType: 'Physical',
         },
-        'Charged Attack Stamina Cost': {
-            formulaType: FormulaType.GenericFormulaWithoutScaling,
-            multiplicativeBonusStat: ['Charged Attack Stamina Cost Multiplier'], // Array because of C1 adding unique baseStat
-            outputType: FormulaOutputType.Generic,
-        },
-        'Plunge DMG': {
-            formulaType: FormulaType.DamageFormula,
-            baseStat: 'ATK',
-            additiveBonusStat: 'Plunging Attack Additive Bonus',
-            multiplicativeBonusStat: [
-                'Physical DMG Bonus',
-                'Plunging Attack DMG Bonus',
-            ],
-            damageType: 'Physical',
-        },
-        'Low Plunge DMG': {
-            formulaType: FormulaType.DamageFormula,
-            baseStat: 'ATK',
-            additiveBonusStat: 'Plunging Attack Additive Bonus',
-            multiplicativeBonusStat: [
-                'Physical DMG Bonus',
-                'Plunging Attack DMG Bonus',
-            ],
-            damageType: 'Physical',
-        },
-        'High Plunge DMG': {
-            formulaType: FormulaType.DamageFormula,
-            baseStat: 'ATK',
-            additiveBonusStat: 'Plunging Attack Additive Bonus',
-            multiplicativeBonusStat: [
-                'Physical DMG Bonus',
-                'Plunging Attack DMG Bonus',
-            ],
-            damageType: 'Physical',
-        },
+        //     'Charged Attack Stamina Cost': {
+        //         formulaType: FormulaType.GenericFormulaWithoutScaling,
+        //         multiplicativeBonusStat: ['Charged Attack Stamina Cost Multiplier'], // Array because of C1 adding unique attribute
+        //         outputType: FormulaOutputType.Generic,
+        //     },
+        //     'Plunge DMG': {
+        //         formulaType: FormulaType.DamageFormula,
+        //         attribute: 'ATK',
+        //         additiveBonusStat: 'Plunging Attack Additive Bonus',
+        //         multiplicativeBonusStat: [
+        //             'Physical DMG Bonus',
+        //             'Plunging Attack DMG Bonus',
+        //         ],
+        //         damageType: 'Physical',
+        //     },
+        //     'Low Plunge DMG': {
+        //         formulaType: FormulaType.DamageFormula,
+        //         attribute: 'ATK',
+        //         additiveBonusStat: 'Plunging Attack Additive Bonus',
+        //         multiplicativeBonusStat: [
+        //             'Physical DMG Bonus',
+        //             'Plunging Attack DMG Bonus',
+        //         ],
+        //         damageType: 'Physical',
+        //     },
+        //     'High Plunge DMG': {
+        //         formulaType: FormulaType.DamageFormula,
+        //         attribute: 'ATK',
+        //         additiveBonusStat: 'Plunging Attack Additive Bonus',
+        //         multiplicativeBonusStat: [
+        //             'Physical DMG Bonus',
+        //             'Plunging Attack DMG Bonus',
+        //         ],
+        //         damageType: 'Physical',
+        //     },
     },
     'Guide to Afterlife': {
-        'ATK Increase': {
-            formulaType: FormulaType.GenericFormulaWithScaling,
-            baseStat: 'HP',
-            outputType: FormulaOutputType.Generic,
-        },
+        // 'ATK Increase': {
+        //     formulaType: FormulaType.GenericFormulaWithScaling,
+        //     attribute: 'HP',
+        //     outputType: FormulaOutputType.Generic,
+        // },
         'Blood Blossom DMG': {
             formulaType: FormulaType.DamageFormula,
-            baseStat: 'ATK',
+            attribute: 'ATK',
             additiveBonusStat: 'Elemental Skill Additive Bonus',
             multiplicativeBonusStat: ['Pyro DMG Bonus', 'Elemental Skill DMG Bonus'],
             damageType: 'Pyro',
         },
-        'Blood Blossom Duration': {
-            formulaType: FormulaType.GenericFormulaWithoutScaling,
-            outputType: FormulaOutputType.Time,
-        },
-        Duration: {
-            formulaType: FormulaType.GenericFormulaWithoutScaling,
-            outputType: FormulaOutputType.Time,
-        },
-        CD: {
-            formulaType: FormulaType.GenericFormulaWithoutScaling,
-            multiplicativeBonusStat: 'Elemental Skill CD Reduction',
-            outputType: FormulaOutputType.Time,
-        },
+        // 'Blood Blossom Duration': {
+        //     formulaType: FormulaType.GenericFormulaWithoutScaling,
+        //     outputType: FormulaOutputType.Time,
+        // },
+        // Duration: {
+        //     formulaType: FormulaType.GenericFormulaWithoutScaling,
+        //     outputType: FormulaOutputType.Time,
+        // },
+        // CD: {
+        //     formulaType: FormulaType.GenericFormulaWithoutScaling,
+        //     multiplicativeBonusStat: 'Elemental Skill CD Reduction',
+        //     outputType: FormulaOutputType.Time,
+        // },
     },
-    'Spirit Soother': {
-        'Skill DMG': {
-            formulaType: FormulaType.DamageFormula,
-            baseStat: 'ATK',
-            additiveBonusStat: 'Elemental Burst Additive Bonus',
-            multiplicativeBonusStat: ['Pyro DMG Bonus', 'Elemental Burst DMG Bonus'],
-            damageType: 'Pyro',
-        },
-        'Low HP Skill DMG': {
-            formulaType: FormulaType.DamageFormula,
-            baseStat: 'ATK',
-            additiveBonusStat: 'Elemental Burst Additive Bonus',
-            multiplicativeBonusStat: ['Pyro DMG Bonus', 'Elemental Burst DMG Bonus'],
-            damageType: 'Pyro',
-        },
-        'Skill HP Regeneration': {
-            formulaType: FormulaType.GenericFormulaWithScaling,
-            baseStat: 'HP',
-            multiplicativeBonusStat: 'Healing Bonus',
-            outputType: FormulaOutputType.Healing,
-        },
-        'Low HP Skill Regeneration': {
-            formulaType: FormulaType.GenericFormulaWithScaling,
-            baseStat: 'HP',
-            multiplicativeBonusStat: 'Healing Bonus',
-            outputType: FormulaOutputType.Healing,
-        },
-        CD: {
-            formulaType: FormulaType.GenericFormulaWithoutScaling,
-            multiplicativeBonusStat: 'Elemental Burst CD Reduction',
-            outputType: FormulaOutputType.Time,
-        },
-        'Energy Cost': {
-            formulaType: FormulaType.GenericFormulaWithoutScaling,
-            outputType: FormulaOutputType.Generic,
-        },
-    },
+    // 'Spirit Soother': {
+    //     'Skill DMG': {
+    //         formulaType: FormulaType.DamageFormula,
+    //         attribute: 'ATK',
+    //         additiveBonusStat: 'Elemental Burst Additive Bonus',
+    //         multiplicativeBonusStat: ['Pyro DMG Bonus', 'Elemental Burst DMG Bonus'],
+    //         damageType: 'Pyro',
+    //     },
+    //     'Low HP Skill DMG': {
+    //         formulaType: FormulaType.DamageFormula,
+    //         attribute: 'ATK',
+    //         additiveBonusStat: 'Elemental Burst Additive Bonus',
+    //         multiplicativeBonusStat: ['Pyro DMG Bonus', 'Elemental Burst DMG Bonus'],
+    //         damageType: 'Pyro',
+    //     },
+    //     'Skill HP Regeneration': {
+    //         formulaType: FormulaType.GenericFormulaWithScaling,
+    //         attribute: 'HP',
+    //         multiplicativeBonusStat: 'Healing Bonus',
+    //         outputType: FormulaOutputType.Healing,
+    //     },
+    //     'Low HP Skill Regeneration': {
+    //         formulaType: FormulaType.GenericFormulaWithScaling,
+    //         attribute: 'HP',
+    //         multiplicativeBonusStat: 'Healing Bonus',
+    //         outputType: FormulaOutputType.Healing,
+    //     },
+    //     CD: {
+    //         formulaType: FormulaType.GenericFormulaWithoutScaling,
+    //         multiplicativeBonusStat: 'Elemental Burst CD Reduction',
+    //         outputType: FormulaOutputType.Time,
+    //     },
+    //     'Energy Cost': {
+    //         formulaType: FormulaType.GenericFormulaWithoutScaling,
+    //         outputType: FormulaOutputType.Generic,
+    //     },
+    // },
 }
 
 const characterBonuses: Bonus[] = [
