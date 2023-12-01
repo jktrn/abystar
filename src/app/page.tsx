@@ -1,212 +1,318 @@
 'use client'
 
-import { useState } from 'react'
-
 import {
-    ActiveSkillsSelect,
     AttributesTable,
     CharacterBonuses,
     CharacterImage,
     CharacterModal,
-    ConstellationPopover,
     CustomSelect,
-    ModeToggle,
-    ResultsTable,
+    TalentSelect,
 } from '@/components'
-
-import { abilityScalings, characterBonuses, characterData } from '@/data'
-import { Bonus, Character } from '@/types/Character'
-
 import {
+    Character,
+    CharacterAttributes,
+    CharacterState,
+    DamageResult,
+} from '@/interfaces/Character'
+import {
+    applySpecialBonuses,
     calculateDamage,
-    convertBaseStats,
+    defaultCharacterAttributes,
     displayStats,
     getConstellationOptions,
     getLevelOptions,
-    handleConstellationChange,
-    handleLevelChange,
-    useActiveConstellations,
-    useBaseStats,
-} from '@/utils'
+    getUpdatedBonuses,
+    kebabCase,
+    recalculateStateAndAttributes,
+} from '@/lib'
+import { useEffect, useState } from 'react'
 
 export default function Home() {
-    const defaultCharacter = characterData['Hu Tao']
-    const [character, setCharacter] = useState<Character>(defaultCharacter)
+    const [characterState, setCharacterState] = useState<CharacterState | null>(null)
+    const [characterAttributes, setCharacterAttributes] =
+        useState<CharacterAttributes | null>(null)
+    const [isCharacterModalOpen, setCharacterModalOpen] = useState(false)
+    const [damageResults, setDamageResults] = useState<DamageResult[] | null>(null)
 
-    const [level, setLevel] = useState<string>('90/90')
-    const levelOptions = getLevelOptions(character)
+    const handleCharacterSelect = (selectedCharacter: Character) => {
+        const initialState: CharacterState = {
+            character: selectedCharacter,
+            characterLevel: '90/90',
+            characterConstellation: 0,
+            characterActiveBonuses: selectedCharacter.characterBonuses.filter(
+                (bonus) => bonus.enabled ?? false
+            ),
+            // User-selected talent levels (capped at 1-10)
+            characterTalentLevels: [10, 10, 10],
+            // Talent levels post-bonus (e.g. C3, C5, Childe passive)
+            effectiveTalentLevels: [10, 10, 10],
+        }
 
-    const [constellation, setConstellation] = useState<number>(0)
-    const constellationOptions = getConstellationOptions(character)
+        const [updatedState, updatedAttributes] =
+            recalculateStateAndAttributes(initialState)
 
-    const [activeConstellations, setActiveConstellations] = useState<Bonus[]>([])
-
-    const defaultActiveBonuses = characterBonuses[character.name].filter(
-        (bonus) => bonus.enabled
-    )
-    const [activeBonuses, setActiveBonuses] = useState<Bonus[]>(defaultActiveBonuses)
-    const [activeSkills, setActiveSkills] = useState<string[]>([
-        'Lv10',
-        'Lv10',
-        'Lv10',
-    ])
-
-    const characters = Object.values(characterData) as Character[]
-    const initialBaseStats = convertBaseStats(character.baseStats[level])
-
-    useActiveConstellations(character.name, constellation, setActiveConstellations)
-
-    const { baseStats, updatedActiveSkills } = useBaseStats(
-        character,
-        level,
-        activeSkills,
-        activeBonuses,
-        activeConstellations
-    )
-
-    // Temporary enemy resistances (will be replaced with a form)
-    const enemyResistances = {
-        defenseMultiplier: 50,
-        resistance: 90,
+        setCharacterState(updatedState)
+        setCharacterAttributes(updatedAttributes)
+        setCharacterModalOpen(false)
     }
 
-    const [isOpen, setIsOpen] = useState(false)
+    const updateCharacterState = <K extends keyof CharacterState>(
+        key: K,
+        newValue: CharacterState[K]
+    ) => {
+        setCharacterState((prevState) => {
+            if (prevState === null) return null
 
-    const onOpen = () => setIsOpen(true)
-    const onClose = () => setIsOpen(false)
+            const modifiedState = { ...prevState, [key]: newValue }
+            const updatedBonuses = getUpdatedBonuses(modifiedState)
+            modifiedState.characterActiveBonuses = updatedBonuses
 
-    const damageResults = calculateDamage(
-        baseStats,
-        abilityScalings,
-        character,
-        constellation,
-        updatedActiveSkills,
-        enemyResistances,
-        activeBonuses
-    )
+            const [updatedState, newAttributes] =
+                recalculateStateAndAttributes(modifiedState)
+            setCharacterAttributes(newAttributes)
+
+            return updatedState
+        })
+    }
+
+    useEffect(() => {
+        if (characterState && characterAttributes) {
+            const newDamageResults = calculateDamage(
+                characterState,
+                characterAttributes,
+                ENEMY_RESISTANCES
+            )
+            setDamageResults(newDamageResults)
+            console.log('Damage Results: ', newDamageResults)
+        }
+    }, [characterState, characterAttributes])
+
+    // useEffect(() => {
+    //     console.log('Character State has been updated: ', characterState)
+    // }, [characterState])
+
+    // useEffect(() => {
+    //     console.log('Character Attributes have been updated: ', characterAttributes)
+    // }, [characterAttributes])
 
     return (
-        <div className="flex h-screen flex-col p-2 lg:flex-row lg:overflow-y-hidden">
-            {/* <ModeToggle /> */}
-            <div className="m-2 flex-1 rounded-lg border lg:min-w-max lg:max-w-max lg:overflow-auto">
-                <div className="flex flex-col rounded-lg">
-                    <h2 className="rounded-t-lg border-b bg-secondary/25 px-4 py-3 text-lg font-bold">
-                        Character
-                    </h2>
-                    <div className="p-4">
-                        <div className="flex flex-col justify-between md:flex-row">
-                            <div className="flex flex-col justify-center gap-4 md:flex-row md:justify-normal">
-                                <form className="flex justify-center md:justify-normal">
-                                    <CharacterImage
-                                        icon={character.icon}
-                                        rarity={character.rarity}
-                                        element={character.vision}
-                                        onClick={onOpen}
-                                    />
-                                    <CharacterModal
-                                        open={isOpen}
-                                        onOpenChange={onClose}
-                                        characters={characters}
-                                        setCharacter={setCharacter}
-                                        setActiveBonuses={setActiveBonuses}
-                                    />
-                                </form>
-                                <div className="flex flex-col gap-2">
-                                    <div className="flex flex-col">
-                                        <span className="flex justify-center text-xl font-bold md:justify-normal">
-                                            {character.name}
-                                        </span>
-                                        <span className="text-md flex justify-center text-muted-foreground md:justify-normal">
-                                            {'★'.repeat(character.rarity)}
-                                        </span>
+        <>
+            <main className="flex h-screen flex-col p-2 lg:flex-row lg:overflow-y-hidden">
+                {characterState && (
+                    <>
+                        <div className="m-2 flex-1 rounded-lg border lg:min-w-max lg:max-w-max lg:overflow-auto">
+                            <div className="flex flex-col rounded-lg">
+                                <h2 className="rounded-t-lg border-b bg-secondary/25 px-4 py-3 text-lg font-bold">
+                                    Character
+                                </h2>
+                                <div className="p-4">
+                                    <div className="flex flex-col justify-between md:flex-row">
+                                        <div className="flex flex-col justify-center gap-4 md:flex-row md:justify-normal">
+                                            <form className="flex justify-center md:justify-normal">
+                                                <CharacterImage
+                                                    icon={
+                                                        characterState.character.icon
+                                                    }
+                                                    rarity={
+                                                        characterState.character
+                                                            .rarity
+                                                    }
+                                                    element={
+                                                        characterState.character
+                                                            .vision
+                                                    }
+                                                    onClick={() =>
+                                                        setCharacterModalOpen(true)
+                                                    }
+                                                />
+                                            </form>
+                                            <div className="flex flex-col gap-2">
+                                                <div className="flex flex-col">
+                                                    <span className="flex justify-center text-xl font-bold md:justify-normal">
+                                                        {
+                                                            characterState.character
+                                                                .name
+                                                        }
+                                                    </span>
+                                                    <span className="text-md flex justify-center text-muted-foreground md:justify-normal">
+                                                        {'★'.repeat(
+                                                            characterState.character
+                                                                .rarity
+                                                        )}
+                                                    </span>
+                                                </div>
+                                                <div className="ml-auto mr-auto flex max-w-max flex-col items-center gap-2 md:items-start">
+                                                    <div className="flex items-center gap-2">
+                                                        Ascension:
+                                                        <CustomSelect
+                                                            // Changing keys forces re-render
+                                                            key={`level-select-${kebabCase(
+                                                                characterState
+                                                                    .character.name
+                                                            )}`}
+                                                            options={getLevelOptions(
+                                                                characterState.character
+                                                            )}
+                                                            value={
+                                                                characterState.characterLevel
+                                                            }
+                                                            onChange={(newLevel) =>
+                                                                updateCharacterState(
+                                                                    'characterLevel',
+                                                                    newLevel
+                                                                )
+                                                            }
+                                                        />
+                                                    </div>
+                                                    <div className="flex items-center gap-2 md:hidden">
+                                                        Constellation:
+                                                        <CustomSelect
+                                                            key={`constellation-select-${kebabCase(
+                                                                characterState
+                                                                    .character.name
+                                                            )}`}
+                                                            options={getConstellationOptions(
+                                                                characterState.character
+                                                            )}
+                                                            value={characterState.characterConstellation.toString()}
+                                                            onChange={(
+                                                                newConstellation
+                                                            ) =>
+                                                                updateCharacterState(
+                                                                    'characterConstellation',
+                                                                    parseInt(
+                                                                        newConstellation,
+                                                                        10
+                                                                    )
+                                                                )
+                                                            }
+                                                        />
+                                                    </div>
+                                                    <div className="hidden md:flex md:w-full md:items-center">
+                                                        {/* TODO: CONSTELLATION POPOVER */}
+                                                        Constellation:
+                                                        <CustomSelect
+                                                            key={`constellation-select-${kebabCase(
+                                                                characterState
+                                                                    .character.name
+                                                            )}`}
+                                                            options={getConstellationOptions(
+                                                                characterState.character
+                                                            )}
+                                                            value={characterState.characterConstellation.toString()}
+                                                            onChange={(
+                                                                newConstellation
+                                                            ) =>
+                                                                updateCharacterState(
+                                                                    'characterConstellation',
+                                                                    parseInt(
+                                                                        newConstellation,
+                                                                        10
+                                                                    )
+                                                                )
+                                                            }
+                                                        />
+                                                        {/* <ConstellationPopover
+                                                            characterName={character.name}
+                                                            constellation={constellation}
+                                                            setConstellation={setConstellation}
+                                                        /> */}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <TalentSelect
+                                            character={characterState.character}
+                                            talentLevels={
+                                                characterState.characterTalentLevels
+                                            }
+                                            effectiveTalentLevels={
+                                                characterState.effectiveTalentLevels
+                                            }
+                                            setTalentLevels={(newTalentLevels) =>
+                                                updateCharacterState(
+                                                    'characterTalentLevels',
+                                                    newTalentLevels
+                                                )
+                                            }
+                                        />
                                     </div>
-                                    <div className="ml-auto mr-auto flex max-w-max flex-col items-center gap-2 md:items-start">
-                                        <div className="flex items-center gap-2">
-                                            Ascension:
-                                            <CustomSelect
-                                                options={levelOptions}
-                                                value={level}
-                                                onChange={handleLevelChange(
-                                                    setLevel
-                                                )}
-                                                instanceId="ascension"
-                                            />
-                                        </div>
-                                        <div className="flex items-center gap-2 md:hidden">
-                                            Constellation:
-                                            <CustomSelect
-                                                options={constellationOptions}
-                                                value={constellation.toString()}
-                                                onChange={handleConstellationChange(
-                                                    setConstellation
-                                                )}
-                                                instanceId="ascension"
-                                            />
-                                        </div>
-                                        <div className="hidden md:flex md:w-full md:items-center">
-                                            Constellation:
-                                            <ConstellationPopover
-                                                characterName={character.name}
-                                                constellation={constellation}
-                                                setConstellation={setConstellation}
-                                            />
-                                        </div>
-                                    </div>
+                                    <CharacterBonuses
+                                        character={characterState.character}
+                                        activeBonuses={
+                                            characterState.characterActiveBonuses
+                                        }
+                                        setActiveBonuses={(newActiveBonuses) =>
+                                            updateCharacterState(
+                                                'characterActiveBonuses',
+                                                newActiveBonuses
+                                            )
+                                        }
+                                        constellation={
+                                            characterState.characterConstellation
+                                        }
+                                    />
+                                </div>
+
+                                <h2 className="border-y bg-secondary/25 px-4 py-3 text-lg font-bold">
+                                    Attributes
+                                </h2>
+                                <AttributesTable
+                                    attributes={characterAttributes}
+                                    initialAttributes={applySpecialBonuses({
+                                        ...defaultCharacterAttributes,
+                                        ...characterState.character.baseStats[
+                                            characterState.characterLevel
+                                        ],
+                                    })}
+                                    displayStats={displayStats}
+                                />
+                            </div>
+                        </div>
+
+                        <div className="m-2 flex-1 rounded-lg border">
+                            <h2 className="rounded-t-lg border-b bg-secondary/25 px-4 py-3 text-lg font-bold">
+                                Weapon
+                            </h2>
+                            <div className="p-4">Weapon</div>
+
+                            <h2 className="border-y bg-secondary/25 px-4 py-3 text-lg font-bold">
+                                Artifacts
+                            </h2>
+
+                            <div className="p-4">Artifacts</div>
+
+                            <h2 className="border-y bg-secondary/25 px-4 py-3 text-lg font-bold">
+                                Party Buffs
+                            </h2>
+                            <div className="p-4">Party Buffs</div>
+                        </div>
+
+                        <div className="m-2 flex-1 rounded-lg">
+                            <div className="flex h-full flex-col rounded-lg border">
+                                <h2 className="rounded-t-lg border-b bg-secondary/25 px-4 py-3 text-lg font-bold">
+                                    Results
+                                </h2>
+                                <div className="overflow-auto">
+                                    {/* <ResultsTable damageResults={damageResults} /> */}
+                                    asd
                                 </div>
                             </div>
-                            <ActiveSkillsSelect
-                                character={character}
-                                activeSkills={updatedActiveSkills}
-                                setActiveSkills={setActiveSkills}
-                            />
                         </div>
-                        <CharacterBonuses
-                            character={character}
-                            activeBonuses={activeBonuses}
-                            setActiveBonuses={setActiveBonuses}
-                            constellation={constellation}
-                        />
-                    </div>
-
-                    <h2 className="border-y bg-secondary/25 px-4 py-3 text-lg font-bold">
-                        Attributes
-                    </h2>
-                    <AttributesTable
-                        baseStats={baseStats}
-                        displayStats={displayStats}
-                        initialBaseStats={initialBaseStats}
-                    />
-                </div>
-            </div>
-
-            <div className="m-2 flex-1 rounded-lg border">
-                <h2 className="rounded-t-lg border-b bg-secondary/25 px-4 py-3 text-lg font-bold">
-                    Weapon
-                </h2>
-                <div className="p-4">Weapon</div>
-
-                <h2 className="border-y bg-secondary/25 px-4 py-3 text-lg font-bold">
-                    Artifacts
-                </h2>
-
-                <div className="p-4">Artifacts</div>
-
-                <h2 className="border-y bg-secondary/25 px-4 py-3 text-lg font-bold">
-                    Party Buffs
-                </h2>
-                <div className="p-4">Party Buffs</div>
-            </div>
-
-            <div className="m-2 flex-1 rounded-lg">
-                <div className="flex h-full flex-col rounded-lg border">
-                    <h2 className="rounded-t-lg border-b bg-secondary/25 px-4 py-3 text-lg font-bold">
-                        Results
-                    </h2>
-                    <div className="overflow-auto">
-                        <ResultsTable damageResults={damageResults} />
-                    </div>
-                </div>
-            </div>
-        </div>
+                    </>
+                )}
+                <CharacterModal
+                    open={isCharacterModalOpen}
+                    onOpenChange={setCharacterModalOpen}
+                    setCharacter={handleCharacterSelect}
+                />
+            </main>
+        </>
     )
+}
+
+//TODO: Add form for enemy resistances
+const ENEMY_RESISTANCES = {
+    defenseMultiplier: 0.5,
+    resistance: 0.9,
 }

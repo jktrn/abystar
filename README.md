@@ -1,20 +1,8 @@
-<div align="center">
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## jktrn/screenshot-impact
+## Getting Started
 
-[![CodeFactor]](https://www.codefactor.io/repository/github/jktrn/screenshot-impact)
-[![Hexo]](https://hexo.io)
-[![License]](LICENSE)
-
-**screenshot-impact** (name WIP) is a [Next.js](https://nextjs.org/) web application that facilitates the calculation/optimization of character builds in the open-world RPG [Genshin Impact](https://genshin.hoyoverse.com/en/home).
-
-</div>
-
----
-
-## 🛠️ Local Editing
-
-To initialize a local instance, run:
+First, run the development server:
 
 ```bash
 npm run dev
@@ -22,27 +10,27 @@ npm run dev
 yarn dev
 # or
 pnpm dev
+# or
+bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser—any edits made to source code will dynamically update the page.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
----
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-## 📈 Statistics
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-<div align="center">
+## Learn More
 
-![Repobeats]
+To learn more about Next.js, take a look at the following resources:
 
-</div>
+-   [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+-   [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
----
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## 📝 License & Forking/Cloning
+## Deploy on Vercel
 
-All code in this repository is licensed under the [GNU Affero General Public License v3](https://www.gnu.org/licenses/agpl-3.0.en.html)—see the [LICENSE](LICENSE) file for more information.
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-[CodeFactor]: https://img.shields.io/codefactor/grade/github/jktrn/screenshot-impact?color=5d5449&logo=codefactor&logoColor=fff&style=for-the-badge
-[Hexo]: https://img.shields.io/github/package-json/dependency-version/jktrn/screenshot-impact/next?color=756a5b&logo=next&logoColor=fff&style=for-the-badge
-[License]: https://img.shields.io/github/license/jktrn/screenshot-impact?color=8c7f6d&logo=github&logoColor=fff&style=for-the-badge
-[RepoBeats]: https://repobeats.axiom.co/api/embed/bc1a39126daff49d7181aa59e5bb5698729f257c.svg
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
