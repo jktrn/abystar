@@ -90,9 +90,9 @@ export interface TalentScaling {
 
 export interface TalentScalingData {
     formulaType: FormulaType
-    attribute?: string | string[]
-    additiveBonusStat?: string | string[]
-    multiplicativeBonusStat?: string | string[]
+    attribute?: string[]
+    additiveBonusStat?: string[]
+    multiplicativeBonusStat?: string[]
     damageType?: string
     outputType?: FormulaOutputType
     minConstellation?: number
@@ -185,24 +185,17 @@ export interface CharacterAttributes {
     [key: string]: number
 }
 
-interface DamageResultAspect {
+export interface DamageResultAspect {
     aspectName: string
-    damage:
-        | {
-              nonCritDamage: number
-              critDamage: number
-              averageDamage: number
-              damageType: string
-          }
-        | undefined
+    damage: {
+        [key: string]: any
+    }
 }
 
-export type DamageResult =
-    | {
-          talentName: string
-          aspects: DamageResultAspect[]
-      }
-    | never[]
+export interface DamageResult {
+    talentName: string
+    aspects: DamageResultAspect[]
+}
 
 export enum FormulaType {
     DamageFormula,

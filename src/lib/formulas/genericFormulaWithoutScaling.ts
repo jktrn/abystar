@@ -1,50 +1,37 @@
-// import { ActiveSkill, NewBaseStat, FormulaOutputType } from '@/types/Character'
-// import { parseScalingValue } from '@/utils'
+import {
+    Talent,
+    FormulaOutputType,
+    CharacterAttributes,
+} from '@/interfaces/Character'
+import { parseScalingValue, calculateStatValue } from '@/lib'
 
-// const genericFormulaWithoutScaling = (
-//     baseStats: NewBaseStat,
-//     skill: ActiveSkill,
-//     key: string,
-//     skillLevel: string,
-//     additiveBonusStat: string | string[],
-//     multiplicativeBonusStat: string | string[],
-//     outputType: FormulaOutputType
-// ) => {
-//     const { [skillLevel]: value } = skill.data[key]
-//     if (value) {
-//         const scalingValue = parseScalingValue(value)[0]
-//         const additiveBonusStatValue = calculateStatValue(
-//             additiveBonusStat,
-//             baseStats
-//         )
-//         const multiplicativeBonusStatValue = calculateStatValue(
-//             multiplicativeBonusStat,
-//             baseStats
-//         )
+const genericFormulaWithoutScaling = (
+    characterAttributes: CharacterAttributes,
+    talent: Talent,
+    key: string,
+    talentLevel: number,
+    additiveBonusStat: string[],
+    multiplicativeBonusStat: string[],
+    outputType: FormulaOutputType
+) => {
+    const { [`Lv${talentLevel}`]: value } = talent.data[key]
+    if (value) {
+        const scalingValue = parseScalingValue(value)[0] * 100
+        const additiveBonusStatValue = calculateStatValue(
+            additiveBonusStat,
+            characterAttributes
+        )
+        const multiplicativeBonusStatValue =
+            calculateStatValue(multiplicativeBonusStat, characterAttributes) + 1
 
-//         const outputValue =
-//             (scalingValue + additiveBonusStatValue) *
-//             (1 + multiplicativeBonusStatValue / 100)
+        const outputValue =
+            (scalingValue + additiveBonusStatValue) * multiplicativeBonusStatValue
 
-//         return {
-//             outputValue,
-//             outputType,
-//         }
-//     }
-// }
+        return {
+            outputValue,
+            outputType,
+        }
+    }
+}
 
-// function calculateStatValue(
-//     stat: string | string[],
-//     baseStats: NewBaseStat
-// ): number {
-//     return Array.isArray(stat) && stat[0] !== ''
-//         ? Array.isArray(stat)
-//             ? stat.reduce(
-//                   (accumulator, statKey) => accumulator + (baseStats[statKey] || 0),
-//                   0
-//               )
-//             : baseStats[stat] || 0
-//         : 0
-// }
-
-// export default genericFormulaWithoutScaling
+export default genericFormulaWithoutScaling

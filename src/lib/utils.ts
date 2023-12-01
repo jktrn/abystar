@@ -1,6 +1,6 @@
 import { type ClassValue, clsx } from 'clsx'
 import { twMerge } from 'tailwind-merge'
-import { Character } from '@/interfaces/Character'
+import { CharacterAttributes } from '@/interfaces/Character'
 
 function cn(...inputs: ClassValue[]) {
     return twMerge(clsx(inputs))
@@ -22,6 +22,21 @@ const parseScalingValue = (scalingValue: string) => {
         ? values.map((value) => parseFloat(value) / 100)
         : [0]
     return parsedValues
+}
+
+function calculateStatValue(
+    stat: string | string[],
+    characterAttributes: CharacterAttributes
+): number {
+    return Array.isArray(stat) && stat[0] !== ''
+        ? Array.isArray(stat)
+            ? stat.reduce(
+                  (accumulator, statKey) =>
+                      accumulator + (characterAttributes[statKey] || 0),
+                  0
+              )
+            : characterAttributes[stat] || 0
+        : 0
 }
 
 const elementColors = {
@@ -54,6 +69,10 @@ const kebabCase = (str: string) => {
     return cleanedString.replace(/\s+/g, '-').toLowerCase()
 }
 
+function clamp(number: number, min: number, max: number) {
+    return Math.max(min, Math.min(number, max))
+}
+
 export {
     compareObjects,
     compareElement,
@@ -61,4 +80,6 @@ export {
     elementColors,
     cn,
     kebabCase,
+    calculateStatValue,
+    clamp,
 }

@@ -1,60 +1,44 @@
-// import { Talent, CharacterAttributes, BaseStat } from '@/interfaces/Character'
-// import { parseScalingValue } from '@/lib'
+import {
+    Talent,
+    CharacterAttributes,
+    FormulaOutputType,
+} from '@/interfaces/Character'
+import { parseScalingValue, calculateStatValue } from '@/lib'
 
-// const genericFormulaWithScaling = (
-//     characterAttributes: CharacterAttributes,
-//     talent: Talent,
-//     key: string,
-//     talentLevel: number,
-//     attribute: string | string[],
-//     additiveBonusStat: string | string[],
-//     multiplicativeBonusStat: string | string[],
-//     enemyResistances: BaseStat,
-//     damageType: string
-// ) => {
-//     const { [`Lv${talentLevel}`]: value } = talent.data[key]
-//     if (value) {
-//         const scalingValues = parseScalingValue(value)
-//         const attributeValues = Array.isArray(attribute)
-//             ? attribute.map((stat) => characterAttributes[stat])
-//             : [characterAttributes[attribute]]
-//         const additiveBonusStatValue = calculateStatValue(
-//             additiveBonusStat,
-//             characterAttributes
-//         )
-//         const multiplicativeBonusStatValue = calculateStatValue(
-//             multiplicativeBonusStat,
-//             characterAttributes
-//         )
+const genericFormulaWithScaling = (
+    characterAttributes: CharacterAttributes,
+    talent: Talent,
+    key: string,
+    talentLevel: number,
+    attribute: string[],
+    additiveBonusStat: string[],
+    multiplicativeBonusStat: string[],
+    outputType: FormulaOutputType
+) => {
+    const { [`Lv${talentLevel}`]: value } = talent.data[key]
+    if (value) {
+        const scalingValues = parseScalingValue(value)
+        const attributeValues = attribute.map((stat) => characterAttributes[stat])
+        const additiveBonusStatValue = calculateStatValue(
+            additiveBonusStat,
+            characterAttributes
+        )
+        const multiplicativeBonusStatValue =
+            calculateStatValue(multiplicativeBonusStat, characterAttributes) + 1
 
-//         const baseDamage =
-//         attributeValues.reduce(
-//             (acc, statValue, index) =>
-//                 acc + statValue * (scalingValues[index] / 100),
-//             0
-//         ) + additiveBonusStatValue
+        const baseDamage =
+            attributeValues.reduce(
+                (acc, statValue, index) => acc + statValue * scalingValues[index],
+                0
+            ) + additiveBonusStatValue
 
-//         const outputValue = baseDamage * (1 + multiplicativeBonusStatValue / 100)
+        const outputValue = baseDamage * multiplicativeBonusStatValue
 
-//         return {
-//             outputValue,
-//             outputType,
-//         }
-//     }
-// }
+        return {
+            outputValue,
+            outputType,
+        }
+    }
+}
 
-// function calculateStatValue(
-//     stat: string | string[],
-//     baseStats: NewBaseStat
-// ): number {
-//     return Array.isArray(stat) && stat[0] !== ''
-//         ? Array.isArray(stat)
-//             ? stat.reduce(
-//                   (accumulator, statKey) => accumulator + (baseStats[statKey] || 0),
-//                   0
-//               )
-//             : baseStats[stat] || 0
-//         : 0
-// }
-
-// export default genericFormulaWithScaling
+export default genericFormulaWithScaling
