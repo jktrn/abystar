@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useEffect, useState } from 'react'
 import CharacterBonusToggle from './CharacterBonusToggle'
 import { Bonus, Character } from '@/interfaces/Character'

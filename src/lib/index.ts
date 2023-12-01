@@ -1,29 +1,31 @@
 export {
-    compareObjects,
-    compareElement,
-    parseScalingValue,
-    elementColors,
-    cn,
-    kebabCase,
-    clamp,
     calculateStatValue,
+    clamp,
+    cn,
+    compareElement,
+    compareObjects,
+    elementColors,
+    kebabCase,
+    parseScalingValue,
 } from './utils'
 
 export {
-    defaultCharacterAttributes,
     applySpecialBonuses,
+    defaultCharacterAttributes,
 } from './characterAttributes'
 
 export {
-    getTalentOptions,
-    getLevelOptions,
     getConstellationOptions,
+    getLevelOptions,
+    getTalentOptions,
 } from './getAttributeOptions'
 
-export { default as handleBonusToggle } from './handleBonusToggle'
-export { default as recalculateStateAndAttributes } from './recalculateStateAndAttributes'
-export { default as getUpdatedBonuses } from './getUpdatedBonuses'
+export { attributeSections, availableIcons, displayStats } from './attributeSections'
+
+export { default as calculateDamage } from './calculateDamage'
 export { default as damageFormula } from './formulas/damageFormula'
 export { default as genericFormulaWithScaling } from './formulas/genericFormulaWithScaling'
 export { default as genericFormulaWithoutScaling } from './formulas/genericFormulaWithoutScaling'
-export { default as calculateDamage } from './calculateDamage'
+export { default as getUpdatedBonuses } from './getUpdatedBonuses'
+export { default as handleBonusToggle } from './handleBonusToggle'
+export { default as recalculateStateAndAttributes } from './recalculateStateAndAttributes'
