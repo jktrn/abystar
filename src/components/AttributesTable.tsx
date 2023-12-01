@@ -23,38 +23,45 @@ const AttributesTable = ({
     initialAttributes,
     displayStats,
 }: CharacterAttributeProps) => {
-    if (!attributes) return null
-
     const data = useMemo(
         () =>
-            Object.entries(attributes)
-                .filter(([key]) => displayStats.includes(key))
-                .map(([key, value]) => {
-                    let formattedValue
-                    let formattedInitialValue
-                    let difference
-                    if (['HP', 'DEF', 'Elemental Mastery', 'ATK'].includes(key)) {
-                        formattedValue = Math.round(value)
-                        formattedInitialValue = Math.round(initialAttributes[key])
-                        difference = formattedValue - formattedInitialValue
-                    } else {
-                        formattedValue = `${(value * 100).toFixed(1)}%`
-                        formattedInitialValue = `${(initialAttributes[key] * 100).toFixed(
-                            1
-                        )}%`
-                        difference = `${(value * 100 - initialAttributes[key] * 100).toFixed(
-                            1
-                        )}%`
-                    }
-                    return {
-                        stat: key,
-                        value: formattedValue,
-                        initialValue: formattedInitialValue,
-                        difference: difference,
-                    }
-                }),
+            attributes
+                ? Object.entries(attributes)
+                      .filter(([key]) => displayStats.includes(key))
+                      .map(([key, value]) => {
+                          let formattedValue
+                          let formattedInitialValue
+                          let difference
+                          if (
+                              ['HP', 'DEF', 'Elemental Mastery', 'ATK'].includes(key)
+                          ) {
+                              formattedValue = Math.round(value)
+                              formattedInitialValue = Math.round(
+                                  initialAttributes[key]
+                              )
+                              difference = formattedValue - formattedInitialValue
+                          } else {
+                              formattedValue = `${(value * 100).toFixed(1)}%`
+                              formattedInitialValue = `${(
+                                  initialAttributes[key] * 100
+                              ).toFixed(1)}%`
+                              difference = `${(
+                                  value * 100 -
+                                  initialAttributes[key] * 100
+                              ).toFixed(1)}%`
+                          }
+                          return {
+                              stat: key,
+                              value: formattedValue,
+                              initialValue: formattedInitialValue,
+                              difference: difference,
+                          }
+                      })
+                : [],
         [attributes, displayStats, initialAttributes]
     )
+
+    if (!attributes) return null
 
     return (
         <Table className="w-full text-sm">
