@@ -1,11 +1,7 @@
-import {
-    FormulaOutputType,
-    DamageResultAspect,
-    DamageResult,
-} from '@/interfaces/Character'
-import { elementColors } from '@/lib'
 import { useMemo } from 'react'
-import { Column, useTable } from 'react-table'
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table'
+import { DamageResult, DamageResultAspect, FormulaOutputType } from '@/interfaces/Character'
+import { elementColors } from '@/lib'
 
 interface DamageTableProps {
     damageResults: DamageResult[] | null
@@ -18,27 +14,16 @@ interface Damage {
 const DamageTable = ({ damageResults }: DamageTableProps) => {
     if (!damageResults) return null
 
-    const columns: Column<Damage>[] = useMemo(
-        () => [
-            {
-                Header: 'Name',
-                accessor: 'name',
-            },
-            {
-                Header: 'Non-Crit',
-                accessor: 'nonCrit',
-            },
-            {
-                Header: 'Crit',
-                accessor: 'crit',
-            },
-            {
-                Header: 'Average',
-                accessor: 'average',
-            },
-        ],
-        []
-    )
+    const getCellStyle = (row: Damage, columnId: string) => {
+        if (columnId === 'average' && row.outputType === FormulaOutputType.Healing) {
+            return { color: '#98db1a' };
+        } else if (columnId !== 'name' && row.damageType) {
+            return {
+                color: elementColors[row.damageType.toLowerCase() as keyof typeof elementColors]
+            };
+        }
+        return undefined;
+    };
 
     const tableData = useMemo(() => {
         const result: Damage[] = []
@@ -91,84 +76,41 @@ const DamageTable = ({ damageResults }: DamageTableProps) => {
         return result
     }, [damageResults])
 
-    const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
-        useTable<Damage>({ columns, data: tableData })
-
     return (
-        <table {...getTableProps()} className="w-full text-sm">
-            <thead>
-                {headerGroups.map((headerGroup, index) => (
-                    <tr key={index}>
-                        {headerGroup.headers.map((column) => (
-                            <th
-                                key={column.id}
-                                className={`border-b py-2 font-bold ${
-                                    column.id === 'nonCrit' ||
-                                    column.id === 'crit' ||
-                                    column.id === 'average'
-                                        ? 'w-[80px]'
-                                        : ''
-                                }`}
-                            >
-                                {column.render('Header')}
-                            </th>
-                        ))}
-                    </tr>
+        <Table className="w-full text-sm">
+            <TableHeader>
+                <TableRow>
+                    <TableHead className="border-b px-4 py-2 font-bold">Name</TableHead>
+                    <TableHead className="border-b px-4 py-2 font-bold w-[80px]">Normal</TableHead>
+                    <TableHead className="border-b px-4 py-2 font-bold w-[80px]">Critical</TableHead>
+                    <TableHead className="border-b px-4 py-2 font-bold w-[80px]">Average</TableHead>
+                </TableRow>
+            </TableHeader>
+            <TableBody>
+                {tableData.map((row, index) => (
+                    <TableRow key={index} className={row.nonCrit === '' ? "bg-secondary/25 font-bold" : ""}>
+                        {row.nonCrit === '' ? (
+                            <TableCell colSpan={4} className="border-b py-3 px-4">
+                                {row.name}
+                            </TableCell>
+                        ) : (
+                            <>
+                                <TableCell className="border-b py-2 px-4">{row.name}</TableCell>
+                                <TableCell className="border-b py-2 px-4 w-[80px] text-right font-bold" style={getCellStyle(row, 'nonCrit')}>
+                                    {row.nonCrit}
+                                </TableCell>
+                                <TableCell className="border-b py-2 px-4 w-[80px] text-right font-bold" style={getCellStyle(row, 'crit')}>
+                                    {row.crit}
+                                </TableCell>
+                                <TableCell className="border-b py-2 px-4 w-[80px] text-right font-bold" style={getCellStyle(row, 'average')}>
+                                    {row.average}
+                                </TableCell>
+                            </>
+                        )}
+                    </TableRow>
                 ))}
-            </thead>
-            <tbody {...getTableBodyProps()}>
-                {rows.map((row, index) => {
-                    prepareRow(row)
-                    return (
-                        <tr key={index}>
-                            {row.original.nonCrit === '' ? (
-                                <td
-                                    colSpan={4}
-                                    className="border-b bg-secondary/25 px-2 py-1 font-bold"
-                                >
-                                    {row.cells[0].render('Cell')}
-                                </td>
-                            ) : (
-                                row.cells.map((cell) => (
-                                    <td
-                                        key={cell.getCellProps().key}
-                                        className={`border-b py-1 ${
-                                            row.original.nonCrit === ''
-                                                ? `px-2 font-bold`
-                                                : `px-4 py-1`
-                                        } ${
-                                            cell.column.id === 'nonCrit' ||
-                                            cell.column.id === 'crit' ||
-                                            cell.column.id === 'average'
-                                                ? `w-[80px] text-right font-bold`
-                                                : ''
-                                        }`}
-                                        style={{
-                                            color:
-                                                cell.column.id === 'average' &&
-                                                row.original.outputType ===
-                                                    FormulaOutputType.Healing
-                                                    ? '#98db1a'
-                                                    : cell.column.id !== 'name' &&
-                                                      row.original.damageType &&
-                                                      elementColors[
-                                                          row.original.damageType.toLowerCase() as keyof typeof elementColors
-                                                      ]
-                                                    ? elementColors[
-                                                          row.original.damageType.toLowerCase() as keyof typeof elementColors
-                                                      ]
-                                                    : undefined,
-                                        }}
-                                    >
-                                        {cell.render('Cell')}
-                                    </td>
-                                ))
-                            )}
-                        </tr>
-                    )
-                })}
-            </tbody>
-        </table>
+            </TableBody>
+        </Table>
     )
 }
 
