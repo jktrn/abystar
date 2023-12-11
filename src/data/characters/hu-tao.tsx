@@ -82,7 +82,7 @@ const talentScalings: TalentScaling = {
         },
         'Charged Attack Stamina Cost': {
             formulaType: FormulaType.GenericFormulaWithoutScaling,
-            multiplicativeBonusStat: ['Charged Attack Stamina Cost Multiplier'], // Array because of C1 adding unique attribute
+            multiplicativeBonusStat: ['Charged Attack Stamina Cost Multiplier'],
             outputType: FormulaOutputType.Generic,
         },
         'Plunge DMG': {
@@ -244,7 +244,7 @@ const characterBonuses: Bonus[] = [
                 talentScaling['Normal Attack: Secret Spear of Wangsheng'][
                     'Charged Attack Stamina Cost'
                 ].multiplicativeBonusStat
-            if (chargedAttackScaling && Array.isArray(chargedAttackScaling)) {
+            if (chargedAttackScaling) {
                 chargedAttackScaling.push('Crimson Bouquet Stamina Reduction')
             }
         },
@@ -317,9 +317,7 @@ const constellationBonuses: Bonus[] = [
 
             const newAttributes = {
                 ...attributes,
-                'Crimson Bouquet Stamina Reduction':
-                    (initialAttributes['Crimson Bouquet Stamina Reduction'] || 0) -
-                    1,
+                'Crimson Bouquet Stamina Reduction': -1,
             }
             return { attributes: newAttributes }
         },

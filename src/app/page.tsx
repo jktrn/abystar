@@ -6,6 +6,7 @@ import {
     CharacterImage,
     CharacterModal,
     CustomSelect,
+    DamageTable,
     TalentSelect,
 } from '@/components'
 import {
@@ -294,8 +295,7 @@ export default function Home() {
                                     Results
                                 </h2>
                                 <div className="overflow-auto">
-                                    {/* <ResultsTable damageResults={damageResults} /> */}
-                                    asd
+                                    <DamageTable damageResults={damageResults} />
                                 </div>
                             </div>
                         </div>

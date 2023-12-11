@@ -31,18 +31,18 @@ function calculateDamage(
             const talentScaling = effectiveTalentScaling[talent.name]
             if (!talentScaling) return { talentName: talent.name, aspects: [] }
 
+            // Applies any changes activeBonuses make to talentScaling
+            characterState.characterActiveBonuses.forEach((bonus) => {
+                if (
+                    bonus.affectsTalentIndex === index &&
+                    bonus.applyToTalentScaling
+                ) {
+                    bonus.applyToTalentScaling(effectiveTalentScaling)
+                }
+            })
+
             const talentDamageResults = Object.keys(talent.data)
                 .flatMap((key) => {
-                    // Applies any changes activeBonuses make to talentScaling
-                    characterState.characterActiveBonuses.forEach((bonus) => {
-                        if (
-                            bonus.affectsTalentIndex === index &&
-                            bonus.applyToTalentScaling
-                        ) {
-                            bonus.applyToTalentScaling(effectiveTalentScaling)
-                        }
-                    })
-
                     // Checks to see if the aspect's talentScalings have been implemented
                     const aspectTalentScalings = talentScaling[key]
                     if (!aspectTalentScalings) return null
