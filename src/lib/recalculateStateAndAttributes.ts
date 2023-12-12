@@ -1,5 +1,6 @@
 import { Bonus, CharacterAttributes, CharacterState } from '@/interfaces/Character'
 import { applySpecialBonuses, defaultCharacterAttributes } from '.'
+import { compareObjects } from '@/lib'
 
 interface DependencyMap {
     [dependency: string]: Bonus[]
@@ -15,24 +16,31 @@ const recalculateStateAndAttributes = (
         ...baseStats,
     })
 
-    // Initializes current attributes as updated attributes before iterating through bonuses
+    // This will be our iterative variable that changes as we apply bonuses
     let currentAttributes = { ...updatedAttributes }
+
     // Constellations can change talent levels so they need to be returned as well
     let updatedTalentLevels = [...state.characterTalentLevels]
-    // Reset effective talent levels
+
+    // Reset effective talent levels every time we recalculate (so no mutations occur)
     state.effectiveTalentLevels = updatedTalentLevels
+
     // Flag to check if attributes have changed from previous iteration
     let isAttributesUpdated = true
+
     // TODO: Add all future bonus arrays (e.g. artifacts, weapons, party buffs) here
     let bonusesToApply = [...state.characterActiveBonuses]
+
     // Array to store bonuses that need to be applied in the next iteration
     let bonusesForNextIteration = []
 
+    // Map to store dependencies for each attribute
     let dependencyMap: DependencyMap = {}
+
     // Max iterations for effect application to prevent infinite loops
     let MAX_ITERATIONS = 15
 
-    // Iterates through bonuses until attributes stop changing (to account for dependencies)
+    // Iterates through bonuses until currentAttributes stabilizes
     while (isAttributesUpdated && MAX_ITERATIONS--) {
         isAttributesUpdated = false
         for (const bonus of bonusesToApply) {
@@ -56,21 +64,22 @@ const recalculateStateAndAttributes = (
 
             if (bonus.dependencies) {
                 for (const dependency of bonus.dependencies) {
-                    dependencyMap[dependency] = (
-                        dependencyMap[dependency] || []
-                    ).concat(bonus)
+                    if (!dependencyMap[dependency]) {
+                        dependencyMap[dependency] = []
+                    }
+                    dependencyMap[dependency].push(bonus)
                 }
             }
 
             // Redo if attributes have changed from previous iteration
-            if (
-                JSON.stringify(previousAttributes) !==
-                JSON.stringify(currentAttributes)
-            ) {
+            let difference = compareObjects(previousAttributes, currentAttributes)
+            if (Object.keys(difference).length > 0) {
                 isAttributesUpdated = true
-                for (const key in dependencyMap) {
-                    bonusesForNextIteration.push(...dependencyMap[key])
-                    delete dependencyMap[key]
+                for (const key in difference) {
+                    if (dependencyMap[key]) {
+                        bonusesForNextIteration.push(...dependencyMap[key])
+                        delete dependencyMap[key]
+                    }
                 }
             }
         }

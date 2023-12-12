@@ -4,135 +4,327 @@ import {
     Character,
     FormulaType,
     TalentRawData,
+    FormulaOutputType,
 } from '@/interfaces/Character'
 import { Badge } from '@/components/ui/badge'
 
 const talentScalings: TalentScaling = {
-    // ...
+    'Normal Attack: Akara': {
+        '1-Hit DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Normal Attack Additive Bonus'],
+            multiplicativeBonusStat: ['Dendro DMG Bonus', 'Normal Attack DMG Bonus'],
+            damageType: 'Dendro',
+        },
+        '2-Hit DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Normal Attack Additive Bonus'],
+            multiplicativeBonusStat: ['Dendro DMG Bonus', 'Normal Attack DMG Bonus'],
+            damageType: 'Dendro',
+        },
+        '3-Hit DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Normal Attack Additive Bonus'],
+            multiplicativeBonusStat: ['Dendro DMG Bonus', 'Normal Attack DMG Bonus'],
+            damageType: 'Dendro',
+        },
+        '4-Hit DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Normal Attack Additive Bonus'],
+            multiplicativeBonusStat: ['Dendro DMG Bonus', 'Normal Attack DMG Bonus'],
+            damageType: 'Dendro',
+        },
+        'Charged Attack DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Charged Attack Additive Bonus'],
+            multiplicativeBonusStat: [
+                'Dendro DMG Bonus',
+                'Charged Attack DMG Bonus',
+            ],
+            damageType: 'Dendro',
+        },
+        'Charged Attack Stamina Cost': {
+            formulaType: FormulaType.GenericFormulaWithoutScaling,
+            multiplicativeBonusStat: ['Charged Attack Stamina Cost Multiplier'],
+            outputType: FormulaOutputType.Generic,
+        },
+        'Plunge DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Plunging Attack Additive Bonus'],
+            multiplicativeBonusStat: [
+                'Dendro DMG Bonus',
+                'Plunging Attack DMG Bonus',
+            ],
+            damageType: 'Dendro',
+        },
+        'Low Plunge DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Plunging Attack Additive Bonus'],
+            multiplicativeBonusStat: [
+                'Dendro DMG Bonus',
+                'Plunging Attack DMG Bonus',
+            ],
+            damageType: 'Dendro',
+        },
+        'High Plunge DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Plunging Attack Additive Bonus'],
+            multiplicativeBonusStat: [
+                'Dendro DMG Bonus',
+                'Plunging Attack DMG Bonus',
+            ],
+            damageType: 'Dendro',
+        },
+    },
+    'All Schemes to Know': {
+        'Press DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Elemental Skill Additive Bonus'],
+            multiplicativeBonusStat: [
+                'Dendro DMG Bonus',
+                'Elemental Skill DMG Bonus',
+            ],
+            damageType: 'Dendro',
+        },
+        'Hold DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Elemental Skill Additive Bonus'],
+            multiplicativeBonusStat: [
+                'Dendro DMG Bonus',
+                'Elemental Skill DMG Bonus',
+            ],
+            damageType: 'Dendro',
+        },
+        'Tri-Karma Purification DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK', 'Elemental Mastery'],
+            additiveBonusStat: ['Elemental Skill Additive Bonus'],
+            multiplicativeBonusStat: [
+                'Dendro DMG Bonus',
+                'Elemental Skill DMG Bonus',
+                'Tri-Karma Purification DMG Bonus',
+            ],
+            damageType: 'Dendro',
+        },
+        'Tri-Karma Purification: Karmic Oblivion DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK', 'Elemental Mastery'],
+            additiveBonusStat: ['Elemental Skill Additive Bonus'],
+            multiplicativeBonusStat: [
+                'Dendro DMG Bonus',
+                'Elemental Skill DMG Bonus',
+            ],
+            damageType: 'Dendro',
+            minConstellation: 6,
+        },
+        'Tri-Karma Purification Trigger Interval': {
+            formulaType: FormulaType.GenericFormulaWithoutScaling,
+            additiveBonusStat: ['Tri-Karma Purification Trigger Interval'],
+            outputType: FormulaOutputType.Time,
+        },
+        'Seed of Skandha Duration': {
+            formulaType: FormulaType.GenericFormulaWithoutScaling,
+            outputType: FormulaOutputType.Time,
+        },
+        'Press CD': {
+            formulaType: FormulaType.GenericFormulaWithoutScaling,
+            multiplicativeBonusStat: ['Elemental Skill CD Reduction'],
+            outputType: FormulaOutputType.Time,
+        },
+        'Hold CD': {
+            formulaType: FormulaType.GenericFormulaWithoutScaling,
+            multiplicativeBonusStat: ['Elemental Skill CD Reduction'],
+            outputType: FormulaOutputType.Time,
+        },
+    },
+    'Illusory Heart': {
+        'Pyro: DMG Bonus (1 Character)': {
+            formulaType: FormulaType.GenericFormulaWithoutScaling,
+            outputType: FormulaOutputType.Percentage,
+        },
+        'Pyro: DMG Bonus (2 Characters)': {
+            formulaType: FormulaType.GenericFormulaWithoutScaling,
+            outputType: FormulaOutputType.Percentage,
+        },
+        'Electro: Trigger Interval Decrease (1 Character)': {
+            formulaType: FormulaType.GenericFormulaWithoutScaling,
+            outputType: FormulaOutputType.Time,
+        },
+        'Electro: Trigger Interval Decrease (2 Characters)': {
+            formulaType: FormulaType.GenericFormulaWithoutScaling,
+            outputType: FormulaOutputType.Time,
+        },
+        'Hydro: Duration Extension (1 Character)': {
+            formulaType: FormulaType.GenericFormulaWithoutScaling,
+            outputType: FormulaOutputType.Time,
+        },
+        'Hydro: Duration Extension (2 Characters)': {
+            formulaType: FormulaType.GenericFormulaWithoutScaling,
+            outputType: FormulaOutputType.Time,
+        },
+        'Base Duration': {
+            formulaType: FormulaType.GenericFormulaWithoutScaling,
+            additiveBonusStat: ['Shrine of Maya Duration Bonus'],
+            outputType: FormulaOutputType.Time,
+        },
+        CD: {
+            formulaType: FormulaType.GenericFormulaWithoutScaling,
+            multiplicativeBonusStat: ['Elemental Burst CD Reduction'],
+            outputType: FormulaOutputType.Time,
+        },
+        'Energy Cost': {
+            formulaType: FormulaType.GenericFormulaWithoutScaling,
+            outputType: FormulaOutputType.Generic,
+        },
+    },
 }
 
 const characterBonuses: Bonus[] = [
-    // {
-    //     name: 'Awakening Elucidated',
-    //     description: (
-    //         <span>
-    //             Each point of Nahida&apos;s EM beyond 200 will grant 0.1% Bonus DMG
-    //             and 0.03% CRIT Rate to <b>Tri-Karma Purification</b> (Elemental
-    //             Skill) (capped at 80% Bonus DMG and 24% CRIT Rate)
-    //         </span>
-    //     ),
-    //     icon: '/images/skill-icons/passives/nahida-passive2.png',
-    //     effect: (attributes, currentStacks, talentLevels, initialAttributes) => {
-    //         if (!initialAttributes) return attributes
-    //         const bonusDMG = Math.min(
-    //             80,
-    //             Math.max(0, attributes['Elemental Mastery'] - 200) * 0.1
-    //         )
-    //         const bonusCritRate = Math.min(
-    //             24,
-    //             Math.max(0, attributes['Elemental Mastery'] - 200) * 0.03
-    //         )
-    //         return {
-    //             ...attributes,
-    //             'Tri-Karma Purification DMG Bonus':
-    //                 (initialAttributes['Tri-Karma Purification DMG Bonus'] || 0) +
-    //                 bonusDMG,
-    //             'Elemental Skill CRIT Rate':
-    //                 initialAttributes['Elemental Skill CRIT Rate'] + bonusCritRate,
-    //         }
-    //     },
-    //     enabled: true,
-    //     dependencies: ['Elemental Mastery'],
-    // },
-    // {
-    //     name: 'Illusory Heart',
-    //     description: (
-    //         <span>
-    //             Applies effects based on party&apos;s elements. <br />
-    //             <span style={{ color: '#bf612d' }}>Pyro</span>: Tri-Karma
-    //             Purification DMG increased;{' '}
-    //             <span style={{ color: '#3d9bc1' }}>Hydro</span>: Shrine of
-    //             Maya&apos;s duration increased;{' '}
-    //             <span style={{ color: '#b45bff' }}>Electro</span>: Tri-Karma
-    //             Purification Trigger Interval decreased
-    //         </span>
-    //     ),
-    //     icon: '/images/skill-icons/bursts/nahida-burst.png',
-    //     effect: (
-    //         attributes,
-    //         currentStacks,
-    //         talentLevels,
-    //         initialAttributes,
-    //         state
-    //     ) => {
-    //         if (!talentLevels || !initialAttributes || !currentStacks)
-    //             return attributes
-    //         const newAttributes = { ...attributes }
-    //         const talentData: TalentRawData = state!.character.talents.find(
-    //             (skill) => skill.name === 'Illusory Heart'
-    //         )!.data
-    //         const effectKeys = [
-    //             'Pyro: DMG Bonus (1 Character)',
-    //             'Pyro: DMG Bonus (2 Characters)',
-    //             'Hydro: Duration Extension (1 Character)',
-    //             'Hydro: Duration Extension (2 Characters)',
-    //             'Electro: Trigger Interval Decrease (1 Character)',
-    //             'Electro: Trigger Interval Decrease (2 Characters)',
-    //         ]
-    //         const effectMultipliers = effectKeys.map((key) => {
-    //             const value = talentData?.[key]?.[talentLevels[2]]
-    //             const bonusString = value ? value.match(/\d+(\.\d+)?/)?.[0] : null
-    //             return bonusString ? parseFloat(bonusString) : 0
-    //         })
-    //         if (currentStacks === 1 || currentStacks === 2) {
-    //             newAttributes['Tri-Karma Purification DMG Bonus'] =
-    //                 (attributes['Tri-Karma Purification DMG Bonus'] || 0) +
-    //                 effectMultipliers[currentStacks - 1]
-    //         } else if (currentStacks === 3 || currentStacks === 4) {
-    //             newAttributes['Shrine of Maya Duration Bonus'] =
-    //                 (initialAttributes['Shrine of Maya Duration Bonus'] || 0) +
-    //                 effectMultipliers[currentStacks - 1]
-    //         } else if (currentStacks === 5 || currentStacks === 6) {
-    //             newAttributes['Tri-Karma Purification Trigger Interval'] =
-    //                 (initialAttributes['Tri-Karma Purification Trigger Interval'] ||
-    //                     0) - effectMultipliers[currentStacks - 1]
-    //         }
-    //         return newAttributes
-    //     },
-    //     maxStacks: 6,
-    //     stackOptions: [
-    //         'Off',
-    //         'Pyro (1)',
-    //         'Pyro (2)',
-    //         'Hydro (1)',
-    //         'Hydro (2)',
-    //         'Electro (1)',
-    //         'Electro (2)',
-    //     ],
-    // },
-    // {
-    //     name: 'Compassion Illuminated',
-    //     description: (
-    //         <span>
-    //             While inside <b>Illusory Heart</b>: Increases Elemental Mastery by
-    //             25% of the EM of the party member with the highest EM
-    //         </span>
-    //     ),
-    //     icon: '/images/skill-icons/passives/nahida-passive1.png',
-    //     effect: (attributes, currentStacks, talents, initialAttributes) => {
-    //         if (!currentStacks || !initialAttributes) return attributes
-    //         const elementalMasteryOptions = [0, 125, 150, 175, 200, 225, 250]
-    //         return {
-    //             ...attributes,
-    //             'Elemental Mastery':
-    //                 initialAttributes['Elemental Mastery'] +
-    //                 elementalMasteryOptions[currentStacks],
-    //         }
-    //     },
-    //     maxStacks: 6,
-    //     stackOptions: ['Off', '125', '150', '175', '200', '225', '250'],
-    //     dependencies: ['Elemental Mastery'],
-    // },
+    {
+        name: 'Awakening Elucidated',
+        description: (
+            <span>
+                Each point of Nahida&apos;s EM beyond 200 will grant 0.1% Bonus DMG
+                and 0.03% CRIT Rate to <b>Tri-Karma Purification</b> (Elemental
+                Skill) (capped at 80% Bonus DMG and 24% CRIT Rate)
+            </span>
+        ),
+        icon: '/images/skill-icons/passives/nahida-passive2.png',
+        effect: (attributes, initialAttributes) => {
+            if (!initialAttributes) return { attributes }
+            const bonusDMG = Math.min(
+                0.8,
+                Math.max(0, attributes['Elemental Mastery'] - 200) * 0.001
+            )
+            const bonusCritRate = Math.min(
+                0.24,
+                Math.max(0, attributes['Elemental Mastery'] - 200) * 0.0003
+            )
+
+            console.log(bonusDMG, bonusCritRate)
+
+            const newAttributes = {
+                ...attributes,
+                'Tri-Karma Purification DMG Bonus':
+                    (attributes['Tri-Karma Purification DMG Bonus'] || 0) + bonusDMG,
+                'Elemental Skill CRIT Rate':
+                    (initialAttributes['Elemental Skill CRIT Rate'] || 0) +
+                    bonusCritRate,
+            }
+
+            return { attributes: newAttributes }
+        },
+        enabled: true,
+        dependencies: ['Elemental Mastery'],
+    },
+    {
+        name: 'Illusory Heart',
+        description: (
+            <span>
+                Applies effects based on party&apos;s elements. <br />
+                <span style={{ color: '#bf612d' }}>Pyro</span>: Tri-Karma
+                Purification DMG increased;{' '}
+                <span style={{ color: '#3d9bc1' }}>Hydro</span>: Shrine of
+                Maya&apos;s duration increased;{' '}
+                <span style={{ color: '#b45bff' }}>Electro</span>: Tri-Karma
+                Purification Trigger Interval decreased
+            </span>
+        ),
+        icon: '/images/skill-icons/bursts/nahida-burst.png',
+        effect: (
+            attributes,
+            initialAttributes,
+            talentLevels,
+            currentStacks,
+            state
+        ) => {
+            if (!talentLevels || !initialAttributes || !currentStacks)
+                return { attributes }
+
+            const newAttributes = { ...attributes }
+
+            const talentData: TalentRawData = state!.character.talents.find(
+                (skill) => skill.name === 'Illusory Heart'
+            )!.data
+
+            const effectKeys = [
+                'Pyro: DMG Bonus (1 Character)',
+                'Pyro: DMG Bonus (2 Characters)',
+                'Hydro: Duration Extension (1 Character)',
+                'Hydro: Duration Extension (2 Characters)',
+                'Electro: Trigger Interval Decrease (1 Character)',
+                'Electro: Trigger Interval Decrease (2 Characters)',
+            ]
+
+            const effectMultipliers = effectKeys.map((key) => {
+                const value = talentData?.[key]?.[`Lv${talentLevels[2]}`]
+                const bonusString = value ? value.match(/\d+(\.\d+)?/)?.[0] : null
+                return bonusString ? parseFloat(bonusString) : 0
+            })
+
+            if (currentStacks === 1 || currentStacks === 2) {
+                newAttributes['Tri-Karma Purification DMG Bonus'] =
+                    (attributes['Tri-Karma Purification DMG Bonus'] || 0) +
+                    effectMultipliers[currentStacks - 1] / 100
+            } else if (currentStacks === 3 || currentStacks === 4) {
+                newAttributes['Shrine of Maya Duration Bonus'] =
+                    (initialAttributes['Shrine of Maya Duration Bonus'] || 0) +
+                    effectMultipliers[currentStacks - 1]
+            } else if (currentStacks === 5 || currentStacks === 6) {
+                newAttributes['Tri-Karma Purification Trigger Interval'] =
+                    (initialAttributes['Tri-Karma Purification Trigger Interval'] ||
+                        0) - effectMultipliers[currentStacks - 1]
+            }
+
+            return { attributes: newAttributes }
+        },
+        maxStacks: 6,
+        stackOptions: [
+            'Off',
+            'Pyro (1)',
+            'Pyro (2)',
+            'Hydro (1)',
+            'Hydro (2)',
+            'Electro (1)',
+            'Electro (2)',
+        ],
+    },
+    {
+        name: 'Compassion Illuminated',
+        description: (
+            <span>
+                While inside <b>Illusory Heart</b>: Increases Elemental Mastery by
+                25% of the EM of the party member with the highest EM
+            </span>
+        ),
+        icon: '/images/skill-icons/passives/nahida-passive1.png',
+        effect: (attributes, initialAttributes, talentLevels, currentStacks) => {
+            if (!currentStacks || !initialAttributes) return { attributes }
+
+            const elementalMasteryOptions = [0, 125, 150, 175, 200, 225, 250]
+
+            const newAttributes = {
+                ...attributes,
+                'Elemental Mastery':
+                    attributes['Elemental Mastery'] +
+                    elementalMasteryOptions[currentStacks],
+            }
+
+            return { attributes: newAttributes }
+        },
+        maxStacks: 6,
+        stackOptions: ['Off', '125', '150', '175', '200', '225', '250'],
+    },
     // {
     //     name: 'The Root of All Fullness',
     //     description: (
@@ -599,56 +791,107 @@ const Nahida: Character = {
             description:
                 'Manifests the Court of Dreams and expands the Shrine of Maya.\nWhen the Shrine of Maya field is unleashed, the following effects will be separately unleashed based on the Elemental Types present within the party.\n\u00b7\nPyro\n: While Nahida remains within the Shrine of Maya, the DMG dealt by Tri-Karma Purification from "All Schemes to Know" is increased.\n\u00b7\nElectro\n: While Nahida remains within the Shrine of Maya, the interval between each Tri-Karma Purification from "All Schemes to Know" is decreased.\n\u00b7\nHydro\n: The Shrine of Maya\'s duration is increased.\nIf there are at least 2 party members of the aforementioned Elemental Types present when the field is deployed, the aforementioned effects will be increased further.\nEven if Nahida is not on the field, these bonuses will still take effect so long as party members are within the Shrine of Maya.\nPerhaps all that dwell under the bowers of trees are naught but a fleeting upside-down dream in the eyes of the God of Wisdom.',
             data: {
-                'Pyro: DMG Bonus': {
-                    Lv1: '2 Characters 22.32%',
-                    Lv2: '2 Characters 23.99%',
-                    Lv3: '2 Characters 25.67%',
-                    Lv4: '2 Characters 27.9%',
-                    Lv5: '2 Characters 29.57%',
-                    Lv6: '2 Characters 31.25%',
-                    Lv7: '2 Characters 33.48%',
-                    Lv8: '2 Characters 35.71%',
-                    Lv9: '2 Characters 37.94%',
-                    Lv10: '2 Characters 40.18%',
-                    Lv11: '2 Characters 42.41%',
-                    Lv12: '2 Characters 44.64%',
-                    Lv13: '2 Characters 47.43%',
-                    Lv14: '2 Characters 50.22%',
-                    Lv15: '2 Characters 53.01%',
+                'Pyro: DMG Bonus (1 Character)': {
+                    Lv1: '14.88%',
+                    Lv2: '16%',
+                    Lv3: '17.11%',
+                    Lv4: '18.6%',
+                    Lv5: '19.72%',
+                    Lv6: '20.83%',
+                    Lv7: '22.32%',
+                    Lv8: '23.81%',
+                    Lv9: '25.3%',
+                    Lv10: '26.78%',
+                    Lv11: '28.27%',
+                    Lv12: '29.76%',
+                    Lv13: '31.62%',
+                    Lv14: '33.48%',
+                    Lv15: '35.34%',
                 },
-                'Electro: Trigger Interval Decrease': {
-                    Lv1: '2 Characters 0.37s',
-                    Lv2: '2 Characters 0.4s',
-                    Lv3: '2 Characters 0.43s',
-                    Lv4: '2 Characters 0.47s',
-                    Lv5: '2 Characters 0.49s',
-                    Lv6: '2 Characters 0.52s',
-                    Lv7: '2 Characters 0.56s',
-                    Lv8: '2 Characters 0.6s',
-                    Lv9: '2 Characters 0.63s',
-                    Lv10: '2 Characters 0.67s',
-                    Lv11: '2 Characters 0.71s',
-                    Lv12: '2 Characters 0.74s',
-                    Lv13: '2 Characters 0.79s',
-                    Lv14: '2 Characters 0.84s',
-                    Lv15: '2 Characters 0.88s',
+                'Pyro: DMG Bonus (2 Characters)': {
+                    Lv1: '22.32%',
+                    Lv2: '23.99%',
+                    Lv3: '25.67%',
+                    Lv4: '27.9%',
+                    Lv5: '29.57%',
+                    Lv6: '31.25%',
+                    Lv7: '33.48%',
+                    Lv8: '35.71%',
+                    Lv9: '37.94%',
+                    Lv10: '40.18%',
+                    Lv11: '42.41%',
+                    Lv12: '44.64%',
+                    Lv13: '47.43%',
+                    Lv14: '50.22%',
+                    Lv15: '53.01%',
                 },
-                'Hydro: Duration Extension': {
-                    Lv1: '2 Characters 5.02s',
-                    Lv2: '2 Characters 5.39s',
-                    Lv3: '2 Characters 5.77s',
-                    Lv4: '2 Characters 6.27s',
-                    Lv5: '2 Characters 6.65s',
-                    Lv6: '2 Characters 7.02s',
-                    Lv7: '2 Characters 7.52s',
-                    Lv8: '2 Characters 8.03s',
-                    Lv9: '2 Characters 8.53s',
-                    Lv10: '2 Characters 9.03s',
-                    Lv11: '2 Characters 9.53s',
-                    Lv12: '2 Characters 10.03s',
-                    Lv13: '2 Characters 10.66s',
-                    Lv14: '2 Characters 11.29s',
-                    Lv15: '2 Characters 11.91s',
+                'Electro: Trigger Interval Decrease (1 Character)': {
+                    Lv1: '0.25s',
+                    Lv2: '0.27s',
+                    Lv3: '0.29s',
+                    Lv4: '0.31s',
+                    Lv5: '0.33s',
+                    Lv6: '0.35s',
+                    Lv7: '0.37s',
+                    Lv8: '0.4s',
+                    Lv9: '0.42s',
+                    Lv10: '0.45s',
+                    Lv11: '0.47s',
+                    Lv12: '0.5s',
+                    Lv13: '0.53s',
+                    Lv14: '0.56s',
+                    Lv15: '0.59s',
+                },
+                'Electro: Trigger Interval Decrease (2 Characters)': {
+                    Lv1: '0.37s',
+                    Lv2: '0.4s',
+                    Lv3: '0.43s',
+                    Lv4: '0.47s',
+                    Lv5: '0.49s',
+                    Lv6: '0.52s',
+                    Lv7: '0.56s',
+                    Lv8: '0.6s',
+                    Lv9: '0.63s',
+                    Lv10: '0.67s',
+                    Lv11: '0.71s',
+                    Lv12: '0.74s',
+                    Lv13: '0.79s',
+                    Lv14: '0.84s',
+                    Lv15: '0.88s',
+                },
+                'Hydro: Duration Extension (1 Character)': {
+                    Lv1: '3.34s',
+                    Lv2: '3.59s',
+                    Lv3: '3.85s',
+                    Lv4: '4.18s',
+                    Lv5: '4.43s',
+                    Lv6: '4.68s',
+                    Lv7: '5.02s',
+                    Lv8: '5.35s',
+                    Lv9: '5.68s',
+                    Lv10: '6.02s',
+                    Lv11: '6.35s',
+                    Lv12: '6.69s',
+                    Lv13: '7.11s',
+                    Lv14: '7.52s',
+                    Lv15: '7.94s',
+                },
+                'Hydro: Duration Extension (2 Characters)': {
+                    Lv1: '5.02s',
+                    Lv2: '5.39s',
+                    Lv3: '5.77s',
+                    Lv4: '6.27s',
+                    Lv5: '6.65s',
+                    Lv6: '7.02s',
+                    Lv7: '7.52s',
+                    Lv8: '8.03s',
+                    Lv9: '8.53s',
+                    Lv10: '9.03s',
+                    Lv11: '9.53s',
+                    Lv12: '10.03s',
+                    Lv13: '10.66s',
+                    Lv14: '11.29s',
+                    Lv15: '11.91s',
                 },
                 'Base Duration': {
                     Lv1: '15s',

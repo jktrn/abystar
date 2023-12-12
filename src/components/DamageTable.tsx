@@ -121,27 +121,46 @@ const DamageTable = ({ damageResults }: DamageTableProps) => {
                             </TableCell>
                         ) : (
                             <>
-                                <TableCell className="border-b px-4 py-2">
-                                    {row.name}
-                                </TableCell>
-                                <TableCell
-                                    className="w-[80px] border-b px-4 py-2 text-right font-bold"
-                                    style={getCellStyle(row, 'nonCrit')}
-                                >
-                                    {row.nonCrit}
-                                </TableCell>
-                                <TableCell
-                                    className="w-[80px] border-b px-4 py-2 text-right font-bold"
-                                    style={getCellStyle(row, 'crit')}
-                                >
-                                    {row.crit}
-                                </TableCell>
-                                <TableCell
-                                    className="w-[80px] border-b px-4 py-2 text-right font-bold"
-                                    style={getCellStyle(row, 'average')}
-                                >
-                                    {row.average}
-                                </TableCell>
+                                {!row.nonCrit ? (
+                                    <>
+                                        <TableCell
+                                            colSpan={3}
+                                            className="border-b px-4 py-2"
+                                        >
+                                            {row.name}
+                                        </TableCell>
+                                        <TableCell
+                                            className="w-[80px] border-b px-4 py-2 text-right font-bold"
+                                            style={getCellStyle(row, 'average')}
+                                        >
+                                            {row.average}
+                                        </TableCell>
+                                    </>
+                                ) : (
+                                    <>
+                                        <TableCell className="border-b px-4 py-2">
+                                            {row.name}
+                                        </TableCell>
+                                        <TableCell
+                                            className="w-[80px] border-b px-4 py-2 text-right font-bold"
+                                            style={getCellStyle(row, 'nonCrit')}
+                                        >
+                                            {row.nonCrit}
+                                        </TableCell>
+                                        <TableCell
+                                            className="w-[80px] border-b px-4 py-2 text-right font-bold"
+                                            style={getCellStyle(row, 'crit')}
+                                        >
+                                            {row.crit}
+                                        </TableCell>
+                                        <TableCell
+                                            className="w-[80px] border-b px-4 py-2 text-right font-bold"
+                                            style={getCellStyle(row, 'average')}
+                                        >
+                                            {row.average}
+                                        </TableCell>
+                                    </>
+                                )}
                             </>
                         )}
                     </TableRow>
