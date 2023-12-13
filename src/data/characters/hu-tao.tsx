@@ -187,10 +187,10 @@ const characterBonuses: Bonus[] = [
         name: 'Guide to Afterlife',
         description: (
             <span>
-                Activates <b>Paramita Papilio</b> (Elemental Skill) stance,
-                converting damage to <span style={{ color: '#bf612d' }}>Pyro</span>.
-                Increases ATK based on Max HP (maximum gained this way cannot exceed
-                400% original ATK)
+                Activates <span style={{ color: '#ddd' }}>Paramita Papilio</span>{' '}
+                (Elemental Skill) stance, converting Normal Attack DMG to{' '}
+                <span style={{ color: '#bf612d' }}>Pyro DMG</span>. Increases ATK
+                based on Max HP (maximum gained cannot exceed 400% original ATK)
             </span>
         ),
         icon: '/images/skill-icons/skills/hu-tao-skill.png',
@@ -254,7 +254,7 @@ const characterBonuses: Bonus[] = [
         name: 'Sanguine Rogue',
         description: (
             <span>
-                +33% <span style={{ color: '#bf612d' }}>Pyro</span> DMG Bonus when
+                +33% <span style={{ color: '#bf612d' }}>Pyro DMG Bonus</span> when
                 under 50% Max HP
             </span>
         ),
@@ -307,8 +307,8 @@ const constellationBonuses: Bonus[] = [
         name: 'Crimson Bouquet',
         description: (
             <span>
-                While in Paramita Papilio state, Hu Tao&apos;s Charge Attacks do not
-                consume Stamina.
+                While in <span style={{ color: '#DDD' }}>Paramita Papilio</span>{' '}
+                state, Hu Tao&apos;s Charge Attacks do not consume Stamina.
             </span>
         ),
         icon: '/images/skill-icons/constellations/hu-tao-constellation1.png',
@@ -327,9 +327,11 @@ const constellationBonuses: Bonus[] = [
         name: 'Ominous Rainfall',
         description: (
             <span>
-                Increases the Blood Blossom DMG by an amount equal to 10% of Hu
-                Tao&apos;s Max HP at the time the effect is applied. Additionally,
-                Spirit Soother will also apply the Blood Blossom effect.
+                Increases the <span style={{ color: '#DDD' }}>Blood Blossom</span>{' '}
+                DMG by an amount equal to 10% of Hu Tao&apos;s Max HP at the time the
+                effect is applied. Additionally,
+                <span style={{ color: '#DDD' }}>Spirit Soother</span> will also apply
+                the <span style={{ color: '#DDD' }}>Blood Blossom</span> effect.
             </span>
         ),
         icon: '/images/skill-icons/constellations/hu-tao-constellation2.png',
@@ -352,8 +354,9 @@ const constellationBonuses: Bonus[] = [
         name: 'Lingering Carmine',
         description: (
             <span>
-                Increases the Level of Guide to Afterlife by 3. Maximum upgrade level
-                is 15.
+                Increases the Level of{' '}
+                <span style={{ color: '#DDD' }}>Guide to Afterlife</span> by 3.
+                Maximum upgrade level is 15.
             </span>
         ),
         icon: '/images/skill-icons/constellations/hu-tao-constellation3.png',
@@ -371,7 +374,8 @@ const constellationBonuses: Bonus[] = [
         name: 'Garden of Eternal Rest',
         description: (
             <span>
-                Upon defeating an enemy affected by a Blood Blossom that Hu Tao
+                Upon defeating an enemy affected by a{' '}
+                <span style={{ color: '#DDD' }}>Blood Blossom</span> that Hu Tao
                 applied herself, all nearby allies in the party (excluding Hu Tao
                 herself) will have their CRIT Rate increased by 12% for 15s.
             </span>
@@ -387,8 +391,9 @@ const constellationBonuses: Bonus[] = [
         name: 'Floral Incense',
         description: (
             <span>
-                Increases the Level of Spirit Soother by 3. Maximum upgrade level is
-                15.
+                Increases the Level of{' '}
+                <span style={{ color: '#DDD' }}>Spirit Soother</span> by 3. Maximum
+                upgrade level is 15.
             </span>
         ),
         icon: '/images/skill-icons/constellations/hu-tao-constellation5.png',

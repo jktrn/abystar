@@ -195,8 +195,9 @@ const characterBonuses: Bonus[] = [
         description: (
             <span>
                 Each point of Nahida&apos;s EM beyond 200 will grant 0.1% Bonus DMG
-                and 0.03% CRIT Rate to <b>Tri-Karma Purification</b> (Elemental
-                Skill) (capped at 80% Bonus DMG and 24% CRIT Rate)
+                and 0.03% CRIT Rate to{' '}
+                <span style={{ color: '#DDD' }}>Tri-Karma Purification</span>{' '}
+                (Elemental Skill) (capped at 80% Bonus DMG and 24% CRIT Rate)
             </span>
         ),
         icon: '/images/skill-icons/passives/nahida-passive2.png',
@@ -210,8 +211,6 @@ const characterBonuses: Bonus[] = [
                 0.24,
                 Math.max(0, attributes['Elemental Mastery'] - 200) * 0.0003
             )
-
-            console.log(bonusDMG, bonusCritRate)
 
             const newAttributes = {
                 ...attributes,
@@ -303,8 +302,9 @@ const characterBonuses: Bonus[] = [
         name: 'Compassion Illuminated',
         description: (
             <span>
-                While inside <b>Illusory Heart</b>: Increases Elemental Mastery by
-                25% of the EM of the party member with the highest EM
+                While inside <span style={{ color: '#DDD' }}>Illusory Heart</span>:
+                Increases Elemental Mastery by 25% of the EM of the party member with
+                the highest EM
             </span>
         ),
         icon: '/images/skill-icons/passives/nahida-passive1.png',
@@ -325,52 +325,176 @@ const characterBonuses: Bonus[] = [
         maxStacks: 6,
         stackOptions: ['Off', '125', '150', '175', '200', '225', '250'],
     },
-    // {
-    //     name: 'The Root of All Fullness',
-    //     description: (
-    //         <span>
-    //             <Badge variant="secondary">C2</Badge>{' '}
-    //             <Badge variant="destructive">Unimplemented</Badge> Burning, Bloom,
-    //             Hyperbloom, and Burgeon Reaction DMG can now CRIT on opponents marked
-    //             by <b>Seeds of Skanda</b> (CRIT Rate and CRIT DMG fixed at 20% and
-    //             100%, respectively). For 8s after being hit by Quicken, Aggravate, or
-    //             Spread, enemies have DEF decreased by 30%
-    //         </span>
-    //     ),
-    //     icon: '/images/skill-icons/constellations/nahida-constellation2.png',
-    //     effect: (attributes) => {
-    //         // TODO: Implement
-    //         return attributes
-    //     },
-    //     minConstellation: 2,
-    // },
-    // {
-    //     name: 'The Stem of Manifest Inference',
-    //     description: (
-    //         <span>
-    //             <Badge variant="secondary">C4</Badge> When 1/2/3/(4 or more) nearby
-    //             opponents are affected by <b>Seeds of Skandha</b>, Nahida&apos;s EM
-    //             will be increased by 100/120/140/160
-    //         </span>
-    //     ),
-    //     icon: '/images/skill-icons/constellations/nahida-constellation4.png',
-    //     effect: (attributes, currentStacks, talents, initialAttributes) => {
-    //         if (!currentStacks || !initialAttributes) return attributes
-    //         const newAttributes = { ...attributes }
-    //         const elementalMasteryOptions = [0, 100, 120, 140, 160]
-    //         newAttributes['Elemental Mastery'] =
-    //             attributes['Elemental Mastery'] +
-    //             elementalMasteryOptions[currentStacks]
-    //         return newAttributes
-    //     },
-    //     minConstellation: 4,
-    //     maxStacks: 4,
-    //     stackOptions: ['Off', '100', '120', '140', '160'],
-    // },
+    {
+        name: 'The Root of All Fullness',
+        description: (
+            <span>
+                <Badge variant="secondary">C2</Badge>{' '}
+                <Badge variant="destructive">Unimplemented</Badge> Burning, Bloom,
+                Hyperbloom, and Burgeon Reaction DMG can now CRIT on opponents marked
+                by <span style={{ color: '#DDD' }}>Seeds of Skanda</span> (CRIT Rate
+                and CRIT DMG fixed at 20% and 100%, respectively). For 8s after being
+                hit by Quicken, Aggravate, or Spread, enemies have DEF decreased by
+                30%
+            </span>
+        ),
+        icon: '/images/skill-icons/constellations/nahida-constellation2.png',
+        effect: (attributes) => {
+            // TODO: Implement
+            return { attributes }
+        },
+        minConstellation: 2,
+    },
+    {
+        name: 'The Stem of Manifest Inference',
+        description: (
+            <span>
+                <Badge variant="secondary">C4</Badge> When 1/2/3/(4 or more) nearby
+                opponents are affected by{' '}
+                <span style={{ color: '#DDD' }}>Seeds of Skandha</span>,
+                Nahida&apos;s EM will be increased by 100/120/140/160
+            </span>
+        ),
+        icon: '/images/skill-icons/constellations/nahida-constellation4.png',
+        effect: (attributes, initialAttributes, talentLevels, currentStacks) => {
+            if (!currentStacks || !initialAttributes) return { attributes }
+
+            const elementalMasteryOptions = [0, 100, 120, 140, 160]
+
+            const newAttributes = {
+                ...attributes,
+                'Elemental Mastery':
+                    attributes['Elemental Mastery'] +
+                    elementalMasteryOptions[currentStacks],
+            }
+
+            return { attributes: newAttributes }
+        },
+        minConstellation: 4,
+        maxStacks: 4,
+        stackOptions: ['Off', '100', '120', '140', '160'],
+    },
 ]
 
 const constellationBonuses: Bonus[] = [
-    // ...
+    {
+        name: 'The Seed of Stored Knowledge',
+        description: (
+            <span>
+                When the <span style={{ color: '#DDD' }}>Shrine of Maya</span> is
+                unleashed and the Elemental Types of the party members are being
+                tabulated, the count will add 1 to the number of Pyro, Electro, and
+                Hydro characters respectively.
+            </span>
+        ),
+        icon: '/images/skill-icons/constellations/nahida-constellation1.png',
+        effect: (attributes) => {
+            // TODO: Handle
+            return { attributes }
+        },
+    },
+    {
+        name: 'The Root of All Fullness',
+        description: (
+            <span>
+                Opponents that are marked by{' '}
+                <span style={{ color: '#DDD' }}>Seeds of Skandha</span> applied by
+                Nahida herself will be affected by the following effects: Burning,
+                Bloom, Hyperbloom, and Burgeon Reaction DMG can score CRIT Hits. CRIT
+                Rate and CRIT DMG are fixed at 20% and 100% respectively. Within 8s
+                of being affected by Quicken, Aggravate, Spread, DEF is decreased by
+                30%.
+            </span>
+        ),
+        icon: '/images/skill-icons/constellations/nahida-constellation2.png',
+        effect: (attributes) => {
+            // TODO: Handle
+            return { attributes }
+        },
+    },
+    {
+        name: 'The Shoot of Conscious Attainment',
+        description: (
+            <span>
+                Increases the Level of{' '}
+                <span style={{ color: '#DDD' }}>All Schemes to Know</span> by 3.
+                <br />
+                Maximum upgrade level is 15.
+            </span>
+        ),
+        icon: '/images/skill-icons/constellations/nahida-constellation3.png',
+        effect: (attributes, initialAttributes, talentLevels) => {
+            if (!talentLevels) return { attributes }
+
+            const newTalentLevels = [...talentLevels]
+            newTalentLevels[1] = Math.min(newTalentLevels[1] + 3, 13)
+
+            return { attributes: attributes, updatedTalentLevels: newTalentLevels }
+        },
+        minConstellation: 3,
+    },
+    {
+        name: 'The Stem of Manifest Inference',
+        description: (
+            <span>
+                When 1/2/3/(4 or more) nearby opponents are affected by{' '}
+                <span style={{ color: '#DDD' }}>All Schemes to Know</span>&apos;s
+                Seeds of Skandha, Nahida&apos;s Elemental Mastery will be increased
+                by 100/120/140/160.
+            </span>
+        ),
+        icon: '/images/skill-icons/constellations/nahida-constellation4.png',
+        effect: (attributes) => {
+            // Handled in characterBonuses.tsx
+            return { attributes }
+        },
+    },
+    {
+        name: 'The Leaves of Enlightening Speech',
+        description: (
+            <span>
+                Increase the Level of{' '}
+                <span style={{ color: '#DDD' }}>Illusory Heart</span> by 3.
+                <br />
+                Maximum upgrade level is 15.
+            </span>
+        ),
+        icon: '/images/skill-icons/constellations/nahida-constellation5.png',
+        effect: (attributes, initialAttributes, talentLevels) => {
+            if (!talentLevels) return { attributes }
+
+            const newTalentLevels = [...talentLevels]
+            newTalentLevels[2] = Math.min(newTalentLevels[2] + 3, 13)
+
+            return { attributes: attributes, updatedTalentLevels: newTalentLevels }
+        },
+        minConstellation: 5,
+    },
+    {
+        name: "The Fruit of Reason's Culmination",
+        description: (
+            <span>
+                When Nahida hits an opponent affected by{' '}
+                <span style={{ color: '#DDD' }}>All Schemes to Know</span>&apos;s
+                Seeds of Skandha with Normal or Charged Attacks after unleashing
+                Illusory Heart, she will use Tri-Karma Purification: Karmic Oblivion
+                on this opponent and all connected opponents, dealing{' '}
+                <span style={{ color: '#84a02f' }}>Dendro DMG</span> based on 200% of
+                Nahida&apos;s ATK and 400% of her Elemental Mastery.
+                <br />
+                DMG dealt by Tri-Karma Purification: Karmic Oblivion is considered
+                Elemental Skill DMG and can be triggered once every 0.2s. This effect
+                can last up to 10s and will be removed after Nahida has unleashed 6
+                instances of Tri-Karma Purification: Karmic Oblivion.
+            </span>
+        ),
+        icon: '/images/skill-icons/constellations/nahida-constellation6.png',
+        effect: (attributes) => {
+            // Handled already
+            return { attributes }
+        },
+        minConstellation: 6,
+    },
 ]
 
 const Nahida: Character = {
@@ -714,6 +838,23 @@ const Nahida: Character = {
                     Lv13: '219.3% ATK + 438.6% Elemental Mastery',
                     Lv14: '232.2% ATK + 464.4% Elemental Mastery',
                     Lv15: '245.1% ATK + 490.2% Elemental Mastery',
+                },
+                'Tri-Karma Purification: Karmic Oblivion DMG': {
+                    Lv1: '200% ATK + 400% Elemental Mastery',
+                    Lv2: '200% ATK + 400% Elemental Mastery',
+                    Lv3: '200% ATK + 400% Elemental Mastery',
+                    Lv4: '200% ATK + 400% Elemental Mastery',
+                    Lv5: '200% ATK + 400% Elemental Mastery',
+                    Lv6: '200% ATK + 400% Elemental Mastery',
+                    Lv7: '200% ATK + 400% Elemental Mastery',
+                    Lv8: '200% ATK + 400% Elemental Mastery',
+                    Lv9: '200% ATK + 400% Elemental Mastery',
+                    Lv10: '200% ATK + 400% Elemental Mastery',
+                    Lv11: '200% ATK + 400% Elemental Mastery',
+                    Lv12: '200% ATK + 400% Elemental Mastery',
+                    Lv13: '200% ATK + 400% Elemental Mastery',
+                    Lv14: '200% ATK + 400% Elemental Mastery',
+                    Lv15: '200% ATK + 400% Elemental Mastery',
                 },
                 'Tri-Karma Purification Trigger Interval': {
                     Lv1: '2.5s',

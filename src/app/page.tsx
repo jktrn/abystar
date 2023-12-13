@@ -5,6 +5,7 @@ import {
     CharacterBonuses,
     CharacterImage,
     CharacterModal,
+    ConstellationPopover,
     CustomSelect,
     DamageTable,
     TalentSelect,
@@ -189,35 +190,30 @@ export default function Home() {
                                                             }
                                                         />
                                                     </div>
-                                                    <div className="hidden md:flex md:w-full md:items-center">
-                                                        {/* TODO: CONSTELLATION POPOVER */}
+                                                    <div
+                                                        className="hidden md:flex md:w-full md:items-center"
+                                                        key={`constellation-select-${kebabCase(
+                                                            characterState.character
+                                                                .name
+                                                        )}`}
+                                                    >
                                                         Constellation:
-                                                        <CustomSelect
-                                                            key={`constellation-select-${kebabCase(
+                                                        <ConstellationPopover
+                                                            characterState={
                                                                 characterState
-                                                                    .character.name
-                                                            )}`}
-                                                            options={getConstellationOptions(
-                                                                characterState.character
-                                                            )}
-                                                            value={characterState.characterConstellation.toString()}
+                                                            }
+                                                            value={
+                                                                characterState.characterConstellation
+                                                            }
                                                             onChange={(
                                                                 newConstellation
                                                             ) =>
                                                                 updateCharacterState(
                                                                     'characterConstellation',
-                                                                    parseInt(
-                                                                        newConstellation,
-                                                                        10
-                                                                    )
+                                                                    newConstellation
                                                                 )
                                                             }
                                                         />
-                                                        {/* <ConstellationPopover
-                                                            characterName={character.name}
-                                                            constellation={constellation}
-                                                            setConstellation={setConstellation}
-                                                        /> */}
                                                     </div>
                                                 </div>
                                             </div>

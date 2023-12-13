@@ -80,7 +80,7 @@ const CharacterBonuses = ({
                     >
                         {isHiddenCollapsed ? 'Show' : 'Hide'} Hidden Bonuses
                         <ChevronDown
-                            className={`inline-block h-5 w-5 ${
+                            className={`ml-1 inline-block h-5 w-5 ${
                                 isHiddenCollapsed ? '' : 'rotate-180'
                             }`}
                         />
