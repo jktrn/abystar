@@ -24,11 +24,11 @@ export interface Weapon {
     image: string
     rarity: number
     description: string
-    effectName: string
-    effectDescription: string
+    effectName?: string
+    effectDescription?: string
     mainStats: {
         [level: string]: WeaponMainStat
     }
-    refinements: WeaponRefinement[]
-    effect: WeaponEffect
+    refinements?: WeaponRefinement[]
+    effect?: WeaponEffect
 }
