@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const ApprenticesNotes: Weapon = {
     name: "Apprentice's Notes",
     image: 'https://genshin.honeyhunterworld.com/img/i_n14101_gacha_icon_w145.webp',
+    type: 'Catalyst',
     rarity: 1,
     description:
         'Notes left behind by a top student. Many useful spells are listed, and the handwriting is beautiful.',

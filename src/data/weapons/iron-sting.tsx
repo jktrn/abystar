@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const IronSting: Weapon = {
     name: 'Iron Sting',
     image: 'https://genshin.honeyhunterworld.com/img/i_n11407_gacha_icon_w145.webp',
+    type: 'Weapon',
     rarity: 4,
     description:
         'An exotic long-bladed rapier that somehow found its way into Liyue via foreign traders. It is light, agile, and sharp.',

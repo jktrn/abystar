@@ -7,12 +7,13 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const SkywardPride: Weapon = {
     name: 'Skyward Pride',
     image: 'https://genshin.honeyhunterworld.com/img/i_n12501_gacha_icon_w145.webp',
+    type: 'Claymore',
     rarity: 5,
     description:
         "A claymore that symbolizes the pride of Dvalin soaring through the skies. When swung, it emits a deep hum as the full force of Dvalin's command of the sky and the wind is unleashed.",
     effectName: 'Sky-ripping Dragon Spine',
     effectDescription:
-        'Increases all DMG by 8%. After using an Elemental Burst, Normal or Charged Attack, on hit, creates a vacuum blade that does 80% of ATK as DMG to opponents along its path. Lasts for 20s or 8 vacuum blades.',
+        'Increases all DMG by 8%. After using an Elemental Burst, a vacuum blade that does 80% of ATK as DMG to opponents along its path will be created when Normal or Charged Attacks hit. Lasts for 20s or 8 vacuum blades.',
     mainStats: {
         '1/20': {
             'Base ATK': 47.54,
@@ -74,27 +75,27 @@ const SkywardPride: Weapon = {
     refinements: [
         {
             description:
-                'Increases all DMG by 8%. After using an Elemental Burst, Normal or Charged Attack, on hit, creates a vacuum blade that does 80% of ATK as DMG to opponents along its path. Lasts for 20s or 8 vacuum blades.',
+                'Increases all DMG by 8%. After using an Elemental Burst, a vacuum blade that does 80% of ATK as DMG to opponents along its path will be created when Normal or Charged Attacks hit. Lasts for 20s or 8 vacuum blades.',
             level: 1,
         },
         {
             description:
-                'Increases all DMG by 10%. After using an Elemental Burst, Normal or Charged Attack, on hit, creates a vacuum blade that does 100% of ATK as DMG to opponents along its path. Lasts for 20s or 8 vacuum blades.',
+                'Increases all DMG by 10%. After using an Elemental Burst, a vacuum blade that does 100% of ATK as DMG to opponents along its path will be created when Normal or Charged Attacks hit. Lasts for 20s or 8 vacuum blades.',
             level: 2,
         },
         {
             description:
-                'Increases all DMG by 12%. After using an Elemental Burst, Normal or Charged Attack, on hit, creates a vacuum blade that does 120% of ATK as DMG to opponents along its path. Lasts for 20s or 8 vacuum blades.',
+                'Increases all DMG by 12%. After using an Elemental Burst, a vacuum blade that does 120% of ATK as DMG to opponents along its path will be created when Normal or Charged Attacks hit. Lasts for 20s or 8 vacuum blades.',
             level: 3,
         },
         {
             description:
-                'Increases all DMG by 14%. After using an Elemental Burst, Normal or Charged Attack, on hit, creates a vacuum blade that does 140% of ATK as DMG to opponents along its path. Lasts for 20s or 8 vacuum blades.',
+                'Increases all DMG by 14%. After using an Elemental Burst, a vacuum blade that does 140% of ATK as DMG to opponents along its path will be created when Normal or Charged Attacks hit. Lasts for 20s or 8 vacuum blades.',
             level: 4,
         },
         {
             description:
-                'Increases all DMG by 16%. After using an Elemental Burst, Normal or Charged Attack, on hit, creates a vacuum blade that does 160% of ATK as DMG to opponents along its path. Lasts for 20s or 8 vacuum blades.',
+                'Increases all DMG by 16%. After using an Elemental Burst, a vacuum blade that does 160% of ATK as DMG to opponents along its path will be created when Normal or Charged Attacks hit. Lasts for 20s or 8 vacuum blades.',
             level: 5,
         },
     ],

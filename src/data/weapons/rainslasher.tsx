@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const Rainslasher: Weapon = {
     name: 'Rainslasher',
     image: 'https://genshin.honeyhunterworld.com/img/i_n12405_gacha_icon_w145.webp',
+    type: 'Claymore',
     rarity: 4,
     description:
         'A fluorescent greatsword with no sharp edge that crushes enemies with brute force and raw power.',

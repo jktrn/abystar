@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const StaffOfTheScarletSands: Weapon = {
     name: 'Staff of the Scarlet Sands',
     image: 'https://genshin.honeyhunterworld.com/img/i_n13511_gacha_icon_w145.webp',
+    type: 'Polearm',
     rarity: 5,
     description:
         'One of a paired set of scepters fashioned from obsidian. Legend has it that these staves grant the right to lead the people of the desert, but no retainer now lives who can verify the proper appearance of these regalia.',

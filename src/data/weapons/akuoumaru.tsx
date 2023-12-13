@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const Akuoumaru: Weapon = {
     name: 'Akuoumaru',
     image: 'https://genshin.honeyhunterworld.com/img/i_n12416_gacha_icon_w145.webp',
+    type: 'Claymore',
     rarity: 4,
     description:
         'The beloved sword of the legendary "Akuou." The blade is huge and majestic, but is surprisingly easy to wield.',

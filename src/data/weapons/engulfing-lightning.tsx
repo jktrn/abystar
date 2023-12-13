@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const EngulfingLightning: Weapon = {
     name: 'Engulfing Lightning',
     image: 'https://genshin.honeyhunterworld.com/img/i_n13509_gacha_icon_w145.webp',
+    type: 'Polearm',
     rarity: 5,
     description:
         'A naginata used to "cut grass." Any army that stands before this weapon will probably be likewise cut down...',

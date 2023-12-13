@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const MailedFlower: Weapon = {
     name: 'Mailed Flower',
     image: 'https://genshin.honeyhunterworld.com/img/i_n12418_gacha_icon_w145.webp',
+    type: 'Claymore',
     rarity: 4,
     description:
         'A graceful and elegant greatsword that is decorated with flowers and ribbons.',

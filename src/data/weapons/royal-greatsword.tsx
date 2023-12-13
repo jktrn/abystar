@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const RoyalGreatsword: Weapon = {
     name: 'Royal Greatsword',
     image: 'https://genshin.honeyhunterworld.com/img/i_n12404_gacha_icon_w145.webp',
+    type: 'Claymore',
     rarity: 4,
     description:
         'An old greatsword that belonged to the erstwhile rulers of Mondstadt. It is made from the finest-quality materials and has stood the test of time. A weapon for use by the nobility only.',

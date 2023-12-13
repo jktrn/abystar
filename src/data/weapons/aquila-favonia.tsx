@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const AquilaFavonia: Weapon = {
     name: 'Aquila Favonia',
     image: 'https://genshin.honeyhunterworld.com/img/i_n11501_gacha_icon_w145.webp',
+    type: 'Sword',
     rarity: 5,
     description:
         'The soul of the Knights of Favonius. Millennia later, it still calls on the winds of swift justice to vanquish all evil \u2014 just like the last heroine who wielded it.',

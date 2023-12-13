@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const PrototypeStarglitter: Weapon = {
     name: 'Prototype Starglitter',
     image: 'https://genshin.honeyhunterworld.com/img/i_n13402_gacha_icon_w145.webp',
+    type: 'Weapon',
     rarity: 4,
     description:
         'A hooked spear discovered hidden away in the Blackcliff Forge. The glimmers along the sharp edge are like stars in the night.',

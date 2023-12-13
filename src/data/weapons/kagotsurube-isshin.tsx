@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const KagotsurubeIsshin: Weapon = {
     name: 'Kagotsurube Isshin',
     image: 'https://genshin.honeyhunterworld.com/img/i_n11416_gacha_icon_w145.webp',
+    type: 'Sword',
     rarity: 4,
     description:
         'This famed blade was born in a nation to the far north. But in the name of "Isshin," it was stained with many a dark deed on its home-bound journey.',

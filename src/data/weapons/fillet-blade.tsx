@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const FilletBlade: Weapon = {
     name: 'Fillet Blade',
     image: 'https://genshin.honeyhunterworld.com/img/i_n11305_gacha_icon_w145.webp',
+    type: 'Sword',
     rarity: 3,
     description:
         'A sharp filleting knife. The blade is long, thin, and incredibly sharp.',

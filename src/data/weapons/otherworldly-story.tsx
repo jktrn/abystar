@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const OtherworldlyStory: Weapon = {
     name: 'Otherworldly Story',
     image: 'https://genshin.honeyhunterworld.com/img/i_n14303_gacha_icon_w145.webp',
+    type: 'Catalyst',
     rarity: 3,
     description:
         'A cheap fantasy novel with no value whatsoever. Any claim that it possesses the power of catalysis is also pure fantasy.',

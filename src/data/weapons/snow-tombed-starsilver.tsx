@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const SnowtombedStarsilver: Weapon = {
     name: 'Snow-Tombed Starsilver',
     image: 'https://genshin.honeyhunterworld.com/img/i_n12411_gacha_icon_w145.webp',
+    type: 'Weapon',
     rarity: 4,
     description:
         'An ancient greatsword that was stored between frescoes. Forged from Starsilver, it has the power to cleave through ice and snow.',

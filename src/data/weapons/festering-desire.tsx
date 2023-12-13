@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const FesteringDesire: Weapon = {
     name: 'Festering Desire',
     image: 'https://genshin.honeyhunterworld.com/img/i_n11413_gacha_icon_w145.webp',
+    type: 'Sword',
     rarity: 4,
     description:
         'A creepy straight sword that almost seems to yearn for life. It drips with a shriveling venom that could even corrupt a mighty dragon.',

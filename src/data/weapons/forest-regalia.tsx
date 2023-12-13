@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const ForestRegalia: Weapon = {
     name: 'Forest Regalia',
     image: 'https://genshin.honeyhunterworld.com/img/i_n12417_gacha_icon_w145.webp',
+    type: 'Weapon',
     rarity: 4,
     description:
         'A weapon you obtained from an Aranara tale. It has taken on the shape of a greatsword that shall cut down the foes of the forest.',

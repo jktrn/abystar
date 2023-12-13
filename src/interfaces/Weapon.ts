@@ -19,9 +19,10 @@ export interface WeaponEffectParams {
     refinement: number
 }
 
-export interface Weapon {
+export interface RawWeapon {
     name: string
     image: string
+    type: string
     rarity: number
     description: string
     effectName?: string
@@ -30,5 +31,8 @@ export interface Weapon {
         [level: string]: WeaponMainStat
     }
     refinements?: WeaponRefinement[]
+}
+
+export interface Weapon extends RawWeapon {
     effect?: WeaponEffect
 }

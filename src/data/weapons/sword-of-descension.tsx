@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const SwordOfDescension: Weapon = {
     name: 'Sword of Descension',
     image: 'https://genshin.honeyhunterworld.com/img/i_n11412_gacha_icon_w145.webp',
+    type: 'Sword',
     rarity: 4,
     description:
         'A sword of unique craftsmanship. It does not appear to belong to this world.',

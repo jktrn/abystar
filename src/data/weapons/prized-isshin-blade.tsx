@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const PrizedIsshinBlade: Weapon = {
     name: 'Prized Isshin Blade',
     image: 'https://genshin.honeyhunterworld.com/img/i_n11421_gacha_icon_w145.webp',
+    type: 'Sword',
     rarity: 4,
     description:
         'An ominous purple aura clings to this bizarre blade. Its wicked aura and hostility have both decreased greatly.',

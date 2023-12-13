@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const SummitShaper: Weapon = {
     name: 'Summit Shaper',
     image: 'https://genshin.honeyhunterworld.com/img/i_n11504_gacha_icon_w145.webp',
+    type: 'Sword',
     rarity: 5,
     description:
         'A symbol of a legendary pact, this sharp blade once cut off the peak of a mountain.',

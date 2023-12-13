@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const WolfsGravestone: Weapon = {
     name: "Wolf's Gravestone",
     image: 'https://genshin.honeyhunterworld.com/img/i_n12502_gacha_icon_w145.webp',
+    type: 'Claymore',
     rarity: 5,
     description:
         'A longsword used by the Wolf Knight. Originally just a heavy sheet of iron given to the knight by a blacksmith from the city, it became endowed with legendary power owing to his friendship with the wolves.',

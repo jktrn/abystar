@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const SongOfBrokenPines: Weapon = {
     name: 'Song of Broken Pines',
     image: 'https://genshin.honeyhunterworld.com/img/i_n12503_gacha_icon_w145.webp',
+    type: 'Claymore',
     rarity: 5,
     description:
         'A greatsword as light as the sigh of grass in the breeze, yet as merciless to the corrupt as a typhoon.',

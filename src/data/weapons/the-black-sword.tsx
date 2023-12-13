@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const TheBlackSword: Weapon = {
     name: 'The Black Sword',
     image: 'https://genshin.honeyhunterworld.com/img/i_n11409_gacha_icon_w145.webp',
+    type: 'Sword',
     rarity: 4,
     description:
         'A pitch-black longsword that thirsts for violence and conflict. It is said that this weapon can cause its user to become drunk on the red wine of slaughter.',

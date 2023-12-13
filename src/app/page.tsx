@@ -9,6 +9,8 @@ import {
     CustomSelect,
     DamageTable,
     TalentSelect,
+    WeaponImage,
+    WeaponModal,
 } from '@/components'
 import {
     Character,
@@ -16,6 +18,7 @@ import {
     CharacterState,
     DamageResult,
 } from '@/interfaces/Character'
+import { Weapon } from '@/interfaces/Weapon'
 import {
     applySpecialBonuses,
     calculateDamage,
@@ -34,6 +37,7 @@ export default function Home() {
     const [characterAttributes, setCharacterAttributes] =
         useState<CharacterAttributes | null>(null)
     const [isCharacterModalOpen, setCharacterModalOpen] = useState(false)
+    const [isWeaponModalOpen, setWeaponModalOpen] = useState(false)
     const [damageResults, setDamageResults] = useState<DamageResult[] | null>(null)
 
     const handleCharacterSelect = (selectedCharacter: Character) => {
@@ -77,6 +81,16 @@ export default function Home() {
         })
     }
 
+    const handleWeaponSelect = (selectedWeapon: Weapon) => {
+        if (characterState) {
+            setCharacterState({
+                ...characterState,
+                weapon: selectedWeapon,
+            })
+        }
+        setWeaponModalOpen(false)
+    }
+
     useEffect(() => {
         if (characterState && characterAttributes) {
             const newDamageResults = calculateDamage(
@@ -89,13 +103,13 @@ export default function Home() {
         }
     }, [characterState, characterAttributes])
 
-    // useEffect(() => {
-    //     console.log('Character State has been updated: ', characterState)
-    // }, [characterState])
+    useEffect(() => {
+        console.log('Character State has been updated: ', characterState)
+    }, [characterState])
 
-    // useEffect(() => {
-    //     console.log('Character Attributes have been updated: ', characterAttributes)
-    // }, [characterAttributes])
+    useEffect(() => {
+        console.log('Character Attributes have been updated: ', characterAttributes)
+    }, [characterAttributes])
 
     return (
         <>
@@ -112,17 +126,7 @@ export default function Home() {
                                         <div className="flex flex-col justify-center gap-4 md:flex-row md:justify-normal">
                                             <form className="flex justify-center md:justify-normal">
                                                 <CharacterImage
-                                                    icon={
-                                                        characterState.character.icon
-                                                    }
-                                                    rarity={
-                                                        characterState.character
-                                                            .rarity
-                                                    }
-                                                    element={
-                                                        characterState.character
-                                                            .vision
-                                                    }
+                                                    characterState={characterState}
                                                     onClick={() =>
                                                         setCharacterModalOpen(true)
                                                     }
@@ -272,7 +276,10 @@ export default function Home() {
                                 Weapon
                             </h2>
                             <div className="p-4">Weapon</div>
-
+                            <WeaponImage
+                                characterState={characterState}
+                                onClick={() => setWeaponModalOpen(true)}
+                            />
                             <h2 className="border-y bg-secondary/25 px-4 py-3 text-lg font-bold">
                                 Artifacts
                             </h2>
@@ -301,6 +308,11 @@ export default function Home() {
                     open={isCharacterModalOpen}
                     onOpenChange={setCharacterModalOpen}
                     setCharacter={handleCharacterSelect}
+                />
+                <WeaponModal
+                    open={isWeaponModalOpen}
+                    onOpenChange={setWeaponModalOpen}
+                    setWeapon={handleWeaponSelect}
                 />
             </main>
         </>

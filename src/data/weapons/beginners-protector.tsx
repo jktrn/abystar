@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const BeginnersProtector: Weapon = {
     name: "Beginner's Protector",
     image: 'https://genshin.honeyhunterworld.com/img/i_n13101_gacha_icon_w145.webp',
+    type: 'Polearm',
     rarity: 1,
     description:
         'A polearm as straight as a flag pole. Well suited to most combat situations, it has an imposing presence when swung.',

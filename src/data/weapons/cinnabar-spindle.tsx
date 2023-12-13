@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const CinnabarSpindle: Weapon = {
     name: 'Cinnabar Spindle',
     image: 'https://genshin.honeyhunterworld.com/img/i_n11415_gacha_icon_w145.webp',
+    type: 'Sword',
     rarity: 4,
     description:
         'A sword made from materials that do not belong in this world. The power within might even be able to withstand the corruption of a venom that could corrode a mighty dragon.',

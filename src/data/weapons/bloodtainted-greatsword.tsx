@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const BloodtaintedGreatsword: Weapon = {
     name: 'Bloodtainted Greatsword',
     image: 'https://genshin.honeyhunterworld.com/img/i_n12302_gacha_icon_w145.webp',
+    type: 'Claymore',
     rarity: 3,
     description:
         'A steel sword that is said to have been coated with dragon blood, rendering it invulnerable to damage. This effect is not extended to its wielder, however.',

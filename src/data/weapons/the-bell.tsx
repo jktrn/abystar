@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const TheBell: Weapon = {
     name: 'The Bell',
     image: 'https://genshin.honeyhunterworld.com/img/i_n12402_gacha_icon_w145.webp',
+    type: 'Claymore',
     rarity: 4,
     description:
         'A heavy greatsword. A clock is embedded within it, though its internal mechanisms have long been damaged.',

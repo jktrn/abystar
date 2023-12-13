@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const KitainCrossSpear: Weapon = {
     name: 'Kitain Cross Spear',
     image: 'https://genshin.honeyhunterworld.com/img/i_n13414_gacha_icon_w145.webp',
+    type: 'Weapon',
     rarity: 4,
     description:
         'A special lance that was once used by a famed warrior who guarded the Tatarigami on Yashiori Island.',

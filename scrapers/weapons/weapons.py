@@ -21,6 +21,7 @@ def fetch_weapon_data(weapon: str) -> dict[str, dict[str, dict[str, str]]]:
     
     all_data["name"] = rows[0].find_all('td')[-1].text
     all_data["image"] = base_url + rows[0].find('img')['src'].split('?')[0]
+    all_data["type"] = data['Family'].split(', ')[1]
     all_data["rarity"] = len(rows[2].find_all('img'))
     all_data["description"] = data["Description"]
     
@@ -59,7 +60,7 @@ def fetch_weapon_data(weapon: str) -> dict[str, dict[str, dict[str, str]]]:
     return all_data
 
 def fetch_all_weapons_data() -> dict[str, dict[str, dict[str, str]]]:
-    paths_path = os.path.join(current_dir, "paths", "paths.json", 'r')
+    paths_path = os.path.join(current_dir, "paths", "paths.json")
     with open(paths_path) as f:
         weapons = json.load(f)
 

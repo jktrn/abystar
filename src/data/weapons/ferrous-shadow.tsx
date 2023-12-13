@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const FerrousShadow: Weapon = {
     name: 'Ferrous Shadow',
     image: 'https://genshin.honeyhunterworld.com/img/i_n12301_gacha_icon_w145.webp',
+    type: 'Claymore',
     rarity: 3,
     description:
         'A replica of the famed sword of Arundolyn, the Lion of Light. Feel the power of a legendary hero as you hold this sword in your hand! Imagine yourself as the great warrior himself! Note: Daydreaming not recommended in live combat.',

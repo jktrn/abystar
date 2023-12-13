@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const HaranGeppakuFutsu: Weapon = {
     name: 'Haran Geppaku Futsu',
     image: 'https://genshin.honeyhunterworld.com/img/i_n11510_gacha_icon_w145.webp',
+    type: 'Sword',
     rarity: 5,
     description:
         'A famed work by the Futsu line of smiths. The name "Haran" comes from the manner in which it resembles the violent, roiling waves.',

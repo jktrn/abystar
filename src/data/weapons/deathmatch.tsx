@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const Deathmatch: Weapon = {
     name: 'Deathmatch',
     image: 'https://genshin.honeyhunterworld.com/img/i_n13405_gacha_icon_w145.webp',
+    type: 'Polearm',
     rarity: 4,
     description:
         "A sharp crimson polearm that was once a gladiator's priceless treasure. Its awl has been stained by the blood of countless beasts and men.",

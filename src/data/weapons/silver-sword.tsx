@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const SilverSword: Weapon = {
     name: 'Silver Sword',
     image: 'https://genshin.honeyhunterworld.com/img/i_n11201_gacha_icon_w145.webp',
+    type: 'Sword',
     rarity: 2,
     description:
         "A sword for exorcising demons. Everyone knows it's made of a silver alloy, not pure silver.",

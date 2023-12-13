@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const ToukabouShigure: Weapon = {
     name: 'Toukabou Shigure',
     image: 'https://genshin.honeyhunterworld.com/img/i_n11422_gacha_icon_w145.webp',
+    type: 'Sword',
     rarity: 4,
     description:
         'A rather special oil-paper umbrella. While long wanderings may make one used to the wind and the rain, there might be some fun in admiring a rainy scene beneath this parasol.',

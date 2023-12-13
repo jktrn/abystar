@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const FavoniusGreatsword: Weapon = {
     name: 'Favonius Greatsword',
     image: 'https://genshin.honeyhunterworld.com/img/i_n12401_gacha_icon_w145.webp',
+    type: 'Claymore',
     rarity: 4,
     description:
         'A heavy ceremonial sword of the Knights of Favonius. It channels elemental power easily and is highly destructive.',

@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const DullBlade: Weapon = {
     name: 'Dull Blade',
     image: 'https://genshin.honeyhunterworld.com/img/i_n11101_gacha_icon_w145.webp',
+    type: 'Sword',
     rarity: 1,
     description:
         "Youthful dreams and the thrill of adventure. If this isn't enough, then make it up with valiance.",

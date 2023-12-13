@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const CalamityQueller: Weapon = {
     name: 'Calamity Queller',
     image: 'https://genshin.honeyhunterworld.com/img/i_n13507_gacha_icon_w145.webp',
+    type: 'Polearm',
     rarity: 5,
     description:
         'A keenly honed weapon forged from some strange crystal. Its faint blue light seems to whisper of countless matters now past.',

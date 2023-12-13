@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const WhiteTassel: Weapon = {
     name: 'White Tassel',
     image: 'https://genshin.honeyhunterworld.com/img/i_n13301_gacha_icon_w145.webp',
+    type: 'Polearm',
     rarity: 3,
     description:
         "A standard-issue weapon of the Millelith soldiers. It has a sturdy shaft and sharp spearhead. It's a reliable weapon.",

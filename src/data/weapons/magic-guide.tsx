@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const MagicGuide: Weapon = {
     name: 'Magic Guide',
     image: 'https://genshin.honeyhunterworld.com/img/i_n14301_gacha_icon_w145.webp',
+    type: 'Catalyst',
     rarity: 3,
     description:
         'Version 12. A reprint featuring corrections to Version 11 and brand-new additions based on recent developments.',

@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const VortexVanquisher: Weapon = {
     name: 'Vortex Vanquisher',
     image: 'https://genshin.honeyhunterworld.com/img/i_n13504_gacha_icon_w145.webp',
+    type: 'Polearm',
     rarity: 5,
     description:
         'This sharp polearm can seemingly pierce through anything. When swung, one can almost see the rift it tears in the air.',

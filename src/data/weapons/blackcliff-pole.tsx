@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const BlackcliffPole: Weapon = {
     name: 'Blackcliff Pole',
     image: 'https://genshin.honeyhunterworld.com/img/i_n13404_gacha_icon_w145.webp',
+    type: 'Polearm',
     rarity: 4,
     description:
         'A weapon made of blackcliff and aerosiderite. There is a dark crimson glow on its cold black sheen.',

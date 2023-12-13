@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const SkywardBlade: Weapon = {
     name: 'Skyward Blade',
     image: 'https://genshin.honeyhunterworld.com/img/i_n11502_gacha_icon_w145.webp',
+    type: 'Sword',
     rarity: 5,
     description:
         'The sword of a knight that symbolizes the restored honor of Dvalin. The blessings of the Anemo Archon rest on the fuller of the blade, imbuing the sword with the powers of the sky and the wind.',

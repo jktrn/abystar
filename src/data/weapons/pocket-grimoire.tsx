@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const PocketGrimoire: Weapon = {
     name: 'Pocket Grimoire',
     image: 'https://genshin.honeyhunterworld.com/img/i_n14201_gacha_icon_w145.webp',
+    type: 'Catalyst',
     rarity: 2,
     description:
         'A carefully compiled notebook featuring the essentials needed to pass a magic exam.',

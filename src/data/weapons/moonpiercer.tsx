@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const Moonpiercer: Weapon = {
     name: 'Moonpiercer',
     image: 'https://genshin.honeyhunterworld.com/img/i_n13417_gacha_icon_w145.webp',
+    type: 'Weapon',
     rarity: 4,
     description:
         'A weapon you obtained from an Aranara tale. It is shaped like a giant arrow and can be used as a spear.',

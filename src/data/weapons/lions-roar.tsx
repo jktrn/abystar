@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const LionsRoar: Weapon = {
     name: "Lion's Roar",
     image: 'https://genshin.honeyhunterworld.com/img/i_n11405_gacha_icon_w145.webp',
+    type: 'Sword',
     rarity: 4,
     description:
         'A sharp blade with extravagant carvings that somehow does not compromise on durability and sharpness. It roars like a lion as it cuts through the air.',

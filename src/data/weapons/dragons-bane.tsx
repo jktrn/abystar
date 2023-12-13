@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const DragonsBane: Weapon = {
     name: "Dragon's Bane",
     image: 'https://genshin.honeyhunterworld.com/img/i_n13401_gacha_icon_w145.webp',
+    type: 'Polearm',
     rarity: 4,
     description:
         'A polearm decorated with an entwining golden dragon. Light and sharp, this weapon may very well kill dragons with ease.',

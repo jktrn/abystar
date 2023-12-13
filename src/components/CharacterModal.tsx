@@ -11,6 +11,7 @@ import {
     DialogDescription,
 } from '@/components/ui/dialog'
 import { elementColors, compareElement, kebabCase } from '@/lib'
+import { characterData } from '@/data'
 
 interface CharacterModalProps {
     open: boolean
@@ -27,13 +28,9 @@ const CharacterModal = ({
     const DEFAULT_CHARACTER = 'Nahida'
 
     useEffect(() => {
-        import('@/data/characters/characters.json').then(
-            ({ default: charactersData }) => {
-                const charactersArray = Object.values(charactersData)
-                setRawCharacters(charactersArray)
-                selectDefaultCharacter(DEFAULT_CHARACTER, charactersArray)
-            }
-        )
+        const charactersArray = Object.values(characterData)
+        setRawCharacters(charactersArray)
+        selectDefaultCharacter(DEFAULT_CHARACTER, charactersArray)
     }, [])
 
     const selectDefaultCharacter = async (

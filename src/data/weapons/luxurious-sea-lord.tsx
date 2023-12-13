@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const LuxuriousSealord: Weapon = {
     name: 'Luxurious Sea-Lord',
     image: 'https://genshin.honeyhunterworld.com/img/i_n12412_gacha_icon_w145.webp',
+    type: 'Claymore',
     rarity: 4,
     description:
         'The great king of the ocean. Having been air-dried, it makes for a fine weapon as well as emergency sustenance.',

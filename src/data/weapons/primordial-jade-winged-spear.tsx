@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const PrimordialJadeWingedspear: Weapon = {
     name: 'Primordial Jade Winged-Spear',
     image: 'https://genshin.honeyhunterworld.com/img/i_n13505_gacha_icon_w145.webp',
+    type: 'Polearm',
     rarity: 5,
     description:
         'A jade polearm made by the archons, capable of slaying ancient beasts.',

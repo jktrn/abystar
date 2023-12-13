@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const TravelersHandySword: Weapon = {
     name: "Traveler's Handy Sword",
     image: 'https://genshin.honeyhunterworld.com/img/i_n11303_gacha_icon_w145.webp',
+    type: 'Sword',
     rarity: 3,
     description:
         'A handy steel sword which contains scissors, a magnifying glass, tinder, and other useful items in its sheath.',

@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const RoyalSpear: Weapon = {
     name: 'Royal Spear',
     image: 'https://genshin.honeyhunterworld.com/img/i_n13408_gacha_icon_w145.webp',
+    type: 'Polearm',
     rarity: 4,
     description:
         'This polearm was once cherished by a member of the old nobility that governed Mondstadt long ago. Although it has never seen the light of day, it is still incomparably sharp.',

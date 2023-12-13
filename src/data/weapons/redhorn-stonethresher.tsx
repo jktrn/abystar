@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const RedhornStonethresher: Weapon = {
     name: 'Redhorn Stonethresher',
     image: 'https://genshin.honeyhunterworld.com/img/i_n12510_gacha_icon_w145.webp',
+    type: 'Claymore',
     rarity: 5,
     description:
         'According to its previous owner, this weapon is the "Mighty Redhorn Stoic Stonethreshing Gilded Goldcrushing Lion Lord" that can send any monster packing with its tail between its legs.',

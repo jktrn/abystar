@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const AmenomaKageuchi: Weapon = {
     name: 'Amenoma Kageuchi',
     image: 'https://genshin.honeyhunterworld.com/img/i_n11414_gacha_icon_w145.webp',
+    type: 'Weapon',
     rarity: 4,
     description:
         'A blade custom made for a famed samurai who could strike down a tengu warrior, known for their incredible agility, in midair.',

@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const PrimordialJadeCutter: Weapon = {
     name: 'Primordial Jade Cutter',
     image: 'https://genshin.honeyhunterworld.com/img/i_n11505_gacha_icon_w145.webp',
+    type: 'Sword',
     rarity: 5,
     description:
         'A ceremonial sword masterfully carved from pure jade. There almost seems to be an audible sigh in the wind as it is swung.',

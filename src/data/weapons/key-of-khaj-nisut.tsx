@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const KeyOfKhajnisut: Weapon = {
     name: 'Key of Khaj-Nisut',
     image: 'https://genshin.honeyhunterworld.com/img/i_n11511_gacha_icon_w145.webp',
+    type: 'Sword',
     rarity: 5,
     description:
         'One of a paired set of scepters fashioned from obsidian. They say that this can be used as a key to open the gate to a paradise that lies at the end of the ocean of sand.',

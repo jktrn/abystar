@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const CoolSteel: Weapon = {
     name: 'Cool Steel',
     image: 'https://genshin.honeyhunterworld.com/img/i_n11301_gacha_icon_w145.webp',
+    type: 'Sword',
     rarity: 3,
     description:
         'A reliable steel-forged weapon that serves as a testament to the great adventures of its old master.',

@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const LithicBlade: Weapon = {
     name: 'Lithic Blade',
     image: 'https://genshin.honeyhunterworld.com/img/i_n12410_gacha_icon_w145.webp',
+    type: 'Claymore',
     rarity: 4,
     description: 'A greatsword carved and chiseled from the very bedrock of Liyue.',
     effectName: 'Lithic Axiom: Unity',

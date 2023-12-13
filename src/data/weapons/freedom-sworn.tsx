@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const Freedomsworn: Weapon = {
     name: 'Freedom-Sworn',
     image: 'https://genshin.honeyhunterworld.com/img/i_n11503_gacha_icon_w145.webp',
+    type: 'Sword',
     rarity: 5,
     description:
         'A straight sword, azure as antediluvian song, and as keen as the oaths of freedom taken in the Land of Wind.',

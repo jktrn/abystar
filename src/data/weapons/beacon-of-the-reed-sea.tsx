@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const BeaconOfTheReedSea: Weapon = {
     name: 'Beacon of the Reed Sea',
     image: 'https://genshin.honeyhunterworld.com/img/i_n12511_gacha_icon_w145.webp',
+    type: 'Claymore',
     rarity: 5,
     description:
         'A large, flat-tipped sword designed in to fit as the weapon of an ancient king or some ceremonial instrument.',

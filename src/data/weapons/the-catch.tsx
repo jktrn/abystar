@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const TheCatch: Weapon = {
     name: '"The Catch"',
     image: 'https://genshin.honeyhunterworld.com/img/i_n13415_gacha_icon_w145.webp',
+    type: 'Polearm',
     rarity: 4,
     description:
         'In the distant past, this was the beloved spear of a famed Inazuman bandit.',

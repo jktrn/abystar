@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const WasterGreatsword: Weapon = {
     name: 'Waster Greatsword',
     image: 'https://genshin.honeyhunterworld.com/img/i_n12101_gacha_icon_w145.webp',
+    type: 'Claymore',
     rarity: 1,
     description:
         'A sturdy sheet of iron that may be powerful enough to break apart mountains if wielded with enough willpower.',

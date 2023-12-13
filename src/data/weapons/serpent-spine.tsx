@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const SerpentSpine: Weapon = {
     name: 'Serpent Spine',
     image: 'https://genshin.honeyhunterworld.com/img/i_n12409_gacha_icon_w145.webp',
+    type: 'Claymore',
     rarity: 4,
     description:
         'A rare weapon whose origin is the ancient ocean. One can hear the sound of the ageless waves as one swings it.',

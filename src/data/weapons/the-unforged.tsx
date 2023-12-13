@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const TheUnforged: Weapon = {
     name: 'The Unforged',
     image: 'https://genshin.honeyhunterworld.com/img/i_n12504_gacha_icon_w145.webp',
+    type: 'Claymore',
     rarity: 5,
     description:
         'Capable of driving away evil spirits and wicked people alike, this edgeless claymore seems to possess divine might.',

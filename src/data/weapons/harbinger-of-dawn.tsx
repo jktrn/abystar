@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const HarbingerOfDawn: Weapon = {
     name: 'Harbinger of Dawn',
     image: 'https://genshin.honeyhunterworld.com/img/i_n11302_gacha_icon_w145.webp',
+    type: 'Sword',
     rarity: 3,
     description:
         'A sword that once shone like the sun. The wielder of this sword will be blessed with a "feel-good" buff. The reflective material on the blade has long worn off.',

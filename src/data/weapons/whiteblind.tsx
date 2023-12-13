@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const Whiteblind: Weapon = {
     name: 'Whiteblind',
     image: 'https://genshin.honeyhunterworld.com/img/i_n12407_gacha_icon_w145.webp',
+    type: 'Weapon',
     rarity: 4,
     description:
         'An exotic sword with one section of the blade left blunt. It made its way into Liyue via the hands of foreign traders. Incredibly powerful in the hands of someone who knows how to use it.',

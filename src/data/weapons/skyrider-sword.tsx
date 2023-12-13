@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const SkyriderSword: Weapon = {
     name: 'Skyrider Sword',
     image: 'https://genshin.honeyhunterworld.com/img/i_n11306_gacha_icon_w145.webp',
+    type: 'Sword',
     rarity: 3,
     description:
         'A reliable steel sword. The legendary Skyrider once tried to ride it as a flying sword...',

@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const MissiveWindspear: Weapon = {
     name: 'Missive Windspear',
     image: 'https://genshin.honeyhunterworld.com/img/i_n13419_gacha_icon_w145.webp',
+    type: 'Polearm',
     rarity: 4,
     description:
         'A beacon that shows the direction of the wind. Not every idyll carried on the breeze remains a gentle thing...',

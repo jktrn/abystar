@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const TheFlute: Weapon = {
     name: 'The Flute',
     image: 'https://genshin.honeyhunterworld.com/img/i_n11402_gacha_icon_w145.webp',
+    type: 'Sword',
     rarity: 4,
     description:
         'Beneath its rusty exterior is a lavishly decorated thin blade. It swings as swiftly as the wind.',

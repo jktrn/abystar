@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const PrototypeArchaic: Weapon = {
     name: 'Prototype Archaic',
     image: 'https://genshin.honeyhunterworld.com/img/i_n12406_gacha_icon_w145.webp',
+    type: 'Weapon',
     rarity: 4,
     description:
         'An ancient greatsword discovered in the Blackcliff Forge. It swings with such an immense force that one feels it could cut straight through reality itself.',

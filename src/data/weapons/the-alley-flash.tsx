@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const TheAlleyFlash: Weapon = {
     name: 'The Alley Flash',
     image: 'https://genshin.honeyhunterworld.com/img/i_n11410_gacha_icon_w145.webp',
+    type: 'Sword',
     rarity: 4,
     description:
         'A straight sword as black as the night. It once belonged to a thief who roamed the benighted streets.',

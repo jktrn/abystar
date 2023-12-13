@@ -1,20 +1,14 @@
+import { CharacterState } from '@/interfaces/Character'
 import Image from 'next/image'
 import { HTMLAttributes, memo } from 'react'
 
 interface CharacterImageProps extends HTMLAttributes<HTMLDivElement> {
-    icon: string
-    rarity: number
-    element: string
+    characterState: CharacterState
 }
 
-const CharacterImage = ({
-    icon,
-    rarity,
-    element,
-    ...props
-}: CharacterImageProps) => {
-    const backgroundImage = `/images/item-backgrounds/${rarity}-star.png`
-    const elementIcon = `/images/elements/${element.toLowerCase()}.svg`
+const CharacterImage = ({ characterState, ...props }: CharacterImageProps) => {
+    const backgroundImage = `/images/item-backgrounds/${characterState.character.rarity}-star.png`
+    const elementIcon = `/images/elements/${characterState.character.vision.toLowerCase()}.svg`
 
     return (
         <div
@@ -25,18 +19,18 @@ const CharacterImage = ({
             {...props}
         >
             <Image
-                src={icon}
+                src={characterState.character.icon}
                 alt="character"
                 className="cursor-pointer rounded-lg object-cover duration-100 ease-in"
                 width={148}
                 height={148}
-                unoptimized={true}
-                priority={true}
+                unoptimized
+                priority
             />
             <div className="absolute bottom-0.5 right-0.5 flex h-8 w-8 items-center justify-center rounded-full bg-background">
                 <Image
                     src={elementIcon}
-                    alt={`${element} element`}
+                    alt={`${characterState.character.vision} element`}
                     width={24}
                     height={24}
                 />

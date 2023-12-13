@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const MistsplitterReforged: Weapon = {
     name: 'Mistsplitter Reforged',
     image: 'https://genshin.honeyhunterworld.com/img/i_n11509_gacha_icon_w145.webp',
+    type: 'Sword',
     rarity: 5,
     description:
         'A sword that blazes with a fierce violet light. The name "Reforged" comes from it having been broken once before.',

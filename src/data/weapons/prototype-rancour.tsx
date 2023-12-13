@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const PrototypeRancour: Weapon = {
     name: 'Prototype Rancour',
     image: 'https://genshin.honeyhunterworld.com/img/i_n11406_gacha_icon_w145.webp',
+    type: 'Weapon',
     rarity: 4,
     description:
         'An ancient longsword discovered in the Blackcliff Forge that cuts through rocks like a hot knife through butter.',

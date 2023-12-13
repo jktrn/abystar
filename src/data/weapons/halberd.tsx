@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const Halberd: Weapon = {
     name: 'Halberd',
     image: 'https://genshin.honeyhunterworld.com/img/i_n13302_gacha_icon_w145.webp',
+    type: 'Polearm',
     rarity: 3,
     description:
         "A polearm with an axe blade mounted on top that can deal quite a lot of damage. It's favored by the Millelith officers.",

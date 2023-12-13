@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const ThrillingTalesOfDragonSlayers: Weapon = {
     name: 'Thrilling Tales of Dragon Slayers',
     image: 'https://genshin.honeyhunterworld.com/img/i_n14302_gacha_icon_w145.webp',
+    type: 'Catalyst',
     rarity: 3,
     description:
         'A fictional story of a band of five heroes who go off on a dragon hunt. It is poorly written and structurally incoherent. Its value lies in the many lessons that can be learned from failure.',

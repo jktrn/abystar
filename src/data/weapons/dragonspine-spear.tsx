@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const DragonspineSpear: Weapon = {
     name: 'Dragonspine Spear',
     image: 'https://genshin.honeyhunterworld.com/img/i_n13409_gacha_icon_w145.webp',
+    type: 'Weapon',
     rarity: 4,
     description:
         'A spear created from the fang of a dragon. It is oddly warm to the touch.',

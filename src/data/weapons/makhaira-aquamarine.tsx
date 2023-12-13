@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const MakhairaAquamarine: Weapon = {
     name: 'Makhaira Aquamarine',
     image: 'https://genshin.honeyhunterworld.com/img/i_n12415_gacha_icon_w145.webp',
+    type: 'Claymore',
     rarity: 4,
     description:
         'An ancient greatsword that gleams like the waters themselves. A thousand years of sand erosion has not dulled its unnaturally sharp edge one bit.',

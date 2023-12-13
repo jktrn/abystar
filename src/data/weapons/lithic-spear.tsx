@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const LithicSpear: Weapon = {
     name: 'Lithic Spear',
     image: 'https://genshin.honeyhunterworld.com/img/i_n13406_gacha_icon_w145.webp',
+    type: 'Polearm',
     rarity: 4,
     description:
         'A spear forged from the rocks of the Guyun Stone Forest. Its hardness knows no equal.',

@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const Quartz: Weapon = {
     name: 'Quartz',
     image: 'https://genshin.honeyhunterworld.com/img/i_n12304_gacha_icon_w145.webp',
+    type: 'Claymore',
     rarity: 3,
     description:
         'A simple but heavy greatsword made of polished black quartz with a golden gilt. It has an air of elegance and dignity about it.',

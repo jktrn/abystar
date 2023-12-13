@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const SkywardSpine: Weapon = {
     name: 'Skyward Spine',
     image: 'https://genshin.honeyhunterworld.com/img/i_n13502_gacha_icon_w145.webp',
+    type: 'Polearm',
     rarity: 5,
     description:
         "A polearm that symbolizes Dvalin's firm resolve. The upright shaft of this weapon points towards the heavens, clad in the might of sky and wind.",

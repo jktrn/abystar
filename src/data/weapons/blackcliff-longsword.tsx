@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const BlackcliffLongsword: Weapon = {
     name: 'Blackcliff Longsword',
     image: 'https://genshin.honeyhunterworld.com/img/i_n11408_gacha_icon_w145.webp',
+    type: 'Sword',
     rarity: 4,
     description:
         'A sword made of a material known as "blackcliff." It has a dark crimson glow on its black blade.',

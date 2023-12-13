@@ -1,3 +1,5 @@
+import { Weapon } from './Weapon'
+
 export interface BaseStat {
     [key: string]: number
 }
@@ -105,6 +107,7 @@ export interface CharacterState {
     characterActiveBonuses: Bonus[]
     characterTalentLevels: number[]
     effectiveTalentLevels: number[]
+    weapon?: Weapon
 }
 
 export interface CharacterAttributes {

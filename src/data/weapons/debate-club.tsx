@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const DebateClub: Weapon = {
     name: 'Debate Club',
     image: 'https://genshin.honeyhunterworld.com/img/i_n12305_gacha_icon_w145.webp',
+    type: 'Claymore',
     rarity: 3,
     description:
         "A handy club made of fine steel. The most persuasive line of reasoning in any debater's arsenal.",

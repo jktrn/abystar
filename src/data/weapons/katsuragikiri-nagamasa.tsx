@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const KatsuragikiriNagamasa: Weapon = {
     name: 'Katsuragikiri Nagamasa',
     image: 'https://genshin.honeyhunterworld.com/img/i_n12414_gacha_icon_w145.webp',
+    type: 'Weapon',
     rarity: 4,
     description: 'A blade that was once made in Tatarasuna. Heavy and tough.',
     effectName: 'Samurai Conduct',

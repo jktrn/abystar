@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const WavebreakersFin: Weapon = {
     name: "Wavebreaker's Fin",
     image: 'https://genshin.honeyhunterworld.com/img/i_n13416_gacha_icon_w145.webp',
+    type: 'Polearm',
     rarity: 4,
     description:
         'A naginata forged from luminescent material deep in the ocean depths. It was once the possession of the tengu race.',

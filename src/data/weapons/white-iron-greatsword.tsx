@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const WhiteIronGreatsword: Weapon = {
     name: 'White Iron Greatsword',
     image: 'https://genshin.honeyhunterworld.com/img/i_n12303_gacha_icon_w145.webp',
+    type: 'Claymore',
     rarity: 3,
     description:
         'A claymore made from white iron. Lightweight without compromising on power. Effective even when wielded by one of average strength, it is extremely deadly in the hands of a physically stronger wielder.',

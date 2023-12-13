@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const RoyalLongsword: Weapon = {
     name: 'Royal Longsword',
     image: 'https://genshin.honeyhunterworld.com/img/i_n11404_gacha_icon_w145.webp',
+    type: 'Sword',
     rarity: 4,
     description:
         'An old longsword that belonged to the erstwhile rulers of Mondstadt. Exquisitely crafted, the carvings and embellishments testify to the stature of its owner.',

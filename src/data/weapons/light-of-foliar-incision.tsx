@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const LightOfFoliarIncision: Weapon = {
     name: 'Light of Foliar Incision',
     image: 'https://genshin.honeyhunterworld.com/img/i_n11512_gacha_icon_w145.webp',
+    type: 'Sword',
     rarity: 5,
     description:
         'This gilded blade was made using precious white branches. It was once used to destroy countless poisons that infested the forest.',

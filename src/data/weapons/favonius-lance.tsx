@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const FavoniusLance: Weapon = {
     name: 'Favonius Lance',
     image: 'https://genshin.honeyhunterworld.com/img/i_n13407_gacha_icon_w145.webp',
+    type: 'Polearm',
     rarity: 4,
     description:
         'A polearm made in the style of the Knights of Favonius. Its shaft is straight, and its tip flows lightly like the wind.',

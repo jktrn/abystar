@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const XiphosMoonlight: Weapon = {
     name: "Xiphos' Moonlight",
     image: 'https://genshin.honeyhunterworld.com/img/i_n11418_gacha_icon_w145.webp',
+    type: 'Sword',
     rarity: 4,
     description:
         'This ancient double-edged sword glimmers with moonlight. It is said that a now-silent Jinni dwells within it.',

@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const StaffOfHoma: Weapon = {
     name: 'Staff of Homa',
     image: 'https://genshin.honeyhunterworld.com/img/i_n13501_gacha_icon_w145.webp',
+    type: 'Polearm',
     rarity: 5,
     description:
         'A "firewood staff" that was once used in ancient and long-lost rituals.',

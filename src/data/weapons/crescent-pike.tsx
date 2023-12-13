@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const CrescentPike: Weapon = {
     name: 'Crescent Pike',
     image: 'https://genshin.honeyhunterworld.com/img/i_n13403_gacha_icon_w145.webp',
+    type: 'Weapon',
     rarity: 4,
     description:
         'An exotic weapon with an extremely long blade on the top and a crescent blade at the bottom. It found its way into Liyue through foreign traders. With practice, it can deal heavy damage.',

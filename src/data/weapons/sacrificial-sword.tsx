@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const SacrificialSword: Weapon = {
     name: 'Sacrificial Sword',
     image: 'https://genshin.honeyhunterworld.com/img/i_n11403_gacha_icon_w145.webp',
+    type: 'Sword',
     rarity: 4,
     description:
         'A ceremonial sword that has become petrified over time. The trinkets on it are still visible. It grants the wielder the power to withstand the winds of time.',

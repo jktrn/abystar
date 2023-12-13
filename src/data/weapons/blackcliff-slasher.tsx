@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const BlackcliffSlasher: Weapon = {
     name: 'Blackcliff Slasher',
     image: 'https://genshin.honeyhunterworld.com/img/i_n12408_gacha_icon_w145.webp',
+    type: 'Claymore',
     rarity: 4,
     description:
         'An extremely sturdy greatsword from the Blackcliff Forge. It has a dark crimson color from the blade to pommel.',

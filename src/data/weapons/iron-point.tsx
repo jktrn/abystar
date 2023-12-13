@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const IronPoint: Weapon = {
     name: 'Iron Point',
     image: 'https://genshin.honeyhunterworld.com/img/i_n13201_gacha_icon_w145.webp',
+    type: 'Polearm',
     rarity: 2,
     description:
         'Sharp and pointy at one end, it is a balanced weapon that is quite popular among travelers.',

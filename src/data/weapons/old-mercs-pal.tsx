@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const OldMercsPal: Weapon = {
     name: "Old Merc's Pal",
     image: 'https://genshin.honeyhunterworld.com/img/i_n12201_gacha_icon_w145.webp',
+    type: 'Claymore',
     rarity: 2,
     description: 'A battle-tested greatsword that has seen better days and worse.',
     mainStats: {

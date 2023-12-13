@@ -7,6 +7,7 @@ const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => 
 const BlackTassel: Weapon = {
     name: 'Black Tassel',
     image: 'https://genshin.honeyhunterworld.com/img/i_n13303_gacha_icon_w145.webp',
+    type: 'Polearm',
     rarity: 3,
     description:
         'An exceptionally powerful polearm that also offers a simple but elegant solution to the issue of the easily stained white tassel.',
