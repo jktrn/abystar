@@ -13,7 +13,7 @@ const WeaponImage = ({ characterState, ...props }: WeaponImageProps) => {
                 style={{
                     backgroundImage: `url(/images/item-backgrounds/1-star.png)`,
                 }}
-                className="relative cursor-pointer rounded-lg bg-cover bg-center duration-100 ease-in hover:scale-105"
+                className="relative h-[148px] w-[148px] cursor-pointer rounded-lg bg-cover bg-center duration-100 ease-in hover:scale-105"
                 {...props}
             >
                 <Image
@@ -37,13 +37,13 @@ const WeaponImage = ({ characterState, ...props }: WeaponImageProps) => {
             style={{
                 backgroundImage: `url(${backgroundImage})`,
             }}
-            className="relative cursor-pointer rounded-lg bg-cover bg-center duration-100 ease-in hover:scale-105"
+            className="relative h-[148px] w-[148px] cursor-pointer rounded-lg bg-cover bg-center duration-100 ease-in hover:scale-105"
             {...props}
         >
             <Image
                 src={characterState.weapon.image}
                 alt="weapon"
-                className="cursor-pointer rounded-lg object-cover duration-100 ease-in"
+                className="object-fit cursor-pointer rounded-lg duration-100 ease-in"
                 width={148}
                 height={148}
                 unoptimized={true}

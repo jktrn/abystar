@@ -17,15 +17,23 @@ interface WeaponModalProps {
     open: boolean
     onOpenChange: (open: boolean) => void
     setWeapon: (weapon: Weapon) => void
+    characterWeaponType?: string
 }
 
-const WeaponModal = ({ open, onOpenChange, setWeapon }: WeaponModalProps) => {
+const WeaponModal = ({
+    open,
+    onOpenChange,
+    setWeapon,
+    characterWeaponType,
+}: WeaponModalProps) => {
     const [rawWeapons, setRawWeapons] = useState<RawWeapon[]>([])
 
     useEffect(() => {
-        const weaponsArray = Object.values(weaponData)
+        const weaponsArray = Object.values(weaponData).filter(
+            (weapon) => weapon.type === characterWeaponType
+        )
         setRawWeapons(weaponsArray)
-    }, [])
+    }, [characterWeaponType])
 
     const handleWeaponSelect = async (weaponName: string) => {
         try {

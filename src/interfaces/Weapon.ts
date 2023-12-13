@@ -1,7 +1,7 @@
 import { CharacterAttributes } from './Character'
 
 export interface WeaponMainStat {
-    [key: string]: number // Optional and can be any secondary stat
+    [key: string]: number
 }
 
 export interface WeaponRefinement {

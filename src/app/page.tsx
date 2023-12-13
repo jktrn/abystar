@@ -275,11 +275,12 @@ export default function Home() {
                             <h2 className="rounded-t-lg border-b bg-secondary/25 px-4 py-3 text-lg font-bold">
                                 Weapon
                             </h2>
-                            <div className="p-4">Weapon</div>
-                            <WeaponImage
-                                characterState={characterState}
-                                onClick={() => setWeaponModalOpen(true)}
-                            />
+                            <div className="p-4">
+                                <WeaponImage
+                                    characterState={characterState}
+                                    onClick={() => setWeaponModalOpen(true)}
+                                />
+                            </div>
                             <h2 className="border-y bg-secondary/25 px-4 py-3 text-lg font-bold">
                                 Artifacts
                             </h2>
@@ -313,6 +314,7 @@ export default function Home() {
                     open={isWeaponModalOpen}
                     onOpenChange={setWeaponModalOpen}
                     setWeapon={handleWeaponSelect}
+                    characterWeaponType={characterState?.character.weapon}
                 />
             </main>
         </>
