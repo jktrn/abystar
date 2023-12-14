@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const SongOfBrokenPines: Weapon = {
     name: 'Song of Broken Pines',
@@ -14,7 +15,7 @@ const SongOfBrokenPines: Weapon = {
     effectName: "Rebel's Banner-Hymn",
     effectDescription:
         'A part of the "Millennial Movement" that wanders amidst the winds. Increases ATK by 16%, and when Normal or Charged Attacks hit opponents, the character gains a Sigil of Whispers. This effect can be triggered once every 0.3s. When you possess 4 Sigils of Whispers, all of them will be consumed and all nearby party members will obtain the "Millennial Movement: Banner-Hymn" effect for 12s. "Millennial Movement: Banner-Hymn" increases Normal ATK SPD by 12% and increases ATK by 20%. Once this effect is triggered, you will not gain Sigils of Whispers for 20s. Of the many effects of the "Millennial Movement," buffs of the same type will not stack.',
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 49.14,
             'Physical DMG Bonus': 0.045,
@@ -99,7 +100,7 @@ const SongOfBrokenPines: Weapon = {
             level: 5,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default SongOfBrokenPines

@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const TwinNephrite: Weapon = {
     name: 'Twin Nephrite',
@@ -13,7 +14,7 @@ const TwinNephrite: Weapon = {
     effectName: 'Guerilla Tactics',
     effectDescription:
         'Defeating an opponent increases Movement SPD and ATK by 12% for 15s.',
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 39.88,
             'Bonus CRIT Rate': 0.034,
@@ -98,7 +99,7 @@ const TwinNephrite: Weapon = {
             level: 5,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default TwinNephrite

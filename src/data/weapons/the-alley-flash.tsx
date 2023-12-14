@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const TheAlleyFlash: Weapon = {
     name: 'The Alley Flash',
@@ -14,7 +15,7 @@ const TheAlleyFlash: Weapon = {
     effectName: 'Itinerant Hero',
     effectDescription:
         'Increases DMG dealt by the character equipping this weapon by 12%. Taking DMG disables this effect for 5s.',
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 45.07,
             'Bonus Elemental Mastery': 12.0,
@@ -99,7 +100,7 @@ const TheAlleyFlash: Weapon = {
             level: 5,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default TheAlleyFlash

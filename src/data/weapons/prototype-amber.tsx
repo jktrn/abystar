@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const PrototypeAmber: Weapon = {
     name: 'Prototype Amber',
@@ -14,7 +15,7 @@ const PrototypeAmber: Weapon = {
     effectName: 'Gilding',
     effectDescription:
         'Using an Elemental Burst regenerates 4 Energy every 2s for 6s. All party members will regenerate 4% HP every 2s for this duration.',
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 42.4,
             'Bonus HP': 0.09,
@@ -99,7 +100,7 @@ const PrototypeAmber: Weapon = {
             level: 5,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default PrototypeAmber

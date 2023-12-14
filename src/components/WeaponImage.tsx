@@ -17,7 +17,7 @@ const WeaponImage = ({ characterState, ...props }: WeaponImageProps) => {
                 {...props}
             >
                 <Image
-                    src="/images/skill-icons/constellations/placeholder.png"
+                    src="/images/characters/placeholder.png"
                     alt="empty"
                     className="cursor-pointer rounded-lg object-cover duration-100 ease-in"
                     width={148}
@@ -30,7 +30,7 @@ const WeaponImage = ({ characterState, ...props }: WeaponImageProps) => {
     }
 
     const backgroundImage = `/images/item-backgrounds/${characterState.weapon.rarity}-star.png`
-    // const typeIcon = `/images/skill-icons/normal-attacks/${type.toLowerCase()}.svg`
+    // const typeIcon = `/images/normal-attacks/${type.toLowerCase()}.svg`
 
     return (
         <div

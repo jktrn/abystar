@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const WhiteIronGreatsword: Weapon = {
     name: 'White Iron Greatsword',
@@ -13,7 +14,7 @@ const WhiteIronGreatsword: Weapon = {
         'A claymore made from white iron. Lightweight without compromising on power. Effective even when wielded by one of average strength, it is extremely deadly in the hands of a physically stronger wielder.',
     effectName: 'Cull the Weak',
     effectDescription: 'Defeating an opponent restores 8% HP.',
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 38.74,
             'Bonus Def': 0.0956,
@@ -93,7 +94,7 @@ const WhiteIronGreatsword: Weapon = {
             level: 5,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default WhiteIronGreatsword

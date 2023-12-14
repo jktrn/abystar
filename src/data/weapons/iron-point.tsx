@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const IronPoint: Weapon = {
     name: 'Iron Point',
@@ -11,7 +12,7 @@ const IronPoint: Weapon = {
     rarity: 2,
     description:
         'Sharp and pointy at one end, it is a balanced weapon that is quite popular among travelers.',
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 32.93,
         },
@@ -43,7 +44,7 @@ const IronPoint: Weapon = {
             'Base ATK': 243.23,
         },
     },
-    effect,
+    // weaponBonus
 }
 
 export default IronPoint

@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const Quartz: Weapon = {
     name: 'Quartz',
@@ -14,7 +15,7 @@ const Quartz: Weapon = {
     effectName: 'Residual Heat',
     effectDescription:
         'Upon causing an Overloaded, Melt, Burning, Vaporize, Burgeon, or a Pyro-infused Swirl reaction, ATK is increased by 20% for 12s.',
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 38.74,
             'Bonus Elemental Mastery': 30.6,
@@ -99,7 +100,7 @@ const Quartz: Weapon = {
             level: 5,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default Quartz

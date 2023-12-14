@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const AquaSimulacra: Weapon = {
     name: 'Aqua Simulacra',
@@ -14,7 +15,7 @@ const AquaSimulacra: Weapon = {
     effectName: 'The Cleansing Form',
     effectDescription:
         'HP is increased by 16%. When there are opponents nearby, the DMG dealt by the wielder of this weapon is increased by 20%. This will take effect whether the character is on-field or not.',
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 44.34,
             'Bonus CRIT DMG': 0.192,
@@ -99,7 +100,7 @@ const AquaSimulacra: Weapon = {
             level: 5,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default AquaSimulacra

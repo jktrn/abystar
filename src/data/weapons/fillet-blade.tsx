@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const FilletBlade: Weapon = {
     name: 'Fillet Blade',
@@ -14,7 +15,7 @@ const FilletBlade: Weapon = {
     effectName: 'Gash',
     effectDescription:
         'On hit, has a 50% chance to deal 240% ATK DMG to a single opponent. Can only occur once every 15s.',
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 38.74,
             'Bonus ATK': 0.0766,
@@ -99,7 +100,7 @@ const FilletBlade: Weapon = {
             level: 5,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default FilletBlade

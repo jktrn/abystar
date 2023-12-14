@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const PocketGrimoire: Weapon = {
     name: 'Pocket Grimoire',
@@ -11,7 +12,7 @@ const PocketGrimoire: Weapon = {
     rarity: 2,
     description:
         'A carefully compiled notebook featuring the essentials needed to pass a magic exam.',
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 32.93,
         },
@@ -43,7 +44,7 @@ const PocketGrimoire: Weapon = {
             'Base ATK': 243.23,
         },
     },
-    effect,
+    // weaponBonus
 }
 
 export default PocketGrimoire

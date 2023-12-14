@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const SplendorOfTranquilWaters: Weapon = {
     name: 'Splendor of Tranquil Waters',
@@ -14,7 +15,7 @@ const SplendorOfTranquilWaters: Weapon = {
     effectName: 'Dawn and Dusk by the Lake',
     effectDescription:
         "When the equipping character's current HP increases or decreases, Elemental Skill DMG dealt will be increased by 8% for 6s. Max 3 stacks. This effect can be triggered once every 0.2s. When other party members' current HP increases or decreases, the equipping character's Max HP will be increased by 14% for 6s. Max 2 stacks. This effect can be triggered once every 0.2s. The aforementioned effects can be triggered even if the wielder is off-field.",
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 44.34,
             'Bonus CRIT DMG': 0.192,
@@ -99,7 +100,7 @@ const SplendorOfTranquilWaters: Weapon = {
             level: 5,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default SplendorOfTranquilWaters

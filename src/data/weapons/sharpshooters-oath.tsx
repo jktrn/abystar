@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const SharpshootersOath: Weapon = {
     name: "Sharpshooter's Oath",
@@ -13,7 +14,7 @@ const SharpshootersOath: Weapon = {
         'This superior bow once belonged to a master archer. However, it gives off a strong scent, thus making it unsuitable for hunting.',
     effectName: 'Precise',
     effectDescription: 'Increases DMG against weak spots by 24%.',
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 38.74,
             'Bonus CRIT DMG': 0.102,
@@ -93,7 +94,7 @@ const SharpshootersOath: Weapon = {
             level: 5,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default SharpshootersOath

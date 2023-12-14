@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const WineAndSong: Weapon = {
     name: 'Wine and Song',
@@ -14,7 +15,7 @@ const WineAndSong: Weapon = {
     effectName: 'Ever-Changing',
     effectDescription:
         'Hitting an opponent with a Normal Attack decreases the Stamina consumption of Sprint or Alternate Sprint by 14% for 5s. Additionally, using a Sprint or Alternate Sprint ability increases ATK by 20% for 5s.',
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 43.73,
             'Bonus Energy Recharge': 0.0667,
@@ -99,7 +100,7 @@ const WineAndSong: Weapon = {
             level: 5,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default WineAndSong

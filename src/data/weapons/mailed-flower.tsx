@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const MailedFlower: Weapon = {
     name: 'Mailed Flower',
@@ -14,7 +15,7 @@ const MailedFlower: Weapon = {
     effectName: 'Whispers of Wind and Flower',
     effectDescription:
         "Within 8s after the character's Elemental Skill hits an opponent or the character triggers an Elemental Reaction, their ATK and Elemental Mastery will be increased by 12% and 48 respectively.",
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 43.73,
             'Bonus Elemental Mastery': 24.0,
@@ -99,7 +100,7 @@ const MailedFlower: Weapon = {
             level: 5,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default MailedFlower

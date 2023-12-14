@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const Slingshot: Weapon = {
     name: 'Slingshot',
@@ -14,7 +15,7 @@ const Slingshot: Weapon = {
     effectName: 'Slingshot',
     effectDescription:
         'If a Normal or Charged Attack hits a target within 0.3s of being fired, increases DMG by 36%. Otherwise, decreases DMG by 10%.',
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 37.61,
             'Bonus CRIT Rate': 0.068,
@@ -99,7 +100,7 @@ const Slingshot: Weapon = {
             level: 5,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default Slingshot

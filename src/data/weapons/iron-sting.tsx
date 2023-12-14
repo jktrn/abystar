@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const IronSting: Weapon = {
     name: 'Iron Sting',
@@ -14,7 +15,7 @@ const IronSting: Weapon = {
     effectName: 'Infusion Stinger',
     effectDescription:
         'Dealing Elemental DMG increases all DMG by 6% for 6s. Max 2 stacks. Can occur once every 1s.',
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 42.4,
             'Bonus Elemental Mastery': 36.0,
@@ -99,7 +100,7 @@ const IronSting: Weapon = {
             level: 5,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default IronSting

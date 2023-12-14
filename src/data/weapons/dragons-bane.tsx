@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const DragonsBane: Weapon = {
     name: "Dragon's Bane",
@@ -14,7 +15,7 @@ const DragonsBane: Weapon = {
     effectName: 'Bane of Flame and Water',
     effectDescription:
         'Increases DMG against opponents affected by Hydro or Pyro by 20%.',
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 41.07,
             'Bonus Elemental Mastery': 48.0,
@@ -99,7 +100,7 @@ const DragonsBane: Weapon = {
             level: 5,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default DragonsBane

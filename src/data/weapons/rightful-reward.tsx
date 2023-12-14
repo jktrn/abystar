@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const RightfulReward: Weapon = {
     name: 'Rightful Reward',
@@ -13,7 +14,7 @@ const RightfulReward: Weapon = {
     effectName: 'Tip of the Spear',
     effectDescription:
         'When the wielder is healed, restore 8 Energy. This effect can be triggered once every 10s, and can occur even when the character is not on the field.',
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 43.73,
             'Bonus HP': 0.06,
@@ -98,7 +99,7 @@ const RightfulReward: Weapon = {
             level: 5,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default RightfulReward

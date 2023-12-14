@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const BalladOfTheFjords: Weapon = {
     name: 'Ballad of the Fjords',
@@ -14,7 +15,7 @@ const BalladOfTheFjords: Weapon = {
     effectName: 'Tales of the Tundra',
     effectDescription:
         'When there are at least 3 different Elemental Types in your party, Elemental Mastery will be increased by 120.',
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 42.4,
             'Bonus CRIT Rate': 0.06,
@@ -99,7 +100,7 @@ const BalladOfTheFjords: Weapon = {
             level: 5,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default BalladOfTheFjords

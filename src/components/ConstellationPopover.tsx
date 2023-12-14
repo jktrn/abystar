@@ -34,7 +34,7 @@ const ConstellationSelect = ({
                             } hover:bg-accent`}
                         >
                             <Image
-                                src="/images/skill-icons/constellations/placeholder.png"
+                                src="/images/characters/placeholder.png"
                                 alt="No Constellations"
                                 width={50}
                                 height={50}

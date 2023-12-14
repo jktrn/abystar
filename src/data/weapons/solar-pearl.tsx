@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const SolarPearl: Weapon = {
     name: 'Solar Pearl',
@@ -14,7 +15,7 @@ const SolarPearl: Weapon = {
     effectName: 'Solar Shine',
     effectDescription:
         'Normal Attack hits increase Elemental Skill and Elemental Burst DMG by 20% for 6s. Likewise, Elemental Skill or Elemental Burst hits increase Normal Attack DMG by 20% for 6s.',
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 42.4,
             'Bonus CRIT Rate': 0.06,
@@ -99,7 +100,7 @@ const SolarPearl: Weapon = {
             level: 5,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default SolarPearl

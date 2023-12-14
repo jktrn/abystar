@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const AmberBead: Weapon = {
     name: 'Amber Bead',
@@ -14,7 +15,7 @@ const AmberBead: Weapon = {
     effectName: 'Elemental Mastery',
     effectDescription:
         'Normal Attack hits increase all Elemental DMG by 6% for 6s. Max 2 stacks.',
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 38.74,
             'Bonus Elemental Mastery': 30.6,
@@ -99,7 +100,7 @@ const AmberBead: Weapon = {
             level: 5,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default AmberBead

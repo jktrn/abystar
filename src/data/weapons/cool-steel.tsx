@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const CoolSteel: Weapon = {
     name: 'Cool Steel',
@@ -14,7 +15,7 @@ const CoolSteel: Weapon = {
     effectName: 'Bane of Water and Ice',
     effectDescription:
         'Increases DMG against opponents affected by Hydro or Cryo by 12%.',
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 38.74,
             'Bonus ATK': 0.0766,
@@ -99,7 +100,7 @@ const CoolSteel: Weapon = {
             level: 5,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default CoolSteel

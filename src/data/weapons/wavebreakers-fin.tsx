@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const WavebreakersFin: Weapon = {
     name: "Wavebreaker's Fin",
@@ -14,7 +15,7 @@ const WavebreakersFin: Weapon = {
     effectName: 'Watatsumi Wavewalker',
     effectDescription:
         "For every point of the entire party's combined maximum Energy capacity, the Elemental Burst DMG of the character equipping this weapon is increased by 0.12%. A maximum of 40% increased Elemental Burst DMG can be achieved this way.",
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 45.07,
             'Bonus ATK': 0.03,
@@ -99,7 +100,7 @@ const WavebreakersFin: Weapon = {
             level: 5,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default WavebreakersFin

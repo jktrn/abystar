@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const TomeOfTheEternalFlow: Weapon = {
     name: 'Tome of the Eternal Flow',
@@ -14,7 +15,7 @@ const TomeOfTheEternalFlow: Weapon = {
     effectName: 'Aeon Wave',
     effectDescription:
         "HP is increased by 16%. When current HP increases or decreases, Charged Attack DMG will be increased by 14% for 4s. Max 3 stacks. This effect can be triggered once every 0.3s. When the character has 3 stacks or a third stack's duration refreshes, 8 Energy will be restored. This Energy restoration effect can be triggered once every 12s.",
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 44.34,
             'Bonus CRIT DMG': 0.192,
@@ -99,7 +100,7 @@ const TomeOfTheEternalFlow: Weapon = {
             level: 5,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default TomeOfTheEternalFlow

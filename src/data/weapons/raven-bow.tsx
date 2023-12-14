@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const RavenBow: Weapon = {
     name: 'Raven Bow',
@@ -14,7 +15,7 @@ const RavenBow: Weapon = {
     effectName: 'Bane of Flame and Water',
     effectDescription:
         'Increases DMG against opponents affected by Hydro or Pyro by 12%.',
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 39.88,
             'Bonus Elemental Mastery': 20.4,
@@ -99,7 +100,7 @@ const RavenBow: Weapon = {
             level: 5,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default RavenBow

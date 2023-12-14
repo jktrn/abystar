@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const Predator: Weapon = {
     name: 'Predator',
@@ -13,7 +14,7 @@ const Predator: Weapon = {
     effectName: 'Strong Strike',
     effectDescription:
         'Effective only on the following platform: "PlayStation Network"Dealing Cryo DMG to opponents increases this character\'s Normal and Charged Attack DMG by 10% for 6s. This effect can have a maximum of 2 stacks. Additionally, when Aloy equips Predator, ATK is increased by 66.',
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 42.4,
             'Bonus ATK': 0.09,
@@ -78,7 +79,7 @@ const Predator: Weapon = {
             level: 1,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default Predator

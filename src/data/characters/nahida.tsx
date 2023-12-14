@@ -200,7 +200,7 @@ const characterBonuses: Bonus[] = [
                 (Elemental Skill) (capped at 80% Bonus DMG and 24% CRIT Rate)
             </span>
         ),
-        icon: '/images/skill-icons/passives/nahida-passive2.png',
+        icon: '/images/characters/nahida-passive2.png',
         effect: (attributes, initialAttributes) => {
             if (!initialAttributes) return { attributes }
             const bonusDMG = Math.min(
@@ -239,7 +239,7 @@ const characterBonuses: Bonus[] = [
                 Purification Trigger Interval decreased
             </span>
         ),
-        icon: '/images/skill-icons/bursts/nahida-burst.png',
+        icon: '/images/characters/nahida-burst.png',
         effect: (
             attributes,
             initialAttributes,
@@ -307,7 +307,7 @@ const characterBonuses: Bonus[] = [
                 the highest EM
             </span>
         ),
-        icon: '/images/skill-icons/passives/nahida-passive1.png',
+        icon: '/images/characters/nahida-passive1.png',
         effect: (attributes, initialAttributes, talentLevels, currentStacks) => {
             if (!currentStacks || !initialAttributes) return { attributes }
 
@@ -338,7 +338,7 @@ const characterBonuses: Bonus[] = [
                 30%
             </span>
         ),
-        icon: '/images/skill-icons/constellations/nahida-constellation2.png',
+        icon: '/images/characters/nahida-constellation2.png',
         effect: (attributes) => {
             // TODO: Implement
             return { attributes }
@@ -355,7 +355,7 @@ const characterBonuses: Bonus[] = [
                 Nahida&apos;s EM will be increased by 100/120/140/160
             </span>
         ),
-        icon: '/images/skill-icons/constellations/nahida-constellation4.png',
+        icon: '/images/characters/nahida-constellation4.png',
         effect: (attributes, initialAttributes, talentLevels, currentStacks) => {
             if (!currentStacks || !initialAttributes) return { attributes }
 
@@ -387,7 +387,7 @@ const constellationBonuses: Bonus[] = [
                 Hydro characters respectively.
             </span>
         ),
-        icon: '/images/skill-icons/constellations/nahida-constellation1.png',
+        icon: '/images/characters/nahida-constellation1.png',
         effect: (attributes) => {
             // TODO: Handle
             return { attributes }
@@ -406,7 +406,7 @@ const constellationBonuses: Bonus[] = [
                 30%.
             </span>
         ),
-        icon: '/images/skill-icons/constellations/nahida-constellation2.png',
+        icon: '/images/characters/nahida-constellation2.png',
         effect: (attributes) => {
             // TODO: Handle
             return { attributes }
@@ -422,7 +422,7 @@ const constellationBonuses: Bonus[] = [
                 Maximum upgrade level is 15.
             </span>
         ),
-        icon: '/images/skill-icons/constellations/nahida-constellation3.png',
+        icon: '/images/characters/nahida-constellation3.png',
         effect: (attributes, initialAttributes, talentLevels) => {
             if (!talentLevels) return { attributes }
 
@@ -443,7 +443,7 @@ const constellationBonuses: Bonus[] = [
                 by 100/120/140/160.
             </span>
         ),
-        icon: '/images/skill-icons/constellations/nahida-constellation4.png',
+        icon: '/images/characters/nahida-constellation4.png',
         effect: (attributes) => {
             // Handled in characterBonuses.tsx
             return { attributes }
@@ -459,7 +459,7 @@ const constellationBonuses: Bonus[] = [
                 Maximum upgrade level is 15.
             </span>
         ),
-        icon: '/images/skill-icons/constellations/nahida-constellation5.png',
+        icon: '/images/characters/nahida-constellation5.png',
         effect: (attributes, initialAttributes, talentLevels) => {
             if (!talentLevels) return { attributes }
 
@@ -488,7 +488,7 @@ const constellationBonuses: Bonus[] = [
                 instances of Tri-Karma Purification: Karmic Oblivion.
             </span>
         ),
-        icon: '/images/skill-icons/constellations/nahida-constellation6.png',
+        icon: '/images/characters/nahida-constellation6.png',
         effect: (attributes) => {
             // Handled already
             return { attributes }

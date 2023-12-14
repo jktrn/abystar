@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const PrimordialJadeWingedspear: Weapon = {
     name: 'Primordial Jade Winged-Spear',
@@ -14,7 +15,7 @@ const PrimordialJadeWingedspear: Weapon = {
     effectName: 'Eagle Spear of Justice',
     effectDescription:
         'On hit, increases ATK by 3.2% for 6s. Max 7 stacks. This effect can only occur once every 0.3s. While in possession of the maximum possible stacks, DMG dealt is increased by 12%.',
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 47.54,
             'Bonus CRIT Rate': 0.048,
@@ -99,7 +100,7 @@ const PrimordialJadeWingedspear: Weapon = {
             level: 5,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default PrimordialJadeWingedspear

@@ -193,7 +193,7 @@ const characterBonuses: Bonus[] = [
                 based on Max HP (maximum gained cannot exceed 400% original ATK)
             </span>
         ),
-        icon: '/images/skill-icons/skills/hu-tao-skill.png',
+        icon: '/images/characters/hu-tao-skill.png',
         effect: (
             attributes,
             initialAttributes,
@@ -258,7 +258,7 @@ const characterBonuses: Bonus[] = [
                 under 50% Max HP
             </span>
         ),
-        icon: '/images/skill-icons/passives/hu-tao-passive2.png',
+        icon: '/images/characters/hu-tao-passive2.png',
         effect: (attributes, initialAttributes) => {
             if (!initialAttributes) return { attributes }
 
@@ -279,7 +279,7 @@ const characterBonuses: Bonus[] = [
                 CRIT Rate increased by 100%
             </span>
         ),
-        icon: '/images/skill-icons/constellations/hu-tao-constellation6.png',
+        icon: '/images/characters/hu-tao-constellation6.png',
         effect: (attributes, initialAttributes) => {
             if (!initialAttributes) return { attributes }
 
@@ -311,7 +311,7 @@ const constellationBonuses: Bonus[] = [
                 state, Hu Tao&apos;s Charge Attacks do not consume Stamina.
             </span>
         ),
-        icon: '/images/skill-icons/constellations/hu-tao-constellation1.png',
+        icon: '/images/characters/hu-tao-constellation1.png',
         effect: (attributes, initialAttributes) => {
             if (!initialAttributes) return { attributes }
 
@@ -334,7 +334,7 @@ const constellationBonuses: Bonus[] = [
                 the <span style={{ color: '#DDD' }}>Blood Blossom</span> effect.
             </span>
         ),
-        icon: '/images/skill-icons/constellations/hu-tao-constellation2.png',
+        icon: '/images/characters/hu-tao-constellation2.png',
         effect: (attributes, initialAttributes) => {
             if (!initialAttributes) return { attributes }
 
@@ -359,7 +359,7 @@ const constellationBonuses: Bonus[] = [
                 Maximum upgrade level is 15.
             </span>
         ),
-        icon: '/images/skill-icons/constellations/hu-tao-constellation3.png',
+        icon: '/images/characters/hu-tao-constellation3.png',
         effect: (attributes, initialAttributes, talentLevels) => {
             if (!talentLevels) return { attributes }
 
@@ -380,7 +380,7 @@ const constellationBonuses: Bonus[] = [
                 herself) will have their CRIT Rate increased by 12% for 15s.
             </span>
         ),
-        icon: '/images/skill-icons/constellations/hu-tao-constellation4.png',
+        icon: '/images/characters/hu-tao-constellation4.png',
         effect: (attributes) => {
             // TODO: Handle
             return { attributes }
@@ -396,7 +396,7 @@ const constellationBonuses: Bonus[] = [
                 upgrade level is 15.
             </span>
         ),
-        icon: '/images/skill-icons/constellations/hu-tao-constellation5.png',
+        icon: '/images/characters/hu-tao-constellation5.png',
         effect: (attributes, initialAttributes, talentLevels) => {
             if (!talentLevels) return { attributes }
 
@@ -420,7 +420,7 @@ const constellationBonuses: Bonus[] = [
                 60s.
             </span>
         ),
-        icon: '/images/skill-icons/constellations/hu-tao-constellation6.png',
+        icon: '/images/characters/hu-tao-constellation6.png',
         effect: (attributes) => {
             // Already handled in characterBonuses.tsx
             return { attributes }

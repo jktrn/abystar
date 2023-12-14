@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const SwordOfDescension: Weapon = {
     name: 'Sword of Descension',
@@ -14,7 +15,7 @@ const SwordOfDescension: Weapon = {
     effectName: 'Descension',
     effectDescription:
         'Effective only on the following platform: "PlayStation Network"Hitting opponents with Normal and Charged Attacks grants a 50% chance to deal 200% ATK as DMG in a small AoE. This effect can only occur once every 10s. Additionally, if the Traveler equips the Sword of Descension, their ATK is increased by 66.',
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 38.74,
             'Bonus ATK': 0.0766,
@@ -79,7 +80,7 @@ const SwordOfDescension: Weapon = {
             level: 1,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default SwordOfDescension

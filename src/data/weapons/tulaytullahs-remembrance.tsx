@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const TulaytullahsRemembrance: Weapon = {
     name: "Tulaytullah's Remembrance",
@@ -14,7 +15,7 @@ const TulaytullahsRemembrance: Weapon = {
     effectName: 'Bygone Azure Teardrop',
     effectDescription:
         'Normal Attack SPD is increased by 10%. After the wielder unleashes an Elemental Skill, Normal Attack DMG will increase by 4.8% every second for 14s. After hitting an opponent with a Normal Attack during this duration, Normal Attack DMG will be increased by 9.6%. This increase can be triggered once every 0.3s. The maximum Normal Attack DMG increase per single duration of the overall effect is 48%. The effect will be removed when the wielder leaves the field, and using the Elemental Skill again will reset all DMG buffs.',
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 47.54,
             'Bonus CRIT DMG': 0.096,
@@ -99,7 +100,7 @@ const TulaytullahsRemembrance: Weapon = {
             level: 5,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default TulaytullahsRemembrance

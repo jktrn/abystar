@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const SacrificialFragments: Weapon = {
     name: 'Sacrificial Fragments',
@@ -14,7 +15,7 @@ const SacrificialFragments: Weapon = {
     effectName: 'Composed',
     effectDescription:
         'After damaging an opponent with an Elemental Skill, the skill has a 40% chance to end its own CD. Can only occur once every 30s.',
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 41.07,
             'Bonus Elemental Mastery': 48.0,
@@ -99,7 +100,7 @@ const SacrificialFragments: Weapon = {
             level: 5,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default SacrificialFragments

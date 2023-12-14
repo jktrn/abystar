@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const BeaconOfTheReedSea: Weapon = {
     name: 'Beacon of the Reed Sea',
@@ -14,7 +15,7 @@ const BeaconOfTheReedSea: Weapon = {
     effectName: 'Desert Watch',
     effectDescription:
         "After the character's Elemental Skill hits an opponent, their ATK will be increased by 20% for 8s. After the character takes DMG, their ATK will be increased by 20% for 8s. The 2 aforementioned effects can be triggered even when the character is not on the field. Additionally, when not protected by a shield, the character's Max HP will be increased by 32%.",
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 45.94,
             'Bonus CRIT Rate': 0.072,
@@ -99,7 +100,7 @@ const BeaconOfTheReedSea: Weapon = {
             level: 5,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default BeaconOfTheReedSea

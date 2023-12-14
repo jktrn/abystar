@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const WolfsGravestone: Weapon = {
     name: "Wolf's Gravestone",
@@ -14,7 +15,7 @@ const WolfsGravestone: Weapon = {
     effectName: 'Wolfish Tracker',
     effectDescription:
         "Increases ATK by 20%. On hit, attacks against opponents with less than 30% HP increase all party members' ATK by 40% for 12s. Can only occur once every 30s.",
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 45.94,
             'Bonus ATK': 0.108,
@@ -99,7 +100,7 @@ const WolfsGravestone: Weapon = {
             level: 5,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default WolfsGravestone

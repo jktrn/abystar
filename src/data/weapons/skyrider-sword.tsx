@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const SkyriderSword: Weapon = {
     name: 'Skyrider Sword',
@@ -14,7 +15,7 @@ const SkyriderSword: Weapon = {
     effectName: 'Determination',
     effectDescription:
         'Using an Elemental Burst grants a 12% increase in ATK and Movement SPD for 15s.',
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 37.61,
             'Bonus Energy Recharge': 0.1133,
@@ -99,7 +100,7 @@ const SkyriderSword: Weapon = {
             level: 5,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default SkyriderSword

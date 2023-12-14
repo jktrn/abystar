@@ -1,6 +1,6 @@
 import { Bonus, CharacterAttributes, CharacterState } from '@/interfaces/Character'
 import { applySpecialBonuses, defaultCharacterAttributes } from '.'
-import { compareObjects } from '@/lib'
+import { compareObjects, mergeAndSum } from '@/lib'
 
 interface DependencyMap {
     [dependency: string]: Bonus[]
@@ -10,7 +10,14 @@ const recalculateStateAndAttributes = (
     state: CharacterState
 ): [CharacterState, CharacterAttributes] => {
     // Generate new attributes object
-    const baseStats = state.character.baseStats[state.characterLevel]
+    const baseStats =
+        state.weapon && state.weaponLevel
+            ? mergeAndSum(
+                  state.character.baseStats[state.characterLevel],
+                  state.weapon.baseStats[state.weaponLevel]
+              )
+            : state.character.baseStats[state.characterLevel]
+
     const updatedAttributes = applySpecialBonuses({
         ...defaultCharacterAttributes,
         ...baseStats,

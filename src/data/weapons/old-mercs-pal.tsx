@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const OldMercsPal: Weapon = {
     name: "Old Merc's Pal",
@@ -10,7 +11,7 @@ const OldMercsPal: Weapon = {
     type: 'Claymore',
     rarity: 2,
     description: 'A battle-tested greatsword that has seen better days and worse.',
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 32.93,
         },
@@ -42,7 +43,7 @@ const OldMercsPal: Weapon = {
             'Base ATK': 243.23,
         },
     },
-    effect,
+    // weaponBonus
 }
 
 export default OldMercsPal

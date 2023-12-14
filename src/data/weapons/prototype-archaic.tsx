@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const PrototypeArchaic: Weapon = {
     name: 'Prototype Archaic',
@@ -14,7 +15,7 @@ const PrototypeArchaic: Weapon = {
     effectName: 'Crush',
     effectDescription:
         'On hit, Normal or Charged Attacks have a 50% chance to deal an additional 240% ATK DMG to opponents within a small AoE. Can only occur once every 15s.',
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 43.73,
             'Bonus ATK': 0.06,
@@ -99,7 +100,7 @@ const PrototypeArchaic: Weapon = {
             level: 5,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default PrototypeArchaic

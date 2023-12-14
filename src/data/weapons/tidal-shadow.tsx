@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const TidalShadow: Weapon = {
     name: 'Tidal Shadow',
@@ -14,7 +15,7 @@ const TidalShadow: Weapon = {
     effectName: 'White Cruising Wave',
     effectDescription:
         'After the wielder is healed, ATK will be increased by 24% for 8s. This can be triggered even when the character is not on the field.',
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 42.4,
             'Bonus ATK': 0.09,
@@ -99,7 +100,7 @@ const TidalShadow: Weapon = {
             level: 5,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default TidalShadow

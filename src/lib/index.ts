@@ -7,6 +7,7 @@ export {
     elementColors,
     kebabCase,
     parseScalingValue,
+    mergeAndSum,
 } from './utils'
 
 export {

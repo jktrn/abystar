@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const TalkingStick: Weapon = {
     name: 'Talking Stick',
@@ -14,7 +15,7 @@ const TalkingStick: Weapon = {
     effectName: '"The Silver Tongue"',
     effectDescription:
         'ATK will be increased by 16% for 15s after being affected by Pyro. This effect can be triggered once every 12s. All Elemental DMG Bonus will be increased by 12% for 15s after being affected by Hydro, Cryo, Electro, or Dendro. This effect can be triggered once every 12s.',
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 43.73,
             'Bonus CRIT Rate': 0.04,
@@ -99,7 +100,7 @@ const TalkingStick: Weapon = {
             level: 5,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default TalkingStick

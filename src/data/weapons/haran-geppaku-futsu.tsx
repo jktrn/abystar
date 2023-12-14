@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const HaranGeppakuFutsu: Weapon = {
     name: 'Haran Geppaku Futsu',
@@ -14,7 +15,7 @@ const HaranGeppakuFutsu: Weapon = {
     effectName: 'Honed Flow',
     effectDescription:
         'Obtain 12% All Elemental DMG Bonus. When other nearby party members use Elemental Skills, the character equipping this weapon will gain 1 Wavespike stack. Max 2 stacks. This effect can be triggered once every 0.3s. When the character equipping this weapon uses an Elemental Skill, all stacks of Wavespike will be consumed to gain Rippling Upheaval: each stack of Wavespike consumed will increase Normal Attack DMG by 20% for 8s.',
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 45.94,
             'Bonus CRIT Rate': 0.072,
@@ -99,7 +100,7 @@ const HaranGeppakuFutsu: Weapon = {
             level: 5,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default HaranGeppakuFutsu

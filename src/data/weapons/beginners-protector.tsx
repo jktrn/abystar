@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const BeginnersProtector: Weapon = {
     name: "Beginner's Protector",
@@ -11,7 +12,7 @@ const BeginnersProtector: Weapon = {
     rarity: 1,
     description:
         'A polearm as straight as a flag pole. Well suited to most combat situations, it has an imposing presence when swung.',
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 23.25,
         },
@@ -43,7 +44,7 @@ const BeginnersProtector: Weapon = {
             'Base ATK': 185.43,
         },
     },
-    effect,
+    // weaponBonus
 }
 
 export default BeginnersProtector

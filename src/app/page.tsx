@@ -62,14 +62,12 @@ export default function Home() {
         setCharacterModalOpen(false)
     }
 
-    const updateCharacterState = <K extends keyof CharacterState>(
-        key: K,
-        newValue: CharacterState[K]
-    ) => {
+    // Handling any changes user makes to character state
+    const updateCharacterState = (updates: Partial<CharacterState>) => {
         setCharacterState((prevState) => {
             if (prevState === null) return null
 
-            const modifiedState = { ...prevState, [key]: newValue }
+            const modifiedState = { ...prevState, ...updates }
             const updatedBonuses = getUpdatedBonuses(modifiedState)
             modifiedState.characterActiveBonuses = updatedBonuses
 
@@ -79,16 +77,6 @@ export default function Home() {
 
             return updatedState
         })
-    }
-
-    const handleWeaponSelect = (selectedWeapon: Weapon) => {
-        if (characterState) {
-            setCharacterState({
-                ...characterState,
-                weapon: selectedWeapon,
-            })
-        }
-        setWeaponModalOpen(false)
     }
 
     useEffect(() => {
@@ -164,8 +152,10 @@ export default function Home() {
                                                             }
                                                             onChange={(newLevel) =>
                                                                 updateCharacterState(
-                                                                    'characterLevel',
-                                                                    newLevel
+                                                                    {
+                                                                        characterLevel:
+                                                                            newLevel,
+                                                                    }
                                                                 )
                                                             }
                                                         />
@@ -185,11 +175,18 @@ export default function Home() {
                                                                 newConstellation
                                                             ) =>
                                                                 updateCharacterState(
-                                                                    'characterConstellation',
-                                                                    parseInt(
-                                                                        newConstellation,
-                                                                        10
-                                                                    )
+                                                                    {
+                                                                        characterConstellation:
+                                                                            parseInt(
+                                                                                newConstellation,
+                                                                                10
+                                                                            ),
+                                                                        // 'characterConstellation',
+                                                                        // parseInt(
+                                                                        //     newConstellation,
+                                                                        //     10
+                                                                        // )
+                                                                    }
                                                                 )
                                                             }
                                                         />
@@ -213,8 +210,10 @@ export default function Home() {
                                                                 newConstellation
                                                             ) =>
                                                                 updateCharacterState(
-                                                                    'characterConstellation',
-                                                                    newConstellation
+                                                                    {
+                                                                        characterConstellation:
+                                                                            newConstellation,
+                                                                    }
                                                                 )
                                                             }
                                                         />
@@ -231,10 +230,10 @@ export default function Home() {
                                                 characterState.effectiveTalentLevels
                                             }
                                             setTalentLevels={(newTalentLevels) =>
-                                                updateCharacterState(
-                                                    'characterTalentLevels',
-                                                    newTalentLevels
-                                                )
+                                                updateCharacterState({
+                                                    characterTalentLevels:
+                                                        newTalentLevels,
+                                                })
                                             }
                                         />
                                     </div>
@@ -244,10 +243,10 @@ export default function Home() {
                                             characterState.characterActiveBonuses
                                         }
                                         setActiveBonuses={(newActiveBonuses) =>
-                                            updateCharacterState(
-                                                'characterActiveBonuses',
-                                                newActiveBonuses
-                                            )
+                                            updateCharacterState({
+                                                characterActiveBonuses:
+                                                    newActiveBonuses,
+                                            })
                                         }
                                         constellation={
                                             characterState.characterConstellation
@@ -275,11 +274,157 @@ export default function Home() {
                             <h2 className="rounded-t-lg border-b bg-secondary/25 px-4 py-3 text-lg font-bold">
                                 Weapon
                             </h2>
-                            <div className="p-4">
+                            {/* <div className="p-4">
                                 <WeaponImage
                                     characterState={characterState}
                                     onClick={() => setWeaponModalOpen(true)}
                                 />
+                            </div> */}
+                            <div className="p-4">
+                                <div className="flex flex-col justify-between md:flex-row">
+                                    <div className="flex flex-col justify-center gap-4 md:flex-row md:justify-normal">
+                                        <form className="flex justify-center md:justify-normal">
+                                            <WeaponImage
+                                                characterState={characterState}
+                                                onClick={() =>
+                                                    setWeaponModalOpen(true)
+                                                }
+                                            />
+                                        </form>
+                                        <div className="flex flex-col gap-2">
+                                            <div className="flex flex-col">
+                                                {characterState.weapon ? (
+                                                    <>
+                                                        <span className="text-center text-xl font-bold md:line-clamp-1 md:justify-normal md:text-left">
+                                                            {
+                                                                characterState.weapon
+                                                                    .name
+                                                            }
+                                                        </span>
+                                                        <span className="text-md flex justify-center text-muted-foreground md:justify-normal">
+                                                            {'★'.repeat(
+                                                                characterState.weapon
+                                                                    .rarity
+                                                            )}
+                                                        </span>
+                                                    </>
+                                                ) : (
+                                                    <>
+                                                        <span className="text-center text-xl font-bold md:line-clamp-1 md:justify-normal md:text-left">
+                                                            Select a Weapon
+                                                        </span>
+                                                        <span className="text-md flex justify-center text-muted-foreground md:justify-normal">
+                                                            n/a
+                                                        </span>
+                                                    </>
+                                                )}
+                                            </div>
+                                            <div className="flex max-w-max flex-col items-center gap-2 md:items-start">
+                                                {/* <div className="flex items-center gap-2">
+                                                    Ascension:
+                                                    <CustomSelect
+                                                        // Changing keys forces re-render
+                                                        key={`level-select-${kebabCase(
+                                                            characterState
+                                                                .character.name
+                                                        )}`}
+                                                        options={getLevelOptions(
+                                                            characterState.character
+                                                        )}
+                                                        value={
+                                                            characterState.characterLevel
+                                                        }
+                                                        onChange={(newLevel) =>
+                                                            updateCharacterState(
+                                                                'characterLevel',
+                                                                newLevel
+                                                            )
+                                                        }
+                                                    />
+                                                </div>
+                                                <div className="flex items-center gap-2 md:hidden">
+                                                    Constellation:
+                                                    <CustomSelect
+                                                        key={`constellation-select-${kebabCase(
+                                                            characterState
+                                                                .character.name
+                                                        )}`}
+                                                        options={getConstellationOptions(
+                                                            characterState.character
+                                                        )}
+                                                        value={characterState.characterConstellation.toString()}
+                                                        onChange={(
+                                                            newConstellation
+                                                        ) =>
+                                                            updateCharacterState(
+                                                                'characterConstellation',
+                                                                parseInt(
+                                                                    newConstellation,
+                                                                    10
+                                                                )
+                                                            )
+                                                        }
+                                                    />
+                                                </div>
+                                                <div
+                                                    className="hidden md:flex md:w-full md:items-center"
+                                                    key={`constellation-select-${kebabCase(
+                                                        characterState.character
+                                                            .name
+                                                    )}`}
+                                                >
+                                                    Constellation:
+                                                    <ConstellationPopover
+                                                        characterState={
+                                                            characterState
+                                                        }
+                                                        value={
+                                                            characterState.characterConstellation
+                                                        }
+                                                        onChange={(
+                                                            newConstellation
+                                                        ) =>
+                                                            updateCharacterState(
+                                                                'characterConstellation',
+                                                                newConstellation
+                                                            )
+                                                        }
+                                                    />
+                                                </div> */}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {/* <TalentSelect
+                                        character={characterState.character}
+                                        talentLevels={
+                                            characterState.characterTalentLevels
+                                        }
+                                        effectiveTalentLevels={
+                                            characterState.effectiveTalentLevels
+                                        }
+                                        setTalentLevels={(newTalentLevels) =>
+                                            updateCharacterState(
+                                                'characterTalentLevels',
+                                                newTalentLevels
+                                            )
+                                        }
+                                    /> */}
+                                </div>
+                                {/* <CharacterBonuses
+                                    character={characterState.character}
+                                    activeBonuses={
+                                        characterState.characterActiveBonuses
+                                    }
+                                    setActiveBonuses={(newActiveBonuses) =>
+                                        updateCharacterState(
+                                            'characterActiveBonuses',
+                                            newActiveBonuses
+                                        )
+                                    }
+                                    constellation={
+                                        characterState.characterConstellation
+                                    }
+                                /> */}
                             </div>
                             <h2 className="border-y bg-secondary/25 px-4 py-3 text-lg font-bold">
                                 Artifacts
@@ -313,7 +458,14 @@ export default function Home() {
                 <WeaponModal
                     open={isWeaponModalOpen}
                     onOpenChange={setWeaponModalOpen}
-                    setWeapon={handleWeaponSelect}
+                    setWeapon={(selectedWeapon) => {
+                        updateCharacterState({
+                            weapon: selectedWeapon,
+                            weaponLevel: '90/90',
+                            weaponRefinement: 1,
+                        })
+                        setWeaponModalOpen(false)
+                    }}
                     characterWeaponType={characterState?.character.weapon}
                 />
             </main>

@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const PrimordialJadeCutter: Weapon = {
     name: 'Primordial Jade Cutter',
@@ -14,7 +15,7 @@ const PrimordialJadeCutter: Weapon = {
     effectName: "Protector's Virtue",
     effectDescription:
         "HP increased by 20%. Additionally, provides an ATK Bonus based on 1.2% of the wielder's Max HP.",
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 44.34,
             'Bonus CRIT Rate': 0.096,
@@ -99,7 +100,7 @@ const PrimordialJadeCutter: Weapon = {
             level: 5,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default PrimordialJadeCutter

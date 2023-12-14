@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const AmosBow: Weapon = {
     name: "Amos' Bow",
@@ -14,7 +15,7 @@ const AmosBow: Weapon = {
     effectName: 'Strong-Willed',
     effectDescription:
         'Increases Normal and Charged Attack DMG by 12%. After a Normal or Charged Attack is fired, DMG dealt increases by a further 8% every 0.1s the arrow is in the air for up to 5 times.',
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 45.94,
             'Bonus ATK': 0.108,
@@ -99,7 +100,7 @@ const AmosBow: Weapon = {
             level: 5,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default AmosBow

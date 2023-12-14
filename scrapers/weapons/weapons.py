@@ -44,7 +44,7 @@ def fetch_weapon_data(weapon: str) -> dict[str, dict[str, dict[str, str]]]:
 
         data_dict = {row[0]: {header[i]: row[i] for i in range(1, len(header))} for row in data}
 
-        all_data["mainStats"] = data_dict
+        all_data["baseStats"] = data_dict
 
     # Refinements
     affix_table = soup.find('table', {'class': 'affix_table'})

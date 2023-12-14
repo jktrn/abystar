@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const SeasonedHuntersBow: Weapon = {
     name: "Seasoned Hunter's Bow",
@@ -11,7 +12,7 @@ const SeasonedHuntersBow: Weapon = {
     rarity: 2,
     description:
         "A bow that has been well-polished by time and meticulously cared for by its owner. It feels almost like an extension of the archer's arm.",
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 32.93,
         },
@@ -43,7 +44,7 @@ const SeasonedHuntersBow: Weapon = {
             'Base ATK': 243.23,
         },
     },
-    effect,
+    // weaponBonus
 }
 
 export default SeasonedHuntersBow

@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const AmenomaKageuchi: Weapon = {
     name: 'Amenoma Kageuchi',
@@ -14,7 +15,7 @@ const AmenomaKageuchi: Weapon = {
     effectName: 'Iwakura Succession',
     effectDescription:
         'After casting an Elemental Skill, gain 1 Succession Seed. This effect can be triggered once every 5s. The Succession Seed lasts for 30s. Up to 3 Succession Seeds may exist simultaneously. After using an Elemental Burst, all Succession Seeds are consumed and after 2s, the character regenerates 6 Energy for each seed consumed.',
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 41.07,
             'Bonus ATK': 0.12,
@@ -99,7 +100,7 @@ const AmenomaKageuchi: Weapon = {
             level: 5,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default AmenomaKageuchi

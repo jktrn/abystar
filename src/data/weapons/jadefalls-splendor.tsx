@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const JadefallsSplendor: Weapon = {
     name: "Jadefall's Splendor",
@@ -14,7 +15,7 @@ const JadefallsSplendor: Weapon = {
     effectName: 'Primordial Jade Regalia',
     effectDescription:
         'For 3s after using an Elemental Burst or creating a shield, the equipping character can gain the Primordial Jade Regalia effect: Restore 4.5 Energy every 2.5s, and gain 0.3% Elemental DMG Bonus for their corresponding Elemental Type for every 1,000 Max HP they possess, up to 12%. Primordial Jade Regalia will still take effect even if the equipping character is not on the field.',
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 45.94,
             'Bonus HP': 0.108,
@@ -99,7 +100,7 @@ const JadefallsSplendor: Weapon = {
             level: 5,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default JadefallsSplendor

@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const WhiteTassel: Weapon = {
     name: 'White Tassel',
@@ -13,7 +14,7 @@ const WhiteTassel: Weapon = {
         "A standard-issue weapon of the Millelith soldiers. It has a sturdy shaft and sharp spearhead. It's a reliable weapon.",
     effectName: 'Sharp',
     effectDescription: 'Increases Normal Attack DMG by 24%.',
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 38.74,
             'Bonus CRIT Rate': 0.051,
@@ -93,7 +94,7 @@ const WhiteTassel: Weapon = {
             level: 5,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default WhiteTassel

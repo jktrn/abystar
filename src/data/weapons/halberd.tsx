@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const Halberd: Weapon = {
     name: 'Halberd',
@@ -14,7 +15,7 @@ const Halberd: Weapon = {
     effectName: 'Heavy',
     effectDescription:
         'Normal Attacks deal an additional 160% ATK as DMG. Can only occur once every 10s.',
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 39.88,
             'Bonus ATK': 0.0511,
@@ -99,7 +100,7 @@ const Halberd: Weapon = {
             level: 5,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default Halberd

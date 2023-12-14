@@ -1,6 +1,6 @@
 import { type ClassValue, clsx } from 'clsx'
 import { twMerge } from 'tailwind-merge'
-import { CharacterAttributes } from '@/interfaces/Character'
+import { BaseStat, CharacterAttributes } from '@/interfaces/Character'
 
 function cn(...inputs: ClassValue[]) {
     return twMerge(clsx(inputs))
@@ -14,6 +14,17 @@ const compareObjects = (a: any, b: any) => {
         }
     }
     return diff
+}
+
+const mergeAndSum = (a: BaseStat, b: BaseStat): BaseStat => {
+    let merged: BaseStat = {}
+    for (const key in a) {
+        merged[key] = (merged[key] || 0) + a[key]
+    }
+    for (const key in b) {
+        merged[key] = (merged[key] || 0) + b[key]
+    }
+    return merged
 }
 
 const parseScalingValue = (scalingValue: string) => {
@@ -82,4 +93,5 @@ export {
     kebabCase,
     calculateStatValue,
     clamp,
+    mergeAndSum,
 }

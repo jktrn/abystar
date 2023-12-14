@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const FleuveCendreFerryman: Weapon = {
     name: 'Fleuve Cendre Ferryman',
@@ -14,7 +15,7 @@ const FleuveCendreFerryman: Weapon = {
     effectName: 'Ironbone',
     effectDescription:
         'Increases Elemental Skill CRIT Rate by 8%. Additionally, increases Energy Recharge by 16% for 5s after using an Elemental Skill.',
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 42.4,
             'Bonus Energy Recharge': 0.1,
@@ -99,7 +100,7 @@ const FleuveCendreFerryman: Weapon = {
             level: 5,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default FleuveCendreFerryman

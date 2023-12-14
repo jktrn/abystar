@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const StaffOfTheScarletSands: Weapon = {
     name: 'Staff of the Scarlet Sands',
@@ -14,7 +15,7 @@ const StaffOfTheScarletSands: Weapon = {
     effectName: "Heat Haze at Horizon's End",
     effectDescription:
         'The equipping character gains 52% of their Elemental Mastery as bonus ATK. When an Elemental Skill hits opponents, the Dream of the Scarlet Sands effect will be gained for 10s: The equipping character will gain 28% of their Elemental Mastery as bonus ATK. Max 3 stacks.',
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 44.34,
             'Bonus CRIT Rate': 0.096,
@@ -99,7 +100,7 @@ const StaffOfTheScarletSands: Weapon = {
             level: 5,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default StaffOfTheScarletSands

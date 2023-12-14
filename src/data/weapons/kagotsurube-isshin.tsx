@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const KagotsurubeIsshin: Weapon = {
     name: 'Kagotsurube Isshin',
@@ -14,7 +15,7 @@ const KagotsurubeIsshin: Weapon = {
     effectName: 'Isshin Art Clarity',
     effectDescription:
         'When a Normal, Charged, or Plunging Attack hits an opponent, it will whip up a Hewing Gale, dealing AoE DMG equal to 180% of ATK and increasing ATK by 15% for 8s. This effect can be triggered once every 8s.',
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 42.4,
             'Bonus ATK': 0.09,
@@ -79,7 +80,7 @@ const KagotsurubeIsshin: Weapon = {
             level: 1,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default KagotsurubeIsshin

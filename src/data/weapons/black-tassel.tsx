@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const BlackTassel: Weapon = {
     name: 'Black Tassel',
@@ -13,7 +14,7 @@ const BlackTassel: Weapon = {
         'An exceptionally powerful polearm that also offers a simple but elegant solution to the issue of the easily stained white tassel.',
     effectName: 'Bane of the Soft',
     effectDescription: 'Increases DMG against slimes by 40%.',
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 37.61,
             'Bonus HP': 0.1021,
@@ -93,7 +94,7 @@ const BlackTassel: Weapon = {
             level: 5,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default BlackTassel

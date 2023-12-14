@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const PrototypeStarglitter: Weapon = {
     name: 'Prototype Starglitter',
@@ -14,7 +15,7 @@ const PrototypeStarglitter: Weapon = {
     effectName: 'Magic Affinity',
     effectDescription:
         'After using an Elemental Skill, increases Normal and Charged Attack DMG by 8% for 12s. Max 2 stacks.',
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 42.4,
             'Bonus Energy Recharge': 0.1,
@@ -99,7 +100,7 @@ const PrototypeStarglitter: Weapon = {
             level: 5,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default PrototypeStarglitter

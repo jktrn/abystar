@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const SwordOfNarzissenkreuz: Weapon = {
     name: 'Sword of Narzissenkreuz',
@@ -14,7 +15,7 @@ const SwordOfNarzissenkreuz: Weapon = {
     effectName: '"Holy Sword"',
     effectDescription:
         "In countless stories, the weapon that befits the legendary hero is also the key to opening all gates, required to surpass the climax and reach destiny's denouement.",
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 42.4,
             'Bonus ATK': 0.09,
@@ -79,7 +80,7 @@ const SwordOfNarzissenkreuz: Weapon = {
             level: 1,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default SwordOfNarzissenkreuz

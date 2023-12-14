@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const LuxuriousSealord: Weapon = {
     name: 'Luxurious Sea-Lord',
@@ -14,7 +15,7 @@ const LuxuriousSealord: Weapon = {
     effectName: 'Oceanic Victory',
     effectDescription:
         'Increases Elemental Burst DMG by 12%. When Elemental Burst hits opponents, there is a 100% chance of summoning a huge onrush of tuna that deals 100% ATK as AoE DMG. This effect can occur once every 15s.',
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 41.07,
             'Bonus ATK': 0.12,
@@ -99,7 +100,7 @@ const LuxuriousSealord: Weapon = {
             level: 5,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default LuxuriousSealord

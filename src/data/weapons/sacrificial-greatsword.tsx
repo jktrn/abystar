@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const SacrificialGreatsword: Weapon = {
     name: 'Sacrificial Greatsword',
@@ -14,7 +15,7 @@ const SacrificialGreatsword: Weapon = {
     effectName: 'Composed',
     effectDescription:
         'After damaging an opponent with an Elemental Skill, the skill has a 40% chance to end its own CD. Can only occur once every 30s.',
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 43.73,
             'Bonus Energy Recharge': 0.0667,
@@ -99,7 +100,7 @@ const SacrificialGreatsword: Weapon = {
             level: 5,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default SacrificialGreatsword

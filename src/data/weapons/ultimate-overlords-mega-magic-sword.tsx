@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const UltimateOverlordsMegaMagicSword: Weapon = {
     name: '"Ultimate Overlord\'s Mega Magic Sword"',
@@ -14,7 +15,7 @@ const UltimateOverlordsMegaMagicSword: Weapon = {
     effectName: 'We Believe in You!',
     effectDescription:
         "ATK increased by 12%. That's not all! The support from all Melusines you've helped in Merusea Village fills you with strength! Based on the number of them you've helped, your ATK is increased by up to an additional 12%.",
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 43.73,
             'Bonus Energy Recharge': 0.0667,
@@ -99,7 +100,7 @@ const UltimateOverlordsMegaMagicSword: Weapon = {
             level: 5,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default UltimateOverlordsMegaMagicSword

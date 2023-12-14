@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const MappaMare: Weapon = {
     name: 'Mappa Mare',
@@ -14,7 +15,7 @@ const MappaMare: Weapon = {
     effectName: 'Infusion Scroll',
     effectDescription:
         'Triggering an Elemental reaction grants a 8% Elemental DMG Bonus for 10s. Max 2 stacks.',
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 43.73,
             'Bonus Elemental Mastery': 24.0,
@@ -99,7 +100,7 @@ const MappaMare: Weapon = {
             level: 5,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default MappaMare

@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const TravelersHandySword: Weapon = {
     name: "Traveler's Handy Sword",
@@ -13,7 +14,7 @@ const TravelersHandySword: Weapon = {
         'A handy steel sword which contains scissors, a magnifying glass, tinder, and other useful items in its sheath.',
     effectName: 'Journey',
     effectDescription: 'Each Elemental Orb or Particle collected restores 1% HP.',
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 39.88,
             'Bonus Def': 0.0637,
@@ -96,7 +97,7 @@ const TravelersHandySword: Weapon = {
             level: 5,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default TravelersHandySword

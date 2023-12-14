@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const BloodtaintedGreatsword: Weapon = {
     name: 'Bloodtainted Greatsword',
@@ -14,7 +15,7 @@ const BloodtaintedGreatsword: Weapon = {
     effectName: 'Bane of Fire and Thunder',
     effectDescription:
         'Increases DMG dealt against opponents affected by Pyro or Electro by 12%.',
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 37.61,
             'Bonus Elemental Mastery': 40.8,
@@ -99,7 +100,7 @@ const BloodtaintedGreatsword: Weapon = {
             level: 5,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default BloodtaintedGreatsword

@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const Rust: Weapon = {
     name: 'Rust',
@@ -14,7 +15,7 @@ const Rust: Weapon = {
     effectName: 'Rapid Firing',
     effectDescription:
         'Increases Normal Attack DMG by 40% but decreases Charged Attack DMG by 10%.',
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 42.4,
             'Bonus ATK': 0.09,
@@ -99,7 +100,7 @@ const Rust: Weapon = {
             level: 5,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default Rust

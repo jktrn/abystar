@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const SkywardHarp: Weapon = {
     name: 'Skyward Harp',
@@ -14,7 +15,7 @@ const SkywardHarp: Weapon = {
     effectName: 'Echoing Ballad',
     effectDescription:
         'Increases CRIT DMG by 20%. Hits have a 60% chance to inflict a small AoE attack, dealing 125% Physical ATK DMG. Can only occur once every 4s.',
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 47.54,
             'Bonus CRIT Rate': 0.048,
@@ -99,7 +100,7 @@ const SkywardHarp: Weapon = {
             level: 5,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default SkywardHarp

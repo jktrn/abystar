@@ -1,22 +1,8 @@
-import { CharacterAttributes } from './Character'
-
-export interface WeaponMainStat {
-    [key: string]: number
-}
+import { BaseStat, Bonus } from './Character'
 
 export interface WeaponRefinement {
     description: string
     level: number
-}
-
-export interface WeaponEffect {
-    (params: WeaponEffectParams): void
-}
-
-export interface WeaponEffectParams {
-    attributes: CharacterAttributes
-    initialAttributes: CharacterAttributes
-    refinement: number
 }
 
 export interface RawWeapon {
@@ -27,12 +13,12 @@ export interface RawWeapon {
     description: string
     effectName?: string
     effectDescription?: string
-    mainStats: {
-        [level: string]: WeaponMainStat
+    baseStats: {
+        [level: string]: BaseStat
     }
     refinements?: WeaponRefinement[]
 }
 
 export interface Weapon extends RawWeapon {
-    effect?: WeaponEffect
+    weaponBonus?: Bonus
 }

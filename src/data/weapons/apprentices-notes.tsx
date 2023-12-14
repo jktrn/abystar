@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const ApprenticesNotes: Weapon = {
     name: "Apprentice's Notes",
@@ -11,7 +12,7 @@ const ApprenticesNotes: Weapon = {
     rarity: 1,
     description:
         'Notes left behind by a top student. Many useful spells are listed, and the handwriting is beautiful.',
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 23.25,
         },
@@ -43,7 +44,7 @@ const ApprenticesNotes: Weapon = {
             'Base ATK': 185.43,
         },
     },
-    effect,
+    // weaponBonus
 }
 
 export default ApprenticesNotes

@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const CashflowSupervision: Weapon = {
     name: 'Cashflow Supervision',
@@ -14,7 +15,7 @@ const CashflowSupervision: Weapon = {
     effectName: 'Golden Blood-Tide',
     effectDescription:
         'ATK is increased by 16%. When current HP increases or decreases, Normal Attack DMG will be increased by 16% and Charged Attack DMG will be increased by 14% for 4s. Max 3 stacks. This effect can be triggered once every 0.3s. When the wielder has 3 stacks, ATK SPD will be increased by 8%.',
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 47.54,
             'Bonus CRIT Rate': 0.048,
@@ -99,7 +100,7 @@ const CashflowSupervision: Weapon = {
             level: 5,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default CashflowSupervision

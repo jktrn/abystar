@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const PrizedIsshinBlade: Weapon = {
     name: 'Prized Isshin Blade',
@@ -14,7 +15,7 @@ const PrizedIsshinBlade: Weapon = {
     effectName: 'Wandering Striker',
     effectDescription:
         "When a Normal, Charged, or Plunging Attack hits an opponent, it will release an Accursed Spirit, dealing AoE DMG equal to 180% of ATK and restoring 100% of ATK as HP. This effect can be triggered once every 8s. The DMG done by this weapon's wielder is decreased by 50%.",
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 42.4,
             'Bonus ATK': 0.045,
@@ -79,7 +80,7 @@ const PrizedIsshinBlade: Weapon = {
             level: 1,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default PrizedIsshinBlade

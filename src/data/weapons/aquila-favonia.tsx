@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const AquilaFavonia: Weapon = {
     name: 'Aquila Favonia',
@@ -14,7 +15,7 @@ const AquilaFavonia: Weapon = {
     effectName: "Falcon's Defiance",
     effectDescription:
         'ATK is increased by 20%. Triggers on taking DMG: the soul of the Falcon of the West awakens, holding the banner of resistance aloft, regenerating HP equal to 100% of ATK and dealing 200% of ATK as DMG to surrounding opponents. This effect can only occur once every 15s.',
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 47.54,
             'Physical DMG Bonus': 0.09,
@@ -99,7 +100,7 @@ const AquilaFavonia: Weapon = {
             level: 5,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default AquilaFavonia

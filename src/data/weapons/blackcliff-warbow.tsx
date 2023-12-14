@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const BlackcliffWarbow: Weapon = {
     name: 'Blackcliff Warbow',
@@ -14,7 +15,7 @@ const BlackcliffWarbow: Weapon = {
     effectName: 'Press the Advantage',
     effectDescription:
         'After defeating an enemy, ATK is increased by 12% for 30s. This effect has a maximum of 3 stacks, and the duration of each stack is independent of the others.',
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 43.73,
             'Bonus CRIT DMG': 0.08,
@@ -99,7 +100,7 @@ const BlackcliffWarbow: Weapon = {
             level: 5,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default BlackcliffWarbow

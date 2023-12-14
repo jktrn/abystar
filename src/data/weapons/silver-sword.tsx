@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const SilverSword: Weapon = {
     name: 'Silver Sword',
@@ -11,7 +12,7 @@ const SilverSword: Weapon = {
     rarity: 2,
     description:
         "A sword for exorcising demons. Everyone knows it's made of a silver alloy, not pure silver.",
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 32.93,
         },
@@ -43,7 +44,7 @@ const SilverSword: Weapon = {
             'Base ATK': 243.23,
         },
     },
-    effect,
+    // weaponBonus
 }
 
 export default SilverSword

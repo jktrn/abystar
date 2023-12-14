@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const CompoundBow: Weapon = {
     name: 'Compound Bow',
@@ -14,7 +15,7 @@ const CompoundBow: Weapon = {
     effectName: 'Infusion Arrow',
     effectDescription:
         'Normal Attack and Charged Attack hits increase ATK by 4% and Normal ATK SPD by 1.2% for 6s. Max 4 stacks. Can only occur once every 0.3s.',
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 41.07,
             'Physical DMG Bonus': 0.1501,
@@ -99,7 +100,7 @@ const CompoundBow: Weapon = {
             level: 5,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default CompoundBow

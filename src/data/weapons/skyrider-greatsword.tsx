@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const SkyriderGreatsword: Weapon = {
     name: 'Skyrider Greatsword',
@@ -14,7 +15,7 @@ const SkyriderGreatsword: Weapon = {
     effectName: 'Courage',
     effectDescription:
         'On hit, Normal or Charged Attacks increase ATK by 6% for 6s. Max 4 stacks. Can occur once every 0.5s.',
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 38.74,
             'Physical DMG Bonus': 0.0956,
@@ -99,7 +100,7 @@ const SkyriderGreatsword: Weapon = {
             level: 5,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default SkyriderGreatsword

@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const TheStringless: Weapon = {
     name: 'The Stringless',
@@ -13,7 +14,7 @@ const TheStringless: Weapon = {
         'A bow that once served as an extraordinary instrument. It is no longer capable of getting people up and dancing.',
     effectName: 'Arrowless Song',
     effectDescription: 'Increases Elemental Skill and Elemental Burst DMG by 24%.',
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 42.4,
             'Bonus Elemental Mastery': 36.0,
@@ -93,7 +94,7 @@ const TheStringless: Weapon = {
             level: 5,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default TheStringless

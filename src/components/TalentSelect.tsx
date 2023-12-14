@@ -18,9 +18,9 @@ const TalentSelect = ({
     setTalentLevels,
 }: TalentSelectProps) => {
     const skillIcons = [
-        `/images/skill-icons/normal-attacks/${kebabCase(character.weapon)}.png`,
-        `/images/skill-icons/skills/${kebabCase(character.name)}-skill.png`,
-        `/images/skill-icons/bursts/${kebabCase(character.name)}-burst.png`,
+        `/images/normal-attacks/${kebabCase(character.weapon)}.png`,
+        `/images/characters/${kebabCase(character.name)}-skill.png`,
+        `/images/characters/${kebabCase(character.name)}-burst.png`,
     ]
 
     return (

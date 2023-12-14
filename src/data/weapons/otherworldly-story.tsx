@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const OtherworldlyStory: Weapon = {
     name: 'Otherworldly Story',
@@ -13,7 +14,7 @@ const OtherworldlyStory: Weapon = {
         'A cheap fantasy novel with no value whatsoever. Any claim that it possesses the power of catalysis is also pure fantasy.',
     effectName: 'Energy Shower',
     effectDescription: 'Picking up an Elemental Energy Orb/Particle recovers 1% HP.',
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 38.74,
             'Bonus Energy Recharge': 0.085,
@@ -97,7 +98,7 @@ const OtherworldlyStory: Weapon = {
             level: 5,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default OtherworldlyStory

@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const FerrousShadow: Weapon = {
     name: 'Ferrous Shadow',
@@ -14,7 +15,7 @@ const FerrousShadow: Weapon = {
     effectName: 'Unbending',
     effectDescription:
         'When HP falls below 70%, increases Charged Attack DMG by 30% and Charged Attacks become harder to interrupt.',
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 38.74,
             'Bonus HP': 0.0766,
@@ -99,7 +100,7 @@ const FerrousShadow: Weapon = {
             level: 5,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default FerrousShadow

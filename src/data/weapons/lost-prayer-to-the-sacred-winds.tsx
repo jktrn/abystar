@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const LostPrayerToTheSacredWinds: Weapon = {
     name: 'Lost Prayer to the Sacred Winds',
@@ -14,7 +15,7 @@ const LostPrayerToTheSacredWinds: Weapon = {
     effectName: 'Boundless Blessing',
     effectDescription:
         'Increases Movement SPD by 10%. When in battle, gain an 8% Elemental DMG Bonus every 4s. Max 4 stacks. Lasts until the character falls or leaves combat.',
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 45.94,
             'Bonus CRIT Rate': 0.072,
@@ -99,7 +100,7 @@ const LostPrayerToTheSacredWinds: Weapon = {
             level: 5,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default LostPrayerToTheSacredWinds

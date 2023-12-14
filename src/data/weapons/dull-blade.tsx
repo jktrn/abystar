@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const DullBlade: Weapon = {
     name: 'Dull Blade',
@@ -11,7 +12,7 @@ const DullBlade: Weapon = {
     rarity: 1,
     description:
         "Youthful dreams and the thrill of adventure. If this isn't enough, then make it up with valiance.",
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 23.25,
         },
@@ -43,7 +44,7 @@ const DullBlade: Weapon = {
             'Base ATK': 185.43,
         },
     },
-    effect,
+    // weaponBonus
 }
 
 export default DullBlade

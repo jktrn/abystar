@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const CalamityQueller: Weapon = {
     name: 'Calamity Queller',
@@ -14,7 +15,7 @@ const CalamityQueller: Weapon = {
     effectName: 'Extinguishing Precept',
     effectDescription:
         "Gain 12% All Elemental DMG Bonus. Obtain Consummation for 20s after using an Elemental Skill, causing ATK to increase by 3.2% per second. This ATK increase has a maximum of 6 stacks. When the character equipped with this weapon is not on the field, Consummation's ATK increase is doubled.",
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 49.14,
             'Bonus ATK': 0.036,
@@ -99,7 +100,7 @@ const CalamityQueller: Weapon = {
             level: 5,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default CalamityQueller

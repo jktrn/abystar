@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const EmeraldOrb: Weapon = {
     name: 'Emerald Orb',
@@ -14,7 +15,7 @@ const EmeraldOrb: Weapon = {
     effectName: 'Rapids',
     effectDescription:
         'Upon causing a Vaporize, Electro-Charged, Frozen, Bloom, or a Hydro-infused Swirl reaction, increases ATK by 20% for 12s.',
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 39.88,
             'Bonus Elemental Mastery': 20.4,
@@ -99,7 +100,7 @@ const EmeraldOrb: Weapon = {
             level: 5,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default EmeraldOrb

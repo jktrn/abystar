@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const SongOfStillness: Weapon = {
     name: 'Song of Stillness',
@@ -14,7 +15,7 @@ const SongOfStillness: Weapon = {
     effectName: 'Benthic Pulse',
     effectDescription:
         'After the wielder is healed, they will deal 16% more DMG for 8s. This can be triggered even when the character is not on the field.',
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 42.4,
             'Bonus ATK': 0.09,
@@ -99,7 +100,7 @@ const SongOfStillness: Weapon = {
             level: 5,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default SongOfStillness

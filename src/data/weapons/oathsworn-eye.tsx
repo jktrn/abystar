@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const OathswornEye: Weapon = {
     name: 'Oathsworn Eye',
@@ -14,7 +15,7 @@ const OathswornEye: Weapon = {
     effectName: 'People of the Faltering Light',
     effectDescription:
         'Increases Energy Recharge by 24% for 10s after using an Elemental Skill.',
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 43.73,
             'Bonus ATK': 0.06,
@@ -99,7 +100,7 @@ const OathswornEye: Weapon = {
             level: 5,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default OathswornEye

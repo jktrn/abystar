@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const RecurveBow: Weapon = {
     name: 'Recurve Bow',
@@ -13,7 +14,7 @@ const RecurveBow: Weapon = {
         'It is said that this bow can shoot down eagles in flight, but ultimately how true that is depends on the skill of the archer.',
     effectName: 'Cull the Weak',
     effectDescription: 'Defeating an opponent restores 8% HP.',
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 37.61,
             'Bonus HP': 0.1021,
@@ -93,7 +94,7 @@ const RecurveBow: Weapon = {
             level: 5,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default RecurveBow

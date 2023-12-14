@@ -37,13 +37,13 @@ attribute_key_map = {
 }
 
 def process_weapon_data(weapon_data):
-    for level, stats in weapon_data.get('mainStats', {}).items():
+    for level, stats in weapon_data.get('baseStats', {}).items():
         new_stats = {}
         for key, value in stats.items():
             mapped_key = attribute_key_map.get(key, key)
             parsed_value = parse_stat_value(value)
             new_stats[mapped_key] = parsed_value
-        weapon_data['mainStats'][level] = new_stats
+        weapon_data['baseStats'][level] = new_stats
     return weapon_data
 
 def main():
@@ -93,14 +93,14 @@ if __name__ == '__main__':
 
 # def process_weapon_data(weapon_data):
 #     new_main_stats = {}
-#     for key, stats in weapon_data.get('mainStats', {}).items():
+#     for key, stats in weapon_data.get('baseStats', {}).items():
 #         new_key = key_map.get(key, key)
 #         new_stats = {}
 #         for stat_key, value in stats.items():
 #             parsed_value = parse_stat_value(value)
 #             new_stats[stat_key] = parsed_value
 #         new_main_stats[new_key] = new_stats
-#     weapon_data['mainStats'] = new_main_stats
+#     weapon_data['baseStats'] = new_main_stats
 #     return weapon_data
 
 # def main():

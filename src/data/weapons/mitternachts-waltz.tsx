@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const MitternachtsWaltz: Weapon = {
     name: 'Mitternachts Waltz',
@@ -13,7 +14,7 @@ const MitternachtsWaltz: Weapon = {
     effectName: 'Evernight Duet',
     effectDescription:
         'Normal Attack hits on opponents increase Elemental Skill DMG by 20% for 5s. Elemental Skill hits on opponents increase Normal Attack DMG by 20% for 5s.',
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 42.4,
             'Physical DMG Bonus': 0.1126,
@@ -98,7 +99,7 @@ const MitternachtsWaltz: Weapon = {
             level: 5,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default MitternachtsWaltz

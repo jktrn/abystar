@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const ThrillingTalesOfDragonSlayers: Weapon = {
     name: 'Thrilling Tales of Dragon Slayers',
@@ -14,7 +15,7 @@ const ThrillingTalesOfDragonSlayers: Weapon = {
     effectName: 'Heritage',
     effectDescription:
         'When switching characters, the new character taking the field has their ATK increased by 24% for 10s. This effect can only occur once every 20s.',
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 38.74,
             'Bonus HP': 0.0766,
@@ -99,7 +100,7 @@ const ThrillingTalesOfDragonSlayers: Weapon = {
             level: 5,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default ThrillingTalesOfDragonSlayers

@@ -108,6 +108,8 @@ export interface CharacterState {
     characterTalentLevels: number[]
     effectiveTalentLevels: number[]
     weapon?: Weapon
+    weaponLevel?: string
+    weaponRefinement?: number
 }
 
 export interface CharacterAttributes {

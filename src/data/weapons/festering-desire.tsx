@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const FesteringDesire: Weapon = {
     name: 'Festering Desire',
@@ -14,7 +15,7 @@ const FesteringDesire: Weapon = {
     effectName: 'Undying Admiration',
     effectDescription:
         'Increases Elemental Skill DMG by 16% and Elemental Skill CRIT Rate by 6%.',
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 42.4,
             'Bonus Energy Recharge': 0.1,
@@ -99,7 +100,7 @@ const FesteringDesire: Weapon = {
             level: 5,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default FesteringDesire

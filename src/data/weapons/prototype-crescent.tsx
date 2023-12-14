@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const PrototypeCrescent: Weapon = {
     name: 'Prototype Crescent',
@@ -14,7 +15,7 @@ const PrototypeCrescent: Weapon = {
     effectName: 'Unreturning',
     effectDescription:
         'Charged Attack hits on weak points increase Movement SPD by 10% and ATK by 36% for 10s.',
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 42.4,
             'Bonus ATK': 0.09,
@@ -99,7 +100,7 @@ const PrototypeCrescent: Weapon = {
             level: 5,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default PrototypeCrescent

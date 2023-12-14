@@ -1,8 +1,9 @@
-import { Weapon, WeaponEffect } from '@/interfaces/Weapon'
+import { Weapon } from '@/interfaces/Weapon'
+// import { Bonus } from '@/interfaces/Character'
 
-const effect: WeaponEffect = ({ attributes, initialAttributes, refinement }) => {
-    // Effect logic here
-}
+// const weaponBonus: Bonus = {
+// TODO: Implement
+// }
 
 const HarbingerOfDawn: Weapon = {
     name: 'Harbinger of Dawn',
@@ -13,7 +14,7 @@ const HarbingerOfDawn: Weapon = {
         'A sword that once shone like the sun. The wielder of this sword will be blessed with a "feel-good" buff. The reflective material on the blade has long worn off.',
     effectName: 'Vigorous',
     effectDescription: 'When HP is above 90%, increases CRIT Rate by 14%.',
-    mainStats: {
+    baseStats: {
         '1/20': {
             'Base ATK': 38.74,
             'Bonus CRIT DMG': 0.102,
@@ -93,7 +94,7 @@ const HarbingerOfDawn: Weapon = {
             level: 5,
         },
     ],
-    effect,
+    // weaponBonus
 }
 
 export default HarbingerOfDawn
