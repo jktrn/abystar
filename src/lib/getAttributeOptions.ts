@@ -25,4 +25,34 @@ const getTalentOptions = [...Array(13)].map((_, i) => {
     }
 })
 
-export { getLevelOptions, getConstellationOptions, getTalentOptions }
+const getRefinementOptions = [...Array(5)].map((_, i) => {
+    return {
+        value: (i + 1).toString(),
+        label: `R${i + 1}`,
+    }
+})
+
+const levelOptions = [
+    '1/20',
+    '20/20',
+    '20/40',
+    '40/40',
+    '40/50',
+    '50/50',
+    '50/60',
+    '60/60',
+    '60/70',
+    '70/70',
+    '70/80',
+    '80/80',
+    '80/90',
+    '90/90',
+]
+
+export {
+    getLevelOptions,
+    getConstellationOptions,
+    getTalentOptions,
+    getRefinementOptions,
+    levelOptions,
+}

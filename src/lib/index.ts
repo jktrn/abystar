@@ -19,6 +19,8 @@ export {
     getConstellationOptions,
     getLevelOptions,
     getTalentOptions,
+    getRefinementOptions,
+    levelOptions,
 } from './getAttributeOptions'
 
 export { attributeSections, availableIcons, displayStats } from './attributeSections'

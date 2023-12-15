@@ -26,6 +26,7 @@ import {
     displayStats,
     getConstellationOptions,
     getLevelOptions,
+    getRefinementOptions,
     getUpdatedBonuses,
     kebabCase,
     recalculateStateAndAttributes,
@@ -320,52 +321,66 @@ export default function Home() {
                                                 )}
                                             </div>
                                             <div className="flex max-w-max flex-col items-center gap-2 md:items-start">
-                                                {/* <div className="flex items-center gap-2">
-                                                    Ascension:
-                                                    <CustomSelect
-                                                        // Changing keys forces re-render
-                                                        key={`level-select-${kebabCase(
-                                                            characterState
-                                                                .character.name
-                                                        )}`}
-                                                        options={getLevelOptions(
-                                                            characterState.character
-                                                        )}
-                                                        value={
-                                                            characterState.characterLevel
-                                                        }
-                                                        onChange={(newLevel) =>
-                                                            updateCharacterState(
-                                                                'characterLevel',
-                                                                newLevel
-                                                            )
-                                                        }
-                                                    />
-                                                </div>
-                                                <div className="flex items-center gap-2 md:hidden">
-                                                    Constellation:
-                                                    <CustomSelect
-                                                        key={`constellation-select-${kebabCase(
-                                                            characterState
-                                                                .character.name
-                                                        )}`}
-                                                        options={getConstellationOptions(
-                                                            characterState.character
-                                                        )}
-                                                        value={characterState.characterConstellation.toString()}
-                                                        onChange={(
-                                                            newConstellation
-                                                        ) =>
-                                                            updateCharacterState(
-                                                                'characterConstellation',
-                                                                parseInt(
-                                                                    newConstellation,
-                                                                    10
-                                                                )
-                                                            )
-                                                        }
-                                                    />
-                                                </div>
+                                                {characterState.weapon &&
+                                                    characterState.weaponLevel &&
+                                                    characterState.weaponRefinement && (
+                                                        <>
+                                                            <div className="flex items-center gap-2">
+                                                                Ascension:
+                                                                <CustomSelect
+                                                                    // Changing keys forces re-render
+                                                                    key={`level-select-${kebabCase(
+                                                                        characterState
+                                                                            .weapon
+                                                                            .name
+                                                                    )}`}
+                                                                    options={getLevelOptions(
+                                                                        characterState.character // getLevelOptions only takes Character
+                                                                    )}
+                                                                    value={
+                                                                        characterState.weaponLevel
+                                                                    }
+                                                                    onChange={(
+                                                                        newLevel
+                                                                    ) =>
+                                                                        updateCharacterState(
+                                                                            {
+                                                                                weaponLevel:
+                                                                                    newLevel,
+                                                                            }
+                                                                        )
+                                                                    }
+                                                                />
+                                                            </div>
+                                                            <div className="flex items-center gap-2">
+                                                                Refinement:
+                                                                <CustomSelect
+                                                                    key={`constellation-select-${kebabCase(
+                                                                        characterState
+                                                                            .weapon
+                                                                            .name
+                                                                    )}`}
+                                                                    options={
+                                                                        getRefinementOptions
+                                                                    }
+                                                                    value={characterState.weaponRefinement.toString()}
+                                                                    onChange={(
+                                                                        newRefinement
+                                                                    ) =>
+                                                                        updateCharacterState(
+                                                                            {
+                                                                                characterConstellation:
+                                                                                    parseInt(
+                                                                                        newRefinement
+                                                                                    ),
+                                                                            }
+                                                                        )
+                                                                    }
+                                                                />
+                                                            </div>
+                                                        </>
+                                                    )}
+                                                {/* 
                                                 <div
                                                     className="hidden md:flex md:w-full md:items-center"
                                                     key={`constellation-select-${kebabCase(

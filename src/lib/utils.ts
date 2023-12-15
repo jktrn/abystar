@@ -76,8 +76,8 @@ const compareElement = (a: string, b: string): number => {
 }
 
 const kebabCase = (str: string) => {
-    const cleanedString = str.replace(/[^a-zA-Z0-9\s]/g, '')
-    return cleanedString.replace(/\s+/g, '-').toLowerCase()
+    const cleanedString = str.replace(/[^a-zA-Z0-9\s-]/g, '')
+    return cleanedString.replace(/[\s-]+/g, '-').toLowerCase()
 }
 
 function clamp(number: number, min: number, max: number) {

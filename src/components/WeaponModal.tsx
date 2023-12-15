@@ -60,12 +60,12 @@ const WeaponModal = ({
                     {rawWeapons.map((rawWeapon) => (
                         <Image
                             key={rawWeapon.name}
-                            src={rawWeapon.image}
+                            src={`/images/weapons/${kebabCase(rawWeapon.name)}.png`}
                             alt={rawWeapon.name}
                             onClick={() => handleWeaponSelect(rawWeapon.name)}
                             className="cursor-pointer rounded object-cover hover:scale-105"
-                            width={70}
-                            height={70}
+                            width={100}
+                            height={100}
                         />
                     ))}
                 </div>

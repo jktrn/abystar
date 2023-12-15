@@ -1,13 +1,14 @@
 import { CharacterState } from '@/interfaces/Character'
 import Image from 'next/image'
 import { HTMLAttributes, memo } from 'react'
+import { levelOptions, kebabCase } from '@/lib'
 
 interface WeaponImageProps extends HTMLAttributes<HTMLDivElement> {
     characterState: CharacterState
 }
 
 const WeaponImage = ({ characterState, ...props }: WeaponImageProps) => {
-    if (!characterState.weapon) {
+    if (!characterState.weapon || !characterState.weaponLevel) {
         return (
             <div
                 style={{
@@ -29,19 +30,22 @@ const WeaponImage = ({ characterState, ...props }: WeaponImageProps) => {
         )
     }
 
-    const backgroundImage = `/images/item-backgrounds/${characterState.weapon.rarity}-star.png`
     // const typeIcon = `/images/normal-attacks/${type.toLowerCase()}.svg`
+    const isAwakened = levelOptions.indexOf(characterState.weaponLevel) > 1
+    const weaponImage = isAwakened
+        ? `${kebabCase(characterState.weapon.name)}-awaken`
+        : kebabCase(characterState.weapon.name)
 
     return (
         <div
             style={{
-                backgroundImage: `url(${backgroundImage})`,
+                backgroundImage: `url(/images/item-backgrounds/${characterState.weapon.rarity}-star.png)`,
             }}
             className="relative h-[148px] w-[148px] cursor-pointer rounded-lg bg-cover bg-center duration-100 ease-in hover:scale-105"
             {...props}
         >
             <Image
-                src={characterState.weapon.image}
+                src={`/images/weapons/${weaponImage}.png`}
                 alt="weapon"
                 className="object-fit cursor-pointer rounded-lg duration-100 ease-in"
                 width={148}
