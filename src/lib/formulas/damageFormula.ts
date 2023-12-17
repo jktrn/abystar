@@ -10,6 +10,7 @@ const damageFormula = (
     additiveBonusStat: string[],
     multiplicativeBonusStat: string[],
     critRateBonusStat: string[],
+    critDamageBonusStat: string[],
     enemyResistances: BaseStat,
     damageType: string
 ) => {
@@ -32,6 +33,11 @@ const damageFormula = (
             critRateBonusStat,
             characterAttributes
         )
+        
+        const critDamageBonusStatValue = calculateStatValue(
+            critDamageBonusStat,
+            characterAttributes
+        )
 
         const baseDamage =
             attributeValues.reduce(
@@ -47,7 +53,7 @@ const damageFormula = (
         const critDamage =
             baseDamage *
             multiplicativeBonusStatValue *
-            (1 + characterAttributes['CRIT DMG']) *
+            (1 + characterAttributes['CRIT DMG'] + critDamageBonusStatValue) *
             enemyResistances.defenseMultiplier *
             enemyResistances.resistance
         const averageDamage =
@@ -55,7 +61,7 @@ const damageFormula = (
             multiplicativeBonusStatValue *
             (1 +
                 clamp((characterAttributes['CRIT Rate'] + critRateBonusStatValue), 0, 1) *
-                    characterAttributes['CRIT DMG']) *
+                    (characterAttributes['CRIT DMG'] + critDamageBonusStatValue)) *
             enemyResistances.defenseMultiplier *
             enemyResistances.resistance
 
