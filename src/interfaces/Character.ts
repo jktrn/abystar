@@ -95,6 +95,8 @@ export interface TalentScalingData {
     attribute?: string[]
     additiveBonusStat?: string[]
     multiplicativeBonusStat?: string[]
+    critRateBonusStat?: string[]
+    critDamageBonusStat?: string[]
     damageType?: string
     outputType?: FormulaOutputType
     minConstellation?: number

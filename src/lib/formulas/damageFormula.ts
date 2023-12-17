@@ -9,6 +9,8 @@ const damageFormula = (
     attribute: string[],
     additiveBonusStat: string[],
     multiplicativeBonusStat: string[],
+    critRateBonusStat: string[],
+    critDamageBonusStat: string[],
     enemyResistances: BaseStat,
     damageType: string
 ) => {
@@ -27,6 +29,16 @@ const damageFormula = (
                 characterAttributes
             ) + 1 // Add 1 because it's a multiplier
 
+        const critRateBonusStatValue = calculateStatValue(
+            critRateBonusStat,
+            characterAttributes
+        )
+        
+        const critDamageBonusStatValue = calculateStatValue(
+            critDamageBonusStat,
+            characterAttributes
+        )
+
         const baseDamage =
             attributeValues.reduce(
                 (acc, statValue, index) => acc + statValue * scalingValues[index],
@@ -41,15 +53,15 @@ const damageFormula = (
         const critDamage =
             baseDamage *
             multiplicativeBonusStatValue *
-            (1 + characterAttributes['CRIT DMG']) *
+            (1 + characterAttributes['CRIT DMG'] + critDamageBonusStatValue) *
             enemyResistances.defenseMultiplier *
             enemyResistances.resistance
         const averageDamage =
             baseDamage *
             multiplicativeBonusStatValue *
             (1 +
-                clamp(characterAttributes['CRIT Rate'], 0, 1) *
-                    characterAttributes['CRIT DMG']) *
+                clamp((characterAttributes['CRIT Rate'] + critRateBonusStatValue), 0, 1) *
+                    (characterAttributes['CRIT DMG'] + critDamageBonusStatValue)) *
             enemyResistances.defenseMultiplier *
             enemyResistances.resistance
 

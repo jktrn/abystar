@@ -59,6 +59,8 @@ function calculateDamage(
                         attribute,
                         additiveBonusStat = [],
                         multiplicativeBonusStat = [],
+                        critRateBonusStat = [],
+                        critDamageBonusStat = [],
                         damageType,
                         outputType,
                     } = aspectTalentScalings
@@ -75,6 +77,8 @@ function calculateDamage(
                                 attribute,
                                 additiveBonusStat,
                                 multiplicativeBonusStat,
+                                critRateBonusStat,
+                                critDamageBonusStat,
                                 enemyResistances,
                                 damageType
                             )

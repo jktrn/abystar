@@ -114,6 +114,7 @@ const talentScalings: TalentScaling = {
                 'Elemental Skill DMG Bonus',
                 'Tri-Karma Purification DMG Bonus',
             ],
+            critRateBonusStat: ['Elemental Skill CRIT Rate'],
             damageType: 'Dendro',
         },
         'Tri-Karma Purification: Karmic Oblivion DMG': {
