@@ -1,33 +1,28 @@
 import React from 'react'
-import { Character } from '@/interfaces/Character'
+import { CharacterState } from '@/interfaces/Character'
 import CustomSelect from './CustomSelect'
 import Image from 'next/image'
 import { getTalentOptions, kebabCase } from '@/lib'
 
 interface TalentSelectProps {
-    character: Character
-    talentLevels: number[]
-    effectiveTalentLevels: number[]
+    characterState: CharacterState
     setTalentLevels: (value: number[]) => void
 }
 
-const TalentSelect = ({
-    character,
-    talentLevels,
-    effectiveTalentLevels,
-    setTalentLevels,
-}: TalentSelectProps) => {
+const TalentSelect = ({ characterState, setTalentLevels }: TalentSelectProps) => {
+    //TODO: this is scuffed
     const skillIcons = [
-        `/images/normal-attacks/${kebabCase(character.weapon)}.png`,
-        `/images/characters/${kebabCase(character.name)}-skill.png`,
-        `/images/characters/${kebabCase(character.name)}-burst.png`,
+        `/images/normal-attacks/${kebabCase(characterState.character.weapon)}.png`,
+        `/images/characters/${kebabCase(characterState.character.name)}-skill.png`,
+        `/images/characters/${kebabCase(characterState.character.name)}-burst.png`,
     ]
 
     return (
         <div className="ml-4 mt-4 flex flex-row flex-wrap justify-center gap-2 md:mt-0 md:flex-col md:justify-end">
-            {character.talents.map((talent, index) => {
+            {characterState.character.talents.map((talent, index) => {
                 const isAltered =
-                    effectiveTalentLevels[index] !== talentLevels[index]
+                    characterState.effectiveTalentLevels[index] !==
+                    characterState.characterTalentLevels[index]
 
                 return (
                     <div
@@ -45,12 +40,16 @@ const TalentSelect = ({
                         </div>
                         <CustomSelect
                             key={`talent-select-${kebabCase(talent.name)}-${
-                                effectiveTalentLevels[index]
+                                characterState.effectiveTalentLevels[index]
                             }`}
                             options={getTalentOptions}
-                            value={effectiveTalentLevels[index].toString()}
+                            value={characterState.effectiveTalentLevels[
+                                index
+                            ].toString()}
                             onChange={(value) => {
-                                const newTalentLevels = [...talentLevels]
+                                const newTalentLevels = [
+                                    ...characterState.characterTalentLevels,
+                                ]
                                 newTalentLevels[index] = parseInt(value, 10)
                                 setTalentLevels(newTalentLevels)
                             }}

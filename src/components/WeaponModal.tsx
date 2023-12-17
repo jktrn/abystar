@@ -28,10 +28,11 @@ const WeaponModal = ({
 }: WeaponModalProps) => {
     const [rawWeapons, setRawWeapons] = useState<RawWeapon[]>([])
 
+    // Sorts by rarity
     useEffect(() => {
-        const weaponsArray = Object.values(weaponData).filter(
-            (weapon) => weapon.type === characterWeaponType
-        )
+        const weaponsArray = Object.values(weaponData)
+            .filter((weapon) => weapon.type === characterWeaponType)
+            .sort((a, b) => b.rarity - a.rarity)
         setRawWeapons(weaponsArray)
     }, [characterWeaponType])
 
@@ -58,15 +59,24 @@ const WeaponModal = ({
                 </DialogHeader>
                 <div className="flex flex-wrap justify-center gap-[6px]">
                     {rawWeapons.map((rawWeapon) => (
-                        <Image
+                        <div
                             key={rawWeapon.name}
-                            src={`/images/weapons/${kebabCase(rawWeapon.name)}.png`}
-                            alt={rawWeapon.name}
+                            style={{
+                                backgroundImage: `url(/images/item-backgrounds/${rawWeapon.rarity}-star.png)`,
+                            }}
+                            className="relative cursor-pointer rounded-lg bg-cover bg-center duration-100 ease-in hover:scale-105"
                             onClick={() => handleWeaponSelect(rawWeapon.name)}
-                            className="cursor-pointer rounded object-cover hover:scale-105"
-                            width={100}
-                            height={100}
-                        />
+                        >
+                            <Image
+                                src={`/images/weapons/${kebabCase(
+                                    rawWeapon.name
+                                )}.png`}
+                                alt={rawWeapon.name}
+                                width={100}
+                                height={100}
+                                className="drop-shadow"
+                            />
+                        </div>
                     ))}
                 </div>
             </DialogContent>

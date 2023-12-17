@@ -22,9 +22,15 @@ const CustomSelect = ({
     ...props
 }: CustomSelectProps) => {
     const alteredClass = isAltered ? 'custom-select-altered' : ''
+    const isDisabled = options.length === 0
 
     return (
-        <Select onValueChange={onChange} defaultValue={value} {...props}>
+        <Select
+            onValueChange={onChange}
+            defaultValue={value}
+            disabled={isDisabled}
+            {...props}
+        >
             <SelectTrigger className={alteredClass}>
                 <SelectValue
                     placeholder={

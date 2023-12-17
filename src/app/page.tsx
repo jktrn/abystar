@@ -12,19 +12,19 @@ import {
     WeaponImage,
     WeaponModal,
 } from '@/components'
+import WeaponBonuses from '@/components/WeaponBonuses'
 import {
     Character,
     CharacterAttributes,
     CharacterState,
     DamageResult,
 } from '@/interfaces/Character'
-import { Weapon } from '@/interfaces/Weapon'
 import {
     applySpecialBonuses,
     calculateDamage,
     defaultCharacterAttributes,
-    displayStats,
     getConstellationOptions,
+    getDefaultWeapon,
     getLevelOptions,
     getRefinementOptions,
     getUpdatedBonuses,
@@ -41,26 +41,35 @@ export default function Home() {
     const [isWeaponModalOpen, setWeaponModalOpen] = useState(false)
     const [damageResults, setDamageResults] = useState<DamageResult[] | null>(null)
 
-    const handleCharacterSelect = (selectedCharacter: Character) => {
-        const initialState: CharacterState = {
-            character: selectedCharacter,
-            characterLevel: '90/90',
-            characterConstellation: 0,
-            characterActiveBonuses: selectedCharacter.characterBonuses.filter(
-                (bonus) => bonus.enabled ?? false
-            ),
-            // User-selected talent levels (capped at 1-10)
-            characterTalentLevels: [10, 10, 10],
-            // Talent levels post-bonus (e.g. C3, C5, Childe passive)
-            effectiveTalentLevels: [10, 10, 10],
+    const handleCharacterSelect = async (selectedCharacter: Character) => {
+        const defaultWeapon = await getDefaultWeapon(selectedCharacter.weapon)
+
+        try {
+            const initialState: CharacterState = {
+                character: selectedCharacter,
+                characterLevel: '90/90',
+                characterConstellation: 0,
+                characterActiveBonuses: selectedCharacter.characterBonuses.filter(
+                    (bonus) => bonus.enabled ?? false
+                ),
+                // User-selected talent levels (capped at 1-10)
+                characterTalentLevels: [10, 10, 10],
+                // Talent levels post-bonus (e.g. C3, C5, Childe passive)
+                effectiveTalentLevels: [10, 10, 10],
+                weapon: defaultWeapon,
+                weaponLevel: Object.keys(defaultWeapon.baseStats).at(-1) ?? '90/90',
+                weaponRefinement: 1,
+            }
+
+            const [updatedState, updatedAttributes] =
+                recalculateStateAndAttributes(initialState)
+
+            setCharacterState(updatedState)
+            setCharacterAttributes(updatedAttributes)
+            setCharacterModalOpen(false)
+        } catch (error) {
+            console.error('Error loading character data:', error)
         }
-
-        const [updatedState, updatedAttributes] =
-            recalculateStateAndAttributes(initialState)
-
-        setCharacterState(updatedState)
-        setCharacterAttributes(updatedAttributes)
-        setCharacterModalOpen(false)
     }
 
     // Handling any changes user makes to character state
@@ -105,7 +114,7 @@ export default function Home() {
             <main className="flex h-screen flex-col p-2 lg:flex-row lg:overflow-y-hidden">
                 {characterState && (
                     <>
-                        <div className="m-2 flex-1 rounded-lg border lg:min-w-max lg:max-w-max lg:overflow-auto">
+                        <div className="m-2 flex-1 rounded-lg border lg:min-w-max lg:overflow-auto">
                             <div className="flex flex-col rounded-lg">
                                 <h2 className="rounded-t-lg border-b bg-secondary/25 px-4 py-3 text-lg font-bold">
                                     Character
@@ -142,8 +151,7 @@ export default function Home() {
                                                         <CustomSelect
                                                             // Changing keys forces re-render
                                                             key={`character-level-select-${kebabCase(
-                                                                characterState
-                                                                    .character.name
+                                                                characterState.characterLevel
                                                             )}`}
                                                             options={getLevelOptions(
                                                                 characterState.character
@@ -165,8 +173,7 @@ export default function Home() {
                                                         Constellation:
                                                         <CustomSelect
                                                             key={`constellation-select-${kebabCase(
-                                                                characterState
-                                                                    .character.name
+                                                                characterState.characterConstellation.toString()
                                                             )}`}
                                                             options={getConstellationOptions(
                                                                 characterState.character
@@ -190,17 +197,13 @@ export default function Home() {
                                                     <div
                                                         className="hidden md:flex md:w-full md:items-center"
                                                         key={`constellation-select-${kebabCase(
-                                                            characterState.character
-                                                                .name
+                                                            characterState.characterConstellation.toString()
                                                         )}`}
                                                     >
                                                         Constellation:
                                                         <ConstellationPopover
                                                             characterState={
                                                                 characterState
-                                                            }
-                                                            value={
-                                                                characterState.characterConstellation
                                                             }
                                                             onChange={(
                                                                 newConstellation
@@ -218,13 +221,7 @@ export default function Home() {
                                             </div>
                                         </div>
                                         <TalentSelect
-                                            character={characterState.character}
-                                            talentLevels={
-                                                characterState.characterTalentLevels
-                                            }
-                                            effectiveTalentLevels={
-                                                characterState.effectiveTalentLevels
-                                            }
+                                            characterState={characterState}
                                             setTalentLevels={(newTalentLevels) =>
                                                 updateCharacterState({
                                                     characterTalentLevels:
@@ -234,18 +231,12 @@ export default function Home() {
                                         />
                                     </div>
                                     <CharacterBonuses
-                                        character={characterState.character}
-                                        activeBonuses={
-                                            characterState.characterActiveBonuses
-                                        }
+                                        characterState={characterState}
                                         setActiveBonuses={(newActiveBonuses) =>
                                             updateCharacterState({
                                                 characterActiveBonuses:
                                                     newActiveBonuses,
                                             })
-                                        }
-                                        constellation={
-                                            characterState.characterConstellation
                                         }
                                     />
                                 </div>
@@ -254,19 +245,18 @@ export default function Home() {
                                     Attributes
                                 </h2>
                                 <AttributesTable
-                                    attributes={characterAttributes}
+                                    characterAttributes={characterAttributes}
                                     initialAttributes={applySpecialBonuses({
                                         ...defaultCharacterAttributes,
                                         ...characterState.character.baseStats[
                                             characterState.characterLevel
                                         ],
                                     })}
-                                    displayStats={displayStats}
                                 />
                             </div>
                         </div>
 
-                        <div className="m-2 flex-1 rounded-lg border lg:min-w-max lg:max-w-max lg:overflow-auto">
+                        <div className="m-2 flex-1 rounded-lg border lg:min-w-max lg:overflow-auto">
                             <h2 className="rounded-t-lg border-b bg-secondary/25 px-4 py-3 text-lg font-bold">
                                 Weapon
                             </h2>
@@ -283,166 +273,101 @@ export default function Home() {
                                         </form>
                                         <div className="flex flex-col items-center gap-2 md:items-start">
                                             <div className="flex flex-col">
-                                                {characterState.weapon ? (
-                                                    <>
-                                                        <span className="text-center text-xl font-bold md:line-clamp-1 md:justify-normal md:text-left">
-                                                            {
-                                                                characterState.weapon
-                                                                    .name
-                                                            }
-                                                        </span>
-                                                        <span className="text-md flex justify-center text-muted-foreground md:justify-normal">
-                                                            {'★'.repeat(
-                                                                characterState.weapon
-                                                                    .rarity
-                                                            )}
-                                                        </span>
-                                                    </>
-                                                ) : (
-                                                    <>
-                                                        <span className="text-center text-xl font-bold md:line-clamp-1 md:justify-normal md:text-left">
-                                                            Select a Weapon
-                                                        </span>
-                                                        <span className="text-md flex justify-center text-muted-foreground md:justify-normal">
-                                                            n/a
-                                                        </span>
-                                                    </>
-                                                )}
+                                                <span className="text-center text-xl font-bold md:line-clamp-1 md:justify-normal md:text-left">
+                                                    {characterState.weapon.name}
+                                                </span>
+                                                <span className="text-md flex justify-center text-muted-foreground md:justify-normal">
+                                                    {'★'.repeat(
+                                                        characterState.weapon.rarity
+                                                    )}
+                                                </span>
                                             </div>
                                             <div className="flex max-w-max flex-col items-center gap-2 md:items-start">
-                                                {characterState.weapon &&
-                                                    characterState.weaponLevel &&
-                                                    characterState.weaponRefinement && (
-                                                        <>
-                                                            <div className="space-between flex w-full items-center gap-2">
-                                                                Ascension:
-                                                                <CustomSelect
-                                                                    // Changing keys forces re-render
-                                                                    key={`weapon-level-select-${kebabCase(
-                                                                        characterState
-                                                                            .weapon
-                                                                            .name
-                                                                    )}`}
-                                                                    options={getLevelOptions(
-                                                                        characterState.character // getLevelOptions only takes Character
-                                                                    )}
-                                                                    value={
-                                                                        characterState.weaponLevel
-                                                                    }
-                                                                    onChange={(
-                                                                        newLevel
-                                                                    ) =>
-                                                                        updateCharacterState(
-                                                                            {
-                                                                                weaponLevel:
-                                                                                    newLevel,
-                                                                            }
-                                                                        )
-                                                                    }
-                                                                />
-                                                            </div>
-                                                            <div className="space-between flex w-full items-center gap-2">
-                                                                Refinement:
-                                                                <CustomSelect
-                                                                    key={`constellation-select-${kebabCase(
-                                                                        characterState
-                                                                            .weapon
-                                                                            .name
-                                                                    )}`}
-                                                                    options={
-                                                                        getRefinementOptions
-                                                                    }
-                                                                    value={characterState.weaponRefinement.toString()}
-                                                                    onChange={(
-                                                                        newRefinement
-                                                                    ) =>
-                                                                        updateCharacterState(
-                                                                            {
-                                                                                weaponRefinement:
-                                                                                    parseInt(
-                                                                                        newRefinement
-                                                                                    ),
-                                                                            }
-                                                                        )
-                                                                    }
-                                                                />
-                                                            </div>
-                                                        </>
-                                                    )}
-                                                {/* 
-                                                <div
-                                                    className="hidden md:flex md:w-full md:items-center"
-                                                    key={`constellation-select-${kebabCase(
-                                                        characterState.character
-                                                            .name
-                                                    )}`}
-                                                >
-                                                    Constellation:
-                                                    <ConstellationPopover
-                                                        characterState={
-                                                            characterState
-                                                        }
+                                                <div className="space-between flex w-full items-center gap-2">
+                                                    Ascension:
+                                                    <CustomSelect
+                                                        // Changing keys forces re-render
+                                                        key={`weapon-level-select-${kebabCase(
+                                                            characterState.weaponLevel
+                                                        )}`}
+                                                        options={getLevelOptions(
+                                                            characterState.weapon // getLevelOptions only takes Character
+                                                        )}
                                                         value={
-                                                            characterState.characterConstellation
+                                                            characterState.weaponLevel
                                                         }
-                                                        onChange={(
-                                                            newConstellation
-                                                        ) =>
-                                                            updateCharacterState(
-                                                                'characterConstellation',
-                                                                newConstellation
-                                                            )
+                                                        onChange={(newLevel) =>
+                                                            updateCharacterState({
+                                                                weaponLevel:
+                                                                    newLevel,
+                                                            })
                                                         }
                                                     />
-                                                </div> */}
+                                                </div>
+                                                <div className="space-between flex w-full items-center gap-2">
+                                                    Refinement:
+                                                    <CustomSelect
+                                                        key={`constellation-select-${kebabCase(
+                                                            characterState.weaponRefinement.toString()
+                                                        )}`}
+                                                        options={getRefinementOptions(
+                                                            characterState.weapon
+                                                        )}
+                                                        value={characterState.weaponRefinement.toString()}
+                                                        onChange={(newRefinement) =>
+                                                            updateCharacterState({
+                                                                weaponRefinement:
+                                                                    parseInt(
+                                                                        newRefinement
+                                                                    ),
+                                                            })
+                                                        }
+                                                    />
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div className="flex flex-col justify-end">
-                                        {characterState.weapon &&
-                                            characterState.weaponLevel && (
+                                        {/* {characterState.weapon &&
+                                            characterState.weaponLevel &&
+                                            (
                                                 <>
                                                     <p>
                                                         {
                                                             Object.values(
                                                                 characterState.weapon
                                                                     .baseStats[
-                                                                    characterState
-                                                                        .weaponLevel
+                                                                characterState
+                                                                    .weaponLevel
                                                                 ]
                                                             )[0]
                                                         }
                                                     </p>
-                                                    <p>
-                                                        {
-                                                            Object.values(
-                                                                characterState.weapon
-                                                                    .baseStats[
+                                                    {Object.values(characterState.weapon.baseStats[characterState.weaponLevel])[1] && (
+                                                        <p>
+                                                            {
+                                                                Object.values(
+                                                                    characterState.weapon
+                                                                        .baseStats[
                                                                     characterState
                                                                         .weaponLevel
-                                                                ]
-                                                            )[1]
-                                                        }
-                                                    </p>
+                                                                    ]
+                                                                )[1]
+                                                            }
+                                                        </p>
+                                                    )}
                                                 </>
-                                            )}
+                                            )} */}
                                     </div>
                                 </div>
-                                {/* <CharacterBonuses
-                                    character={characterState.character}
-                                    activeBonuses={
-                                        characterState.characterActiveBonuses
-                                    }
+                                <WeaponBonuses
+                                    characterState={characterState}
                                     setActiveBonuses={(newActiveBonuses) =>
-                                        updateCharacterState(
-                                            'characterActiveBonuses',
-                                            newActiveBonuses
-                                        )
+                                        updateCharacterState({
+                                            characterActiveBonuses: newActiveBonuses,
+                                        })
                                     }
-                                    constellation={
-                                        characterState.characterConstellation
-                                    }
-                                /> */}
+                                />
                             </div>
                             <h2 className="border-y bg-secondary/25 px-4 py-3 text-lg font-bold">
                                 Artifacts
@@ -456,7 +381,7 @@ export default function Home() {
                             <div className="p-4">Party Buffs</div>
                         </div>
 
-                        <div className="m-2 flex-1 rounded-lg">
+                        <div className="m-2 flex-1 rounded-lg lg:min-w-max lg:overflow-auto">
                             <div className="flex h-full flex-col rounded-lg border">
                                 <h2 className="rounded-t-lg border-b bg-secondary/25 px-4 py-3 text-lg font-bold">
                                     Results
@@ -477,10 +402,18 @@ export default function Home() {
                     open={isWeaponModalOpen}
                     onOpenChange={setWeaponModalOpen}
                     setWeapon={(selectedWeapon) => {
+                        const supportsRefinement =
+                            selectedWeapon.baseStats['90/90'] !== undefined
+
+                        // Update state with the new weapon and appropriate refinement level
                         updateCharacterState({
                             weapon: selectedWeapon,
-                            weaponLevel: '90/90',
-                            weaponRefinement: 1,
+                            weaponLevel:
+                                Object.keys(selectedWeapon.baseStats).at(-1) ??
+                                '90/90',
+                            weaponRefinement: supportsRefinement
+                                ? characterState?.weaponRefinement
+                                : 1,
                         })
                         setWeaponModalOpen(false)
                     }}

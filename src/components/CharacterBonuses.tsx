@@ -1,52 +1,56 @@
 'use client'
 
 import React, { useEffect, useState } from 'react'
-import CharacterBonusToggle from './CharacterBonusToggle'
-import { Bonus, Character } from '@/interfaces/Character'
+import BonusToggle from './BonusToggle'
+import { Bonus, CharacterState } from '@/interfaces/Character'
 import { ChevronDown } from 'lucide-react'
 import { handleBonusToggle } from '@/lib'
 
 interface CharacterBonusesProps {
-    character: Character
-    activeBonuses: Bonus[]
+    characterState: CharacterState
     setActiveBonuses: (bonuses: Bonus[]) => void
-    constellation: number
 }
 
 const CharacterBonuses = ({
-    character,
-    activeBonuses,
+    characterState,
     setActiveBonuses,
-    constellation,
 }: CharacterBonusesProps) => {
     const [isHiddenCollapsed, setIsHiddenCollapsed] = useState(true)
 
     // Update active bonuses when constellation changes (removing bonuses that are no longer available)
     useEffect(() => {
-        const updatedActiveBonuses = activeBonuses.filter(
+        const updatedActiveBonuses = characterState.characterActiveBonuses.filter(
             (bonus) =>
-                !bonus.minConstellation || bonus.minConstellation <= constellation
+                !bonus.minConstellation ||
+                bonus.minConstellation <= characterState.characterConstellation
         )
 
         const isChange =
-            updatedActiveBonuses.length !== activeBonuses.length ||
+            updatedActiveBonuses.length !==
+                characterState.characterActiveBonuses.length ||
             updatedActiveBonuses.some(
-                (bonus, index) => bonus.name !== activeBonuses[index].name
+                (bonus, index) =>
+                    bonus.name !== characterState.characterActiveBonuses[index].name
             )
 
         if (isChange) {
             setActiveBonuses(updatedActiveBonuses)
         }
-    }, [constellation, activeBonuses])
+    }, [
+        characterState.characterConstellation,
+        characterState.characterActiveBonuses,
+    ])
 
     const filterBonuses = (isHidden: boolean) =>
-        character.characterBonuses.filter((bonus) =>
+        characterState.character.characterBonuses.filter((bonus) =>
             isHidden
                 ? (bonus.minConstellation &&
-                      bonus.minConstellation > constellation) ||
+                      bonus.minConstellation >
+                          characterState.characterConstellation) ||
                   bonus.enabled
                 : (!bonus.minConstellation ||
-                      bonus.minConstellation <= constellation) &&
+                      bonus.minConstellation <=
+                          characterState.characterConstellation) &&
                   !bonus.enabled
         )
 
@@ -54,21 +58,20 @@ const CharacterBonuses = ({
         handleBonusToggle(
             bonus,
             bonusStacks,
-            activeBonuses,
+            characterState.characterActiveBonuses,
             setActiveBonuses,
-            constellation
+            characterState.characterConstellation
         )
     }
 
     return (
         <div className="mt-4 flex flex-col gap-2">
             {filterBonuses(false).map((bonus) => (
-                <CharacterBonusToggle
+                <BonusToggle
                     key={bonus.name}
-                    character={character}
+                    characterState={characterState}
                     bonus={bonus}
                     onToggle={handleToggle}
-                    constellation={constellation}
                 />
             ))}
 
@@ -88,12 +91,11 @@ const CharacterBonuses = ({
                     {!isHiddenCollapsed && (
                         <div className="mt-4 flex flex-col gap-2">
                             {filterBonuses(true).map((bonus) => (
-                                <CharacterBonusToggle
+                                <BonusToggle
                                     key={bonus.name}
-                                    character={character}
+                                    characterState={characterState}
                                     bonus={bonus}
                                     onToggle={handleToggle}
-                                    constellation={constellation}
                                 />
                             ))}
                         </div>

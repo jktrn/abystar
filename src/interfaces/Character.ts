@@ -59,7 +59,7 @@ export interface Character extends RawCharacter {
 export interface Bonus {
     name: string
     description: JSX.Element
-    icon: string
+    icon?: string
     effect: Effect
     maxStacks?: number
     currentStacks?: number
@@ -109,9 +109,9 @@ export interface CharacterState {
     characterActiveBonuses: Bonus[]
     characterTalentLevels: number[]
     effectiveTalentLevels: number[]
-    weapon?: Weapon
-    weaponLevel?: string
-    weaponRefinement?: number
+    weapon: Weapon
+    weaponLevel: string
+    weaponRefinement: number
 }
 
 export interface CharacterAttributes {

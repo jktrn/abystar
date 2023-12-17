@@ -1,7 +1,12 @@
 import { CharacterAttributes } from '@/interfaces/Character'
 import Image from 'next/image'
 import { useMemo } from 'react'
-import { attributeSections, availableIcons, parseScalingValue } from '@/lib'
+import {
+    attributeSections,
+    availableIcons,
+    displayStats,
+    parseScalingValue,
+} from '@/lib'
 import { Fragment } from 'react'
 import {
     Table,
@@ -13,20 +18,18 @@ import {
 } from '@/components/ui/table'
 
 interface CharacterAttributeProps {
-    attributes: CharacterAttributes | null
+    characterAttributes: CharacterAttributes | null
     initialAttributes: CharacterAttributes
-    displayStats: string[]
 }
 
 const AttributesTable = ({
-    attributes,
+    characterAttributes,
     initialAttributes,
-    displayStats,
 }: CharacterAttributeProps) => {
     const data = useMemo(
         () =>
-            attributes
-                ? Object.entries(attributes)
+            characterAttributes
+                ? Object.entries(characterAttributes)
                       .filter(([key]) => displayStats.includes(key))
                       .map(([key, value]) => {
                           let formattedValue
@@ -58,10 +61,10 @@ const AttributesTable = ({
                           }
                       })
                 : [],
-        [attributes, displayStats, initialAttributes]
+        [characterAttributes, displayStats, initialAttributes]
     )
 
-    if (!attributes) return null
+    if (!characterAttributes) return null
 
     return (
         <Table className="w-full text-sm">
@@ -90,7 +93,7 @@ const AttributesTable = ({
                                 <TableRow
                                     key={rowIndex}
                                     className={
-                                        attributes[row.stat] === 0
+                                        characterAttributes[row.stat] === 0
                                             ? 'brightness-50'
                                             : ''
                                     }
@@ -126,7 +129,9 @@ const AttributesTable = ({
                                             color:
                                                 row.difference === 0 ||
                                                 row.difference === '0.0%'
-                                                    ? attributes[row.stat] === 0
+                                                    ? characterAttributes[
+                                                          row.stat
+                                                      ] === 0
                                                         ? undefined
                                                         : '#A1A1AA'
                                                     : typeof row.difference ===
@@ -145,7 +150,7 @@ const AttributesTable = ({
                                     >
                                         {row.difference === 0 ||
                                         row.difference === '0.0%'
-                                            ? attributes[row.stat] === 0
+                                            ? characterAttributes[row.stat] === 0
                                                 ? row.difference
                                                 : '+0'
                                             : typeof row.difference === 'number'

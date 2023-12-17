@@ -1,9 +1,38 @@
 import { Weapon } from '@/interfaces/Weapon'
-// import { Bonus } from '@/interfaces/Character'
+import { Bonus } from '@/interfaces/Character'
 
-// const weaponBonus: Bonus = {
-// TODO: Implement
-// }
+const weaponBonus: Bonus = {
+    name: "A Thousand Nights' Dawnsong",
+    description: (
+        <span>
+            Party members other than the equipping character will provide the
+            equipping character with buffs based on whether their Elemental Type is
+            the same as the latter or not. If their Elemental Types are the same,
+            increase Elemental Mastery by 32. If not, increase the equipping
+            character&apos;s DMG Bonus from their Elemental Type by 10%. The
+            aforementioned effects can have 3 stacks. Additionally, all nearby party
+            members other than the equipping character will have their Elemental
+            Mastery increased by 40. Multiple such effects from multiple such weapons
+            can stack.
+        </span>
+    ),
+    effect: (attributes, initialAttributes, talentLevels, currentStacks) => {
+        if (!currentStacks || !initialAttributes) return { attributes }
+
+        const elementalMasteryOptions = [0, 125, 150, 175, 200, 225, 250]
+
+        const newAttributes = {
+            ...attributes,
+            'Elemental Mastery':
+                attributes['Elemental Mastery'] +
+                elementalMasteryOptions[currentStacks],
+        }
+
+        return { attributes: newAttributes }
+    },
+    maxStacks: 6,
+    stackOptions: ['Off', '125', '150', '175', '200', '225', '250'],
+}
 
 const AThousandFloatingDreams: Weapon = {
     name: 'A Thousand Floating Dreams',
@@ -100,7 +129,7 @@ const AThousandFloatingDreams: Weapon = {
             level: 5,
         },
     ],
-    // weaponBonus
+    weaponBonus,
 }
 
 export default AThousandFloatingDreams
