@@ -91,7 +91,7 @@ const BonusToggle = ({
                     onChange={() => handleStackChange(currentStacks > 0 ? 0 : 1)}
                     uncheckedIcon={false}
                     checkedIcon={false}
-                    color={
+                    onColor={
                         elementColors[
                             characterState.character.vision.toLowerCase() as keyof typeof elementColors
                         ]

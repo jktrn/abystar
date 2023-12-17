@@ -89,6 +89,16 @@ const DamageTable = ({ damageResults }: DamageTableProps) => {
         return undefined
     }
 
+    if (tableData.length === 0) {
+        return (
+            <div className="m-4 flex flex-col gap-2">
+                <span className="rounded-md bg-destructive/25 p-2 text-center">
+                    This character is unimplemented! No results.
+                </span>
+            </div>
+        )
+    }
+
     return (
         <Table className="w-full text-sm">
             <TableHeader>
