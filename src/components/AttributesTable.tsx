@@ -108,7 +108,7 @@ const AttributesTable = ({
                                             ) && (
                                                 <Image
                                                     className="h-auto w-auto"
-                                                    src={`/images/characterAttributes/${row.stat
+                                                    src={`/images/attributes/${row.stat
                                                         .toLowerCase()
                                                         .split(' ')
                                                         .join('-')}.png`}

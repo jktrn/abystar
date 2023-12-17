@@ -59,18 +59,16 @@ const WeaponModal = ({
                 <div className="flex flex-wrap justify-center gap-[6px]">
                     {rawWeapons.map((rawWeapon) => (
                         <div
+                            key={rawWeapon.name}
                             style={{
                                 backgroundImage: `url(/images/item-backgrounds/${rawWeapon.rarity}-star.png)`,
                             }}
                             className="relative cursor-pointer rounded-lg bg-cover bg-center duration-100 ease-in hover:scale-105"
+                            onClick={() => handleWeaponSelect(rawWeapon.name)}
                         >
                             <Image
-                                key={rawWeapon.name}
-                                src={`/images/weapons/${kebabCase(
-                                    rawWeapon.name
-                                )}.png`}
+                                src={`/images/weapons/${kebabCase(rawWeapon.name)}.png`}
                                 alt={rawWeapon.name}
-                                onClick={() => handleWeaponSelect(rawWeapon.name)}
                                 width={100}
                                 height={100}
                                 className="drop-shadow"
@@ -78,6 +76,7 @@ const WeaponModal = ({
                         </div>
                     ))}
                 </div>
+
             </DialogContent>
         </Dialog>
     )
