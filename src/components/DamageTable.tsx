@@ -44,11 +44,11 @@ const DamageTable = ({ damageResults }: DamageTableProps) => {
                         aspect.damage.outputType === FormulaOutputType.Time
                             ? `${aspect.damage.outputValue?.toFixed(1)}s`
                             : aspect.damage.outputType ===
-                              FormulaOutputType.Percentage
-                            ? `${aspect.damage.outputValue?.toFixed(1)}%`
-                            : aspect.damage.outputValue
-                            ? Math.round(aspect.damage.outputValue)
-                            : 0
+                                FormulaOutputType.Percentage
+                              ? `${aspect.damage.outputValue?.toFixed(1)}%`
+                              : aspect.damage.outputValue
+                                ? Math.round(aspect.damage.outputValue)
+                                : 0
                     result.push({
                         name: aspect.aspectName,
                         average: outputValue,
