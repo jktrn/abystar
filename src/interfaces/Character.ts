@@ -109,9 +109,9 @@ export interface CharacterState {
     characterActiveBonuses: Bonus[]
     characterTalentLevels: number[]
     effectiveTalentLevels: number[]
-    weapon?: Weapon
-    weaponLevel?: string
-    weaponRefinement?: number
+    weapon: Weapon
+    weaponLevel: string
+    weaponRefinement: number
 }
 
 export interface CharacterAttributes {

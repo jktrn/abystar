@@ -28,6 +28,7 @@ const WeaponModal = ({
 }: WeaponModalProps) => {
     const [rawWeapons, setRawWeapons] = useState<RawWeapon[]>([])
 
+    // Sorts by rarity
     useEffect(() => {
         const weaponsArray = Object.values(weaponData)
             .filter((weapon) => weapon.type === characterWeaponType)
@@ -67,7 +68,9 @@ const WeaponModal = ({
                             onClick={() => handleWeaponSelect(rawWeapon.name)}
                         >
                             <Image
-                                src={`/images/weapons/${kebabCase(rawWeapon.name)}.png`}
+                                src={`/images/weapons/${kebabCase(
+                                    rawWeapon.name
+                                )}.png`}
                                 alt={rawWeapon.name}
                                 width={100}
                                 height={100}
@@ -76,7 +79,6 @@ const WeaponModal = ({
                         </div>
                     ))}
                 </div>
-
             </DialogContent>
         </Dialog>
     )

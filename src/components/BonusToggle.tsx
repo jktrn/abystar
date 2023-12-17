@@ -56,7 +56,6 @@ const BonusToggle = ({
                 <div className="flex flex-col text-center md:text-left">
                     <span className="text-md">{bonus.name}</span>
                     {isWeaponBonus &&
-                    characterState.weapon &&
                     characterState.weapon.refinements &&
                     characterState.weaponRefinement ? (
                         <span className="max-w-full break-words text-xs text-muted-foreground md:w-[21rem]">

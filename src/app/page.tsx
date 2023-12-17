@@ -24,6 +24,7 @@ import {
     calculateDamage,
     defaultCharacterAttributes,
     getConstellationOptions,
+    getDefaultWeapon,
     getLevelOptions,
     getRefinementOptions,
     getUpdatedBonuses,
@@ -40,26 +41,35 @@ export default function Home() {
     const [isWeaponModalOpen, setWeaponModalOpen] = useState(false)
     const [damageResults, setDamageResults] = useState<DamageResult[] | null>(null)
 
-    const handleCharacterSelect = (selectedCharacter: Character) => {
-        const initialState: CharacterState = {
-            character: selectedCharacter,
-            characterLevel: '90/90',
-            characterConstellation: 0,
-            characterActiveBonuses: selectedCharacter.characterBonuses.filter(
-                (bonus) => bonus.enabled ?? false
-            ),
-            // User-selected talent levels (capped at 1-10)
-            characterTalentLevels: [10, 10, 10],
-            // Talent levels post-bonus (e.g. C3, C5, Childe passive)
-            effectiveTalentLevels: [10, 10, 10],
+    const handleCharacterSelect = async (selectedCharacter: Character) => {
+        const defaultWeapon = await getDefaultWeapon(selectedCharacter.weapon)
+
+        try {
+            const initialState: CharacterState = {
+                character: selectedCharacter,
+                characterLevel: '90/90',
+                characterConstellation: 0,
+                characterActiveBonuses: selectedCharacter.characterBonuses.filter(
+                    (bonus) => bonus.enabled ?? false
+                ),
+                // User-selected talent levels (capped at 1-10)
+                characterTalentLevels: [10, 10, 10],
+                // Talent levels post-bonus (e.g. C3, C5, Childe passive)
+                effectiveTalentLevels: [10, 10, 10],
+                weapon: defaultWeapon,
+                weaponLevel: Object.keys(defaultWeapon.baseStats).at(-1) ?? '90/90',
+                weaponRefinement: 1,
+            }
+
+            const [updatedState, updatedAttributes] =
+                recalculateStateAndAttributes(initialState)
+
+            setCharacterState(updatedState)
+            setCharacterAttributes(updatedAttributes)
+            setCharacterModalOpen(false)
+        } catch (error) {
+            console.error('Error loading character data:', error)
         }
-
-        const [updatedState, updatedAttributes] =
-            recalculateStateAndAttributes(initialState)
-
-        setCharacterState(updatedState)
-        setCharacterAttributes(updatedAttributes)
-        setCharacterModalOpen(false)
     }
 
     // Handling any changes user makes to character state
@@ -141,8 +151,7 @@ export default function Home() {
                                                         <CustomSelect
                                                             // Changing keys forces re-render
                                                             key={`character-level-select-${kebabCase(
-                                                                characterState
-                                                                    .character.name
+                                                                characterState.characterLevel
                                                             )}`}
                                                             options={getLevelOptions(
                                                                 characterState.character
@@ -164,8 +173,7 @@ export default function Home() {
                                                         Constellation:
                                                         <CustomSelect
                                                             key={`constellation-select-${kebabCase(
-                                                                characterState
-                                                                    .character.name
+                                                                characterState.characterConstellation.toString()
                                                             )}`}
                                                             options={getConstellationOptions(
                                                                 characterState.character
@@ -189,8 +197,7 @@ export default function Home() {
                                                     <div
                                                         className="hidden md:flex md:w-full md:items-center"
                                                         key={`constellation-select-${kebabCase(
-                                                            characterState.character
-                                                                .name
+                                                            characterState.characterConstellation.toString()
                                                         )}`}
                                                     >
                                                         Constellation:
@@ -266,92 +273,57 @@ export default function Home() {
                                         </form>
                                         <div className="flex flex-col items-center gap-2 md:items-start">
                                             <div className="flex flex-col">
-                                                {characterState.weapon ? (
-                                                    <>
-                                                        <span className="text-center text-xl font-bold md:line-clamp-1 md:justify-normal md:text-left">
-                                                            {
-                                                                characterState.weapon
-                                                                    .name
-                                                            }
-                                                        </span>
-                                                        <span className="text-md flex justify-center text-muted-foreground md:justify-normal">
-                                                            {'★'.repeat(
-                                                                characterState.weapon
-                                                                    .rarity
-                                                            )}
-                                                        </span>
-                                                    </>
-                                                ) : (
-                                                    <>
-                                                        <span className="text-center text-xl font-bold md:line-clamp-1 md:justify-normal md:text-left">
-                                                            Select a Weapon
-                                                        </span>
-                                                        <span className="text-md flex justify-center text-muted-foreground md:justify-normal">
-                                                            n/a
-                                                        </span>
-                                                    </>
-                                                )}
+                                                <span className="text-center text-xl font-bold md:line-clamp-1 md:justify-normal md:text-left">
+                                                    {characterState.weapon.name}
+                                                </span>
+                                                <span className="text-md flex justify-center text-muted-foreground md:justify-normal">
+                                                    {'★'.repeat(
+                                                        characterState.weapon.rarity
+                                                    )}
+                                                </span>
                                             </div>
                                             <div className="flex max-w-max flex-col items-center gap-2 md:items-start">
-                                                {characterState.weapon &&
-                                                    characterState.weaponLevel &&
-                                                    characterState.weaponRefinement && (
-                                                        <>
-                                                            <div className="space-between flex w-full items-center gap-2">
-                                                                Ascension:
-                                                                <CustomSelect
-                                                                    // Changing keys forces re-render
-                                                                    key={`weapon-level-select-${kebabCase(
-                                                                        characterState
-                                                                            .weapon
-                                                                            .name
-                                                                    )}`}
-                                                                    options={getLevelOptions(
-                                                                        characterState.character // getLevelOptions only takes Character
-                                                                    )}
-                                                                    value={
-                                                                        characterState.weaponLevel
-                                                                    }
-                                                                    onChange={(
-                                                                        newLevel
-                                                                    ) =>
-                                                                        updateCharacterState(
-                                                                            {
-                                                                                weaponLevel:
-                                                                                    newLevel,
-                                                                            }
-                                                                        )
-                                                                    }
-                                                                />
-                                                            </div>
-                                                            <div className="space-between flex w-full items-center gap-2">
-                                                                Refinement:
-                                                                <CustomSelect
-                                                                    key={`constellation-select-${kebabCase(
-                                                                        characterState
-                                                                            .weapon
-                                                                            .name
-                                                                    )}`}
-                                                                    options={getRefinementOptions(
-                                                                        characterState.weapon
-                                                                    )}
-                                                                    value={characterState.weaponRefinement.toString()}
-                                                                    onChange={(
+                                                <div className="space-between flex w-full items-center gap-2">
+                                                    Ascension:
+                                                    <CustomSelect
+                                                        // Changing keys forces re-render
+                                                        key={`weapon-level-select-${kebabCase(
+                                                            characterState.weaponLevel
+                                                        )}`}
+                                                        options={getLevelOptions(
+                                                            characterState.weapon // getLevelOptions only takes Character
+                                                        )}
+                                                        value={
+                                                            characterState.weaponLevel
+                                                        }
+                                                        onChange={(newLevel) =>
+                                                            updateCharacterState({
+                                                                weaponLevel:
+                                                                    newLevel,
+                                                            })
+                                                        }
+                                                    />
+                                                </div>
+                                                <div className="space-between flex w-full items-center gap-2">
+                                                    Refinement:
+                                                    <CustomSelect
+                                                        key={`constellation-select-${kebabCase(
+                                                            characterState.weaponRefinement.toString()
+                                                        )}`}
+                                                        options={getRefinementOptions(
+                                                            characterState.weapon
+                                                        )}
+                                                        value={characterState.weaponRefinement.toString()}
+                                                        onChange={(newRefinement) =>
+                                                            updateCharacterState({
+                                                                weaponRefinement:
+                                                                    parseInt(
                                                                         newRefinement
-                                                                    ) =>
-                                                                        updateCharacterState(
-                                                                            {
-                                                                                weaponRefinement:
-                                                                                    parseInt(
-                                                                                        newRefinement
-                                                                                    ),
-                                                                            }
-                                                                        )
-                                                                    }
-                                                                />
-                                                            </div>
-                                                        </>
-                                                    )}
+                                                                    ),
+                                                            })
+                                                        }
+                                                    />
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -430,10 +402,18 @@ export default function Home() {
                     open={isWeaponModalOpen}
                     onOpenChange={setWeaponModalOpen}
                     setWeapon={(selectedWeapon) => {
+                        const supportsRefinement =
+                            selectedWeapon.baseStats['90/90'] !== undefined
+
+                        // Update state with the new weapon and appropriate refinement level
                         updateCharacterState({
                             weapon: selectedWeapon,
-                            weaponLevel: '90/90',
-                            weaponRefinement: 1,
+                            weaponLevel:
+                                Object.keys(selectedWeapon.baseStats).at(-1) ??
+                                '90/90',
+                            weaponRefinement: supportsRefinement
+                                ? characterState?.weaponRefinement
+                                : 1,
                         })
                         setWeaponModalOpen(false)
                     }}

@@ -1,7 +1,7 @@
 import { Character } from '@/interfaces/Character'
 import { Weapon } from '@/interfaces/Weapon'
 
-const getLevelOptions = (character: Character) => {
+const getLevelOptions = (character: Character | Weapon) => {
     return Object.keys(character.baseStats).map((level) => ({
         value: level,
         label: level,
