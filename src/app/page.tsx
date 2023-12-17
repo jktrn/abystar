@@ -9,6 +9,7 @@ import {
     CustomSelect,
     DamageTable,
     TalentSelect,
+    WeaponAttributes,
     WeaponImage,
     WeaponModal,
 } from '@/components'
@@ -119,7 +120,7 @@ export default function Home() {
                                 <h2 className="rounded-t-lg border-b bg-secondary/25 px-4 py-3 text-lg font-bold">
                                     Character
                                 </h2>
-                                <div className="p-4">
+                                <div className="flex flex-col gap-4 p-4">
                                     <div className="flex flex-col justify-between md:flex-row">
                                         <div className="flex flex-col justify-center gap-4 md:flex-row md:justify-normal">
                                             <form className="flex justify-center md:justify-normal">
@@ -260,9 +261,9 @@ export default function Home() {
                             <h2 className="rounded-t-lg border-b bg-secondary/25 px-4 py-3 text-lg font-bold">
                                 Weapon
                             </h2>
-                            <div className="p-4">
+                            <div className="flex flex-col gap-4 p-4">
                                 <div className="flex flex-col justify-between md:flex-row">
-                                    <div className="flex flex-col justify-center gap-4 md:flex-row md:justify-normal">
+                                    <div className="flex w-full flex-col justify-center gap-4 md:flex-row md:justify-normal">
                                         <form className="flex justify-center md:justify-normal">
                                             <WeaponImage
                                                 characterState={characterState}
@@ -271,8 +272,8 @@ export default function Home() {
                                                 }
                                             />
                                         </form>
-                                        <div className="flex flex-col items-center gap-2 md:items-start">
-                                            <div className="flex flex-col">
+                                        <div className="flex w-full flex-col items-center gap-2 md:items-start">
+                                            <div className="flex w-full flex-col">
                                                 <span className="text-center text-xl font-bold md:line-clamp-1 md:justify-normal md:text-left">
                                                     {characterState.weapon.name}
                                                 </span>
@@ -282,48 +283,58 @@ export default function Home() {
                                                     )}
                                                 </span>
                                             </div>
-                                            <div className="flex max-w-max flex-col items-center gap-2 md:items-start">
-                                                <div className="space-between flex w-full items-center gap-2">
-                                                    Ascension:
-                                                    <CustomSelect
-                                                        // Changing keys forces re-render
-                                                        key={`weapon-level-select-${kebabCase(
-                                                            characterState.weaponLevel
-                                                        )}`}
-                                                        options={getLevelOptions(
-                                                            characterState.weapon // getLevelOptions only takes Character
-                                                        )}
-                                                        value={
-                                                            characterState.weaponLevel
-                                                        }
-                                                        onChange={(newLevel) =>
-                                                            updateCharacterState({
-                                                                weaponLevel:
-                                                                    newLevel,
-                                                            })
-                                                        }
-                                                    />
+                                            <div className="flex justify-between gap-4 lg:w-full">
+                                                <div className="flex max-w-max flex-col items-center gap-2 md:items-start">
+                                                    <div className="space-between flex w-full items-center gap-2">
+                                                        Ascension:
+                                                        <CustomSelect
+                                                            key={`weapon-level-select-${kebabCase(
+                                                                characterState.weaponLevel
+                                                            )}`}
+                                                            options={getLevelOptions(
+                                                                characterState.weapon
+                                                            )}
+                                                            value={
+                                                                characterState.weaponLevel
+                                                            }
+                                                            onChange={(newLevel) =>
+                                                                updateCharacterState(
+                                                                    {
+                                                                        weaponLevel:
+                                                                            newLevel,
+                                                                    }
+                                                                )
+                                                            }
+                                                        />
+                                                    </div>
+                                                    <div className="space-between flex w-full items-center gap-2">
+                                                        Refinement:
+                                                        <CustomSelect
+                                                            key={`constellation-select-${kebabCase(
+                                                                characterState.weaponRefinement.toString()
+                                                            )}`}
+                                                            options={getRefinementOptions(
+                                                                characterState.weapon
+                                                            )}
+                                                            value={characterState.weaponRefinement.toString()}
+                                                            onChange={(
+                                                                newRefinement
+                                                            ) =>
+                                                                updateCharacterState(
+                                                                    {
+                                                                        weaponRefinement:
+                                                                            parseInt(
+                                                                                newRefinement
+                                                                            ),
+                                                                    }
+                                                                )
+                                                            }
+                                                        />
+                                                    </div>
                                                 </div>
-                                                <div className="space-between flex w-full items-center gap-2">
-                                                    Refinement:
-                                                    <CustomSelect
-                                                        key={`constellation-select-${kebabCase(
-                                                            characterState.weaponRefinement.toString()
-                                                        )}`}
-                                                        options={getRefinementOptions(
-                                                            characterState.weapon
-                                                        )}
-                                                        value={characterState.weaponRefinement.toString()}
-                                                        onChange={(newRefinement) =>
-                                                            updateCharacterState({
-                                                                weaponRefinement:
-                                                                    parseInt(
-                                                                        newRefinement
-                                                                    ),
-                                                            })
-                                                        }
-                                                    />
-                                                </div>
+                                                <WeaponAttributes
+                                                    characterState={characterState}
+                                                />
                                             </div>
                                         </div>
                                     </div>
