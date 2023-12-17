@@ -12,13 +12,13 @@ import {
     WeaponImage,
     WeaponModal,
 } from '@/components'
+import WeaponBonuses from '@/components/WeaponBonuses'
 import {
     Character,
     CharacterAttributes,
     CharacterState,
     DamageResult,
 } from '@/interfaces/Character'
-import { Weapon } from '@/interfaces/Weapon'
 import {
     applySpecialBonuses,
     calculateDamage,
@@ -105,7 +105,7 @@ export default function Home() {
             <main className="flex h-screen flex-col p-2 lg:flex-row lg:overflow-y-hidden">
                 {characterState && (
                     <>
-                        <div className="m-2 flex-1 rounded-lg border lg:overflow-auto">
+                        <div className="m-2 flex-1 rounded-lg border lg:min-w-max lg:overflow-auto">
                             <div className="flex flex-col rounded-lg">
                                 <h2 className="rounded-t-lg border-b bg-secondary/25 px-4 py-3 text-lg font-bold">
                                     Character
@@ -234,7 +234,7 @@ export default function Home() {
                                         />
                                     </div>
                                     <CharacterBonuses
-                                        character={characterState.character}
+                                        state={characterState}
                                         activeBonuses={
                                             characterState.characterActiveBonuses
                                         }
@@ -266,7 +266,7 @@ export default function Home() {
                             </div>
                         </div>
 
-                        <div className="m-2 flex-1 rounded-lg border">
+                        <div className="m-2 flex-1 rounded-lg border lg:min-w-max lg:overflow-auto">
                             <h2 className="rounded-t-lg border-b bg-secondary/25 px-4 py-3 text-lg font-bold">
                                 Weapon
                             </h2>
@@ -399,50 +399,50 @@ export default function Home() {
                                         </div>
                                     </div>
                                     <div className="flex flex-col justify-end">
-                                        {characterState.weapon &&
-                                            characterState.weaponLevel && (
+                                        {/* {characterState.weapon &&
+                                            characterState.weaponLevel &&
+                                            (
                                                 <>
                                                     <p>
                                                         {
                                                             Object.values(
                                                                 characterState.weapon
                                                                     .baseStats[
-                                                                    characterState
-                                                                        .weaponLevel
+                                                                characterState
+                                                                    .weaponLevel
                                                                 ]
                                                             )[0]
                                                         }
                                                     </p>
-                                                    <p>
-                                                        {
-                                                            Object.values(
-                                                                characterState.weapon
-                                                                    .baseStats[
+                                                    {Object.values(characterState.weapon.baseStats[characterState.weaponLevel])[1] && (
+                                                        <p>
+                                                            {
+                                                                Object.values(
+                                                                    characterState.weapon
+                                                                        .baseStats[
                                                                     characterState
                                                                         .weaponLevel
-                                                                ]
-                                                            )[1]
-                                                        }
-                                                    </p>
+                                                                    ]
+                                                                )[1]
+                                                            }
+                                                        </p>
+                                                    )}
                                                 </>
-                                            )}
+                                            )} */}
                                     </div>
                                 </div>
-                                {/* <CharacterBonuses
-                                    character={characterState.character}
+                                <WeaponBonuses
+                                    state={characterState}
+                                    weapon={characterState.weapon}
                                     activeBonuses={
                                         characterState.characterActiveBonuses
                                     }
                                     setActiveBonuses={(newActiveBonuses) =>
-                                        updateCharacterState(
-                                            'characterActiveBonuses',
-                                            newActiveBonuses
-                                        )
+                                        updateCharacterState({
+                                            characterActiveBonuses: newActiveBonuses,
+                                        })
                                     }
-                                    constellation={
-                                        characterState.characterConstellation
-                                    }
-                                /> */}
+                                />
                             </div>
                             <h2 className="border-y bg-secondary/25 px-4 py-3 text-lg font-bold">
                                 Artifacts
@@ -456,7 +456,7 @@ export default function Home() {
                             <div className="p-4">Party Buffs</div>
                         </div>
 
-                        <div className="m-2 flex-1 rounded-lg border">
+                        <div className="m-2 flex-1 rounded-lg lg:min-w-max lg:overflow-auto">
                             <div className="flex h-full flex-col rounded-lg border">
                                 <h2 className="rounded-t-lg border-b bg-secondary/25 px-4 py-3 text-lg font-bold">
                                     Results

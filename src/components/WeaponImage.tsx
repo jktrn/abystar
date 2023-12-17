@@ -41,7 +41,7 @@ const WeaponImage = ({ characterState, ...props }: WeaponImageProps) => {
             <Image
                 src={`/images/weapons/${kebabCase(characterState.weapon.name)}.png`}
                 alt="weapon"
-                className="object-fit cursor-pointer rounded-lg duration-100 ease-in"
+                className="object-fit cursor-pointer rounded-lg drop-shadow duration-100 ease-in"
                 width={148}
                 height={148}
                 unoptimized={true}

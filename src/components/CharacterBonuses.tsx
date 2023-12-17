@@ -1,20 +1,20 @@
 'use client'
 
 import React, { useEffect, useState } from 'react'
-import CharacterBonusToggle from './CharacterBonusToggle'
-import { Bonus, Character } from '@/interfaces/Character'
+import BonusToggle from './BonusToggle'
+import { Bonus, CharacterState } from '@/interfaces/Character'
 import { ChevronDown } from 'lucide-react'
-import { handleBonusToggle } from '@/lib'
+import { elementColors, handleBonusToggle } from '@/lib'
 
 interface CharacterBonusesProps {
-    character: Character
+    state: CharacterState
     activeBonuses: Bonus[]
     setActiveBonuses: (bonuses: Bonus[]) => void
     constellation: number
 }
 
 const CharacterBonuses = ({
-    character,
+    state,
     activeBonuses,
     setActiveBonuses,
     constellation,
@@ -40,7 +40,7 @@ const CharacterBonuses = ({
     }, [constellation, activeBonuses])
 
     const filterBonuses = (isHidden: boolean) =>
-        character.characterBonuses.filter((bonus) =>
+        state.character.characterBonuses.filter((bonus) =>
             isHidden
                 ? (bonus.minConstellation &&
                       bonus.minConstellation > constellation) ||
@@ -63,12 +63,17 @@ const CharacterBonuses = ({
     return (
         <div className="mt-4 flex flex-col gap-2">
             {filterBonuses(false).map((bonus) => (
-                <CharacterBonusToggle
+                <BonusToggle
                     key={bonus.name}
-                    character={character}
                     bonus={bonus}
                     onToggle={handleToggle}
                     constellation={constellation}
+                    color={
+                        elementColors[
+                            state.character.vision.toLowerCase() as keyof typeof elementColors
+                        ]
+                    }
+                    state={state}
                 />
             ))}
 
@@ -88,12 +93,17 @@ const CharacterBonuses = ({
                     {!isHiddenCollapsed && (
                         <div className="mt-4 flex flex-col gap-2">
                             {filterBonuses(true).map((bonus) => (
-                                <CharacterBonusToggle
+                                <BonusToggle
                                     key={bonus.name}
-                                    character={character}
                                     bonus={bonus}
                                     onToggle={handleToggle}
                                     constellation={constellation}
+                                    color={
+                                        elementColors[
+                                            state.character.vision.toLowerCase() as keyof typeof elementColors
+                                        ]
+                                    }
+                                    state={state}
                                 />
                             ))}
                         </div>
