@@ -6,6 +6,7 @@ import {
     availableIcons,
     displayStats,
     parseScalingValue,
+    kebabCase,
 } from '@/lib'
 import { Fragment } from 'react'
 import {
@@ -101,17 +102,13 @@ const AttributesTable = ({
                                     <TableCell className="px-4">
                                         <span className="flex items-center gap-2">
                                             {availableIcons.includes(
-                                                row.stat
-                                                    .toLowerCase()
-                                                    .split(' ')
-                                                    .join('-')
+                                                kebabCase(row.stat)
                                             ) && (
                                                 <Image
                                                     className="h-auto w-auto"
-                                                    src={`/images/attributes/${row.stat
-                                                        .toLowerCase()
-                                                        .split(' ')
-                                                        .join('-')}.png`}
+                                                    src={`/images/attributes/${kebabCase(
+                                                        row.stat
+                                                    )}.png`}
                                                     alt={row.stat}
                                                     width={12}
                                                     height={12}

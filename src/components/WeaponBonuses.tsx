@@ -22,7 +22,7 @@ const WeaponBonuses = ({ characterState, setActiveBonuses }: WeaponBonusesProps)
     }
 
     return (
-        <div className="mt-4 flex flex-col gap-2">
+        <div className="flex flex-col gap-2">
             {characterState.weapon.weaponBonus && (
                 <BonusToggle
                     key={characterState.weapon.weaponBonus.name}

@@ -37,9 +37,9 @@ const BonusToggle = ({
 
     return (
         <div
-            className={`flex flex-col items-center justify-between rounded-md bg-secondary/25 p-4 md:flex-row md:p-2 ${
-                isBonusDisabled ? 'pointer-events-none brightness-50' : ''
-            }`}
+            className={`flex flex-col items-center justify-between rounded-md bg-secondary/25 p-4 md:flex-row ${
+                bonus.icon ? 'md:p-4 md:pl-2' : 'md:p-4'
+            } ${isBonusDisabled ? 'pointer-events-none brightness-50' : ''}`}
         >
             <div className="flex flex-col items-center gap-2 md:flex-row">
                 {bonus.icon && (
