@@ -4,49 +4,53 @@ import React, { useEffect, useState } from 'react'
 import BonusToggle from './BonusToggle'
 import { Bonus, CharacterState } from '@/interfaces/Character'
 import { ChevronDown } from 'lucide-react'
-import { elementColors, handleBonusToggle } from '@/lib'
+import { handleBonusToggle } from '@/lib'
 
 interface CharacterBonusesProps {
-    state: CharacterState
-    activeBonuses: Bonus[]
+    characterState: CharacterState
     setActiveBonuses: (bonuses: Bonus[]) => void
-    constellation: number
 }
 
 const CharacterBonuses = ({
-    state,
-    activeBonuses,
+    characterState,
     setActiveBonuses,
-    constellation,
 }: CharacterBonusesProps) => {
     const [isHiddenCollapsed, setIsHiddenCollapsed] = useState(true)
 
     // Update active bonuses when constellation changes (removing bonuses that are no longer available)
     useEffect(() => {
-        const updatedActiveBonuses = activeBonuses.filter(
+        const updatedActiveBonuses = characterState.characterActiveBonuses.filter(
             (bonus) =>
-                !bonus.minConstellation || bonus.minConstellation <= constellation
+                !bonus.minConstellation ||
+                bonus.minConstellation <= characterState.characterConstellation
         )
 
         const isChange =
-            updatedActiveBonuses.length !== activeBonuses.length ||
+            updatedActiveBonuses.length !==
+                characterState.characterActiveBonuses.length ||
             updatedActiveBonuses.some(
-                (bonus, index) => bonus.name !== activeBonuses[index].name
+                (bonus, index) =>
+                    bonus.name !== characterState.characterActiveBonuses[index].name
             )
 
         if (isChange) {
             setActiveBonuses(updatedActiveBonuses)
         }
-    }, [constellation, activeBonuses])
+    }, [
+        characterState.characterConstellation,
+        characterState.characterActiveBonuses,
+    ])
 
     const filterBonuses = (isHidden: boolean) =>
-        state.character.characterBonuses.filter((bonus) =>
+        characterState.character.characterBonuses.filter((bonus) =>
             isHidden
                 ? (bonus.minConstellation &&
-                      bonus.minConstellation > constellation) ||
+                      bonus.minConstellation >
+                          characterState.characterConstellation) ||
                   bonus.enabled
                 : (!bonus.minConstellation ||
-                      bonus.minConstellation <= constellation) &&
+                      bonus.minConstellation <=
+                          characterState.characterConstellation) &&
                   !bonus.enabled
         )
 
@@ -54,9 +58,9 @@ const CharacterBonuses = ({
         handleBonusToggle(
             bonus,
             bonusStacks,
-            activeBonuses,
+            characterState.characterActiveBonuses,
             setActiveBonuses,
-            constellation
+            characterState.characterConstellation
         )
     }
 
@@ -65,15 +69,9 @@ const CharacterBonuses = ({
             {filterBonuses(false).map((bonus) => (
                 <BonusToggle
                     key={bonus.name}
+                    characterState={characterState}
                     bonus={bonus}
                     onToggle={handleToggle}
-                    constellation={constellation}
-                    color={
-                        elementColors[
-                            state.character.vision.toLowerCase() as keyof typeof elementColors
-                        ]
-                    }
-                    state={state}
                 />
             ))}
 
@@ -95,15 +93,9 @@ const CharacterBonuses = ({
                             {filterBonuses(true).map((bonus) => (
                                 <BonusToggle
                                     key={bonus.name}
+                                    characterState={characterState}
                                     bonus={bonus}
                                     onToggle={handleToggle}
-                                    constellation={constellation}
-                                    color={
-                                        elementColors[
-                                            state.character.vision.toLowerCase() as keyof typeof elementColors
-                                        ]
-                                    }
-                                    state={state}
                                 />
                             ))}
                         </div>

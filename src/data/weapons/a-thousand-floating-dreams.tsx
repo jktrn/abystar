@@ -9,7 +9,7 @@ const weaponBonus: Bonus = {
             equipping character with buffs based on whether their Elemental Type is
             the same as the latter or not. If their Elemental Types are the same,
             increase Elemental Mastery by 32. If not, increase the equipping
-            character's DMG Bonus from their Elemental Type by 10%. The
+            character&apos;s DMG Bonus from their Elemental Type by 10%. The
             aforementioned effects can have 3 stacks. Additionally, all nearby party
             members other than the equipping character will have their Elemental
             Mastery increased by 40. Multiple such effects from multiple such weapons

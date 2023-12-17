@@ -23,7 +23,6 @@ import {
     applySpecialBonuses,
     calculateDamage,
     defaultCharacterAttributes,
-    displayStats,
     getConstellationOptions,
     getLevelOptions,
     getRefinementOptions,
@@ -199,9 +198,6 @@ export default function Home() {
                                                             characterState={
                                                                 characterState
                                                             }
-                                                            value={
-                                                                characterState.characterConstellation
-                                                            }
                                                             onChange={(
                                                                 newConstellation
                                                             ) =>
@@ -218,13 +214,7 @@ export default function Home() {
                                             </div>
                                         </div>
                                         <TalentSelect
-                                            character={characterState.character}
-                                            talentLevels={
-                                                characterState.characterTalentLevels
-                                            }
-                                            effectiveTalentLevels={
-                                                characterState.effectiveTalentLevels
-                                            }
+                                            characterState={characterState}
                                             setTalentLevels={(newTalentLevels) =>
                                                 updateCharacterState({
                                                     characterTalentLevels:
@@ -234,18 +224,12 @@ export default function Home() {
                                         />
                                     </div>
                                     <CharacterBonuses
-                                        state={characterState}
-                                        activeBonuses={
-                                            characterState.characterActiveBonuses
-                                        }
+                                        characterState={characterState}
                                         setActiveBonuses={(newActiveBonuses) =>
                                             updateCharacterState({
                                                 characterActiveBonuses:
                                                     newActiveBonuses,
                                             })
-                                        }
-                                        constellation={
-                                            characterState.characterConstellation
                                         }
                                     />
                                 </div>
@@ -254,14 +238,13 @@ export default function Home() {
                                     Attributes
                                 </h2>
                                 <AttributesTable
-                                    attributes={characterAttributes}
+                                    characterAttributes={characterAttributes}
                                     initialAttributes={applySpecialBonuses({
                                         ...defaultCharacterAttributes,
                                         ...characterState.character.baseStats[
                                             characterState.characterLevel
                                         ],
                                     })}
-                                    displayStats={displayStats}
                                 />
                             </div>
                         </div>
@@ -369,32 +352,6 @@ export default function Home() {
                                                             </div>
                                                         </>
                                                     )}
-                                                {/* 
-                                                <div
-                                                    className="hidden md:flex md:w-full md:items-center"
-                                                    key={`constellation-select-${kebabCase(
-                                                        characterState.character
-                                                            .name
-                                                    )}`}
-                                                >
-                                                    Constellation:
-                                                    <ConstellationPopover
-                                                        characterState={
-                                                            characterState
-                                                        }
-                                                        value={
-                                                            characterState.characterConstellation
-                                                        }
-                                                        onChange={(
-                                                            newConstellation
-                                                        ) =>
-                                                            updateCharacterState(
-                                                                'characterConstellation',
-                                                                newConstellation
-                                                            )
-                                                        }
-                                                    />
-                                                </div> */}
                                             </div>
                                         </div>
                                     </div>
@@ -432,11 +389,7 @@ export default function Home() {
                                     </div>
                                 </div>
                                 <WeaponBonuses
-                                    state={characterState}
-                                    weapon={characterState.weapon}
-                                    activeBonuses={
-                                        characterState.characterActiveBonuses
-                                    }
+                                    characterState={characterState}
                                     setActiveBonuses={(newActiveBonuses) =>
                                         updateCharacterState({
                                             characterActiveBonuses: newActiveBonuses,

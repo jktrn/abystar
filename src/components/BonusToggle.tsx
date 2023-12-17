@@ -3,33 +3,32 @@ import { Bonus, CharacterState } from '@/interfaces/Character'
 import Image from 'next/image'
 import Switch from 'react-switch'
 import CustomSelect from './CustomSelect'
+import { elementColors } from '@/lib'
 
 interface BonusToggleProps {
+    characterState: CharacterState
     bonus: Bonus
     onToggle: (bonus: Bonus, currentStacks: number) => void
     disabled?: boolean
-    color?: string
-    constellation?: number
-    state?: CharacterState
     isWeaponBonus?: boolean
 }
 
 const BonusToggle = ({
+    characterState,
     bonus,
     onToggle,
     disabled = false,
-    color,
-    constellation,
-    state,
     isWeaponBonus,
 }: BonusToggleProps) => {
-    if (!state) return null
-
     const [currentStacks, setCurrentStacks] = useState(bonus.enabled ? 1 : 0)
+
+    if (!characterState) return null
+
     const isBonusDisabled =
         disabled ||
         (bonus.minConstellation !== undefined &&
-            (constellation === undefined || bonus.minConstellation > constellation))
+            (characterState.characterConstellation === undefined ||
+                bonus.minConstellation > characterState.characterConstellation))
 
     const handleStackChange = (newStacks: number) => {
         setCurrentStacks(newStacks)
@@ -57,13 +56,14 @@ const BonusToggle = ({
                 <div className="flex flex-col text-center md:text-left">
                     <span className="text-md">{bonus.name}</span>
                     {isWeaponBonus &&
-                    state.weapon &&
-                    state.weapon.refinements &&
-                    state.weaponRefinement ? (
+                    characterState.weapon &&
+                    characterState.weapon.refinements &&
+                    characterState.weaponRefinement ? (
                         <span className="max-w-full break-words text-xs text-muted-foreground md:w-[21rem]">
                             {
-                                state.weapon.refinements[state.weaponRefinement - 1]
-                                    .description
+                                characterState.weapon.refinements[
+                                    characterState.weaponRefinement - 1
+                                ].description
                             }
                         </span>
                     ) : (
@@ -92,7 +92,11 @@ const BonusToggle = ({
                     onChange={() => handleStackChange(currentStacks > 0 ? 0 : 1)}
                     uncheckedIcon={false}
                     checkedIcon={false}
-                    onColor={color || '#ccc'}
+                    color={
+                        elementColors[
+                            characterState.character.vision.toLowerCase() as keyof typeof elementColors
+                        ]
+                    }
                     disabled={isBonusDisabled}
                     className="mt-4 md:mt-0"
                 />
