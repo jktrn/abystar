@@ -141,7 +141,7 @@ export default function Home() {
                                                         Ascension:
                                                         <CustomSelect
                                                             // Changing keys forces re-render
-                                                            key={`level-select-${kebabCase(
+                                                            key={`character-level-select-${kebabCase(
                                                                 characterState
                                                                     .character.name
                                                             )}`}
@@ -182,11 +182,6 @@ export default function Home() {
                                                                                 newConstellation,
                                                                                 10
                                                                             ),
-                                                                        // 'characterConstellation',
-                                                                        // parseInt(
-                                                                        //     newConstellation,
-                                                                        //     10
-                                                                        // )
                                                                     }
                                                                 )
                                                             }
@@ -271,16 +266,10 @@ export default function Home() {
                             </div>
                         </div>
 
-                        <div className="m-2 flex-1 rounded-lg border">
+                        <div className="m-2 flex-1 rounded-lg border lg:min-w-max lg:max-w-max lg:overflow-auto">
                             <h2 className="rounded-t-lg border-b bg-secondary/25 px-4 py-3 text-lg font-bold">
                                 Weapon
                             </h2>
-                            {/* <div className="p-4">
-                                <WeaponImage
-                                    characterState={characterState}
-                                    onClick={() => setWeaponModalOpen(true)}
-                                />
-                            </div> */}
                             <div className="p-4">
                                 <div className="flex flex-col justify-between md:flex-row">
                                     <div className="flex flex-col justify-center gap-4 md:flex-row md:justify-normal">
@@ -292,7 +281,7 @@ export default function Home() {
                                                 }
                                             />
                                         </form>
-                                        <div className="flex flex-col gap-2">
+                                        <div className="flex flex-col items-center gap-2 md:items-start">
                                             <div className="flex flex-col">
                                                 {characterState.weapon ? (
                                                     <>
@@ -325,11 +314,11 @@ export default function Home() {
                                                     characterState.weaponLevel &&
                                                     characterState.weaponRefinement && (
                                                         <>
-                                                            <div className="flex items-center gap-2">
+                                                            <div className="space-between flex w-full items-center gap-2">
                                                                 Ascension:
                                                                 <CustomSelect
                                                                     // Changing keys forces re-render
-                                                                    key={`level-select-${kebabCase(
+                                                                    key={`weapon-level-select-${kebabCase(
                                                                         characterState
                                                                             .weapon
                                                                             .name
@@ -352,7 +341,7 @@ export default function Home() {
                                                                     }
                                                                 />
                                                             </div>
-                                                            <div className="flex items-center gap-2">
+                                                            <div className="space-between flex w-full items-center gap-2">
                                                                 Refinement:
                                                                 <CustomSelect
                                                                     key={`constellation-select-${kebabCase(
@@ -369,7 +358,7 @@ export default function Home() {
                                                                     ) =>
                                                                         updateCharacterState(
                                                                             {
-                                                                                characterConstellation:
+                                                                                weaponRefinement:
                                                                                     parseInt(
                                                                                         newRefinement
                                                                                     ),
@@ -409,21 +398,35 @@ export default function Home() {
                                             </div>
                                         </div>
                                     </div>
-                                    {/* <TalentSelect
-                                        character={characterState.character}
-                                        talentLevels={
-                                            characterState.characterTalentLevels
-                                        }
-                                        effectiveTalentLevels={
-                                            characterState.effectiveTalentLevels
-                                        }
-                                        setTalentLevels={(newTalentLevels) =>
-                                            updateCharacterState(
-                                                'characterTalentLevels',
-                                                newTalentLevels
-                                            )
-                                        }
-                                    /> */}
+                                    <div className="flex flex-col justify-end">
+                                        {characterState.weapon &&
+                                            characterState.weaponLevel && (
+                                                <>
+                                                    <p>
+                                                        {
+                                                            Object.values(
+                                                                characterState.weapon
+                                                                    .baseStats[
+                                                                    characterState
+                                                                        .weaponLevel
+                                                                ]
+                                                            )[0]
+                                                        }
+                                                    </p>
+                                                    <p>
+                                                        {
+                                                            Object.values(
+                                                                characterState.weapon
+                                                                    .baseStats[
+                                                                    characterState
+                                                                        .weaponLevel
+                                                                ]
+                                                            )[1]
+                                                        }
+                                                    </p>
+                                                </>
+                                            )}
+                                    </div>
                                 </div>
                                 {/* <CharacterBonuses
                                     character={characterState.character}
