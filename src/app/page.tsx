@@ -105,7 +105,7 @@ export default function Home() {
             <main className="flex h-screen flex-col p-2 lg:flex-row lg:overflow-y-hidden">
                 {characterState && (
                     <>
-                        <div className="m-2 flex-1 rounded-lg border lg:min-w-max lg:max-w-max lg:overflow-auto">
+                        <div className="m-2 flex-1 rounded-lg border lg:overflow-auto">
                             <div className="flex flex-col rounded-lg">
                                 <h2 className="rounded-t-lg border-b bg-secondary/25 px-4 py-3 text-lg font-bold">
                                     Character
@@ -266,7 +266,7 @@ export default function Home() {
                             </div>
                         </div>
 
-                        <div className="m-2 flex-1 rounded-lg border lg:min-w-max lg:max-w-max lg:overflow-auto">
+                        <div className="m-2 flex-1 rounded-lg border">
                             <h2 className="rounded-t-lg border-b bg-secondary/25 px-4 py-3 text-lg font-bold">
                                 Weapon
                             </h2>
@@ -349,9 +349,9 @@ export default function Home() {
                                                                             .weapon
                                                                             .name
                                                                     )}`}
-                                                                    options={
-                                                                        getRefinementOptions
-                                                                    }
+                                                                    options={getRefinementOptions(
+                                                                        characterState.weapon
+                                                                    )}
                                                                     value={characterState.weaponRefinement.toString()}
                                                                     onChange={(
                                                                         newRefinement
@@ -456,7 +456,7 @@ export default function Home() {
                             <div className="p-4">Party Buffs</div>
                         </div>
 
-                        <div className="m-2 flex-1 rounded-lg">
+                        <div className="m-2 flex-1 rounded-lg border">
                             <div className="flex h-full flex-col rounded-lg border">
                                 <h2 className="rounded-t-lg border-b bg-secondary/25 px-4 py-3 text-lg font-bold">
                                     Results

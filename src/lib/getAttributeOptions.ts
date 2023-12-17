@@ -1,4 +1,5 @@
 import { Character } from '@/interfaces/Character'
+import { Weapon } from '@/interfaces/Weapon'
 
 const getLevelOptions = (character: Character) => {
     return Object.keys(character.baseStats).map((level) => ({
@@ -25,12 +26,16 @@ const getTalentOptions = [...Array(13)].map((_, i) => {
     }
 })
 
-const getRefinementOptions = [...Array(5)].map((_, i) => {
-    return {
-        value: (i + 1).toString(),
-        label: `R${i + 1}`,
-    }
-})
+const getRefinementOptions = (weapon: Weapon) => {
+    if (!weapon.refinements) return []
+
+    return [
+        ...weapon.refinements.map((refinement) => ({
+            value: refinement.level.toString(),
+            label: refinement.level.toString(),
+        })),
+    ]
+}
 
 const levelOptions = [
     '1/20',

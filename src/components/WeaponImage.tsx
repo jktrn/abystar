@@ -30,12 +30,6 @@ const WeaponImage = ({ characterState, ...props }: WeaponImageProps) => {
         )
     }
 
-    // const typeIcon = `/images/normal-attacks/${type.toLowerCase()}.svg`
-    const isAwakened = levelOptions.indexOf(characterState.weaponLevel) > 1
-    const weaponImage = isAwakened
-        ? `${kebabCase(characterState.weapon.name)}-awaken`
-        : kebabCase(characterState.weapon.name)
-
     return (
         <div
             style={{
@@ -45,7 +39,7 @@ const WeaponImage = ({ characterState, ...props }: WeaponImageProps) => {
             {...props}
         >
             <Image
-                src={`/images/weapons/${weaponImage}.png`}
+                src={`/images/weapons/${kebabCase(characterState.weapon.name)}.png`}
                 alt="weapon"
                 className="object-fit cursor-pointer rounded-lg duration-100 ease-in"
                 width={148}
