@@ -54,7 +54,7 @@ const damageFormula = (
             baseDamage *
             multiplicativeBonusStatValue *
             (1 +
-                clamp((characterAttributes['CRIT Rate']), 0, 1) *
+                clamp((characterAttributes['CRIT Rate'] + critRateBonusStatValue), 0, 1) *
                     characterAttributes['CRIT DMG']) *
             enemyResistances.defenseMultiplier *
             enemyResistances.resistance
