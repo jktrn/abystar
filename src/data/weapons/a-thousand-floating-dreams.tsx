@@ -1,38 +1,45 @@
 import { Weapon } from '@/interfaces/Weapon'
 import { Bonus } from '@/interfaces/Character'
 
-const weaponBonus: Bonus = {
-    name: "A Thousand Nights' Dawnsong",
-    description: (
-        <span>
-            Party members other than the equipping character will provide the
-            equipping character with buffs based on whether their Elemental Type is
-            the same as the latter or not. If their Elemental Types are the same,
-            increase Elemental Mastery by 32. If not, increase the equipping
-            character&apos;s DMG Bonus from their Elemental Type by 10%. The
-            aforementioned effects can have 3 stacks. Additionally, all nearby party
-            members other than the equipping character will have their Elemental
-            Mastery increased by 40. Multiple such effects from multiple such weapons
-            can stack.
-        </span>
-    ),
-    effect: (attributes, initialAttributes, talentLevels, currentStacks) => {
-        if (!currentStacks || !initialAttributes) return { attributes }
+const weaponBonuses: Bonus[] = [
+    {
+        name: "A Thousand Nights' Dawnsong",
+        effect: (
+            attributes,
+            initialAttributes,
+            talentLevels,
+            currentStacks,
+            state
+        ) => {
+            if (
+                !currentStacks ||
+                currentStacks === 0 ||
+                !state ||
+                !state.weaponRefinement
+            )
+                return { attributes }
 
-        const elementalMasteryOptions = [0, 125, 150, 175, 200, 225, 250]
+            const elementalMasteryBonusPerStack = [32, 40, 48, 56, 64]
+            const elementalTypeDmgBonusPerStack = [0.1, 0.12, 0.14, 0.16, 0.18]
 
-        const newAttributes = {
-            ...attributes,
-            'Elemental Mastery':
-                attributes['Elemental Mastery'] +
-                elementalMasteryOptions[currentStacks],
-        }
-
-        return { attributes: newAttributes }
+            return {
+                attributes: {
+                    ...attributes,
+                    'Elemental Mastery':
+                        (attributes['Elemental Mastery'] || 0) +
+                        elementalMasteryBonusPerStack[state.weaponRefinement - 1] *
+                            (currentStacks - 1),
+                    [`${state.character.vision} DMG Bonus`]:
+                        (attributes[`${state.character.vision} DMG Bonus`] || 0) +
+                        elementalTypeDmgBonusPerStack[state.weaponRefinement - 1] *
+                            (4 - currentStacks),
+                },
+            }
+        },
+        maxStacks: 3,
+        stackOptions: ['Off', 'O Same', '1 Same', '2 Same', '3 Same'],
     },
-    maxStacks: 6,
-    stackOptions: ['Off', '125', '150', '175', '200', '225', '250'],
-}
+]
 
 const AThousandFloatingDreams: Weapon = {
     name: 'A Thousand Floating Dreams',
@@ -104,32 +111,72 @@ const AThousandFloatingDreams: Weapon = {
     },
     refinements: [
         {
-            description:
-                "Party members other than the equipping character will provide the equipping character with buffs based on whether their Elemental Type is the same as the latter or not. If their Elemental Types are the same, increase Elemental Mastery by 32. If not, increase the equipping character's DMG Bonus from their Elemental Type by 10%. Each of the aforementioned effects can have up to 3 stacks. Additionally, all nearby party members other than the equipping character will have their Elemental Mastery increased by 40. Multiple such effects from multiple such weapons can stack.",
+            description: (
+                <span>
+                    The wielder will gain buffs based on whether their Elemental Type
+                    is the same as their party members. Same: Increase Elemental
+                    Mastery by <span style={{ color: '#ddd' }}>32</span>. Different:
+                    Increase DMG Bonus from their Elemental Type by{' '}
+                    <span style={{ color: '#ddd' }}>10%</span>. Collectively, these
+                    effects can have up to 3 stacks.
+                </span>
+            ),
             level: 1,
         },
         {
-            description:
-                "Party members other than the equipping character will provide the equipping character with buffs based on whether their Elemental Type is the same as the latter or not. If their Elemental Types are the same, increase Elemental Mastery by 40. If not, increase the equipping character's DMG Bonus from their Elemental Type by 14%. The aforementioned effects can have 3 stacks. Additionally, all nearby party members other than the equipping character will have their Elemental Mastery increased by 42. Multiple such effects from multiple such weapons can stack.",
+            description: (
+                <span>
+                    The wielder will gain buffs based on whether their Elemental Type
+                    is the same as their party members. Same: Increase Elemental
+                    Mastery by <span style={{ color: '#ddd' }}>40</span>. Different:
+                    Increase DMG Bonus from their Elemental Type by{' '}
+                    <span style={{ color: '#ddd' }}>12%</span>. Collectively, these
+                    effects can have up to 3 stacks.
+                </span>
+            ),
             level: 2,
         },
         {
-            description:
-                "Party members other than the equipping character will provide the equipping character with buffs based on whether their Elemental Type is the same as the latter or not. If their Elemental Types are the same, increase Elemental Mastery by 48. If not, increase the equipping character's DMG Bonus from their Elemental Type by 18%. The aforementioned effects can have 3 stacks. Additionally, all nearby party members other than the equipping character will have their Elemental Mastery increased by 44. Multiple such effects from multiple such weapons can stack.",
+            description: (
+                <span>
+                    The wielder will gain buffs based on whether their Elemental Type
+                    is the same as their party members. Same: Increase Elemental
+                    Mastery by <span style={{ color: '#ddd' }}>48</span>. Different:
+                    Increase DMG Bonus from their Elemental Type by{' '}
+                    <span style={{ color: '#ddd' }}>14%</span>. Collectively, these
+                    effects can have up to 3 stacks.
+                </span>
+            ),
             level: 3,
         },
         {
-            description:
-                "Party members other than the equipping character will provide the equipping character with buffs based on whether their Elemental Type is the same as the latter or not. If their Elemental Types are the same, increase Elemental Mastery by 56. If not, increase the equipping character's DMG Bonus from their Elemental Type by 22%. The aforementioned effects can have 3 stacks. Additionally, all nearby party members other than the equipping character will have their Elemental Mastery increased by 46. Multiple such effects from multiple such weapons can stack.",
+            description: (
+                <span>
+                    The wielder will gain buffs based on whether their Elemental Type
+                    is the same as their party members. Same: Increase Elemental
+                    Mastery by <span style={{ color: '#ddd' }}>56</span>. Different:
+                    Increase DMG Bonus from their Elemental Type by{' '}
+                    <span style={{ color: '#ddd' }}>16%</span>. Collectively, these
+                    effects can have up to 3 stacks.
+                </span>
+            ),
             level: 4,
         },
         {
-            description:
-                "Party members other than the equipping character will provide the equipping character with buffs based on whether their Elemental Type is the same as the latter or not. If their Elemental Types are the same, increase Elemental Mastery by 64. If not, increase the equipping character's DMG Bonus from their Elemental Type by 26%. The aforementioned effects can have 3 stacks. Additionally, all nearby party members other than the equipping character will have their Elemental Mastery increased by 48. Multiple such effects from multiple such weapons can stack.",
+            description: (
+                <span>
+                    The wielder will gain buffs based on whether their Elemental Type
+                    is the same as their party members. Same: Increase Elemental
+                    Mastery by <span style={{ color: '#ddd' }}>64</span>. Different:
+                    Increase DMG Bonus from their Elemental Type by{' '}
+                    <span style={{ color: '#ddd' }}>18%</span>. Collectively, these
+                    effects can have up to 3 stacks.
+                </span>
+            ),
             level: 5,
         },
     ],
-    weaponBonus,
+    weaponBonuses,
 }
 
 export default AThousandFloatingDreams

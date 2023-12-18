@@ -1,9 +1,9 @@
 import { Weapon } from '@/interfaces/Weapon'
 // import { Bonus } from '@/interfaces/Character'
 
-// const weaponBonus: Bonus = {
+// const weaponBonuses: Bonus[] = [
 // TODO: Implement
-// }
+// ]
 
 const WhiteTassel: Weapon = {
     name: 'White Tassel',
@@ -94,7 +94,7 @@ const WhiteTassel: Weapon = {
             level: 5,
         },
     ],
-    // weaponBonus
+    // weaponBonuses
 }
 
 export default WhiteTassel

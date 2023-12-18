@@ -1,9 +1,9 @@
 import { Weapon } from '@/interfaces/Weapon'
 // import { Bonus } from '@/interfaces/Character'
 
-// const weaponBonus: Bonus = {
+// const weaponBonuses: Bonus[] = [
 // TODO: Implement
-// }
+// ]
 
 const MappaMare: Weapon = {
     name: 'Mappa Mare',
@@ -100,7 +100,7 @@ const MappaMare: Weapon = {
             level: 5,
         },
     ],
-    // weaponBonus
+    // weaponBonuses
 }
 
 export default MappaMare

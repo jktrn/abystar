@@ -1,9 +1,9 @@
 import { Weapon } from '@/interfaces/Weapon'
 // import { Bonus } from '@/interfaces/Character'
 
-// const weaponBonus: Bonus = {
+// const weaponBonuses: Bonus[] = [
 // TODO: Implement
-// }
+// ]
 
 const PocketGrimoire: Weapon = {
     name: 'Pocket Grimoire',
@@ -44,7 +44,7 @@ const PocketGrimoire: Weapon = {
             'Base ATK': 243.23,
         },
     },
-    // weaponBonus
+    // weaponBonuses
 }
 
 export default PocketGrimoire

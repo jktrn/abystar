@@ -22,9 +22,9 @@ def generate_weapon_tsx_files(json_path, output_directory):
         with open(filepath, 'w', encoding='utf-8') as tsx_file:
             tsx_file.write("import { Weapon } from '@/interfaces/Weapon'\n")
             tsx_file.write("// import { Bonus } from '@/interfaces/Character'\n\n")
-            tsx_file.write("""// const weaponBonus: Bonus = {
+            tsx_file.write("""// const weaponBonuses: Bonus[] = [
 // TODO: Implement
-// }\n\n""")
+// ]\n\n""")
             
             tsx_file.write(f"const {pascal_case(weapon_name)}: Weapon = {{\n")
             for key, value in weapon_data.items():
@@ -32,7 +32,7 @@ def generate_weapon_tsx_files(json_path, output_directory):
                 json.dump(value, tsx_file, indent=4)
                 tsx_file.write(",\n")
 
-            tsx_file.write("   // weaponBonus\n}\n\n")
+            tsx_file.write("   // weaponBonuses\n}\n\n")
             tsx_file.write(f"export default {pascal_case(weapon_name)}\n")
 
 json_path = 'weapons.json'

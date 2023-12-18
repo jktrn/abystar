@@ -21,7 +21,7 @@ const WeaponBonuses = ({ characterState, setActiveBonuses }: WeaponBonusesProps)
         )
     }
 
-    if (characterState.weapon.weaponBonus === undefined) {
+    if (characterState.weapon.weaponBonuses === undefined) {
         return (
             <div className="flex flex-col gap-2">
                 <span className="rounded-md bg-destructive/25 p-2 text-center">
@@ -33,15 +33,16 @@ const WeaponBonuses = ({ characterState, setActiveBonuses }: WeaponBonusesProps)
 
     return (
         <div className="flex flex-col gap-2">
-            {characterState.weapon.weaponBonus && (
-                <BonusToggle
-                    key={characterState.weapon.weaponBonus.name}
-                    characterState={characterState}
-                    bonus={characterState.weapon.weaponBonus}
-                    onToggle={handleToggle}
-                    isWeaponBonus={true}
-                />
-            )}
+            {characterState.weapon.weaponBonuses &&
+                characterState.weapon.weaponBonuses.map((bonus, index) => (
+                    <BonusToggle
+                        key={index}
+                        characterState={characterState}
+                        bonus={bonus}
+                        onToggle={handleToggle}
+                        isWeaponBonus={true}
+                    />
+                ))}
         </div>
     )
 }

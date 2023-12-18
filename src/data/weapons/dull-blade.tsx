@@ -1,9 +1,9 @@
 import { Weapon } from '@/interfaces/Weapon'
 // import { Bonus } from '@/interfaces/Character'
 
-// const weaponBonus: Bonus = {
+// const weaponBonuses: Bonus[] = [
 // TODO: Implement
-// }
+// ]
 
 const DullBlade: Weapon = {
     name: 'Dull Blade',
@@ -44,7 +44,7 @@ const DullBlade: Weapon = {
             'Base ATK': 185.43,
         },
     },
-    // weaponBonus
+    // weaponBonuses
 }
 
 export default DullBlade

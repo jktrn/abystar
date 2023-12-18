@@ -58,7 +58,7 @@ export interface Character extends RawCharacter {
 
 export interface Bonus {
     name: string
-    description: JSX.Element
+    description?: JSX.Element
     icon?: string
     effect: Effect
     maxStacks?: number

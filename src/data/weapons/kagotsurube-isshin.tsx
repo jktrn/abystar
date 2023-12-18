@@ -1,9 +1,9 @@
 import { Weapon } from '@/interfaces/Weapon'
 // import { Bonus } from '@/interfaces/Character'
 
-// const weaponBonus: Bonus = {
+// const weaponBonuses: Bonus[] = [
 // TODO: Implement
-// }
+// ]
 
 const KagotsurubeIsshin: Weapon = {
     name: 'Kagotsurube Isshin',
@@ -80,7 +80,7 @@ const KagotsurubeIsshin: Weapon = {
             level: 1,
         },
     ],
-    // weaponBonus
+    // weaponBonuses
 }
 
 export default KagotsurubeIsshin

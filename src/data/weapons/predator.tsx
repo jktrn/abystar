@@ -1,9 +1,9 @@
 import { Weapon } from '@/interfaces/Weapon'
 // import { Bonus } from '@/interfaces/Character'
 
-// const weaponBonus: Bonus = {
+// const weaponBonuses: Bonus[] = [
 // TODO: Implement
-// }
+// ]
 
 const Predator: Weapon = {
     name: 'Predator',
@@ -79,7 +79,7 @@ const Predator: Weapon = {
             level: 1,
         },
     ],
-    // weaponBonus
+    // weaponBonuses
 }
 
 export default Predator
