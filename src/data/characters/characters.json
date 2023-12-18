@@ -14873,7 +14873,7 @@
                         "Lv14": "188.52%",
                         "Lv15": "197.31%"
                     },
-                    "Charged Attack": {
+                    "Charged Attack DMG": {
                         "Lv1": "135.96%",
                         "Lv2": "145.23%",
                         "Lv3": "154.5%",
@@ -15233,7 +15233,8 @@
                 "description": "Triggers when Hu Tao's HP drops below 25%, or when she suffers a lethal strike:\nHu Tao will not fall as a result of the DMG sustained. Additionally, for the next 10s, her All Elemental and Physical RES is increased by 200%, her CRIT Rate is increased by 100%, and her resistance to interruption is greatly increased.\nThis effect triggers automatically when Hu Tao has 1 HP left.\nCan only occur once every 60s.",
                 "level": 6
             }
-        ]
+        ],
+        "implemented": true
     },
     "Jean": {
         "name": "Jean",
@@ -24886,7 +24887,8 @@
                 "description": "When Nahida hits an opponent affected by\nAll Schemes to Know\n's Seeds of Skandha with Normal or Charged Attacks after unleashing\nIllusory Heart\n, she will use Tri-Karma Purification: Karmic Oblivion on this opponent and all connected opponents, dealing\nDendro DMG\nbased on 200% of Nahida's ATK and 400% of her Elemental Mastery.\nDMG dealt by Tri-Karma Purification: Karmic Oblivion is considered Elemental Skill DMG and can be triggered once every 0.2s.\nThis effect can last up to 10s and will be removed after Nahida has unleashed 6 instances of Tri-Karma Purification: Karmic Oblivion.",
                 "level": 6
             }
-        ]
+        ],
+        "implemented": true
     },
     "Navia": {
         "name": "Navia",
@@ -31943,7 +31945,7 @@
                         "Lv14": "138.26%",
                         "Lv15": "145.94%"
                     },
-                    "Charged Attack": {
+                    "Charged Attack DMG": {
                         "Lv1": "73%",
                         "Lv2": "78.47%",
                         "Lv3": "83.95%",
@@ -41588,7 +41590,7 @@
                         "Lv14": "171.03%",
                         "Lv15": "180.53%"
                     },
-                    "Charged Attack": {
+                    "Charged Attack DMG": {
                         "Lv1": "98.23% / 115.56% / 132.9% / 150.23% / 167.57%",
                         "Lv2": "104.11% / 122.48% / 140.86% / 159.23% / 177.6%",
                         "Lv3": "109.99% / 129.4% / 148.81% / 168.23% / 187.64%",
@@ -43718,7 +43720,7 @@
                         "Lv14": "170.69%",
                         "Lv15": "180.09%"
                     },
-                    "Charged Attack": {
+                    "Charged Attack DMG": {
                         "Lv1": "121.69%",
                         "Lv2": "131.6%",
                         "Lv3": "141.5%",

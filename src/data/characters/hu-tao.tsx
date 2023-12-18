@@ -70,7 +70,7 @@ const talentScalings: TalentScaling = {
             ],
             damageType: 'Physical',
         },
-        'Charged Attack': {
+        'Charged Attack DMG': {
             formulaType: FormulaType.DamageFormula,
             attribute: ['ATK'],
             additiveBonusStat: ['Charged Attack Additive Bonus'],
@@ -661,7 +661,7 @@ const HuTao: Character = {
                     Lv14: '188.52%',
                     Lv15: '197.31%',
                 },
-                'Charged Attack': {
+                'Charged Attack DMG': {
                     Lv1: '135.96%',
                     Lv2: '145.23%',
                     Lv3: '154.5%',

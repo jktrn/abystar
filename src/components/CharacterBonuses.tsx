@@ -67,7 +67,7 @@ const CharacterBonuses = ({
     if (characterState.character.characterBonuses.length === 0) {
         return (
             <div className="flex flex-col gap-2">
-                <span className="text-sm rounded-md bg-destructive/25 p-2 text-center">
+                <span className="rounded-md bg-destructive/25 p-2 text-center text-sm">
                     This character is unimplemented! No bonuses.
                 </span>
             </div>
@@ -89,7 +89,7 @@ const CharacterBonuses = ({
                 <>
                     <button
                         onClick={() => setIsHiddenCollapsed(!isHiddenCollapsed)}
-                        className="w-full rounded-md bg-secondary/25 py-2"
+                        className="h-[36px] w-full rounded-md bg-secondary/25 py-2 text-sm"
                     >
                         {isHiddenCollapsed ? 'Show' : 'Hide'} Hidden Bonuses
                         <ChevronDown

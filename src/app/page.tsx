@@ -98,13 +98,13 @@ export default function Home() {
                 ENEMY_RESISTANCES
             )
             setDamageResults(newDamageResults)
-            console.log('Damage Results: ', newDamageResults)
+            // console.log('Damage Results: ', newDamageResults)
         }
     }, [characterState, characterAttributes])
 
-    useEffect(() => {
-        console.log('Character State has been updated: ', characterState)
-    }, [characterState])
+    // useEffect(() => {
+    //     console.log('Character State has been updated: ', characterState)
+    // }, [characterState])
 
     useEffect(() => {
         console.log('Character Attributes have been updated: ', characterAttributes)

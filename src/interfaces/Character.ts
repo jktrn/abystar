@@ -48,6 +48,7 @@ export interface RawCharacter {
     talents: Talent[]
     passiveSkills?: PassiveSkill[]
     constellations: Constellation[]
+    implemented?: boolean
 }
 
 export interface Character extends RawCharacter {

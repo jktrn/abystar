@@ -27,7 +27,7 @@ const getTalentOptions = [...Array(13)].map((_, i) => {
 })
 
 const getRefinementOptions = (weapon: Weapon) => {
-    if (!weapon.refinements) return []
+    if (!weapon.refinements) return [{ value: '1', label: '1' }]
 
     return [
         ...weapon.refinements.map((refinement) => ({

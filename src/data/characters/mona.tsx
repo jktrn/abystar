@@ -1,15 +1,394 @@
-import { TalentScaling, Bonus, Character } from '@/interfaces/Character'
+import {
+    TalentScaling,
+    TalentRawData,
+    Bonus,
+    Character,
+    FormulaType,
+    FormulaOutputType,
+} from '@/interfaces/Character'
+import { Badge } from '@/components/ui/badge'
 
 const talentScalings: TalentScaling = {
-    // ...
+    'Normal Attack: Ripple of Fate': {
+        '1-Hit DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Normal Attack Additive Bonus'],
+            multiplicativeBonusStat: ['Hydro DMG Bonus', 'Normal Attack DMG Bonus'],
+            damageType: 'Hydro',
+        },
+        '2-Hit DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Normal Attack Additive Bonus'],
+            multiplicativeBonusStat: ['Hydro DMG Bonus', 'Normal Attack DMG Bonus'],
+            damageType: 'Hydro',
+        },
+        '3-Hit DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Normal Attack Additive Bonus'],
+            multiplicativeBonusStat: ['Hydro DMG Bonus', 'Normal Attack DMG Bonus'],
+            damageType: 'Hydro',
+        },
+        '4-Hit DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Normal Attack Additive Bonus'],
+            multiplicativeBonusStat: ['Hydro DMG Bonus', 'Normal Attack DMG Bonus'],
+            damageType: 'Hydro',
+        },
+        'Charged Attack DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Charged Attack Additive Bonus'],
+            multiplicativeBonusStat: ['Hydro DMG Bonus', 'Charged Attack DMG Bonus'],
+            damageType: 'Hydro',
+        },
+        'Charged Attack Stamina Cost': {
+            formulaType: FormulaType.GenericFormulaWithoutScaling,
+            multiplicativeBonusStat: ['Charged Attack Stamina Cost Multiplier'],
+            outputType: FormulaOutputType.Generic,
+        },
+        'Plunge DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Plunging Attack Additive Bonus'],
+            multiplicativeBonusStat: [
+                'Hydro DMG Bonus',
+                'Plunging Attack DMG Bonus',
+            ],
+            damageType: 'Hydro',
+        },
+        'Low Plunge DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Plunging Attack Additive Bonus'],
+            multiplicativeBonusStat: [
+                'Hydro DMG Bonus',
+                'Plunging Attack DMG Bonus',
+            ],
+            damageType: 'Hydro',
+        },
+        'High Plunge DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Plunging Attack Additive Bonus'],
+            multiplicativeBonusStat: [
+                'Hydro DMG Bonus',
+                'Plunging Attack DMG Bonus',
+            ],
+            damageType: 'Hydro',
+        },
+    },
+    'Mirror Reflection of Doom': {
+        DoT: {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Elemental Skill Additive Bonus'],
+            multiplicativeBonusStat: [
+                'Hydro DMG Bonus',
+                'Elemental Skill DMG Bonus',
+            ],
+            damageType: 'Hydro',
+        },
+        'Explosion DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Elemental Skill Additive Bonus'],
+            multiplicativeBonusStat: [
+                'Hydro DMG Bonus',
+                'Elemental Skill DMG Bonus',
+            ],
+            damageType: 'Hydro',
+        },
+        CD: {
+            formulaType: FormulaType.GenericFormulaWithoutScaling,
+            multiplicativeBonusStat: ['Elemental Skill CD Reduction'],
+            outputType: FormulaOutputType.Time,
+        },
+    },
+    'Stellaris Phantasm': {
+        'Illusory Bubble Duration': {
+            formulaType: FormulaType.GenericFormulaWithScaling,
+            multiplicativeBonusStat: ['Elemental Burst CD Reduction'],
+            outputType: FormulaOutputType.Time,
+        },
+        'Illusory Bubble Explosion DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Elemental Burst Additive Bonus'],
+            multiplicativeBonusStat: [
+                'Hydro DMG Bonus',
+                'Elemental Burst DMG Bonus',
+            ],
+            damageType: 'Hydro',
+        },
+        'DMG Bonus': {
+            formulaType: FormulaType.GenericFormulaWithoutScaling,
+            outputType: FormulaOutputType.Percentage,
+        },
+        Duration: {
+            formulaType: FormulaType.GenericFormulaWithoutScaling,
+            outputType: FormulaOutputType.Time,
+        },
+        'Omen Duration': {
+            formulaType: FormulaType.GenericFormulaWithoutScaling,
+            outputType: FormulaOutputType.Time,
+        },
+        CD: {
+            formulaType: FormulaType.GenericFormulaWithoutScaling,
+            multiplicativeBonusStat: ['Elemental Burst CD Reduction'],
+            outputType: FormulaOutputType.Time,
+        },
+        'Energy Cost': {
+            formulaType: FormulaType.GenericFormulaWithoutScaling,
+            outputType: FormulaOutputType.Generic,
+        },
+    },
 }
 
 const characterBonuses: Bonus[] = [
-    // ...
+    {
+        name: 'Stellaris Phantasm',
+        description: (
+            <span>During the duration of Omen, enemies take increased DMG</span>
+        ),
+        icon: '/images/characters/mona-burst.png',
+        effect: (
+            attributes,
+            initialAttributes,
+            talentLevels,
+            currentStacks,
+            state
+        ) => {
+            if (!initialAttributes || !talentLevels) return { attributes }
+
+            // Getting raw talent scalings
+            const talentData: TalentRawData = state!.character.talents.find(
+                (t) => t.name === 'Stellaris Phantasm'
+            )!.data
+
+            const bonusMatch =
+                talentData['DMG Bonus']![`Lv${talentLevels[2]}`]!.match(/\d+/g)
+
+            const bonusMatchInt = bonusMatch ? parseInt(bonusMatch[0]) : 0
+
+            const newAttributes = {
+                ...attributes,
+                'All DMG Bonus':
+                    (attributes['All DMG Bonus'] || 0) + bonusMatchInt / 100,
+            }
+
+            return { attributes: newAttributes }
+        },
+    },
+    {
+        name: 'Waterborne Destiny',
+        description: (
+            <span>
+                Increases Mona&apos;s{' '}
+                <span style={{ color: '#3d9bc1' }}>Hydro DMG Bonus</span> by 20% of
+                her Energy Recharge rate
+            </span>
+        ),
+        icon: '/images/characters/mona-passive2.png',
+        effect: (attributes, initialAttributes) => {
+            if (!initialAttributes) return { attributes }
+
+            const newAttributes = {
+                ...attributes,
+                'Hydro DMG Bonus':
+                    attributes['Hydro DMG Bonus'] +
+                    0.2 * initialAttributes['Energy Recharge'],
+            }
+
+            return { attributes: newAttributes }
+        },
+        enabled: true,
+    },
+    {
+        name: 'Prophecy of Submersion',
+        description: (
+            <span>
+                <Badge variant="secondary">C1</Badge> When any of your own party
+                members hits an opponent affected by an Omen, the effects of{' '}
+                <span style={{ color: '#3d9bc1' }}>
+                    Hydro-related Elemental Reactions
+                </span>{' '}
+                are enhanced for 8s:
+                <ul className="mb-0">
+                    <li>- Electro-Charged DMG increases by 15%</li>
+                    <li>- Vaporize DMG increases by 15%</li>
+                    <li>- Hydro Swirl DMG increases by 15%</li>
+                    <li>- Frozen duration is extended by 15%</li>
+                </ul>
+            </span>
+        ),
+        icon: '/images/characters/mona-constellation1.png',
+        effect: (attributes, initialAttributes) => {
+            if (!initialAttributes) return { attributes }
+
+            const newAttributes = {
+                ...attributes,
+                'Electro-Charged DMG Bonus':
+                    (initialAttributes['Electro-Charged DMG Bonus'] || 0) + 0.15,
+                'Vaporize DMG Bonus':
+                    (initialAttributes['Vaporize DMG'] || 0) + 0.15,
+                'Hydro Swirl DMG Bonus':
+                    (initialAttributes['Hydro Swirl DMG'] || 0) + 0.15,
+                'Frozen Duration Bonus':
+                    (initialAttributes['Frozen Duration'] || 0) + 0.15,
+            }
+
+            return { attributes: newAttributes }
+        },
+        minConstellation: 1,
+    },
+    {
+        name: 'Rhetorics of Calamitas',
+        description: (
+            <span>
+                <Badge variant="secondary">C6</Badge>Upon entering{' '}
+                <span style={{ color: '#ddd' }}>Illusory Torrent</span>, Mona gains a
+                60% increase to the DMG of her next Charged Attack per second of
+                movement, with a maximum of 180% (lasting up to 8s)
+            </span>
+        ),
+        icon: '/images/characters/mona-constellation6.png',
+        effect: (attributes, initialAttributes, talentLevels, currentStacks) => {
+            if (!initialAttributes || !currentStacks) return { attributes }
+
+            const newAttributes = {
+                ...attributes,
+                'Charged Attack DMG Bonus':
+                    initialAttributes['Charged Attack DMG Bonus'] +
+                    0.6 * currentStacks,
+            }
+
+            return { attributes: newAttributes }
+        },
+        maxStacks: 3,
+        stackOptions: ['Off', '1s', '2s', '3s'],
+        minConstellation: 6,
+    },
 ]
 
 const constellationBonuses: Bonus[] = [
-    // ...
+    {
+        name: 'Prophecy of Submersion',
+        description: (
+            <span>
+                When any of your own party members hits an opponent affected by an
+                Omen, the effects of{' '}
+                <span style={{ color: '#3d9bc1' }}>
+                    Hydro-related Elemental Reactions
+                </span>{' '}
+                are enhanced for 8s:
+                <ul className="mb-0">
+                    <li>- Electro-Charged DMG increases by 15%.</li>
+                    <li>- Vaporize DMG increases by 15%.</li>
+                    <li>- Hydro Swirl DMG increases by 15%.</li>
+                    <li> -Frozen duration is extended by 15%.</li>
+                </ul>
+            </span>
+        ),
+        icon: '/images/characters/mona-constellation1.png',
+        effect: (attributes) => {
+            return { attributes }
+        },
+        minConstellation: 1,
+    },
+    {
+        name: 'Lunar Chain',
+        description: (
+            <span>
+                When a Normal Attack hits, there is a 20% chance that it will be
+                automatically followed by a Charged Attack. This effect can only
+                occur once every 5s.
+            </span>
+        ),
+        icon: '/images/characters/mona-constellation2.png',
+        effect: (attributes) => {
+            return { attributes }
+        },
+        minConstellation: 2,
+    },
+    {
+        name: 'Restless Resolution',
+        description: (
+            <span>
+                Increases the Level of{' '}
+                <span style={{ color: '#DDD' }}>Stellaris Phantasm</span> by 3.
+                <br />
+                Maximum upgrade level is 15.
+            </span>
+        ),
+        icon: '/images/characters/mona-constellation3.png',
+        effect: (attributes, initialAttributes, talentLevels) => {
+            if (!talentLevels) return { attributes }
+
+            const newTalentLevels = [...talentLevels]
+            newTalentLevels[1] = Math.min(newTalentLevels[1] + 3, 13)
+
+            return { attributes: attributes, updatedTalentLevels: newTalentLevels }
+        },
+        minConstellation: 3,
+    },
+    {
+        name: 'Prophecy of Oblivion',
+        description: (
+            <span>
+                When any party member attacks an opponent affected by an Omen, their
+                CRIT Rate is increased by 15%.
+            </span>
+        ),
+        icon: '/images/characters/mona-constellation4.png',
+        effect: (attributes) => {
+            // TODO: Handle
+            return { attributes }
+        },
+        minConstellation: 4,
+    },
+    {
+        name: 'Mockery of Fortuna',
+        description: (
+            <span>
+                Increase the Level of{' '}
+                <span style={{ color: '#DDD' }}>Mirror Reflection of Doom</span> by
+                3.
+                <br />
+                Maximum upgrade level is 15.
+            </span>
+        ),
+        icon: '/images/characters/mona-constellation5.png',
+        effect: (attributes, initialAttributes, talentLevels) => {
+            if (!talentLevels) return { attributes }
+
+            const newTalentLevels = [...talentLevels]
+            newTalentLevels[2] = Math.min(newTalentLevels[2] + 3, 13)
+
+            return { attributes: attributes, updatedTalentLevels: newTalentLevels }
+        },
+        minConstellation: 5,
+    },
+    {
+        name: 'Rhetorics of Calamitas',
+        description: (
+            <span>
+                Upon entering Illusory Torrent, Mona gains a 60% increase to the DMG
+                of her next Charged Attack per second of movement. A maximum DMG
+                Bonus of 180% can be achieved in this manner. The effect lasts for no
+                more than 8s.
+            </span>
+        ),
+        icon: '/images/characters/mona-constellation6.png',
+        effect: (attributes) => {
+            // Already handled in characterBonuses
+            return { attributes }
+        },
+        minConstellation: 6,
+    },
 ]
 
 const Mona: Character = {

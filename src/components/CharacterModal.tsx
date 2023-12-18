@@ -75,7 +75,9 @@ const CharacterModal = ({
                             src={rawCharacter.icon}
                             alt={rawCharacter.name}
                             onClick={() => handleCharacterSelect(rawCharacter.name)}
-                            className="cursor-pointer rounded-full object-cover hover:scale-105"
+                            className={`cursor-pointer rounded-full object-cover transition-all duration-100 ease-in hover:scale-105 ${
+                                rawCharacter.implemented ? '' : 'opacity-50'
+                            }`}
                             width={70}
                             height={70}
                             style={{

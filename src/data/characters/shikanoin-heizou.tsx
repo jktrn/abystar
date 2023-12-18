@@ -227,7 +227,7 @@ const ShikanoinHeizou: Character = {
                     Lv14: '138.26%',
                     Lv15: '145.94%',
                 },
-                'Charged Attack': {
+                'Charged Attack DMG': {
                     Lv1: '73%',
                     Lv2: '78.47%',
                     Lv3: '83.95%',
