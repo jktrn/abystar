@@ -1,9 +1,9 @@
 import { Weapon } from '@/interfaces/Weapon'
 // import { Bonus } from '@/interfaces/Character'
 
-// const weaponBonus: Bonus = {
+// const weaponBonuses: Bonus[] = [
 // TODO: Implement
-// }
+// ]
 
 const SplendorOfTranquilWaters: Weapon = {
     name: 'Splendor of Tranquil Waters',
@@ -100,7 +100,7 @@ const SplendorOfTranquilWaters: Weapon = {
             level: 5,
         },
     ],
-    // weaponBonus
+    // weaponBonuses
 }
 
 export default SplendorOfTranquilWaters

@@ -25,7 +25,7 @@ const damageFormula = (
         const multiplicativeBonusStatValue =
             calculateStatValue(
                 // Might as well add All DMG here so it doesn't need to be repeated fifteen quintillion times
-                ['All DMG', ...multiplicativeBonusStat],
+                ['All DMG Bonus', ...multiplicativeBonusStat],
                 characterAttributes
             ) + 1 // Add 1 because it's a multiplier
 

@@ -1,9 +1,9 @@
 import { Weapon } from '@/interfaces/Weapon'
 // import { Bonus } from '@/interfaces/Character'
 
-// const weaponBonus: Bonus = {
+// const weaponBonuses: Bonus[] = [
 // TODO: Implement
-// }
+// ]
 
 const SwordOfDescension: Weapon = {
     name: 'Sword of Descension',
@@ -80,7 +80,7 @@ const SwordOfDescension: Weapon = {
             level: 1,
         },
     ],
-    // weaponBonus
+    // weaponBonuses
 }
 
 export default SwordOfDescension

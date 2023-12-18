@@ -1,7 +1,7 @@
 import { BaseStat, Bonus } from './Character'
 
 export interface WeaponRefinement {
-    description: string
+    description: JSX.Element | string
     level: number
 }
 
@@ -20,5 +20,5 @@ export interface RawWeapon {
 }
 
 export interface Weapon extends RawWeapon {
-    weaponBonus?: Bonus
+    weaponBonuses?: Bonus[]
 }

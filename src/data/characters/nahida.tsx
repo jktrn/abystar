@@ -112,7 +112,8 @@ const talentScalings: TalentScaling = {
             multiplicativeBonusStat: [
                 'Dendro DMG Bonus',
                 'Elemental Skill DMG Bonus',
-                'Tri-Karma Purification DMG Bonus',
+                'Awakening Elucidated Tri-Karma Purification DMG Bonus',
+                'Illusory Heart Tri-Karma Purification DMG Bonus',
             ],
             critRateBonusStat: ['Elemental Skill CRIT Rate'],
             damageType: 'Dendro',
@@ -215,8 +216,10 @@ const characterBonuses: Bonus[] = [
 
             const newAttributes = {
                 ...attributes,
-                'Tri-Karma Purification DMG Bonus':
-                    (attributes['Tri-Karma Purification DMG Bonus'] || 0) + bonusDMG,
+                'Awakening Elucidated Tri-Karma Purification DMG Bonus':
+                    (initialAttributes[
+                        'Awakening Elucidated Tri-Karma Purification DMG Bonus'
+                    ] || 0) + bonusDMG,
                 'Elemental Skill CRIT Rate':
                     (initialAttributes['Elemental Skill CRIT Rate'] || 0) +
                     bonusCritRate,
@@ -273,8 +276,10 @@ const characterBonuses: Bonus[] = [
             })
 
             if (currentStacks === 1 || currentStacks === 2) {
-                newAttributes['Tri-Karma Purification DMG Bonus'] =
-                    (attributes['Tri-Karma Purification DMG Bonus'] || 0) +
+                newAttributes['Illusory Heart Tri-Karma Purification DMG Bonus'] =
+                    (initialAttributes[
+                        'Illusory Heart Tri-Karma Purification DMG Bonus'
+                    ] || 0) +
                     effectMultipliers[currentStacks - 1] / 100
             } else if (currentStacks === 3 || currentStacks === 4) {
                 newAttributes['Shrine of Maya Duration Bonus'] =

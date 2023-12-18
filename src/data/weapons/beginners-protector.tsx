@@ -1,9 +1,7 @@
 import { Weapon } from '@/interfaces/Weapon'
-// import { Bonus } from '@/interfaces/Character'
+import { Bonus } from '@/interfaces/Character'
 
-// const weaponBonus: Bonus = {
-// TODO: Implement
-// }
+const weaponBonuses: Bonus[] = []
 
 const BeginnersProtector: Weapon = {
     name: "Beginner's Protector",
@@ -44,7 +42,7 @@ const BeginnersProtector: Weapon = {
             'Base ATK': 185.43,
         },
     },
-    // weaponBonus
+    weaponBonuses,
 }
 
 export default BeginnersProtector

@@ -1,9 +1,9 @@
 import { Weapon } from '@/interfaces/Weapon'
 // import { Bonus } from '@/interfaces/Character'
 
-// const weaponBonus: Bonus = {
+// const weaponBonuses: Bonus[] = [
 // TODO: Implement
-// }
+// ]
 
 const BalladOfTheBoundlessBlue: Weapon = {
     name: 'Ballad of the Boundless Blue',
@@ -100,7 +100,7 @@ const BalladOfTheBoundlessBlue: Weapon = {
             level: 5,
         },
     ],
-    // weaponBonus
+    // weaponBonuses
 }
 
 export default BalladOfTheBoundlessBlue

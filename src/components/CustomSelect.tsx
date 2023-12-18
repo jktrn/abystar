@@ -22,7 +22,7 @@ const CustomSelect = ({
     ...props
 }: CustomSelectProps) => {
     const alteredClass = isAltered ? 'custom-select-altered' : ''
-    const isDisabled = options.length === 0
+    const isDisabled = options.length === 1
 
     return (
         <Select

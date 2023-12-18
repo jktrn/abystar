@@ -227,7 +227,7 @@ const YunJin: Character = {
                     Lv14: '170.69%',
                     Lv15: '180.09%',
                 },
-                'Charged Attack': {
+                'Charged Attack DMG': {
                     Lv1: '121.69%',
                     Lv2: '131.6%',
                     Lv3: '141.5%',

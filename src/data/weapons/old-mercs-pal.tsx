@@ -1,9 +1,7 @@
 import { Weapon } from '@/interfaces/Weapon'
-// import { Bonus } from '@/interfaces/Character'
+import { Bonus } from '@/interfaces/Character'
 
-// const weaponBonus: Bonus = {
-// TODO: Implement
-// }
+const weaponBonuses: Bonus[] = []
 
 const OldMercsPal: Weapon = {
     name: "Old Merc's Pal",
@@ -43,7 +41,7 @@ const OldMercsPal: Weapon = {
             'Base ATK': 243.23,
         },
     },
-    // weaponBonus
+    weaponBonuses,
 }
 
 export default OldMercsPal

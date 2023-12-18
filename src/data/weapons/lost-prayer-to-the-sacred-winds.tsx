@@ -1,9 +1,9 @@
 import { Weapon } from '@/interfaces/Weapon'
 // import { Bonus } from '@/interfaces/Character'
 
-// const weaponBonus: Bonus = {
+// const weaponBonuses: Bonus[] = [
 // TODO: Implement
-// }
+// ]
 
 const LostPrayerToTheSacredWinds: Weapon = {
     name: 'Lost Prayer to the Sacred Winds',
@@ -100,7 +100,7 @@ const LostPrayerToTheSacredWinds: Weapon = {
             level: 5,
         },
     ],
-    // weaponBonus
+    // weaponBonuses
 }
 
 export default LostPrayerToTheSacredWinds

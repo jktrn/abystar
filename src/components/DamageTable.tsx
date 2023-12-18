@@ -44,11 +44,11 @@ const DamageTable = ({ damageResults }: DamageTableProps) => {
                         aspect.damage.outputType === FormulaOutputType.Time
                             ? `${aspect.damage.outputValue?.toFixed(1)}s`
                             : aspect.damage.outputType ===
-                                FormulaOutputType.Percentage
-                              ? `${aspect.damage.outputValue?.toFixed(1)}%`
-                              : aspect.damage.outputValue
-                                ? Math.round(aspect.damage.outputValue)
-                                : 0
+                              FormulaOutputType.Percentage
+                            ? `${aspect.damage.outputValue?.toFixed(1)}%`
+                            : aspect.damage.outputValue
+                            ? Math.round(aspect.damage.outputValue)
+                            : 0
                     result.push({
                         name: aspect.aspectName,
                         average: outputValue,
@@ -87,6 +87,16 @@ const DamageTable = ({ damageResults }: DamageTableProps) => {
             }
         }
         return undefined
+    }
+
+    if (tableData.length === 0) {
+        return (
+            <div className="m-4 flex flex-col gap-2">
+                <span className="rounded-md bg-destructive/25 p-2 text-center text-sm">
+                    This character is unimplemented! No results.
+                </span>
+            </div>
+        )
     }
 
     return (

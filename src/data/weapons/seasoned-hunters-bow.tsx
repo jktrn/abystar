@@ -1,9 +1,7 @@
 import { Weapon } from '@/interfaces/Weapon'
-// import { Bonus } from '@/interfaces/Character'
+import { Bonus } from '@/interfaces/Character'
 
-// const weaponBonus: Bonus = {
-// TODO: Implement
-// }
+const weaponBonuses: Bonus[] = []
 
 const SeasonedHuntersBow: Weapon = {
     name: "Seasoned Hunter's Bow",
@@ -44,7 +42,7 @@ const SeasonedHuntersBow: Weapon = {
             'Base ATK': 243.23,
         },
     },
-    // weaponBonus
+    weaponBonuses,
 }
 
 export default SeasonedHuntersBow
