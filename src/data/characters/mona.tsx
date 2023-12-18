@@ -246,6 +246,27 @@ const characterBonuses: Bonus[] = [
         minConstellation: 1,
     },
     {
+        name: 'Prophecy of Oblivion',
+        description: (
+            <span>
+                <Badge variant="secondary">C4</Badge> When any party member attacks
+                an opponent affected by an Omen, their CRIT Rate is increased by 15%
+            </span>
+        ),
+        icon: '/images/characters/mona-constellation4.png',
+        effect: (attributes, initialAttributes) => {
+            if (!initialAttributes) return { attributes }
+
+            const newAttributes = {
+                ...attributes,
+                'CRIT Rate': (initialAttributes['CRIT Rate'] || 0) + 0.15,
+            }
+
+            return { attributes: newAttributes }
+        },
+        minConstellation: 4,
+    },
+    {
         name: 'Rhetorics of Calamitas',
         description: (
             <span>
@@ -345,7 +366,7 @@ const constellationBonuses: Bonus[] = [
         ),
         icon: '/images/characters/mona-constellation4.png',
         effect: (attributes) => {
-            // TODO: Handle
+            // Already handled in characterBonuses
             return { attributes }
         },
         minConstellation: 4,
