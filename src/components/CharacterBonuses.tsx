@@ -67,7 +67,7 @@ const CharacterBonuses = ({
     if (characterState.character.characterBonuses.length === 0) {
         return (
             <div className="flex flex-col gap-2">
-                <span className="rounded-md bg-destructive/25 p-2 text-center">
+                <span className="text-sm rounded-md bg-destructive/25 p-2 text-center">
                     This character is unimplemented! No bonuses.
                 </span>
             </div>

@@ -92,7 +92,7 @@ const DamageTable = ({ damageResults }: DamageTableProps) => {
     if (tableData.length === 0) {
         return (
             <div className="m-4 flex flex-col gap-2">
-                <span className="rounded-md bg-destructive/25 p-2 text-center">
+                <span className="text-sm rounded-md bg-destructive/25 p-2 text-center">
                     This character is unimplemented! No results.
                 </span>
             </div>

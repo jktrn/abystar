@@ -24,8 +24,18 @@ const WeaponBonuses = ({ characterState, setActiveBonuses }: WeaponBonusesProps)
     if (characterState.weapon.weaponBonuses === undefined) {
         return (
             <div className="flex flex-col gap-2">
-                <span className="rounded-md bg-destructive/25 p-2 text-center">
+                <span className="text-sm rounded-md bg-destructive/25 p-2 text-center">
                     This weapon is unimplemented! No bonuses.
+                </span>
+            </div>
+        )
+    }
+
+    if (characterState.weapon.weaponBonuses.length === 0) {
+        return (
+            <div className="flex flex-col gap-2">
+                <span className="text-muted-foreground text-sm rounded-md bg-secondary/25 p-2 text-center">
+                    This weapon has no bonuses.
                 </span>
             </div>
         )

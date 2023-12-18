@@ -1,9 +1,7 @@
 import { Weapon } from '@/interfaces/Weapon'
-// import { Bonus } from '@/interfaces/Character'
+import { Bonus } from '@/interfaces/Character'
 
-// const weaponBonuses: Bonus[] = [
-// TODO: Implement
-// ]
+const weaponBonuses: Bonus[] = []
 
 const WasterGreatsword: Weapon = {
     name: 'Waster Greatsword',
@@ -44,7 +42,7 @@ const WasterGreatsword: Weapon = {
             'Base ATK': 185.43,
         },
     },
-    // weaponBonuses
+    weaponBonuses,
 }
 
 export default WasterGreatsword
