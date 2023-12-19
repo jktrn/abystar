@@ -424,7 +424,7 @@ const characterBonuses: Bonus[] = [
             <span>
                 <Badge variant="secondary">C6</Badge>{' '}
                 <Badge variant="destructive">Unfinished</Badge> When using{' '}
-                <span style={{ color: '#ddd' }}>Salon Solitaire</span>, Furina's
+                <span style={{ color: '#ddd' }}>Salon Solitaire</span>, Furina&apos;s
                 Normal/Charged Attacks and the impact of Plunging Attacks are
                 converted to <span style={{ color: '#3d9bc1' }}>Hydro DMG</span>{' '}
                 which cannot be overridden by any other elemental infusion. DMG is
@@ -490,9 +490,9 @@ const constellationBonuses: Bonus[] = [
             <span>
                 While{' '}
                 <span style={{ color: '#ddd' }}>Let the People Rejoice lasts</span>,
-                Furina's Fanfare gain from increases or decreases in nearby
-                characters' HP is increased by 250%. Each point of Fanfare above the
-                limit will increase Furina's Max HP by 0.35%. Her maximum Max HP
+                Furina&apos;s Fanfare gain from increases or decreases in nearby
+                characters&apos; HP is increased by 250%. Each point of Fanfare above the
+                limit will increase Furina&apos;s Max HP by 0.35%. Her maximum Max HP
                 increase is 140%.
             </span>
         ),
@@ -566,25 +566,25 @@ const constellationBonuses: Bonus[] = [
         description: (
             <span>
                 When using <span style={{ color: '#ddd' }}>Salon Solitaire</span>,
-                Furina gains "Center of Attention" for 10s. Throughout the duration,
-                Furina's Normal Attacks, Charged Attacks, and Plunging Attacks are
+                Furina gains &quot;Center of Attention&quot; for 10s. Throughout the duration,
+                Furina&apos;s Normal Attacks, Charged Attacks, and Plunging Attacks are
                 converted into <span style={{ color: '#3d9bc1' }}>Hydro DMG</span>{' '}
                 which cannot be overridden by any other elemental infusion. DMG is
-                also increased by an amount equivalent to 18% of Furina's max HP.
-                Throughout the duration, Furina's Normal Attacks (not including
+                also increased by an amount equivalent to 18% of Furina&apos;s max HP.
+                Throughout the duration, Furina&apos;s Normal Attacks (not including
                 Arkhe: Seats Sacred and Secular Attacks), Charged Attacks, and the
                 impact of Plunging Attacks will cause different effects up to every
                 0.1s after hitting opponents depending on her current Arkhe
                 alignment: Arkhe: Ousia Every 1s, all nearby characters in the party
-                will be healed by 4% of Furina's max HP, for a duration of 2.9s.
+                will be healed by 4% of Furina&apos;s max HP, for a duration of 2.9s.
                 Triggering this effect again will extend its duration. Arkhe: Pneuma
                 This Normal Attack (not including Arkhe: Seats Sacred and Secular
                 Attacks), Charged Attack, or Plunging Attack ground impact DMG will
-                be further increased by an amount equivalent to 25% of Furina's max
+                be further increased by an amount equivalent to 25% of Furina&apos;s max
                 HP. When any of the attacks mentioned previously hit an opponent, all
                 nearby characters in the party will consume 1% of their current HP.
-                During the duration of each instance of "Center of Attention," the
-                above effects can be triggered up to 6 times. "Center of Attention"
+                During the duration of each instance of &quot;Center of Attention,&quot; the
+                above effects can be triggered up to 6 times. &quot;Center of Attention&quot;
                 will end when its effects have triggered 6 times or when the duration
                 expires.
             </span>

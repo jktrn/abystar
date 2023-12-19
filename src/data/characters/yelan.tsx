@@ -154,7 +154,7 @@ const characterBonuses: Bonus[] = [
         name: 'Turn Control',
         description: (
             <span>
-                <Badge variant="secondary">A2</Badge> When the party has 1/2/3/4 of the same Elemental Type(s), Yelan's Max HP is increased by 6%/12%/18%/30%
+                <Badge variant="secondary">A2</Badge> When the party has 1/2/3/4 of the same Elemental Type(s), Yelan&apos;s Max HP is increased by 6%/12%/18%/30%
             </span>
         ),
         icon: '/images/characters/yelan-passive2.png',
@@ -205,7 +205,7 @@ const characterBonuses: Bonus[] = [
         name: "Dealer's Sleight",
         description: (
             <span>
-                <Badge variant="secondary">C4</Badge> Increases all party members' Max HP by 10% for 25s for every opponent marked by <span style={{ color: '#ddd' }}>Lifeline</span>{' '} 
+                <Badge variant="secondary">C4</Badge> Increases all party members&apos; Max HP by 10% for 25s for every opponent marked by <span style={{ color: '#ddd' }}>Lifeline</span>{' '} 
                 when the Lifeline explodes. A maximum increase of 40% Max HP can be attained in this manner.
             </span>
         ),
@@ -245,7 +245,7 @@ const constellationBonuses: Bonus[] = [
         description: (
             <span>
                 When <span style={{ color: '#ddd' }}>Exquisite Throw</span>{' '} (Elemental Burst)
-                conducts a coordinated attack, it will fire an additional water arrow that will deal 14% of Yelan's Max HP as <span style={{ color: '#3d9bc1' }}>Hydro DMG</span>{''}.
+                conducts a coordinated attack, it will fire an additional water arrow that will deal 14% of Yelan&apos;s Max HP as <span style={{ color: '#3d9bc1' }}>Hydro DMG</span>{''}.
                 This effect can trigger once every 1.8s.
             </span>
         ),
@@ -280,7 +280,7 @@ const constellationBonuses: Bonus[] = [
         name: "Bait-And-Switch",
         description: (
             <span>
-                Increases all party members' Max HP by 10% for 25s for every opponent marked by <span style={{ color: '#ddd' }}>Lifeline</span>{' '} 
+                Increases all party members&apos; Max HP by 10% for 25s for every opponent marked by <span style={{ color: '#ddd' }}>Lifeline</span>{' '} 
                 when the Lifeline explodes. A maximum increase of 40% Max HP can be attained in this manner.
             </span>
         ),
@@ -317,9 +317,9 @@ const constellationBonuses: Bonus[] = [
         description: (
             <span>
                 After using <span style={{ color: '#ddd' }}>Depth-Clarion Dice</span>{' '} (Elemental Burst)
-                all of Yelan's Normal Attacks will be special <span style={{ color: '#ddd' }}>Breakthrough Barbs</span>{''}.
+                all of Yelan&apos;s Normal Attacks will be special <span style={{ color: '#ddd' }}>Breakthrough Barbs</span>{''}.
                 These Breakthrough Barbs will have similar abilities to normal ones and the DMG dealt will be considered Charged Attack DMG, 
-                dealing 156% of a normal Breakthrough Barb's DMG.
+                dealing 156% of a normal Breakthrough Barb&apos;s DMG.
                 This state lasts 20s and will be cleared after Yelan fires 5 arrows.
             </span>
         ),
