@@ -9,6 +9,7 @@ export {
     kebabCase,
     mergeAndSum,
     parseScalingValue,
+    insertAspect
 } from './utils'
 
 export {

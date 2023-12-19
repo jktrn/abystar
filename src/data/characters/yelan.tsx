@@ -5,11 +5,12 @@ import {
     Character,
     FormulaType,
     FormulaOutputType,
-    DamageType
+    DamageType,
 } from '@/interfaces/Character'
 import { Badge } from '@/components/ui/badge'
 import { getTalentScalingValue } from '@/lib'
 import { AttributesTable } from '@/components'
+import { attachReactRefresh } from 'next/dist/build/webpack-config'
 
 const talentScalings: TalentScaling = {
     'Normal Attack: Stealthy Bowshot': {
@@ -56,6 +57,13 @@ const talentScalings: TalentScaling = {
             damageType: DamageType.Hydro
         },
         'Breakthrough Barb DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['HP'],
+            additiveBonusStat: ['Charged Attack Additive Bonus'],
+            multiplicativeBonusStat: ['Hydro DMG Bonus', 'Charged Attack DMG Bonus'],
+            damageType: DamageType.Hydro
+        },
+        'Special Breakthrough Barb DMG': {
             formulaType: FormulaType.DamageFormula,
             attribute: ['HP'],
             additiveBonusStat: ['Charged Attack Additive Bonus'],
@@ -117,6 +125,14 @@ const talentScalings: TalentScaling = {
             multiplicativeBonusStat: ['Hydro DMG Bonus', 'Elemental Burst DMG Bonus'],
             damageType: DamageType.Hydro
         },
+        'Taking All Comers': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['HP'],
+            additiveBonusStat: ['Elemental Burst Additive Bonus'],
+            multiplicativeBonusStat: ['Hydro DMG Bonus', 'Elemental Burst DMG Bonus'],
+            damageType: DamageType.Hydro,
+            minConstellation: 2
+        },
         Duration: {
             formulaType: FormulaType.GenericFormulaWithoutScaling,
             outputType: FormulaOutputType.Time
@@ -153,13 +169,13 @@ const characterBonuses: Bonus[] = [
 
             const newAttributes = {
                 ...attributes,
-                'HP': initialAttributes['HP'] * (1 + maxHPOptions[currentStacks])
+                'HP': attributes['HP'] * (1 + maxHPOptions[currentStacks])
             }
 
             return { attributes: newAttributes }
         },
         maxStacks: 4,
-        stackOptions: ['Off', '1 Same', '2 Same', '3 Same', '4 Same']
+        stackOptions: ['Off', '1 Same', '2 Same', '3 Same', '4 Same'],
     },
     {
         name: 'Adapt With Ease',
@@ -184,11 +200,135 @@ const characterBonuses: Bonus[] = [
         maxStacks: 15,
         stackOptions: ['Off', 'Initial', '1s', '2s', '3s', '4s', '5s', '6s', '7s', '8s', '9s', '10s', '11s', '12s', '13s', '14s'],
         dependencies: ['All DMG Bonus']
+    },
+    {
+        name: "Dealer's Sleight",
+        description: (
+            <span>
+                <Badge variant="secondary">C4</Badge> Increases all party members' Max HP by 10% for 25s for every opponent marked by <span style={{ color: '#ddd' }}>Lifeline</span>{' '} 
+                when the Lifeline explodes. A maximum increase of 40% Max HP can be attained in this manner.
+            </span>
+        ),
+        icon: '/images/characters/yelan-constellation4.png',
+        effect: (attributes, initialAttributes, talentLevels, currentStacks) => {
+            if(!initialAttributes || !currentStacks) return { attributes }
+
+            const newAttributes = {
+                ...attributes,
+                'HP': attributes['HP'] * (1 + 0.1 * currentStacks)
+            }
+
+            return { attributes: newAttributes }
+        },
+        maxStacks: 4,
+        stackOptions: ['Off', '1 Stack', '2 Stacks', '3 Stacks', '4 Stacks'],
+        minConstellation: 4
     }
 ]
 
 const constellationBonuses: Bonus[] = [
-    // ...
+    {
+        name: 'Enter the Plotters',
+        description: (
+            <span>
+                <span style={{ color: '#ddd' }}>Lingering Lifeline</span>{' '} (Elemental Skill) gains 1 additional charge
+            </span>
+        ),
+        icon: '/images/characters/yelan-constellation1.png',
+        effect: (attributes) => {
+            return { attributes }
+        },
+        minConstellation: 1
+    },
+    {
+        name: 'Taking All Comers',
+        description: (
+            <span>
+                When <span style={{ color: '#ddd' }}>Exquisite Throw</span>{' '} (Elemental Burst)
+                conducts a coordinated attack, it will fire an additional water arrow that will deal 14% of Yelan's Max HP as <span style={{ color: '#3d9bc1' }}>Hydro DMG</span>{''}.
+                This effect can trigger once every 1.8s.
+            </span>
+        ),
+        icon: '/images/characters/yelan-constellation2.png',
+        effect: (attributes) => {
+            return { attributes }
+        },
+        minConstellation: 2
+    },
+    {
+        name: "Beware the Trickster's Dice",
+        description: (
+            <span>
+                Increases the Level of{' '}
+                <span style={{ color: '#DDD' }}>Depth-Clarion Dice</span> by 3.
+                <br />
+                Maximum upgrade level is 15.
+            </span>
+        ),
+        icon: '/images/characters/yelan-constellation3.png',
+        effect: (attributes, initialAttributes, talentLevels) => {
+            if (!talentLevels) return { attributes }
+
+            const newTalentLevels = [...talentLevels]
+            newTalentLevels[1] = Math.min(newTalentLevels[1] + 3, 13)
+
+            return { attributes: attributes, updatedTalentLevels: newTalentLevels }
+        },
+        minConstellation: 3,
+    },
+    {
+        name: "Bait-And-Switch",
+        description: (
+            <span>
+                Increases all party members' Max HP by 10% for 25s for every opponent marked by <span style={{ color: '#ddd' }}>Lifeline</span>{' '} 
+                when the Lifeline explodes. A maximum increase of 40% Max HP can be attained in this manner.
+            </span>
+        ),
+        icon: '/images/characters/yelan-constellation4.png',
+        effect: (attributes) => {
+            return { attributes }
+        },
+        minConstellation: 4,
+    },
+    {
+        name: "Dealer's Sleight",
+        description: (
+            <span>
+                Increase the Level of{' '}
+                <span style={{ color: '#DDD' }}>Lingering Lifeline</span> by
+                3.
+                <br />
+                Maximum upgrade level is 15.
+            </span>
+        ),
+        icon: '/images/characters/yelan-constellation5.png',
+        effect: (attributes, initialAttributes, talentLevels) => {
+            if (!talentLevels) return { attributes }
+
+            const newTalentLevels = [...talentLevels]
+            newTalentLevels[2] = Math.min(newTalentLevels[2] + 3, 13)
+
+            return { attributes: attributes, updatedTalentLevels: newTalentLevels }
+        },
+        minConstellation: 5,
+    },
+    {
+        name: 'Winner Takes All',
+        description: (
+            <span>
+                After using <span style={{ color: '#ddd' }}>Depth-Clarion Dice</span>{' '} (Elemental Burst)
+                all of Yelan's Normal Attacks will be special <span style={{ color: '#ddd' }}>Breakthrough Barbs</span>{''}.
+                These Breakthrough Barbs will have similar abilities to normal ones and the DMG dealt will be considered Charged Attack DMG, 
+                dealing 156% of a normal Breakthrough Barb's DMG.
+                This state lasts 20s and will be cleared after Yelan fires 5 arrows.
+            </span>
+        ),
+        icon: '/images/characters/yelan-constellation6.png',
+        effect: (attributes) => {
+            return { attributes }
+        },
+        minConstellation: 6
+    }
 ]
 
 const Yelan: Character = {
@@ -440,6 +580,23 @@ const Yelan: Character = {
                     Lv14: '26.05% Max HP',
                     Lv15: '27.49% Max HP',
                 },
+                'Special Breakthrough Barb DMG': {
+                    Lv1: '18.06% Max HP',
+                    Lv2: '19.41% Max HP',
+                    Lv3: '20.76% Max HP',
+                    Lv4: '22.57% Max HP',
+                    Lv5: '23.93% Max HP',
+                    Lv6: '25.28% Max HP',
+                    Lv7: '27.08% Max HP',
+                    Lv8: '28.89% Max HP',
+                    Lv9: '30.70% Max HP',
+                    Lv10: '32.51% Max HP',
+                    Lv11: '34.30% Max HP',
+                    Lv12: '36.11% Max HP',
+                    Lv13: '38.38% Max HP',
+                    Lv14: '40.63% Max HP',
+                    Lv15: '42.88% Max HP',
+                },
                 'Plunge DMG': {
                     Lv1: '56.83%',
                     Lv2: '61.45%',
@@ -591,6 +748,23 @@ const Yelan: Character = {
                     Lv13: '10.35% Max HP \u00d73',
                     Lv14: '10.96% Max HP \u00d73',
                     Lv15: '11.57% Max HP \u00d73',
+                },
+                'Taking All Comers': {
+                    Lv1: '14.00% Max HP',
+                    Lv2: '14.00% Max HP',
+                    Lv3: '14.00% Max HP',
+                    Lv4: '14.00% Max HP',
+                    Lv5: '14.00% Max HP',
+                    Lv6: '14.00% Max HP',
+                    Lv7: '14.00% Max HP',
+                    Lv8: '14.00% Max HP',
+                    Lv9: '14.00% Max HP',
+                    Lv10: '14.00% Max HP',
+                    Lv11: '14.00% Max HP',
+                    Lv12: '14.00% Max HP',
+                    Lv13: '14.00% Max HP',
+                    Lv14: '14.00% Max HP',
+                    Lv15: '14.00% Max HP',
                 },
                 Duration: {
                     Lv1: '15s',
