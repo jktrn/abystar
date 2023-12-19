@@ -1,16 +1,12 @@
-import { 
-    TalentScaling,
-    TalentRawData,
-    Bonus, 
-    Character,
-    FormulaType,
-    FormulaOutputType,
-    DamageType,
-} from '@/interfaces/Character'
 import { Badge } from '@/components/ui/badge'
-import { getTalentScalingValue } from '@/lib'
-import { AttributesTable } from '@/components'
-import { attachReactRefresh } from 'next/dist/build/webpack-config'
+import {
+    Bonus,
+    Character,
+    DamageType,
+    FormulaOutputType,
+    FormulaType,
+    TalentScaling,
+} from '@/interfaces/Character'
 
 const talentScalings: TalentScaling = {
     'Normal Attack: Stealthy Bowshot': {
@@ -18,135 +14,172 @@ const talentScalings: TalentScaling = {
             formulaType: FormulaType.DamageFormula,
             attribute: ['ATK'],
             additiveBonusStat: ['Normal Attack Additive Bonus'],
-            multiplicativeBonusStat: ['Physical DMG Bonus', 'Normal Attack DMG Bonus'],
-            damageType: DamageType.Physical
+            multiplicativeBonusStat: [
+                'Physical DMG Bonus',
+                'Normal Attack DMG Bonus',
+            ],
+            damageType: DamageType.Physical,
         },
         '2-Hit DMG': {
             formulaType: FormulaType.DamageFormula,
             attribute: ['ATK'],
             additiveBonusStat: ['Normal Attack Additive Bonus'],
-            multiplicativeBonusStat: ['Physical DMG Bonus', 'Normal Attack DMG Bonus'],
-            damageType: DamageType.Physical
+            multiplicativeBonusStat: [
+                'Physical DMG Bonus',
+                'Normal Attack DMG Bonus',
+            ],
+            damageType: DamageType.Physical,
         },
         '3-Hit DMG': {
             formulaType: FormulaType.DamageFormula,
             attribute: ['ATK'],
             additiveBonusStat: ['Normal Attack Additive Bonus'],
-            multiplicativeBonusStat: ['Physical DMG Bonus', 'Normal Attack DMG Bonus'],
-            damageType: DamageType.Physical
+            multiplicativeBonusStat: [
+                'Physical DMG Bonus',
+                'Normal Attack DMG Bonus',
+            ],
+            damageType: DamageType.Physical,
         },
         '4-Hit DMG': {
             formulaType: FormulaType.DamageFormula,
             attribute: ['ATK'],
             additiveBonusStat: ['Normal Attack Additive Bonus'],
-            multiplicativeBonusStat: ['Physical DMG Bonus', 'Normal Attack DMG Bonus'],
-            damageType: DamageType.Physical
+            multiplicativeBonusStat: [
+                'Physical DMG Bonus',
+                'Normal Attack DMG Bonus',
+            ],
+            damageType: DamageType.Physical,
         },
         'Aimed Shot': {
             formulaType: FormulaType.DamageFormula,
             attribute: ['ATK'],
             additiveBonusStat: ['Charged Attack Additive Bonus'],
-            multiplicativeBonusStat: ['Physical DMG Bonus', 'Charged Attack DMG Bonus'],
-            damageType: DamageType.Physical
+            multiplicativeBonusStat: [
+                'Physical DMG Bonus',
+                'Charged Attack DMG Bonus',
+            ],
+            damageType: DamageType.Physical,
         },
         'Fully-Charged Aimed Shot': {
             formulaType: FormulaType.DamageFormula,
             attribute: ['ATK'],
             additiveBonusStat: ['Charged Attack Additive Bonus'],
             multiplicativeBonusStat: ['Hydro DMG Bonus', 'Charged Attack DMG Bonus'],
-            damageType: DamageType.Hydro
+            damageType: DamageType.Hydro,
         },
         'Breakthrough Barb DMG': {
             formulaType: FormulaType.DamageFormula,
             attribute: ['HP'],
             additiveBonusStat: ['Charged Attack Additive Bonus'],
             multiplicativeBonusStat: ['Hydro DMG Bonus', 'Charged Attack DMG Bonus'],
-            damageType: DamageType.Hydro
+            damageType: DamageType.Hydro,
         },
-        'Special Breakthrough Barb DMG': {
+        'C6 Breakthrough Barb DMG': {
             formulaType: FormulaType.DamageFormula,
             attribute: ['HP'],
             additiveBonusStat: ['Charged Attack Additive Bonus'],
             multiplicativeBonusStat: ['Hydro DMG Bonus', 'Charged Attack DMG Bonus'],
-            damageType: DamageType.Hydro
+            damageType: DamageType.Hydro,
+            minConstellation: 6,
         },
         'Plunge DMG': {
             formulaType: FormulaType.DamageFormula,
             attribute: ['ATK'],
             additiveBonusStat: ['Plunging Attack Additive Bonus'],
-            multiplicativeBonusStat: ['Physical DMG Bonus', 'Plunging Attack DMG Bonus'],
-            damageType: DamageType.Physical
+            multiplicativeBonusStat: [
+                'Physical DMG Bonus',
+                'Plunging Attack DMG Bonus',
+            ],
+            damageType: DamageType.Physical,
         },
         'Low Plunge DMG': {
             formulaType: FormulaType.DamageFormula,
             attribute: ['ATK'],
             additiveBonusStat: ['Plunging Attack Additive Bonus'],
-            multiplicativeBonusStat: ['Physical DMG Bonus', 'Plunging Attack DMG Bonus'],
-            damageType: DamageType.Physical
+            multiplicativeBonusStat: [
+                'Physical DMG Bonus',
+                'Plunging Attack DMG Bonus',
+            ],
+            damageType: DamageType.Physical,
         },
         'High Plunge DMG': {
             formulaType: FormulaType.DamageFormula,
             attribute: ['ATK'],
             additiveBonusStat: ['Plunging Attack Additive Bonus'],
-            multiplicativeBonusStat: ['Physical DMG Bonus', 'Plunging Attack DMG Bonus'],
-            damageType: DamageType.Physical
-        }
+            multiplicativeBonusStat: [
+                'Physical DMG Bonus',
+                'Plunging Attack DMG Bonus',
+            ],
+            damageType: DamageType.Physical,
+        },
     },
     'Lingering Lifeline': {
         'Skill DMG': {
             formulaType: FormulaType.DamageFormula,
             attribute: ['HP'],
             additiveBonusStat: ['Elemental Skill Additive Bonus'],
-            multiplicativeBonusStat: ['Hydro DMG Bonus', 'Elemental Skill DMG Bonus'],
-            damageType: DamageType.Hydro
+            multiplicativeBonusStat: [
+                'Hydro DMG Bonus',
+                'Elemental Skill DMG Bonus',
+            ],
+            damageType: DamageType.Hydro,
         },
         'Max Duration (Hold)': {
             formulaType: FormulaType.GenericFormulaWithoutScaling,
-            outputType: FormulaOutputType.Time
+            outputType: FormulaOutputType.Time,
         },
         CD: {
             formulaType: FormulaType.GenericFormulaWithoutScaling,
             multiplicativeBonusStat: ['Elemental Skill CD Reduction'],
-            outputType: FormulaOutputType.Time
-        }
+            outputType: FormulaOutputType.Time,
+        },
     },
     'Depth-Clarion Dice': {
         'Skill DMG': {
             formulaType: FormulaType.DamageFormula,
             attribute: ['HP'],
             additiveBonusStat: ['Elemental Burst Additive Bonus'],
-            multiplicativeBonusStat: ['Hydro DMG Bonus', 'Elemental Burst DMG Bonus'],
-            damageType: DamageType.Hydro
+            multiplicativeBonusStat: [
+                'Hydro DMG Bonus',
+                'Elemental Burst DMG Bonus',
+            ],
+            damageType: DamageType.Hydro,
         },
         'Exquisite Throw DMG': {
             formulaType: FormulaType.DamageFormula,
             attribute: ['HP'],
             additiveBonusStat: ['Elemental Burst Additive Bonus'],
-            multiplicativeBonusStat: ['Hydro DMG Bonus', 'Elemental Burst DMG Bonus'],
-            damageType: DamageType.Hydro
+            multiplicativeBonusStat: [
+                'Hydro DMG Bonus',
+                'Elemental Burst DMG Bonus',
+            ],
+            damageType: DamageType.Hydro,
         },
-        'Taking All Comers': {
+        'Taking All Comers Additional Arrow': {
             formulaType: FormulaType.DamageFormula,
             attribute: ['HP'],
             additiveBonusStat: ['Elemental Burst Additive Bonus'],
-            multiplicativeBonusStat: ['Hydro DMG Bonus', 'Elemental Burst DMG Bonus'],
+            multiplicativeBonusStat: [
+                'Hydro DMG Bonus',
+                'Elemental Burst DMG Bonus',
+            ],
             damageType: DamageType.Hydro,
-            minConstellation: 2
+            minConstellation: 2,
         },
         Duration: {
             formulaType: FormulaType.GenericFormulaWithoutScaling,
-            outputType: FormulaOutputType.Time
+            outputType: FormulaOutputType.Time,
         },
         CD: {
             formulaType: FormulaType.GenericFormulaWithoutScaling,
             multiplicativeBonusStat: ['Elemental Burst CD Reduction'],
-            outputType: FormulaOutputType.Time
+            outputType: FormulaOutputType.Time,
         },
         'Energy Cost': {
             formulaType: FormulaType.GenericFormulaWithoutScaling,
-            outputType: FormulaOutputType.Generic
-        }
-    }
+            outputType: FormulaOutputType.Generic,
+        },
+    },
 }
 
 const characterBonuses: Bonus[] = [
@@ -154,76 +187,99 @@ const characterBonuses: Bonus[] = [
         name: 'Turn Control',
         description: (
             <span>
-                <Badge variant="secondary">A2</Badge> When the party has 1/2/3/4 of the same Elemental Type(s), Yelan&apos;s Max HP is increased by 6%/12%/18%/30%
+                <Badge variant="secondary">A1</Badge> When the party has 1/2/3/4 of
+                the same Elemental Type(s), Yelan&apos;s Max HP is increased by
+                6%/12%/18%/30%
             </span>
         ),
-        icon: '/images/characters/yelan-passive2.png',
+        icon: '/images/characters/yelan-passive1.png',
         effect: (attributes, initialAttributes, talentLevels, currentStacks) => {
-            if(!initialAttributes || !currentStacks) return {attributes}
+            if (!initialAttributes || !currentStacks || currentStacks === 0)
+                return { attributes }
 
-            const maxHPOptions = [0, 0.06, 0.12, 0.18, 0.30]
-
-            // This is basically a dumb solution but essentially currentStacks doesn't register if you are on the first index. So we need another variable for index 0
-            let actualCurrent = 0;
-            actualCurrent = actualCurrent + currentStacks
+            const maxHPOptions = [0, 0.06, 0.12, 0.18, 0.3]
 
             const newAttributes = {
                 ...attributes,
-                'HP': attributes['HP'] * (1 + maxHPOptions[currentStacks])
+                HP: initialAttributes['HP'] * (1 + maxHPOptions[currentStacks]),
             }
 
             return { attributes: newAttributes }
         },
         maxStacks: 4,
         stackOptions: ['Off', '1 Same', '2 Same', '3 Same', '4 Same'],
+        dependencies: ['HP'],
     },
     {
         name: 'Adapt With Ease',
         description: (
             <span>
-                <Badge variant="secondary">A4</Badge> When <span style={{ color: '#ddd' }}>Exquisite Throw</span>{' '}
-                (Elemental Burst) is in effect, your own active character deals 1% more DMG. 
-                This increases by a further 3.5% every second. The maximum increase to DMG dealt this way is 50%
+                <Badge variant="secondary">A4</Badge> When{' '}
+                <span style={{ color: '#ddd' }}>Exquisite Throw</span> (Elemental
+                Burst) is in effect, your own active character deals 1% more DMG,
+                increasing by a further 3.5% per second (up to 50%)
             </span>
         ),
-        icon: '/images/characters/yelan-passive3.png',
+        icon: '/images/characters/yelan-passive2.png',
         effect: (attributes, initialAttributes, talentLevels, currentStacks) => {
-            if(!initialAttributes || !currentStacks) return {attributes}
+            if (!initialAttributes || !currentStacks) return { attributes }
 
             const newAttributes = {
                 ...attributes,
-                'All DMG Bonus': (initialAttributes['All DMG Bonus'] || 0) + (1 + 3.5 * (currentStacks - 1)) / 100
+                'All DMG Bonus':
+                    (initialAttributes['All DMG Bonus'] || 0) +
+                    (1 + 3.5 * (currentStacks - 1)) / 100,
             }
 
             return { attributes: newAttributes }
         },
         maxStacks: 15,
-        stackOptions: ['Off', 'Initial', '1s', '2s', '3s', '4s', '5s', '6s', '7s', '8s', '9s', '10s', '11s', '12s', '13s', '14s'],
-        dependencies: ['All DMG Bonus']
+        stackOptions: [
+            'Off',
+            '0s',
+            '1s',
+            '2s',
+            '3s',
+            '4s',
+            '5s',
+            '6s',
+            '7s',
+            '8s',
+            '9s',
+            '10s',
+            '11s',
+            '12s',
+            '13s',
+            '14s',
+        ],
+        dependencies: ['All DMG Bonus'],
     },
     {
-        name: "Dealer's Sleight",
+        name: 'Bait-And-Switch',
         description: (
             <span>
-                <Badge variant="secondary">C4</Badge> Increases all party members&apos; Max HP by 10% for 25s for every opponent marked by <span style={{ color: '#ddd' }}>Lifeline</span>{' '} 
-                when the Lifeline explodes. A maximum increase of 40% Max HP can be attained in this manner.
+                <Badge variant="secondary">C4</Badge> Increases all party
+                members&apos; Max HP by 10% for 25s for every opponent marked by{' '}
+                <span style={{ color: '#ddd' }}>Lifeline</span> when the Lifeline
+                explodes (up to 40% Max HP)
             </span>
         ),
         icon: '/images/characters/yelan-constellation4.png',
         effect: (attributes, initialAttributes, talentLevels, currentStacks) => {
-            if(!initialAttributes || !currentStacks) return { attributes }
+            if (!initialAttributes || !currentStacks) return { attributes }
 
             const newAttributes = {
                 ...attributes,
-                'HP': attributes['HP'] * (1 + 0.1 * currentStacks)
+                HP: initialAttributes['HP'] * (1 + 0.1 * currentStacks),
             }
 
             return { attributes: newAttributes }
         },
         maxStacks: 4,
         stackOptions: ['Off', '1 Stack', '2 Stacks', '3 Stacks', '4 Stacks'],
-        minConstellation: 4
-    }
+        minConstellation: 4,
+        dependencies: ['HP'],
+    },
 ]
 
 const constellationBonuses: Bonus[] = [
@@ -231,29 +287,34 @@ const constellationBonuses: Bonus[] = [
         name: 'Enter the Plotters',
         description: (
             <span>
-                <span style={{ color: '#ddd' }}>Lingering Lifeline</span>{' '} (Elemental Skill) gains 1 additional charge
+                <span style={{ color: '#ddd' }}>Lingering Lifeline</span> (Elemental
+                Skill) gains 1 additional charge
             </span>
         ),
         icon: '/images/characters/yelan-constellation1.png',
         effect: (attributes) => {
+            // * Unimplementable
             return { attributes }
         },
-        minConstellation: 1
+        minConstellation: 1,
     },
     {
         name: 'Taking All Comers',
         description: (
             <span>
-                When <span style={{ color: '#ddd' }}>Exquisite Throw</span>{' '} (Elemental Burst)
-                conducts a coordinated attack, it will fire an additional water arrow that will deal 14% of Yelan&apos;s Max HP as <span style={{ color: '#3d9bc1' }}>Hydro DMG</span>{''}.
-                This effect can trigger once every 1.8s.
+                When <span style={{ color: '#ddd' }}>Exquisite Throw</span>{' '}
+                (Elemental Burst) conducts a coordinated attack, it will fire an
+                additional water arrow that will deal 14% of Yelan&apos;s Max HP as{' '}
+                <span style={{ color: '#3d9bc1' }}>Hydro DMG</span>
+                {''}. This effect can trigger once every 1.8s.
             </span>
         ),
         icon: '/images/characters/yelan-constellation2.png',
         effect: (attributes) => {
+            // * Already handled in talentScalings
             return { attributes }
         },
-        minConstellation: 2
+        minConstellation: 2,
     },
     {
         name: "Beware the Trickster's Dice",
@@ -277,15 +338,18 @@ const constellationBonuses: Bonus[] = [
         minConstellation: 3,
     },
     {
-        name: "Bait-And-Switch",
+        name: 'Bait-And-Switch',
         description: (
             <span>
-                Increases all party members&apos; Max HP by 10% for 25s for every opponent marked by <span style={{ color: '#ddd' }}>Lifeline</span>{' '} 
-                when the Lifeline explodes. A maximum increase of 40% Max HP can be attained in this manner.
+                Increases all party members&apos; Max HP by 10% for 25s for every
+                opponent marked by <span style={{ color: '#ddd' }}>Lifeline</span>{' '}
+                when the Lifeline explodes. A maximum increase of 40% Max HP can be
+                attained in this manner.
             </span>
         ),
         icon: '/images/characters/yelan-constellation4.png',
         effect: (attributes) => {
+            // * Already handled in characterBonuses
             return { attributes }
         },
         minConstellation: 4,
@@ -295,8 +359,7 @@ const constellationBonuses: Bonus[] = [
         description: (
             <span>
                 Increase the Level of{' '}
-                <span style={{ color: '#DDD' }}>Lingering Lifeline</span> by
-                3.
+                <span style={{ color: '#DDD' }}>Lingering Lifeline</span> by 3.
                 <br />
                 Maximum upgrade level is 15.
             </span>
@@ -316,19 +379,22 @@ const constellationBonuses: Bonus[] = [
         name: 'Winner Takes All',
         description: (
             <span>
-                After using <span style={{ color: '#ddd' }}>Depth-Clarion Dice</span>{' '} (Elemental Burst)
-                all of Yelan&apos;s Normal Attacks will be special <span style={{ color: '#ddd' }}>Breakthrough Barbs</span>{''}.
-                These Breakthrough Barbs will have similar abilities to normal ones and the DMG dealt will be considered Charged Attack DMG, 
-                dealing 156% of a normal Breakthrough Barb&apos;s DMG.
-                This state lasts 20s and will be cleared after Yelan fires 5 arrows.
+                After using <span style={{ color: '#ddd' }}>Depth-Clarion Dice</span>{' '}
+                (Elemental Burst) all of Yelan&apos;s Norsmal Attacks will be special{' '}
+                <span style={{ color: '#ddd' }}>Breakthrough Barbs</span>
+                {''}. These Breakthrough Barbs will have similar abilities to normal
+                ones and the DMG dealt will be considered Charged Attack DMG, dealing
+                156% of a normal Breakthrough Barb&apos;s DMG. This state lasts 20s
+                and will be cleared after Yelan fires 5 arrows.
             </span>
         ),
         icon: '/images/characters/yelan-constellation6.png',
         effect: (attributes) => {
+            // * Already handled in talentScalings
             return { attributes }
         },
-        minConstellation: 6
-    }
+        minConstellation: 6,
+    },
 ]
 
 const Yelan: Character = {
@@ -580,7 +646,7 @@ const Yelan: Character = {
                     Lv14: '26.05% Max HP',
                     Lv15: '27.49% Max HP',
                 },
-                'Special Breakthrough Barb DMG': {
+                'C6 Breakthrough Barb DMG': {
                     Lv1: '18.06% Max HP',
                     Lv2: '19.41% Max HP',
                     Lv3: '20.76% Max HP',
@@ -749,7 +815,7 @@ const Yelan: Character = {
                     Lv14: '10.96% Max HP \u00d73',
                     Lv15: '11.57% Max HP \u00d73',
                 },
-                'Taking All Comers': {
+                'Taking All Comers Additional Arrow': {
                     Lv1: '14.00% Max HP',
                     Lv2: '14.00% Max HP',
                     Lv3: '14.00% Max HP',

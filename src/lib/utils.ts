@@ -119,34 +119,34 @@ function insertAspect(
     insertBeforeAspect: string,
     newAspectName: string,
     newAspectData: TalentScalingData
-  ): TalentScaling {
-    const skill = talentScalings[skillName];
+): TalentScaling {
+    const skill = talentScalings[skillName]
     if (!skill) {
-      // Skill not found
-      return talentScalings;
+        // Skill not found
+        return talentScalings
     }
-  
-    const updatedSkill: Record<string, TalentScalingData> = {};
-    let foundInsertionPoint = false;
-  
+
+    const updatedSkill: Record<string, TalentScalingData> = {}
+    let foundInsertionPoint = false
+
     for (const aspect in skill) {
-      if (aspect === insertBeforeAspect) {
-        updatedSkill[newAspectName] = newAspectData;
-        foundInsertionPoint = true;
-      }
-      updatedSkill[aspect] = skill[aspect];
+        if (aspect === insertBeforeAspect) {
+            updatedSkill[newAspectName] = newAspectData
+            foundInsertionPoint = true
+        }
+        updatedSkill[aspect] = skill[aspect]
     }
-  
+
     if (!foundInsertionPoint) {
-      // The specified insertion point was not found, so just add the new aspect at the end
-      updatedSkill[newAspectName] = newAspectData;
+        // The specified insertion point was not found, so just add the new aspect at the end
+        updatedSkill[newAspectName] = newAspectData
     }
-  
+
     return {
-      ...talentScalings,
-      [skillName]: updatedSkill,
-    };
-  }
+        ...talentScalings,
+        [skillName]: updatedSkill,
+    }
+}
 
 export {
     compareObjects,
@@ -159,5 +159,5 @@ export {
     clamp,
     mergeAndSum,
     getTalentScalingValue,
-    insertAspect
+    insertAspect,
 }
