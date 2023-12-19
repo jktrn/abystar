@@ -9,6 +9,7 @@ import {
 } from '@/interfaces/Character'
 import { Badge } from '@/components/ui/badge'
 import { getTalentScalingValue } from '@/lib'
+import { AttributesTable } from '@/components'
 
 const talentScalings: TalentScaling = {
     'Normal Attack: Stealthy Bowshot': {
@@ -133,7 +134,57 @@ const talentScalings: TalentScaling = {
 }
 
 const characterBonuses: Bonus[] = [
-    // ...
+    {
+        name: 'Turn Control',
+        description: (
+            <span>
+                <Badge variant="secondary">A2</Badge> When the party has 1/2/3/4 of the same Elemental Type(s), Yelan's Max HP is increased by 6%/12%/18%/30%
+            </span>
+        ),
+        icon: '/images/characters/yelan-passive2.png',
+        effect: (attributes, initialAttributes, talentLevels, currentStacks) => {
+            if(!initialAttributes || !currentStacks) return {attributes}
+
+            const maxHPOptions = [0, 0.06, 0.12, 0.18, 0.30]
+
+            // This is basically a dumb solution but essentially currentStacks doesn't register if you are on the first index. So we need another variable for index 0
+            let actualCurrent = 0;
+            actualCurrent = actualCurrent + currentStacks
+
+            const newAttributes = {
+                ...attributes,
+                'HP': initialAttributes['HP'] * (1 + maxHPOptions[currentStacks])
+            }
+
+            return { attributes: newAttributes }
+        },
+        maxStacks: 4,
+        stackOptions: ['Off', '1 Same', '2 Same', '3 Same', '4 Same']
+    },
+    {
+        name: 'Adapt With Ease',
+        description: (
+            <span>
+                <Badge variant="secondary">A4</Badge> When <span style={{ color: '#ddd' }}>Exquisite Throw</span>{' '}
+                (Elemental Burst) is in effect, your own active character deals 1% more DMG. 
+                This increases by a further 3.5% every second. The maximum increase to DMG dealt this way is 50%
+            </span>
+        ),
+        icon: '/images/characters/yelan-passive3.png',
+        effect: (attributes, initialAttributes, talentLevels, currentStacks) => {
+            if(!initialAttributes || !currentStacks) return {attributes}
+
+            const newAttributes = {
+                ...attributes,
+                'All DMG Bonus': (initialAttributes['All DMG Bonus'] || 0) + (1 + 3.5 * (currentStacks - 1)) / 100
+            }
+
+            return { attributes: newAttributes }
+        },
+        maxStacks: 15,
+        stackOptions: ['Off', 'Initial', '1s', '2s', '3s', '4s', '5s', '6s', '7s', '8s', '9s', '10s', '11s', '12s', '13s', '14s'],
+        dependencies: ['All DMG Bonus']
+    }
 ]
 
 const constellationBonuses: Bonus[] = [
