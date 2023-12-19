@@ -1,7 +1,135 @@
-import { TalentScaling, Bonus, Character } from '@/interfaces/Character'
+import { 
+    TalentScaling,
+    TalentRawData,
+    Bonus, 
+    Character,
+    FormulaType,
+    FormulaOutputType,
+    DamageType
+} from '@/interfaces/Character'
+import { Badge } from '@/components/ui/badge'
+import { getTalentScalingValue } from '@/lib'
 
 const talentScalings: TalentScaling = {
-    // ...
+    'Normal Attack: Stealthy Bowshot': {
+        '1-Hit DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Normal Attack Additive Bonus'],
+            multiplicativeBonusStat: ['Physical DMG Bonus', 'Normal Attack DMG Bonus'],
+            damageType: DamageType.Physical
+        },
+        '2-Hit DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Normal Attack Additive Bonus'],
+            multiplicativeBonusStat: ['Physical DMG Bonus', 'Normal Attack DMG Bonus'],
+            damageType: DamageType.Physical
+        },
+        '3-Hit DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Normal Attack Additive Bonus'],
+            multiplicativeBonusStat: ['Physical DMG Bonus', 'Normal Attack DMG Bonus'],
+            damageType: DamageType.Physical
+        },
+        '4-Hit DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Normal Attack Additive Bonus'],
+            multiplicativeBonusStat: ['Physical DMG Bonus', 'Normal Attack DMG Bonus'],
+            damageType: DamageType.Physical
+        },
+        'Aimed Shot': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Charged Attack Additive Bonus'],
+            multiplicativeBonusStat: ['Physical DMG Bonus', 'Charged Attack DMG Bonus'],
+            damageType: DamageType.Physical
+        },
+        'Fully-Charged Aimed Shot': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Charged Attack Additive Bonus'],
+            multiplicativeBonusStat: ['Hydro DMG Bonus', 'Charged Attack DMG Bonus'],
+            damageType: DamageType.Hydro
+        },
+        'Breakthrough Barb DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['HP'],
+            additiveBonusStat: ['Charged Attack Additive Bonus'],
+            multiplicativeBonusStat: ['Hydro DMG Bonus', 'Charged Attack DMG Bonus'],
+            damageType: DamageType.Hydro
+        },
+        'Plunge DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Plunging Attack Additive Bonus'],
+            multiplicativeBonusStat: ['Physical DMG Bonus', 'Plunging Attack DMG Bonus'],
+            damageType: DamageType.Physical
+        },
+        'Low Plunge DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Plunging Attack Additive Bonus'],
+            multiplicativeBonusStat: ['Physical DMG Bonus', 'Plunging Attack DMG Bonus'],
+            damageType: DamageType.Physical
+        },
+        'High Plunge DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Plunging Attack Additive Bonus'],
+            multiplicativeBonusStat: ['Physical DMG Bonus', 'Plunging Attack DMG Bonus'],
+            damageType: DamageType.Physical
+        }
+    },
+    'Lingering Lifeline': {
+        'Skill DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['HP'],
+            additiveBonusStat: ['Elemental Skill Additive Bonus'],
+            multiplicativeBonusStat: ['Hydro DMG Bonus', 'Elemental Skill DMG Bonus'],
+            damageType: DamageType.Hydro
+        },
+        'Max Duration (Hold)': {
+            formulaType: FormulaType.GenericFormulaWithoutScaling,
+            outputType: FormulaOutputType.Time
+        },
+        CD: {
+            formulaType: FormulaType.GenericFormulaWithoutScaling,
+            multiplicativeBonusStat: ['Elemental Skill CD Reduction'],
+            outputType: FormulaOutputType.Time
+        }
+    },
+    'Depth-Clarion Dice': {
+        'Skill DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['HP'],
+            additiveBonusStat: ['Elemental Burst Additive Bonus'],
+            multiplicativeBonusStat: ['Hydro DMG Bonus', 'Elemental Burst DMG Bonus'],
+            damageType: DamageType.Hydro
+        },
+        'Exquisite Throw DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['HP'],
+            additiveBonusStat: ['Elemental Burst Additive Bonus'],
+            multiplicativeBonusStat: ['Hydro DMG Bonus', 'Elemental Burst DMG Bonus'],
+            damageType: DamageType.Hydro
+        },
+        Duration: {
+            formulaType: FormulaType.GenericFormulaWithoutScaling,
+            outputType: FormulaOutputType.Time
+        },
+        CD: {
+            formulaType: FormulaType.GenericFormulaWithoutScaling,
+            multiplicativeBonusStat: ['Elemental Burst CD Reduction'],
+            outputType: FormulaOutputType.Time
+        },
+        'Energy Cost': {
+            formulaType: FormulaType.GenericFormulaWithoutScaling,
+            outputType: FormulaOutputType.Generic
+        }
+    }
 }
 
 const characterBonuses: Bonus[] = [
