@@ -5,7 +5,6 @@ import {
     DamageType,
     FormulaOutputType,
     FormulaType,
-    TalentRawData,
     TalentScaling,
 } from '@/interfaces/Character'
 import { getTalentScalingValue } from '@/lib'
@@ -15,7 +14,10 @@ const talentScalings: TalentScaling = {
         '1-Hit DMG': {
             formulaType: FormulaType.DamageFormula,
             attribute: ['ATK'],
-            additiveBonusStat: ['Normal Attack Additive Bonus'],
+            additiveBonusStat: [
+                'Normal Attack Additive Bonus',
+                'C6 Pneuma DMG Bonus',
+            ],
             multiplicativeBonusStat: [
                 'Physical DMG Bonus',
                 'Normal Attack DMG Bonus',
@@ -25,7 +27,10 @@ const talentScalings: TalentScaling = {
         '2-Hit DMG': {
             formulaType: FormulaType.DamageFormula,
             attribute: ['ATK'],
-            additiveBonusStat: ['Normal Attack Additive Bonus'],
+            additiveBonusStat: [
+                'Normal Attack Additive Bonus',
+                'C6 Pneuma DMG Bonus',
+            ],
             multiplicativeBonusStat: [
                 'Physical DMG Bonus',
                 'Normal Attack DMG Bonus',
@@ -35,7 +40,10 @@ const talentScalings: TalentScaling = {
         '3-Hit DMG': {
             formulaType: FormulaType.DamageFormula,
             attribute: ['ATK'],
-            additiveBonusStat: ['Normal Attack Additive Bonus'],
+            additiveBonusStat: [
+                'Normal Attack Additive Bonus',
+                'C6 Pneuma DMG Bonus',
+            ],
             multiplicativeBonusStat: [
                 'Physical DMG Bonus',
                 'Normal Attack DMG Bonus',
@@ -45,7 +53,10 @@ const talentScalings: TalentScaling = {
         '4-Hit DMG': {
             formulaType: FormulaType.DamageFormula,
             attribute: ['ATK'],
-            additiveBonusStat: ['Normal Attack Additive Bonus'],
+            additiveBonusStat: [
+                'Normal Attack Additive Bonus',
+                'C6 Pneuma DMG Bonus',
+            ],
             multiplicativeBonusStat: [
                 'Physical DMG Bonus',
                 'Normal Attack DMG Bonus',
@@ -55,10 +66,13 @@ const talentScalings: TalentScaling = {
         'Charged Attack DMG': {
             formulaType: FormulaType.DamageFormula,
             attribute: ['ATK'],
-            additiveBonusStat: ['Charged Attack Additive Bonus'],
+            additiveBonusStat: [
+                'Charged Attack Additive Bonus',
+                'C6 Pneuma DMG Bonus',
+            ],
             multiplicativeBonusStat: [
                 'Physical DMG Bonus',
-                'Charged Attack DMG Bonus',
+                'Charged Attack Attack DMG Bonus',
             ],
             damageType: DamageType.Physical,
         },
@@ -80,7 +94,10 @@ const talentScalings: TalentScaling = {
         'Low Plunge DMG': {
             formulaType: FormulaType.DamageFormula,
             attribute: ['ATK'],
-            additiveBonusStat: ['Plunging Attack Additive Bonus'],
+            additiveBonusStat: [
+                'Plunging Attack Additive Bonus',
+                'C6 Pneuma DMG Bonus',
+            ],
             multiplicativeBonusStat: [
                 'Physical DMG Bonus',
                 'Plunging Attack DMG Bonus',
@@ -90,7 +107,10 @@ const talentScalings: TalentScaling = {
         'High Plunge DMG': {
             formulaType: FormulaType.DamageFormula,
             attribute: ['ATK'],
-            additiveBonusStat: ['Plunging Attack Additive Bonus'],
+            additiveBonusStat: [
+                'Plunging Attack Additive Bonus',
+                'C6 Pneuma DMG Bonus',
+            ],
             multiplicativeBonusStat: [
                 'Physical DMG Bonus',
                 'Plunging Attack DMG Bonus',
@@ -107,6 +127,19 @@ const talentScalings: TalentScaling = {
         'Spiritbreath Thorn/Surging Blade DMG Interval': {
             formulaType: FormulaType.GenericFormulaWithoutScaling,
             outputType: FormulaOutputType.Time,
+        },
+        'C6 Ousia Per-Hit Healing': {
+            formulaType: FormulaType.GenericFormulaWithScaling,
+            attribute: ['HP'],
+            additiveBonusStat: ['Healing Bonus'],
+            outputType: FormulaOutputType.Healing,
+            minConstellation: 6,
+        },
+        'C6 Pneuma Per-Hit HP Consumption': {
+            formulaType: FormulaType.GenericFormulaWithScaling,
+            attribute: ['HP'],
+            outputType: FormulaOutputType.Drain,
+            minConstellation: 6,
         },
     },
     'Salon Solitaire': {
@@ -199,8 +232,8 @@ const talentScalings: TalentScaling = {
             outputType: FormulaOutputType.Time,
         },
         'Maximum Fanfare': {
-            // ! THIS PROBABLY WILL CHANGE FROM C1
             formulaType: FormulaType.GenericFormulaWithoutScaling,
+            additiveBonusStat: ['Fanfare Maximum Stacks'],
             outputType: FormulaOutputType.Generic,
         },
         'Fanfare to DMG Increase Conversion Ratio': {
@@ -282,7 +315,6 @@ const characterBonuses: Bonus[] = [
                 currentStacks === 0 ||
                 !state
             ) {
-                console.log('im being returned')
                 return { attributes }
             }
 
@@ -308,8 +340,6 @@ const characterBonuses: Bonus[] = [
                     arbitraryStackOptions[currentStacks]) /
                 100
 
-            console.log(damageBonus, healingBonus)
-
             const newAttributes = {
                 ...attributes,
                 'All DMG Bonus':
@@ -334,10 +364,238 @@ const characterBonuses: Bonus[] = [
         ],
         dependencies: ['All DMG Bonus', 'Healing Bonus'],
     },
+    {
+        name: 'Unheard Confession',
+        description: (
+            <span>
+                <Badge variant="secondary">A4</Badge> Every 1,000 points of
+                Furina&apos;s Max HP buffs{' '}
+                <span style={{ color: '#ddd' }}>Salon Solitaire</span>&apos;s Salon
+                Member DMG by 0.7% (up to 28%)
+            </span>
+        ),
+        icon: '/images/characters/furina-passive2.png',
+        effect: (attributes, initialAttributes) => {
+            if (!initialAttributes) return { attributes }
+
+            const bonusDamage = Math.min(
+                0.28,
+                (initialAttributes['HP'] / 1000 || 0) * 0.007
+            )
+
+            const newAttributes = {
+                ...attributes,
+                'Salon Members DMG Bonus':
+                    (initialAttributes['Salon Members DMG Bonus'] || 0) +
+                    bonusDamage,
+            }
+
+            return { attributes: newAttributes }
+        },
+        enabled: true,
+    },
+    {
+        name: '"Love is a Rebellious Bird That None Can Tame"',
+        description: (
+            <span>
+                <Badge variant="secondary">C1</Badge> When using{' '}
+                <span style={{ color: '#ddd' }}>Let the People Rejoice</span>,
+                Furina&apos;s maximum Fanfare stacks is increase by 100 (up to 400)
+            </span>
+        ),
+        icon: '/images/characters/furina-constellation1.png',
+        effect: (attributes, initialAttributes) => {
+            if (!initialAttributes) return { attributes }
+
+            const newAttributes = {
+                ...attributes,
+                'Fanfare Maximum Stacks':
+                    (initialAttributes['Fanfare Maximum Stacks'] || 0) + 100,
+            }
+
+            return { attributes: newAttributes }
+        },
+        minConstellation: 1,
+        dependencies: ['Fanfare Maximum Stacks'],
+    },
+    {
+        name: '"Hear Me — Let Us Raise the Chalice of Love!"',
+        description: (
+            <span>
+                <Badge variant="secondary">C6</Badge>{' '}
+                <Badge variant="destructive">Unfinished</Badge> When using{' '}
+                <span style={{ color: '#ddd' }}>Salon Solitaire</span>, Furina's
+                Normal/Charged Attacks and the impact of Plunging Attacks are
+                converted to <span style={{ color: '#3d9bc1' }}>Hydro DMG</span>{' '}
+                which cannot be overridden by any other elemental infusion. DMG is
+                increased by 18%, and hits from these attacks cause different effects
+                depending on Furina&apos;s current Arkhe alignment:
+                <ul>
+                    <li>
+                        - Ousia: Every 1s, all nearby characters heal with 4%
+                        Furina&apos;s Max HP, for a duration of 2.9s
+                    </li>
+                    <li>
+                        - Pneuma: This attack&apos;s DMG is increased by 25% of
+                        Furina&apos;s Max HP. When this attack hits an opponent, all
+                        nearby characters consume 1% of their current HP
+                    </li>
+                </ul>
+            </span>
+        ),
+        icon: '/images/characters/furina-constellation6.png',
+        effect: (
+            attributes,
+            initialAttributes,
+            talentLevels,
+            currentStacks,
+            state
+        ) => {
+            if (!initialAttributes || !talentLevels || !state) return { attributes }
+
+            const newAttributes = {
+                ...attributes,
+                'All DMG Bonus': (initialAttributes['All DMG Bonus'] || 0) + 0.18,
+            }
+
+            return { attributes: newAttributes }
+        },
+        minConstellation: 6,
+        maxStacks: 2,
+        stackOptions: ['Off', 'Ousia', 'Pneuma'],
+    },
 ]
 
 const constellationBonuses: Bonus[] = [
-    // ...
+    {
+        name: '"Love is a Rebellious Bird That None Can Tame"',
+        description: (
+            <span>
+                When using{' '}
+                <span style={{ color: '#ddd' }}>Let the People Rejoice</span>, Furina
+                will gain 150 Fanfare. Additionally, Furina&apos;s Fanfare limit is
+                increased by 100.
+            </span>
+        ),
+        icon: '/images/characters/furina-constellation1.png',
+        effect: (attributes) => {
+            // Already handled in characterBonuses
+            return { attributes }
+        },
+        minConstellation: 1,
+    },
+    {
+        name: '"A Woman Adapts Like Duckweed in Water"',
+        description: (
+            <span>
+                While{' '}
+                <span style={{ color: '#ddd' }}>Let the People Rejoice lasts</span>,
+                Furina's Fanfare gain from increases or decreases in nearby
+                characters' HP is increased by 250%. Each point of Fanfare above the
+                limit will increase Furina's Max HP by 0.35%. Her maximum Max HP
+                increase is 140%.
+            </span>
+        ),
+        icon: '/images/characters/furina-constellation2.png',
+        effect: (attributes) => {
+            // Unimplementable; no options allow for >400 stacks
+            return { attributes }
+        },
+        minConstellation: 2,
+    },
+    {
+        name: '"My Secret Is Hidden Within Me, No One Will Know My Name"',
+        description: (
+            <span>
+                Increases the Level of{' '}
+                <span style={{ color: '#DDD' }}>Let the People Rejoice</span> by 3.
+                <br />
+                Maximum upgrade level is 15.
+            </span>
+        ),
+        icon: '/images/characters/mona-constellation3.png',
+        effect: (attributes, initialAttributes, talentLevels) => {
+            if (!talentLevels) return { attributes }
+
+            const newTalentLevels = [...talentLevels]
+            newTalentLevels[1] = Math.min(newTalentLevels[1] + 3, 13)
+
+            return { attributes: attributes, updatedTalentLevels: newTalentLevels }
+        },
+        minConstellation: 3,
+    },
+    {
+        name: '"They Know Not Life, Who Dwelt in the Netherworld Not!"',
+        description: (
+            <span>
+                When the Salon Members from Salon Solitaire hit an opponent, or the
+                Singer of Many Waters restores HP to nearby active characters, Furina
+                will restore 4 Energy. This effect can be triggered once every 5s.
+            </span>
+        ),
+        icon: '/images/characters/furina-constellation4.png',
+        effect: (attributes) => {
+            // Unimplementable
+            return { attributes }
+        },
+        minConstellation: 4,
+    },
+    {
+        name: '"His Name I Now Know, It Is...!"',
+        description: (
+            <span>
+                Increase the Level of{' '}
+                <span style={{ color: '#DDD' }}>Salon Solitaire</span> by 3.
+                <br />
+                Maximum upgrade level is 15.
+            </span>
+        ),
+        icon: '/images/characters/furina-constellation5.png',
+        effect: (attributes, initialAttributes, talentLevels) => {
+            if (!talentLevels) return { attributes }
+
+            const newTalentLevels = [...talentLevels]
+            newTalentLevels[2] = Math.min(newTalentLevels[2] + 3, 13)
+
+            return { attributes: attributes, updatedTalentLevels: newTalentLevels }
+        },
+        minConstellation: 5,
+    },
+    {
+        name: '"Hear Me — Let Us Raise the Chalice of Love!"',
+        description: (
+            <span>
+                When using <span style={{ color: '#ddd' }}>Salon Solitaire</span>,
+                Furina gains "Center of Attention" for 10s. Throughout the duration,
+                Furina's Normal Attacks, Charged Attacks, and Plunging Attacks are
+                converted into <span style={{ color: '#3d9bc1' }}>Hydro DMG</span>{' '}
+                which cannot be overridden by any other elemental infusion. DMG is
+                also increased by an amount equivalent to 18% of Furina's max HP.
+                Throughout the duration, Furina's Normal Attacks (not including
+                Arkhe: Seats Sacred and Secular Attacks), Charged Attacks, and the
+                impact of Plunging Attacks will cause different effects up to every
+                0.1s after hitting opponents depending on her current Arkhe
+                alignment: Arkhe: Ousia Every 1s, all nearby characters in the party
+                will be healed by 4% of Furina's max HP, for a duration of 2.9s.
+                Triggering this effect again will extend its duration. Arkhe: Pneuma
+                This Normal Attack (not including Arkhe: Seats Sacred and Secular
+                Attacks), Charged Attack, or Plunging Attack ground impact DMG will
+                be further increased by an amount equivalent to 25% of Furina's max
+                HP. When any of the attacks mentioned previously hit an opponent, all
+                nearby characters in the party will consume 1% of their current HP.
+                During the duration of each instance of "Center of Attention," the
+                above effects can be triggered up to 6 times. "Center of Attention"
+                will end when its effects have triggered 6 times or when the duration
+                expires.
+            </span>
+        ),
+        icon: '/images/characters/furina-constellation6.png',
+        effect: (attributes) => {
+            // handled in characterBonuses
+            return { attributes }
+        },
+        minConstellation: 6,
+    },
 ]
 
 const Furina: Character = {
@@ -656,6 +914,40 @@ const Furina: Character = {
                     Lv13: '6s / 6s',
                     Lv14: '6s / 6s',
                     Lv15: '6s / 6s',
+                },
+                'C6 Ousia Per-Hit Healing': {
+                    Lv1: '4.0% Max HP',
+                    Lv2: '4.0% Max HP',
+                    Lv3: '4.0% Max HP',
+                    Lv4: '4.0% Max HP',
+                    Lv5: '4.0% Max HP',
+                    Lv6: '4.0% Max HP',
+                    Lv7: '4.0% Max HP',
+                    Lv8: '4.0% Max HP',
+                    Lv9: '4.0% Max HP',
+                    Lv10: '4.0% Max HP',
+                    Lv11: '4.0% Max HP',
+                    Lv12: '4.0% Max HP',
+                    Lv13: '4.0% Max HP',
+                    Lv14: '4.0% Max HP',
+                    Lv15: '4.0% Max HP',
+                },
+                'C6 Pneuma Per-Hit HP Consumption': {
+                    Lv1: '1.0% Max HP',
+                    Lv2: '1.0% Max HP',
+                    Lv3: '1.0% Max HP',
+                    Lv4: '1.0% Max HP',
+                    Lv5: '1.0% Max HP',
+                    Lv6: '1.0% Max HP',
+                    Lv7: '1.0% Max HP',
+                    Lv8: '1.0% Max HP',
+                    Lv9: '1.0% Max HP',
+                    Lv10: '1.0% Max HP',
+                    Lv11: '1.0% Max HP',
+                    Lv12: '1.0% Max HP',
+                    Lv13: '1.0% Max HP',
+                    Lv14: '1.0% Max HP',
+                    Lv15: '1.0% Max HP',
                 },
             },
         },

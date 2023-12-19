@@ -5,7 +5,7 @@ import './globals.css'
 const font = JetBrains_Mono({ subsets: ['latin'] })
 
 export const metadata = {
-    title: 'Abystare',
+    title: 'Abystar',
     description: 'A Genshin Impact Damage Calculator',
 }
 
