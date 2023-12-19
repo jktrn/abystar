@@ -6,6 +6,8 @@ import {
     CharacterState,
     ScalingType,
     TalentRawData,
+    TalentScaling,
+    TalentScalingData,
 } from '@/interfaces/Character'
 
 function cn(...inputs: ClassValue[]) {
@@ -111,6 +113,41 @@ function getTalentScalingValue(
     return match ? parseFloat(match[0]) : 0
 }
 
+function insertAspect(
+    talentScalings: TalentScaling,
+    skillName: string,
+    insertBeforeAspect: string,
+    newAspectName: string,
+    newAspectData: TalentScalingData
+  ): TalentScaling {
+    const skill = talentScalings[skillName];
+    if (!skill) {
+      // Skill not found
+      return talentScalings;
+    }
+  
+    const updatedSkill: Record<string, TalentScalingData> = {};
+    let foundInsertionPoint = false;
+  
+    for (const aspect in skill) {
+      if (aspect === insertBeforeAspect) {
+        updatedSkill[newAspectName] = newAspectData;
+        foundInsertionPoint = true;
+      }
+      updatedSkill[aspect] = skill[aspect];
+    }
+  
+    if (!foundInsertionPoint) {
+      // The specified insertion point was not found, so just add the new aspect at the end
+      updatedSkill[newAspectName] = newAspectData;
+    }
+  
+    return {
+      ...talentScalings,
+      [skillName]: updatedSkill,
+    };
+  }
+
 export {
     compareObjects,
     compareElement,
@@ -122,4 +159,5 @@ export {
     clamp,
     mergeAndSum,
     getTalentScalingValue,
+    insertAspect
 }

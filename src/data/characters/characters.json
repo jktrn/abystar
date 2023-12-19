@@ -42983,7 +42983,8 @@
                 "description": "After using\nDepth-Clarion Dice\n, Yelan will enter the Mastermind state.\nIn this state, all of Yelan's Normal Attacks will be special Breakthrough Barbs. These Breakthrough Barbs will have similar abilities to normal ones and the DMG dealt will be considered Charged Attack DMG, dealing 156% of a normal Breakthrough Barb's DMG.\nThe Mastermind state lasts 20s and will be cleared after Yelan fires 5 arrows.",
                 "level": 6
             }
-        ]
+        ],
+        "implemented": true
     },
     "Yoimiya": {
         "name": "Yoimiya",

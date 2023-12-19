@@ -39,7 +39,6 @@ const damageFormula = (
             critRateBonusStat,
             characterAttributes
         )
-
         const critDamageBonusStatValue = calculateStatValue(
             critDamageBonusStat,
             characterAttributes
