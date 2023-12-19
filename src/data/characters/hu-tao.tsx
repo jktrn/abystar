@@ -5,8 +5,10 @@ import {
     Character,
     FormulaType,
     FormulaOutputType,
+    DamageType,
 } from '@/interfaces/Character'
 import { Badge } from '@/components/ui/badge'
+import { getTalentScalingValue } from '@/lib'
 
 const talentScalings: TalentScaling = {
     'Normal Attack: Secret Spear of Wangsheng': {
@@ -18,7 +20,7 @@ const talentScalings: TalentScaling = {
                 'Physical DMG Bonus',
                 'Normal Attack DMG Bonus',
             ],
-            damageType: 'Physical',
+            damageType: DamageType.Physical,
         },
         '2-Hit DMG': {
             formulaType: FormulaType.DamageFormula,
@@ -28,7 +30,7 @@ const talentScalings: TalentScaling = {
                 'Physical DMG Bonus',
                 'Normal Attack DMG Bonus',
             ],
-            damageType: 'Physical',
+            damageType: DamageType.Physical,
         },
         '3-Hit DMG': {
             formulaType: FormulaType.DamageFormula,
@@ -38,7 +40,7 @@ const talentScalings: TalentScaling = {
                 'Physical DMG Bonus',
                 'Normal Attack DMG Bonus',
             ],
-            damageType: 'Physical',
+            damageType: DamageType.Physical,
         },
         '4-Hit DMG': {
             formulaType: FormulaType.DamageFormula,
@@ -48,7 +50,7 @@ const talentScalings: TalentScaling = {
                 'Physical DMG Bonus',
                 'Normal Attack DMG Bonus',
             ],
-            damageType: 'Physical',
+            damageType: DamageType.Physical,
         },
         '5-Hit DMG': {
             formulaType: FormulaType.DamageFormula,
@@ -58,7 +60,7 @@ const talentScalings: TalentScaling = {
                 'Physical DMG Bonus',
                 'Normal Attack DMG Bonus',
             ],
-            damageType: 'Physical',
+            damageType: DamageType.Physical,
         },
         '6-Hit DMG': {
             formulaType: FormulaType.DamageFormula,
@@ -68,7 +70,7 @@ const talentScalings: TalentScaling = {
                 'Physical DMG Bonus',
                 'Normal Attack DMG Bonus',
             ],
-            damageType: 'Physical',
+            damageType: DamageType.Physical,
         },
         'Charged Attack DMG': {
             formulaType: FormulaType.DamageFormula,
@@ -78,7 +80,7 @@ const talentScalings: TalentScaling = {
                 'Physical DMG Bonus',
                 'Charged Attack DMG Bonus',
             ],
-            damageType: 'Physical',
+            damageType: DamageType.Physical,
         },
         'Charged Attack Stamina Cost': {
             formulaType: FormulaType.GenericFormulaWithoutScaling,
@@ -93,7 +95,7 @@ const talentScalings: TalentScaling = {
                 'Physical DMG Bonus',
                 'Plunging Attack DMG Bonus',
             ],
-            damageType: 'Physical',
+            damageType: DamageType.Physical,
         },
         'Low Plunge DMG': {
             formulaType: FormulaType.DamageFormula,
@@ -103,7 +105,7 @@ const talentScalings: TalentScaling = {
                 'Physical DMG Bonus',
                 'Plunging Attack DMG Bonus',
             ],
-            damageType: 'Physical',
+            damageType: DamageType.Physical,
         },
         'High Plunge DMG': {
             formulaType: FormulaType.DamageFormula,
@@ -113,7 +115,7 @@ const talentScalings: TalentScaling = {
                 'Physical DMG Bonus',
                 'Plunging Attack DMG Bonus',
             ],
-            damageType: 'Physical',
+            damageType: DamageType.Physical,
         },
     },
     'Guide to Afterlife': {
@@ -127,7 +129,7 @@ const talentScalings: TalentScaling = {
             attribute: ['ATK'],
             additiveBonusStat: ['Elemental Skill Additive Bonus'],
             multiplicativeBonusStat: ['Pyro DMG Bonus', 'Elemental Skill DMG Bonus'],
-            damageType: 'Pyro',
+            damageType: DamageType.Pyro,
         },
         'Blood Blossom Duration': {
             formulaType: FormulaType.GenericFormulaWithoutScaling,
@@ -149,14 +151,14 @@ const talentScalings: TalentScaling = {
             attribute: ['ATK'],
             additiveBonusStat: ['Elemental Burst Additive Bonus'],
             multiplicativeBonusStat: ['Pyro DMG Bonus', 'Elemental Burst DMG Bonus'],
-            damageType: 'Pyro',
+            damageType: DamageType.Pyro,
         },
         'Low HP Skill DMG': {
             formulaType: FormulaType.DamageFormula,
             attribute: ['ATK'],
             additiveBonusStat: ['Elemental Burst Additive Bonus'],
             multiplicativeBonusStat: ['Pyro DMG Bonus', 'Elemental Burst DMG Bonus'],
-            damageType: 'Pyro',
+            damageType: DamageType.Pyro,
         },
         'Skill HP Regeneration': {
             formulaType: FormulaType.GenericFormulaWithScaling,
@@ -201,29 +203,24 @@ const characterBonuses: Bonus[] = [
             currentStacks,
             state
         ) => {
-            if (!talentLevels || !initialAttributes) return { attributes }
+            if (!state || !talentLevels || !initialAttributes) return { attributes }
 
-            // Getting raw talent scalings
-            const talentData: TalentRawData = state!.character.talents.find(
-                (t) => t.name === 'Guide to Afterlife'
-            )!.data
-
-            // Scalings are stored as strings (e.g. "3.86% Max HP")
-            const bonusMatch =
-                talentData['ATK Increase']![`Lv${talentLevels[1]}`]!.match(
-                    /\d+(\.\d+)?/
-                )
-            const bonusFloat = bonusMatch ? parseFloat(bonusMatch[0]) : 0
+            const scalingValue = getTalentScalingValue(
+                state,
+                'Guide to Afterlife',
+                'ATK Increase',
+                talentLevels[1]
+            )
 
             // Buff caps at 400% of base ATK
-            const bonus = Math.min(
-                initialAttributes['HP'] * (bonusFloat / 100),
+            const cappedScalingValue = Math.min(
+                initialAttributes['HP'] * (scalingValue / 100),
                 initialAttributes['ATK'] * 4
             )
 
             const newAttributes = {
                 ...attributes,
-                ATK: initialAttributes['ATK'] + (bonus || 0),
+                ATK: initialAttributes['ATK'] + (cappedScalingValue || 0),
             }
 
             return { attributes: newAttributes }
@@ -237,7 +234,7 @@ const characterBonuses: Bonus[] = [
                 Object.values(normalAttackScaling).forEach((aspect) => {
                     if (aspect.formulaType !== FormulaType.DamageFormula) return
                     aspect.multiplicativeBonusStat = ['Pyro DMG Bonus']
-                    aspect.damageType = 'Pyro'
+                    aspect.damageType = DamageType.Pyro
                 })
             }
             const chargedAttackScaling =
@@ -248,7 +245,7 @@ const characterBonuses: Bonus[] = [
                 chargedAttackScaling.push('Crimson Bouquet Stamina Reduction')
             }
         },
-        dependencies: ['HP'],
+        dependencies: ['HP', 'ATK'],
     },
     {
         name: 'Sanguine Rogue',
@@ -269,6 +266,7 @@ const characterBonuses: Bonus[] = [
 
             return { attributes: newAttributes }
         },
+        dependencies: ['Pyro DMG Bonus'],
     },
     {
         name: "Butterfly's Embrace",
@@ -299,6 +297,17 @@ const characterBonuses: Bonus[] = [
             return { attributes: newAttributes }
         },
         minConstellation: 6,
+        dependencies: [
+            'Pyro RES',
+            'Cryo RES',
+            'Electro RES',
+            'Hydro RES',
+            'Geo RES',
+            'Anemo RES',
+            'Dendro RES',
+            'Physical RES',
+            'CRIT Rate',
+        ],
     },
 ]
 
@@ -347,7 +356,7 @@ const constellationBonuses: Bonus[] = [
 
             return { attributes: newAttributes }
         },
-        dependencies: ['HP'],
+        dependencies: ['HP', 'Elemental Skill Additive Bonus'],
         minConstellation: 2,
     },
     {

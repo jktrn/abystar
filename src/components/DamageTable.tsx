@@ -10,6 +10,7 @@ import {
 import {
     DamageResult,
     DamageResultAspect,
+    DamageType,
     FormulaOutputType,
 } from '@/interfaces/Character'
 import { elementColors } from '@/lib'
@@ -44,11 +45,17 @@ const DamageTable = ({ damageResults }: DamageTableProps) => {
                         aspect.damage.outputType === FormulaOutputType.Time
                             ? `${aspect.damage.outputValue?.toFixed(1)}s`
                             : aspect.damage.outputType ===
-                              FormulaOutputType.Percentage
-                            ? `${aspect.damage.outputValue?.toFixed(1)}%`
-                            : aspect.damage.outputValue
-                            ? Math.round(aspect.damage.outputValue)
-                            : 0
+                                FormulaOutputType.Percentage
+                              ? `${(aspect.damage.outputValue * 100)?.toFixed(2)}%`
+                              : aspect.damage.outputType ===
+                                  FormulaOutputType.Healing
+                                ? `+${Math.round(aspect.damage.outputValue)}`
+                                : aspect.damage.outputType ===
+                                    FormulaOutputType.Drain
+                                  ? `-${Math.round(aspect.damage.outputValue)}`
+                                  : aspect.damage.outputValue
+                                    ? Math.round(aspect.damage.outputValue)
+                                    : 0
                     result.push({
                         name: aspect.aspectName,
                         average: outputValue,
@@ -79,10 +86,17 @@ const DamageTable = ({ damageResults }: DamageTableProps) => {
     const getCellStyle = (row: Damage, columnId: string) => {
         if (columnId === 'average' && row.outputType === FormulaOutputType.Healing) {
             return { color: '#98db1a' }
+        } else if (
+            columnId === 'average' &&
+            row.outputType === FormulaOutputType.Drain
+        ) {
+            return { color: '#F87171' }
         } else if (columnId !== 'name' && row.damageType) {
             return {
                 color: elementColors[
-                    row.damageType.toLowerCase() as keyof typeof elementColors
+                    DamageType[
+                        row.damageType
+                    ].toString() as keyof typeof elementColors
                 ],
             }
         }

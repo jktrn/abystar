@@ -132,17 +132,17 @@ const AttributesTable = ({
                                                         ? undefined
                                                         : '#A1A1AA'
                                                     : typeof row.difference ===
-                                                      'number'
-                                                    ? row.difference > 0
+                                                        'number'
+                                                      ? row.difference > 0
+                                                          ? '#34D399'
+                                                          : '#F87171'
+                                                      : typeof row.difference ===
+                                                              'string' &&
+                                                          parseScalingValue(
+                                                              row.difference
+                                                          )[0].value > 0
                                                         ? '#34D399'
-                                                        : '#F87171'
-                                                    : typeof row.difference ===
-                                                          'string' &&
-                                                      parseScalingValue(
-                                                          row.difference
-                                                      )[0] > 0
-                                                    ? '#34D399'
-                                                    : '#F87171',
+                                                        : '#F87171',
                                         }}
                                     >
                                         {row.difference === 0 ||
@@ -151,14 +151,15 @@ const AttributesTable = ({
                                                 ? row.difference
                                                 : '+0'
                                             : typeof row.difference === 'number'
-                                            ? row.difference > 0
+                                              ? row.difference > 0
+                                                  ? `+${row.difference}`
+                                                  : row.difference
+                                              : typeof row.difference === 'string' &&
+                                                  parseScalingValue(
+                                                      row.difference
+                                                  )[0].value > 0
                                                 ? `+${row.difference}`
-                                                : row.difference
-                                            : typeof row.difference === 'string' &&
-                                              parseScalingValue(row.difference)[0] >
-                                                  0
-                                            ? `+${row.difference}`
-                                            : row.difference}
+                                                : row.difference}
                                     </TableCell>
                                     <TableCell className="px-4 text-right font-bold">
                                         {row.value}

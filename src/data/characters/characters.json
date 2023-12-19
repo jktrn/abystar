@@ -24312,7 +24312,8 @@
                 "description": "Upon entering\nIllusory Torrent\n, Mona gains a 60% increase to the DMG of her next Charged Attack per second of movement.\nA maximum DMG Bonus of 180% can be achieved in this manner. The effect lasts for no more than 8s.",
                 "level": 6
             }
-        ]
+        ],
+        "implemented": true
     },
     "Nahida": {
         "name": "Nahida",

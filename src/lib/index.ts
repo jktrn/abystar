@@ -4,6 +4,7 @@ export {
     cn,
     compareElement,
     compareObjects,
+    getTalentScalingValue,
     elementColors,
     kebabCase,
     mergeAndSum,

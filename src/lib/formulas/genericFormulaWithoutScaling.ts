@@ -16,7 +16,7 @@ const genericFormulaWithoutScaling = (
 ) => {
     const { [`Lv${talentLevel}`]: value } = talent.data[key]
     if (value) {
-        const scalingValue = parseScalingValue(value)[0] * 100
+        const scalingValue = parseScalingValue(value)[0].value
         const additiveBonusStatValue = calculateStatValue(
             additiveBonusStat,
             characterAttributes

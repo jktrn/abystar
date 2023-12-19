@@ -1,6 +1,6 @@
 {
     "name": "abystare",
-    "version": "0.9.3-alpha",
+    "version": "0.12.0-alpha",
     "private": true,
     "scripts": {
         "dev": "next dev",

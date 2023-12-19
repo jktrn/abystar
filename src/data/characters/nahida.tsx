@@ -1,12 +1,14 @@
+import { Badge } from '@/components/ui/badge'
 import {
-    TalentScaling,
     Bonus,
     Character,
+    DamageType,
+    FormulaOutputType,
     FormulaType,
     TalentRawData,
-    FormulaOutputType,
+    TalentScaling,
 } from '@/interfaces/Character'
-import { Badge } from '@/components/ui/badge'
+import { getTalentScalingValue } from '@/lib'
 
 const talentScalings: TalentScaling = {
     'Normal Attack: Akara': {
@@ -15,28 +17,28 @@ const talentScalings: TalentScaling = {
             attribute: ['ATK'],
             additiveBonusStat: ['Normal Attack Additive Bonus'],
             multiplicativeBonusStat: ['Dendro DMG Bonus', 'Normal Attack DMG Bonus'],
-            damageType: 'Dendro',
+            damageType: DamageType.Dendro,
         },
         '2-Hit DMG': {
             formulaType: FormulaType.DamageFormula,
             attribute: ['ATK'],
             additiveBonusStat: ['Normal Attack Additive Bonus'],
             multiplicativeBonusStat: ['Dendro DMG Bonus', 'Normal Attack DMG Bonus'],
-            damageType: 'Dendro',
+            damageType: DamageType.Dendro,
         },
         '3-Hit DMG': {
             formulaType: FormulaType.DamageFormula,
             attribute: ['ATK'],
             additiveBonusStat: ['Normal Attack Additive Bonus'],
             multiplicativeBonusStat: ['Dendro DMG Bonus', 'Normal Attack DMG Bonus'],
-            damageType: 'Dendro',
+            damageType: DamageType.Dendro,
         },
         '4-Hit DMG': {
             formulaType: FormulaType.DamageFormula,
             attribute: ['ATK'],
             additiveBonusStat: ['Normal Attack Additive Bonus'],
             multiplicativeBonusStat: ['Dendro DMG Bonus', 'Normal Attack DMG Bonus'],
-            damageType: 'Dendro',
+            damageType: DamageType.Dendro,
         },
         'Charged Attack DMG': {
             formulaType: FormulaType.DamageFormula,
@@ -46,7 +48,7 @@ const talentScalings: TalentScaling = {
                 'Dendro DMG Bonus',
                 'Charged Attack DMG Bonus',
             ],
-            damageType: 'Dendro',
+            damageType: DamageType.Dendro,
         },
         'Charged Attack Stamina Cost': {
             formulaType: FormulaType.GenericFormulaWithoutScaling,
@@ -61,7 +63,7 @@ const talentScalings: TalentScaling = {
                 'Dendro DMG Bonus',
                 'Plunging Attack DMG Bonus',
             ],
-            damageType: 'Dendro',
+            damageType: DamageType.Dendro,
         },
         'Low Plunge DMG': {
             formulaType: FormulaType.DamageFormula,
@@ -71,7 +73,7 @@ const talentScalings: TalentScaling = {
                 'Dendro DMG Bonus',
                 'Plunging Attack DMG Bonus',
             ],
-            damageType: 'Dendro',
+            damageType: DamageType.Dendro,
         },
         'High Plunge DMG': {
             formulaType: FormulaType.DamageFormula,
@@ -81,7 +83,7 @@ const talentScalings: TalentScaling = {
                 'Dendro DMG Bonus',
                 'Plunging Attack DMG Bonus',
             ],
-            damageType: 'Dendro',
+            damageType: DamageType.Dendro,
         },
     },
     'All Schemes to Know': {
@@ -93,7 +95,7 @@ const talentScalings: TalentScaling = {
                 'Dendro DMG Bonus',
                 'Elemental Skill DMG Bonus',
             ],
-            damageType: 'Dendro',
+            damageType: DamageType.Dendro,
         },
         'Hold DMG': {
             formulaType: FormulaType.DamageFormula,
@@ -103,7 +105,7 @@ const talentScalings: TalentScaling = {
                 'Dendro DMG Bonus',
                 'Elemental Skill DMG Bonus',
             ],
-            damageType: 'Dendro',
+            damageType: DamageType.Dendro,
         },
         'Tri-Karma Purification DMG': {
             formulaType: FormulaType.DamageFormula,
@@ -116,7 +118,7 @@ const talentScalings: TalentScaling = {
                 'Illusory Heart Tri-Karma Purification DMG Bonus',
             ],
             critRateBonusStat: ['Elemental Skill CRIT Rate'],
-            damageType: 'Dendro',
+            damageType: DamageType.Dendro,
         },
         'Tri-Karma Purification: Karmic Oblivion DMG': {
             formulaType: FormulaType.DamageFormula,
@@ -126,7 +128,7 @@ const talentScalings: TalentScaling = {
                 'Dendro DMG Bonus',
                 'Elemental Skill DMG Bonus',
             ],
-            damageType: 'Dendro',
+            damageType: DamageType.Dendro,
             minConstellation: 6,
         },
         'Tri-Karma Purification Trigger Interval': {
@@ -196,8 +198,8 @@ const characterBonuses: Bonus[] = [
         name: 'Awakening Elucidated',
         description: (
             <span>
-                Each point of Nahida&apos;s EM beyond 200 will grant 0.1% Bonus DMG
-                and 0.03% CRIT Rate to{' '}
+                <Badge variant="secondary">A4</Badge> Each point of Nahida&apos;s EM
+                beyond 200 will grant 0.1% Bonus DMG and 0.03% CRIT Rate to{' '}
                 <span style={{ color: '#DDD' }}>Tri-Karma Purification</span>{' '}
                 (Elemental Skill) (capped at 80% Bonus DMG and 24% CRIT Rate)
             </span>
@@ -228,13 +230,14 @@ const characterBonuses: Bonus[] = [
             return { attributes: newAttributes }
         },
         enabled: true,
-        dependencies: ['Elemental Mastery'],
+        dependencies: ['Elemental Mastery', 'Elemental Skill CRIT Rate'],
     },
     {
         name: 'Illusory Heart',
         description: (
             <span>
-                Applies effects based on party&apos;s elements. <br />
+                <Badge variant="secondary">Q</Badge> Applies effects based on
+                party&apos;s elements: <br />
                 <span style={{ color: '#bf612d' }}>Pyro</span>: Tri-Karma
                 Purification DMG increased;{' '}
                 <span style={{ color: '#3d9bc1' }}>Hydro</span>: Shrine of
@@ -251,14 +254,10 @@ const characterBonuses: Bonus[] = [
             currentStacks,
             state
         ) => {
-            if (!talentLevels || !initialAttributes || !currentStacks)
+            if (!state || !talentLevels || !initialAttributes || !currentStacks)
                 return { attributes }
 
             const newAttributes = { ...attributes }
-
-            const talentData: TalentRawData = state!.character.talents.find(
-                (skill) => skill.name === 'Illusory Heart'
-            )!.data
 
             const effectKeys = [
                 'Pyro: DMG Bonus (1 Character)',
@@ -269,11 +268,9 @@ const characterBonuses: Bonus[] = [
                 'Electro: Trigger Interval Decrease (2 Characters)',
             ]
 
-            const effectMultipliers = effectKeys.map((key) => {
-                const value = talentData?.[key]?.[`Lv${talentLevels[2]}`]
-                const bonusString = value ? value.match(/\d+(\.\d+)?/)?.[0] : null
-                return bonusString ? parseFloat(bonusString) : 0
-            })
+            const effectMultipliers = effectKeys.map((key) =>
+                getTalentScalingValue(state, 'Illusory Heart', key, talentLevels[2])
+            )
 
             if (currentStacks === 1 || currentStacks === 2) {
                 newAttributes['Illusory Heart Tri-Karma Purification DMG Bonus'] =
@@ -308,9 +305,10 @@ const characterBonuses: Bonus[] = [
         name: 'Compassion Illuminated',
         description: (
             <span>
-                While inside <span style={{ color: '#DDD' }}>Illusory Heart</span>:
-                Increases Elemental Mastery by 25% of the EM of the party member with
-                the highest EM
+                <Badge variant="secondary">A1</Badge> While inside{' '}
+                <span style={{ color: '#DDD' }}>Illusory Heart</span>: Increases
+                Elemental Mastery by 25% of the EM of the party member with the
+                highest EM
             </span>
         ),
         icon: '/images/characters/nahida-passive1.png',
@@ -370,7 +368,7 @@ const characterBonuses: Bonus[] = [
             const newAttributes = {
                 ...attributes,
                 'Elemental Mastery':
-                    attributes['Elemental Mastery'] +
+                    initialAttributes['Elemental Mastery'] +
                     elementalMasteryOptions[currentStacks],
             }
 
@@ -379,6 +377,7 @@ const characterBonuses: Bonus[] = [
         minConstellation: 4,
         maxStacks: 4,
         stackOptions: ['Off', '100', '120', '140', '160'],
+        dependencies: ['Elemental Mastery'],
     },
 ]
 

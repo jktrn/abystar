@@ -68,7 +68,8 @@ function calculateDamage(
                     let damage
                     switch (formulaType) {
                         case FormulaType.DamageFormula:
-                            if (!attribute || !damageType) return []
+                            if (attribute === undefined || damageType === undefined)
+                                return []
                             damage = damageFormula(
                                 characterAttributes,
                                 talent,
