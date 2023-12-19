@@ -58,7 +58,7 @@ const BonusToggle = ({
                     {isWeaponBonus &&
                     characterState.weapon.refinements &&
                     characterState.weaponRefinement ? (
-                        <span className="max-w-full break-words text-xs text-muted-foreground md:w-[20.5rem]">
+                        <span className="max-w-full break-words text-xs text-muted-foreground md:w-[22rem]">
                             {
                                 characterState.weapon.refinements[
                                     characterState.weaponRefinement - 1
@@ -66,7 +66,7 @@ const BonusToggle = ({
                             }
                         </span>
                     ) : (
-                        <span className="max-w-full break-words text-xs text-muted-foreground md:w-[20.5rem]">
+                        <span className="max-w-full break-words text-xs text-muted-foreground md:w-[22rem]">
                             {bonus.description}
                         </span>
                     )}
@@ -94,7 +94,8 @@ const BonusToggle = ({
                         checkedIcon={false}
                         onColor={
                             elementColors[
-                                characterState.character.vision.toLowerCase() as keyof typeof elementColors
+                                characterState.character
+                                    .vision as keyof typeof elementColors
                             ]
                         }
                         disabled={isBonusDisabled}

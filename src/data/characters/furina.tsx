@@ -1,11 +1,339 @@
-import { TalentScaling, Bonus, Character } from '@/interfaces/Character'
+import { Badge } from '@/components/ui/badge'
+import {
+    Bonus,
+    Character,
+    DamageType,
+    FormulaOutputType,
+    FormulaType,
+    TalentRawData,
+    TalentScaling,
+} from '@/interfaces/Character'
+import { getTalentScalingValue } from '@/lib'
 
 const talentScalings: TalentScaling = {
-    // ...
+    "Normal Attack: Soloist's Solicitation": {
+        '1-Hit DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Normal Attack Additive Bonus'],
+            multiplicativeBonusStat: [
+                'Physical DMG Bonus',
+                'Normal Attack DMG Bonus',
+            ],
+            damageType: DamageType.Physical,
+        },
+        '2-Hit DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Normal Attack Additive Bonus'],
+            multiplicativeBonusStat: [
+                'Physical DMG Bonus',
+                'Normal Attack DMG Bonus',
+            ],
+            damageType: DamageType.Physical,
+        },
+        '3-Hit DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Normal Attack Additive Bonus'],
+            multiplicativeBonusStat: [
+                'Physical DMG Bonus',
+                'Normal Attack DMG Bonus',
+            ],
+            damageType: DamageType.Physical,
+        },
+        '4-Hit DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Normal Attack Additive Bonus'],
+            multiplicativeBonusStat: [
+                'Physical DMG Bonus',
+                'Normal Attack DMG Bonus',
+            ],
+            damageType: DamageType.Physical,
+        },
+        'Charged Attack DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Charged Attack Additive Bonus'],
+            multiplicativeBonusStat: [
+                'Physical DMG Bonus',
+                'Charged Attack DMG Bonus',
+            ],
+            damageType: DamageType.Physical,
+        },
+        'Charged Attack Stamina Cost': {
+            formulaType: FormulaType.GenericFormulaWithoutScaling,
+            multiplicativeBonusStat: ['Charged Attack Stamina Cost Multiplier'],
+            outputType: FormulaOutputType.Generic,
+        },
+        'Plunge DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Plunging Attack Additive Bonus'],
+            multiplicativeBonusStat: [
+                'Physical DMG Bonus',
+                'Plunging Attack DMG Bonus',
+            ],
+            damageType: DamageType.Physical,
+        },
+        'Low Plunge DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Plunging Attack Additive Bonus'],
+            multiplicativeBonusStat: [
+                'Physical DMG Bonus',
+                'Plunging Attack DMG Bonus',
+            ],
+            damageType: DamageType.Physical,
+        },
+        'High Plunge DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Plunging Attack Additive Bonus'],
+            multiplicativeBonusStat: [
+                'Physical DMG Bonus',
+                'Plunging Attack DMG Bonus',
+            ],
+            damageType: DamageType.Physical,
+        },
+        'Spiritbreath Thorn/Surging Blade DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Normal Attack Additive Bonus'],
+            multiplicativeBonusStat: ['Hydro DMG Bonus', 'Normal Attack DMG Bonus'],
+            damageType: DamageType.Hydro,
+        },
+        'Spiritbreath Thorn/Surging Blade DMG Interval': {
+            formulaType: FormulaType.GenericFormulaWithoutScaling,
+            outputType: FormulaOutputType.Time,
+        },
+    },
+    'Salon Solitaire': {
+        'Ousia Bubble DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['HP'],
+            additiveBonusStat: ['Elemental Skill Additive Bonus'],
+            multiplicativeBonusStat: [
+                'Hydro DMG Bonus',
+                'Elemental Skill DMG Bonus',
+            ],
+            damageType: DamageType.Hydro,
+        },
+        Duration: {
+            formulaType: FormulaType.GenericFormulaWithoutScaling,
+            outputType: FormulaOutputType.Time,
+        },
+        'Gentilhomme Usher DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['HP'],
+            additiveBonusStat: ['Elemental Skill Additive Bonus'],
+            multiplicativeBonusStat: [
+                'Hydro DMG Bonus',
+                'Elemental Skill DMG Bonus',
+                'Salon Members DMG Bonus',
+            ],
+            damageType: DamageType.Hydro,
+        },
+        'Surintendante Chevalmarin DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['HP'],
+            additiveBonusStat: ['Elemental Skill Additive Bonus'],
+            multiplicativeBonusStat: [
+                'Hydro DMG Bonus',
+                'Elemental Skill DMG Bonus',
+                'Salon Members DMG Bonus',
+            ],
+            damageType: DamageType.Hydro,
+        },
+        'Mademoiselle Crabaletta DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['HP'],
+            additiveBonusStat: ['Elemental Skill Additive Bonus'],
+            multiplicativeBonusStat: [
+                'Hydro DMG Bonus',
+                'Elemental Skill DMG Bonus',
+                'Salon Members DMG Bonus',
+            ],
+            damageType: DamageType.Hydro,
+        },
+        'Gentilhomme Usher HP Consumption': {
+            formulaType: FormulaType.GenericFormulaWithScaling,
+            attribute: ['HP'],
+            outputType: FormulaOutputType.Drain,
+        },
+        'Surintendante Chevalmarin HP Consumption': {
+            formulaType: FormulaType.GenericFormulaWithScaling,
+            attribute: ['HP'],
+            outputType: FormulaOutputType.Drain,
+        },
+        'Mademoiselle Crabaletta HP Consumption': {
+            formulaType: FormulaType.GenericFormulaWithScaling,
+            attribute: ['HP'],
+            outputType: FormulaOutputType.Drain,
+        },
+        'Singer of Many Waters Healing': {
+            formulaType: FormulaType.GenericFormulaWithScaling,
+            attribute: ['HP', 'HP'],
+            additiveBonusStat: ['Healing Bonus'],
+            outputType: FormulaOutputType.Healing,
+        },
+        CD: {
+            formulaType: FormulaType.GenericFormulaWithoutScaling,
+            outputType: FormulaOutputType.Time,
+        },
+    },
+    'Let the People Rejoice': {
+        'Skill DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['HP'],
+            additiveBonusStat: ['Elemental Burst Additive Bonus'],
+            multiplicativeBonusStat: [
+                'Hydro DMG Bonus',
+                'Elemental Burst DMG Bonus',
+            ],
+            damageType: DamageType.Hydro,
+        },
+        Duration: {
+            formulaType: FormulaType.GenericFormulaWithoutScaling,
+            outputType: FormulaOutputType.Time,
+        },
+        'Maximum Fanfare': {
+            // ! THIS PROBABLY WILL CHANGE FROM C1
+            formulaType: FormulaType.GenericFormulaWithoutScaling,
+            outputType: FormulaOutputType.Generic,
+        },
+        'Fanfare to DMG Increase Conversion Ratio': {
+            formulaType: FormulaType.GenericFormulaWithoutScaling,
+            outputType: FormulaOutputType.Percentage,
+        },
+        'Fanfare to Incoming Healing Bonus Conversion Ratio': {
+            formulaType: FormulaType.GenericFormulaWithoutScaling,
+            outputType: FormulaOutputType.Percentage,
+        },
+        CD: {
+            formulaType: FormulaType.GenericFormulaWithoutScaling,
+            outputType: FormulaOutputType.Time,
+        },
+        'Energy Cost': {
+            formulaType: FormulaType.GenericFormulaWithoutScaling,
+            outputType: FormulaOutputType.Generic,
+        },
+    },
 }
 
 const characterBonuses: Bonus[] = [
-    // ...
+    {
+        name: 'Salon Solitaire',
+        description: (
+            <span>
+                <Badge variant="secondary">E</Badge> The number of party members with
+                more than 50% HP nearby (1/2/3/4 or more) increases the Salon
+                Members&apos; DMG by 10%/20%/30%/40%
+            </span>
+        ),
+        icon: '/images/characters/furina-skill.png',
+        effect: (attributes, initialAttributes, talentLevels, currentStacks) => {
+            if (!initialAttributes || !currentStacks) return { attributes }
+            const newAttributes = {
+                ...attributes,
+                'Salon Members DMG Bonus':
+                    (initialAttributes['Salon Members DMG Bonus'] || 0) +
+                    currentStacks * 0.1,
+            }
+            return { attributes: newAttributes }
+        },
+        maxStacks: 4,
+        stackOptions: [
+            'Off',
+            '1 Member',
+            '2 Members',
+            '3 Members',
+            '4 Members (Trial-only)',
+        ],
+    },
+    {
+        name: 'Let the People Rejoice',
+        description: (
+            <span>
+                <Badge variant="secondary">Q</Badge> Furina gains a Fanfare stack
+                whenever a party member loses/gains 1% of their maximum HP. DMG dealt
+                and Incoming Healing Bonus are increased per stack (with a maximum of
+                300, see{' '}
+                <span style={{ color: '#ddd' }}>
+                    Fanfare to (DMG Increase / Incoming Healing Bonus) Conversion
+                    Ratio
+                </span>{' '}
+                for percentages)
+            </span>
+        ),
+        icon: '/images/characters/furina-burst.png',
+        effect: (
+            attributes,
+            initialAttributes,
+            talentLevels,
+            currentStacks,
+            state
+        ) => {
+            if (
+                !initialAttributes ||
+                !currentStacks ||
+                !talentLevels ||
+                currentStacks === 0 ||
+                !state
+            ) {
+                console.log('im being returned')
+                return { attributes }
+            }
+
+            const arbitraryStackOptions = [0, 50, 100, 150, 200, 250, 300, 350, 400]
+
+            const damageBonus =
+                (getTalentScalingValue(
+                    state,
+                    'Let the People Rejoice',
+                    'Fanfare to DMG Increase Conversion Ratio',
+                    talentLevels[2]
+                ) *
+                    arbitraryStackOptions[currentStacks]) /
+                100
+
+            const healingBonus =
+                (getTalentScalingValue(
+                    state,
+                    'Let the People Rejoice',
+                    'Fanfare to Incoming Healing Bonus Conversion Ratio',
+                    talentLevels[2]
+                ) *
+                    arbitraryStackOptions[currentStacks]) /
+                100
+
+            console.log(damageBonus, healingBonus)
+
+            const newAttributes = {
+                ...attributes,
+                'All DMG Bonus':
+                    (initialAttributes['All DMG Bonus'] || 0) + damageBonus,
+                'Healing Bonus':
+                    (initialAttributes['Healing Bonus'] || 0) + healingBonus,
+            }
+
+            return { attributes: newAttributes }
+        },
+        maxStacks: 8,
+        stackOptions: [
+            'Off',
+            '50',
+            '100',
+            '150',
+            '200',
+            '250',
+            '300',
+            '350 (C1)',
+            '400 (C1)',
+        ],
+        dependencies: ['All DMG Bonus', 'Healing Bonus'],
+    },
 ]
 
 const constellationBonuses: Bonus[] = [

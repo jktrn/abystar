@@ -76,14 +76,14 @@ const CharacterModal = ({
                             alt={rawCharacter.name}
                             onClick={() => handleCharacterSelect(rawCharacter.name)}
                             className={`cursor-pointer rounded-full object-cover transition-all duration-100 ease-in hover:scale-105 ${
-                                rawCharacter.implemented ? '' : 'opacity-50'
+                                rawCharacter.implemented ? '' : 'opacity-25'
                             }`}
                             width={70}
                             height={70}
                             style={{
                                 backgroundColor:
                                     elementColors[
-                                        rawCharacter.vision.toLowerCase() as keyof typeof elementColors
+                                        rawCharacter.vision as keyof typeof elementColors
                                     ],
                             }}
                         />

@@ -75,10 +75,10 @@ export default function Home() {
 
     // Handling any changes user makes to character state
     const updateCharacterState = (updates: Partial<CharacterState>) => {
-        setCharacterState((prevState) => {
-            if (prevState === null) return null
+        setCharacterState((previousState) => {
+            if (previousState === null) return null
 
-            const modifiedState = { ...prevState, ...updates }
+            const modifiedState = { ...previousState, ...updates }
             const updatedBonuses = getUpdatedBonuses(modifiedState)
             modifiedState.characterActiveBonuses = updatedBonuses
 
@@ -98,13 +98,13 @@ export default function Home() {
                 ENEMY_RESISTANCES
             )
             setDamageResults(newDamageResults)
-            // console.log('Damage Results: ', newDamageResults)
+            console.log('Damage Results: ', newDamageResults)
         }
     }, [characterState, characterAttributes])
 
-    // useEffect(() => {
-    //     console.log('Character State has been updated: ', characterState)
-    // }, [characterState])
+    useEffect(() => {
+        console.log('Character State has been updated: ', characterState)
+    }, [characterState])
 
     useEffect(() => {
         console.log('Character Attributes have been updated: ', characterAttributes)

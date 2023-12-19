@@ -1,6 +1,12 @@
 import { type ClassValue, clsx } from 'clsx'
 import { twMerge } from 'tailwind-merge'
-import { BaseStat, CharacterAttributes } from '@/interfaces/Character'
+import {
+    BaseStat,
+    CharacterAttributes,
+    CharacterState,
+    ScalingType,
+    TalentRawData,
+} from '@/interfaces/Character'
 
 function cn(...inputs: ClassValue[]) {
     return twMerge(clsx(inputs))
@@ -28,11 +34,15 @@ const mergeAndSum = (a: BaseStat, b: BaseStat): BaseStat => {
 }
 
 const parseScalingValue = (scalingValue: string) => {
-    const values = scalingValue.match(/\d+(\.\d+)?/g)
-    const parsedValues = values
-        ? values.map((value) => parseFloat(value) / 100)
-        : [0]
-    return parsedValues
+    const valueMatches = scalingValue.match(/(\d+(\.\d+)?)(%|(?!\d))/g) || []
+    return valueMatches.map((valueMatch) => {
+        const isPercentage = valueMatch.includes('%')
+        const value = parseFloat(valueMatch.replace('%', ''))
+        return {
+            type: isPercentage ? ScalingType.Percentage : ScalingType.Flat,
+            value: isPercentage ? value / 100 : value,
+        }
+    })
 }
 
 function calculateStatValue(
@@ -51,13 +61,14 @@ function calculateStatValue(
 }
 
 const elementColors = {
-    pyro: '#bf612d',
-    geo: '#c8922b',
-    dendro: '#84a02f',
-    anemo: '#5d9b86',
-    hydro: '#3d9bc1',
-    cryo: '#7fabb6',
-    electro: '#8c729a',
+    Pyro: '#bf612d',
+    Geo: '#c8922b',
+    Dendro: '#84a02f',
+    Anemo: '#5d9b86',
+    Hydro: '#3d9bc1',
+    Cryo: '#7fabb6',
+    Electro: '#8c729a',
+    Physical: '#ddd',
 }
 
 const compareElement = (a: string, b: string): number => {
@@ -84,6 +95,22 @@ function clamp(number: number, min: number, max: number) {
     return Math.max(min, Math.min(number, max))
 }
 
+function getTalentScalingValue(
+    characterState: CharacterState,
+    talentName: string,
+    scalingKey: string,
+    talentLevel: number
+) {
+    const talentData = characterState.character.talents.find(
+        (talent) => talent.name === talentName
+    )?.data
+    if (!talentData) return 0
+
+    const scalingString = talentData[scalingKey]?.[`Lv${talentLevel}`]
+    const match = scalingString?.match(/\d+(\.\d+)?/)
+    return match ? parseFloat(match[0]) : 0
+}
+
 export {
     compareObjects,
     compareElement,
@@ -94,4 +121,5 @@ export {
     calculateStatValue,
     clamp,
     mergeAndSum,
+    getTalentScalingValue,
 }

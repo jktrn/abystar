@@ -2,6 +2,7 @@ import {
     Talent,
     CharacterAttributes,
     FormulaOutputType,
+    ScalingType,
 } from '@/interfaces/Character'
 import { parseScalingValue, calculateStatValue } from '@/lib'
 
@@ -27,10 +28,15 @@ const genericFormulaWithScaling = (
             calculateStatValue(multiplicativeBonusStat, characterAttributes) + 1
 
         const baseDamage =
-            attributeValues.reduce(
-                (acc, statValue, index) => acc + statValue * scalingValues[index],
-                0
-            ) + additiveBonusStatValue
+            scalingValues.reduce((acc, scaling, index) => {
+                const statValue = attributeValues[index] || 0
+                return (
+                    acc +
+                    (scaling.type === ScalingType.Percentage
+                        ? statValue * scaling.value
+                        : scaling.value)
+                )
+            }, 0) + additiveBonusStatValue
 
         const outputValue = baseDamage * multiplicativeBonusStatValue
 

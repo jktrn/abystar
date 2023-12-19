@@ -1,12 +1,14 @@
+import { Badge } from '@/components/ui/badge'
 import {
-    TalentScaling,
-    TalentRawData,
     Bonus,
     Character,
-    FormulaType,
+    DamageType,
     FormulaOutputType,
+    FormulaType,
+    TalentRawData,
+    TalentScaling,
 } from '@/interfaces/Character'
-import { Badge } from '@/components/ui/badge'
+import { getTalentScalingValue } from '@/lib'
 
 const talentScalings: TalentScaling = {
     'Normal Attack: Ripple of Fate': {
@@ -15,35 +17,35 @@ const talentScalings: TalentScaling = {
             attribute: ['ATK'],
             additiveBonusStat: ['Normal Attack Additive Bonus'],
             multiplicativeBonusStat: ['Hydro DMG Bonus', 'Normal Attack DMG Bonus'],
-            damageType: 'Hydro',
+            damageType: DamageType.Hydro,
         },
         '2-Hit DMG': {
             formulaType: FormulaType.DamageFormula,
             attribute: ['ATK'],
             additiveBonusStat: ['Normal Attack Additive Bonus'],
             multiplicativeBonusStat: ['Hydro DMG Bonus', 'Normal Attack DMG Bonus'],
-            damageType: 'Hydro',
+            damageType: DamageType.Hydro,
         },
         '3-Hit DMG': {
             formulaType: FormulaType.DamageFormula,
             attribute: ['ATK'],
             additiveBonusStat: ['Normal Attack Additive Bonus'],
             multiplicativeBonusStat: ['Hydro DMG Bonus', 'Normal Attack DMG Bonus'],
-            damageType: 'Hydro',
+            damageType: DamageType.Hydro,
         },
         '4-Hit DMG': {
             formulaType: FormulaType.DamageFormula,
             attribute: ['ATK'],
             additiveBonusStat: ['Normal Attack Additive Bonus'],
             multiplicativeBonusStat: ['Hydro DMG Bonus', 'Normal Attack DMG Bonus'],
-            damageType: 'Hydro',
+            damageType: DamageType.Hydro,
         },
         'Charged Attack DMG': {
             formulaType: FormulaType.DamageFormula,
             attribute: ['ATK'],
             additiveBonusStat: ['Charged Attack Additive Bonus'],
             multiplicativeBonusStat: ['Hydro DMG Bonus', 'Charged Attack DMG Bonus'],
-            damageType: 'Hydro',
+            damageType: DamageType.Hydro,
         },
         'Charged Attack Stamina Cost': {
             formulaType: FormulaType.GenericFormulaWithoutScaling,
@@ -58,7 +60,7 @@ const talentScalings: TalentScaling = {
                 'Hydro DMG Bonus',
                 'Plunging Attack DMG Bonus',
             ],
-            damageType: 'Hydro',
+            damageType: DamageType.Hydro,
         },
         'Low Plunge DMG': {
             formulaType: FormulaType.DamageFormula,
@@ -68,7 +70,7 @@ const talentScalings: TalentScaling = {
                 'Hydro DMG Bonus',
                 'Plunging Attack DMG Bonus',
             ],
-            damageType: 'Hydro',
+            damageType: DamageType.Hydro,
         },
         'High Plunge DMG': {
             formulaType: FormulaType.DamageFormula,
@@ -78,7 +80,7 @@ const talentScalings: TalentScaling = {
                 'Hydro DMG Bonus',
                 'Plunging Attack DMG Bonus',
             ],
-            damageType: 'Hydro',
+            damageType: DamageType.Hydro,
         },
     },
     'Mirror Reflection of Doom': {
@@ -90,7 +92,7 @@ const talentScalings: TalentScaling = {
                 'Hydro DMG Bonus',
                 'Elemental Skill DMG Bonus',
             ],
-            damageType: 'Hydro',
+            damageType: DamageType.Hydro,
         },
         'Explosion DMG': {
             formulaType: FormulaType.DamageFormula,
@@ -100,7 +102,7 @@ const talentScalings: TalentScaling = {
                 'Hydro DMG Bonus',
                 'Elemental Skill DMG Bonus',
             ],
-            damageType: 'Hydro',
+            damageType: DamageType.Hydro,
         },
         CD: {
             formulaType: FormulaType.GenericFormulaWithoutScaling,
@@ -122,7 +124,7 @@ const talentScalings: TalentScaling = {
                 'Hydro DMG Bonus',
                 'Elemental Burst DMG Bonus',
             ],
-            damageType: 'Hydro',
+            damageType: DamageType.Hydro,
         },
         'DMG Bonus': {
             formulaType: FormulaType.GenericFormulaWithoutScaling,
@@ -152,7 +154,12 @@ const characterBonuses: Bonus[] = [
     {
         name: 'Stellaris Phantasm',
         description: (
-            <span>During the duration of Omen, enemies take increased DMG</span>
+            <span>
+                <Badge variant="secondary">Q</Badge> During the duration of Omen,
+                enemies take increased DMG (see &quot;DMG Bonus&quot; of{' '}
+                <span style={{ color: '#ddd' }}>Stellaris Phantasm</span> for
+                percentages)
+            </span>
         ),
         icon: '/images/characters/mona-burst.png',
         effect: (
@@ -162,32 +169,30 @@ const characterBonuses: Bonus[] = [
             currentStacks,
             state
         ) => {
-            if (!initialAttributes || !talentLevels) return { attributes }
+            if (!state || !initialAttributes || !talentLevels) return { attributes }
 
-            // Getting raw talent scalings
-            const talentData: TalentRawData = state!.character.talents.find(
-                (t) => t.name === 'Stellaris Phantasm'
-            )!.data
-
-            const bonusMatch =
-                talentData['DMG Bonus']![`Lv${talentLevels[2]}`]!.match(/\d+/g)
-
-            const bonusMatchInt = bonusMatch ? parseInt(bonusMatch[0]) : 0
+            const scalingValue = getTalentScalingValue(
+                state,
+                'Stellaris Phantasm',
+                'DMG Bonus',
+                talentLevels[2]
+            )
 
             const newAttributes = {
                 ...attributes,
                 'All DMG Bonus':
-                    (attributes['All DMG Bonus'] || 0) + bonusMatchInt / 100,
+                    (initialAttributes['All DMG Bonus'] || 0) + scalingValue / 100,
             }
 
             return { attributes: newAttributes }
         },
+        dependencies: ['All DMG Bonus'],
     },
     {
         name: 'Waterborne Destiny',
         description: (
             <span>
-                Increases Mona&apos;s{' '}
+                <Badge variant="secondary">A4</Badge> Increases Mona&apos;s{' '}
                 <span style={{ color: '#3d9bc1' }}>Hydro DMG Bonus</span> by 20% of
                 her Energy Recharge rate
             </span>
@@ -211,8 +216,10 @@ const characterBonuses: Bonus[] = [
         name: 'Prophecy of Submersion',
         description: (
             <span>
-                <Badge variant="secondary">C1</Badge> When any of your own party
-                members hits an opponent affected by an Omen, the effects of{' '}
+                <Badge variant="secondary">C1</Badge>{' '}
+                <Badge variant="destructive">Unimplemented</Badge> When any of your
+                own party members hits an opponent affected by an Omen, the effects
+                of{' '}
                 <span style={{ color: '#3d9bc1' }}>
                     Hydro-related Elemental Reactions
                 </span>{' '}

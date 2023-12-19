@@ -98,7 +98,7 @@ export interface TalentScalingData {
     multiplicativeBonusStat?: string[]
     critRateBonusStat?: string[]
     critDamageBonusStat?: string[]
-    damageType?: string
+    damageType?: DamageType
     outputType?: FormulaOutputType
     minConstellation?: number
 }
@@ -205,6 +205,22 @@ export interface DamageResult {
     aspects: DamageResultAspect[]
 }
 
+export enum ScalingType {
+    Flat,
+    Percentage,
+}
+
+export enum DamageType {
+    Physical,
+    Pyro,
+    Hydro,
+    Electro,
+    Anemo,
+    Geo,
+    Dendro,
+    Cryo,
+}
+
 export enum FormulaType {
     DamageFormula,
     GenericFormulaWithScaling,
@@ -214,6 +230,7 @@ export enum FormulaType {
 
 export enum FormulaOutputType {
     Healing,
+    Drain,
     Time,
     Percentage,
     Generic,
