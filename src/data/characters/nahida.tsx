@@ -5,7 +5,6 @@ import {
     DamageType,
     FormulaOutputType,
     FormulaType,
-    TalentRawData,
     TalentScaling,
 } from '@/interfaces/Character'
 import { getTalentScalingValue } from '@/lib'
@@ -205,8 +204,7 @@ const characterBonuses: Bonus[] = [
             </span>
         ),
         icon: '/images/characters/nahida-passive2.png',
-        effect: (attributes, initialAttributes) => {
-            if (!initialAttributes) return { attributes }
+        effect: (attributes) => {
             const bonusDMG = Math.min(
                 0.8,
                 Math.max(0, attributes['Elemental Mastery'] - 200) * 0.001
@@ -219,18 +217,18 @@ const characterBonuses: Bonus[] = [
             const newAttributes = {
                 ...attributes,
                 'Awakening Elucidated Tri-Karma Purification DMG Bonus':
-                    (initialAttributes[
+                    (attributes[
                         'Awakening Elucidated Tri-Karma Purification DMG Bonus'
                     ] || 0) + bonusDMG,
                 'Elemental Skill CRIT Rate':
-                    (initialAttributes['Elemental Skill CRIT Rate'] || 0) +
+                    (attributes['Elemental Skill CRIT Rate'] || 0) +
                     bonusCritRate,
             }
 
             return { attributes: newAttributes }
         },
         enabled: true,
-        dependencies: ['Elemental Mastery', 'Elemental Skill CRIT Rate'],
+        priority: 2,
     },
     {
         name: 'Illusory Heart',
@@ -249,12 +247,11 @@ const characterBonuses: Bonus[] = [
         icon: '/images/characters/nahida-burst.png',
         effect: (
             attributes,
-            initialAttributes,
             talentLevels,
             currentStacks,
             state
         ) => {
-            if (!state || !talentLevels || !initialAttributes || !currentStacks)
+            if (!state || !talentLevels || !currentStacks)
                 return { attributes }
 
             const newAttributes = { ...attributes }
@@ -274,17 +271,17 @@ const characterBonuses: Bonus[] = [
 
             if (currentStacks === 1 || currentStacks === 2) {
                 newAttributes['Illusory Heart Tri-Karma Purification DMG Bonus'] =
-                    (initialAttributes[
+                    (attributes[
                         'Illusory Heart Tri-Karma Purification DMG Bonus'
                     ] || 0) +
                     effectMultipliers[currentStacks - 1] / 100
             } else if (currentStacks === 3 || currentStacks === 4) {
                 newAttributes['Shrine of Maya Duration Bonus'] =
-                    (initialAttributes['Shrine of Maya Duration Bonus'] || 0) +
+                    (attributes['Shrine of Maya Duration Bonus'] || 0) +
                     effectMultipliers[currentStacks - 1]
             } else if (currentStacks === 5 || currentStacks === 6) {
                 newAttributes['Tri-Karma Purification Trigger Interval'] =
-                    (initialAttributes['Tri-Karma Purification Trigger Interval'] ||
+                    (attributes['Tri-Karma Purification Trigger Interval'] ||
                         0) - effectMultipliers[currentStacks - 1]
             }
 
@@ -300,6 +297,7 @@ const characterBonuses: Bonus[] = [
             'Electro (1)',
             'Electro (2)',
         ],
+        priority: 1,
     },
     {
         name: 'Compassion Illuminated',
@@ -312,8 +310,8 @@ const characterBonuses: Bonus[] = [
             </span>
         ),
         icon: '/images/characters/nahida-passive1.png',
-        effect: (attributes, initialAttributes, talentLevels, currentStacks) => {
-            if (!currentStacks || !initialAttributes) return { attributes }
+        effect: (attributes, talentLevels, currentStacks) => {
+            if (!currentStacks) return { attributes }
 
             const elementalMasteryOptions = [0, 125, 150, 175, 200, 225, 250]
 
@@ -328,6 +326,7 @@ const characterBonuses: Bonus[] = [
         },
         maxStacks: 6,
         stackOptions: ['Off', '125', '150', '175', '200', '225', '250'],
+        priority: 1,
     },
     {
         name: 'The Root of All Fullness',

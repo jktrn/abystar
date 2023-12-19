@@ -61,21 +61,27 @@ export interface Bonus {
     name: string
     description?: JSX.Element
     icon?: string
+    // the effect that the bonus has on characterAttributes
     effect: Effect
+    // The maximum number of stacks the bonus can have
     maxStacks?: number
-    currentStacks?: number
+    // The stack options that the user can choose from
     stackOptions?: string[]
-    dependencies?: string[]
-    affectsTalentIndex?: number
-    applyToTalentScaling?: (talentScaling: TalentScaling) => void
+    // For bonuses that are locked behind constellations
     minConstellation?: number
+    // Whether the bonus is enabled by default (passives)
     enabled?: boolean
+    // In what order the bonus should be applied (lower = earlier)
+    priority?: number
+    // The index of the talent that the bonus changes the scaling of
+    affectsTalentIndex?: number
+    // What should be changed in the talent scaling
+    applyToTalentScaling?: (talentScaling: TalentScaling) => void
 }
 
 export interface Effect {
     (
         attributes: CharacterAttributes,
-        initialAttributes?: CharacterAttributes | undefined,
         talentLevels?: number[] | undefined,
         currentStacks?: number | undefined,
         state?: CharacterState | undefined
