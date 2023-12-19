@@ -4,13 +4,7 @@ import { Bonus } from '@/interfaces/Character'
 const weaponBonuses: Bonus[] = [
     {
         name: "A Thousand Nights' Dawnsong",
-        effect: (
-            attributes,
-            initialAttributes,
-            talentLevels,
-            currentStacks,
-            state
-        ) => {
+        effect: (attributes, talentLevels, currentStacks, state) => {
             if (
                 !currentStacks ||
                 currentStacks === 0 ||
@@ -38,6 +32,7 @@ const weaponBonuses: Bonus[] = [
         },
         maxStacks: 3,
         stackOptions: ['Off', 'O Same', '1 Same', '2 Same', '3 Same'],
+        priority: 1,
     },
 ]
 

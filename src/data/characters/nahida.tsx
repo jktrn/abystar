@@ -113,8 +113,7 @@ const talentScalings: TalentScaling = {
             multiplicativeBonusStat: [
                 'Dendro DMG Bonus',
                 'Elemental Skill DMG Bonus',
-                'Awakening Elucidated Tri-Karma Purification DMG Bonus',
-                'Illusory Heart Tri-Karma Purification DMG Bonus',
+                'Tri-Karma Purification DMG Bonus',
             ],
             critRateBonusStat: ['Elemental Skill CRIT Rate'],
             damageType: DamageType.Dendro,
@@ -216,19 +215,16 @@ const characterBonuses: Bonus[] = [
 
             const newAttributes = {
                 ...attributes,
-                'Awakening Elucidated Tri-Karma Purification DMG Bonus':
-                    (attributes[
-                        'Awakening Elucidated Tri-Karma Purification DMG Bonus'
-                    ] || 0) + bonusDMG,
+                'Tri-Karma Purification DMG Bonus':
+                    (attributes['Tri-Karma Purification DMG Bonus'] || 0) + bonusDMG,
                 'Elemental Skill CRIT Rate':
-                    (attributes['Elemental Skill CRIT Rate'] || 0) +
-                    bonusCritRate,
+                    (attributes['Elemental Skill CRIT Rate'] || 0) + bonusCritRate,
             }
 
             return { attributes: newAttributes }
         },
         enabled: true,
-        priority: 2,
+        priority: 3,
     },
     {
         name: 'Illusory Heart',
@@ -245,14 +241,8 @@ const characterBonuses: Bonus[] = [
             </span>
         ),
         icon: '/images/characters/nahida-burst.png',
-        effect: (
-            attributes,
-            talentLevels,
-            currentStacks,
-            state
-        ) => {
-            if (!state || !talentLevels || !currentStacks)
-                return { attributes }
+        effect: (attributes, talentLevels, currentStacks, state) => {
+            if (!state || !talentLevels || !currentStacks) return { attributes }
 
             const newAttributes = { ...attributes }
 
@@ -270,10 +260,8 @@ const characterBonuses: Bonus[] = [
             )
 
             if (currentStacks === 1 || currentStacks === 2) {
-                newAttributes['Illusory Heart Tri-Karma Purification DMG Bonus'] =
-                    (attributes[
-                        'Illusory Heart Tri-Karma Purification DMG Bonus'
-                    ] || 0) +
+                newAttributes['Tri-Karma Purification DMG Bonus'] =
+                    (attributes['Tri-Karma Purification DMG Bonus'] || 0) +
                     effectMultipliers[currentStacks - 1] / 100
             } else if (currentStacks === 3 || currentStacks === 4) {
                 newAttributes['Shrine of Maya Duration Bonus'] =
@@ -281,8 +269,8 @@ const characterBonuses: Bonus[] = [
                     effectMultipliers[currentStacks - 1]
             } else if (currentStacks === 5 || currentStacks === 6) {
                 newAttributes['Tri-Karma Purification Trigger Interval'] =
-                    (attributes['Tri-Karma Purification Trigger Interval'] ||
-                        0) - effectMultipliers[currentStacks - 1]
+                    (attributes['Tri-Karma Purification Trigger Interval'] || 0) -
+                    effectMultipliers[currentStacks - 1]
             }
 
             return { attributes: newAttributes }
@@ -359,15 +347,15 @@ const characterBonuses: Bonus[] = [
             </span>
         ),
         icon: '/images/characters/nahida-constellation4.png',
-        effect: (attributes, initialAttributes, talentLevels, currentStacks) => {
-            if (!currentStacks || !initialAttributes) return { attributes }
+        effect: (attributes, talentLevels, currentStacks) => {
+            if (!currentStacks) return { attributes }
 
             const elementalMasteryOptions = [0, 100, 120, 140, 160]
 
             const newAttributes = {
                 ...attributes,
                 'Elemental Mastery':
-                    initialAttributes['Elemental Mastery'] +
+                    attributes['Elemental Mastery'] +
                     elementalMasteryOptions[currentStacks],
             }
 
@@ -376,7 +364,7 @@ const characterBonuses: Bonus[] = [
         minConstellation: 4,
         maxStacks: 4,
         stackOptions: ['Off', '100', '120', '140', '160'],
-        dependencies: ['Elemental Mastery'],
+        priority: 1,
     },
 ]
 
@@ -427,7 +415,7 @@ const constellationBonuses: Bonus[] = [
             </span>
         ),
         icon: '/images/characters/nahida-constellation3.png',
-        effect: (attributes, initialAttributes, talentLevels) => {
+        effect: (attributes, talentLevels) => {
             if (!talentLevels) return { attributes }
 
             const newTalentLevels = [...talentLevels]
@@ -436,6 +424,7 @@ const constellationBonuses: Bonus[] = [
             return { attributes: attributes, updatedTalentLevels: newTalentLevels }
         },
         minConstellation: 3,
+        priority: 0,
     },
     {
         name: 'The Stem of Manifest Inference',
@@ -464,7 +453,7 @@ const constellationBonuses: Bonus[] = [
             </span>
         ),
         icon: '/images/characters/nahida-constellation5.png',
-        effect: (attributes, initialAttributes, talentLevels) => {
+        effect: (attributes, talentLevels) => {
             if (!talentLevels) return { attributes }
 
             const newTalentLevels = [...talentLevels]
@@ -473,6 +462,7 @@ const constellationBonuses: Bonus[] = [
             return { attributes: attributes, updatedTalentLevels: newTalentLevels }
         },
         minConstellation: 5,
+        priority: 0,
     },
     {
         name: "The Fruit of Reason's Culmination",

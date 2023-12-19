@@ -67,6 +67,8 @@ export interface Bonus {
     maxStacks?: number
     // The stack options that the user can choose from
     stackOptions?: string[]
+    // The current stack that the bonus is at
+    currentStacks?: number
     // For bonuses that are locked behind constellations
     minConstellation?: number
     // Whether the bonus is enabled by default (passives)
