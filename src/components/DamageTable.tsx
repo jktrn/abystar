@@ -45,17 +45,15 @@ const DamageTable = ({ damageResults }: DamageTableProps) => {
                         aspect.damage.outputType === FormulaOutputType.Time
                             ? `${aspect.damage.outputValue?.toFixed(1)}s`
                             : aspect.damage.outputType ===
-                                FormulaOutputType.Percentage
-                              ? `${(aspect.damage.outputValue * 100)?.toFixed(2)}%`
-                              : aspect.damage.outputType ===
-                                  FormulaOutputType.Healing
-                                ? `+${Math.round(aspect.damage.outputValue)}`
-                                : aspect.damage.outputType ===
-                                    FormulaOutputType.Drain
-                                  ? `-${Math.round(aspect.damage.outputValue)}`
-                                  : aspect.damage.outputValue
-                                    ? Math.round(aspect.damage.outputValue)
-                                    : 0
+                              FormulaOutputType.Percentage
+                            ? `${(aspect.damage.outputValue * 100)?.toFixed(2)}%`
+                            : aspect.damage.outputType === FormulaOutputType.Healing
+                            ? `+${Math.round(aspect.damage.outputValue)}`
+                            : aspect.damage.outputType === FormulaOutputType.Drain
+                            ? `-${Math.round(aspect.damage.outputValue)}`
+                            : aspect.damage.outputValue
+                            ? Math.round(aspect.damage.outputValue)
+                            : 0
                     result.push({
                         name: aspect.aspectName,
                         average: outputValue,

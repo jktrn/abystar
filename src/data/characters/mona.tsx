@@ -171,17 +171,18 @@ const characterBonuses: Bonus[] = [
         ) => {
             if (!state || !initialAttributes || !talentLevels) return { attributes }
 
-            const scalingValue = getTalentScalingValue(
-                state,
-                'Stellaris Phantasm',
-                'DMG Bonus',
-                talentLevels[2]
-            )
+            const scalingValue =
+                getTalentScalingValue(
+                    state,
+                    'Stellaris Phantasm',
+                    'DMG Bonus',
+                    talentLevels[2]
+                ) / 100
 
             const newAttributes = {
                 ...attributes,
                 'All DMG Bonus':
-                    (initialAttributes['All DMG Bonus'] || 0) + scalingValue / 100,
+                    (initialAttributes['All DMG Bonus'] || 0) + scalingValue,
             }
 
             return { attributes: newAttributes }
@@ -211,6 +212,7 @@ const characterBonuses: Bonus[] = [
             return { attributes: newAttributes }
         },
         enabled: true,
+        dependencies: ['Hydro DMG Bonus', 'Energy Recharge'],
     },
     {
         name: 'Prophecy of Submersion',
