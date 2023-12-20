@@ -109,8 +109,8 @@ const StaffOfHoma: Weapon = {
                 <span>
                     HP is increased by <span style={{ color: '#ddd' }}>20%</span>.
                     Additionally, provides an ATK Bonus based on{' '}
-                    <span style={{ color: '#ddd' }}>0.8%</span> of the wielder's Max
-                    HP. This bonus increases to{' '}
+                    <span style={{ color: '#ddd' }}>0.8%</span> of the wielder&apos;s
+                    Max HP. This bonus increases to{' '}
                     <span style={{ color: '#ddd' }}>1.8%</span> if the wielder is
                     less than 50% HP
                 </span>
@@ -122,8 +122,8 @@ const StaffOfHoma: Weapon = {
                 <span>
                     HP is increased by <span style={{ color: '#ddd' }}>25%</span>.
                     Additionally, provides an ATK Bonus based on{' '}
-                    <span style={{ color: '#ddd' }}>1%</span> of the wielder's Max
-                    HP. This bonus increases to{' '}
+                    <span style={{ color: '#ddd' }}>1%</span> of the wielder&apos;s
+                    Max HP. This bonus increases to{' '}
                     <span style={{ color: '#ddd' }}>2.2%</span> if the wielder is
                     less than 50% HP
                 </span>
@@ -135,8 +135,8 @@ const StaffOfHoma: Weapon = {
                 <span>
                     HP is increased by <span style={{ color: '#ddd' }}>30%</span>.
                     Additionally, provides an ATK Bonus based on{' '}
-                    <span style={{ color: '#ddd' }}>1.2%</span> of the wielder's Max
-                    HP. This bonus increases to{' '}
+                    <span style={{ color: '#ddd' }}>1.2%</span> of the wielder&apos;s
+                    Max HP. This bonus increases to{' '}
                     <span style={{ color: '#ddd' }}>2.6%</span> if the wielder is
                     less than 50% HP
                 </span>
@@ -148,8 +148,8 @@ const StaffOfHoma: Weapon = {
                 <span>
                     HP is increased by <span style={{ color: '#ddd' }}>35%</span>.
                     Additionally, provides an ATK Bonus based on{' '}
-                    <span style={{ color: '#ddd' }}>1.4%</span> of the wielder's Max
-                    HP. This bonus increases to{' '}
+                    <span style={{ color: '#ddd' }}>1.4%</span> of the wielder&apos;s
+                    Max HP. This bonus increases to{' '}
                     <span style={{ color: '#ddd' }}>3%</span> if the wielder is less
                     than 50% HP
                 </span>
@@ -161,8 +161,8 @@ const StaffOfHoma: Weapon = {
                 <span>
                     HP is increased by <span style={{ color: '#ddd' }}>40%</span>.
                     Additionally, provides an ATK Bonus based on{' '}
-                    <span style={{ color: '#ddd' }}>1.6%</span> of the wielder's Max
-                    HP. This bonus increases to{' '}
+                    <span style={{ color: '#ddd' }}>1.6%</span> of the wielder&apos;s
+                    Max HP. This bonus increases to{' '}
                     <span style={{ color: '#ddd' }}>3.4%</span> if the wielder is
                     less than 50% HP
                 </span>
