@@ -1,15 +1,393 @@
-import { TalentScaling, Bonus, Character } from '@/interfaces/Character'
+import { Badge } from '@/components/ui/badge'
+import {
+    Bonus,
+    Character,
+    DamageType,
+    FormulaOutputType,
+    FormulaType,
+    TalentScaling,
+} from '@/interfaces/Character'
 
 const talentScalings: TalentScaling = {
-    // ...
+    'Normal Attack: Favonius Bladework - Weiss': {
+        '1-Hit DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Normal Attack Additive Bonus'],
+            multiplicativeBonusStat: [
+                'Physical DMG Bonus',
+                'Normal Attack DMG Bonus',
+            ],
+            damageType: DamageType.Physical,
+        },
+        '2-Hit DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Normal Attack Additive Bonus'],
+            multiplicativeBonusStat: [
+                'Physical DMG Bonus',
+                'Normal Attack DMG Bonus',
+            ],
+            damageType: DamageType.Physical,
+        },
+        '3-Hit DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Normal Attack Additive Bonus'],
+            multiplicativeBonusStat: [
+                'Physical DMG Bonus',
+                'Normal Attack DMG Bonus',
+            ],
+            damageType: DamageType.Physical,
+        },
+        '4-Hit DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Normal Attack Additive Bonus'],
+            multiplicativeBonusStat: [
+                'Physical DMG Bonus',
+                'Normal Attack DMG Bonus',
+            ],
+            damageType: DamageType.Physical,
+        },
+        '5-Hit DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Normal Attack Additive Bonus'],
+            multiplicativeBonusStat: [
+                'Physical DMG Bonus',
+                'Normal Attack DMG Bonus',
+            ],
+            damageType: DamageType.Physical,
+        },
+        'Charged Attack DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Charged Attack Additive Bonus'],
+            multiplicativeBonusStat: [
+                'Physical DMG Bonus',
+                'Charged Attack DMG Bonus',
+            ],
+            damageType: DamageType.Physical,
+        },
+        'Charged Attack Stamina Cost': {
+            formulaType: FormulaType.GenericFormulaWithoutScaling,
+            multiplicativeBonusStat: ['Charged Attack Stamina Cost Multiplier'],
+            outputType: FormulaOutputType.Generic,
+        },
+        'Plunge DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Plunging Attack Additive Bonus'],
+            multiplicativeBonusStat: [
+                'Physical DMG Bonus',
+                'Plunging Attack DMG Bonus',
+            ],
+            damageType: DamageType.Physical,
+        },
+        'Low Plunge DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Plunging Attack Additive Bonus'],
+            multiplicativeBonusStat: [
+                'Physical DMG Bonus',
+                'Plunging Attack DMG Bonus',
+            ],
+            damageType: DamageType.Physical,
+        },
+        'High Plunge DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Plunging Attack Additive Bonus'],
+            multiplicativeBonusStat: [
+                'Physical DMG Bonus',
+                'Plunging Attack DMG Bonus',
+            ],
+            damageType: DamageType.Physical,
+        },
+    },
+    'Abiogenesis: Solar Isotoma': {
+        'Skill DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Elemental Skill Additive Bonus'],
+            multiplicativeBonusStat: ['Geo DMG Bonus', 'Elemental Skill DMG Bonus'],
+            damageType: DamageType.Geo,
+        },
+        'Transient Blossom DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['DEF'],
+            additiveBonusStat: ['Elemental Skill Additive Bonus'],
+            multiplicativeBonusStat: [
+                'Geo DMG Bonus',
+                'Transient Blossom DMG Bonus',
+            ],
+            damageType: DamageType.Geo,
+        },
+        Duration: {
+            formulaType: FormulaType.GenericFormulaWithoutScaling,
+            outputType: FormulaOutputType.Time,
+        },
+        'Skill CD': {
+            formulaType: FormulaType.GenericFormulaWithoutScaling,
+            outputType: FormulaOutputType.Time,
+        },
+    },
+    'Rite of Progeniture: Tectonic Tide': {
+        'Burst DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: [
+                'Elemental Burst Additive Bonus',
+                'Rise of Phanerozoic DMG Bonus',
+            ],
+            multiplicativeBonusStat: ['Geo DMG Bonus', 'Elemental Burst DMG Bonus'],
+            damageType: DamageType.Geo,
+        },
+        'Fatal Blossom DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: [
+                'Elemental Burst Additive Bonus',
+                'Rise of Phanerozoic DMG Bonus',
+            ],
+            multiplicativeBonusStat: ['Geo DMG Bonus', 'Elemental Burst DMG Bonus'],
+            damageType: DamageType.Geo,
+        },
+        CD: {
+            formulaType: FormulaType.GenericFormulaWithoutScaling,
+            outputType: FormulaOutputType.Time,
+        },
+        'Energy Cost': {
+            formulaType: FormulaType.GenericFormulaWithoutScaling,
+            outputType: FormulaOutputType.Generic,
+        },
+    },
 }
 
 const characterBonuses: Bonus[] = [
-    // ...
+    {
+        name: 'Calcite Might',
+        description: (
+            <span>
+                <Badge variant="secondary">A1</Badge> Transient Blossoms generated by{' '}
+                <span style={{ color: '#ddd' }}>Abiogenesis: Solar Isotoma</span>{' '}
+                deal 25% more DMG to opponents whose HP is below 50%
+            </span>
+        ),
+        icon: '/images/characters/albedo-passive1.png',
+        effect: (attributes) => {
+            const newAttributes = {
+                ...attributes,
+                'Transient Blossom DMG Bonus':
+                    (attributes['Transient Blossom DMG Bonus'] || 0) + 0.25,
+            }
+            return { attributes: newAttributes }
+        },
+        priority: 1,
+    },
+    {
+        name: 'Homuncular Nature',
+        description: (
+            <span>
+                <Badge variant="secondary">A4</Badge> Using{' '}
+                <span style={{ color: '#ddd' }}>
+                    Rite of Progeniture: Tectonic Tide
+                </span>{' '}
+                increases the Elemental Mastery of all party members by 125 for 10s
+            </span>
+        ),
+        icon: '/images/characters/albedo-passive2.png',
+        effect: (attributes) => {
+            const newAttributes = {
+                ...attributes,
+                'Elemental Mastery': (attributes['Elemental Mastery'] || 0) + 125,
+            }
+            return { attributes: newAttributes }
+        },
+        priority: 1,
+    },
+    {
+        name: 'Opening of Phanerozoic',
+        description: (
+            <span>
+                <Badge variant="secondary">C2</Badge> Transient Blossoms generated by{' '}
+                <span style={{ color: '#ddd' }}>Abiogenesis: Solar Isotoma</span>{' '}
+                grant Albedo a stack of Fatal Reckoning. Each stack increases DMG
+                from{' '}
+                <span style={{ color: '#ddd' }}>Abiogenesis: Solar Isotoma</span> by
+                30% of Albedo&apos;s DEF (up to 4 stacks)
+            </span>
+        ),
+        icon: '/images/characters/albedo-constellation2.png',
+        effect: (attributes, talentLevels, currentStacks) => {
+            if (!currentStacks) return { attributes }
+
+            const newAttributes = {
+                ...attributes,
+                'Rise of Phanerozoic DMG Bonus':
+                    (attributes['Rise of Phanerozoic DMG Bonus'] || 0) +
+                    attributes['DEF'] * 0.3 * currentStacks,
+            }
+
+            return { attributes: newAttributes }
+        },
+        maxStacks: 4,
+        stackOptions: ['Off', '1 Stack', '2 Stacks', '3 Stacks', '4 Stacks'],
+        minConstellation: 2,
+        priority: 3,
+    },
+    {
+        name: 'Descent of Divinity',
+        description: (
+            <span>
+                <Badge variant="secondary">C4</Badge> Active party members within the
+                Solar Isotoma field have their Plunging Attack DMG increased by 30%
+            </span>
+        ),
+        icon: '/images/characters/albedo-constellation4.png',
+        effect: (attributes) => {
+            const newAttributes = {
+                ...attributes,
+                'Plunging Attack DMG Bonus':
+                    (attributes['Plunging Attack DMG Bonus'] || 0) + 0.3,
+            }
+            return { attributes: newAttributes }
+        },
+        minConstellation: 4,
+        priority: 1,
+    },
+    {
+        name: 'Dust of Purification',
+        description: (
+            <span>
+                <Badge variant="secondary">C6</Badge> Active party members within the
+                Solar Isotoma field who are protected by a shield created by
+                Crystallize have their DMG increased by 17%
+            </span>
+        ),
+        icon: '/images/characters/albedo-constellation6.png',
+        effect: (attributes) => {
+            const newAttributes = {
+                ...attributes,
+                'All DMG Bonus': (attributes['All DMG Bonus'] || 0) + 0.17,
+            }
+            return { attributes: newAttributes }
+        },
+        minConstellation: 6,
+        priority: 1,
+    },
 ]
 
 const constellationBonuses: Bonus[] = [
-    // ...
+    {
+        name: 'Flower of Eden',
+        description: (
+            <span>
+                Transient Blossoms generated by Albedo&apos;s{' '}
+                <span style={{ color: '#ddd' }}>Abiogenesis: Solar Isotoma</span>{' '}
+                regenerate 1.2 Energy for Albedo.
+            </span>
+        ),
+        icon: '/images/characters/albedo-constellation1.png',
+        effect: (attributes) => {
+            // * Unimplementable
+            return { attributes }
+        },
+        minConstellation: 1,
+    },
+    {
+        name: 'Opening of Phanerozoic',
+        description: (
+            <span>
+                Transient Blossoms generated by{' '}
+                <span style={{ color: '#ddd' }}>Abiogenesis: Solar Isotoma</span>{' '}
+                grant Albedo a stack of Fatal Reckoning. Each stack increases DMG
+                from{' '}
+                <span style={{ color: '#ddd' }}>Abiogenesis: Solar Isotoma</span> by
+                30% of Albedo&apos;s DEF (up to 4 stacks)
+            </span>
+        ),
+        icon: '/images/characters/albedo-constellation2.png',
+        effect: (attributes) => {
+            // * Already handled in characterBonuses
+            return { attributes }
+        },
+        minConstellation: 2,
+    },
+    {
+        name: 'Grace of Helios',
+        description: (
+            <span>
+                Increases the Level of{' '}
+                <span style={{ color: '#ddd' }}>Abiogenesis: Solar Isotoma</span> by
+                3. Maximum upgrade level is 15.
+            </span>
+        ),
+        icon: '/images/characters/albedo-constellation3.png',
+        effect: (attributes, talentLevels) => {
+            if (!talentLevels) return { attributes }
+
+            const newTalentLevels = [...talentLevels]
+            newTalentLevels[1] = Math.min(newTalentLevels[1] + 3, 13)
+
+            return { attributes: attributes, updatedTalentLevels: newTalentLevels }
+        },
+        minConstellation: 3,
+        priority: 0,
+    },
+    {
+        name: 'Descent of Divinity',
+        description: (
+            <span>
+                Active party members within the Solar Isotoma field have their
+                Plunging Attack DMG increased by 30%.
+            </span>
+        ),
+        icon: '/images/characters/albedo-constellation4.png',
+        effect: (attributes) => {
+            // * Already handled in characterBonuses
+            return { attributes }
+        },
+    },
+    {
+        name: 'Tide of Hadean',
+        description: (
+            <span>
+                Increases the Level of{' '}
+                <span style={{ color: '#ddd' }}>
+                    Rite of Progeniture: Tectonic Tide
+                </span>{' '}
+                by 3. Maximum upgrade level is 15.
+            </span>
+        ),
+        icon: '/images/characters/albedo-constellation5.png',
+        effect: (attributes, talentLevels) => {
+            if (!talentLevels) return { attributes }
+
+            const newTalentLevels = [...talentLevels]
+            newTalentLevels[2] = Math.min(newTalentLevels[2] + 3, 13)
+
+            return { attributes: attributes, updatedTalentLevels: newTalentLevels }
+        },
+        minConstellation: 5,
+        priority: 0,
+    },
+    {
+        name: 'Dust of Purification',
+        description: (
+            <span>
+                Active party members within the Solar Isotoma field who are protected
+                by a shield created by Crystallize have their DMG increased by 17%.
+            </span>
+        ),
+        icon: '/images/characters/albedo-constellation6.png',
+        effect: (attributes) => {
+            // * Already handled in characterBonuses
+            return { attributes }
+        },
+        minConstellation: 6,
+    },
 ]
 
 const Albedo: Character = {
@@ -414,21 +792,21 @@ const Albedo: Character = {
                     Lv15: '872.1%',
                 },
                 'Fatal Blossom DMG': {
-                    Lv1: '72% each',
-                    Lv2: '77.4% each',
-                    Lv3: '82.8% each',
-                    Lv4: '90% each',
-                    Lv5: '95.4% each',
-                    Lv6: '100.8% each',
-                    Lv7: '108% each',
-                    Lv8: '115.2% each',
-                    Lv9: '122.4% each',
-                    Lv10: '129.6% each',
-                    Lv11: '136.8% each',
-                    Lv12: '144% each',
-                    Lv13: '153% each',
-                    Lv14: '162% each',
-                    Lv15: '171% each',
+                    Lv1: '72%',
+                    Lv2: '77.4%',
+                    Lv3: '82.8%',
+                    Lv4: '90%',
+                    Lv5: '95.4%',
+                    Lv6: '100.8%',
+                    Lv7: '108%',
+                    Lv8: '115.2%',
+                    Lv9: '122.4%',
+                    Lv10: '129.6%',
+                    Lv11: '136.8%',
+                    Lv12: '144%',
+                    Lv13: '153%',
+                    Lv14: '162%',
+                    Lv15: '171%',
                 },
                 CD: {
                     Lv1: '12s',

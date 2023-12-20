@@ -504,7 +504,8 @@
                 "description": "Active party members within the Solar Isotoma field who are protected by a shield created by Crystallize have their DMG increased by 17%.",
                 "level": 6
             }
-        ]
+        ],
+        "implemented": true
     },
     "Alhaitham": {
         "name": "Alhaitham",
