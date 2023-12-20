@@ -264,7 +264,8 @@
                 "description": "Party members other than the equipping character will provide the equipping character with buffs based on whether their Elemental Type is the same as the latter or not. If their Elemental Types are the same, increase Elemental Mastery by 64. If not, increase the equipping character's DMG Bonus from their Elemental Type by 26%. The aforementioned effects can have 3 stacks. Additionally, all nearby party members other than the equipping character will have their Elemental Mastery increased by 48. Multiple such effects from multiple such weapons can stack.",
                 "level": 5
             }
-        ]
+        ],
+        "implemented": true
     },
     "Akuoumaru": {
         "name": "Akuoumaru",
@@ -659,7 +660,8 @@
             "70/70": {
                 "Base ATK": 185.43
             }
-        }
+        },
+        "implemented": true
     },
     "Aqua Simulacra": {
         "name": "Aqua Simulacra",
@@ -1143,7 +1145,8 @@
             "70/70": {
                 "Base ATK": 185.43
             }
-        }
+        },
+        "implemented": true
     },
     "Black Tassel": {
         "name": "Black Tassel",
@@ -2962,7 +2965,8 @@
             "70/70": {
                 "Base ATK": 185.43
             }
-        }
+        },
+        "implemented": true
     },
     "Elegy for the End": {
         "name": "Elegy for the End",
@@ -5404,7 +5408,8 @@
             "70/70": {
                 "Base ATK": 185.43
             }
-        }
+        },
+        "implemented": true
     },
     "Hunter's Path": {
         "name": "Hunter's Path",
@@ -5621,7 +5626,8 @@
             "70/70": {
                 "Base ATK": 243.23
             }
-        }
+        },
+        "implemented": true
     },
     "Iron Sting": {
         "name": "Iron Sting",
@@ -7958,7 +7964,8 @@
             "70/70": {
                 "Base ATK": 243.23
             }
-        }
+        },
+        "implemented": true
     },
     "Otherworldly Story": {
         "name": "Otherworldly Story",
@@ -8086,7 +8093,8 @@
             "70/70": {
                 "Base ATK": 243.23
             }
-        }
+        },
+        "implemented": true
     },
     "Polar Star": {
         "name": "Polar Star",
@@ -10779,7 +10787,8 @@
             "70/70": {
                 "Base ATK": 243.23
             }
-        }
+        },
+        "implemented": true
     },
     "Serpent Spine": {
         "name": "Serpent Spine",
@@ -10996,7 +11005,8 @@
             "70/70": {
                 "Base ATK": 243.23
             }
-        }
+        },
+        "implemented": true
     },
     "Skyrider Greatsword": {
         "name": "Skyrider Greatsword",
@@ -12242,7 +12252,8 @@
                 "description": "HP increased by 40%. Additionally, provides an ATK Bonus based on 1.6% of the wielder's Max HP. When the wielder's HP is less than 50%, this ATK Bonus is increased by an additional 1.8% of Max HP.",
                 "level": 5
             }
-        ]
+        ],
+        "implemented": true
     },
     "Staff of the Scarlet Sands": {
         "name": "Staff of the Scarlet Sands",
@@ -14474,7 +14485,8 @@
             "70/70": {
                 "Base ATK": 185.43
             }
-        }
+        },
+        "implemented": true
     },
     "Wavebreaker's Fin": {
         "name": "Wavebreaker's Fin",

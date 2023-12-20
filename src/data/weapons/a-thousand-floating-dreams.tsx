@@ -5,12 +5,7 @@ const weaponBonuses: Bonus[] = [
     {
         name: "A Thousand Nights' Dawnsong",
         effect: (attributes, talentLevels, currentStacks, state) => {
-            if (
-                !currentStacks ||
-                currentStacks === 0 ||
-                !state ||
-                !state.weaponRefinement
-            )
+            if (!currentStacks || !state || !state.weaponRefinement)
                 return { attributes }
 
             const elementalMasteryBonusPerStack = [32, 40, 48, 56, 64]

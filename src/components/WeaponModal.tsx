@@ -64,7 +64,9 @@ const WeaponModal = ({
                             style={{
                                 backgroundImage: `url(/images/item-backgrounds/${rawWeapon.rarity}-star.png)`,
                             }}
-                            className="relative cursor-pointer rounded-lg bg-cover bg-center duration-100 ease-in hover:scale-105"
+                            className={`relative cursor-pointer rounded-lg bg-cover bg-center duration-100 ease-in hover:scale-105 ${
+                                rawWeapon.implemented ? '' : 'opacity-25'
+                            }`}
                             onClick={() => handleWeaponSelect(rawWeapon.name)}
                         >
                             <Image

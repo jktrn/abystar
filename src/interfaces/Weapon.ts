@@ -17,6 +17,7 @@ export interface RawWeapon {
         [level: string]: BaseStat
     }
     refinements?: WeaponRefinement[]
+    implemented?: boolean
 }
 
 export interface Weapon extends RawWeapon {
