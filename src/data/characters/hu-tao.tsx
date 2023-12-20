@@ -1,13 +1,12 @@
+import { Badge } from '@/components/ui/badge'
 import {
-    TalentScaling,
-    TalentRawData,
     Bonus,
     Character,
-    FormulaType,
-    FormulaOutputType,
     DamageType,
+    FormulaOutputType,
+    FormulaType,
+    TalentScaling,
 } from '@/interfaces/Character'
-import { Badge } from '@/components/ui/badge'
 import { getTalentScalingValue } from '@/lib'
 
 const talentScalings: TalentScaling = {

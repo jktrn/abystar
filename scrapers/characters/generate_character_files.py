@@ -35,6 +35,6 @@ def generate_tsx_files(json_path, output_directory):
             tsx_file.write("    talentScalings,\n    characterBonuses,\n    constellationBonuses\n}\n\n")
             tsx_file.write(f"export default {pascal_case(character_name)}\n")
 
-json_path = 'characters.json'
+json_path = 'characters_new.json'
 output_directory = '../../src/data/characters'
 generate_tsx_files(json_path, output_directory)

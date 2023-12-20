@@ -18,8 +18,9 @@ const Chevreuse: Character = {
     weapon: 'Polearm',
     vision: 'Pyro',
     rarity: 4,
-    description: '\u6d4b\u8bd5\u89d2\u8272',
-    occupation: '???',
+    description:
+        'The captain of the Special Security and Surveillance Patrol, who wears justice as an ever-present seal upon her heart. Her musket shall only ever point at the guilty.',
+    occupation: 'Special Security and Surveillance Patrol',
     baseStats: {
         '1/20': {
             'Base HP': 1003.0,
@@ -300,7 +301,7 @@ const Chevreuse: Character = {
             name: 'Short-Range Rapid Interdiction Fire',
             image: 'https://genshin.honeyhunterworld.com/img/s_903201.webp',
             description:
-                'Chevreuse quickly shoulders her musket and fires at her opponent(s), dealing\nAoE Pyro DMG\n.\nHold to fire in a different fashion.\nHold\nEnter Aiming Mode, locking a target in her sights to fire a precise interdiction shot. If Chevreuse has an Overcharged Ball, then she will fire the Overcharged Ball instead, dealing greater\nPyro DMG\nin a larger area.\nChevreuse gains 1 Overcharged Ball every time a nearby character in the party triggers an Overloaded reaction, and can have up to 1 Overcharged Ball at a time.\nFor a short duration after Chevreuse fires a shot, she will continuously restore HP to the active character on the field. The amount healed is based on her Max HP.\nArkhe: Ousia\nPeriodically, after Chevreuse\'s Short-Range Rapid Interdiction Fire hits, a Surging Blade will be called forth that deals ousia-aligned\nPyro DMG\n.\n"Actually, training regulations only had the phrase "interdiction fire," but the protagonist of this novel believes that even how stylish your terminology is can affect how motivated your troops are, which can put your opponents on the back foot right from the get-go... I think that\'s a good point, so I changed the regulations!"',
+                'Chevreuse quickly shoulders her musket and fires at her opponent(s), dealing\nAoE Pyro DMG\n.\nFor a short duration after Chevreuse fires a shot, she will continuously restore HP to the active character on the field. The amount healed is based on her Max HP.\nHold to fire in a different fashion.\nHold\nEnter Aiming Mode, locking a target in her sights to fire a precise interdiction shot. If Chevreuse has an Overcharged Ball, then she will fire the Overcharged Ball instead, dealing greater\nPyro DMG\nin a larger area.\nChevreuse gains 1 Overcharged Ball every time a nearby character in the party triggers an Overloaded reaction, and can have up to 1 Overcharged Ball at a time.\nArkhe: Ousia\nPeriodically, after Chevreuse\'s Short-Range Rapid Interdiction Fire hits, a Surging Blade will be called forth that deals Ousia-aligned\nPyro DMG\n.\n"Actually, training regulations only had the phrase "interdiction fire," but the protagonist of this novel believes that even how stylish your terminology is can affect how motivated your troops are, which can put your opponents on the back foot right from the get-go... I think that\'s a good point, so I changed the regulations!"',
             data: {
                 'Press DMG': {
                     Lv1: '115.2%',
@@ -528,13 +529,13 @@ const Chevreuse: Character = {
             name: "Vanguard's Coordinated Tactics",
             image: 'https://genshin.honeyhunterworld.com/img/p_902101.webp',
             description:
-                'When the Elemental Type of all party members is\nPyro\nor\nElectro\nand there is at least one Pyro and one Electro Elemental Type each in the party:\nChevreuse grants "Coordinated Tactics" to nearby party members: After a character triggers the Overloaded reaction, the\nPyro\nand\nElectro\nRES of the opponent(s) affected by this Overloaded reaction will be decreased by 40% for 6s.',
+                'When all party members are\nPyro\nand\nElectro\ncharacters and there is at least one Pyro and one Electro character each in the party:\nChevreuse grants "Coordinated Tactics" to nearby party members: After a character triggers the Overloaded reaction, the\nPyro\nand\nElectro\nRES of the opponent(s) affected by this Overloaded reaction will be decreased by 40% for 6s.\nThe "Coordinated Tactics" effect will be removed when the Elemental Types of the characters in the party do not meet the basic requirements for the Passive Talent.',
         },
         {
             name: 'Vertical Force Coordination',
             image: 'https://genshin.honeyhunterworld.com/img/p_902201.webp',
             description:
-                'After Chevreuse fires an Overcharged Ball using\nShort-Range Rapid Interdiction Fire\n, nearby\nPyro\nand\nElectro\ncharacters in the party gain 1% increased ATK for every 1000 Max HP Chevreuse has for 30s. ATK can be increased by up to 40% in this way.',
+                'After Chevreuse fires an Overcharged Ball using\nShort-Range Rapid Interdiction Fire\n, nearby\nPyro\nand\nElectro\ncharacters in the party gain 1% increased ATK for every 1,000 Max HP Chevreuse has for 30s. ATK can be increased by up to 40% in this way.',
         },
     ],
     constellations: [
@@ -542,14 +543,14 @@ const Chevreuse: Character = {
             name: "Stable Front Line's Resolve",
             image: 'https://genshin.honeyhunterworld.com/img/c_901.webp',
             description:
-                'When characters with the "Coordinated Tactics" status (not including Chevreuse herself) trigger the Overloaded reaction, they will recover 6 Energy. This effect can be triggered once every 10s.\nYou must first unlock the Passive Talent "Vanguard\'s Coordinated Tactics."',
+                'When the active character with the "Coordinated Tactics" status (not including Chevreuse herself) triggers the Overloaded reaction, they will recover 6 Energy. This effect can be triggered once every 10s.\nYou must first unlock the Passive Talent "Vanguard\'s Coordinated Tactics."',
             level: 1,
         },
         {
             name: 'Sniper Induced Explosion',
             image: 'https://genshin.honeyhunterworld.com/img/c_902.webp',
             description:
-                "After Holding\nShort-Range Rapid Interdiction Fire\nand hitting a target, trigger 2 chain explosions at the location where said target was hit. Each explosion deals\nPyro DMG\nequal to 120% of Chevreuse's ATK. This effect can be triggered up to once every 10s, and DMG dealt by this skill is considered Elemental Skill DMG.",
+                "After Holding\nShort-Range Rapid Interdiction Fire\nand hitting a target, 2 chain explosions will be triggered near the location where said target is hit. Each explosion deals\nPyro DMG\nequal to 120% of Chevreuse's ATK. This effect can be triggered up to once every 10s, and DMG dealt this way is considered Elemental Skill DMG.",
             level: 2,
         },
         {
@@ -563,7 +564,7 @@ const Chevreuse: Character = {
             name: 'The Secret to Rapid-Fire Multishots',
             image: 'https://genshin.honeyhunterworld.com/img/c_904.webp',
             description:
-                'After using\nRing of Bursting Grenades\n, the CD for Chevreuse using Hold\nShort-Range Rapid Interdiction Fire\nis decreased by 100%. This effect is removed after Short-Range Rapid Interdiction Fire has been fired twice using Hold or after 6s.',
+                'After using\nRing of Bursting Grenades\n, the Hold mode of\nShort-Range Rapid Interdiction Fire\nwill not go on cooldown when Chevreuse uses it. This effect is removed after Short-Range Rapid Interdiction Fire has been fired twice using Hold or after 6s.',
             level: 4,
         },
         {
@@ -577,7 +578,7 @@ const Chevreuse: Character = {
             name: 'In Pursuit of Ending Evil',
             image: 'https://genshin.honeyhunterworld.com/img/c_906.webp',
             description:
-                "After 12s of the healing effect from\nShort-Range Rapid Interdiction Fire\n, all nearby party members recover HP equivalent to 10% of Chevreuse's Max HP.\nAfter a party member is healed by Short-Range Rapid Interdiction Fire, they gain a 20%\nPyro DMG Bonus\nand\nElectro DMG Bonus\nfor 8s. Max 3 stacks. Each stack's duration is counted independently.",
+                "After 12s of the healing effect from\nShort-Range Rapid Interdiction Fire\n, all nearby party members recover HP equivalent to 10% of Chevreuse's Max HP once.\nAfter a party member is healed by Short-Range Rapid Interdiction Fire, they gain a 20%\nPyro DMG Bonus\nand\nElectro DMG Bonus\nfor 8s. Max 3 stacks. Each stack's duration is counted independently.",
             level: 6,
         },
     ],

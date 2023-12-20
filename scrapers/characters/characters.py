@@ -49,7 +49,7 @@ def fetch_character_data(character: str) -> dict[str, dict[str, dict[str, str]]]
     data = {row.find_all('td')[0].text: row.find_all('td')[-1].text for row in rows[1:]}
 
     all_data["name"] = rows[0].find_all('td')[-1].text
-    all_data["icon"] = f'/images/icons/{to_kebab_case(all_data["name"])}.png'
+    all_data["icon"] = f'/images/characters/{to_kebab_case(all_data["name"])}.png'
     all_data["weapon"] = rows[5].find_all('td')[-1].text.strip()
     all_data["vision"] = data["Vision (Introduced)"]
     # Stupid fucking Aloy exception
@@ -177,16 +177,16 @@ def fetch_all_characters_data() -> dict[str, dict[str, dict[str, dict[str, str]]
     return all_data
 
 def save_data_to_file(data: dict[str, dict[str, dict[str, dict[str, str]]]]) -> None:
-    file_path = os.path.join(current_dir, "characters.json")
+    file_path = os.path.join(current_dir, "characters_new.json")
     with open(file_path, 'w') as f:
         json.dump(data, f, indent=4)
 
 if __name__ == '__main__':
     # Comment this out if you want to test with a single character
-    all_data = fetch_all_characters_data()
-    save_data_to_file(all_data)
+    # all_data = fetch_all_characters_data()
+    # save_data_to_file(all_data)
     # fix_traveler.fix_traveler()
 
     # Uncomment these if you want to test a single character
-    # ayaka_data = fetch_character_data('ayaka')
-    # print(json.dumps(ayaka_data, indent=4))
+    data = fetch_character_data('chevreuse_090')
+    save_data_to_file(data)

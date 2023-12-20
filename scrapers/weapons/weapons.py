@@ -76,15 +76,16 @@ def fetch_all_weapons_data() -> dict[str, dict[str, dict[str, str]]]:
     return all_data
 
 def save_data_to_file(data: dict[str, dict[str, dict[str, str]]]) -> None:
-    file_path = os.path.join(current_dir, "weapons.json")
+    file_path = os.path.join(current_dir, "weapons_new.json")
     with open(file_path, 'w') as f:
         json.dump(data, f, indent=4)
 
 if __name__ == '__main__':
     # Comment these if you want to test a single weapon
-    all_data = fetch_all_weapons_data()
-    save_data_to_file(all_data)
+    # all_data = fetch_all_weapons_data()
+    # save_data_to_file(all_data)
 
     # Uncomment these if you want to test a single weapon
-    # data = fetch_weapon_data('i_n11402') # The Flute
-    # print(json.dumps(data, indent=4))
+    data = fetch_weapon_data('i_n12512') # Verdict
+    save_data_to_file(data)
+

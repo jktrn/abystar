@@ -50,7 +50,7 @@ def process_character_data(character_data):
 
 def main():
     current_dir = os.path.dirname(os.path.abspath(__file__))
-    file_path = os.path.join(current_dir, "characters.json")
+    file_path = os.path.join(current_dir, "characters_new.json")
 
     with open(file_path, 'r') as f:
         data = json.load(f)

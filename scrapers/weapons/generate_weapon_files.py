@@ -35,6 +35,6 @@ def generate_weapon_tsx_files(json_path, output_directory):
             tsx_file.write("   // weaponBonuses\n}\n\n")
             tsx_file.write(f"export default {pascal_case(weapon_name)}\n")
 
-json_path = 'weapons.json'
+json_path = 'weapons_new.json'
 output_directory = '../../src/data/weapons'
 generate_weapon_tsx_files(json_path, output_directory)
