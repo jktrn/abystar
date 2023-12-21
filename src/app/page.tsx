@@ -38,9 +38,9 @@ export default function Home() {
     const [characterState, setCharacterState] = useState<CharacterState | null>(null)
     const [characterAttributes, setCharacterAttributes] =
         useState<CharacterAttributes | null>(null)
+    const [damageResults, setDamageResults] = useState<DamageResult[] | null>(null)
     const [isCharacterModalOpen, setCharacterModalOpen] = useState(false)
     const [isWeaponModalOpen, setWeaponModalOpen] = useState(false)
-    const [damageResults, setDamageResults] = useState<DamageResult[] | null>(null)
 
     const handleCharacterSelect = async (selectedCharacter: Character) => {
         const defaultWeapon = await getDefaultWeapon(selectedCharacter.weapon)
@@ -246,15 +246,17 @@ export default function Home() {
                                 <h2 className="border-y bg-secondary/25 px-4 py-3 text-lg font-bold">
                                     Attributes
                                 </h2>
-                                <AttributesTable
-                                    characterAttributes={characterAttributes}
-                                    initialAttributes={applySpecialBonuses({
-                                        ...defaultCharacterAttributes,
-                                        ...characterState.character.baseStats[
-                                            characterState.characterLevel
-                                        ],
-                                    })}
-                                />
+                                {characterAttributes && (
+                                    <AttributesTable
+                                        characterAttributes={characterAttributes}
+                                        initialAttributes={applySpecialBonuses({
+                                            ...defaultCharacterAttributes,
+                                            ...characterState.character.baseStats[
+                                                characterState.characterLevel
+                                            ],
+                                        })}
+                                    />
+                                )}
                             </div>
                         </div>
 
@@ -339,38 +341,6 @@ export default function Home() {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="flex flex-col justify-end">
-                                        {/* {characterState.weapon &&
-                                            characterState.weaponLevel &&
-                                            (
-                                                <>
-                                                    <p>
-                                                        {
-                                                            Object.values(
-                                                                characterState.weapon
-                                                                    .baseStats[
-                                                                characterState
-                                                                    .weaponLevel
-                                                                ]
-                                                            )[0]
-                                                        }
-                                                    </p>
-                                                    {Object.values(characterState.weapon.baseStats[characterState.weaponLevel])[1] && (
-                                                        <p>
-                                                            {
-                                                                Object.values(
-                                                                    characterState.weapon
-                                                                        .baseStats[
-                                                                    characterState
-                                                                        .weaponLevel
-                                                                    ]
-                                                                )[1]
-                                                            }
-                                                        </p>
-                                                    )}
-                                                </>
-                                            )} */}
-                                    </div>
                                 </div>
                                 <WeaponBonuses
                                     characterState={characterState}
@@ -399,7 +369,9 @@ export default function Home() {
                                     Results
                                 </h2>
                                 <div className="overflow-auto">
-                                    <DamageTable damageResults={damageResults} />
+                                    {damageResults && (
+                                        <DamageTable damageResults={damageResults} />
+                                    )}
                                 </div>
                             </div>
                         </div>

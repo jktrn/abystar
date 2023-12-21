@@ -14,12 +14,10 @@ import {
 } from '@/lib'
 
 function calculateDamage(
-    characterState: CharacterState | null,
-    characterAttributes: CharacterAttributes | null,
+    characterState: CharacterState,
+    characterAttributes: CharacterAttributes,
     enemyResistances: BaseStat
 ): DamageResult[] {
-    if (!characterState || !characterAttributes) return []
-
     const characterTalentScaling = characterState.character.talentScalings
     if (!characterTalentScaling) return []
 

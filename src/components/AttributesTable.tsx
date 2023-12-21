@@ -19,7 +19,7 @@ import {
 } from '@/components/ui/table'
 
 interface CharacterAttributeProps {
-    characterAttributes: CharacterAttributes | null
+    characterAttributes: CharacterAttributes
     initialAttributes: CharacterAttributes
 }
 
@@ -29,39 +29,33 @@ const AttributesTable = ({
 }: CharacterAttributeProps) => {
     const data = useMemo(
         () =>
-            characterAttributes
-                ? Object.entries(characterAttributes)
-                      .filter(([key]) => displayStats.includes(key))
-                      .map(([key, value]) => {
-                          let formattedValue
-                          let formattedInitialValue
-                          let difference
-                          if (
-                              ['HP', 'DEF', 'Elemental Mastery', 'ATK'].includes(key)
-                          ) {
-                              formattedValue = Math.round(value)
-                              formattedInitialValue = Math.round(
-                                  initialAttributes[key]
-                              )
-                              difference = formattedValue - formattedInitialValue
-                          } else {
-                              formattedValue = `${(value * 100).toFixed(1)}%`
-                              formattedInitialValue = `${(
-                                  initialAttributes[key] * 100
-                              ).toFixed(1)}%`
-                              difference = `${(
-                                  value * 100 -
-                                  initialAttributes[key] * 100
-                              ).toFixed(1)}%`
-                          }
-                          return {
-                              stat: key,
-                              value: formattedValue,
-                              initialValue: formattedInitialValue,
-                              difference: difference,
-                          }
-                      })
-                : [],
+            Object.entries(characterAttributes)
+                .filter(([key]) => displayStats.includes(key))
+                .map(([key, value]) => {
+                    let formattedValue
+                    let formattedInitialValue
+                    let difference
+                    if (['HP', 'DEF', 'Elemental Mastery', 'ATK'].includes(key)) {
+                        formattedValue = Math.round(value)
+                        formattedInitialValue = Math.round(initialAttributes[key])
+                        difference = formattedValue - formattedInitialValue
+                    } else {
+                        formattedValue = `${(value * 100).toFixed(1)}%`
+                        formattedInitialValue = `${(
+                            initialAttributes[key] * 100
+                        ).toFixed(1)}%`
+                        difference = `${(
+                            value * 100 -
+                            initialAttributes[key] * 100
+                        ).toFixed(1)}%`
+                    }
+                    return {
+                        stat: key,
+                        value: formattedValue,
+                        initialValue: formattedInitialValue,
+                        difference: difference,
+                    }
+                }),
         [characterAttributes, displayStats, initialAttributes]
     )
 
@@ -132,17 +126,17 @@ const AttributesTable = ({
                                                         ? undefined
                                                         : '#A1A1AA'
                                                     : typeof row.difference ===
-                                                      'number'
-                                                    ? row.difference > 0
+                                                        'number'
+                                                      ? row.difference > 0
+                                                          ? '#34D399'
+                                                          : '#F87171'
+                                                      : typeof row.difference ===
+                                                              'string' &&
+                                                          parseScalingValue(
+                                                              row.difference
+                                                          )[0].value > 0
                                                         ? '#34D399'
-                                                        : '#F87171'
-                                                    : typeof row.difference ===
-                                                          'string' &&
-                                                      parseScalingValue(
-                                                          row.difference
-                                                      )[0].value > 0
-                                                    ? '#34D399'
-                                                    : '#F87171',
+                                                        : '#F87171',
                                         }}
                                     >
                                         {row.difference === 0 ||
@@ -151,14 +145,15 @@ const AttributesTable = ({
                                                 ? row.difference
                                                 : '+0'
                                             : typeof row.difference === 'number'
-                                            ? row.difference > 0
+                                              ? row.difference > 0
+                                                  ? `+${row.difference}`
+                                                  : row.difference
+                                              : typeof row.difference === 'string' &&
+                                                  parseScalingValue(
+                                                      row.difference
+                                                  )[0].value > 0
                                                 ? `+${row.difference}`
-                                                : row.difference
-                                            : typeof row.difference === 'string' &&
-                                              parseScalingValue(row.difference)[0]
-                                                  .value > 0
-                                            ? `+${row.difference}`
-                                            : row.difference}
+                                                : row.difference}
                                     </TableCell>
                                     <TableCell className="px-4 text-right font-bold">
                                         {row.value}
