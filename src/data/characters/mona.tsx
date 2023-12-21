@@ -1,11 +1,9 @@
-import { Badge } from '@/components/ui/badge'
 import {
     Bonus,
     Character,
     DamageType,
     FormulaOutputType,
     FormulaType,
-    TalentRawData,
     TalentScaling,
 } from '@/interfaces/Character'
 import { getTalentScalingValue } from '@/lib'
@@ -155,8 +153,8 @@ const characterBonuses: Bonus[] = [
         name: 'Stellaris Phantasm',
         description: (
             <span>
-                <Badge variant="secondary">Q</Badge> During the duration of Omen,
-                enemies take increased DMG (see &quot;DMG Bonus&quot; of{' '}
+                During the duration of Omen, enemies take increased DMG (see
+                &quot;DMG Bonus&quot; of{' '}
                 <span style={{ color: '#ddd' }}>Stellaris Phantasm</span> for
                 percentages)
             </span>
@@ -180,13 +178,14 @@ const characterBonuses: Bonus[] = [
 
             return { attributes: newAttributes }
         },
+        origin: 'Q',
         priority: 1,
     },
     {
         name: 'Waterborne Destiny',
         description: (
             <span>
-                <Badge variant="secondary">A4</Badge> Increases Mona&apos;s{' '}
+                Increases Mona&apos;s{' '}
                 <span style={{ color: '#3d9bc1' }}>Hydro DMG Bonus</span> by 20% of
                 her Energy Recharge rate
             </span>
@@ -203,16 +202,18 @@ const characterBonuses: Bonus[] = [
             return { attributes: newAttributes }
         },
         enabled: true,
+        origin: 'A4',
         priority: 3,
     },
+]
+
+const constellationBonuses: Bonus[] = [
     {
         name: 'Prophecy of Submersion',
         description: (
             <span>
-                <Badge variant="secondary">C1</Badge>{' '}
-                <Badge variant="destructive">Unimplemented</Badge> When any of your
-                own party members hits an opponent affected by an Omen, the effects
-                of{' '}
+                When any of your own party members hits an opponent affected by an
+                Omen, the effects of{' '}
                 <span style={{ color: '#3d9bc1' }}>
                     Hydro-related Elemental Reactions
                 </span>{' '}
@@ -239,82 +240,9 @@ const characterBonuses: Bonus[] = [
             return { attributes: newAttributes }
         },
         minConstellation: 1,
+        origin: 'C1',
+        implemented: false,
         priority: 1,
-    },
-    {
-        name: 'Prophecy of Oblivion',
-        description: (
-            <span>
-                <Badge variant="secondary">C4</Badge> When any party member attacks
-                an opponent affected by an Omen, their CRIT Rate is increased by 15%
-            </span>
-        ),
-        icon: '/images/characters/mona-constellation4.png',
-        effect: (attributes) => {
-            const newAttributes = {
-                ...attributes,
-                'CRIT Rate': (attributes['CRIT Rate'] || 0) + 0.15,
-            }
-
-            return { attributes: newAttributes }
-        },
-        minConstellation: 4,
-        priority: 1,
-    },
-    {
-        name: 'Rhetorics of Calamitas',
-        description: (
-            <span>
-                <Badge variant="secondary">C6</Badge>Upon entering{' '}
-                <span style={{ color: '#ddd' }}>Illusory Torrent</span>, Mona gains a
-                60% increase to the DMG of her next Charged Attack per second of
-                movement, with a maximum of 180% (lasting up to 8s)
-            </span>
-        ),
-        icon: '/images/characters/mona-constellation6.png',
-        effect: (attributes, talentLevels, currentStacks) => {
-            if (!currentStacks) return { attributes }
-
-            const newAttributes = {
-                ...attributes,
-                'Charged Attack DMG Bonus':
-                    attributes['Charged Attack DMG Bonus'] + 0.6 * currentStacks,
-            }
-
-            return { attributes: newAttributes }
-        },
-        maxStacks: 3,
-        stackOptions: ['Off', '1s', '2s', '3s'],
-        minConstellation: 6,
-        priority: 1,
-    },
-]
-
-const constellationBonuses: Bonus[] = [
-    {
-        name: 'Prophecy of Submersion',
-        description: (
-            <span>
-                When any of your own party members hits an opponent affected by an
-                Omen, the effects of{' '}
-                <span style={{ color: '#3d9bc1' }}>
-                    Hydro-related Elemental Reactions
-                </span>{' '}
-                are enhanced for 8s:
-                <ul className="mb-0">
-                    <li>- Electro-Charged DMG increases by 15%.</li>
-                    <li>- Vaporize DMG increases by 15%.</li>
-                    <li>- Hydro Swirl DMG increases by 15%.</li>
-                    <li> -Frozen duration is extended by 15%.</li>
-                </ul>
-            </span>
-        ),
-        icon: '/images/characters/mona-constellation1.png',
-        effect: (attributes) => {
-            // * Already handled in characterBonuses
-            return { attributes }
-        },
-        minConstellation: 1,
     },
     {
         name: 'Lunar Chain',
@@ -327,9 +255,12 @@ const constellationBonuses: Bonus[] = [
         ),
         icon: '/images/characters/mona-constellation2.png',
         effect: (attributes) => {
+            // * Unimplementable
             return { attributes }
         },
         minConstellation: 2,
+        origin: 'C2',
+        visible: false,
     },
     {
         name: 'Restless Resolution',
@@ -351,6 +282,9 @@ const constellationBonuses: Bonus[] = [
             return { attributes: attributes, updatedTalentLevels: newTalentLevels }
         },
         minConstellation: 3,
+        origin: 'C3',
+        enabled: true,
+        visible: false,
         priority: 0,
     },
     {
@@ -358,15 +292,21 @@ const constellationBonuses: Bonus[] = [
         description: (
             <span>
                 When any party member attacks an opponent affected by an Omen, their
-                CRIT Rate is increased by 15%.
+                CRIT Rate is increased by 15%
             </span>
         ),
         icon: '/images/characters/mona-constellation4.png',
         effect: (attributes) => {
-            // * Already handled in characterBonuses
-            return { attributes }
+            const newAttributes = {
+                ...attributes,
+                'CRIT Rate': (attributes['CRIT Rate'] || 0) + 0.15,
+            }
+
+            return { attributes: newAttributes }
         },
         minConstellation: 4,
+        origin: 'C4',
+        priority: 1,
     },
     {
         name: 'Mockery of Fortuna',
@@ -389,24 +329,37 @@ const constellationBonuses: Bonus[] = [
             return { attributes: attributes, updatedTalentLevels: newTalentLevels }
         },
         minConstellation: 5,
+        origin: 'C5',
+        enabled: true,
+        visible: false,
         priority: 0,
     },
     {
         name: 'Rhetorics of Calamitas',
         description: (
             <span>
-                Upon entering Illusory Torrent, Mona gains a 60% increase to the DMG
-                of her next Charged Attack per second of movement. A maximum DMG
-                Bonus of 180% can be achieved in this manner. The effect lasts for no
-                more than 8s.
+                Upon entering <span style={{ color: '#ddd' }}>Illusory Torrent</span>
+                , Mona gains a 60% increase to the DMG of her next Charged Attack per
+                second of movement, with a maximum of 180% (lasting up to 8s)
             </span>
         ),
         icon: '/images/characters/mona-constellation6.png',
-        effect: (attributes) => {
-            // * Already handled in characterBonuses
-            return { attributes }
+        effect: (attributes, talentLevels, currentStacks) => {
+            if (!currentStacks) return { attributes }
+
+            const newAttributes = {
+                ...attributes,
+                'Charged Attack DMG Bonus':
+                    attributes['Charged Attack DMG Bonus'] + 0.6 * currentStacks,
+            }
+
+            return { attributes: newAttributes }
         },
+        maxStacks: 3,
+        stackOptions: ['Off', '1s', '2s', '3s'],
         minConstellation: 6,
+        origin: 'C6',
+        priority: 1,
     },
 ]
 

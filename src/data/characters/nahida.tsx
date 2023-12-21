@@ -1,4 +1,3 @@
-import { Badge } from '@/components/ui/badge'
 import {
     Bonus,
     Character,
@@ -196,8 +195,8 @@ const characterBonuses: Bonus[] = [
         name: 'Awakening Elucidated',
         description: (
             <span>
-                <Badge variant="secondary">A4</Badge> Each point of Nahida&apos;s EM
-                beyond 200 will grant 0.1% Bonus DMG and 0.03% CRIT Rate to{' '}
+                Each point of Nahida&apos;s EM beyond 200 will grant 0.1% Bonus DMG
+                and 0.03% CRIT Rate to{' '}
                 <span style={{ color: '#DDD' }}>Tri-Karma Purification</span>{' '}
                 (Elemental Skill) (capped at 80% Bonus DMG and 24% CRIT Rate)
             </span>
@@ -224,14 +223,14 @@ const characterBonuses: Bonus[] = [
             return { attributes: newAttributes }
         },
         enabled: true,
+        origin: 'A4',
         priority: 3,
     },
     {
         name: 'Illusory Heart',
         description: (
             <span>
-                <Badge variant="secondary">Q</Badge> Applies effects based on
-                party&apos;s elements: <br />
+                Applies effects based on party&apos;s elements: <br />
                 <span style={{ color: '#bf612d' }}>Pyro</span>: Tri-Karma
                 Purification DMG increased;{' '}
                 <span style={{ color: '#3d9bc1' }}>Hydro</span>: Shrine of
@@ -285,16 +284,16 @@ const characterBonuses: Bonus[] = [
             'Electro (1)',
             'Electro (2)',
         ],
+        origin: 'Q',
         priority: 1,
     },
     {
         name: 'Compassion Illuminated',
         description: (
             <span>
-                <Badge variant="secondary">A1</Badge> While inside{' '}
-                <span style={{ color: '#DDD' }}>Illusory Heart</span>: Increases
-                Elemental Mastery by 25% of the EM of the party member with the
-                highest EM
+                While inside <span style={{ color: '#DDD' }}>Illusory Heart</span>:
+                Increases Elemental Mastery by 25% of the EM of the party member with
+                the highest EM
             </span>
         ),
         icon: '/images/characters/nahida-passive1.png',
@@ -314,19 +313,40 @@ const characterBonuses: Bonus[] = [
         },
         maxStacks: 6,
         stackOptions: ['Off', '125', '150', '175', '200', '225', '250'],
+        origin: 'A1',
         priority: 1,
+    },
+]
+
+const constellationBonuses: Bonus[] = [
+    {
+        name: 'The Seed of Stored Knowledge',
+        description: (
+            <span>
+                When the <span style={{ color: '#DDD' }}>Shrine of Maya</span> is
+                unleashed and the Elemental Types of the party members are being
+                tabulated, the count will add 1 to the number of Pyro, Electro, and
+                Hydro characters respectively.
+            </span>
+        ),
+        icon: '/images/characters/nahida-constellation1.png',
+        effect: (attributes) => {
+            // TODO: Implement
+            return { attributes }
+        },
+        minConstellation: 1,
+        origin: 'C1',
+        implemented: false,
     },
     {
         name: 'The Root of All Fullness',
         description: (
             <span>
-                <Badge variant="secondary">C2</Badge>{' '}
-                <Badge variant="destructive">Unimplemented</Badge> Burning, Bloom,
-                Hyperbloom, and Burgeon Reaction DMG can now CRIT on opponents marked
-                by <span style={{ color: '#DDD' }}>Seeds of Skanda</span> (CRIT Rate
-                and CRIT DMG fixed at 20% and 100%, respectively). For 8s after being
-                hit by Quicken, Aggravate, or Spread, enemies have DEF decreased by
-                30%
+                Burning, Bloom, Hyperbloom, and Burgeon Reaction DMG can now CRIT on
+                opponents marked by{' '}
+                <span style={{ color: '#DDD' }}>Seeds of Skanda</span> (CRIT Rate and
+                CRIT DMG fixed at 20% and 100%, respectively). For 8s after being hit
+                by Quicken, Aggravate, or Spread, enemies have DEF decreased by 30%
             </span>
         ),
         icon: '/images/characters/nahida-constellation2.png',
@@ -335,13 +355,39 @@ const characterBonuses: Bonus[] = [
             return { attributes }
         },
         minConstellation: 2,
+        origin: 'C2',
+        implemented: false,
+    },
+    {
+        name: 'The Shoot of Conscious Attainment',
+        description: (
+            <span>
+                Increases the Level of{' '}
+                <span style={{ color: '#DDD' }}>All Schemes to Know</span> by 3.
+                <br />
+                Maximum upgrade level is 15.
+            </span>
+        ),
+        icon: '/images/characters/nahida-constellation3.png',
+        effect: (attributes, talentLevels) => {
+            if (!talentLevels) return { attributes }
+
+            const newTalentLevels = [...talentLevels]
+            newTalentLevels[1] = Math.min(newTalentLevels[1] + 3, 13)
+
+            return { attributes: attributes, updatedTalentLevels: newTalentLevels }
+        },
+        minConstellation: 3,
+        origin: 'C3',
+        enabled: true,
+        visible: false,
+        priority: 0,
     },
     {
         name: 'The Stem of Manifest Inference',
         description: (
             <span>
-                <Badge variant="secondary">C4</Badge> When 1/2/3/(4 or more) nearby
-                opponents are affected by{' '}
+                When 1/2/3/(4 or more) nearby opponents are affected by{' '}
                 <span style={{ color: '#DDD' }}>Seeds of Skandha</span>,
                 Nahida&apos;s EM will be increased by 100/120/140/160
             </span>
@@ -364,83 +410,8 @@ const characterBonuses: Bonus[] = [
         minConstellation: 4,
         maxStacks: 4,
         stackOptions: ['Off', '100', '120', '140', '160'],
+        origin: 'C4',
         priority: 1,
-    },
-]
-
-const constellationBonuses: Bonus[] = [
-    {
-        name: 'The Seed of Stored Knowledge',
-        description: (
-            <span>
-                When the <span style={{ color: '#DDD' }}>Shrine of Maya</span> is
-                unleashed and the Elemental Types of the party members are being
-                tabulated, the count will add 1 to the number of Pyro, Electro, and
-                Hydro characters respectively.
-            </span>
-        ),
-        icon: '/images/characters/nahida-constellation1.png',
-        effect: (attributes) => {
-            // TODO: Handle
-            return { attributes }
-        },
-    },
-    {
-        name: 'The Root of All Fullness',
-        description: (
-            <span>
-                Opponents that are marked by{' '}
-                <span style={{ color: '#DDD' }}>Seeds of Skandha</span> applied by
-                Nahida herself will be affected by the following effects: Burning,
-                Bloom, Hyperbloom, and Burgeon Reaction DMG can score CRIT Hits. CRIT
-                Rate and CRIT DMG are fixed at 20% and 100% respectively. Within 8s
-                of being affected by Quicken, Aggravate, Spread, DEF is decreased by
-                30%.
-            </span>
-        ),
-        icon: '/images/characters/nahida-constellation2.png',
-        effect: (attributes) => {
-            // TODO: Handle
-            return { attributes }
-        },
-    },
-    {
-        name: 'The Shoot of Conscious Attainment',
-        description: (
-            <span>
-                Increases the Level of{' '}
-                <span style={{ color: '#DDD' }}>All Schemes to Know</span> by 3.
-                <br />
-                Maximum upgrade level is 15.
-            </span>
-        ),
-        icon: '/images/characters/nahida-constellation3.png',
-        effect: (attributes, talentLevels) => {
-            if (!talentLevels) return { attributes }
-
-            const newTalentLevels = [...talentLevels]
-            newTalentLevels[1] = Math.min(newTalentLevels[1] + 3, 13)
-
-            return { attributes: attributes, updatedTalentLevels: newTalentLevels }
-        },
-        minConstellation: 3,
-        priority: 0,
-    },
-    {
-        name: 'The Stem of Manifest Inference',
-        description: (
-            <span>
-                When 1/2/3/(4 or more) nearby opponents are affected by{' '}
-                <span style={{ color: '#DDD' }}>All Schemes to Know</span>&apos;s
-                Seeds of Skandha, Nahida&apos;s Elemental Mastery will be increased
-                by 100/120/140/160.
-            </span>
-        ),
-        icon: '/images/characters/nahida-constellation4.png',
-        effect: (attributes) => {
-            // Handled in characterBonuses.tsx
-            return { attributes }
-        },
     },
     {
         name: 'The Leaves of Enlightening Speech',
@@ -462,6 +433,9 @@ const constellationBonuses: Bonus[] = [
             return { attributes: attributes, updatedTalentLevels: newTalentLevels }
         },
         minConstellation: 5,
+        visible: false,
+        origin: 'C5',
+        enabled: true,
         priority: 0,
     },
     {
@@ -488,6 +462,8 @@ const constellationBonuses: Bonus[] = [
             return { attributes }
         },
         minConstellation: 6,
+        origin: 'C6',
+        visible: false,
     },
 ]
 

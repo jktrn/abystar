@@ -1,4 +1,3 @@
-import { Badge } from '@/components/ui/badge'
 import {
     Bonus,
     Character,
@@ -260,9 +259,8 @@ const characterBonuses: Bonus[] = [
         name: 'Salon Solitaire',
         description: (
             <span>
-                <Badge variant="secondary">E</Badge> The number of party members with
-                more than 50% HP nearby (1/2/3/4 or more) increases the Salon
-                Members&apos; DMG by 10%/20%/30%/40%
+                The number of party members with more than 50% HP nearby (1/2/3/4 or
+                more) increases the Salon Members&apos; DMG by 10%/20%/30%/40%
             </span>
         ),
         icon: '/images/characters/furina-skill.png',
@@ -284,16 +282,16 @@ const characterBonuses: Bonus[] = [
             '3 Members',
             '4 Members (Trial-only)',
         ],
+        origin: 'E',
         priority: 1,
     },
     {
         name: 'Let the People Rejoice',
         description: (
             <span>
-                <Badge variant="secondary">Q</Badge> Furina gains a Fanfare stack
-                whenever a party member loses/gains 1% of their maximum HP. DMG dealt
-                and Incoming Healing Bonus are increased per stack (with a maximum of
-                300, see{' '}
+                Furina gains a Fanfare stack whenever a party member loses/gains 1%
+                of their maximum HP. DMG dealt and Incoming Healing Bonus are
+                increased per stack (with a maximum of 300, see{' '}
                 <span style={{ color: '#ddd' }}>
                     Fanfare to (DMG Increase / Incoming Healing Bonus) Conversion
                     Ratio
@@ -349,14 +347,14 @@ const characterBonuses: Bonus[] = [
             '350 (C1)',
             '400 (C1)',
         ],
+        origin: 'Q',
         priority: 1,
     },
     {
         name: 'Unheard Confession',
         description: (
             <span>
-                <Badge variant="secondary">A4</Badge> Every 1,000 points of
-                Furina&apos;s Max HP buffs{' '}
+                Every 1,000 points of Furina&apos;s Max HP buffs{' '}
                 <span style={{ color: '#ddd' }}>Salon Solitaire</span>&apos;s Salon
                 Member DMG by 0.7% (up to 28%)
             </span>
@@ -377,13 +375,17 @@ const characterBonuses: Bonus[] = [
             return { attributes: newAttributes }
         },
         enabled: true,
+        origin: 'A4',
         priority: 3,
     },
+]
+
+const constellationBonuses: Bonus[] = [
     {
         name: '"Love is a Rebellious Bird That None Can Tame"',
         description: (
             <span>
-                <Badge variant="secondary">C1</Badge> When using{' '}
+                When using{' '}
                 <span style={{ color: '#ddd' }}>Let the People Rejoice</span>,
                 Furina&apos;s maximum Fanfare stacks is increase by 100 (up to 400)
             </span>
@@ -399,19 +401,109 @@ const characterBonuses: Bonus[] = [
             return { attributes: newAttributes }
         },
         minConstellation: 1,
+        origin: 'C1',
         priority: 1,
+    },
+    {
+        name: '"A Woman Adapts Like Duckweed in Water"',
+        description: (
+            <span>
+                While{' '}
+                <span style={{ color: '#ddd' }}>Let the People Rejoice lasts</span>,
+                Furina&apos;s Fanfare gain from increases or decreases in nearby
+                characters&apos; HP is increased by 250%. Each point of Fanfare above
+                the limit will increase Furina&apos;s Max HP by 0.35%. Her maximum
+                Max HP increase is 140%.
+            </span>
+        ),
+        icon: '/images/characters/furina-constellation2.png',
+        effect: (attributes) => {
+            // * Unimplementable; no options allow for >400 stacks
+            return { attributes }
+        },
+        minConstellation: 2,
+        origin: 'C2',
+        visible: false,
+    },
+    {
+        name: '"My Secret Is Hidden Within Me, No One Will Know My Name"',
+        description: (
+            <span>
+                Increases the Level of{' '}
+                <span style={{ color: '#DDD' }}>Let the People Rejoice</span> by 3.
+                <br />
+                Maximum upgrade level is 15.
+            </span>
+        ),
+        icon: '/images/characters/mona-constellation3.png',
+        effect: (attributes, talentLevels) => {
+            if (!talentLevels) return { attributes }
+
+            const newTalentLevels = [...talentLevels]
+            newTalentLevels[1] = Math.min(newTalentLevels[1] + 3, 13)
+
+            return { attributes: attributes, updatedTalentLevels: newTalentLevels }
+        },
+        minConstellation: 3,
+        origin: 'C3',
+        enabled: true,
+        visible: false,
+        priority: 0,
+    },
+    {
+        name: '"They Know Not Life, Who Dwelt in the Netherworld Not!"',
+        description: (
+            <span>
+                When the Salon Members from Salon Solitaire hit an opponent, or the
+                Singer of Many Waters restores HP to nearby active characters, Furina
+                will restore 4 Energy. This effect can be triggered once every 5s.
+            </span>
+        ),
+        icon: '/images/characters/furina-constellation4.png',
+        effect: (attributes) => {
+            // * Unimplementable
+            return { attributes }
+        },
+        minConstellation: 4,
+        origin: 'C4',
+        visible: false,
+    },
+    {
+        name: '"His Name I Now Know, It Is...!"',
+        description: (
+            <span>
+                Increase the Level of{' '}
+                <span style={{ color: '#DDD' }}>Salon Solitaire</span> by 3.
+                <br />
+                Maximum upgrade level is 15.
+            </span>
+        ),
+        icon: '/images/characters/furina-constellation5.png',
+        effect: (attributes, talentLevels) => {
+            if (!talentLevels) return { attributes }
+
+            const newTalentLevels = [...talentLevels]
+            newTalentLevels[2] = Math.min(newTalentLevels[2] + 3, 13)
+
+            return { attributes: attributes, updatedTalentLevels: newTalentLevels }
+        },
+        minConstellation: 5,
+        origin: 'C5',
+        enabled: true,
+        visible: false,
+        priority: 0,
     },
     {
         name: '"Hear Me — Let Us Raise the Chalice of Love!"',
         description: (
             <span>
-                <Badge variant="secondary">C6</Badge> When using{' '}
-                <span style={{ color: '#ddd' }}>Salon Solitaire</span>, Furina&apos;s
-                Normal/Charged Attacks and the impact of Plunging Attacks are
-                converted to <span style={{ color: '#3d9bc1' }}>Hydro DMG</span>{' '}
-                which cannot be overridden by any other elemental infusion. DMG is
-                increased by 18%, and hits from these attacks cause different effects
-                depending on Furina&apos;s current Arkhe alignment:
+                When using <span style={{ color: '#ddd' }}>Salon Solitaire</span>,
+                Furina&apos;s Normal/Charged Attacks and the impact of Plunging
+                Attacks are converted to{' '}
+                <span style={{ color: '#3d9bc1' }}>Hydro DMG</span> which cannot be
+                overridden by any other elemental infusion. DMG is increased by 18%,
+                and hits from these attacks cause different effects depending on
+                Furina&apos;s current Arkhe alignment:
                 <ul>
                     <li>
                         - Ousia: Every 1s, all nearby characters heal with 4%
@@ -461,142 +553,8 @@ const characterBonuses: Bonus[] = [
         minConstellation: 6,
         maxStacks: 2,
         stackOptions: ['Off', 'Ousia', 'Pneuma'],
+        origin: 'C6',
         priority: 2,
-    },
-]
-
-const constellationBonuses: Bonus[] = [
-    {
-        name: '"Love is a Rebellious Bird That None Can Tame"',
-        description: (
-            <span>
-                When using{' '}
-                <span style={{ color: '#ddd' }}>Let the People Rejoice</span>, Furina
-                will gain 150 Fanfare. Additionally, Furina&apos;s Fanfare limit is
-                increased by 100.
-            </span>
-        ),
-        icon: '/images/characters/furina-constellation1.png',
-        effect: (attributes) => {
-            // * Already handled in characterBonuses
-            return { attributes }
-        },
-        minConstellation: 1,
-    },
-    {
-        name: '"A Woman Adapts Like Duckweed in Water"',
-        description: (
-            <span>
-                While{' '}
-                <span style={{ color: '#ddd' }}>Let the People Rejoice lasts</span>,
-                Furina&apos;s Fanfare gain from increases or decreases in nearby
-                characters&apos; HP is increased by 250%. Each point of Fanfare above
-                the limit will increase Furina&apos;s Max HP by 0.35%. Her maximum
-                Max HP increase is 140%.
-            </span>
-        ),
-        icon: '/images/characters/furina-constellation2.png',
-        effect: (attributes) => {
-            // * Unimplementable; no options allow for >400 stacks
-            return { attributes }
-        },
-        minConstellation: 2,
-    },
-    {
-        name: '"My Secret Is Hidden Within Me, No One Will Know My Name"',
-        description: (
-            <span>
-                Increases the Level of{' '}
-                <span style={{ color: '#DDD' }}>Let the People Rejoice</span> by 3.
-                <br />
-                Maximum upgrade level is 15.
-            </span>
-        ),
-        icon: '/images/characters/mona-constellation3.png',
-        effect: (attributes, talentLevels) => {
-            if (!talentLevels) return { attributes }
-
-            const newTalentLevels = [...talentLevels]
-            newTalentLevels[1] = Math.min(newTalentLevels[1] + 3, 13)
-
-            return { attributes: attributes, updatedTalentLevels: newTalentLevels }
-        },
-        minConstellation: 3,
-        priority: 0,
-    },
-    {
-        name: '"They Know Not Life, Who Dwelt in the Netherworld Not!"',
-        description: (
-            <span>
-                When the Salon Members from Salon Solitaire hit an opponent, or the
-                Singer of Many Waters restores HP to nearby active characters, Furina
-                will restore 4 Energy. This effect can be triggered once every 5s.
-            </span>
-        ),
-        icon: '/images/characters/furina-constellation4.png',
-        effect: (attributes) => {
-            // * Unimplementable
-            return { attributes }
-        },
-        minConstellation: 4,
-    },
-    {
-        name: '"His Name I Now Know, It Is...!"',
-        description: (
-            <span>
-                Increase the Level of{' '}
-                <span style={{ color: '#DDD' }}>Salon Solitaire</span> by 3.
-                <br />
-                Maximum upgrade level is 15.
-            </span>
-        ),
-        icon: '/images/characters/furina-constellation5.png',
-        effect: (attributes, talentLevels) => {
-            if (!talentLevels) return { attributes }
-
-            const newTalentLevels = [...talentLevels]
-            newTalentLevels[2] = Math.min(newTalentLevels[2] + 3, 13)
-
-            return { attributes: attributes, updatedTalentLevels: newTalentLevels }
-        },
-        minConstellation: 5,
-        priority: 0,
-    },
-    {
-        name: '"Hear Me — Let Us Raise the Chalice of Love!"',
-        description: (
-            <span>
-                When using <span style={{ color: '#ddd' }}>Salon Solitaire</span>,
-                Furina gains &quot;Center of Attention&quot; for 10s. Throughout the
-                duration, Furina&apos;s Normal Attacks, Charged Attacks, and Plunging
-                Attacks are converted into{' '}
-                <span style={{ color: '#3d9bc1' }}>Hydro DMG</span> which cannot be
-                overridden by any other elemental infusion. DMG is also increased by
-                an amount equivalent to 18% of Furina&apos;s max HP. Throughout the
-                duration, Furina&apos;s Normal Attacks (not including Arkhe: Seats
-                Sacred and Secular Attacks), Charged Attacks, and the impact of
-                Plunging Attacks will cause different effects up to every 0.1s after
-                hitting opponents depending on her current Arkhe alignment: Arkhe:
-                Ousia Every 1s, all nearby characters in the party will be healed by
-                4% of Furina&apos;s max HP, for a duration of 2.9s. Triggering this
-                effect again will extend its duration. Arkhe: Pneuma This Normal
-                Attack (not including Arkhe: Seats Sacred and Secular Attacks),
-                Charged Attack, or Plunging Attack ground impact DMG will be further
-                increased by an amount equivalent to 25% of Furina&apos;s max HP.
-                When any of the attacks mentioned previously hit an opponent, all
-                nearby characters in the party will consume 1% of their current HP.
-                During the duration of each instance of &quot;Center of
-                Attention,&quot; the above effects can be triggered up to 6 times.
-                &quot;Center of Attention&quot; will end when its effects have
-                triggered 6 times or when the duration expires.
-            </span>
-        ),
-        icon: '/images/characters/furina-constellation6.png',
-        effect: (attributes) => {
-            // * Already handled in characterBonuses
-            return { attributes }
-        },
-        minConstellation: 6,
     },
 ]
 

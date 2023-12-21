@@ -10,7 +10,7 @@ const config = {
         '@semantic-release/github',
         'semantic-release-github-actions-tags'
     ],
-    tagFormat: `v\${version}-alpha`
+    tagFormat: `v\${version}-prealpha`
 };
 
 module.exports = config;

@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Switch from 'react-switch'
 import CustomSelect from './CustomSelect'
 import { elementColors } from '@/lib'
+import { Badge } from '@/components/ui/badge'
 
 interface BonusToggleProps {
     characterState: CharacterState
@@ -67,6 +68,10 @@ const BonusToggle = ({
                         </span>
                     ) : (
                         <span className="max-w-full break-words text-xs text-muted-foreground md:w-[22rem]">
+                            <Badge variant="secondary">{bonus.origin || '??'}</Badge>{' '}
+                            {bonus.implemented === false && (
+                                <Badge variant="destructive">Unimplemented</Badge>
+                            )}{' '}
                             {bonus.description}
                         </span>
                     )}

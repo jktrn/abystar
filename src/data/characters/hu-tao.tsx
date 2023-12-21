@@ -1,4 +1,3 @@
-import { Badge } from '@/components/ui/badge'
 import {
     Bonus,
     Character,
@@ -242,6 +241,7 @@ const characterBonuses: Bonus[] = [
                 chargedAttackScaling.push('Crimson Bouquet Stamina Reduction')
             }
         },
+        origin: 'E',
         priority: 3,
     },
     {
@@ -261,35 +261,7 @@ const characterBonuses: Bonus[] = [
 
             return { attributes: newAttributes }
         },
-        priority: 1,
-    },
-    {
-        name: "Butterfly's Embrace",
-        description: (
-            <span>
-                <Badge variant="secondary">C6</Badge> Triggers when receiving fatal
-                blow or below 25% HP. All Elemental/Physical RES increased by 200%,
-                CRIT Rate increased by 100%
-            </span>
-        ),
-        icon: '/images/characters/hu-tao-constellation6.png',
-        effect: (attributes) => {
-            const newAttributes = {
-                ...attributes,
-                'Pyro RES': attributes['Pyro RES'] + 2,
-                'Cryo RES': attributes['Cryo RES'] + 2,
-                'Electro RES': attributes['Electro RES'] + 2,
-                'Hydro RES': attributes['Hydro RES'] + 2,
-                'Geo RES': attributes['Geo RES'] + 2,
-                'Anemo RES': attributes['Anemo RES'] + 2,
-                'Dendro RES': attributes['Dendro RES'] + 2,
-                'Physical RES': attributes['Physical RES'] + 2,
-                'CRIT Rate': attributes['CRIT Rate'] + 1,
-            }
-
-            return { attributes: newAttributes }
-        },
-        minConstellation: 6,
+        origin: 'Q',
         priority: 1,
     },
 ]
@@ -312,6 +284,8 @@ const constellationBonuses: Bonus[] = [
             return { attributes: newAttributes }
         },
         minConstellation: 1,
+        origin: 'C1',
+        visible: false,
         priority: 1,
     },
     {
@@ -337,6 +311,7 @@ const constellationBonuses: Bonus[] = [
             return { attributes: newAttributes }
         },
         minConstellation: 2,
+        origin: 'C2',
         priority: 3,
     },
     {
@@ -358,6 +333,9 @@ const constellationBonuses: Bonus[] = [
             return { attributes: attributes, updatedTalentLevels: newTalentLevels }
         },
         minConstellation: 3,
+        origin: 'C3',
+        enabled: true,
+        visible: false,
         priority: 0,
     },
     {
@@ -376,6 +354,8 @@ const constellationBonuses: Bonus[] = [
             return { attributes }
         },
         minConstellation: 4,
+        implemented: false,
+        origin: 'C4',
     },
     {
         name: 'Floral Incense',
@@ -396,27 +376,39 @@ const constellationBonuses: Bonus[] = [
             return { attributes: attributes, updatedTalentLevels: newTalentLevels }
         },
         minConstellation: 5,
+        origin: 'C5',
+        enabled: true,
+        visible: false,
         priority: 0,
     },
     {
         name: "Butterfly's Embrace",
         description: (
             <span>
-                Triggers when Hu Tao&apos;s HP drops below 25%, or when she suffers a
-                lethal strike: Hu Tao will not fall as a result of the DMG sustained.
-                Additionally, for the next 10s, all of her Elemental and Physical RES
-                is increased by 200%, her CRIT Rate is increased by 100%, and her
-                resistance to interruption is greatly increased. This effect triggers
-                automatically when Hu Tao has 1 HP left. Can only occur once every
-                60s.
+                Triggers when receiving fatal blow or below 25% HP. All
+                Elemental/Physical RES increased by 200%, CRIT Rate increased by 100%
             </span>
         ),
         icon: '/images/characters/hu-tao-constellation6.png',
         effect: (attributes) => {
-            // * Already handled in characterBonuses.tsx
-            return { attributes }
+            const newAttributes = {
+                ...attributes,
+                'Pyro RES': attributes['Pyro RES'] + 2,
+                'Cryo RES': attributes['Cryo RES'] + 2,
+                'Electro RES': attributes['Electro RES'] + 2,
+                'Hydro RES': attributes['Hydro RES'] + 2,
+                'Geo RES': attributes['Geo RES'] + 2,
+                'Anemo RES': attributes['Anemo RES'] + 2,
+                'Dendro RES': attributes['Dendro RES'] + 2,
+                'Physical RES': attributes['Physical RES'] + 2,
+                'CRIT Rate': attributes['CRIT Rate'] + 1,
+            }
+
+            return { attributes: newAttributes }
         },
         minConstellation: 6,
+        origin: 'C6',
+        priority: 1,
     },
 ]
 

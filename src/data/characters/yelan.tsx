@@ -187,9 +187,8 @@ const characterBonuses: Bonus[] = [
         name: 'Turn Control',
         description: (
             <span>
-                <Badge variant="secondary">A1</Badge> When the party has 1/2/3/4 of
-                the same Elemental Type(s), Yelan&apos;s Max HP is increased by
-                6%/12%/18%/30%
+                When the party has 1/2/3/4 of the same Elemental Type(s),
+                Yelan&apos;s Max HP is increased by 6%/12%/18%/30%
             </span>
         ),
         icon: '/images/characters/yelan-passive1.png',
@@ -207,16 +206,16 @@ const characterBonuses: Bonus[] = [
         },
         maxStacks: 4,
         stackOptions: ['Off', '1 Same', '2 Same', '3 Same', '4 Same'],
+        origin: 'A1',
         priority: 3,
     },
     {
         name: 'Adapt With Ease',
         description: (
             <span>
-                <Badge variant="secondary">A4</Badge> When{' '}
-                <span style={{ color: '#ddd' }}>Exquisite Throw</span> (Elemental
-                Burst) is in effect, your own active character deals 1% more DMG,
-                increasing by a further 3.5% per second (up to 50%)
+                When <span style={{ color: '#ddd' }}>Exquisite Throw</span>{' '}
+                (Elemental Burst) is in effect, your own active character deals 1%
+                more DMG, increasing by a further 3.5% per second (up to 50%)
             </span>
         ),
         icon: '/images/characters/yelan-passive2.png',
@@ -251,33 +250,8 @@ const characterBonuses: Bonus[] = [
             '13s',
             '14s',
         ],
+        origin: 'A4',
         priority: 1,
-    },
-    {
-        name: 'Bait-And-Switch',
-        description: (
-            <span>
-                <Badge variant="secondary">C4</Badge> Increases all party
-                members&apos; Max HP by 10% for 25s for every opponent marked by{' '}
-                <span style={{ color: '#ddd' }}>Lifeline</span> when the Lifeline
-                explodes (up to 40% Max HP)
-            </span>
-        ),
-        icon: '/images/characters/yelan-constellation4.png',
-        effect: (attributes, talentLevels, currentStacks) => {
-            if (!currentStacks) return { attributes }
-
-            const newAttributes = {
-                ...attributes,
-                HP: attributes['HP'] * (1 + 0.1 * currentStacks),
-            }
-
-            return { attributes: newAttributes }
-        },
-        maxStacks: 4,
-        stackOptions: ['Off', '1 Stack', '2 Stacks', '3 Stacks', '4 Stacks'],
-        minConstellation: 4,
-        priority: 3,
     },
 ]
 
@@ -296,6 +270,8 @@ const constellationBonuses: Bonus[] = [
             return { attributes }
         },
         minConstellation: 1,
+        origin: 'C1',
+        visible: false,
     },
     {
         name: 'Taking All Comers',
@@ -314,6 +290,8 @@ const constellationBonuses: Bonus[] = [
             return { attributes }
         },
         minConstellation: 2,
+        origin: 'C2',
+        visible: false,
     },
     {
         name: "Beware the Trickster's Dice",
@@ -335,6 +313,9 @@ const constellationBonuses: Bonus[] = [
             return { attributes: attributes, updatedTalentLevels: newTalentLevels }
         },
         minConstellation: 3,
+        origin: 'C3',
+        enabled: true,
+        visible: false,
         priority: 0,
     },
     {
@@ -343,16 +324,25 @@ const constellationBonuses: Bonus[] = [
             <span>
                 Increases all party members&apos; Max HP by 10% for 25s for every
                 opponent marked by <span style={{ color: '#ddd' }}>Lifeline</span>{' '}
-                when the Lifeline explodes. A maximum increase of 40% Max HP can be
-                attained in this manner.
+                when the Lifeline explodes (up to 40% Max HP)
             </span>
         ),
         icon: '/images/characters/yelan-constellation4.png',
-        effect: (attributes) => {
-            // * Already handled in characterBonuses
-            return { attributes }
+        effect: (attributes, talentLevels, currentStacks) => {
+            if (!currentStacks) return { attributes }
+
+            const newAttributes = {
+                ...attributes,
+                HP: attributes['HP'] * (1 + 0.1 * currentStacks),
+            }
+
+            return { attributes: newAttributes }
         },
+        maxStacks: 4,
+        stackOptions: ['Off', '1 Stack', '2 Stacks', '3 Stacks', '4 Stacks'],
+        origin: 'C4',
         minConstellation: 4,
+        priority: 3,
     },
     {
         name: "Dealer's Sleight",
@@ -374,6 +364,9 @@ const constellationBonuses: Bonus[] = [
             return { attributes: attributes, updatedTalentLevels: newTalentLevels }
         },
         minConstellation: 5,
+        origin: 'C5',
+        enabled: true,
+        visible: false,
         priority: 0,
     },
     {
@@ -395,6 +388,8 @@ const constellationBonuses: Bonus[] = [
             return { attributes }
         },
         minConstellation: 6,
+        origin: 'C6',
+        visible: false,
     },
 ]
 

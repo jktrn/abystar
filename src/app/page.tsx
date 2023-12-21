@@ -80,6 +80,7 @@ export default function Home() {
 
             const modifiedState = { ...previousState, ...updates }
             const updatedBonuses = getUpdatedBonuses(modifiedState)
+            console.log(updatedBonuses)
             modifiedState.characterActiveBonuses = updatedBonuses
 
             const [updatedState, newAttributes] =

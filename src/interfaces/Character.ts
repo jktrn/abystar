@@ -73,6 +73,12 @@ export interface Bonus {
     minConstellation?: number
     // Whether the bonus is enabled by default (passives)
     enabled?: boolean
+    // Whether or not the bonus is visible in the UI
+    visible?: boolean
+    // The origin of the bonus (E, Q, A1, A4, Passive, C1, C2, C4, C6, etc.)
+    origin?: string
+    // Whether or not the bonus has been implemented
+    implemented?: boolean
     // In what order the bonus should be applied (lower = earlier)
     priority?: number
     // The index of the talent that the bonus changes the scaling of

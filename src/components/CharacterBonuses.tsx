@@ -42,17 +42,22 @@ const CharacterBonuses = ({
     ])
 
     const filterBonuses = (isHidden: boolean) =>
-        characterState.character.characterBonuses.filter((bonus) =>
-            isHidden
-                ? (bonus.minConstellation &&
-                      bonus.minConstellation >
-                          characterState.characterConstellation) ||
-                  bonus.enabled
-                : (!bonus.minConstellation ||
-                      bonus.minConstellation <=
-                          characterState.characterConstellation) &&
-                  !bonus.enabled
-        )
+        [
+            ...characterState.character.characterBonuses,
+            ...characterState.character.constellationBonuses,
+        ]
+            .filter((bonus) => bonus.visible !== false)
+            .filter((bonus) =>
+                isHidden
+                    ? (bonus.minConstellation &&
+                          bonus.minConstellation >
+                              characterState.characterConstellation) ||
+                      bonus.enabled
+                    : (!bonus.minConstellation ||
+                          bonus.minConstellation <=
+                              characterState.characterConstellation) &&
+                      !bonus.enabled
+            )
 
     const handleToggle = (bonus: Bonus, bonusStacks: number) => {
         handleBonusToggle(

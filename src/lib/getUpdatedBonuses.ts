@@ -1,10 +1,9 @@
 import { Bonus, CharacterState } from '@/interfaces/Character'
 
 function applyConstellationBonuses(state: CharacterState): Bonus[] {
-    return state.character.constellationBonuses.slice(
-        0,
-        state.characterConstellation
-    )
+    return state.character.constellationBonuses
+        .slice(0, state.characterConstellation)
+        .filter((bonus) => bonus.enabled)
 }
 
 function getUpdatedBonuses(state: CharacterState): Bonus[] {
