@@ -6,6 +6,7 @@ export async function GET(request: Request, { params }: { params: { id: string }
 
     const { genshin } = new Wrapper({
         language: 'en',
+        cache: true,
     })
 
     const playerResponse = await genshin.getPlayer(id)

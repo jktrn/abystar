@@ -32,6 +32,7 @@ import {
     kebabCase,
     recalculateStateAndAttributes,
 } from '@/lib'
+import { PlayerData } from 'enkanetwork.js'
 import { useEffect, useState } from 'react'
 
 export default function Home() {
@@ -41,6 +42,16 @@ export default function Home() {
     const [damageResults, setDamageResults] = useState<DamageResult[] | null>(null)
     const [isCharacterModalOpen, setCharacterModalOpen] = useState(false)
     const [isWeaponModalOpen, setWeaponModalOpen] = useState(false)
+
+    // useEffect(() => {
+    //     fetch('/api/enka/id/608073512').then((response) => {
+    //         if (response.ok) {
+    //             response.json().then((data: PlayerData) => {
+    //                 console.log(data)
+    //             })
+    //         }
+    //     })
+    // }, [])
 
     const handleCharacterSelect = async (selectedCharacter: Character) => {
         const defaultWeapon = await getDefaultWeapon(selectedCharacter.weapon)
@@ -252,7 +263,7 @@ export default function Home() {
                                         initialAttributes={applySpecialBonuses({
                                             ...defaultCharacterAttributes,
                                             ...characterState.character.baseStats[
-                                                characterState.characterLevel
+                                            characterState.characterLevel
                                             ],
                                         })}
                                     />
