@@ -1,15 +1,16 @@
 export {
+    ascensionMap,
     calculateStatValue,
     clamp,
     cn,
     compareElement,
     compareObjects,
-    getTalentScalingValue,
     elementColors,
+    getTalentScalingValue,
+    insertAspect,
     kebabCase,
     mergeAndSum,
     parseScalingValue,
-    insertAspect,
 } from './utils'
 
 export {

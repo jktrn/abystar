@@ -3,7 +3,7 @@ import { Bonus, CharacterState } from '@/interfaces/Character'
 import Image from 'next/image'
 import Switch from 'react-switch'
 import CustomSelect from './CustomSelect'
-import { elementColors } from '@/lib'
+import { ascensionMap, elementColors } from '@/lib'
 import { Badge } from '@/components/ui/badge'
 
 interface BonusToggleProps {
@@ -18,7 +18,6 @@ const BonusToggle = ({
     characterState,
     bonus,
     onToggle,
-    disabled = false,
     isWeaponBonus,
 }: BonusToggleProps) => {
     const [currentStacks, setCurrentStacks] = useState(bonus.enabled ? 1 : 0)
@@ -26,10 +25,12 @@ const BonusToggle = ({
     if (!characterState) return null
 
     const isBonusDisabled =
-        disabled ||
         (bonus.minConstellation !== undefined &&
             (characterState.characterConstellation === undefined ||
-                bonus.minConstellation > characterState.characterConstellation))
+                bonus.minConstellation > characterState.characterConstellation)) ||
+        (bonus.minAscension !== undefined &&
+            (characterState.characterLevel === undefined ||
+                bonus.minAscension > ascensionMap[characterState.characterLevel]))
 
     const handleStackChange = (newStacks: number) => {
         setCurrentStacks(newStacks)

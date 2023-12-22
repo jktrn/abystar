@@ -5,7 +5,6 @@ import {
     CharacterAttributes,
     CharacterState,
     ScalingType,
-    TalentRawData,
     TalentScaling,
     TalentScalingData,
 } from '@/interfaces/Character'
@@ -62,7 +61,7 @@ function calculateStatValue(
         : 0
 }
 
-const elementColors = {
+const elementColors: Record<string, string> = {
     Pyro: '#bf612d',
     Geo: '#c8922b',
     Dendro: '#84a02f',
@@ -113,6 +112,23 @@ function getTalentScalingValue(
     return match ? parseFloat(match[0]) : 0
 }
 
+const ascensionMap: Record<string, number> = {
+    '1/20': 0,
+    '20/20': 0,
+    '20/40': 1,
+    '40/40': 1,
+    '40/50': 2,
+    '50/50': 2,
+    '50/60': 3,
+    '60/60': 3,
+    '60/70': 4,
+    '70/70': 4,
+    '70/80': 5,
+    '80/80': 5,
+    '80/90': 6,
+    '90/90': 6,
+}
+
 function insertAspect(
     talentScalings: TalentScaling,
     skillName: string,
@@ -160,4 +176,5 @@ export {
     mergeAndSum,
     getTalentScalingValue,
     insertAspect,
+    ascensionMap,
 }

@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react'
 import BonusToggle from './BonusToggle'
 import { Bonus, CharacterState } from '@/interfaces/Character'
 import { ChevronDown } from 'lucide-react'
-import { handleBonusToggle } from '@/lib'
+import { ascensionMap, handleBonusToggle } from '@/lib'
 
 interface CharacterBonusesProps {
     characterState: CharacterState
@@ -17,12 +17,16 @@ const CharacterBonuses = ({
 }: CharacterBonusesProps) => {
     const [isHiddenCollapsed, setIsHiddenCollapsed] = useState(true)
 
-    // Update active bonuses when constellation changes (removing bonuses that are no longer available)
+    // Update active bonuses when constellation/ascension changes (removing bonuses that are no longer available)
     useEffect(() => {
         const updatedActiveBonuses = characterState.characterActiveBonuses.filter(
             (bonus) =>
-                !bonus.minConstellation ||
-                bonus.minConstellation <= characterState.characterConstellation
+                (!bonus.minConstellation ||
+                    bonus.minConstellation <=
+                        characterState.characterConstellation) &&
+                (!bonus.minAscension ||
+                    bonus.minAscension <=
+                        ascensionMap[characterState.characterLevel])
         )
 
         const isChange =
@@ -52,10 +56,16 @@ const CharacterBonuses = ({
                     ? (bonus.minConstellation &&
                           bonus.minConstellation >
                               characterState.characterConstellation) ||
+                      (bonus.minAscension &&
+                          bonus.minAscension >
+                              ascensionMap[characterState.characterLevel]) ||
                       bonus.enabled
                     : (!bonus.minConstellation ||
                           bonus.minConstellation <=
                               characterState.characterConstellation) &&
+                      (!bonus.minAscension ||
+                          bonus.minAscension <=
+                              ascensionMap[characterState.characterLevel]) &&
                       !bonus.enabled
             )
 

@@ -184,6 +184,7 @@ const characterBonuses: Bonus[] = [
             return { attributes: newAttributes }
         },
         origin: 'A1',
+        minAscension: 1,
         priority: 1,
     },
     {
@@ -206,6 +207,7 @@ const characterBonuses: Bonus[] = [
             return { attributes: newAttributes }
         },
         origin: 'A4',
+        minAscension: 4,
         priority: 1,
     },
 ]

@@ -203,6 +203,7 @@ const characterBonuses: Bonus[] = [
         },
         enabled: true,
         origin: 'A4',
+        minAscension: 4,
         priority: 3,
     },
 ]

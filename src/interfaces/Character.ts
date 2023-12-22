@@ -71,6 +71,8 @@ export interface Bonus {
     currentStacks?: number
     // For bonuses that are locked behind constellations
     minConstellation?: number
+    // For bonuses that are locked behind an ascension
+    minAscension?: number
     // Whether the bonus is enabled by default (passives)
     enabled?: boolean
     // Whether or not the bonus is visible in the UI

@@ -206,6 +206,7 @@ const characterBonuses: Bonus[] = [
         maxStacks: 4,
         stackOptions: ['Off', '1 Same', '2 Same', '3 Same', '4 Same'],
         origin: 'A1',
+        minAscension: 1,
         priority: 3,
     },
     {
@@ -250,6 +251,7 @@ const characterBonuses: Bonus[] = [
             '14s',
         ],
         origin: 'A4',
+        minAscension: 4,
         priority: 1,
     },
 ]
