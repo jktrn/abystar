@@ -263,7 +263,7 @@ export default function Home() {
                                         initialAttributes={applySpecialBonuses({
                                             ...defaultCharacterAttributes,
                                             ...characterState.character.baseStats[
-                                            characterState.characterLevel
+                                                characterState.characterLevel
                                             ],
                                         })}
                                     />

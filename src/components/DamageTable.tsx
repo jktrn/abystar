@@ -1,4 +1,6 @@
-import { useMemo } from 'react'
+'use client'
+
+import { useMemo, useState } from 'react'
 import {
     Table,
     TableBody,
@@ -14,6 +16,7 @@ import {
     FormulaOutputType,
 } from '@/interfaces/Character'
 import { elementColors } from '@/lib'
+import { Button } from './ui/button'
 
 interface DamageTableProps {
     damageResults: DamageResult[]
@@ -24,7 +27,11 @@ interface Damage {
 }
 
 const DamageTable = ({ damageResults }: DamageTableProps) => {
+    const [showAdvanced, setShowAdvanced] = useState(false)
+
     const tableData = useMemo(() => {
+        if (!damageResults) return []
+
         const result: Damage[] = []
         damageResults.forEach((talent) => {
             result.push({
@@ -81,6 +88,8 @@ const DamageTable = ({ damageResults }: DamageTableProps) => {
 
     if (!damageResults) return null
 
+    const toggleAdvanced = () => setShowAdvanced((prev) => !prev)
+
     const getCellStyle = (row: Damage, columnId: string) => {
         if (columnId === 'average' && row.outputType === FormulaOutputType.Healing) {
             return { color: '#98db1a' }
@@ -112,83 +121,96 @@ const DamageTable = ({ damageResults }: DamageTableProps) => {
     }
 
     return (
-        <Table className="w-full text-sm">
-            <TableHeader>
-                <TableRow>
-                    <TableHead className="border-b px-4 py-2 font-bold">
-                        Name
-                    </TableHead>
-                    <TableHead className="w-[80px] border-b px-4 py-2 font-bold">
-                        Normal
-                    </TableHead>
-                    <TableHead className="w-[80px] border-b px-4 py-2 font-bold">
-                        Critical
-                    </TableHead>
-                    <TableHead className="w-[80px] border-b px-4 py-2 font-bold">
-                        Average
-                    </TableHead>
-                </TableRow>
-            </TableHeader>
-            <TableBody>
-                {tableData.map((row, index) => (
-                    <TableRow
-                        key={index}
-                        className={
-                            row.nonCrit === '' ? 'bg-secondary/25 font-bold' : ''
-                        }
-                    >
-                        {row.nonCrit === '' ? (
-                            <TableCell colSpan={4} className="border-b px-4 py-3">
-                                {row.name}
-                            </TableCell>
-                        ) : (
-                            <>
-                                {!row.nonCrit ? (
-                                    <>
-                                        <TableCell
-                                            colSpan={3}
-                                            className="border-b px-4 py-2"
-                                        >
-                                            {row.name}
-                                        </TableCell>
-                                        <TableCell
-                                            className="w-[80px] border-b px-4 py-2 text-right font-bold"
-                                            style={getCellStyle(row, 'average')}
-                                        >
-                                            {row.average}
-                                        </TableCell>
-                                    </>
-                                ) : (
-                                    <>
-                                        <TableCell className="border-b px-4 py-2">
-                                            {row.name}
-                                        </TableCell>
-                                        <TableCell
-                                            className="w-[80px] border-b px-4 py-2 text-right font-bold"
-                                            style={getCellStyle(row, 'nonCrit')}
-                                        >
-                                            {row.nonCrit}
-                                        </TableCell>
-                                        <TableCell
-                                            className="w-[80px] border-b px-4 py-2 text-right font-bold"
-                                            style={getCellStyle(row, 'crit')}
-                                        >
-                                            {row.crit}
-                                        </TableCell>
-                                        <TableCell
-                                            className="w-[80px] border-b px-4 py-2 text-right font-bold"
-                                            style={getCellStyle(row, 'average')}
-                                        >
-                                            {row.average}
-                                        </TableCell>
-                                    </>
-                                )}
-                            </>
-                        )}
+        <>
+            <Table className="w-full text-sm">
+                <TableHeader>
+                    <TableRow>
+                        <TableHead className="border-b px-4 py-2 font-bold">
+                            Name
+                        </TableHead>
+                        <TableHead className="w-[80px] border-b px-4 py-2 font-bold">
+                            Normal
+                        </TableHead>
+                        <TableHead className="w-[80px] border-b px-4 py-2 font-bold">
+                            Critical
+                        </TableHead>
+                        <TableHead className="w-[80px] border-b px-4 py-2 font-bold">
+                            Average
+                        </TableHead>
                     </TableRow>
-                ))}
-            </TableBody>
-        </Table>
+                </TableHeader>
+                <TableBody>
+                    {tableData.map((row, index) => (
+                        <TableRow
+                            key={index}
+                            className={
+                                row.nonCrit === '' ? 'bg-secondary/25 font-bold' : ''
+                            }
+                        >
+                            {row.nonCrit === '' ? (
+                                <TableCell
+                                    colSpan={4}
+                                    className="border-b px-4 py-3"
+                                >
+                                    {row.name}
+                                </TableCell>
+                            ) : showAdvanced ||
+                              row.damageType !== undefined ||
+                              row.outputType === FormulaOutputType.Healing ||
+                              row.outputType === FormulaOutputType.Drain ? (
+                                <>
+                                    {!row.nonCrit ? (
+                                        <>
+                                            <TableCell
+                                                colSpan={3}
+                                                className="border-b px-4 py-2"
+                                            >
+                                                {row.name}
+                                            </TableCell>
+                                            <TableCell
+                                                className="w-[80px] border-b px-4 py-2 text-right font-bold"
+                                                style={getCellStyle(row, 'average')}
+                                            >
+                                                {row.average}
+                                            </TableCell>
+                                        </>
+                                    ) : (
+                                        <>
+                                            <TableCell className="border-b px-4 py-2">
+                                                {row.name}
+                                            </TableCell>
+                                            <TableCell
+                                                className="w-[80px] border-b px-4 py-2 text-right font-bold"
+                                                style={getCellStyle(row, 'nonCrit')}
+                                            >
+                                                {row.nonCrit}
+                                            </TableCell>
+                                            <TableCell
+                                                className="w-[80px] border-b px-4 py-2 text-right font-bold"
+                                                style={getCellStyle(row, 'crit')}
+                                            >
+                                                {row.crit}
+                                            </TableCell>
+                                            <TableCell
+                                                className="w-[80px] border-b px-4 py-2 text-right font-bold"
+                                                style={getCellStyle(row, 'average')}
+                                            >
+                                                {row.average}
+                                            </TableCell>
+                                        </>
+                                    )}
+                                </>
+                            ) : null}
+                        </TableRow>
+                    ))}
+                </TableBody>
+            </Table>
+            <div className="flex items-center justify-center p-2">
+                <Button onClick={toggleAdvanced} variant="outline" className="mb-4">
+                    {showAdvanced ? 'Hide Advanced' : 'Show Advanced'}
+                </Button>
+            </div>
+        </>
     )
 }
 
