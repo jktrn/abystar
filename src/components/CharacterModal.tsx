@@ -10,6 +10,13 @@ import {
     DialogTitle,
     DialogDescription,
 } from '@/components/ui/dialog'
+import {
+    Tooltip,
+    TooltipContent,
+    TooltipProvider,
+    TooltipTrigger,
+} from "@/components/ui/tooltip"
+import { Input } from "@/components/ui/input"
 import { elementColors, compareElement, kebabCase } from '@/lib'
 import { characterData } from '@/data'
 import CustomSelect from '@/components/CustomSelect';
@@ -28,8 +35,6 @@ const CharacterModal = ({
     const [rawCharacters, setRawCharacters] = useState<RawCharacter[]>([])
     const [filteredCharacters, setFilteredCharacters] = useState<RawCharacter[]>([])
     const DEFAULT_CHARACTER = 'Nahida'
-    const [hoveredCharacter, setHoveredCharacter] = useState<string | null>(null);
-    const [timeoutId, setTimeoutId] = useState<number | null>(null)
     const [searchTerm, setSearchTerm] = useState<string>('')
     const [selectedVision, setSelectedVision] = useState<string>('All')
     const [selectedWeapon, setSelectedWeapon] = useState<string>('All')
@@ -75,21 +80,6 @@ const CharacterModal = ({
         onOpenChange(false)
     }
 
-    const handleMouseEnter = (characterName: string) => {
-        const id: number = window.setTimeout(() => {
-            setHoveredCharacter(characterName)
-        }, 500)
-        setTimeoutId(id)
-    };
-
-    const handleMouseLeave = () => {
-        if (timeoutId !== null) {
-            window.clearTimeout(timeoutId)
-            setTimeoutId(null)
-        }
-        setHoveredCharacter(null)
-    };
-
     rawCharacters.sort((a, b) =>
         compareElement(a.vision.toLowerCase(), b.vision.toLowerCase())
     )
@@ -106,13 +96,14 @@ const CharacterModal = ({
                     <DialogDescription>
                         {`${filteredCharacters.length} available characters`}
                     </DialogDescription>
-                    <input
-                        type="text"
-                        placeholder="Search characters"
-                        value={searchTerm}
-                        onChange={(e) => setSearchTerm(e.target.value)}
-                        className="p-2 border rounded focus:outline-none focus:border-emerald-400"
-                    />
+                    <div className="flex flex-wrap justify-center">
+                        <Input
+                            type="text"
+                            placeholder="Search characters"
+                            value={searchTerm}
+                            onChange={(e) => setSearchTerm(e.target.value)}
+                        />
+                    </div>
                     <div className="grid grid-cols-3 grid-rows-1 gap-x-10">
                         <div>
                             <p>
@@ -151,36 +142,32 @@ const CharacterModal = ({
                         <div
                             key={rawCharacter.name}
                             className="relative"
-                            onMouseEnter={() => handleMouseEnter(rawCharacter.name)}
-                            onMouseLeave={handleMouseLeave}
                         >
-                            <Image
-                                src={rawCharacter.icon}
-                                alt={rawCharacter.name}
-                                onClick={() => handleCharacterSelect(rawCharacter.name)}
-                                className={`cursor-pointer rounded-full object-cover transition-all duration-100 ease-in hover:scale-105 ${
-                                    rawCharacter.implemented ? '' : 'opacity-25'
-                                }`}
-                                width={70}
-                                height={70}
-                                style={{
-                                    backgroundColor:
-                                        elementColors[
-                                            rawCharacter.vision as keyof typeof elementColors
-                                        ],
-                                }}
-                            />
-                            {hoveredCharacter === rawCharacter.name && (
-                                <div className={`absolute top-10 bg-black p-1 rounded-md transition-all duration-100 ease-in ${
-                                    rawCharacter.implemented ? 'opacity-80' : 'opacity-25'
-                                }`}
-                                style={{ 
-                                    zIndex: 1,
-                                    pointerEvents: 'none' }}
-                                >
-                                    {rawCharacter.name}
-                                </div>
-                            )}
+                            <TooltipProvider>
+                                <Tooltip delayDuration={300} disableHoverableContent={true}>
+                                    <TooltipTrigger asChild>
+                                        <Image
+                                            src={rawCharacter.icon}
+                                            alt={rawCharacter.name}
+                                            onClick={() => handleCharacterSelect(rawCharacter.name)}
+                                            className={`cursor-pointer rounded-full object-cover transition-all duration-100 ease-in hover:scale-105 ${
+                                                rawCharacter.implemented ? '' : 'opacity-25'
+                                            }`}
+                                            width={70}
+                                            height={70}
+                                            style={{
+                                                backgroundColor:
+                                                    elementColors[
+                                                        rawCharacter.vision as keyof typeof elementColors
+                                                    ],
+                                            }}
+                                        />
+                                    </TooltipTrigger>
+                                    <TooltipContent side="bottom" align="center" collisionPadding={150}>
+                                        {rawCharacter.name}
+                                    </TooltipContent>
+                                </Tooltip>
+                            </TooltipProvider>
                         </div>
                     ))}
                 </div>

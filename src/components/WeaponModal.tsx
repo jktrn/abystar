@@ -10,8 +10,16 @@ import {
     DialogTitle,
     DialogDescription,
 } from '@/components/ui/dialog'
+import {
+    Tooltip,
+    TooltipContent,
+    TooltipProvider,
+    TooltipTrigger,
+} from "@/components/ui/tooltip"
+import { Input } from "@/components/ui/input"
 import { kebabCase } from '@/lib'
 import { weaponData } from '@/data'
+import CustomSelect from './CustomSelect'
 
 interface WeaponModalProps {
     open: boolean
@@ -28,9 +36,8 @@ const WeaponModal = ({
 }: WeaponModalProps) => {
     const [rawWeapons, setRawWeapons] = useState<RawWeapon[]>([])
     const [filteredWeapons, setFilteredWeapons] = useState<RawWeapon[]>([]);
-    const [hoveredWeapon, setHoveredWeapon] = useState<string | null>(null);
-    const [timeoutId, setTimeoutId] = useState<number | null>(null);
     const [searchTerm, setSearchTerm] = useState<string>('');
+    const [selectedRarity, setSelectedRarity] = useState<string>('All')
 
     // Sorts by rarity
     useEffect(() => {
@@ -43,11 +50,12 @@ const WeaponModal = ({
 
     useEffect(() => {
         const lowerCaseSearchTerm = searchTerm.toLowerCase();
-        const filteredList = rawWeapons.filter((char) =>
-          char.name.toLowerCase().startsWith(lowerCaseSearchTerm)
+        const filteredList = rawWeapons.filter((weap) =>
+          weap.name.toLowerCase().startsWith(lowerCaseSearchTerm) &&
+          (selectedRarity === 'All' || weap.rarity === parseInt(selectedRarity.substring(0,1)))
         );
         setFilteredWeapons(filteredList);
-    }, [searchTerm, rawWeapons]);
+    }, [searchTerm, selectedRarity, rawWeapons]);
 
     const handleWeaponSelect = async (weaponName: string) => {
         try {
@@ -61,22 +69,7 @@ const WeaponModal = ({
         onOpenChange(false)
     }
 
-    const handleMouseEnter = (weaponName: string) => {
-        // Delay showing the weapon name after 0.5 seconds
-        const id: number = window.setTimeout(() => {
-            setHoveredWeapon(weaponName);
-        }, 500);
-        setTimeoutId(id);
-    };
-
-    const handleMouseLeave = () => {
-        // Clear the timeout and reset the hovered weapon
-        if (timeoutId !== null) {
-            window.clearTimeout(timeoutId);
-            setTimeoutId(null);
-        }
-        setHoveredWeapon(null);
-    };
+    const rarityOptions = ['All', '5 Star', '4 Star'];
 
     return (
         <Dialog open={open} onOpenChange={onOpenChange}>
@@ -86,15 +79,28 @@ const WeaponModal = ({
                     <DialogDescription>
                         {`${filteredWeapons.length} available weapons`}
                     </DialogDescription>
-                    <input
-                        type="text"
-                        placeholder="Search weapons"
-                        value={searchTerm}
-                        onChange={(e) => setSearchTerm(e.target.value)}
-                        className="p-2 border rounded focus:outline-none focus:border-emerald-400"
-                    />
+                    <div className="flex flex-wrap justify-center">
+                        <Input
+                            type="text"
+                            placeholder="Search weapons"
+                            value={searchTerm}
+                            onChange={(e) => setSearchTerm(e.target.value)}
+                        />
+                    </div>
+                    <div className="grid grid-cols-1 grid-rows-1">
+                        <div>
+                            <p>
+                                Quality: 
+                            </p>
+                            <CustomSelect
+                                options={rarityOptions.map((rarity) => ({ value: rarity, label: rarity }))}
+                                value={selectedRarity}
+                                onChange={(value) => setSelectedRarity(value)}
+                            />
+                        </div>
+                    </div>
                 </DialogHeader>
-                <div className="flex flex-wrap justify-center gap-[6px]">
+                <div className="flex flex-wrap justify-center gap-[10px]">
                     {filteredWeapons.map((rawWeapon) => (
                         <div
                             key={rawWeapon.name}
@@ -105,29 +111,25 @@ const WeaponModal = ({
                                 rawWeapon.implemented ? '' : 'opacity-25'
                             }`}
                             onClick={() => handleWeaponSelect(rawWeapon.name)}
-                            onMouseEnter={() => handleMouseEnter(rawWeapon.name)}
-                            onMouseLeave={handleMouseLeave}
                         >
-                            <Image
-                                src={`/images/weapons/${kebabCase(
-                                    rawWeapon.name
-                                )}.png`}
-                                alt={rawWeapon.name}
-                                width={100}
-                                height={100}
-                                className="drop-shadow"
-                            />
-                            {hoveredWeapon === rawWeapon.name && (
-                                <div className={`absolute top-20 bg-black p-1 rounded-md transition-all duration-100 ease-in ${
-                                    rawWeapon.implemented ? 'opacity-80' : 'opacity-25'
-                                }`}
-                                style={{ 
-                                    zIndex: 1,
-                                    pointerEvents: 'none' }}
-                                >
-                                    {rawWeapon.name}
-                                </div>
-                            )}
+                            <TooltipProvider>
+                                <Tooltip delayDuration={300} disableHoverableContent={true}>
+                                    <TooltipTrigger asChild>
+                                        <Image
+                                            src={`/images/weapons/${kebabCase(
+                                                rawWeapon.name
+                                            )}.png`}
+                                            alt={rawWeapon.name}
+                                            width={100}
+                                            height={100}
+                                            className="drop-shadow"
+                                        />
+                                    </TooltipTrigger>
+                                    <TooltipContent side="top" align="start" collisionPadding={150}>
+                                        {rawWeapon.name}
+                                    </TooltipContent>
+                                </Tooltip>
+                            </TooltipProvider>
                         </div>
                     ))}
                 </div>
