@@ -119,7 +119,7 @@ const WeaponModal = ({
                             onClick={() => handleWeaponSelect(rawWeapon.name)}
                         >
                             <TooltipProvider>
-                                <Tooltip delayDuration={300} skipDelayDuration={300}>
+                                <Tooltip delayDuration={300}>
                                     <TooltipTrigger asChild>
                                         <Image
                                             src={`/images/weapons/${kebabCase(

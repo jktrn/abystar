@@ -165,7 +165,7 @@ const CharacterModal = ({
                     {filteredCharacters.map((rawCharacter) => (
                         <div key={rawCharacter.name} className="relative">
                             <TooltipProvider>
-                                <Tooltip delayDuration={300} skipDelayDuration={300}>
+                                <Tooltip delayDuration={300}>
                                     <TooltipTrigger asChild>
                                         <Image
                                             src={rawCharacter.icon}
