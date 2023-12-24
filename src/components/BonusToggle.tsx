@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
+import { Badge } from '@/components/ui/badge'
 import { Bonus, CharacterState } from '@/interfaces/Character'
+import { ascensionMap, elementColors } from '@/lib'
 import Image from 'next/image'
+import { useState } from 'react'
 import Switch from 'react-switch'
 import CustomSelect from './CustomSelect'
-import { ascensionMap, elementColors } from '@/lib'
-import { Badge } from '@/components/ui/badge'
 
 interface BonusToggleProps {
     characterState: CharacterState

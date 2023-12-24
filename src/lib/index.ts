@@ -24,6 +24,9 @@ export {
     getRefinementOptions,
     getTalentOptions,
     levelOptions,
+    visionOptions,
+    weaponOptions,
+    rarityOptions,
 } from './getAttributeOptions'
 
 export { attributeSections, availableIcons, displayStats } from './attributeSections'

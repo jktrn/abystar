@@ -1,37 +1,21 @@
 import { Weapon } from './Weapon'
 
-export interface BaseStat {
-    [key: string]: number
+export interface CharacterState {
+    character: Character
+    characterLevel: string
+    characterConstellation: number
+    characterActiveBonuses: Bonus[]
+    characterTalentLevels: number[]
+    effectiveTalentLevels: number[]
+    weapon: Weapon
+    weaponLevel: string
+    weaponRefinement: number
 }
 
-export interface Talent {
-    name: string
-    image: string
-    description: string
-    data: {
-        [key: string]: any
-    }
-}
-
-export interface TalentRawData {
-    [key: string]:
-        | {
-              [key: string]: string | undefined
-          }
-        | undefined
-}
-
-export interface PassiveSkill {
-    name: string
-    image: string
-    description: string
-}
-
-export interface Constellation {
-    name: string
-    image: string
-    description: string
-    level: number
+export interface Character extends RawCharacter {
+    talentScalings: TalentScaling
+    characterBonuses: Bonus[]
+    constellationBonuses: Bonus[]
 }
 
 export interface RawCharacter {
@@ -49,12 +33,6 @@ export interface RawCharacter {
     passiveSkills?: PassiveSkill[]
     constellations: Constellation[]
     implemented?: boolean
-}
-
-export interface Character extends RawCharacter {
-    talentScalings: TalentScaling
-    characterBonuses: Bonus[]
-    constellationBonuses: Bonus[]
 }
 
 export interface Bonus {
@@ -119,16 +97,38 @@ export interface TalentScalingData {
     minConstellation?: number
 }
 
-export interface CharacterState {
-    character: Character
-    characterLevel: string
-    characterConstellation: number
-    characterActiveBonuses: Bonus[]
-    characterTalentLevels: number[]
-    effectiveTalentLevels: number[]
-    weapon: Weapon
-    weaponLevel: string
-    weaponRefinement: number
+export interface BaseStat {
+    [key: string]: number
+}
+
+export interface Talent {
+    name: string
+    image: string
+    description: string
+    data: {
+        [key: string]: any
+    }
+}
+
+export interface TalentRawData {
+    [key: string]:
+        | {
+              [key: string]: string | undefined
+          }
+        | undefined
+}
+
+export interface PassiveSkill {
+    name: string
+    image: string
+    description: string
+}
+
+export interface Constellation {
+    name: string
+    image: string
+    description: string
+    level: number
 }
 
 export interface CharacterAttributes {

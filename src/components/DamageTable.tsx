@@ -1,6 +1,5 @@
 'use client'
 
-import { useMemo, useState } from 'react'
 import {
     Table,
     TableBody,
@@ -16,6 +15,7 @@ import {
     FormulaOutputType,
 } from '@/interfaces/Character'
 import { elementColors } from '@/lib'
+import { useMemo, useState } from 'react'
 import { Button } from './ui/button'
 
 interface DamageTableProps {

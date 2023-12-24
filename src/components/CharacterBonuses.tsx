@@ -1,10 +1,10 @@
 'use client'
 
-import React, { useEffect, useState } from 'react'
-import BonusToggle from './BonusToggle'
 import { Bonus, CharacterState } from '@/interfaces/Character'
-import { ChevronDown } from 'lucide-react'
 import { ascensionMap, handleBonusToggle } from '@/lib'
+import { ChevronDown } from 'lucide-react'
+import { useEffect, useState } from 'react'
+import BonusToggle from './BonusToggle'
 
 interface CharacterBonusesProps {
     characterState: CharacterState

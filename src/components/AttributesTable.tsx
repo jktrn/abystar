@@ -1,14 +1,3 @@
-import { CharacterAttributes } from '@/interfaces/Character'
-import Image from 'next/image'
-import { useMemo } from 'react'
-import {
-    attributeSections,
-    availableIcons,
-    displayStats,
-    parseScalingValue,
-    kebabCase,
-} from '@/lib'
-import { Fragment } from 'react'
 import {
     Table,
     TableBody,
@@ -17,6 +6,16 @@ import {
     TableHeader,
     TableRow,
 } from '@/components/ui/table'
+import { CharacterAttributes } from '@/interfaces/Character'
+import {
+    attributeSections,
+    availableIcons,
+    displayStats,
+    kebabCase,
+    parseScalingValue,
+} from '@/lib'
+import Image from 'next/image'
+import { Fragment, useMemo } from 'react'
 
 interface CharacterAttributeProps {
     characterAttributes: CharacterAttributes

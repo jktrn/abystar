@@ -1,7 +1,7 @@
 import { CharacterState } from '@/interfaces/Character'
+import { kebabCase } from '@/lib'
 import Image from 'next/image'
 import { HTMLAttributes, memo } from 'react'
-import { kebabCase } from '@/lib'
 
 interface WeaponImageProps extends HTMLAttributes<HTMLDivElement> {
     characterState: CharacterState

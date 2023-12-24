@@ -1,8 +1,7 @@
-import React from 'react'
 import { CharacterState } from '@/interfaces/Character'
-import CustomSelect from './CustomSelect'
-import Image from 'next/image'
 import { getTalentOptions, kebabCase } from '@/lib'
+import Image from 'next/image'
+import CustomSelect from './CustomSelect'
 
 interface TalentSelectProps {
     characterState: CharacterState

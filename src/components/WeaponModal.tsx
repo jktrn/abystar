@@ -1,24 +1,24 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
-import Image from 'next/image'
-import { RawWeapon, Weapon } from '@/interfaces/Weapon'
 import {
     Dialog,
     DialogContent,
+    DialogDescription,
     DialogHeader,
     DialogTitle,
-    DialogDescription,
 } from '@/components/ui/dialog'
+import { Input } from '@/components/ui/input'
 import {
     Tooltip,
     TooltipContent,
     TooltipProvider,
     TooltipTrigger,
-} from "@/components/ui/tooltip"
-import { Input } from "@/components/ui/input"
-import { kebabCase } from '@/lib'
+} from '@/components/ui/tooltip'
 import { weaponData } from '@/data'
+import { RawWeapon, Weapon } from '@/interfaces/Weapon'
+import { kebabCase } from '@/lib'
+import Image from 'next/image'
+import { useEffect, useState } from 'react'
 import CustomSelect from './CustomSelect'
 
 interface WeaponModalProps {
@@ -35,8 +35,8 @@ const WeaponModal = ({
     characterWeaponType,
 }: WeaponModalProps) => {
     const [rawWeapons, setRawWeapons] = useState<RawWeapon[]>([])
-    const [filteredWeapons, setFilteredWeapons] = useState<RawWeapon[]>([]);
-    const [searchTerm, setSearchTerm] = useState<string>('');
+    const [filteredWeapons, setFilteredWeapons] = useState<RawWeapon[]>([])
+    const [searchTerm, setSearchTerm] = useState<string>('')
     const [selectedRarity, setSelectedRarity] = useState<string>('All')
 
     // Sorts by rarity
@@ -49,13 +49,15 @@ const WeaponModal = ({
     }, [characterWeaponType])
 
     useEffect(() => {
-        const lowerCaseSearchTerm = searchTerm.toLowerCase();
-        const filteredList = rawWeapons.filter((weap) =>
-          weap.name.toLowerCase().startsWith(lowerCaseSearchTerm) &&
-          (selectedRarity === 'All' || weap.rarity === parseInt(selectedRarity.substring(0,1)))
-        );
-        setFilteredWeapons(filteredList);
-    }, [searchTerm, selectedRarity, rawWeapons]);
+        const lowerCaseSearchTerm = searchTerm.toLowerCase()
+        const filteredList = rawWeapons.filter(
+            (weap) =>
+                weap.name.toLowerCase().startsWith(lowerCaseSearchTerm) &&
+                (selectedRarity === 'All' ||
+                    weap.rarity === parseInt(selectedRarity.substring(0, 1)))
+        )
+        setFilteredWeapons(filteredList)
+    }, [searchTerm, selectedRarity, rawWeapons])
 
     const handleWeaponSelect = async (weaponName: string) => {
         try {
@@ -69,7 +71,7 @@ const WeaponModal = ({
         onOpenChange(false)
     }
 
-    const rarityOptions = ['All', '5 Star', '4 Star'];
+    const rarityOptions = ['All', '5 Star', '4 Star', '3 Star', '2 Star', '1 Star']
 
     return (
         <Dialog open={open} onOpenChange={onOpenChange}>
@@ -79,27 +81,31 @@ const WeaponModal = ({
                     <DialogDescription>
                         {`${filteredWeapons.length} available weapons`}
                     </DialogDescription>
-                    <div className="flex flex-wrap justify-center">
-                        <Input
-                            type="text"
-                            placeholder="Search weapons"
-                            value={searchTerm}
-                            onChange={(e) => setSearchTerm(e.target.value)}
-                        />
-                    </div>
-                    <div className="grid grid-cols-1 grid-rows-1">
-                        <div>
-                            <p>
-                                Quality: 
-                            </p>
+                </DialogHeader>
+                <div className="-mt-4 flex flex-wrap items-center justify-center gap-2 rounded-md bg-secondary/25 p-4">
+                    <Input
+                        type="text"
+                        placeholder="Search weapons..."
+                        value={searchTerm}
+                        onChange={(e) => setSearchTerm(e.target.value)}
+                        className="max-w-[20rem]"
+                    />
+                    <div className="flex items-center justify-center gap-2">
+                        <span className="ml-4 text-sm text-muted-foreground">
+                            Rarity:
+                        </span>
+                        <div className="w-[10rem]">
                             <CustomSelect
-                                options={rarityOptions.map((rarity) => ({ value: rarity, label: rarity }))}
+                                options={rarityOptions.map((rarity) => ({
+                                    value: rarity,
+                                    label: rarity,
+                                }))}
                                 value={selectedRarity}
                                 onChange={(value) => setSelectedRarity(value)}
                             />
                         </div>
                     </div>
-                </DialogHeader>
+                </div>
                 <div className="flex flex-wrap justify-center gap-[10px]">
                     {filteredWeapons.map((rawWeapon) => (
                         <div
@@ -113,7 +119,7 @@ const WeaponModal = ({
                             onClick={() => handleWeaponSelect(rawWeapon.name)}
                         >
                             <TooltipProvider>
-                                <Tooltip delayDuration={300} disableHoverableContent={true}>
+                                <Tooltip delayDuration={300} skipDelayDuration={300}>
                                     <TooltipTrigger asChild>
                                         <Image
                                             src={`/images/weapons/${kebabCase(
@@ -125,7 +131,11 @@ const WeaponModal = ({
                                             className="drop-shadow"
                                         />
                                     </TooltipTrigger>
-                                    <TooltipContent side="top" align="start" collisionPadding={150}>
+                                    <TooltipContent
+                                        side="top"
+                                        align="center"
+                                        className="z-[100] !opacity-100"
+                                    >
                                         {rawWeapon.name}
                                     </TooltipContent>
                                 </Tooltip>

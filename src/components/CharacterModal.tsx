@@ -1,25 +1,32 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
-import Image from 'next/image'
-import { Character, RawCharacter } from '@/interfaces/Character'
+import CustomSelect from '@/components/CustomSelect'
 import {
     Dialog,
     DialogContent,
+    DialogDescription,
     DialogHeader,
     DialogTitle,
-    DialogDescription,
 } from '@/components/ui/dialog'
+import { Input } from '@/components/ui/input'
 import {
     Tooltip,
     TooltipContent,
     TooltipProvider,
     TooltipTrigger,
-} from "@/components/ui/tooltip"
-import { Input } from "@/components/ui/input"
-import { elementColors, compareElement, kebabCase } from '@/lib'
+} from '@/components/ui/tooltip'
 import { characterData } from '@/data'
-import CustomSelect from '@/components/CustomSelect';
+import { Character, RawCharacter } from '@/interfaces/Character'
+import {
+    compareElement,
+    elementColors,
+    kebabCase,
+    rarityOptions,
+    visionOptions,
+    weaponOptions,
+} from '@/lib'
+import Image from 'next/image'
+import { useEffect, useState } from 'react'
 
 interface CharacterModalProps {
     open: boolean
@@ -32,9 +39,11 @@ const CharacterModal = ({
     onOpenChange,
     setCharacter,
 }: CharacterModalProps) => {
+    const DEFAULT_CHARACTER = 'Furina'
+
     const [rawCharacters, setRawCharacters] = useState<RawCharacter[]>([])
     const [filteredCharacters, setFilteredCharacters] = useState<RawCharacter[]>([])
-    const DEFAULT_CHARACTER = 'Nahida'
+
     const [searchTerm, setSearchTerm] = useState<string>('')
     const [selectedVision, setSelectedVision] = useState<string>('All')
     const [selectedWeapon, setSelectedWeapon] = useState<string>('All')
@@ -48,15 +57,20 @@ const CharacterModal = ({
     }, [])
 
     useEffect(() => {
-        const lowerCaseSearchTerm = searchTerm.toLowerCase()
-        const filteredList = rawCharacters.filter((char) =>
-          char.name.toLowerCase().startsWith(lowerCaseSearchTerm) &&
-          (selectedVision === 'All' || char.vision.toLowerCase() === selectedVision.toLowerCase()) &&
-          (selectedWeapon === 'All' || char.weapon.toLowerCase() === selectedWeapon.toLowerCase()) &&
-          (selectedRarity === 'All' || char.rarity === parseInt(selectedRarity.substring(0,1)))
+        const filteredList = rawCharacters.filter(
+            (rawCharacter) =>
+                rawCharacter.name
+                    .toLowerCase()
+                    .startsWith(searchTerm.toLowerCase()) &&
+                (selectedVision === 'All' ||
+                    rawCharacter.vision === selectedVision) &&
+                (selectedWeapon === 'All' ||
+                    rawCharacter.weapon === selectedWeapon) &&
+                (selectedRarity === 'All' ||
+                    rawCharacter.rarity === parseInt(selectedRarity.substring(0, 1)))
         )
         setFilteredCharacters(filteredList)
-    }, [searchTerm, selectedVision, selectedWeapon, selectedRarity, rawCharacters]);
+    }, [searchTerm, selectedVision, selectedWeapon, selectedRarity, rawCharacters])
 
     const selectDefaultCharacter = async (
         defaultName: string,
@@ -84,10 +98,6 @@ const CharacterModal = ({
         compareElement(a.vision.toLowerCase(), b.vision.toLowerCase())
     )
 
-    const visionOptions = ['All', 'Anemo', 'Geo', 'Electro', 'Dendro', 'Hydro', 'Pyro'];
-    const weaponOptions = ['All', 'Bow', 'Claymore', 'Catalyst', 'Polearm', 'Sword'];
-    const rarityOptions = ['All', '5 Star', '4 Star'];
-
     return (
         <Dialog open={open} onOpenChange={onOpenChange}>
             <DialogContent>
@@ -96,62 +106,79 @@ const CharacterModal = ({
                     <DialogDescription>
                         {`${filteredCharacters.length} available characters`}
                     </DialogDescription>
-                    <div className="flex flex-wrap justify-center">
-                        <Input
-                            type="text"
-                            placeholder="Search characters"
-                            value={searchTerm}
-                            onChange={(e) => setSearchTerm(e.target.value)}
-                        />
-                    </div>
-                    <div className="grid grid-cols-3 grid-rows-1 gap-x-10">
-                        <div>
-                            <p>
-                                Element: 
-                            </p>
+                </DialogHeader>
+                <div className="-mt-4 flex flex-wrap items-center justify-center gap-2 rounded-md bg-secondary/25 p-4">
+                    <Input
+                        type="text"
+                        placeholder="Search characters..."
+                        value={searchTerm}
+                        onChange={(e) => setSearchTerm(e.target.value)}
+                        className="max-w-[20rem]"
+                    />
+                    <div className="flex items-center justify-center gap-2">
+                        <span className="ml-4 text-sm text-muted-foreground">
+                            Vision:
+                        </span>
+                        <div className="w-[10rem]">
                             <CustomSelect
-                                options={visionOptions.map((vision) => ({ value: vision, label: vision }))}
+                                options={visionOptions.map((vision) => ({
+                                    value: vision,
+                                    label: vision,
+                                }))}
                                 value={selectedVision}
                                 onChange={(value) => setSelectedVision(value)}
                             />
                         </div>
-                        <div>
-                            <p>
-                                Weapon: 
-                            </p>
+                    </div>
+                    <div className="flex items-center justify-center gap-2">
+                        <span className="ml-4 text-sm text-muted-foreground">
+                            Weapon:
+                        </span>
+                        <div className="w-[10rem]">
                             <CustomSelect
-                                options={weaponOptions.map((weapon) => ({ value: weapon, label: weapon }))}
+                                options={weaponOptions.map((weapon) => ({
+                                    value: weapon,
+                                    label: weapon,
+                                }))}
                                 value={selectedWeapon}
                                 onChange={(value) => setSelectedWeapon(value)}
                             />
                         </div>
-                        <div>
-                            <p>
-                                Quality: 
-                            </p>
+                    </div>
+                    <div className="flex items-center justify-center gap-2">
+                        <span className="ml-4 text-sm text-muted-foreground">
+                            Rarity:
+                        </span>
+                        <div className="w-[10rem]">
                             <CustomSelect
-                                options={rarityOptions.map((rarity) => ({ value: rarity, label: rarity }))}
+                                options={rarityOptions.map((rarity) => ({
+                                    value: rarity,
+                                    label: rarity,
+                                }))}
                                 value={selectedRarity}
                                 onChange={(value) => setSelectedRarity(value)}
                             />
                         </div>
                     </div>
-                </DialogHeader>
+                </div>
                 <div className="flex flex-wrap justify-center gap-[6px]">
                     {filteredCharacters.map((rawCharacter) => (
-                        <div
-                            key={rawCharacter.name}
-                            className="relative"
-                        >
+                        <div key={rawCharacter.name} className="relative">
                             <TooltipProvider>
-                                <Tooltip delayDuration={300} disableHoverableContent={true}>
+                                <Tooltip delayDuration={300} skipDelayDuration={300}>
                                     <TooltipTrigger asChild>
                                         <Image
                                             src={rawCharacter.icon}
                                             alt={rawCharacter.name}
-                                            onClick={() => handleCharacterSelect(rawCharacter.name)}
+                                            onClick={() =>
+                                                handleCharacterSelect(
+                                                    rawCharacter.name
+                                                )
+                                            }
                                             className={`cursor-pointer rounded-full object-cover transition-all duration-100 ease-in hover:scale-105 ${
-                                                rawCharacter.implemented ? '' : 'opacity-25'
+                                                rawCharacter.implemented
+                                                    ? ''
+                                                    : 'opacity-25'
                                             }`}
                                             width={70}
                                             height={70}
@@ -163,7 +190,7 @@ const CharacterModal = ({
                                             }}
                                         />
                                     </TooltipTrigger>
-                                    <TooltipContent side="bottom" align="center" collisionPadding={150}>
+                                    <TooltipContent side="top" align="center">
                                         {rawCharacter.name}
                                     </TooltipContent>
                                 </Tooltip>

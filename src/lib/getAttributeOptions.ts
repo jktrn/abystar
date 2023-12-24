@@ -54,10 +54,17 @@ const levelOptions = [
     '90/90',
 ]
 
+const visionOptions = ['All', 'Anemo', 'Geo', 'Electro', 'Dendro', 'Hydro', 'Pyro']
+const weaponOptions = ['All', 'Bow', 'Claymore', 'Catalyst', 'Polearm', 'Sword']
+const rarityOptions = ['All', '5 Star', '4 Star']
+
 export {
     getLevelOptions,
     getConstellationOptions,
     getTalentOptions,
     getRefinementOptions,
     levelOptions,
+    visionOptions,
+    weaponOptions,
+    rarityOptions,
 }

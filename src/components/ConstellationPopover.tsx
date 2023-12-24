@@ -1,7 +1,7 @@
-import Image from 'next/image'
-import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'
 import { Badge } from '@/components/ui/badge'
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'
 import { CharacterState } from '@/interfaces/Character'
+import Image from 'next/image'
 
 interface ConstellationSelectProps {
     characterState: CharacterState

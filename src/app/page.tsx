@@ -43,16 +43,6 @@ export default function Home() {
     const [isCharacterModalOpen, setCharacterModalOpen] = useState(false)
     const [isWeaponModalOpen, setWeaponModalOpen] = useState(false)
 
-    // useEffect(() => {
-    //     fetch('/api/enka/id/608073512').then((response) => {
-    //         if (response.ok) {
-    //             response.json().then((data: PlayerData) => {
-    //                 console.log(data)
-    //             })
-    //         }
-    //     })
-    // }, [])
-
     const handleCharacterSelect = async (selectedCharacter: Character) => {
         const defaultWeapon = await getDefaultWeapon(selectedCharacter.weapon)
 

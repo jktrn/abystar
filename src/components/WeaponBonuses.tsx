@@ -1,9 +1,8 @@
 'use client'
 
-import React from 'react'
-import BonusToggle from './BonusToggle'
 import { Bonus, CharacterState } from '@/interfaces/Character'
 import { handleBonusToggle } from '@/lib'
+import BonusToggle from './BonusToggle'
 
 interface WeaponBonusesProps {
     characterState: CharacterState
