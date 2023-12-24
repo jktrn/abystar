@@ -25,15 +25,26 @@ const CharacterModal = ({
     setCharacter,
 }: CharacterModalProps) => {
     const [rawCharacters, setRawCharacters] = useState<RawCharacter[]>([])
+    const [filteredCharacters, setFilteredCharacters] = useState<RawCharacter[]>([]);
     const DEFAULT_CHARACTER = 'Nahida'
     const [hoveredCharacter, setHoveredCharacter] = useState<string | null>(null);
     const [timeoutId, setTimeoutId] = useState<number | null>(null);
+    const [searchTerm, setSearchTerm] = useState<string>('');
 
     useEffect(() => {
         const charactersArray = Object.values(characterData)
         setRawCharacters(charactersArray)
         selectDefaultCharacter(DEFAULT_CHARACTER, charactersArray)
+        setFilteredCharacters(charactersArray)
     }, [])
+
+    useEffect(() => {
+        const lowerCaseSearchTerm = searchTerm.toLowerCase();
+        const filteredList = rawCharacters.filter((char) =>
+          char.name.toLowerCase().startsWith(lowerCaseSearchTerm)
+        );
+        setFilteredCharacters(filteredList);
+    }, [searchTerm, rawCharacters]);
 
     const selectDefaultCharacter = async (
         defaultName: string,
@@ -58,7 +69,6 @@ const CharacterModal = ({
     }
 
     const handleMouseEnter = (characterName: string) => {
-        // Delay showing the character name after 0.5 seconds
         const id: number = window.setTimeout(() => {
             setHoveredCharacter(characterName);
         }, 500);
@@ -66,7 +76,6 @@ const CharacterModal = ({
     };
 
     const handleMouseLeave = () => {
-        // Clear the timeout and reset the hovered character
         if (timeoutId !== null) {
             window.clearTimeout(timeoutId);
             setTimeoutId(null);
@@ -74,7 +83,7 @@ const CharacterModal = ({
         setHoveredCharacter(null);
     };
 
-    const sortedRawCharacters = rawCharacters.sort((a, b) =>
+    rawCharacters.sort((a, b) =>
         compareElement(a.vision.toLowerCase(), b.vision.toLowerCase())
     )
 
@@ -84,11 +93,18 @@ const CharacterModal = ({
                 <DialogHeader className="mb-4 flex items-center justify-between">
                     <DialogTitle>Select a Character</DialogTitle>
                     <DialogDescription>
-                        {`${sortedRawCharacters.length} available characters`}
+                        {`${filteredCharacters.length} available characters`}
                     </DialogDescription>
+                    <input
+                        type="text"
+                        placeholder="Search characters"
+                        value={searchTerm}
+                        onChange={(e) => setSearchTerm(e.target.value)}
+                        className="p-2 border rounded focus:outline-none focus:border-emerald-400"
+                    />
                 </DialogHeader>
                 <div className="flex flex-wrap justify-center gap-[6px]">
-                    {sortedRawCharacters.map((rawCharacter) => (
+                    {filteredCharacters.map((rawCharacter) => (
                         <div
                             key={rawCharacter.name}
                             className="relative"
