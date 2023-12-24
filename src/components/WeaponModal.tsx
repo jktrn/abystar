@@ -27,6 +27,8 @@ const WeaponModal = ({
     characterWeaponType,
 }: WeaponModalProps) => {
     const [rawWeapons, setRawWeapons] = useState<RawWeapon[]>([])
+    const [hoveredWeapon, setHoveredWeapon] = useState<string | null>(null);
+    const [timeoutId, setTimeoutId] = useState<number | null>(null);
 
     // Sorts by rarity
     useEffect(() => {
@@ -48,6 +50,23 @@ const WeaponModal = ({
         onOpenChange(false)
     }
 
+    const handleMouseEnter = (weaponName: string) => {
+        // Delay showing the weapon name after 0.5 seconds
+        const id: number = window.setTimeout(() => {
+            setHoveredWeapon(weaponName);
+        }, 500);
+        setTimeoutId(id);
+    };
+
+    const handleMouseLeave = () => {
+        // Clear the timeout and reset the hovered weapon
+        if (timeoutId !== null) {
+            window.clearTimeout(timeoutId);
+            setTimeoutId(null);
+        }
+        setHoveredWeapon(null);
+    };
+
     return (
         <Dialog open={open} onOpenChange={onOpenChange}>
             <DialogContent>
@@ -68,6 +87,8 @@ const WeaponModal = ({
                                 rawWeapon.implemented ? '' : 'opacity-25'
                             }`}
                             onClick={() => handleWeaponSelect(rawWeapon.name)}
+                            onMouseEnter={() => handleMouseEnter(rawWeapon.name)}
+                            onMouseLeave={handleMouseLeave}
                         >
                             <Image
                                 src={`/images/weapons/${kebabCase(
@@ -78,6 +99,17 @@ const WeaponModal = ({
                                 height={100}
                                 className="drop-shadow"
                             />
+                            {hoveredWeapon === rawWeapon.name && (
+                                <div className={`absolute top-20 bg-black p-1 rounded-md transition-all duration-100 ease-in ${
+                                    rawWeapon.implemented ? 'opacity-80' : 'opacity-25'
+                                }`}
+                                style={{ 
+                                    zIndex: 1,
+                                    pointerEvents: 'none' }}
+                                >
+                                    {rawWeapon.name}
+                                </div>
+                            )}
                         </div>
                     ))}
                 </div>
