@@ -12,6 +12,7 @@ import {
 } from '@/components/ui/dialog'
 import { elementColors, compareElement, kebabCase } from '@/lib'
 import { characterData } from '@/data'
+import CustomSelect from '@/components/CustomSelect';
 
 interface CharacterModalProps {
     open: boolean
@@ -25,11 +26,14 @@ const CharacterModal = ({
     setCharacter,
 }: CharacterModalProps) => {
     const [rawCharacters, setRawCharacters] = useState<RawCharacter[]>([])
-    const [filteredCharacters, setFilteredCharacters] = useState<RawCharacter[]>([]);
+    const [filteredCharacters, setFilteredCharacters] = useState<RawCharacter[]>([])
     const DEFAULT_CHARACTER = 'Nahida'
     const [hoveredCharacter, setHoveredCharacter] = useState<string | null>(null);
-    const [timeoutId, setTimeoutId] = useState<number | null>(null);
-    const [searchTerm, setSearchTerm] = useState<string>('');
+    const [timeoutId, setTimeoutId] = useState<number | null>(null)
+    const [searchTerm, setSearchTerm] = useState<string>('')
+    const [selectedVision, setSelectedVision] = useState<string>('All')
+    const [selectedWeapon, setSelectedWeapon] = useState<string>('All')
+    const [selectedRarity, setSelectedRarity] = useState<string>('All')
 
     useEffect(() => {
         const charactersArray = Object.values(characterData)
@@ -39,12 +43,15 @@ const CharacterModal = ({
     }, [])
 
     useEffect(() => {
-        const lowerCaseSearchTerm = searchTerm.toLowerCase();
+        const lowerCaseSearchTerm = searchTerm.toLowerCase()
         const filteredList = rawCharacters.filter((char) =>
-          char.name.toLowerCase().startsWith(lowerCaseSearchTerm)
-        );
-        setFilteredCharacters(filteredList);
-    }, [searchTerm, rawCharacters]);
+          char.name.toLowerCase().startsWith(lowerCaseSearchTerm) &&
+          (selectedVision === 'All' || char.vision.toLowerCase() === selectedVision.toLowerCase()) &&
+          (selectedWeapon === 'All' || char.weapon.toLowerCase() === selectedWeapon.toLowerCase()) &&
+          (selectedRarity === 'All' || char.rarity === parseInt(selectedRarity.substring(0,1)))
+        )
+        setFilteredCharacters(filteredList)
+    }, [searchTerm, selectedVision, selectedWeapon, selectedRarity, rawCharacters]);
 
     const selectDefaultCharacter = async (
         defaultName: string,
@@ -70,22 +77,26 @@ const CharacterModal = ({
 
     const handleMouseEnter = (characterName: string) => {
         const id: number = window.setTimeout(() => {
-            setHoveredCharacter(characterName);
-        }, 500);
-        setTimeoutId(id);
+            setHoveredCharacter(characterName)
+        }, 500)
+        setTimeoutId(id)
     };
 
     const handleMouseLeave = () => {
         if (timeoutId !== null) {
-            window.clearTimeout(timeoutId);
-            setTimeoutId(null);
+            window.clearTimeout(timeoutId)
+            setTimeoutId(null)
         }
-        setHoveredCharacter(null);
+        setHoveredCharacter(null)
     };
 
     rawCharacters.sort((a, b) =>
         compareElement(a.vision.toLowerCase(), b.vision.toLowerCase())
     )
+
+    const visionOptions = ['All', 'Anemo', 'Geo', 'Electro', 'Dendro', 'Hydro', 'Pyro'];
+    const weaponOptions = ['All', 'Bow', 'Claymore', 'Catalyst', 'Polearm', 'Sword'];
+    const rarityOptions = ['All', '5 Star', '4 Star'];
 
     return (
         <Dialog open={open} onOpenChange={onOpenChange}>
@@ -102,6 +113,38 @@ const CharacterModal = ({
                         onChange={(e) => setSearchTerm(e.target.value)}
                         className="p-2 border rounded focus:outline-none focus:border-emerald-400"
                     />
+                    <div className="grid grid-cols-3 grid-rows-1 gap-x-10">
+                        <div>
+                            <p>
+                                Element: 
+                            </p>
+                            <CustomSelect
+                                options={visionOptions.map((vision) => ({ value: vision, label: vision }))}
+                                value={selectedVision}
+                                onChange={(value) => setSelectedVision(value)}
+                            />
+                        </div>
+                        <div>
+                            <p>
+                                Weapon: 
+                            </p>
+                            <CustomSelect
+                                options={weaponOptions.map((weapon) => ({ value: weapon, label: weapon }))}
+                                value={selectedWeapon}
+                                onChange={(value) => setSelectedWeapon(value)}
+                            />
+                        </div>
+                        <div>
+                            <p>
+                                Quality: 
+                            </p>
+                            <CustomSelect
+                                options={rarityOptions.map((rarity) => ({ value: rarity, label: rarity }))}
+                                value={selectedRarity}
+                                onChange={(value) => setSelectedRarity(value)}
+                            />
+                        </div>
+                    </div>
                 </DialogHeader>
                 <div className="flex flex-wrap justify-center gap-[6px]">
                     {filteredCharacters.map((rawCharacter) => (
