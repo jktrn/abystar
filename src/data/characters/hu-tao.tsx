@@ -149,6 +149,7 @@ const talentScalings: TalentScaling = {
             attribute: ['ATK'],
             additiveBonusStat: ['Elemental Burst Additive Bonus'],
             multiplicativeBonusStat: ['Pyro DMG Bonus', 'Elemental Burst DMG Bonus'],
+            critRateBonusStat: ['Elemental Burst CRIT Rate'],
             damageType: DamageType.Pyro,
         },
         'Low HP Skill DMG': {
@@ -156,6 +157,7 @@ const talentScalings: TalentScaling = {
             attribute: ['ATK'],
             additiveBonusStat: ['Elemental Burst Additive Bonus'],
             multiplicativeBonusStat: ['Pyro DMG Bonus', 'Elemental Burst DMG Bonus'],
+            critRateBonusStat: ['Elemental Burst CRIT Rate'],
             damageType: DamageType.Pyro,
         },
         'Skill HP Regeneration': {

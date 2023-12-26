@@ -86,7 +86,8 @@
                 "description": "Increases Elemental Burst DMG by 32% and Elemental Burst CRIT Rate by 12%.",
                 "level": 5
             }
-        ]
+        ],
+        "implemented": true
     },
     "\"Ultimate Overlord's Mega Magic Sword\"": {
         "name": "\"Ultimate Overlord's Mega Magic Sword\"",
