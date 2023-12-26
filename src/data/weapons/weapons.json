@@ -2571,7 +2571,8 @@
                 "description": "If there are at least 2 opponents nearby, ATK is increased by 32% and DEF is increased by 32%. If there are fewer than 2 opponents nearby, ATK is increased by 48%.",
                 "level": 5
             }
-        ]
+        ],
+        "implemented": true
     },
     "Debate Club": {
         "name": "Debate Club",
