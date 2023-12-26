@@ -1,9 +1,37 @@
 import { Weapon } from '@/interfaces/Weapon'
-// import { Bonus } from '@/interfaces/Character'
+import { Bonus } from '@/interfaces/Character'
 
-// const weaponBonuses: Bonus[] = [
-// TODO: Implement
-// ]
+const weaponBonuses: Bonus[] = [
+    {
+        name: 'Golden Majesty',
+        effect: (attributes, talentLevels, currentStacks, state) => {
+            if (!currentStacks || !state || !state.weaponRefinement) {
+                return { attributes }
+            }
+
+            const shieldStrengthBonusPerStack = [0.2, 0.25, 0.3, 0.35, 0.4]
+            const attackBonusPerStack = [0.04, 0.05, 0.06, 0.07, 0.08]
+
+            let attackBonus = 0
+
+            if(currentStacks <= 5) {
+                attackBonus = 1 + currentStacks * attackBonusPerStack[state.weaponRefinement - 1] * 2
+            } else if (currentStacks > 5) {
+                attackBonus = 1 + currentStacks * attackBonusPerStack[state.weaponRefinement - 1]
+            }
+
+            const newAttributes = {
+                ...attributes,
+                'Shield Strength': (attributes['Shield Strength'] || 0) + shieldStrengthBonusPerStack[state.weaponRefinement - 1],
+                ATK: (attributes['ATK'] || 0) * attackBonus
+            }
+            return { attributes: newAttributes }
+        },
+        maxStacks: 10,
+        stackOptions: ['Off', 'Shielded 1 Stack', 'Shielded 2 Stacks', 'Shielded 3 Stacks', 'Shielded 4 Stacks', 'Shielded 5 Stacks', 'Unshielded 1 Stack', 'Unshielded 2 Stacks', 'Unshielded 3 Stacks', 'Unshielded 4 Stacks', 'Unshielded 5 Stacks'],
+        priority: 1
+    }
+]
 
 const VortexVanquisher: Weapon = {
     name: 'Vortex Vanquisher',
@@ -76,31 +104,61 @@ const VortexVanquisher: Weapon = {
     refinements: [
         {
             description:
-                'Increases Shield Strength by 20%. Scoring hits on opponents increases ATK by 4% for 8s. Max 5 stacks. Can only occur once every 0.3s. While protected by a shield, this ATK increase effect is increased by 100%.',
+                <span>
+                    Increases Shield Strength by <span style={{ color: '#ddd' }}>20%</span>. Scoring hits on opponents increases ATK by <span style={{ color: '#ddd' }}>4%</span> {' '}
+                    for <span style={{ color: '#ddd' }}>8s</span>. Max 5 stacks. 
+                    Can only occur once every <span style={{ color: '#ddd' }}>0.3s</span>. 
+                    While protected by a shield, this ATK increase effect is increased by <span style={{ color: '#ddd' }}>100%</span>.
+                </span>
+                ,
             level: 1,
         },
         {
             description:
-                'Increases Shield Strength by 25%. Scoring hits on opponents increases ATK by 5% for 8s. Max 5 stacks. Can only occur once every 0.3s. While protected by a shield, this ATK increase effect is increased by 100%.',
+            <span>
+                Increases Shield Strength by <span style={{ color: '#ddd' }}>25%</span>. Scoring hits on opponents increases ATK by <span style={{ color: '#ddd' }}>5%</span> {' '}
+                for <span style={{ color: '#ddd' }}>8s</span>. Max 5 stacks. 
+                Can only occur once every <span style={{ color: '#ddd' }}>0.3s</span>. 
+                While protected by a shield, this ATK increase effect is increased by <span style={{ color: '#ddd' }}>100%</span>.
+            </span>
+            ,
             level: 2,
         },
         {
             description:
-                'Increases Shield Strength by 30%. Scoring hits on opponents increases ATK by 6% for 8s. Max 5 stacks. Can only occur once every 0.3s. While protected by a shield, this ATK increase effect is increased by 100%.',
+            <span>
+                Increases Shield Strength by <span style={{ color: '#ddd' }}>30%</span>. Scoring hits on opponents increases ATK by <span style={{ color: '#ddd' }}>6%</span> {' '}
+                for <span style={{ color: '#ddd' }}>8s</span>. Max 5 stacks. 
+                Can only occur once every <span style={{ color: '#ddd' }}>0.3s</span>. 
+                While protected by a shield, this ATK increase effect is increased by <span style={{ color: '#ddd' }}>100%</span>.
+            </span>
+            ,
             level: 3,
         },
         {
             description:
-                'Increases Shield Strength by 35%. Scoring hits on opponents increases ATK by 7% for 8s. Max 5 stacks. Can only occur once every 0.3s. While protected by a shield, this ATK increase effect is increased by 100%.',
+            <span>
+                Increases Shield Strength by <span style={{ color: '#ddd' }}>35%</span>. Scoring hits on opponents increases ATK by <span style={{ color: '#ddd' }}>7%</span> {' '}
+                for <span style={{ color: '#ddd' }}>8s</span>. Max 5 stacks. 
+                Can only occur once every <span style={{ color: '#ddd' }}>0.3s</span>. 
+                While protected by a shield, this ATK increase effect is increased by <span style={{ color: '#ddd' }}>100%</span>.
+            </span>
+            ,
             level: 4,
         },
         {
             description:
-                'Increases Shield Strength by 40%. Scoring hits on opponents increases ATK by 8% for 8s. Max 5 stacks. Can only occur once every 0.3s. While protected by a shield, this ATK increase effect is increased by 100%.',
+            <span>
+                Increases Shield Strength by <span style={{ color: '#ddd' }}>40%</span>. Scoring hits on opponents increases ATK by <span style={{ color: '#ddd' }}>8%</span> {' '}
+                for <span style={{ color: '#ddd' }}>8s</span>. Max 5 stacks. 
+                Can only occur once every <span style={{ color: '#ddd' }}>0.3s</span>. 
+                While protected by a shield, this ATK increase effect is increased by <span style={{ color: '#ddd' }}>100%</span>.
+            </span>
+            ,
             level: 5,
         },
     ],
-    // weaponBonuses
+    weaponBonuses
 }
 
 export default VortexVanquisher
