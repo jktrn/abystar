@@ -3857,7 +3857,8 @@
                 "description": "CRIT Hits have a 100% chance to generate a small amount of Elemental Particles, which will regenerate 6 Energy for the character. Can only occur once every 6s.",
                 "level": 5
             }
-        ]
+        ],
+        "implemented": true
     },
     "Favonius Sword": {
         "name": "Favonius Sword",
