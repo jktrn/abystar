@@ -1,9 +1,26 @@
 import { Weapon } from '@/interfaces/Weapon'
-// import { Bonus } from '@/interfaces/Character'
+import { Bonus } from '@/interfaces/Character'
 
-// const weaponBonuses: Bonus[] = [
-// TODO: Implement
-// ]
+const weaponBonuses: Bonus[] = [
+    {
+        name: 'Bane of the Soft',
+        effect: (attributes, talentLevels, currentStacks, state) => {
+            if (!currentStacks || !state || !state.weaponRefinement) {
+                return { attributes }
+            }
+
+            const slimeDamageBonusPerStack = [0.4, 0.5, 0.6, 0.7, 0.8] 
+
+            const newAttributes = {
+                ...attributes,
+                'All DMG Bonus': (attributes['All DMG Bonus'] || 0) + slimeDamageBonusPerStack[state.weaponRefinement - 1]
+            }
+            return { attributes: newAttributes }
+        },
+        enabled: false,
+        priority: 1
+    }
+]
 
 const BlackTassel: Weapon = {
     name: 'Black Tassel',
@@ -74,27 +91,47 @@ const BlackTassel: Weapon = {
     },
     refinements: [
         {
-            description: 'Increases DMG against slimes by 40%.',
+            description: 
+            <span>
+                Increases DMG against slimes by <span style={{ color: '#ddd' }}>40%</span>.
+            </span>
+            ,
             level: 1,
         },
         {
-            description: 'Increases DMG against slimes by 50%.',
+            description: 
+            <span>
+                Increases DMG against slimes by <span style={{ color: '#ddd' }}>50%</span>.
+            </span>
+            ,
             level: 2,
         },
         {
-            description: 'Increases DMG against slimes by 60%.',
+            description: 
+            <span>
+                Increases DMG against slimes by <span style={{ color: '#ddd' }}>60%</span>.
+            </span>
+            ,
             level: 3,
         },
         {
-            description: 'Increases DMG against slimes by 70%.',
+            description: 
+            <span>
+                Increases DMG against slimes by <span style={{ color: '#ddd' }}>70%</span>.
+            </span>
+            ,
             level: 4,
         },
         {
-            description: 'Increases DMG against slimes by 80%.',
+            description: 
+            <span>
+                Increases DMG against slimes by <span style={{ color: '#ddd' }}>80%</span>.
+            </span>
+            ,
             level: 5,
         },
     ],
-    // weaponBonuses
+    weaponBonuses
 }
 
 export default BlackTassel

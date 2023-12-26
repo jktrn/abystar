@@ -1235,7 +1235,8 @@
                 "description": "Increases DMG against slimes by 80%.",
                 "level": 5
             }
-        ]
+        ],
+        "implemented": true
     },
     "Blackcliff Agate": {
         "name": "Blackcliff Agate",
