@@ -1503,7 +1503,8 @@
                 "description": "After defeating an enemy, ATK is increased by 24% for 30s. This effect has a maximum of 3 stacks, and the duration of each stack is independent of the others.",
                 "level": 5
             }
-        ]
+        ],
+        "implemented": true
     },
     "Blackcliff Slasher": {
         "name": "Blackcliff Slasher",
