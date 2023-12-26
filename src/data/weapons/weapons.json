@@ -2838,7 +2838,8 @@
                 "description": "Increases DMG against opponents affected by Hydro or Pyro by 36%.",
                 "level": 5
             }
-        ]
+        ],
+        "implemented": true
     },
     "Dragonspine Spear": {
         "name": "Dragonspine Spear",
