@@ -10038,7 +10038,8 @@
                 "description": "Upon damaging an opponent, increases CRIT Rate by 16%. Max 5 stacks. A CRIT Hit removes all stacks.",
                 "level": 5
             }
-        ]
+        ],
+        "implemented": true
     },
     "Rust": {
         "name": "Rust",
