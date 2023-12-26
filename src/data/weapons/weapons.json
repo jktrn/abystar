@@ -5102,7 +5102,8 @@
                 "description": "Normal Attacks deal an additional 320% ATK as DMG. This effect can only occur once every 10s.",
                 "level": 5
             }
-        ]
+        ],
+        "implemented": true
     },
     "Hamayumi": {
         "name": "Hamayumi",

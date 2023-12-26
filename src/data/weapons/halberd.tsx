@@ -1,9 +1,26 @@
 import { Weapon } from '@/interfaces/Weapon'
-// import { Bonus } from '@/interfaces/Character'
+import { Bonus } from '@/interfaces/Character'
 
-// const weaponBonuses: Bonus[] = [
-// TODO: Implement
-// ]
+const weaponBonuses: Bonus[] = [
+    {
+        name: 'Heavy',
+        effect: (attributes, talentLevels, currentStacks, state) => {
+            if (!currentStacks || !state || !state.weaponRefinement) {
+                return { attributes }
+            }
+
+            const normalAttackAdditivePerStack = [1.6, 2.0, 2.4, 2.8, 3.2] 
+
+            const newAttributes = {
+                ...attributes,
+                'Normal Attack Additive Bonus': (attributes['Normal Attack Additive Bonus'] || 0) + (normalAttackAdditivePerStack[state.weaponRefinement - 1] * attributes['ATK'])
+            }
+            return { attributes: newAttributes }
+        },
+        enabled: false,
+        priority: 2
+    }
+]
 
 const Halberd: Weapon = {
     name: 'Halberd',
@@ -76,31 +93,46 @@ const Halberd: Weapon = {
     refinements: [
         {
             description:
-                'Normal Attacks deal an additional 160% ATK as DMG. Can only occur once every 10s.',
+                <span>
+                    Normal Attacks deal an additional <span style={{ color: '#ddd' }}>160%</span> ATK as DMG. This effect can only occur once every <span style={{ color: '#ddd' }}>10s</span>.
+                </span>
+                ,
             level: 1,
         },
         {
             description:
-                'Normal Attacks deal an additional 200% ATK as DMG. This effect can only occur once every 10s.',
+                <span>
+                    Normal Attacks deal an additional <span style={{ color: '#ddd' }}>200%</span> ATK as DMG. This effect can only occur once every <span style={{ color: '#ddd' }}>10s</span>.
+                </span>
+                ,
             level: 2,
         },
         {
             description:
-                'Normal Attacks deal an additional 240% ATK as DMG. This effect can only occur once every 10s.',
+                <span>
+                    Normal Attacks deal an additional <span style={{ color: '#ddd' }}>240%</span> ATK as DMG. This effect can only occur once every <span style={{ color: '#ddd' }}>10s</span>.
+                </span>
+                ,
             level: 3,
         },
         {
             description:
-                'Normal Attacks deal an additional 280% ATK as DMG. This effect can only occur once every 10s.',
+                <span>
+                    Normal Attacks deal an additional <span style={{ color: '#ddd' }}>280%</span> ATK as DMG. This effect can only occur once every <span style={{ color: '#ddd' }}>10s</span>.
+                </span>
+                ,
             level: 4,
         },
         {
             description:
-                'Normal Attacks deal an additional 320% ATK as DMG. This effect can only occur once every 10s.',
+                <span>
+                    Normal Attacks deal an additional <span style={{ color: '#ddd' }}>320%</span> ATK as DMG. This effect can only occur once every <span style={{ color: '#ddd' }}>10s</span>.
+                </span>
+                ,
             level: 5,
         },
     ],
-    // weaponBonuses
+    weaponBonuses
 }
 
 export default Halberd
