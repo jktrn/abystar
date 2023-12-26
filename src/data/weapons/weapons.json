@@ -1017,7 +1017,8 @@
                 "description": "When there are at least 3 different Elemental Types in your party, Elemental Mastery will be increased by 240.",
                 "level": 5
             }
-        ]
+        ],
+        "implemented": true
     },
     "Beacon of the Reed Sea": {
         "name": "Beacon of the Reed Sea",
