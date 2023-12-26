@@ -7482,7 +7482,8 @@
                 "description": "Within 10s after an Elemental Reaction is triggered, ATK is increased by 24% and Elemental Mastery is increased by 96.",
                 "level": 5
             }
-        ]
+        ],
+        "implemented": true
     },
     "Mistsplitter Reforged": {
         "name": "Mistsplitter Reforged",
