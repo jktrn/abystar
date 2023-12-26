@@ -1,9 +1,28 @@
 import { Weapon } from '@/interfaces/Weapon'
-// import { Bonus } from '@/interfaces/Character'
+import { Bonus } from '@/interfaces/Character'
 
-// const weaponBonuses: Bonus[] = [
-// TODO: Implement
-// ]
+const weaponBonuses: Bonus[] = [
+    {
+        name: 'Watatsumi Wavewalker',
+        effect: (attributes, talentLevels, currentStacks, state) => {
+            if (!currentStacks || !state || !state.weaponRefinement) {
+                return { attributes }
+            }
+
+            const elementalBurstBonusPerStack = [0.0012, 0.0015, 0.0018, 0.0021, 0.0024]
+            const maxBonusPerStack = [0.4, 0.5, 0.6, 0.7, 0.8]
+
+            const newAttributes = {
+                ...attributes,
+                'Elemental Burst DMG Bonus': (attributes['Elemental Burst DMG Bonus'] || 0) + Math.min(elementalBurstBonusPerStack[state.weaponRefinement - 1] * ((currentStacks * 10 + 30) * 4), maxBonusPerStack[state.weaponRefinement - 1])
+            }
+            return { attributes: newAttributes }
+        },
+        maxStacks: 6,
+        stackOptions: ['Off', '40 Cost', '50 Cost', '60 Cost', '70 Cost', '80 Cost', '90 Cost'],
+        priority: 1
+    }
+]
 
 const WavebreakersFin: Weapon = {
     name: "Wavebreaker's Fin",
@@ -76,31 +95,56 @@ const WavebreakersFin: Weapon = {
     refinements: [
         {
             description:
-                "For every point of the entire party's combined maximum Energy capacity, the Elemental Burst DMG of the character equipping this weapon is increased by 0.12%. A maximum of 40% increased Elemental Burst DMG can be achieved this way.",
+                <span>
+                    For every point of the entire party's combined maximum Energy capacity, 
+                    the Elemental Burst DMG of the character equipping this weapon is increased by <span style={{ color: '#ddd' }}>0.12%</span>. 
+                    A maximum of <span style={{ color: '#ddd' }}>40%</span> increased Elemental Burst DMG can be achieved this way.
+                </span>
+                ,
             level: 1,
         },
         {
             description:
-                "For every point of the entire party's combined maximum Energy capacity, the Elemental Burst DMG of the character equipping this weapon is increased by 0.15%. A maximum of 50% increased Elemental Burst DMG can be achieved this way.",
-            level: 2,
+                <span>
+                    For every point of the entire party's combined maximum Energy capacity, 
+                    the Elemental Burst DMG of the character equipping this weapon is increased by <span style={{ color: '#ddd' }}>0.15%</span>. 
+                    A maximum of <span style={{ color: '#ddd' }}>50%</span> increased Elemental Burst DMG can be achieved this way.
+                </span>
+                ,
+                level: 2,
         },
         {
             description:
-                "For every point of the entire party's combined maximum Energy capacity, the Elemental Burst DMG of the character equipping this weapon is increased by 0.18%. A maximum of 60% increased Elemental Burst DMG can be achieved this way.",
-            level: 3,
+                <span>
+                    For every point of the entire party's combined maximum Energy capacity, 
+                    the Elemental Burst DMG of the character equipping this weapon is increased by <span style={{ color: '#ddd' }}>0.18%</span>. 
+                    A maximum of <span style={{ color: '#ddd' }}>60%</span> increased Elemental Burst DMG can be achieved this way.
+                </span>
+                ,
+                level: 3,
         },
         {
             description:
-                "For every point of the entire party's combined maximum Energy capacity, the Elemental Burst DMG of the character equipping this weapon is increased by 0.21%. A maximum of 70% increased Elemental Burst DMG can be achieved this way.",
+            <span>
+                For every point of the entire party's combined maximum Energy capacity, 
+                the Elemental Burst DMG of the character equipping this weapon is increased by <span style={{ color: '#ddd' }}>0.21%</span>. 
+                A maximum of <span style={{ color: '#ddd' }}>70%</span> increased Elemental Burst DMG can be achieved this way.
+            </span>
+            ,
             level: 4,
         },
         {
             description:
-                "For every point of the entire party's combined maximum Energy capacity, the Elemental Burst DMG of the character equipping this weapon is increased by 0.24%. A maximum of 80% increased Elemental Burst DMG can be achieved this way.",
-            level: 5,
+                <span>
+                    For every point of the entire party's combined maximum Energy capacity, 
+                    the Elemental Burst DMG of the character equipping this weapon is increased by <span style={{ color: '#ddd' }}>0.24%</span>. 
+                    A maximum of <span style={{ color: '#ddd' }}>80%</span> increased Elemental Burst DMG can be achieved this way.
+                </span>
+                ,
+                level: 5,
         },
     ],
-    // weaponBonuses
+    weaponBonuses
 }
 
 export default WavebreakersFin
