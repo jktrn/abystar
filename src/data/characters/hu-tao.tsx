@@ -242,7 +242,7 @@ const characterBonuses: Bonus[] = [
             }
         },
         origin: 'E',
-        priority: 3,
+        priority: 2,
     },
     {
         name: 'Sanguine Rogue',
@@ -312,7 +312,7 @@ const constellationBonuses: Bonus[] = [
         },
         minConstellation: 2,
         origin: 'C2',
-        priority: 3,
+        priority: 2,
     },
     {
         name: 'Lingering Carmine',

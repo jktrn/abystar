@@ -14753,7 +14753,8 @@
                 "description": "Increases Normal Attack DMG by 48%.",
                 "level": 5
             }
-        ]
+        ],
+        "implemented": true
     },
     "Whiteblind": {
         "name": "Whiteblind",

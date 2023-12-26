@@ -39,7 +39,7 @@ const CharacterModal = ({
     onOpenChange,
     setCharacter,
 }: CharacterModalProps) => {
-    const DEFAULT_CHARACTER = 'Furina'
+    const DEFAULT_CHARACTER = 'Hu Tao'
 
     const [rawCharacters, setRawCharacters] = useState<RawCharacter[]>([])
     const [filteredCharacters, setFilteredCharacters] = useState<RawCharacter[]>([])

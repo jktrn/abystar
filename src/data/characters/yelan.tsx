@@ -207,7 +207,7 @@ const characterBonuses: Bonus[] = [
         stackOptions: ['Off', '1 Same', '2 Same', '3 Same', '4 Same'],
         origin: 'A1',
         minAscension: 1,
-        priority: 3,
+        priority: 1,
     },
     {
         name: 'Adapt With Ease',
@@ -343,7 +343,7 @@ const constellationBonuses: Bonus[] = [
         stackOptions: ['Off', '1 Stack', '2 Stacks', '3 Stacks', '4 Stacks'],
         origin: 'C4',
         minConstellation: 4,
-        priority: 3,
+        priority: 1,
     },
     {
         name: "Dealer's Sleight",
