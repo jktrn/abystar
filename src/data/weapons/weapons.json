@@ -12354,7 +12354,8 @@
                 "description": "The equipping character gains 104% of their Elemental Mastery as bonus ATK. When an Elemental Skill hits opponents, the Dream of the Scarlet Sands effect will be gained for 10s: The equipping character will gain 56% of their Elemental Mastery as bonus ATK. Max 3 stacks.",
                 "level": 5
             }
-        ]
+        ],
+        "implemented": true
     },
     "Summit Shaper": {
         "name": "Summit Shaper",
