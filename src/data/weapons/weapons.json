@@ -11641,7 +11641,8 @@
                 "description": "Increases CRIT Rate by 16% and increases Normal ATK SPD by 12%. Additionally, Normal and Charged Attacks hits on opponents have a 50% chance to trigger a vacuum blade that deals 100% of ATK as DMG in a small AoE. This effect can occur no more than once every 2s.",
                 "level": 5
             }
-        ]
+        ],
+        "implemented": true
     },
     "Slingshot": {
         "name": "Slingshot",
