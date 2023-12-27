@@ -17,7 +17,7 @@ const weaponBonuses: Bonus[] = [
             if(currentStacks <= 5) {
                 attackBonus = 1 + currentStacks * attackBonusPerStack[state.weaponRefinement - 1] * 2
             } else if (currentStacks > 5) {
-                attackBonus = 1 + currentStacks * attackBonusPerStack[state.weaponRefinement - 1]
+                attackBonus = 1 + (currentStacks - 5) * attackBonusPerStack[state.weaponRefinement - 1]
             }
 
             const newAttributes = {

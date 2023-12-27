@@ -1862,7 +1862,8 @@
                 "description": "Gain 24% All Elemental DMG Bonus. Obtain Consummation for 20s after using an Elemental Skill, causing ATK to increase by 6.4% per second. This ATK increase has a maximum of 6 stacks. When the character equipped with this weapon is not on the field, Consummation's ATK increase is doubled.",
                 "level": 5
             }
-        ]
+        ],
+        "implemented": true
     },
     "Cashflow Supervision": {
         "name": "Cashflow Supervision",
