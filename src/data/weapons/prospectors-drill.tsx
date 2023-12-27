@@ -103,7 +103,7 @@ const ProspectorsDrill: Weapon = {
         {
             description:
                 <span>
-                When the wielder is healed or heals others, they will gain a Unity's Symbol that lasts <span style={{ color: '#ddd' }}>30s</span>, up to a maximum of 3 Symbols. 
+                When the wielder is healed or heals others, they will gain a Unity&apos;s Symbol that lasts <span style={{ color: '#ddd' }}>30s</span>, up to a maximum of 3 Symbols. 
                 When using their Elemental Skill or Burst, all Symbols will be consumed and the Struggle effect will be granted for <span style={{ color: '#ddd' }}>10s</span>. 
                 For each Symbol consumed, gain <span style={{ color: '#ddd' }}>3%</span> ATK and <span style={{ color: '#ddd' }}>7%</span> All Elemental DMG Bonus. 
                 The Struggle effect can be triggered once every <span style={{ color: '#ddd' }}>15s</span>, and Symbols can be gained even when the character is not on the field.
@@ -113,7 +113,7 @@ const ProspectorsDrill: Weapon = {
         {
             description:
             <span>
-            When the wielder is healed or heals others, they will gain a Unity's Symbol that lasts <span style={{ color: '#ddd' }}>30s</span>, up to a maximum of 3 Symbols. 
+            When the wielder is healed or heals others, they will gain a Unity&apos;s Symbol that lasts <span style={{ color: '#ddd' }}>30s</span>, up to a maximum of 3 Symbols. 
             When using their Elemental Skill or Burst, all Symbols will be consumed and the Struggle effect will be granted for <span style={{ color: '#ddd' }}>10s</span>. 
             For each Symbol consumed, gain <span style={{ color: '#ddd' }}>4%</span> ATK and <span style={{ color: '#ddd' }}>8.5%</span> All Elemental DMG Bonus. 
             The Struggle effect can be triggered once every <span style={{ color: '#ddd' }}>15s</span>, and Symbols can be gained even when the character is not on the field.
@@ -123,7 +123,7 @@ const ProspectorsDrill: Weapon = {
         {
             description:
             <span>
-            When the wielder is healed or heals others, they will gain a Unity's Symbol that lasts <span style={{ color: '#ddd' }}>30s</span>, up to a maximum of 3 Symbols. 
+            When the wielder is healed or heals others, they will gain a Unity&apos;s Symbol that lasts <span style={{ color: '#ddd' }}>30s</span>, up to a maximum of 3 Symbols. 
             When using their Elemental Skill or Burst, all Symbols will be consumed and the Struggle effect will be granted for <span style={{ color: '#ddd' }}>10s</span>. 
             For each Symbol consumed, gain <span style={{ color: '#ddd' }}>5%</span> ATK and <span style={{ color: '#ddd' }}>10%</span> All Elemental DMG Bonus. 
             The Struggle effect can be triggered once every <span style={{ color: '#ddd' }}>15s</span>, and Symbols can be gained even when the character is not on the field.
@@ -133,7 +133,7 @@ const ProspectorsDrill: Weapon = {
         {
             description:
             <span>
-            When the wielder is healed or heals others, they will gain a Unity's Symbol that lasts <span style={{ color: '#ddd' }}>30s</span>, up to a maximum of 3 Symbols. 
+            When the wielder is healed or heals others, they will gain a Unity&apos;s Symbol that lasts <span style={{ color: '#ddd' }}>30s</span>, up to a maximum of 3 Symbols. 
             When using their Elemental Skill or Burst, all Symbols will be consumed and the Struggle effect will be granted for <span style={{ color: '#ddd' }}>10s</span>. 
             For each Symbol consumed, gain <span style={{ color: '#ddd' }}>6%</span> ATK and <span style={{ color: '#ddd' }}>11.5%</span> All Elemental DMG Bonus. 
             The Struggle effect can be triggered once every <span style={{ color: '#ddd' }}>15s</span>, and Symbols can be gained even when the character is not on the field.
@@ -143,7 +143,7 @@ const ProspectorsDrill: Weapon = {
         {
             description:
             <span>
-            When the wielder is healed or heals others, they will gain a Unity's Symbol that lasts <span style={{ color: '#ddd' }}>30s</span>, up to a maximum of 3 Symbols. 
+            When the wielder is healed or heals others, they will gain a Unity&apos;s Symbol that lasts <span style={{ color: '#ddd' }}>30s</span>, up to a maximum of 3 Symbols. 
             When using their Elemental Skill or Burst, all Symbols will be consumed and the Struggle effect will be granted for <span style={{ color: '#ddd' }}>10s</span>. 
             For each Symbol consumed, gain <span style={{ color: '#ddd' }}>7%</span> ATK and <span style={{ color: '#ddd' }}>13%</span> All Elemental DMG Bonus. 
             The Struggle effect can be triggered once every <span style={{ color: '#ddd' }}>15s</span>, and Symbols can be gained even when the character is not on the field.

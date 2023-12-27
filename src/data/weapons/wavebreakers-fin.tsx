@@ -96,7 +96,7 @@ const WavebreakersFin: Weapon = {
         {
             description:
                 <span>
-                    For every point of the entire party's combined maximum Energy capacity, 
+                    For every point of the entire party&apos;s combined maximum Energy capacity, 
                     the Elemental Burst DMG of the character equipping this weapon is increased by <span style={{ color: '#ddd' }}>0.12%</span>. 
                     A maximum of <span style={{ color: '#ddd' }}>40%</span> increased Elemental Burst DMG can be achieved this way.
                 </span>
@@ -106,7 +106,7 @@ const WavebreakersFin: Weapon = {
         {
             description:
                 <span>
-                    For every point of the entire party's combined maximum Energy capacity, 
+                    For every point of the entire party&apos;s combined maximum Energy capacity, 
                     the Elemental Burst DMG of the character equipping this weapon is increased by <span style={{ color: '#ddd' }}>0.15%</span>. 
                     A maximum of <span style={{ color: '#ddd' }}>50%</span> increased Elemental Burst DMG can be achieved this way.
                 </span>
@@ -116,7 +116,7 @@ const WavebreakersFin: Weapon = {
         {
             description:
                 <span>
-                    For every point of the entire party's combined maximum Energy capacity, 
+                    For every point of the entire party&apos;s combined maximum Energy capacity, 
                     the Elemental Burst DMG of the character equipping this weapon is increased by <span style={{ color: '#ddd' }}>0.18%</span>. 
                     A maximum of <span style={{ color: '#ddd' }}>60%</span> increased Elemental Burst DMG can be achieved this way.
                 </span>
@@ -126,7 +126,7 @@ const WavebreakersFin: Weapon = {
         {
             description:
             <span>
-                For every point of the entire party's combined maximum Energy capacity, 
+                For every point of the entire party&apos;s combined maximum Energy capacity, 
                 the Elemental Burst DMG of the character equipping this weapon is increased by <span style={{ color: '#ddd' }}>0.21%</span>. 
                 A maximum of <span style={{ color: '#ddd' }}>70%</span> increased Elemental Burst DMG can be achieved this way.
             </span>
@@ -136,7 +136,7 @@ const WavebreakersFin: Weapon = {
         {
             description:
                 <span>
-                    For every point of the entire party's combined maximum Energy capacity, 
+                    For every point of the entire party&apos;s combined maximum Energy capacity, 
                     the Elemental Burst DMG of the character equipping this weapon is increased by <span style={{ color: '#ddd' }}>0.24%</span>. 
                     A maximum of <span style={{ color: '#ddd' }}>80%</span> increased Elemental Burst DMG can be achieved this way.
                 </span>
