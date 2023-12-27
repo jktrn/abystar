@@ -112,55 +112,50 @@ const CalamityQueller: Weapon = {
             description:
                 <span>
                     Gain <span style={{ color: '#ddd' }}>12%</span> All Elemental DMG Bonus. 
-                    Obtain Consummation for <span style={{ color: '#ddd' }}>20s</span> after using an Elemental Skill, causing ATK to increase by <span style={{ color: '#ddd' }}>3.2%</span> per second. 
-                    This ATK increase has a maximum of 6 stacks. 
-                    When the character equipped with this weapon is not on the field, Consummation&apos;s ATK increase is doubled.
+                    After using an Elemental Skill, ATK increases by <span style={{ color: '#ddd' }}>3.2%</span> per second. 
+                    Maximum of 6 stacks. When the character equipped with this weapon is not on the field, this effect is doubled.
                 </span>
                 ,
             level: 1,
         },
         {
             description:
-            <span>
-                Gain <span style={{ color: '#ddd' }}>15%</span> All Elemental DMG Bonus. 
-                Obtain Consummation for <span style={{ color: '#ddd' }}>20s</span> after using an Elemental Skill, causing ATK to increase by <span style={{ color: '#ddd' }}>4%</span> per second. 
-                This ATK increase has a maximum of 6 stacks. 
-                When the character equipped with this weapon is not on the field, Consummation&apos;s ATK increase is doubled.
-            </span>
-            ,
+                <span>
+                    Gain <span style={{ color: '#ddd' }}>15%</span> All Elemental DMG Bonus. 
+                    After using an Elemental Skill, ATK increases by <span style={{ color: '#ddd' }}>4%</span> per second. 
+                    Maximum of 6 stacks. When the character equipped with this weapon is not on the field, this effect is doubled.
+                </span>
+                ,
             level: 2,
         },
         {
             description:
-            <span>
-                Gain <span style={{ color: '#ddd' }}>18%</span> All Elemental DMG Bonus. 
-                Obtain Consummation for <span style={{ color: '#ddd' }}>20s</span> after using an Elemental Skill, causing ATK to increase by <span style={{ color: '#ddd' }}>4.8%</span> per second. 
-                This ATK increase has a maximum of 6 stacks. 
-                When the character equipped with this weapon is not on the field, Consummation&apos;s ATK increase is doubled.
-            </span>
-            ,
+                <span>
+                    Gain <span style={{ color: '#ddd' }}>18%</span> All Elemental DMG Bonus. 
+                    After using an Elemental Skill, ATK increases by <span style={{ color: '#ddd' }}>4.8%</span> per second. 
+                    Maximum of 6 stacks. When the character equipped with this weapon is not on the field, this effect is doubled.
+                </span>
+                ,
             level: 3,
         },
         {
             description:
-            <span>
-                Gain <span style={{ color: '#ddd' }}>21%</span> All Elemental DMG Bonus. 
-                Obtain Consummation for <span style={{ color: '#ddd' }}>20s</span> after using an Elemental Skill, causing ATK to increase by <span style={{ color: '#ddd' }}>5.6%</span> per second. 
-                This ATK increase has a maximum of 6 stacks. 
-                When the character equipped with this weapon is not on the field, Consummation&apos;s ATK increase is doubled.
-            </span>
-            ,
+                <span>
+                    Gain <span style={{ color: '#ddd' }}>21%</span> All Elemental DMG Bonus. 
+                    After using an Elemental Skill, ATK increases by <span style={{ color: '#ddd' }}>5.6%</span> per second. 
+                    Maximum of 6 stacks. When the character equipped with this weapon is not on the field, this effect is doubled.
+                </span>
+                ,
             level: 4,
         },
         {
             description:
-            <span>
-                Gain <span style={{ color: '#ddd' }}>24%</span> All Elemental DMG Bonus. 
-                Obtain Consummation for <span style={{ color: '#ddd' }}>20s</span> after using an Elemental Skill, causing ATK to increase by <span style={{ color: '#ddd' }}>6.4%</span> per second. 
-                This ATK increase has a maximum of 6 stacks. 
-                When the character equipped with this weapon is not on the field, Consummation&apos;s ATK increase is doubled.
-            </span>
-            ,
+                <span>
+                    Gain <span style={{ color: '#ddd' }}>24%</span> All Elemental DMG Bonus. 
+                    After using an Elemental Skill, ATK increases by <span style={{ color: '#ddd' }}>6.4%</span> per second. 
+                    Maximum of 6 stacks. When the character equipped with this weapon is not on the field, this effect is doubled.
+                </span>
+                ,
             level: 5,
         },
     ],
