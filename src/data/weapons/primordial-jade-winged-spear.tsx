@@ -1,9 +1,35 @@
 import { Weapon } from '@/interfaces/Weapon'
-// import { Bonus } from '@/interfaces/Character'
+import { Bonus } from '@/interfaces/Character'
 
-// const weaponBonuses: Bonus[] = [
-// TODO: Implement
-// ]
+const weaponBonuses: Bonus[] = [
+    {
+        name: 'Eagle Spear of Justice',
+        effect: (attributes, talentLevels, currentStacks, state) => {
+            if (!currentStacks || !state || !state.weaponRefinement) {
+                return { attributes }
+            }
+
+            const attackBonusPerStack = [0.032, 0.039, 0.046, 0.053, 0.06]
+            const bonusDamage = [0.12, 0.15, 0.18, 0.21, 0.24]
+
+            let extraDMG = 0
+
+            if(currentStacks === 7) {
+                extraDMG = bonusDamage[state.weaponRefinement - 1]
+            }
+
+            const newAttributes = {
+                ...attributes,
+                ATK: (attributes['ATK'] || 0) * (1 + currentStacks * attackBonusPerStack[state.weaponRefinement - 1]),
+                'All DMG Bonus': (attributes['All DMG Bonus'] || 0) + extraDMG
+            }
+            return { attributes: newAttributes }
+        },
+        maxStacks: 7,
+        stackOptions: ['Off', '1 Stack', '2 Stacks', '3 Stacks', '4 Stacks', '5 Stacks', '6 Stacks', '7 Stacks'],
+        priority: 1
+    }
+]
 
 const PrimordialJadeWingedspear: Weapon = {
     name: 'Primordial Jade Winged-Spear',
@@ -76,31 +102,56 @@ const PrimordialJadeWingedspear: Weapon = {
     refinements: [
         {
             description:
-                'On hit, increases ATK by 3.2% for 6s. Max 7 stacks. This effect can only occur once every 0.3s. While in possession of the maximum possible stacks, DMG dealt is increased by 12%.',
+                <span>
+                    On hit, increases ATK by <span style={{ color: '#ddd' }}>3.2%</span> for <span style={{ color: '#ddd' }}>6s</span>. Max 7 stacks. 
+                    This effect can only occur once every <span style={{ color: '#ddd' }}>0.3s</span>. 
+                    While in possession of the maximum possible stacks, DMG dealt is increased by <span style={{ color: '#ddd' }}>12%</span>.
+                </span>
+                ,
             level: 1,
         },
         {
             description:
-                'On hit, increases ATK by 3.9% for 6s. Max 7 stacks. This effect can only occur once every 0.3s. While in possession of the maximum possible stacks, DMG dealt is increased by 15%.',
+                <span>
+                    On hit, increases ATK by <span style={{ color: '#ddd' }}>3.9%</span> for <span style={{ color: '#ddd' }}>6s</span>. Max 7 stacks. 
+                    This effect can only occur once every <span style={{ color: '#ddd' }}>0.3s</span>. 
+                    While in possession of the maximum possible stacks, DMG dealt is increased by <span style={{ color: '#ddd' }}>15%</span>.
+                </span>
+                ,
             level: 2,
         },
         {
             description:
-                'On hit, increases ATK by 4.6% for 6s. Max 7 stacks. This effect can only occur once every 0.3s. While in possession of the maximum possible stacks, DMG dealt is increased by 18%.',
+                <span>
+                    On hit, increases ATK by <span style={{ color: '#ddd' }}>4.6%</span> for <span style={{ color: '#ddd' }}>6s</span>. Max 7 stacks. 
+                    This effect can only occur once every <span style={{ color: '#ddd' }}>0.3s</span>. 
+                    While in possession of the maximum possible stacks, DMG dealt is increased by <span style={{ color: '#ddd' }}>18%</span>.
+                </span>
+                ,
             level: 3,
         },
         {
             description:
-                'On hit, increases ATK by 5.3% for 6s. Max 7 stacks. This effect can only occur once every 0.3s. While in possession of the maximum possible stacks, DMG dealt is increased by 21%.',
+                <span>
+                    On hit, increases ATK by <span style={{ color: '#ddd' }}>5.3%</span> for <span style={{ color: '#ddd' }}>6s</span>. Max 7 stacks. 
+                    This effect can only occur once every <span style={{ color: '#ddd' }}>0.3s</span>. 
+                    While in possession of the maximum possible stacks, DMG dealt is increased by <span style={{ color: '#ddd' }}>21%</span>.
+                </span>
+                ,
             level: 4,
         },
         {
             description:
-                'On hit, increases ATK by 6% for 6s. Max 7 stacks. This effect can only occur once every 0.3s. While in possession of the maximum possible stacks, DMG dealt is increased by 24%.',
+                <span>
+                    On hit, increases ATK by <span style={{ color: '#ddd' }}>6%</span> for <span style={{ color: '#ddd' }}>6s</span>. Max 7 stacks. 
+                    This effect can only occur once every <span style={{ color: '#ddd' }}>0.3s</span>. 
+                    While in possession of the maximum possible stacks, DMG dealt is increased by <span style={{ color: '#ddd' }}>24%</span>.
+                </span>
+                ,
             level: 5,
         },
     ],
-    // weaponBonuses
+    weaponBonuses
 }
 
 export default PrimordialJadeWingedspear
