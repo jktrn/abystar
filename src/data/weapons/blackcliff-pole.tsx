@@ -1,9 +1,27 @@
 import { Weapon } from '@/interfaces/Weapon'
-// import { Bonus } from '@/interfaces/Character'
+import { Bonus } from '@/interfaces/Character'
 
-// const weaponBonuses: Bonus[] = [
-// TODO: Implement
-// ]
+const weaponBonuses: Bonus[] = [
+    {
+        name: 'Press the Advantage',
+        effect: (attributes, talentLevels, currentStacks, state) => {
+            if (!currentStacks || !state || !state.weaponRefinement) {
+                return { attributes }
+            }
+
+            const attackBonusPerStack = [0.12, 0.15, 0.18, 0.21, 0.24] 
+
+            const newAttributes = {
+                ...attributes,
+                ATK: (attributes['ATK'] || 0) * (1 + currentStacks * attackBonusPerStack[state.weaponRefinement - 1])
+            }
+            return { attributes: newAttributes }
+        },
+        maxStacks: 3,
+        stackOptions: ['Off', '1 Stack', '2 Stacks', '3 Stacks'],
+        priority: 1
+    }
+]
 
 const BlackcliffPole: Weapon = {
     name: 'Blackcliff Pole',
@@ -76,31 +94,51 @@ const BlackcliffPole: Weapon = {
     refinements: [
         {
             description:
-                'After defeating an enemy, ATK is increased by 12% for 30s. This effect has a maximum of 3 stacks, and the duration of each stack is independent of the others.',
+                <span>
+                    After defeating an enemy, ATK is increased by <span style={{ color: '#ddd' }}>12%</span> for 30s. 
+                    This effect has a maximum of 3 stacks, and the duration of each stack is independent of the others.
+                </span>
+                ,
             level: 1,
         },
         {
             description:
-                'After defeating an enemy, ATK is increased by 15% for 30s. This effect has a maximum of 3 stacks, and the duration of each stack is independent of the others.',
+                <span>
+                    After defeating an enemy, ATK is increased by <span style={{ color: '#ddd' }}>15%</span> for 30s. 
+                    This effect has a maximum of 3 stacks, and the duration of each stack is independent of the others.
+                </span>
+                ,
             level: 2,
         },
         {
             description:
-                'After defeating an enemy, ATK is increased by 18% for 30s. This effect has a maximum of 3 stacks, and the duration of each stack is independent of the others.',
+                <span>
+                    After defeating an enemy, ATK is increased by <span style={{ color: '#ddd' }}>18%</span> for 30s. 
+                    This effect has a maximum of 3 stacks, and the duration of each stack is independent of the others.
+                </span>
+                ,
             level: 3,
         },
         {
             description:
-                'After defeating an enemy, ATK is increased by 21% for 30s. This effect has a maximum of 3 stacks, and the duration of each stack is independent of the others.',
+                <span>
+                    After defeating an enemy, ATK is increased by <span style={{ color: '#ddd' }}>21%</span> for 30s. 
+                    This effect has a maximum of 3 stacks, and the duration of each stack is independent of the others.
+                </span>
+                ,
             level: 4,
         },
         {
             description:
-                'After defeating an enemy, ATK is increased by 24% for 30s. This effect has a maximum of 3 stacks, and the duration of each stack is independent of the others.',
+                <span>
+                    After defeating an enemy, ATK is increased by <span style={{ color: '#ddd' }}>24%</span> for 30s. 
+                    This effect has a maximum of 3 stacks, and the duration of each stack is independent of the others.
+                </span>
+                ,
             level: 5,
         },
     ],
-    // weaponBonuses
+    weaponBonuses
 }
 
 export default BlackcliffPole

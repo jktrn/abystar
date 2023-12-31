@@ -1,9 +1,15 @@
 import { Weapon } from '@/interfaces/Weapon'
-// import { Bonus } from '@/interfaces/Character'
+import { Bonus } from '@/interfaces/Character'
 
-// const weaponBonuses: Bonus[] = [
-// TODO: Implement
-// ]
+const weaponBonuses: Bonus[] = [
+    {
+        // LMAO
+        name: 'Windfall',
+        effect: (attributes) => {
+            return { attributes }
+        },
+    }
+]
 
 const FavoniusLance: Weapon = {
     name: 'Favonius Lance',
@@ -76,31 +82,51 @@ const FavoniusLance: Weapon = {
     refinements: [
         {
             description:
-                'CRIT Hits have a 60% chance to generate a small amount of Elemental Particles, which will regenerate 6 Energy for the character. Can only occur once every 12s.',
+                <span>
+                    CRIT Hits have a <span style={{ color: '#ddd' }}>60%</span> chance to generate a small amount of Elemental Particles, 
+                    which will regenerate <span style={{ color: '#ddd' }}>6</span> Energy for the character. Can only occur once every <span style={{ color: '#ddd' }}>12s</span>.
+                </span>
+                ,
             level: 1,
         },
         {
             description:
-                'CRIT Hits have a 70% chance to generate a small amount of Elemental Particles, which will regenerate 6 Energy for the character. Can only occur once every 10.5s.',
+            <span>
+                CRIT Hits have a <span style={{ color: '#ddd' }}>70%</span> chance to generate a small amount of Elemental Particles, 
+                which will regenerate <span style={{ color: '#ddd' }}>6</span> Energy for the character. Can only occur once every <span style={{ color: '#ddd' }}>10.5s</span>.
+            </span>
+            ,
             level: 2,
         },
         {
             description:
-                'CRIT Hits have a 80% chance to generate a small amount of Elemental Particles, which will regenerate 6 Energy for the character. Can only occur once every 9s.',
+                <span>
+                    CRIT Hits have a <span style={{ color: '#ddd' }}>80%</span> chance to generate a small amount of Elemental Particles, 
+                    which will regenerate <span style={{ color: '#ddd' }}>6</span> Energy for the character. Can only occur once every <span style={{ color: '#ddd' }}>9s</span>.
+                </span>
+                ,
             level: 3,
         },
         {
             description:
-                'CRIT Hits have a 90% chance to generate a small amount of Elemental Particles, which will regenerate 6 Energy for the character. Can only occur once every 7.5s.',
+                <span>
+                    CRIT Hits have a <span style={{ color: '#ddd' }}>90%</span> chance to generate a small amount of Elemental Particles, 
+                    which will regenerate <span style={{ color: '#ddd' }}>6</span> Energy for the character. Can only occur once every <span style={{ color: '#ddd' }}>7.5s</span>.
+                </span>
+                ,
             level: 4,
         },
         {
             description:
-                'CRIT Hits have a 100% chance to generate a small amount of Elemental Particles, which will regenerate 6 Energy for the character. Can only occur once every 6s.',
+                <span>
+                    CRIT Hits have a <span style={{ color: '#ddd' }}>100%</span> chance to generate a small amount of Elemental Particles, 
+                    which will regenerate <span style={{ color: '#ddd' }}>6</span> Energy for the character. Can only occur once every <span style={{ color: '#ddd' }}>6s</span>.
+                </span>
+                ,
             level: 5,
         },
     ],
-    // weaponBonuses
+    weaponBonuses
 }
 
 export default FavoniusLance

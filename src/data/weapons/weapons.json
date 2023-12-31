@@ -86,7 +86,8 @@
                 "description": "Increases Elemental Burst DMG by 32% and Elemental Burst CRIT Rate by 12%.",
                 "level": 5
             }
-        ]
+        ],
+        "implemented": true
     },
     "\"Ultimate Overlord's Mega Magic Sword\"": {
         "name": "\"Ultimate Overlord's Mega Magic Sword\"",
@@ -1017,7 +1018,8 @@
                 "description": "When there are at least 3 different Elemental Types in your party, Elemental Mastery will be increased by 240.",
                 "level": 5
             }
-        ]
+        ],
+        "implemented": true
     },
     "Beacon of the Reed Sea": {
         "name": "Beacon of the Reed Sea",
@@ -1235,7 +1237,8 @@
                 "description": "Increases DMG against slimes by 80%.",
                 "level": 5
             }
-        ]
+        ],
+        "implemented": true
     },
     "Blackcliff Agate": {
         "name": "Blackcliff Agate",
@@ -1502,7 +1505,8 @@
                 "description": "After defeating an enemy, ATK is increased by 24% for 30s. This effect has a maximum of 3 stacks, and the duration of each stack is independent of the others.",
                 "level": 5
             }
-        ]
+        ],
+        "implemented": true
     },
     "Blackcliff Slasher": {
         "name": "Blackcliff Slasher",
@@ -1858,7 +1862,8 @@
                 "description": "Gain 24% All Elemental DMG Bonus. Obtain Consummation for 20s after using an Elemental Skill, causing ATK to increase by 6.4% per second. This ATK increase has a maximum of 6 stacks. When the character equipped with this weapon is not on the field, Consummation's ATK increase is doubled.",
                 "level": 5
             }
-        ]
+        ],
+        "implemented": true
     },
     "Cashflow Supervision": {
         "name": "Cashflow Supervision",
@@ -2570,7 +2575,8 @@
                 "description": "If there are at least 2 opponents nearby, ATK is increased by 32% and DEF is increased by 32%. If there are fewer than 2 opponents nearby, ATK is increased by 48%.",
                 "level": 5
             }
-        ]
+        ],
+        "implemented": true
     },
     "Debate Club": {
         "name": "Debate Club",
@@ -2837,7 +2843,8 @@
                 "description": "Increases DMG against opponents affected by Hydro or Pyro by 36%.",
                 "level": 5
             }
-        ]
+        ],
+        "implemented": true
     },
     "Dragonspine Spear": {
         "name": "Dragonspine Spear",
@@ -3322,7 +3329,8 @@
                 "description": "ATK increased by 56% of Energy Recharge over the base 100%. You can gain a maximum bonus of 120% ATK. Gain 50% Energy Recharge for 12s after using an Elemental Burst.",
                 "level": 5
             }
-        ]
+        ],
+        "implemented": true
     },
     "Everlasting Moonglow": {
         "name": "Everlasting Moonglow",
@@ -3856,7 +3864,8 @@
                 "description": "CRIT Hits have a 100% chance to generate a small amount of Elemental Particles, which will regenerate 6 Energy for the character. Can only occur once every 6s.",
                 "level": 5
             }
-        ]
+        ],
+        "implemented": true
     },
     "Favonius Sword": {
         "name": "Favonius Sword",
@@ -5102,7 +5111,8 @@
                 "description": "Normal Attacks deal an additional 320% ATK as DMG. This effect can only occur once every 10s.",
                 "level": 5
             }
-        ]
+        ],
+        "implemented": true
     },
     "Hamayumi": {
         "name": "Hamayumi",
@@ -6679,7 +6689,8 @@
                 "description": "For every character in the party who hails from Liyue, the character who equips this weapon gains a 11% ATK increase and a 7% CRIT Rate increase. This effect stacks up to 4 times.",
                 "level": 5
             }
-        ]
+        ],
+        "implemented": true
     },
     "Lost Prayer to the Sacred Winds": {
         "name": "Lost Prayer to the Sacred Winds",
@@ -7480,7 +7491,8 @@
                 "description": "Within 10s after an Elemental Reaction is triggered, ATK is increased by 24% and Elemental Mastery is increased by 96.",
                 "level": 5
             }
-        ]
+        ],
+        "implemented": true
     },
     "Mistsplitter Reforged": {
         "name": "Mistsplitter Reforged",
@@ -8523,7 +8535,8 @@
                 "description": "On hit, increases ATK by 6% for 6s. Max 7 stacks. This effect can only occur once every 0.3s. While in possession of the maximum possible stacks, DMG dealt is increased by 24%.",
                 "level": 5
             }
-        ]
+        ],
+        "implemented": true
     },
     "Prospector's Drill": {
         "name": "Prospector's Drill",
@@ -8612,7 +8625,8 @@
                 "description": "When the wielder is healed or heals others, they will gain a Unity's Symbol that lasts 30s, up to a maximum of 3 Symbols. When using their Elemental Skill or Burst, all Symbols will be consumed and the Struggle effect will be granted for 10s. For each Symbol consumed, gain 7% ATK and 13% All Elemental DMG Bonus. The Struggle effect can be triggered once every 15s, and Symbols can be gained even when the character is not on the field.",
                 "level": 5
             }
-        ]
+        ],
+        "implemented": true
     },
     "Prototype Amber": {
         "name": "Prototype Amber",
@@ -10036,7 +10050,8 @@
                 "description": "Upon damaging an opponent, increases CRIT Rate by 16%. Max 5 stacks. A CRIT Hit removes all stacks.",
                 "level": 5
             }
-        ]
+        ],
+        "implemented": true
     },
     "Rust": {
         "name": "Rust",
@@ -11629,7 +11644,8 @@
                 "description": "Increases CRIT Rate by 16% and increases Normal ATK SPD by 12%. Additionally, Normal and Charged Attacks hits on opponents have a 50% chance to trigger a vacuum blade that deals 100% of ATK as DMG in a small AoE. This effect can occur no more than once every 2s.",
                 "level": 5
             }
-        ]
+        ],
+        "implemented": true
     },
     "Slingshot": {
         "name": "Slingshot",
@@ -12342,7 +12358,8 @@
                 "description": "The equipping character gains 104% of their Elemental Mastery as bonus ATK. When an Elemental Skill hits opponents, the Dream of the Scarlet Sands effect will be gained for 10s: The equipping character will gain 56% of their Elemental Mastery as bonus ATK. Max 3 stacks.",
                 "level": 5
             }
-        ]
+        ],
+        "implemented": true
     },
     "Summit Shaper": {
         "name": "Summit Shaper",
@@ -14357,7 +14374,8 @@
                 "description": "Increases Shield Strength by 40%. Scoring hits on opponents increases ATK by 8% for 8s. Max 5 stacks. Can only occur once every 0.3s. While protected by a shield, this ATK increase effect is increased by 100%.",
                 "level": 5
             }
-        ]
+        ],
+        "implemented": true
     },
     "Wandering Evenstar": {
         "name": "Wandering Evenstar",
@@ -14575,7 +14593,8 @@
                 "description": "For every point of the entire party's combined maximum Energy capacity, the Elemental Burst DMG of the character equipping this weapon is increased by 0.24%. A maximum of 80% increased Elemental Burst DMG can be achieved this way.",
                 "level": 5
             }
-        ]
+        ],
+        "implemented": true
     },
     "White Iron Greatsword": {
         "name": "White Iron Greatsword",
@@ -14753,7 +14772,8 @@
                 "description": "Increases Normal Attack DMG by 48%.",
                 "level": 5
             }
-        ]
+        ],
+        "implemented": true
     },
     "Whiteblind": {
         "name": "Whiteblind",

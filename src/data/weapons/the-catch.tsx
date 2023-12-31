@@ -1,9 +1,28 @@
 import { Weapon } from '@/interfaces/Weapon'
-// import { Bonus } from '@/interfaces/Character'
+import { Bonus } from '@/interfaces/Character'
 
-// const weaponBonuses: Bonus[] = [
-// TODO: Implement
-// ]
+const weaponBonuses: Bonus[] = [
+    {
+        name: 'Shanty',
+        effect: (attributes, talentLevels, currentStacks, state) => {
+            if (!currentStacks || !state || !state.weaponRefinement) {
+                return { attributes }
+            }
+
+            const elementalBurstDMGBonusPerStack = [0.16, 0.2, 0.24, 0.28, 0.32]
+            const elementalBurstCritRateBonusPerStack = [0.06, 0.075, 0.09, 0.105, 0.12]
+
+            const newAttributes = {
+                ...attributes,
+                'Elemental Burst DMG Bonus': (attributes['Elemental Burst DMG Bonus'] || 0) + elementalBurstDMGBonusPerStack[state.weaponRefinement - 1],
+                'Elemental Burst CRIT Rate': (attributes['Elemental Burst CRIT Rate'] || 0) + elementalBurstCritRateBonusPerStack[state.weaponRefinement - 1]
+            }
+            return { attributes: newAttributes }
+        },
+        enabled: false,
+        priority: 1
+    }
+]
 
 const TheCatch: Weapon = {
     name: '"The Catch"',
@@ -76,31 +95,46 @@ const TheCatch: Weapon = {
     refinements: [
         {
             description:
-                'Increases Elemental Burst DMG by 16% and Elemental Burst CRIT Rate by 6%.',
+                <span>
+                    Increases Elemental Burst DMG by <span style={{ color: '#ddd' }}>16%</span> and Elemental Burst CRIT Rate by <span style={{ color: '#ddd' }}>6%</span>.
+                </span>
+                ,
             level: 1,
         },
         {
             description:
-                'Increases Elemental Burst DMG by 20% and Elemental Burst CRIT Rate by 7.5%.',
+                <span>
+                    Increases Elemental Burst DMG by <span style={{ color: '#ddd' }}>20%</span> and Elemental Burst CRIT Rate by <span style={{ color: '#ddd' }}>7.5%</span>.
+                </span>
+                ,
             level: 2,
         },
         {
             description:
-                'Increases Elemental Burst DMG by 24% and Elemental Burst CRIT Rate by 9%.',
+                <span>
+                    Increases Elemental Burst DMG by <span style={{ color: '#ddd' }}>24%</span> and Elemental Burst CRIT Rate by <span style={{ color: '#ddd' }}>9%</span>.
+                </span>
+                ,
             level: 3,
         },
         {
             description:
-                'Increases Elemental Burst DMG by 28% and Elemental Burst CRIT Rate by 10.5%.',
+                <span>
+                    Increases Elemental Burst DMG by <span style={{ color: '#ddd' }}>28%</span> and Elemental Burst CRIT Rate by <span style={{ color: '#ddd' }}>10.5%</span>.
+                </span>
+                ,
             level: 4,
         },
         {
             description:
-                'Increases Elemental Burst DMG by 32% and Elemental Burst CRIT Rate by 12%.',
+                <span>
+                    Increases Elemental Burst DMG by <span style={{ color: '#ddd' }}>32%</span> and Elemental Burst CRIT Rate by <span style={{ color: '#ddd' }}>12%</span>.
+                </span>
+                ,
             level: 5,
         },
     ],
-    // weaponBonuses
+    weaponBonuses
 }
 
 export default TheCatch

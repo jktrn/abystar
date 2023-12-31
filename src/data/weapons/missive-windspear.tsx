@@ -1,9 +1,28 @@
 import { Weapon } from '@/interfaces/Weapon'
-// import { Bonus } from '@/interfaces/Character'
+import { Bonus } from '@/interfaces/Character'
 
-// const weaponBonuses: Bonus[] = [
-// TODO: Implement
-// ]
+const weaponBonuses: Bonus[] = [
+    {
+        name: 'The Wind Unattained',
+        effect: (attributes, talentLevels, currentStacks, state) => {
+            if (!currentStacks || !state || !state.weaponRefinement) {
+                return { attributes }
+            }
+
+            const attackBonusPerStack = [0.12, 0.15, 0.18, 0.21, 0.24]
+            const elementalMasteryBonusPerStack = [48, 60, 72, 84, 96]
+
+            const newAttributes = {
+                ...attributes,
+                ATK: (attributes['ATK'] || 0) * (1 + attackBonusPerStack[state.weaponRefinement - 1]),
+                'Elemental Mastery': (attributes['Elemental Mastery'] || 0) + elementalMasteryBonusPerStack[state.weaponRefinement - 1]
+            }
+            return { attributes: newAttributes }
+        },
+        enabled: false,
+        priority: 1
+    }
+]
 
 const MissiveWindspear: Weapon = {
     name: 'Missive Windspear',
@@ -76,31 +95,51 @@ const MissiveWindspear: Weapon = {
     refinements: [
         {
             description:
-                'Within 10s after an Elemental Reaction is triggered, ATK is increased by 12% and Elemental Mastery is increased by 48.',
+                <span>
+                    Within <span style={{ color: '#ddd' }}>10s</span> after an Elemental Reaction is triggered, 
+                    ATK is increased by <span style={{ color: '#ddd' }}>12%</span> and Elemental Mastery is increased by <span style={{ color: '#ddd' }}>48</span>.
+                </span>
+                ,
             level: 1,
         },
         {
             description:
-                'Within 10s after an Elemental Reaction is triggered, ATK is increased by 15% and Elemental Mastery is increased by 60.',
+            <span>
+                Within <span style={{ color: '#ddd' }}>10s</span> after an Elemental Reaction is triggered, 
+                ATK is increased by <span style={{ color: '#ddd' }}>15%</span> and Elemental Mastery is increased by <span style={{ color: '#ddd' }}>60</span>.
+            </span>
+            ,
             level: 2,
         },
         {
             description:
-                'Within 10s after an Elemental Reaction is triggered, ATK is increased by 18% and Elemental Mastery is increased by 72.',
+                <span>
+                    Within <span style={{ color: '#ddd' }}>10s</span> after an Elemental Reaction is triggered, 
+                    ATK is increased by <span style={{ color: '#ddd' }}>18%</span> and Elemental Mastery is increased by <span style={{ color: '#ddd' }}>72</span>.
+                </span>
+                ,
             level: 3,
         },
         {
             description:
-                'Within 10s after an Elemental Reaction is triggered, ATK is increased by 21% and Elemental Mastery is increased by 84.',
+                <span>
+                    Within <span style={{ color: '#ddd' }}>10s</span> after an Elemental Reaction is triggered, 
+                    ATK is increased by <span style={{ color: '#ddd' }}>21%</span> and Elemental Mastery is increased by <span style={{ color: '#ddd' }}>84</span>.
+                </span>
+                ,
             level: 4,
         },
         {
             description:
-                'Within 10s after an Elemental Reaction is triggered, ATK is increased by 24% and Elemental Mastery is increased by 96.',
+                <span>
+                    Within <span style={{ color: '#ddd' }}>10s</span> after an Elemental Reaction is triggered, 
+                    ATK is increased by <span style={{ color: '#ddd' }}>24%</span> and Elemental Mastery is increased by <span style={{ color: '#ddd' }}>96</span>.
+                </span>
+                ,
             level: 5,
         },
     ],
-    // weaponBonuses
+    weaponBonuses
 }
 
 export default MissiveWindspear

@@ -1,9 +1,26 @@
 import { Weapon } from '@/interfaces/Weapon'
-// import { Bonus } from '@/interfaces/Character'
+import { Bonus } from '@/interfaces/Character'
 
-// const weaponBonuses: Bonus[] = [
-// TODO: Implement
-// ]
+const weaponBonuses: Bonus[] = [
+    {
+        name: 'Bane of Flame and Water',
+        effect: (attributes, talentLevels, currentStacks, state) => {
+            if (!currentStacks || !state || !state.weaponRefinement) {
+                return { attributes }
+            }
+
+            const allDamageBonusPerStack = [0.20, 0.24, 0.28, 0.32, 0.36]
+
+            const newAttributes = {
+                ...attributes,
+                'All DMG Bonus': (attributes['All DMG Bonus'] || 0) + allDamageBonusPerStack[state.weaponRefinement - 1]
+            }
+            return { attributes: newAttributes }
+        },
+        enabled: false,
+        priority: 1
+    }
+]
 
 const DragonsBane: Weapon = {
     name: "Dragon's Bane",
@@ -76,31 +93,46 @@ const DragonsBane: Weapon = {
     refinements: [
         {
             description:
-                'Increases DMG against opponents affected by Hydro or Pyro by 20%.',
+                <span>
+                    Increases DMG against opponents affected by Hydro or Pyro by <span style={{ color: '#ddd' }}>20%</span>.
+                </span>
+                ,
             level: 1,
         },
         {
             description:
-                'Increases DMG against opponents affected by Hydro or Pyro by 24%.',
+                <span>
+                    Increases DMG against opponents affected by Hydro or Pyro by <span style={{ color: '#ddd' }}>24%</span>.
+                </span>
+                ,
             level: 2,
         },
         {
             description:
-                'Increases DMG against opponents affected by Hydro or Pyro by 28%.',
+                <span>
+                    Increases DMG against opponents affected by Hydro or Pyro by <span style={{ color: '#ddd' }}>28%</span>.
+                </span>
+                ,
             level: 3,
         },
         {
             description:
-                'Increases DMG against opponents affected by Hydro or Pyro by 32%.',
+                <span>
+                    Increases DMG against opponents affected by Hydro or Pyro by <span style={{ color: '#ddd' }}>32%</span>.
+                </span>
+                ,
             level: 4,
         },
         {
             description:
-                'Increases DMG against opponents affected by Hydro or Pyro by 36%.',
+                <span>
+                    Increases DMG against opponents affected by Hydro or Pyro by <span style={{ color: '#ddd' }}>36%</span>.
+                </span>
+                ,
             level: 5,
         },
     ],
-    // weaponBonuses
+    weaponBonuses
 }
 
 export default DragonsBane

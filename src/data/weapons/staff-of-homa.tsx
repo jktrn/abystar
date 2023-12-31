@@ -14,7 +14,7 @@ const weaponBonuses: Bonus[] = [
 
             let attackBonus = 0
             let newHealth =
-                (attributes['HP'] || 0) + hpBonus[state.weaponRefinement - 1]
+                (attributes['HP'] || 0) * (1 + hpBonus[state.weaponRefinement - 1])
 
             if (currentStacks === 1) {
                 attackBonus = attackBonusPerStack[state.weaponRefinement - 1]

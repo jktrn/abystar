@@ -1,9 +1,40 @@
 import { Weapon } from '@/interfaces/Weapon'
-// import { Bonus } from '@/interfaces/Character'
+import { Bonus } from '@/interfaces/Character'
 
-// const weaponBonuses: Bonus[] = [
-// TODO: Implement
-// ]
+const weaponBonuses: Bonus[] = [
+    {
+        name: 'Gladiator',
+        effect: (attributes, talentLevels, currentStacks, state) => {
+            if (!currentStacks || !state || !state.weaponRefinement) {
+                return { attributes }
+            }
+
+            const attackBonusPerStack = [0.16, 0.2, 0.24, 0.28, 0.32]
+            const defenceBonusPerStack = [0.16, 0.2, 0.24, 0.28, 0.32]
+            const opponentLowAttackBonusPerStack = [0.24, 0.3, 0.36, 0.42, 0.48]
+
+            let attackBonus = 0
+            let defenceBonus = 0
+
+            if (currentStacks === 1) {
+                attackBonus = attributes['ATK'] * attackBonusPerStack[state.weaponRefinement - 1]
+                defenceBonus = attributes['DEF'] * defenceBonusPerStack[state.weaponRefinement - 1]
+            } else if (currentStacks === 2) {
+                attackBonus = attributes['ATK'] * opponentLowAttackBonusPerStack[state.weaponRefinement - 1]
+            }
+
+            const newAttributes = {
+                ...attributes,
+                ATK: (attributes['ATK'] || 0) + attackBonus,
+                DEF: (attributes['DEF'] || 0) + defenceBonus
+            }
+            return { attributes: newAttributes }
+        },
+        maxStacks: 2,
+        stackOptions: ['Off', '>=2 Opponents', '<2 Opponents'],
+        priority: 1
+    }
+]
 
 const Deathmatch: Weapon = {
     name: 'Deathmatch',
@@ -76,31 +107,51 @@ const Deathmatch: Weapon = {
     refinements: [
         {
             description:
-                'If there are at least 2 opponents nearby, ATK is increased by 16% and DEF is increased by 16%. If there are fewer than 2 opponents nearby, ATK is increased by 24%.',
+                <span>
+                    If there are at least 2 opponents nearby, ATK is increased by <span style={{ color: '#ddd' }}>16%</span> and DEF is increased by <span style={{ color: '#ddd' }}>16%</span>. 
+                    If there are fewer than 2 opponents nearby, ATK is increased by <span style={{ color: '#ddd' }}>24%</span>.
+                </span>
+                ,
             level: 1,
         },
         {
             description:
-                'If there are at least 2 opponents nearby, ATK is increased by 20% and DEF is increased by 20%. If there are fewer than 2 opponents nearby, ATK is increased by 30%.',
+                <span>
+                    If there are at least 2 opponents nearby, ATK is increased by <span style={{ color: '#ddd' }}>20%</span> and DEF is increased by <span style={{ color: '#ddd' }}>20%</span>. 
+                    If there are fewer than 2 opponents nearby, ATK is increased by <span style={{ color: '#ddd' }}>30%</span>.
+                </span>
+                ,
             level: 2,
         },
         {
             description:
-                'If there are at least 2 opponents nearby, ATK is increased by 24% and DEF is increased by 24%. If there are fewer than 2 opponents nearby, ATK is increased by 36%.',
+                <span>
+                    If there are at least 2 opponents nearby, ATK is increased by <span style={{ color: '#ddd' }}>24%</span> and DEF is increased by <span style={{ color: '#ddd' }}>24%</span>. 
+                    If there are fewer than 2 opponents nearby, ATK is increased by <span style={{ color: '#ddd' }}>36%</span>.
+                </span>
+                ,
             level: 3,
         },
         {
             description:
-                'If there are at least 2 opponents nearby, ATK is increased by 28% and DEF is increased by 28%. If there are fewer than 2 opponents nearby, ATK is increased by 42%.',
+                <span>
+                    If there are at least 2 opponents nearby, ATK is increased by <span style={{ color: '#ddd' }}>28%</span> and DEF is increased by <span style={{ color: '#ddd' }}>28%</span>. 
+                    If there are fewer than 2 opponents nearby, ATK is increased by <span style={{ color: '#ddd' }}>42%</span>.
+                </span>
+                ,
             level: 4,
         },
         {
             description:
-                'If there are at least 2 opponents nearby, ATK is increased by 32% and DEF is increased by 32%. If there are fewer than 2 opponents nearby, ATK is increased by 48%.',
+                <span>
+                    If there are at least 2 opponents nearby, ATK is increased by <span style={{ color: '#ddd' }}>32%</span> and DEF is increased by <span style={{ color: '#ddd' }}>32%</span>. 
+                    If there are fewer than 2 opponents nearby, ATK is increased by <span style={{ color: '#ddd' }}>48%</span>.
+                </span>
+                ,
             level: 5,
         },
     ],
-    // weaponBonuses
+    weaponBonuses
 }
 
 export default Deathmatch

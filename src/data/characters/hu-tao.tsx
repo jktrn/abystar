@@ -149,6 +149,7 @@ const talentScalings: TalentScaling = {
             attribute: ['ATK'],
             additiveBonusStat: ['Elemental Burst Additive Bonus'],
             multiplicativeBonusStat: ['Pyro DMG Bonus', 'Elemental Burst DMG Bonus'],
+            critRateBonusStat: ['Elemental Burst CRIT Rate'],
             damageType: DamageType.Pyro,
         },
         'Low HP Skill DMG': {
@@ -156,6 +157,7 @@ const talentScalings: TalentScaling = {
             attribute: ['ATK'],
             additiveBonusStat: ['Elemental Burst Additive Bonus'],
             multiplicativeBonusStat: ['Pyro DMG Bonus', 'Elemental Burst DMG Bonus'],
+            critRateBonusStat: ['Elemental Burst CRIT Rate'],
             damageType: DamageType.Pyro,
         },
         'Skill HP Regeneration': {
@@ -242,7 +244,7 @@ const characterBonuses: Bonus[] = [
             }
         },
         origin: 'E',
-        priority: 3,
+        priority: 2,
     },
     {
         name: 'Sanguine Rogue',
@@ -312,7 +314,7 @@ const constellationBonuses: Bonus[] = [
         },
         minConstellation: 2,
         origin: 'C2',
-        priority: 3,
+        priority: 2,
     },
     {
         name: 'Lingering Carmine',

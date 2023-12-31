@@ -1,9 +1,26 @@
 import { Weapon } from '@/interfaces/Weapon'
-// import { Bonus } from '@/interfaces/Character'
+import { Bonus } from '@/interfaces/Character'
 
-// const weaponBonuses: Bonus[] = [
-// TODO: Implement
-// ]
+const weaponBonuses: Bonus[] = [
+    {
+        name: 'Sharp',
+        effect: (attributes, talentLevels, currentStacks, state) => {
+            if (!currentStacks || !state || !state.weaponRefinement) {
+                return { attributes }
+            }
+
+            const normalAttackBonusPerStack = [0.24, 0.3, 0.36, 0.42, 0.48] 
+
+            const newAttributes = {
+                ...attributes,
+                'Normal Attack DMG Bonus': (attributes['Normal Attack DMG Bonus'] || 0) + normalAttackBonusPerStack[state.weaponRefinement - 1]
+            }
+            return { attributes: newAttributes }
+        },
+        enabled: false,
+        priority: 1
+    }
+]
 
 const WhiteTassel: Weapon = {
     name: 'White Tassel',
@@ -74,27 +91,47 @@ const WhiteTassel: Weapon = {
     },
     refinements: [
         {
-            description: 'Increases Normal Attack DMG by 24%.',
+            description: (
+                <span>
+                    Increases Normal Attack DMG by <span style={{ color: '#ddd' }}>24%</span>.
+                </span>
+            ),
             level: 1,
         },
         {
-            description: 'Increases Normal Attack DMG by 30%.',
+            description: (
+                <span>
+                    Increases Normal Attack DMG by <span style={{ color: '#ddd' }}>30%</span>.
+                </span>
+            ),
             level: 2,
         },
         {
-            description: 'Increases Normal Attack DMG by 36%.',
+            description: (
+                <span>
+                    Increases Normal Attack DMG by <span style={{ color: '#ddd' }}>36%</span>.
+                </span>
+            ),
             level: 3,
         },
         {
-            description: 'Increases Normal Attack DMG by 42%.',
+            description: (
+                <span>
+                    Increases Normal Attack DMG by <span style={{ color: '#ddd' }}>42%</span>.
+                </span>
+            ),
             level: 4,
         },
         {
-            description: 'Increases Normal Attack DMG by 48%.',
+            description: (
+                <span>
+                    Increases Normal Attack DMG by <span style={{ color: '#ddd' }}>48%</span>.
+                </span>
+            ),
             level: 5,
         },
     ],
-    // weaponBonuses
+    weaponBonuses
 }
 
 export default WhiteTassel
