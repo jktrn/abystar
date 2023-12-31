@@ -7,10 +7,12 @@ export {
     compareObjects,
     elementColors,
     getTalentScalingValue,
-    insertAspect,
     kebabCase,
     mergeAndSum,
     parseScalingValue,
+    insertAspect,
+    defMultiplier,
+    resMultiplier,
 } from './utils'
 
 export {

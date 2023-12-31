@@ -4,8 +4,9 @@ import {
     BaseStat,
     ScalingType,
     DamageType,
+
 } from '@/interfaces/Character'
-import { parseScalingValue, calculateStatValue, clamp } from '@/lib'
+import { parseScalingValue, calculateStatValue, clamp, defMultiplier, resMultiplier } from '@/lib'
 
 const damageFormula = (
     characterAttributes: CharacterAttributes,
@@ -18,7 +19,8 @@ const damageFormula = (
     critRateBonusStat: string[],
     critDamageBonusStat: string[],
     enemyResistances: BaseStat,
-    damageType: DamageType
+    damageType: DamageType,
+    characterLevel: string,
 ) => {
     const { [`Lv${talentLevel}`]: value } = talent.data[key]
     if (value) {
@@ -44,6 +46,9 @@ const damageFormula = (
             characterAttributes
         )
 
+        const defenseMultiplier = defMultiplier(enemyResistances, characterLevel);
+        const resistance = resMultiplier({enemyResistances}, damageType, {characterAttributes});
+
         const baseDamage =
             scalingValues.reduce((acc, scaling, index) => {
                 const statValue = attributeValues[index] || 0
@@ -58,14 +63,14 @@ const damageFormula = (
         const nonCritDamage =
             baseDamage *
             multiplicativeBonusStatValue *
-            enemyResistances.defenseMultiplier *
-            enemyResistances.resistance
+            defenseMultiplier *
+            resistance
         const critDamage =
             baseDamage *
             multiplicativeBonusStatValue *
             (1 + characterAttributes['CRIT DMG'] + critDamageBonusStatValue) *
-            enemyResistances.defenseMultiplier *
-            enemyResistances.resistance
+            defenseMultiplier *
+            resistance
         const averageDamage =
             baseDamage *
             multiplicativeBonusStatValue *
@@ -76,8 +81,8 @@ const damageFormula = (
                     1
                 ) *
                     (characterAttributes['CRIT DMG'] + critDamageBonusStatValue)) *
-            enemyResistances.defenseMultiplier *
-            enemyResistances.resistance
+            defenseMultiplier *
+            resistance
 
         return {
             nonCritDamage,

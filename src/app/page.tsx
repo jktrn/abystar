@@ -12,6 +12,8 @@ import {
     WeaponAttributes,
     WeaponImage,
     WeaponModal,
+    EnemyResistances,
+    ResShred,
 } from '@/components'
 import WeaponBonuses from '@/components/WeaponBonuses'
 import {
@@ -19,6 +21,7 @@ import {
     CharacterAttributes,
     CharacterState,
     DamageResult,
+    BaseStat,
 } from '@/interfaces/Character'
 import {
     applySpecialBonuses,
@@ -61,6 +64,16 @@ export default function Home() {
                 weapon: defaultWeapon,
                 weaponLevel: Object.keys(defaultWeapon.baseStats).at(-1) ?? '90/90',
                 weaponRefinement: 1,
+                enemyResistances: { "Level" : 90, 
+                                    "Physical" : 10,
+                                    "Pyro" : 10,
+                                    "Hydro" : 10,
+                                    "Electro" : 10,
+                                    "Anemo" : 10,
+                                    "Geo" : 10,
+                                    "Dendro" : 10,
+                                    "Cryo" : 10
+                                } as BaseStat,
             }
 
             const [updatedState, updatedAttributes] =
@@ -78,7 +91,6 @@ export default function Home() {
     const updateCharacterState = (updates: Partial<CharacterState>) => {
         setCharacterState((previousState) => {
             if (previousState === null) return null
-
             const modifiedState = { ...previousState, ...updates }
             const updatedBonuses = getUpdatedBonuses(modifiedState)
             console.log(updatedBonuses)
@@ -97,7 +109,7 @@ export default function Home() {
             const newDamageResults = calculateDamage(
                 characterState,
                 characterAttributes,
-                ENEMY_RESISTANCES
+                characterState.enemyResistances,
             )
             setDamageResults(newDamageResults)
             console.log('Damage Results: ', newDamageResults)
@@ -111,6 +123,7 @@ export default function Home() {
     useEffect(() => {
         console.log('Character Attributes have been updated: ', characterAttributes)
     }, [characterAttributes])
+
 
     return (
         <>
@@ -362,6 +375,27 @@ export default function Home() {
                                 Party Buffs
                             </h2>
                             <div className="p-4">Party Buffs</div>
+
+                            <h2 className="border-y bg-secondary/25 px-4 py-3 text-lg font-bold">
+                                Enemy Resistances
+                            </h2>
+                            <EnemyResistances
+                                resTable = {characterState.enemyResistances}
+                                onChange = {(resTable) => 
+                                    updateCharacterState(
+                                        {enemyResistances : resTable}
+                                    )}
+                            />
+                            <h2 className="border-y bg-secondary/25 px-4 py-3 text-lg font-bold">
+                                Elemental Resistance Shred
+                            </h2>
+                            {characterAttributes &&
+                                <ResShred
+                                    attributes = {characterAttributes}
+                                /> 
+                            }
+                            
+                            
                         </div>
 
                         <div className="m-2 flex-1 rounded-lg lg:min-w-max lg:overflow-auto">

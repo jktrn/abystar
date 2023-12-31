@@ -66,7 +66,9 @@ export interface Bonus {
     // What should be changed in the talent scaling
     applyToTalentScaling?: (talentScaling: TalentScaling) => void
 }
-
+export interface BaseStat {
+    [key: string]: number
+}
 export interface Effect {
     (
         attributes: CharacterAttributes,
@@ -97,8 +99,17 @@ export interface TalentScalingData {
     minConstellation?: number
 }
 
-export interface BaseStat {
-    [key: string]: number
+export interface CharacterState {
+    character: Character
+    characterLevel: string
+    characterConstellation: number
+    characterActiveBonuses: Bonus[]
+    characterTalentLevels: number[]
+    effectiveTalentLevels: number[]
+    weapon: Weapon
+    weaponLevel: string
+    weaponRefinement: number
+    enemyResistances: BaseStat
 }
 
 export interface Talent {
