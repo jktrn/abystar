@@ -32,10 +32,10 @@ const EnemyResistances = ({ resTable, onChange }: EnemyResistancesProps ) => {
         'Dendro RES' : `/images/elements/dendro.svg`,
         'Physical RES' : `/images/normal-attacks/sword.png`
     }
-
+    /* lg:max-std:w-1/5 lg:w-1/2 xl:w-3/4 */
     return (
         <div className = "flex flex-row flex-wrap p-3 justify-between">
-            <div className = "row-start-1 col-start-1 box-border h-20 w-20 p-2 flex flex-col flex-row items-center">
+            <div className = "h-20 w-20 p-2 flex flex-col flex-row items-center">
                 <Image 
                     src={`/images/elements/def.svg`}
                     alt="level"
@@ -52,7 +52,7 @@ const EnemyResistances = ({ resTable, onChange }: EnemyResistancesProps ) => {
             </div>
             {attributeSections[4].attributes.map((resType) => (
                 <Fragment key = {resType}>
-                    <div className = "row-start-1 col-start-1 box-border h-20 w-20 p-2 flex flex-col flex-row items-center">
+                    <div className = "h-20 w-20 p-2 flex flex-col flex-row items-center">
                         <Image 
                             src={resImages[resType as keyof typeof resImages]}
                             alt="level"
