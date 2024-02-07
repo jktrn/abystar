@@ -24,7 +24,7 @@ const compareObjects = (a: any, b: any) => {
     return diff
 }
 
-function defMultiplier(enemyResistances : BaseStat, characterLevel : string) {
+function calculateDef(enemyResistances : BaseStat, characterLevel : string) {
     const charLevel = Number(characterLevel.substring(0, characterLevel.indexOf('/')));
     const defenseMultiplier = (charLevel + 100) / ((1 - 0)*(enemyResistances.Level + 100) + (charLevel + 100));
     return defenseMultiplier;
@@ -38,7 +38,7 @@ interface characterAttributesProp {
     characterAttributes : CharacterAttributes
 }
 
-function resMultiplier({enemyResistances} : enemyResistancesProp, damageType : DamageType, {characterAttributes} : characterAttributesProp) {
+function calculateRes({enemyResistances} : enemyResistancesProp, damageType : DamageType, {characterAttributes} : characterAttributesProp) {
     const resShredType = DamageType[damageType].concat(" RES Shred");
     const baseResistance =  Number(enemyResistances[DamageType[damageType]]) / 100;
     const resShred = characterAttributes[resShredType];
@@ -206,7 +206,7 @@ export {
     mergeAndSum,
     getTalentScalingValue,
     insertAspect,
-    defMultiplier,
-    resMultiplier,
+    calculateDef,
+    calculateRes,
     ascensionMap,
 }

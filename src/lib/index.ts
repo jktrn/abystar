@@ -11,13 +11,14 @@ export {
     mergeAndSum,
     parseScalingValue,
     insertAspect,
-    defMultiplier,
-    resMultiplier,
+    calculateDef,
+    calculateRes,
 } from './utils'
 
 export {
     applySpecialBonuses,
     defaultCharacterAttributes,
+    defaultResistances
 } from './characterAttributes'
 
 export {

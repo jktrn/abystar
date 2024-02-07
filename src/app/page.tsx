@@ -27,6 +27,7 @@ import {
     applySpecialBonuses,
     calculateDamage,
     defaultCharacterAttributes,
+    defaultResistances,
     getConstellationOptions,
     getDefaultWeapon,
     getLevelOptions,
@@ -64,16 +65,7 @@ export default function Home() {
                 weapon: defaultWeapon,
                 weaponLevel: Object.keys(defaultWeapon.baseStats).at(-1) ?? '90/90',
                 weaponRefinement: 1,
-                enemyResistances: { "Level" : 90, 
-                                    "Physical" : 10,
-                                    "Pyro" : 10,
-                                    "Hydro" : 10,
-                                    "Electro" : 10,
-                                    "Anemo" : 10,
-                                    "Geo" : 10,
-                                    "Dendro" : 10,
-                                    "Cryo" : 10
-                                } as BaseStat,
+                enemyResistances: defaultResistances as BaseStat,
             }
 
             const [updatedState, updatedAttributes] =

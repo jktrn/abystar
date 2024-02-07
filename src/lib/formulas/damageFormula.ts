@@ -6,7 +6,7 @@ import {
     DamageType,
 
 } from '@/interfaces/Character'
-import { parseScalingValue, calculateStatValue, clamp, defMultiplier, resMultiplier } from '@/lib'
+import { parseScalingValue, calculateStatValue, clamp, calculateDef, calculateRes } from '@/lib'
 
 const damageFormula = (
     characterAttributes: CharacterAttributes,
@@ -46,8 +46,8 @@ const damageFormula = (
             characterAttributes
         )
 
-        const defenseMultiplier = defMultiplier(enemyResistances, characterLevel);
-        const resistance = resMultiplier({enemyResistances}, damageType, {characterAttributes});
+        const defenseMultiplier = calculateDef(enemyResistances, characterLevel);
+        const resistance = calculateRes({enemyResistances}, damageType, {characterAttributes});
 
         const baseDamage =
             scalingValues.reduce((acc, scaling, index) => {

@@ -1,4 +1,4 @@
-import { CharacterAttributes } from '@/interfaces/Character'
+import { CharacterAttributes, BaseStat } from '@/interfaces/Character'
 
 export const defaultCharacterAttributes = {
     HP: 0,
@@ -78,6 +78,18 @@ export const defaultCharacterAttributes = {
     'Dendro RES Shred': 0,
     'Physical RES': 0,
     'Physical RES Shred': 0,
+}
+
+export const defaultResistances = {
+    "Level" : 90, 
+    "Physical" : 10,
+    "Pyro" : 10,
+    "Hydro" : 10,
+    "Electro" : 10,
+    "Anemo" : 10,
+    "Geo" : 10,
+    "Dendro" : 10,
+    "Cryo" : 10                           
 }
 
 export const applySpecialBonuses = (
