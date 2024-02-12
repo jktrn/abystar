@@ -1,7 +1,179 @@
-import { TalentScaling, Bonus, Character } from '@/interfaces/Character'
+import {
+    Bonus,
+    Character,
+    DamageType,
+    FormulaOutputType,
+    FormulaType,
+    TalentScaling,
+} from '@/interfaces/Character'
 
 const talentScalings: TalentScaling = {
-    // ...
+    'Normal Attack: Garyuu Bladework': {
+        '1-Hit DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Normal Attack Additive Bonus'],
+            multiplicativeBonusStat: [
+                'Physical DMG Bonus',
+                'Normal Attack DMG Bonus',
+            ],
+            damageType: DamageType.Physical,
+        },
+        '2-Hit DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Normal Attack Additive Bonus'],
+            multiplicativeBonusStat: [
+                'Physical DMG Bonus',
+                'Normal Attack DMG Bonus',
+            ],
+            damageType: DamageType.Physical,
+        },
+        '3-Hit DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Normal Attack Additive Bonus'],
+            multiplicativeBonusStat: [
+                'Physical DMG Bonus',
+                'Normal Attack DMG Bonus',
+            ],
+            damageType: DamageType.Physical,
+        },
+        '4-Hit DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Normal Attack Additive Bonus'],
+            multiplicativeBonusStat: [
+                'Physical DMG Bonus',
+                'Normal Attack DMG Bonus',
+            ],
+            damageType: DamageType.Physical,
+        },
+        '5-Hit DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Normal Attack Additive Bonus'],
+            multiplicativeBonusStat: [
+                'Physical DMG Bonus',
+                'Normal Attack DMG Bonus',
+            ],
+            damageType: DamageType.Physical,
+        },
+        'Charged Attack DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Charged Attack Additive Bonus'],
+            multiplicativeBonusStat: [
+                'Physical DMG Bonus',
+                'Charged Attack DMG Bonus',
+            ],
+            damageType: DamageType.Physical,
+        },
+        'Charged Attack Stamina Cost': {
+            formulaType: FormulaType.GenericFormulaWithoutScaling,
+            multiplicativeBonusStat: ['Charged Attack Stamina Cost Multiplier'],
+            outputType: FormulaOutputType.Generic,
+        },
+        'Plunge DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Plunging Attack Additive Bonus'],
+            multiplicativeBonusStat: [
+                'Physical DMG Bonus',
+                'Plunging Attack DMG Bonus',
+            ],
+            damageType: DamageType.Physical,
+        },
+        'Low Plunge DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Plunging Attack Additive Bonus'],
+            multiplicativeBonusStat: [
+                'Physical DMG Bonus',
+                'Plunging Attack DMG Bonus',
+            ],
+            damageType: DamageType.Physical,
+        },
+        'High Plunge DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Plunging Attack Additive Bonus'],
+            multiplicativeBonusStat: [
+                'Physical DMG Bonus',
+                'Plunging Attack DMG Bonus',
+            ],
+            damageType: DamageType.Physical,
+        },
+    },
+    'Chihayaburu': {
+        'Press Skill DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Elemental Skill Additive Bonus'],
+            multiplicativeBonusStat: [
+                'Anemo DMG Bonus',
+                'Elemental Skill DMG Bonus',
+            ],
+            damageType: DamageType.Anemo,
+        },
+        'Press CD': {
+            formulaType: FormulaType.GenericFormulaWithoutScaling,
+            outputType: FormulaOutputType.Time,
+        },
+        'Hold Skill DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Elemental Skill Additive Bonus'],
+            multiplicativeBonusStat: [
+                'Anemo DMG Bonus',
+                'Elemental Skill DMG Bonus',
+            ],
+            damageType: DamageType.Anemo,
+        },
+        'Hold CD': {
+            formulaType: FormulaType.GenericFormulaWithoutScaling,
+            outputType: FormulaOutputType.Time,
+        },
+    },
+    'Kazuha Slash': {
+        'Slashing DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Elemental Burst Additive Bonus'],
+            multiplicativeBonusStat: [
+                'Anemo DMG Bonus',
+                'Elemental Burst DMG Bonus',
+            ],
+            damageType: DamageType.Anemo,
+        },
+        DoT: {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Elemental Burst Additive Bonus'],
+            multiplicativeBonusStat: [
+                'Anemo DMG Bonus',
+                'Elemental Burst DMG Bonus',
+            ],
+            damageType: DamageType.Anemo,
+        },
+        'Additional Elemental DMG': {
+            formulaType: FormulaType.ElementalReactionFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Elemental Burst Additive Bonus'],
+            multiplicativeBonusStat: [
+                'Elemental Burst DMG Bonus',
+            ],
+        },
+        CD: {
+            formulaType: FormulaType.GenericFormulaWithoutScaling,
+            outputType: FormulaOutputType.Time,
+        },
+        'Energy Cost': {
+            formulaType: FormulaType.GenericFormulaWithoutScaling,
+            outputType: FormulaOutputType.Generic,
+        },
+    }
+
 }
 
 const characterBonuses: Bonus[] = [
