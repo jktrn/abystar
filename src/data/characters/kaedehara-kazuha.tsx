@@ -397,7 +397,7 @@ const constellationBonuses: Bonus[] = [
         name: 'Oozora Genpou',
         description: (
             <span>
-                When Kaedehara Kazuha's Energy is lower than 45, he obtains the following effects: 
+                When Kaedehara Kazuha&apos;s Energy is lower than 45, he obtains the following effects: 
                 Pressing or Holding Chihayaburu regenerates 3 or 4 Energy for Kaedehara Kazuha, respectively. 
                 When gliding, Kaedehara Kazuha regenerates 2 Energy per second.
             </span>
@@ -445,7 +445,7 @@ const constellationBonuses: Bonus[] = [
             <span>
                 After using Chihayaburu nor Kazuha Slash, Kaedehara Kazuha gains an Anemo Infusion for <span style={{ color: '#ddd' }}>5s</span>. 
                 Additionally, each point of Elemental Mastery will increase the DMG dealt 
-                by Kaedehara Kazuha's Normal, Charged, and Plunging Attacks by <span style={{ color: '#ddd' }}>0.2%</span>.
+                by Kaedehara Kazuha&apos;s Normal, Charged, and Plunging Attacks by <span style={{ color: '#ddd' }}>0.2%</span>.
             </span>
         ),
         icon: '/images/characters/kaedehara-kazuha-constellation6.png',
