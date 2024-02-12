@@ -157,7 +157,7 @@ const talentScalings: TalentScaling = {
             damageType: DamageType.Anemo,
         },
         'Additional Elemental DMG': {
-            formulaType: FormulaType.ElementalReactionFormula,
+            formulaType: FormulaType.DamageFormula,
             attribute: ['ATK'],
             additiveBonusStat: ['Elemental Burst Additive Bonus'],
             multiplicativeBonusStat: [
@@ -177,7 +177,53 @@ const talentScalings: TalentScaling = {
 }
 
 const characterBonuses: Bonus[] = [
-    // ...
+    {
+        name: 'Burst Infusion Additional DMG',
+        description: (
+            <span>
+                If Autumn Whirlwind comes into contact with
+                <span style={{ color: '#3d9bc1' }}> Hydro</span>, 
+                <span style={{ color: '#bf612d' }}>Pyro</span>,
+                <span style={{ color: '#7fabb6' }}>Cryo</span>,
+                <span style={{ color: '#8c729a' }}>Electro</span>, 
+                it will deal additional elemental DMG of that type.
+            </span>
+        ),
+        icon: '/images/characters/kaedehara-kazuha-burst.png',
+        effect: (attributes, talentLevels, currentStacks) => {
+            if (!currentStacks) return { attributes }
+
+            const newAttributes = {
+                ...attributes,
+            }
+
+            return { attributes: newAttributes }
+        },
+        affectsTalentIndex: 0,
+        applyToTalentScaling: (talentScaling) => {
+            const burstAttackScaling =
+            talentScaling['Kazuha Slash']['Additional Elemental DMG']
+
+            const elementalDamageBonus = ['Hydro DMG Bonus', 'Pyro DMG Bonus', 'Cryo DMG Bonus', 'Electro DMG Bonus']
+            const elementalDamageType = [DamageType.Hydro, DamageType.Pyro, DamageType.Cryo, DamageType.Electro]
+            
+            // Need to find a way to get currentStacks working here. Hydro currently is being used as a placeholder
+            if (burstAttackScaling && burstAttackScaling.multiplicativeBonusStat) {
+                burstAttackScaling.multiplicativeBonusStat[0] = 'Hydro DMG Bonus'
+                burstAttackScaling.damageType = DamageType.Hydro
+            }
+        },
+        maxStacks: 4,
+        stackOptions: [
+            'Off',
+            'Hydro',
+            'Pyro',
+            'Cryo',
+            'Electro',
+        ],
+        origin: 'Q',
+        priority: 2
+    }
 ]
 
 const constellationBonuses: Bonus[] = [
