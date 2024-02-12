@@ -104,6 +104,14 @@ const talentScalings: TalentScaling = {
             ],
             damageType: DamageType.Physical,
         },
+        'Midare Ranzan': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Plunging Attack Additive Bonus'],
+            multiplicativeBonusStat: [
+                'Plunging Attack DMG Bonus',
+            ]
+        }
     },
     'Chihayaburu': {
         'Press Skill DMG': {
@@ -118,6 +126,7 @@ const talentScalings: TalentScaling = {
         },
         'Press CD': {
             formulaType: FormulaType.GenericFormulaWithoutScaling,
+            multiplicativeBonusStat: ['Elemental Skill CD Reduction'],
             outputType: FormulaOutputType.Time,
         },
         'Hold Skill DMG': {
@@ -132,6 +141,7 @@ const talentScalings: TalentScaling = {
         },
         'Hold CD': {
             formulaType: FormulaType.GenericFormulaWithoutScaling,
+            multiplicativeBonusStat: ['Elemental Skill CD Reduction'],
             outputType: FormulaOutputType.Time,
         },
     },
@@ -166,6 +176,7 @@ const talentScalings: TalentScaling = {
         },
         CD: {
             formulaType: FormulaType.GenericFormulaWithoutScaling,
+            multiplicativeBonusStat: ['Elemental Burst CD Reduction'],
             outputType: FormulaOutputType.Time,
         },
         'Energy Cost': {
@@ -182,10 +193,10 @@ const characterBonuses: Bonus[] = [
         description: (
             <span>
                 If Autumn Whirlwind comes into contact with
-                <span style={{ color: '#3d9bc1' }}> Hydro</span>, 
-                <span style={{ color: '#bf612d' }}>Pyro</span>,
-                <span style={{ color: '#7fabb6' }}>Cryo</span>,
-                <span style={{ color: '#8c729a' }}>Electro</span>, 
+                <span style={{ color: '#3d9bc1' }}> Hydro</span>,
+                <span style={{ color: '#bf612d' }}> Pyro</span>,
+                <span style={{ color: '#7fabb6' }}> Cryo</span>,
+                <span style={{ color: '#8c729a' }}> Electro</span>, 
                 it will deal additional elemental DMG of that type.
             </span>
         ),
@@ -222,12 +233,255 @@ const characterBonuses: Bonus[] = [
             'Electro',
         ],
         origin: 'Q',
+    },
+    {
+        name: 'Soumon Swordsmanship',
+        description: (
+            <span>
+                If Chihayaburu comes into contact with <span style={{ color: '#3d9bc1' }}> Hydro</span>,
+                <span style={{ color: '#bf612d' }}> Pyro</span>,
+                <span style={{ color: '#7fabb6' }}> Cryo</span>,
+                <span style={{ color: '#8c729a' }}> Electro</span> when cast, 
+                this Chihayaburu will absorb that element and if Plunging Attack: Midare Ranzan is used before the effect expires, 
+                it will deal an additional <span style={{ color: '#ddd' }}>200% ATK</span> of the absorbed elemental type as DMG. 
+                This will be considered Plunging Attack DMG.
+            </span>
+        ),
+        icon: '/images/characters/kaedehara-kazuha-passive1.png',
+        effect: (attributes, talentLevels, currentStacks) => {
+            if (!currentStacks) return { attributes }
+
+            const newAttributes = {
+                ...attributes,
+            }
+
+            return { attributes: newAttributes }
+        },
+        affectsTalentIndex: 0,
+        applyToTalentScaling: (talentScaling) => {
+            const plungeAttackScaling =
+            talentScaling['Normal Attack: Garyuu Bladework']['Midare Ranzan']
+
+            const elementalDamageBonus = ['Hydro DMG Bonus', 'Pyro DMG Bonus', 'Cryo DMG Bonus', 'Electro DMG Bonus']
+            const elementalDamageType = [DamageType.Hydro, DamageType.Pyro, DamageType.Cryo, DamageType.Electro]
+            
+            // Need to find a way to get currentStacks working here. Hydro currently is being used as a placeholder
+            if (plungeAttackScaling && plungeAttackScaling.multiplicativeBonusStat) {
+                plungeAttackScaling.multiplicativeBonusStat[0] = 'Hydro DMG Bonus'
+                plungeAttackScaling.damageType = DamageType.Hydro
+            }
+        },
+        maxStacks: 4,
+        stackOptions: [
+            'Off',
+            'Hydro',
+            'Pyro',
+            'Cryo',
+            'Electro',
+        ],
+        origin: 'A1',
+        minAscension: 1,
+    },
+    {
+        name: 'Poetics of Fuubutsu',
+        description: (
+            <span>
+                Upon triggering a Swirl reaction, Kaedehara Kazuha will grant all party members a <span style={{ color: '#ddd' }}>0.04%</span>{' '}
+                Elemental DMG Bonus to the element absorbed by Swirl 
+                for every point of Elemental Mastery he has for 8s. Bonuses for different elements obtained through this method can co-exist.
+            </span>
+        ),
+        icon: '/images/characters/kaedehara-kazuha-passive2.png',
+        effect: (attributes, talentLevels, currentStacks) => {
+            if (!currentStacks) return { attributes }
+
+            const elementalDamageBonus = [0, 0, 0, 0]
+
+            elementalDamageBonus[currentStacks - 1] = 0.0004 * attributes['Elemental Mastery']
+
+            const newAttributes = {
+                ...attributes,
+                'Hydro DMG Bonus': attributes['Hydro DMG Bonus'] + elementalDamageBonus[0],
+                'Pyro DMG Bonus': attributes['Pyro DMG Bonus'] + elementalDamageBonus[1],
+                'Cryo DMG Bonus': attributes['Cryo DMG Bonus'] + elementalDamageBonus[2],
+                'Electro DMG Bonus': attributes['Electro DMG Bonus'] + elementalDamageBonus[3],
+            }
+
+            return { attributes: newAttributes }
+        },
+        maxStacks: 4,
+        stackOptions: [
+            'Off',
+            'Hydro',
+            'Pyro',
+            'Cryo',
+            'Electro',
+        ],
+        origin: 'A4',
+        minAscension: 4,
         priority: 2
-    }
+    },
 ]
 
 const constellationBonuses: Bonus[] = [
-    // ...
+    {
+        name: 'Scarlet Hills',
+        description: (
+            <span>
+                Decreases Chihayaburu&apos;s CD by <span style={{ color: '#ddd' }}>10%</span>. Using Kazuha Slash resets the CD of Chihayaburu.
+            </span>
+        ),
+        icon: '/images/characters/kaedehara-kazuha-constellation1.png',
+        effect: (attributes) => {
+            const newAttributes = {
+                ...attributes,
+                'Elemental Skill CD Reduction': attributes['Elemental Skill CD Reduction'] - 0.1,
+            }
+
+            return { attributes: newAttributes }
+        },
+        origin: 'C1',
+        minConstellation: 1,
+        enabled: true,
+        priority: 1
+    },
+    {
+        name: 'Yamaarashi Tailwind',
+        description: (
+            <span>
+                The Autumn Whirlwind field created by Kazuha Slash has the following effects: 
+                Increases Kaedehara Kazuha&apos;s own Elemental Mastery by <span style={{ color: '#ddd' }}>200</span> for its duration. 
+                Increases the Elemental Mastery of characters within the field by <span style={{ color: '#ddd' }}>200</span>. 
+                The Elemental Mastery-increasing effects of this Constellation do not stack.
+            </span>
+        ),
+        icon: '/images/characters/kaedehara-kazuha-constellation2.png',
+        effect: (attributes) => {
+            const newAttributes = {
+                ...attributes,
+                'Elemental Mastery': attributes['Elemental Mastery'] + 200,
+            }
+
+            return { attributes: newAttributes }
+        },
+        origin: 'C2',
+        minConstellation: 2,
+        priority: 1
+    },
+    {
+        name: "Maple Monogatari",
+        description: (
+            <span>
+                Increases the Level of{' '}
+                <span style={{ color: '#DDD' }}>Chihayaburu</span> by 3.
+                <br />
+                Maximum upgrade level is 15.
+            </span>
+        ),
+        icon: '/images/characters/kaedehara-kazuha-constellation3.png',
+        effect: (attributes, talentLevels) => {
+            if (!talentLevels) return { attributes }
+
+            const newTalentLevels = [...talentLevels]
+            newTalentLevels[1] = Math.min(newTalentLevels[1] + 3, 13)
+
+            return { attributes: attributes, updatedTalentLevels: newTalentLevels }
+        },
+        minConstellation: 3,
+        origin: 'C3',
+        enabled: true,
+        visible: false,
+        priority: 0,
+    },
+    {
+        name: 'Oozora Genpou',
+        description: (
+            <span>
+                When Kaedehara Kazuha's Energy is lower than 45, he obtains the following effects: 
+                Pressing or Holding Chihayaburu regenerates 3 or 4 Energy for Kaedehara Kazuha, respectively. 
+                When gliding, Kaedehara Kazuha regenerates 2 Energy per second.
+            </span>
+        ),
+        icon: '/images/characters/kaedehara-kazuha-constellation4.png',
+        effect: (attributes) => {
+            const newAttributes = {
+                ...attributes,
+            }
+            // This constellation literally does nothing in the calculator
+            return { attributes: newAttributes }
+        },
+        origin: 'C4',
+        visible: false,
+        minConstellation: 4,
+    },
+    {
+        name: "Wisdom of Bansei",
+        description: (
+            <span>
+                Increases the Level of{' '}
+                <span style={{ color: '#DDD' }}>Kazuha Slash</span> by 3.
+                <br />
+                Maximum upgrade level is 15.
+            </span>
+        ),
+        icon: '/images/characters/kaedehara-kazuha-constellation5.png',
+        effect: (attributes, talentLevels) => {
+            if (!talentLevels) return { attributes }
+
+            const newTalentLevels = [...talentLevels]
+            newTalentLevels[2] = Math.min(newTalentLevels[2] + 3, 13)
+
+            return { attributes: attributes, updatedTalentLevels: newTalentLevels }
+        },
+        minConstellation: 5,
+        origin: 'C5',
+        enabled: true,
+        visible: false,
+        priority: 0,
+    },
+    {
+        name: 'Crimson Momiji',
+        description: (
+            <span>
+                After using Chihayaburu nor Kazuha Slash, Kaedehara Kazuha gains an Anemo Infusion for <span style={{ color: '#ddd' }}>5s</span>. 
+                Additionally, each point of Elemental Mastery will increase the DMG dealt 
+                by Kaedehara Kazuha's Normal, Charged, and Plunging Attacks by <span style={{ color: '#ddd' }}>0.2%</span>.
+            </span>
+        ),
+        icon: '/images/characters/kaedehara-kazuha-constellation6.png',
+        effect: (attributes) => {
+
+            const newAttributes = {
+                ...attributes,
+                'Normal Attack DMG Bonus': attributes['Normal Attack DMG Bonus'] + 0.002 * attributes['Elemental Mastery'],
+                'Charged Attack DMG Bonus': attributes['Charged Attack DMG Bonus'] + 0.002 * attributes['Elemental Mastery'],
+                'Plunging Attack DMG Bonus': attributes['Plunging Attack DMG Bonus'] + 0.002 * attributes['Elemental Mastery'],
+            }
+
+            return { attributes: newAttributes }
+        },
+        affectsTalentIndex: 0,
+        applyToTalentScaling: (talentScaling) => {
+            const normalAttackScaling =
+                talentScaling['Normal Attack: Garyuu Bladework']
+
+            if (normalAttackScaling) {
+                Object.values(normalAttackScaling).forEach((aspect) => {
+                    if (
+                        aspect.formulaType !== FormulaType.DamageFormula ||
+                        !aspect.multiplicativeBonusStat ||
+                        aspect == talentScaling['Normal Attack: Garyuu Bladework']['Midare Ranzan']
+                    )
+                        return
+                    aspect.multiplicativeBonusStat[0] = 'Anemo DMG Bonus'
+                    aspect.damageType = DamageType.Anemo
+                })
+            }
+        },
+        minConstellation: 6,
+        origin: 'C6',
+        priority: 2,
+    },
 ]
 
 const KaedeharaKazuha: Character = {
@@ -530,6 +784,23 @@ const KaedeharaKazuha: Character = {
                     Lv14: '518.09%',
                     Lv15: '546.61%',
                 },
+                'Midare Ranzan': {
+                    Lv1: '200.00%',
+                    Lv2: '200.00%',
+                    Lv3: '200.00%',
+                    Lv4: '200.00%',
+                    Lv5: '200.00%',
+                    Lv6: '200.00%',
+                    Lv7: '200.00%',
+                    Lv8: '200.00%',
+                    Lv9: '200.00%',
+                    Lv10: '200.00%',
+                    Lv11: '200.00%',
+                    Lv12: '200.00%',
+                    Lv13: '200.00%',
+                    Lv14: '200.00%',
+                    Lv15: '200.00%',
+                }
             },
         },
         {
