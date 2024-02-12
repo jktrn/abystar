@@ -436,12 +436,12 @@ const constellationBonuses: Bonus[] = [
                 Maximum upgrade level is 15.
             </span>
         ),
-        icon: '/images/characters/mona-constellation3.png',
+        icon: '/images/characters/furina-constellation3.png',
         effect: (attributes, talentLevels) => {
             if (!talentLevels) return { attributes }
 
             const newTalentLevels = [...talentLevels]
-            newTalentLevels[1] = Math.min(newTalentLevels[1] + 3, 13)
+            newTalentLevels[2] = Math.min(newTalentLevels[2] + 3, 13)
 
             return { attributes: attributes, updatedTalentLevels: newTalentLevels }
         },
@@ -484,7 +484,7 @@ const constellationBonuses: Bonus[] = [
             if (!talentLevels) return { attributes }
 
             const newTalentLevels = [...talentLevels]
-            newTalentLevels[2] = Math.min(newTalentLevels[2] + 3, 13)
+            newTalentLevels[1] = Math.min(newTalentLevels[1] + 3, 13)
 
             return { attributes: attributes, updatedTalentLevels: newTalentLevels }
         },
