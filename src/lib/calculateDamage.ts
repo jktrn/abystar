@@ -35,7 +35,10 @@ function calculateDamage(
                     bonus.affectsTalentIndex === index &&
                     bonus.applyToTalentScaling
                 ) {
-                    bonus.applyToTalentScaling(effectiveTalentScaling)
+                    bonus.applyToTalentScaling(
+                        effectiveTalentScaling,
+                        bonus.currentStacks
+                    )
                 }
             })
 

@@ -64,7 +64,10 @@ export interface Bonus {
     // The index of the talent that the bonus changes the scaling of
     affectsTalentIndex?: number
     // What should be changed in the talent scaling
-    applyToTalentScaling?: (talentScaling: TalentScaling) => void
+    applyToTalentScaling?: (
+        talentScaling: TalentScaling,
+        currentStacks?: number
+    ) => void
 }
 
 export interface Effect {

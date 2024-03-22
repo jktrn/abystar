@@ -13,13 +13,15 @@ const weaponBonuses: Bonus[] = [
 
             const newAttributes = {
                 ...attributes,
-                'CRIT Rate': (attributes['CRIT Rate'] || 0) + critRateBonusPerStack[state.weaponRefinement - 1]
+                'CRIT Rate':
+                    (attributes['CRIT Rate'] || 0) +
+                    critRateBonusPerStack[state.weaponRefinement - 1],
             }
             return { attributes: newAttributes }
         },
         enabled: false,
-        priority: 1
-    }
+        priority: 1,
+    },
 ]
 
 const SkywardSpine: Weapon = {
@@ -92,62 +94,87 @@ const SkywardSpine: Weapon = {
     },
     refinements: [
         {
-            description:
+            description: (
                 <span>
-                    Increases CRIT Rate by <span style={{ color: '#ddd' }}>8%</span> and increases Normal ATK SPD by <span style={{ color: '#ddd' }}>12%</span>. 
-                    Additionally, Normal and Charged Attacks hits on opponents have a <span style={{ color: '#ddd' }}>50%</span> chance 
-                    to trigger a vacuum blade that deals <span style={{ color: '#ddd' }}>40%</span> of ATK as DMG in a small AoE. 
-                    This effect can occur no more than once every <span style={{ color: '#ddd' }}>2s</span>.
+                    Increases CRIT Rate by <span style={{ color: '#ddd' }}>8%</span>{' '}
+                    and increases Normal ATK SPD by{' '}
+                    <span style={{ color: '#ddd' }}>12%</span>. Additionally, Normal
+                    and Charged Attacks hits on opponents have a{' '}
+                    <span style={{ color: '#ddd' }}>50%</span> chance to trigger a
+                    vacuum blade that deals{' '}
+                    <span style={{ color: '#ddd' }}>40%</span> of ATK as DMG in a
+                    small AoE. This effect can occur no more than once every{' '}
+                    <span style={{ color: '#ddd' }}>2s</span>.
                 </span>
-                ,
+            ),
             level: 1,
         },
         {
-            description:
-            <span>
-                Increases CRIT Rate by <span style={{ color: '#ddd' }}>10%</span> and increases Normal ATK SPD by <span style={{ color: '#ddd' }}>12%</span>. 
-                Additionally, Normal and Charged Attacks hits on opponents have a <span style={{ color: '#ddd' }}>50%</span> chance 
-                to trigger a vacuum blade that deals <span style={{ color: '#ddd' }}>55%</span> of ATK as DMG in a small AoE. 
-                This effect can occur no more than once every <span style={{ color: '#ddd' }}>2s</span>.
-            </span>
-            ,
+            description: (
+                <span>
+                    Increases CRIT Rate by <span style={{ color: '#ddd' }}>10%</span>{' '}
+                    and increases Normal ATK SPD by{' '}
+                    <span style={{ color: '#ddd' }}>12%</span>. Additionally, Normal
+                    and Charged Attacks hits on opponents have a{' '}
+                    <span style={{ color: '#ddd' }}>50%</span> chance to trigger a
+                    vacuum blade that deals{' '}
+                    <span style={{ color: '#ddd' }}>55%</span> of ATK as DMG in a
+                    small AoE. This effect can occur no more than once every{' '}
+                    <span style={{ color: '#ddd' }}>2s</span>.
+                </span>
+            ),
             level: 2,
         },
         {
-            description:
-            <span>
-                Increases CRIT Rate by <span style={{ color: '#ddd' }}>12%</span> and increases Normal ATK SPD by <span style={{ color: '#ddd' }}>12%</span>. 
-                Additionally, Normal and Charged Attacks hits on opponents have a <span style={{ color: '#ddd' }}>50%</span> chance 
-                to trigger a vacuum blade that deals <span style={{ color: '#ddd' }}>70%</span> of ATK as DMG in a small AoE. 
-                This effect can occur no more than once every <span style={{ color: '#ddd' }}>2s</span>.
-            </span>
-            ,
+            description: (
+                <span>
+                    Increases CRIT Rate by <span style={{ color: '#ddd' }}>12%</span>{' '}
+                    and increases Normal ATK SPD by{' '}
+                    <span style={{ color: '#ddd' }}>12%</span>. Additionally, Normal
+                    and Charged Attacks hits on opponents have a{' '}
+                    <span style={{ color: '#ddd' }}>50%</span> chance to trigger a
+                    vacuum blade that deals{' '}
+                    <span style={{ color: '#ddd' }}>70%</span> of ATK as DMG in a
+                    small AoE. This effect can occur no more than once every{' '}
+                    <span style={{ color: '#ddd' }}>2s</span>.
+                </span>
+            ),
             level: 3,
         },
         {
-            description:
-            <span>
-                Increases CRIT Rate by <span style={{ color: '#ddd' }}>14%</span> and increases Normal ATK SPD by <span style={{ color: '#ddd' }}>12%</span>. 
-                Additionally, Normal and Charged Attacks hits on opponents have a <span style={{ color: '#ddd' }}>50%</span> chance 
-                to trigger a vacuum blade that deals <span style={{ color: '#ddd' }}>85%</span> of ATK as DMG in a small AoE. 
-                This effect can occur no more than once every <span style={{ color: '#ddd' }}>2s</span>.
-            </span>
-            ,
+            description: (
+                <span>
+                    Increases CRIT Rate by <span style={{ color: '#ddd' }}>14%</span>{' '}
+                    and increases Normal ATK SPD by{' '}
+                    <span style={{ color: '#ddd' }}>12%</span>. Additionally, Normal
+                    and Charged Attacks hits on opponents have a{' '}
+                    <span style={{ color: '#ddd' }}>50%</span> chance to trigger a
+                    vacuum blade that deals{' '}
+                    <span style={{ color: '#ddd' }}>85%</span> of ATK as DMG in a
+                    small AoE. This effect can occur no more than once every{' '}
+                    <span style={{ color: '#ddd' }}>2s</span>.
+                </span>
+            ),
             level: 4,
         },
         {
-            description:
-            <span>
-                Increases CRIT Rate by <span style={{ color: '#ddd' }}>16%</span> and increases Normal ATK SPD by <span style={{ color: '#ddd' }}>12%</span>. 
-                Additionally, Normal and Charged Attacks hits on opponents have a <span style={{ color: '#ddd' }}>50%</span> chance 
-                to trigger a vacuum blade that deals <span style={{ color: '#ddd' }}>100%</span> of ATK as DMG in a small AoE. 
-                This effect can occur no more than once every <span style={{ color: '#ddd' }}>2s</span>.
-            </span>
-            ,
+            description: (
+                <span>
+                    Increases CRIT Rate by <span style={{ color: '#ddd' }}>16%</span>{' '}
+                    and increases Normal ATK SPD by{' '}
+                    <span style={{ color: '#ddd' }}>12%</span>. Additionally, Normal
+                    and Charged Attacks hits on opponents have a{' '}
+                    <span style={{ color: '#ddd' }}>50%</span> chance to trigger a
+                    vacuum blade that deals{' '}
+                    <span style={{ color: '#ddd' }}>100%</span> of ATK as DMG in a
+                    small AoE. This effect can occur no more than once every{' '}
+                    <span style={{ color: '#ddd' }}>2s</span>.
+                </span>
+            ),
             level: 5,
         },
     ],
-    weaponBonuses
+    weaponBonuses,
 }
 
 export default SkywardSpine

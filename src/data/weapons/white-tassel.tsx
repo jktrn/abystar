@@ -9,17 +9,19 @@ const weaponBonuses: Bonus[] = [
                 return { attributes }
             }
 
-            const normalAttackBonusPerStack = [0.24, 0.3, 0.36, 0.42, 0.48] 
+            const normalAttackBonusPerStack = [0.24, 0.3, 0.36, 0.42, 0.48]
 
             const newAttributes = {
                 ...attributes,
-                'Normal Attack DMG Bonus': (attributes['Normal Attack DMG Bonus'] || 0) + normalAttackBonusPerStack[state.weaponRefinement - 1]
+                'Normal Attack DMG Bonus':
+                    (attributes['Normal Attack DMG Bonus'] || 0) +
+                    normalAttackBonusPerStack[state.weaponRefinement - 1],
             }
             return { attributes: newAttributes }
         },
         enabled: false,
-        priority: 1
-    }
+        priority: 1,
+    },
 ]
 
 const WhiteTassel: Weapon = {
@@ -93,7 +95,8 @@ const WhiteTassel: Weapon = {
         {
             description: (
                 <span>
-                    Increases Normal Attack DMG by <span style={{ color: '#ddd' }}>24%</span>.
+                    Increases Normal Attack DMG by{' '}
+                    <span style={{ color: '#ddd' }}>24%</span>.
                 </span>
             ),
             level: 1,
@@ -101,7 +104,8 @@ const WhiteTassel: Weapon = {
         {
             description: (
                 <span>
-                    Increases Normal Attack DMG by <span style={{ color: '#ddd' }}>30%</span>.
+                    Increases Normal Attack DMG by{' '}
+                    <span style={{ color: '#ddd' }}>30%</span>.
                 </span>
             ),
             level: 2,
@@ -109,7 +113,8 @@ const WhiteTassel: Weapon = {
         {
             description: (
                 <span>
-                    Increases Normal Attack DMG by <span style={{ color: '#ddd' }}>36%</span>.
+                    Increases Normal Attack DMG by{' '}
+                    <span style={{ color: '#ddd' }}>36%</span>.
                 </span>
             ),
             level: 3,
@@ -117,7 +122,8 @@ const WhiteTassel: Weapon = {
         {
             description: (
                 <span>
-                    Increases Normal Attack DMG by <span style={{ color: '#ddd' }}>42%</span>.
+                    Increases Normal Attack DMG by{' '}
+                    <span style={{ color: '#ddd' }}>42%</span>.
                 </span>
             ),
             level: 4,
@@ -125,13 +131,14 @@ const WhiteTassel: Weapon = {
         {
             description: (
                 <span>
-                    Increases Normal Attack DMG by <span style={{ color: '#ddd' }}>48%</span>.
+                    Increases Normal Attack DMG by{' '}
+                    <span style={{ color: '#ddd' }}>48%</span>.
                 </span>
             ),
             level: 5,
         },
     ],
-    weaponBonuses
+    weaponBonuses,
 }
 
 export default WhiteTassel
