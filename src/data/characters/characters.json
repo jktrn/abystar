@@ -16318,7 +16318,8 @@
                 "description": "After using\nChihayaburu\nor\nKazuha Slash\n, Kaedehara Kazuha gains an\nAnemo Infusion\nfor 5s. Additionally, each point of Elemental Mastery will increase the DMG dealt by Kaedehara Kazuha's Normal, Charged, and Plunging Attacks by 0.2%.",
                 "level": 6
             }
-        ]
+        ],
+        "implemented": true
     },
     "Kaeya": {
         "name": "Kaeya",
