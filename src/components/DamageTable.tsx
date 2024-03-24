@@ -54,12 +54,12 @@ const DamageTable = ({ damageResults }: DamageTableProps) => {
                               ? `${(aspect.damage.outputValue * 100)?.toFixed(2)}%`
                               : aspect.damage.outputType ===
                                   FormulaOutputType.Healing
-                                ? `+${Math.round(aspect.damage.outputValue)}`
+                                ? `+${Math.floor(aspect.damage.outputValue)}`
                                 : aspect.damage.outputType ===
                                     FormulaOutputType.Drain
-                                  ? `-${Math.round(aspect.damage.outputValue)}`
+                                  ? `-${Math.floor(aspect.damage.outputValue)}`
                                   : aspect.damage.outputValue
-                                    ? Math.round(aspect.damage.outputValue)
+                                    ? Math.floor(aspect.damage.outputValue)
                                     : 0
                     result.push({
                         name: aspect.aspectName,
@@ -70,13 +70,13 @@ const DamageTable = ({ damageResults }: DamageTableProps) => {
                     result.push({
                         name: aspect.aspectName,
                         nonCrit: aspect.damage.nonCritDamage
-                            ? Math.round(aspect.damage.nonCritDamage)
+                            ? Math.floor(aspect.damage.nonCritDamage)
                             : 0,
                         crit: aspect.damage.critDamage
-                            ? Math.round(aspect.damage.critDamage)
+                            ? Math.floor(aspect.damage.critDamage)
                             : 0,
                         average: aspect.damage.averageDamage
-                            ? Math.round(aspect.damage.averageDamage)
+                            ? Math.floor(aspect.damage.averageDamage)
                             : 0,
                         damageType: aspect.damage.damageType,
                     })

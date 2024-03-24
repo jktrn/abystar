@@ -25450,7 +25450,8 @@
                 "description": "If more than 3 charges of Crystal Shrapnel are consumed when using\nCeremonial Crystalshot\n, each charge consumed beyond the first 3 increases the CRIT DMG of that Ceremonial Crystalshot by 35%, and any charges consumed beyond the first 3 are returned to Navia.",
                 "level": 6
             }
-        ]
+        ],
+        "implemented": true
     },
     "Neuvillette": {
         "name": "Neuvillette",

@@ -35,8 +35,8 @@ const AttributesTable = ({
                     let formattedInitialValue
                     let difference
                     if (['HP', 'DEF', 'Elemental Mastery', 'ATK'].includes(key)) {
-                        formattedValue = Math.round(value)
-                        formattedInitialValue = Math.round(initialAttributes[key])
+                        formattedValue = Math.floor(value)
+                        formattedInitialValue = Math.floor(initialAttributes[key])
                         difference = formattedValue - formattedInitialValue
                     } else {
                         formattedValue = `${(value * 100).toFixed(1)}%`

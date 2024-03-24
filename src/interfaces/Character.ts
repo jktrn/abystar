@@ -89,7 +89,7 @@ export interface TalentScaling {
 }
 
 export interface TalentScalingData {
-    formulaType: FormulaType
+    formulaType?: FormulaType
     attribute?: string[]
     additiveBonusStat?: string[]
     multiplicativeBonusStat?: string[]
@@ -98,6 +98,8 @@ export interface TalentScalingData {
     damageType?: DamageType
     outputType?: FormulaOutputType
     minConstellation?: number
+    origin?: string
+    originMultiplier?: number
 }
 
 export interface BaseStat {

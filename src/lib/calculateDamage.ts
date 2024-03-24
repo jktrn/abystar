@@ -42,18 +42,17 @@ function calculateDamage(
                 }
             })
 
-            const talentDamageResults = Object.keys(talent.data)
-                .flatMap((key) => {
-                    // Checks to see if the aspect's talentScalings have been implemented
+            const talentDamageResults = Object.keys(talent.data).reduce(
+                (accumulator, key) => {
                     const aspectTalentScalings = talentScaling[key]
-                    if (!aspectTalentScalings) return null
+                    if (!aspectTalentScalings) return accumulator
 
                     if (
                         aspectTalentScalings.minConstellation &&
                         characterState.characterConstellation <
                             aspectTalentScalings.minConstellation
                     )
-                        return []
+                        return accumulator
 
                     const {
                         formulaType,
@@ -64,13 +63,15 @@ function calculateDamage(
                         critDamageBonusStat = [],
                         damageType,
                         outputType,
+                        origin,
+                        originMultiplier,
                     } = aspectTalentScalings
 
                     let damage
                     switch (formulaType) {
                         case FormulaType.DamageFormula:
                             if (attribute === undefined || damageType === undefined)
-                                return []
+                                return accumulator
                             damage = damageFormula(
                                 characterAttributes,
                                 talent,
@@ -86,7 +87,8 @@ function calculateDamage(
                             )
                             break
                         case FormulaType.GenericFormulaWithScaling:
-                            if (!attribute || outputType === undefined) return []
+                            if (!attribute || outputType === undefined)
+                                return accumulator
                             damage = genericFormulaWithScaling(
                                 characterAttributes,
                                 talent,
@@ -99,7 +101,7 @@ function calculateDamage(
                             )
                             break
                         case FormulaType.GenericFormulaWithoutScaling:
-                            if (outputType === undefined) return []
+                            if (outputType === undefined) return accumulator
                             damage = genericFormulaWithoutScaling(
                                 characterAttributes,
                                 talent,
@@ -112,14 +114,39 @@ function calculateDamage(
                             break
                         case FormulaType.ElementalReactionFormula:
                             // TODO: Implement
-                            break
+                            return accumulator
                         default:
+                            if (origin && originMultiplier) {
+                                const originDamageResult = accumulator.find(
+                                    (result) => result.aspectName === origin
+                                )
+                                if (originDamageResult) {
+                                    damage = {
+                                        nonCritDamage:
+                                            originDamageResult.damage.nonCritDamage *
+                                            originMultiplier,
+                                        critDamage:
+                                            originDamageResult.damage.critDamage *
+                                            originMultiplier,
+                                        averageDamage:
+                                            originDamageResult.damage.averageDamage *
+                                            originMultiplier,
+                                        damageType:
+                                            originDamageResult.damage.damageType,
+                                    }
+                                }
+                            }
                             break
                     }
 
-                    return damage ? { aspectName: key, damage } : null
-                })
-                .filter((aspect) => aspect !== null) as DamageResultAspect[]
+                    if (damage) {
+                        accumulator.push({ aspectName: key, damage })
+                    }
+
+                    return accumulator
+                },
+                [] as DamageResultAspect[]
+            )
 
             return { talentName: talent.name, aspects: talentDamageResults }
         })
