@@ -9,17 +9,19 @@ const weaponBonuses: Bonus[] = [
                 return { attributes }
             }
 
-            const elementalMasteryBonusPerStack = [120, 150, 180, 210, 240] 
+            const elementalMasteryBonusPerStack = [120, 150, 180, 210, 240]
 
             const newAttributes = {
                 ...attributes,
-                'Elemental Mastery': (attributes['Elemental Mastery'] || 0) + elementalMasteryBonusPerStack[state.weaponRefinement - 1]
+                'Elemental Mastery':
+                    (attributes['Elemental Mastery'] || 0) +
+                    elementalMasteryBonusPerStack[state.weaponRefinement - 1],
             }
             return { attributes: newAttributes }
         },
         enabled: false,
-        priority: 1
-    }
+        priority: 1,
+    },
 ]
 
 const BalladOfTheFjords: Weapon = {
@@ -92,52 +94,57 @@ const BalladOfTheFjords: Weapon = {
     },
     refinements: [
         {
-            description:
+            description: (
                 <span>
-                    When there are at least <span style={{ color: '#ddd' }}>3</span> different Elemental Types in your party, 
-                    Elemental Mastery will be increased by <span style={{ color: '#ddd' }}>120</span>.
+                    When there are at least <span style={{ color: '#ddd' }}>3</span>{' '}
+                    different Elemental Types in your party, Elemental Mastery will
+                    be increased by <span style={{ color: '#ddd' }}>120</span>.
                 </span>
-                ,
+            ),
             level: 1,
         },
         {
-            description:
+            description: (
                 <span>
-                    When there are at least <span style={{ color: '#ddd' }}>3</span> different Elemental Types in your party, 
-                    Elemental Mastery will be increased by <span style={{ color: '#ddd' }}>150</span>.
+                    When there are at least <span style={{ color: '#ddd' }}>3</span>{' '}
+                    different Elemental Types in your party, Elemental Mastery will
+                    be increased by <span style={{ color: '#ddd' }}>150</span>.
                 </span>
-                ,
+            ),
             level: 2,
         },
         {
-            description:
+            description: (
                 <span>
-                    When there are at least <span style={{ color: '#ddd' }}>3</span> different Elemental Types in your party, 
-                    Elemental Mastery will be increased by <span style={{ color: '#ddd' }}>180</span>.
+                    When there are at least <span style={{ color: '#ddd' }}>3</span>{' '}
+                    different Elemental Types in your party, Elemental Mastery will
+                    be increased by <span style={{ color: '#ddd' }}>180</span>.
                 </span>
-                ,
+            ),
             level: 3,
         },
         {
-            description:
+            description: (
                 <span>
-                    When there are at least <span style={{ color: '#ddd' }}>3</span> different Elemental Types in your party, 
-                    Elemental Mastery will be increased by <span style={{ color: '#ddd' }}>210</span>.
+                    When there are at least <span style={{ color: '#ddd' }}>3</span>{' '}
+                    different Elemental Types in your party, Elemental Mastery will
+                    be increased by <span style={{ color: '#ddd' }}>210</span>.
                 </span>
-                ,
+            ),
             level: 4,
         },
         {
-            description:
+            description: (
                 <span>
-                    When there are at least <span style={{ color: '#ddd' }}>3</span> different Elemental Types in your party, 
-                    Elemental Mastery will be increased by <span style={{ color: '#ddd' }}>240</span>.
+                    When there are at least <span style={{ color: '#ddd' }}>3</span>{' '}
+                    different Elemental Types in your party, Elemental Mastery will
+                    be increased by <span style={{ color: '#ddd' }}>240</span>.
                 </span>
-                ,
+            ),
             level: 5,
         },
     ],
-    weaponBonuses
+    weaponBonuses,
 }
 
 export default BalladOfTheFjords

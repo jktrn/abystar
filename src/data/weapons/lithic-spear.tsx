@@ -14,15 +14,22 @@ const weaponBonuses: Bonus[] = [
 
             const newAttributes = {
                 ...attributes,
-                ATK: (attributes['ATK'] || 0) * (1 + currentStacks * attackBonusPerStack[state.weaponRefinement - 1]),
-                'CRIT Rate': (attributes['CRIT Rate'] || 0) + (currentStacks * critRateBonusPerStack[state.weaponRefinement - 1])
+                ATK:
+                    (attributes['ATK'] || 0) *
+                    (1 +
+                        currentStacks *
+                            attackBonusPerStack[state.weaponRefinement - 1]),
+                'CRIT Rate':
+                    (attributes['CRIT Rate'] || 0) +
+                    currentStacks *
+                        critRateBonusPerStack[state.weaponRefinement - 1],
             }
             return { attributes: newAttributes }
         },
         maxStacks: 4,
         stackOptions: ['Off', '1 Stack', '2 Stacks', '3 Stacks', '4 Stacks'],
-        priority: 1
-    }
+        priority: 1,
+    },
 ]
 
 const LithicSpear: Weapon = {
@@ -95,52 +102,67 @@ const LithicSpear: Weapon = {
     },
     refinements: [
         {
-            description:
+            description: (
                 <span>
-                    For every character in the party who hails from Liyue, the character who equips this weapon gains a <span style={{ color: '#ddd' }}>7%</span> ATK increase 
-                    and a <span style={{ color: '#ddd' }}>3%</span> CRIT Rate increase. This effect stacks up to 4 times.
+                    For every character in the party who hails from Liyue, the
+                    character who equips this weapon gains a{' '}
+                    <span style={{ color: '#ddd' }}>7%</span> ATK increase and a{' '}
+                    <span style={{ color: '#ddd' }}>3%</span> CRIT Rate increase.
+                    This effect stacks up to 4 times.
                 </span>
-                ,
+            ),
             level: 1,
         },
         {
-            description:
-            <span>
-                For every character in the party who hails from Liyue, the character who equips this weapon gains a <span style={{ color: '#ddd' }}>8%</span> ATK increase 
-                and a <span style={{ color: '#ddd' }}>4%</span> CRIT Rate increase. This effect stacks up to 4 times.
-            </span>
-            ,
+            description: (
+                <span>
+                    For every character in the party who hails from Liyue, the
+                    character who equips this weapon gains a{' '}
+                    <span style={{ color: '#ddd' }}>8%</span> ATK increase and a{' '}
+                    <span style={{ color: '#ddd' }}>4%</span> CRIT Rate increase.
+                    This effect stacks up to 4 times.
+                </span>
+            ),
             level: 2,
         },
         {
-            description:
-            <span>
-                For every character in the party who hails from Liyue, the character who equips this weapon gains a <span style={{ color: '#ddd' }}>9%</span> ATK increase 
-                and a <span style={{ color: '#ddd' }}>5%</span> CRIT Rate increase. This effect stacks up to 4 times.
-            </span>
-            ,
+            description: (
+                <span>
+                    For every character in the party who hails from Liyue, the
+                    character who equips this weapon gains a{' '}
+                    <span style={{ color: '#ddd' }}>9%</span> ATK increase and a{' '}
+                    <span style={{ color: '#ddd' }}>5%</span> CRIT Rate increase.
+                    This effect stacks up to 4 times.
+                </span>
+            ),
             level: 3,
         },
         {
-            description:
+            description: (
                 <span>
-                    For every character in the party who hails from Liyue, the character who equips this weapon gains a <span style={{ color: '#ddd' }}>10%</span> ATK increase 
-                    and a <span style={{ color: '#ddd' }}>6%</span> CRIT Rate increase. This effect stacks up to 4 times.
+                    For every character in the party who hails from Liyue, the
+                    character who equips this weapon gains a{' '}
+                    <span style={{ color: '#ddd' }}>10%</span> ATK increase and a{' '}
+                    <span style={{ color: '#ddd' }}>6%</span> CRIT Rate increase.
+                    This effect stacks up to 4 times.
                 </span>
-                ,
+            ),
             level: 4,
         },
         {
-            description:
+            description: (
                 <span>
-                    For every character in the party who hails from Liyue, the character who equips this weapon gains a <span style={{ color: '#ddd' }}>11%</span> ATK increase 
-                    and a <span style={{ color: '#ddd' }}>7%</span> CRIT Rate increase. This effect stacks up to 4 times.
+                    For every character in the party who hails from Liyue, the
+                    character who equips this weapon gains a{' '}
+                    <span style={{ color: '#ddd' }}>11%</span> ATK increase and a{' '}
+                    <span style={{ color: '#ddd' }}>7%</span> CRIT Rate increase.
+                    This effect stacks up to 4 times.
                 </span>
-                ,
+            ),
             level: 5,
         },
     ],
-    weaponBonuses
+    weaponBonuses,
 }
 
 export default LithicSpear

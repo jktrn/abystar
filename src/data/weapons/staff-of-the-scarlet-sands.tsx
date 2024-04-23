@@ -10,21 +10,30 @@ const weaponBonuses: Bonus[] = [
             }
 
             const elementalMasterytoAttackScaling = [0.52, 0.65, 0.78, 0.91, 1.04]
-            const elementalMasterytoAttackBonusPerStack = [0.28, 0.35, 0.42, 0.49, 0.56]
+            const elementalMasterytoAttackBonusPerStack = [
+                0.28, 0.35, 0.42, 0.49, 0.56,
+            ]
 
-            let newAttack = (attributes['Elemental Mastery'] || 0) * (elementalMasterytoAttackScaling[state.weaponRefinement - 1])
-            let stackNewAttack = (attributes['Elemental Mastery'] || 0) * (currentStacks * elementalMasterytoAttackBonusPerStack[state.weaponRefinement - 1])
+            let newAttack =
+                (attributes['Elemental Mastery'] || 0) *
+                elementalMasterytoAttackScaling[state.weaponRefinement - 1]
+            let stackNewAttack =
+                (attributes['Elemental Mastery'] || 0) *
+                (currentStacks *
+                    elementalMasterytoAttackBonusPerStack[
+                        state.weaponRefinement - 1
+                    ])
 
             const newAttributes = {
                 ...attributes,
-                ATK: (attributes['ATK'] || 0) + newAttack + stackNewAttack
+                ATK: (attributes['ATK'] || 0) + newAttack + stackNewAttack,
             }
             return { attributes: newAttributes }
         },
         maxStacks: 3,
         stackOptions: ['Off', '1 Stack', '2 Stacks', '3 Stacks'],
-        priority: 2
-    }
+        priority: 2,
+    },
 ]
 
 const StaffOfTheScarletSands: Weapon = {
@@ -97,57 +106,77 @@ const StaffOfTheScarletSands: Weapon = {
     },
     refinements: [
         {
-            description:
+            description: (
                 <span>
-                    The equipping character gains <span style={{ color: '#ddd' }}>52%</span> of their Elemental Mastery as bonus ATK. 
-                    When an Elemental Skill hits opponents, the Dream of the Scarlet Sands effect will be gained for <span style={{ color: '#ddd' }}>10s</span>: 
-                    The equipping character will gain <span style={{ color: '#ddd' }}>28%</span> of their Elemental Mastery as bonus ATK. Max 3 stacks.
+                    The equipping character gains{' '}
+                    <span style={{ color: '#ddd' }}>52%</span> of their Elemental
+                    Mastery as bonus ATK. When an Elemental Skill hits opponents, the
+                    Dream of the Scarlet Sands effect will be gained for{' '}
+                    <span style={{ color: '#ddd' }}>10s</span>: The equipping
+                    character will gain <span style={{ color: '#ddd' }}>28%</span> of
+                    their Elemental Mastery as bonus ATK. Max 3 stacks.
                 </span>
-                ,
+            ),
             level: 1,
         },
         {
-            description:
-            <span>
-                The equipping character gains <span style={{ color: '#ddd' }}>65%</span> of their Elemental Mastery as bonus ATK. 
-                When an Elemental Skill hits opponents, the Dream of the Scarlet Sands effect will be gained for <span style={{ color: '#ddd' }}>10s</span>: 
-                The equipping character will gain <span style={{ color: '#ddd' }}>35%</span> of their Elemental Mastery as bonus ATK. Max 3 stacks.
-            </span>
-            ,
+            description: (
+                <span>
+                    The equipping character gains{' '}
+                    <span style={{ color: '#ddd' }}>65%</span> of their Elemental
+                    Mastery as bonus ATK. When an Elemental Skill hits opponents, the
+                    Dream of the Scarlet Sands effect will be gained for{' '}
+                    <span style={{ color: '#ddd' }}>10s</span>: The equipping
+                    character will gain <span style={{ color: '#ddd' }}>35%</span> of
+                    their Elemental Mastery as bonus ATK. Max 3 stacks.
+                </span>
+            ),
             level: 2,
         },
         {
-            description:
-            <span>
-                The equipping character gains <span style={{ color: '#ddd' }}>78%</span> of their Elemental Mastery as bonus ATK. 
-                When an Elemental Skill hits opponents, the Dream of the Scarlet Sands effect will be gained for <span style={{ color: '#ddd' }}>10s</span>: 
-                The equipping character will gain <span style={{ color: '#ddd' }}>42%</span> of their Elemental Mastery as bonus ATK. Max 3 stacks.
-            </span>
-            ,
+            description: (
+                <span>
+                    The equipping character gains{' '}
+                    <span style={{ color: '#ddd' }}>78%</span> of their Elemental
+                    Mastery as bonus ATK. When an Elemental Skill hits opponents, the
+                    Dream of the Scarlet Sands effect will be gained for{' '}
+                    <span style={{ color: '#ddd' }}>10s</span>: The equipping
+                    character will gain <span style={{ color: '#ddd' }}>42%</span> of
+                    their Elemental Mastery as bonus ATK. Max 3 stacks.
+                </span>
+            ),
             level: 3,
         },
         {
-            description:
-            <span>
-                The equipping character gains <span style={{ color: '#ddd' }}>91%</span> of their Elemental Mastery as bonus ATK. 
-                When an Elemental Skill hits opponents, the Dream of the Scarlet Sands effect will be gained for <span style={{ color: '#ddd' }}>10s</span>: 
-                The equipping character will gain <span style={{ color: '#ddd' }}>49%</span> of their Elemental Mastery as bonus ATK. Max 3 stacks.
-            </span>
-            ,
+            description: (
+                <span>
+                    The equipping character gains{' '}
+                    <span style={{ color: '#ddd' }}>91%</span> of their Elemental
+                    Mastery as bonus ATK. When an Elemental Skill hits opponents, the
+                    Dream of the Scarlet Sands effect will be gained for{' '}
+                    <span style={{ color: '#ddd' }}>10s</span>: The equipping
+                    character will gain <span style={{ color: '#ddd' }}>49%</span> of
+                    their Elemental Mastery as bonus ATK. Max 3 stacks.
+                </span>
+            ),
             level: 4,
         },
         {
-            description:
-            <span>
-                The equipping character gains <span style={{ color: '#ddd' }}>104%</span> of their Elemental Mastery as bonus ATK. 
-                When an Elemental Skill hits opponents, the Dream of the Scarlet Sands effect will be gained for <span style={{ color: '#ddd' }}>10s</span>: 
-                The equipping character will gain <span style={{ color: '#ddd' }}>56%</span> of their Elemental Mastery as bonus ATK. Max 3 stacks.
-            </span>
-            ,
+            description: (
+                <span>
+                    The equipping character gains{' '}
+                    <span style={{ color: '#ddd' }}>104%</span> of their Elemental
+                    Mastery as bonus ATK. When an Elemental Skill hits opponents, the
+                    Dream of the Scarlet Sands effect will be gained for{' '}
+                    <span style={{ color: '#ddd' }}>10s</span>: The equipping
+                    character will gain <span style={{ color: '#ddd' }}>56%</span> of
+                    their Elemental Mastery as bonus ATK. Max 3 stacks.
+                </span>
+            ),
             level: 5,
         },
     ],
-    weaponBonuses
+    weaponBonuses,
 }
 
 export default StaffOfTheScarletSands

@@ -9,18 +9,28 @@ const weaponBonuses: Bonus[] = [
                 return { attributes }
             }
 
-            const critRateBonusPerStack = [0.08, 0.1, 0.12, 0.14, 0.16] 
+            const critRateBonusPerStack = [0.08, 0.1, 0.12, 0.14, 0.16]
 
             const newAttributes = {
                 ...attributes,
-                'CRIT Rate': (attributes['CRIT Rate'] || 0) + (currentStacks * critRateBonusPerStack[state.weaponRefinement - 1])
+                'CRIT Rate':
+                    (attributes['CRIT Rate'] || 0) +
+                    currentStacks *
+                        critRateBonusPerStack[state.weaponRefinement - 1],
             }
             return { attributes: newAttributes }
         },
         maxStacks: 5,
-        stackOptions: ['Off', '1 Stack', '2 Stacks', '3 Stacks', '4 Stacks', '5 Stacks'],
-        priority: 1
-    }
+        stackOptions: [
+            'Off',
+            '1 Stack',
+            '2 Stacks',
+            '3 Stacks',
+            '4 Stacks',
+            '5 Stacks',
+        ],
+        priority: 1,
+    },
 ]
 
 const RoyalSpear: Weapon = {
@@ -93,47 +103,57 @@ const RoyalSpear: Weapon = {
     },
     refinements: [
         {
-            description:
+            description: (
                 <span>
-                    Upon damaging an opponent, increases CRIT Rate by <span style={{ color: '#ddd' }}>8%</span>. Max 5 stacks. A CRIT Hit removes all stacks.
+                    Upon damaging an opponent, increases CRIT Rate by{' '}
+                    <span style={{ color: '#ddd' }}>8%</span>. Max 5 stacks. A CRIT
+                    Hit removes all stacks.
                 </span>
-                ,
+            ),
             level: 1,
         },
         {
-            description:
+            description: (
                 <span>
-                    Upon damaging an opponent, increases CRIT Rate by <span style={{ color: '#ddd' }}>10%</span>. Max 5 stacks. A CRIT Hit removes all stacks.
+                    Upon damaging an opponent, increases CRIT Rate by{' '}
+                    <span style={{ color: '#ddd' }}>10%</span>. Max 5 stacks. A CRIT
+                    Hit removes all stacks.
                 </span>
-                ,
+            ),
             level: 2,
         },
         {
-            description:
+            description: (
                 <span>
-                    Upon damaging an opponent, increases CRIT Rate by <span style={{ color: '#ddd' }}>12%</span>. Max 5 stacks. A CRIT Hit removes all stacks.
+                    Upon damaging an opponent, increases CRIT Rate by{' '}
+                    <span style={{ color: '#ddd' }}>12%</span>. Max 5 stacks. A CRIT
+                    Hit removes all stacks.
                 </span>
-                ,
+            ),
             level: 3,
         },
         {
-            description:
+            description: (
                 <span>
-                    Upon damaging an opponent, increases CRIT Rate by <span style={{ color: '#ddd' }}>14%</span>. Max 5 stacks. A CRIT Hit removes all stacks.
+                    Upon damaging an opponent, increases CRIT Rate by{' '}
+                    <span style={{ color: '#ddd' }}>14%</span>. Max 5 stacks. A CRIT
+                    Hit removes all stacks.
                 </span>
-                ,
+            ),
             level: 4,
         },
         {
-            description:
+            description: (
                 <span>
-                    Upon damaging an opponent, increases CRIT Rate by <span style={{ color: '#ddd' }}>16%</span>. Max 5 stacks. A CRIT Hit removes all stacks.
+                    Upon damaging an opponent, increases CRIT Rate by{' '}
+                    <span style={{ color: '#ddd' }}>16%</span>. Max 5 stacks. A CRIT
+                    Hit removes all stacks.
                 </span>
-                ,
+            ),
             level: 5,
         },
     ],
-    weaponBonuses
+    weaponBonuses,
 }
 
 export default RoyalSpear

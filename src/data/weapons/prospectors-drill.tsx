@@ -14,21 +14,46 @@ const weaponBonuses: Bonus[] = [
 
             const newAttributes = {
                 ...attributes,
-                ATK: (attributes['ATK'] || 0) * (1 + currentStacks * attackBonusPerStack[state.weaponRefinement - 1]),
-                'Pyro DMG Bonus': (attributes['Pyro DMG Bonus'] || 0) + (currentStacks * elementalDamageBonusPerStack[state.weaponRefinement - 1]),
-                'Cryo DMG Bonus': (attributes['Cryo DMG Bonus'] || 0) + (currentStacks * elementalDamageBonusPerStack[state.weaponRefinement - 1]),
-                'Hydro DMG Bonus': (attributes['Hydro DMG Bonus'] || 0) + (currentStacks * elementalDamageBonusPerStack[state.weaponRefinement - 1]),
-                'Electro DMG Bonus': (attributes['Electro DMG Bonus'] || 0) + (currentStacks * elementalDamageBonusPerStack[state.weaponRefinement - 1]),
-                'Anemo DMG Bonus': (attributes['Anemo DMG Bonus'] || 0) + (currentStacks * elementalDamageBonusPerStack[state.weaponRefinement - 1]),
-                'Geo DMG Bonus': (attributes['Geo DMG Bonus'] || 0) + (currentStacks * elementalDamageBonusPerStack[state.weaponRefinement - 1]),
-                'Dendro DMG Bonus': (attributes['Dendro DMG Bonus'] || 0) + (currentStacks * elementalDamageBonusPerStack[state.weaponRefinement - 1])
+                ATK:
+                    (attributes['ATK'] || 0) *
+                    (1 +
+                        currentStacks *
+                            attackBonusPerStack[state.weaponRefinement - 1]),
+                'Pyro DMG Bonus':
+                    (attributes['Pyro DMG Bonus'] || 0) +
+                    currentStacks *
+                        elementalDamageBonusPerStack[state.weaponRefinement - 1],
+                'Cryo DMG Bonus':
+                    (attributes['Cryo DMG Bonus'] || 0) +
+                    currentStacks *
+                        elementalDamageBonusPerStack[state.weaponRefinement - 1],
+                'Hydro DMG Bonus':
+                    (attributes['Hydro DMG Bonus'] || 0) +
+                    currentStacks *
+                        elementalDamageBonusPerStack[state.weaponRefinement - 1],
+                'Electro DMG Bonus':
+                    (attributes['Electro DMG Bonus'] || 0) +
+                    currentStacks *
+                        elementalDamageBonusPerStack[state.weaponRefinement - 1],
+                'Anemo DMG Bonus':
+                    (attributes['Anemo DMG Bonus'] || 0) +
+                    currentStacks *
+                        elementalDamageBonusPerStack[state.weaponRefinement - 1],
+                'Geo DMG Bonus':
+                    (attributes['Geo DMG Bonus'] || 0) +
+                    currentStacks *
+                        elementalDamageBonusPerStack[state.weaponRefinement - 1],
+                'Dendro DMG Bonus':
+                    (attributes['Dendro DMG Bonus'] || 0) +
+                    currentStacks *
+                        elementalDamageBonusPerStack[state.weaponRefinement - 1],
             }
             return { attributes: newAttributes }
         },
         maxStacks: 3,
         stackOptions: ['Off', '1 Symbol', '2 Symbols', '3 Symbols'],
-        priority: 1
-    }
+        priority: 1,
+    },
 ]
 
 const ProspectorsDrill: Weapon = {
@@ -101,57 +126,97 @@ const ProspectorsDrill: Weapon = {
     },
     refinements: [
         {
-            description:
+            description: (
                 <span>
-                When the wielder is healed or heals others, they will gain a Unity&apos;s Symbol that lasts <span style={{ color: '#ddd' }}>30s</span>, up to a maximum of 3 Symbols. 
-                When using their Elemental Skill or Burst, all Symbols will be consumed and the Struggle effect will be granted for <span style={{ color: '#ddd' }}>10s</span>. 
-                For each Symbol consumed, gain <span style={{ color: '#ddd' }}>3%</span> ATK and <span style={{ color: '#ddd' }}>7%</span> All Elemental DMG Bonus. 
-                The Struggle effect can be triggered once every <span style={{ color: '#ddd' }}>15s</span>, and Symbols can be gained even when the character is not on the field.
-                </span>,
+                    When the wielder is healed or heals others, they will gain a
+                    Unity&apos;s Symbol that lasts{' '}
+                    <span style={{ color: '#ddd' }}>30s</span>, up to a maximum of 3
+                    Symbols. When using their Elemental Skill or Burst, all Symbols
+                    will be consumed and the Struggle effect will be granted for{' '}
+                    <span style={{ color: '#ddd' }}>10s</span>. For each Symbol
+                    consumed, gain <span style={{ color: '#ddd' }}>3%</span> ATK and{' '}
+                    <span style={{ color: '#ddd' }}>7%</span> All Elemental DMG
+                    Bonus. The Struggle effect can be triggered once every{' '}
+                    <span style={{ color: '#ddd' }}>15s</span>, and Symbols can be
+                    gained even when the character is not on the field.
+                </span>
+            ),
             level: 1,
         },
         {
-            description:
-            <span>
-            When the wielder is healed or heals others, they will gain a Unity&apos;s Symbol that lasts <span style={{ color: '#ddd' }}>30s</span>, up to a maximum of 3 Symbols. 
-            When using their Elemental Skill or Burst, all Symbols will be consumed and the Struggle effect will be granted for <span style={{ color: '#ddd' }}>10s</span>. 
-            For each Symbol consumed, gain <span style={{ color: '#ddd' }}>4%</span> ATK and <span style={{ color: '#ddd' }}>8.5%</span> All Elemental DMG Bonus. 
-            The Struggle effect can be triggered once every <span style={{ color: '#ddd' }}>15s</span>, and Symbols can be gained even when the character is not on the field.
-            </span>,
+            description: (
+                <span>
+                    When the wielder is healed or heals others, they will gain a
+                    Unity&apos;s Symbol that lasts{' '}
+                    <span style={{ color: '#ddd' }}>30s</span>, up to a maximum of 3
+                    Symbols. When using their Elemental Skill or Burst, all Symbols
+                    will be consumed and the Struggle effect will be granted for{' '}
+                    <span style={{ color: '#ddd' }}>10s</span>. For each Symbol
+                    consumed, gain <span style={{ color: '#ddd' }}>4%</span> ATK and{' '}
+                    <span style={{ color: '#ddd' }}>8.5%</span> All Elemental DMG
+                    Bonus. The Struggle effect can be triggered once every{' '}
+                    <span style={{ color: '#ddd' }}>15s</span>, and Symbols can be
+                    gained even when the character is not on the field.
+                </span>
+            ),
             level: 2,
         },
         {
-            description:
-            <span>
-            When the wielder is healed or heals others, they will gain a Unity&apos;s Symbol that lasts <span style={{ color: '#ddd' }}>30s</span>, up to a maximum of 3 Symbols. 
-            When using their Elemental Skill or Burst, all Symbols will be consumed and the Struggle effect will be granted for <span style={{ color: '#ddd' }}>10s</span>. 
-            For each Symbol consumed, gain <span style={{ color: '#ddd' }}>5%</span> ATK and <span style={{ color: '#ddd' }}>10%</span> All Elemental DMG Bonus. 
-            The Struggle effect can be triggered once every <span style={{ color: '#ddd' }}>15s</span>, and Symbols can be gained even when the character is not on the field.
-            </span>,
+            description: (
+                <span>
+                    When the wielder is healed or heals others, they will gain a
+                    Unity&apos;s Symbol that lasts{' '}
+                    <span style={{ color: '#ddd' }}>30s</span>, up to a maximum of 3
+                    Symbols. When using their Elemental Skill or Burst, all Symbols
+                    will be consumed and the Struggle effect will be granted for{' '}
+                    <span style={{ color: '#ddd' }}>10s</span>. For each Symbol
+                    consumed, gain <span style={{ color: '#ddd' }}>5%</span> ATK and{' '}
+                    <span style={{ color: '#ddd' }}>10%</span> All Elemental DMG
+                    Bonus. The Struggle effect can be triggered once every{' '}
+                    <span style={{ color: '#ddd' }}>15s</span>, and Symbols can be
+                    gained even when the character is not on the field.
+                </span>
+            ),
             level: 3,
         },
         {
-            description:
-            <span>
-            When the wielder is healed or heals others, they will gain a Unity&apos;s Symbol that lasts <span style={{ color: '#ddd' }}>30s</span>, up to a maximum of 3 Symbols. 
-            When using their Elemental Skill or Burst, all Symbols will be consumed and the Struggle effect will be granted for <span style={{ color: '#ddd' }}>10s</span>. 
-            For each Symbol consumed, gain <span style={{ color: '#ddd' }}>6%</span> ATK and <span style={{ color: '#ddd' }}>11.5%</span> All Elemental DMG Bonus. 
-            The Struggle effect can be triggered once every <span style={{ color: '#ddd' }}>15s</span>, and Symbols can be gained even when the character is not on the field.
-            </span>,
+            description: (
+                <span>
+                    When the wielder is healed or heals others, they will gain a
+                    Unity&apos;s Symbol that lasts{' '}
+                    <span style={{ color: '#ddd' }}>30s</span>, up to a maximum of 3
+                    Symbols. When using their Elemental Skill or Burst, all Symbols
+                    will be consumed and the Struggle effect will be granted for{' '}
+                    <span style={{ color: '#ddd' }}>10s</span>. For each Symbol
+                    consumed, gain <span style={{ color: '#ddd' }}>6%</span> ATK and{' '}
+                    <span style={{ color: '#ddd' }}>11.5%</span> All Elemental DMG
+                    Bonus. The Struggle effect can be triggered once every{' '}
+                    <span style={{ color: '#ddd' }}>15s</span>, and Symbols can be
+                    gained even when the character is not on the field.
+                </span>
+            ),
             level: 4,
         },
         {
-            description:
-            <span>
-            When the wielder is healed or heals others, they will gain a Unity&apos;s Symbol that lasts <span style={{ color: '#ddd' }}>30s</span>, up to a maximum of 3 Symbols. 
-            When using their Elemental Skill or Burst, all Symbols will be consumed and the Struggle effect will be granted for <span style={{ color: '#ddd' }}>10s</span>. 
-            For each Symbol consumed, gain <span style={{ color: '#ddd' }}>7%</span> ATK and <span style={{ color: '#ddd' }}>13%</span> All Elemental DMG Bonus. 
-            The Struggle effect can be triggered once every <span style={{ color: '#ddd' }}>15s</span>, and Symbols can be gained even when the character is not on the field.
-            </span>,
+            description: (
+                <span>
+                    When the wielder is healed or heals others, they will gain a
+                    Unity&apos;s Symbol that lasts{' '}
+                    <span style={{ color: '#ddd' }}>30s</span>, up to a maximum of 3
+                    Symbols. When using their Elemental Skill or Burst, all Symbols
+                    will be consumed and the Struggle effect will be granted for{' '}
+                    <span style={{ color: '#ddd' }}>10s</span>. For each Symbol
+                    consumed, gain <span style={{ color: '#ddd' }}>7%</span> ATK and{' '}
+                    <span style={{ color: '#ddd' }}>13%</span> All Elemental DMG
+                    Bonus. The Struggle effect can be triggered once every{' '}
+                    <span style={{ color: '#ddd' }}>15s</span>, and Symbols can be
+                    gained even when the character is not on the field.
+                </span>
+            ),
             level: 5,
         },
     ],
-    weaponBonuses
+    weaponBonuses,
 }
 
 export default ProspectorsDrill

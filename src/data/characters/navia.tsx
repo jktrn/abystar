@@ -137,8 +137,24 @@ const talentScalings: TalentScaling = {
             formulaType: FormulaType.DamageFormula,
             attribute: ['ATK'],
             additiveBonusStat: ['Elemental Skill Additive Bonus'],
-            multiplicativeBonusStat: ['Elemental Skill DMG Bonus', 'Geo DMG Bonus'],
+            multiplicativeBonusStat: [
+                'Elemental Skill DMG Bonus',
+                'Geo DMG Bonus',
+                'Rosula Shardshot DMG Bonus',
+            ],
+            critRateBonusStat: [
+                'Elemental Skill Crit Rate Bonus',
+                'Ceremonial Crystalshot Crit Rate Bonus',
+            ],
+            critDamageBonusStat: [
+                'Elemental Skill Crit DMG Bonus',
+                'Ceremonial Crystalshot Crit DMG Bonus',
+            ],
             damageType: DamageType.Geo,
+        },
+        'Rosula Shardshot Total DMG': {
+            origin: 'Rosula Shardshot Base DMG',
+            originMultiplier: 5,
         },
         'Crystal Shrapnel Duration': {
             formulaType: FormulaType.GenericFormulaWithoutScaling,
@@ -149,6 +165,8 @@ const talentScalings: TalentScaling = {
             attribute: ['ATK'],
             additiveBonusStat: ['Elemental Skill Additive Bonus'],
             multiplicativeBonusStat: ['Elemental Skill DMG Bonus', 'Geo DMG Bonus'],
+            critRateBonusStat: ['Elemental Skill Crit Rate Bonus'],
+            critDamageBonusStat: ['Elemental Skill Crit DMG Bonus'],
             damageType: DamageType.Geo,
         },
         'Surging Blade Interval': {
@@ -166,6 +184,8 @@ const talentScalings: TalentScaling = {
             attribute: ['ATK'],
             additiveBonusStat: ['Elemental Burst Additive Bonus'],
             multiplicativeBonusStat: ['Elemental Burst DMG Bonus', 'Geo DMG Bonus'],
+            critRateBonusStat: ['Elemental Burst Crit Rate Bonus'],
+            critDamageBonusStat: ['Elemental Burst Crit DMG Bonus'],
             damageType: DamageType.Geo,
         },
         'Cannon Fire Support DMG': {
@@ -173,6 +193,8 @@ const talentScalings: TalentScaling = {
             attribute: ['ATK'],
             additiveBonusStat: ['Elemental Burst Additive Bonus'],
             multiplicativeBonusStat: ['Elemental Burst DMG Bonus', 'Geo DMG Bonus'],
+            critRateBonusStat: ['Elemental Burst Crit Rate Bonus'],
+            critDamageBonusStat: ['Elemental Burst Crit DMG Bonus'],
             damageType: DamageType.Geo,
         },
         'Cannon Fire Support Duration': {
@@ -181,6 +203,7 @@ const talentScalings: TalentScaling = {
         },
         CD: {
             formulaType: FormulaType.GenericFormulaWithoutScaling,
+            additiveBonusStat: ["As the Sunlit Sky's Singing Salute CD Reduction"],
             outputType: FormulaOutputType.Time,
         },
         'Energy Cost': {
@@ -191,11 +214,302 @@ const talentScalings: TalentScaling = {
 }
 
 const characterBonuses: Bonus[] = [
-    // ...
+    {
+        name: 'Ceremonial Crystalshot',
+        description: (
+            <span>
+                Deals <span style={{ color: '#c8922b' }}>Geo DMG</span> based off of
+                number of Crystal Shrapnel stacks consumed. Consuming 0/1/2/3 stacks
+                fires 5/7/9/11 Rosula Shardshots, respectively. If 11 Rosula
+                Shardshots hit a single opponent, 200% of the original amount of DMG
+                is dealt. Consuming more than 3 stacks increases DMG by an additional
+                15% per stack consumed, with a maximum of 6 stacks.
+            </span>
+        ),
+        icon: '/images/characters/navia-skill.png',
+        effect: (attributes, talentLevels, currentStacks) => {
+            if (!currentStacks) return { attributes }
+
+            const newAttributes = {
+                ...attributes,
+                'Rosula Shardshot DMG Bonus':
+                    currentStacks <= 2
+                        ? 0
+                        : currentStacks === 3
+                          ? 1
+                          : 1 + (currentStacks - 3) * 0.15,
+            }
+
+            return { attributes: newAttributes }
+        },
+        affectsTalentIndex: 1,
+        applyToTalentScaling: (talentScaling, currentStacks) => {
+            if (!currentStacks) return
+
+            const multiplier =
+                talentScaling['Ceremonial Crystalshot']['Rosula Shardshot Total DMG']
+            multiplier.originMultiplier =
+                currentStacks <= 2 ? 5 + 2 * currentStacks : 11
+        },
+        maxStacks: 7,
+        stackOptions: ['0 (Off)', '1', '2', '3', '4', '5', '6'],
+        origin: 'E',
+        priority: 1,
+    },
+    {
+        name: 'Undisclosed Distribution Channels',
+        description: (
+            <span>
+                For 4s after using Ceremonial Crystalshot, Normal Attacks, Charged
+                Attacks, and Plunging Attacks deal{' '}
+                <span style={{ color: '#c8922b' }}>Geo DMG</span> which cannot be
+                overridden by other Elemental infusions. Additionally, DMG dealt by
+                these attacks is increased by 40%.
+            </span>
+        ),
+        icon: '/images/characters/navia-passive1.png',
+        effect: (attributes, talentLevels, currentStacks) => {
+            if (!currentStacks) return { attributes }
+
+            const newAttributes = {
+                ...attributes,
+                'Normal Attack DMG Bonus': 0.4,
+                'Charged Attack DMG Bonus': 0.4,
+                'Plunging Attack DMG Bonus': 0.4,
+            }
+
+            return { attributes: newAttributes }
+        },
+        affectsTalentIndex: 0,
+        applyToTalentScaling: (talentScaling) => {
+            const normalAttackScaling = talentScaling['Normal Attack: Blunt Refusal']
+
+            if (normalAttackScaling) {
+                Object.values(normalAttackScaling).forEach((aspect) => {
+                    if (
+                        aspect.formulaType !== FormulaType.DamageFormula ||
+                        !aspect.multiplicativeBonusStat
+                    )
+                        return
+                    aspect.multiplicativeBonusStat[0] = 'Geo DMG Bonus'
+                    aspect.damageType = DamageType.Geo
+                })
+            }
+        },
+        origin: 'A1',
+        priority: 1,
+    },
+    {
+        name: 'Mutual Assistance Network',
+        description: (
+            <span>
+                For each <span style={{ color: '#3d9bc1' }}>Hydro</span>/
+                <span style={{ color: '#bf612d' }}>Pyro</span>/
+                <span style={{ color: '#7fabb6' }}>Cryo</span>/
+                <span style={{ color: '#8c729a' }}>Electro</span> party member, Navia
+                gains 20% increased ATK. This effect can stack up to 2 times.
+            </span>
+        ),
+        icon: '/images/characters/navia-passive2.png',
+        effect: (attributes, talentLevels, currentStacks) => {
+            if (!currentStacks) return { attributes }
+
+            const newAttributes = {
+                ...attributes,
+                ATK: attributes['ATK'] * (1 + 0.2 * Math.min(currentStacks, 2)),
+            }
+
+            return { attributes: newAttributes }
+        },
+        maxStacks: 4,
+        stackOptions: ['0 (Off)', '1', '2', '3'],
+        origin: 'A4',
+        priority: 1,
+    },
 ]
 
 const constellationBonuses: Bonus[] = [
-    // ...
+    {
+        name: "A Lady's Rules for Keeping a Courteous Distance",
+        description: (
+            <span>
+                Each stack of Crystal Shrapnel consumed when Navia uses{' '}
+                <span style={{ color: '#ddd' }}>Ceremonial Crystalshot</span> will
+                reduce the CD of{' '}
+                <span style={{ color: '#ddd' }}>
+                    As the Sunlit Sky&apos;s Singing Salute
+                </span>{' '}
+                by 1s, with a maximum reduction of 3s.
+            </span>
+        ),
+        icon: '/images/characters/navia-constellation1.png',
+        effect: (attributes, talentLevels, currentStacks, characterState) => {
+            if (!characterState) return { attributes }
+
+            const stacks = characterState.characterActiveBonuses.find(
+                (bonus) => bonus.name === 'Ceremonial Crystalshot'
+            )?.currentStacks
+
+            if (!stacks) return { attributes }
+
+            const newAttributes = {
+                ...attributes,
+                "As the Sunlit Sky's Singing Salute CD Reduction": Math.max(
+                    stacks * -1,
+                    -3
+                ),
+            }
+
+            return { attributes: newAttributes }
+        },
+        minConstellation: 1,
+        origin: 'C1',
+        priority: 1,
+    },
+    {
+        name: "The President's Pursuit of Victory",
+        description: (
+            <span>
+                Each stack of Crystal Shrapnel consumed will increase the CRIT Rate
+                of this <span style={{ color: '#ddd' }}>Ceremonial Crystalshot</span>{' '}
+                instance by 12%. CRIT Rate can be increased by up to 36% in this way.
+            </span>
+        ),
+        icon: '/images/characters/navia-constellation2.png',
+        effect: (attributes, talentLevels, currentStacks, characterState) => {
+            if (!characterState) return { attributes }
+
+            const stacks = characterState.characterActiveBonuses.find(
+                (bonus) => bonus.name === 'Ceremonial Crystalshot'
+            )?.currentStacks
+
+            if (!stacks) return { attributes }
+
+            const newAttributes = {
+                ...attributes,
+                'Ceremonial Crystalshot Crit Rate Bonus': Math.min(
+                    stacks * 0.12,
+                    0.36
+                ),
+            }
+
+            return { attributes: newAttributes }
+        },
+        minConstellation: 2,
+        origin: 'C2',
+        priority: 1,
+    },
+    {
+        name: "Businesswoman's Broad Vision",
+        description: (
+            <span>
+                Increases the Level of{' '}
+                <span style={{ color: '#DDD' }}>Ceremonial Crystalshot</span> by 3.
+                Maximum upgrade level is 15.
+            </span>
+        ),
+        icon: '/images/characters/navia-constellation3.png',
+        effect: (attributes, talentLevels) => {
+            if (!talentLevels) return { attributes }
+
+            const newTalentLevels = [...talentLevels]
+            newTalentLevels[1] = Math.min(newTalentLevels[1] + 3, 13)
+
+            return { attributes: attributes, updatedTalentLevels: newTalentLevels }
+        },
+        minConstellation: 3,
+        origin: 'C3',
+        enabled: true,
+        visible: false,
+        priority: 0,
+    },
+    {
+        name: 'The Oathsworn Never Capitulate',
+        description: (
+            <span>
+                When{' '}
+                <span style={{ color: '#ddd' }}>
+                    As the Sunlit Sky&apos;s Singing Salute
+                </span>{' '}
+                hits an opponent, that opponent&apos;s{' '}
+                <span style={{ color: '#c8922b' }}>Geo RES</span> will be decreased
+                by 20% for 8s.
+            </span>
+        ),
+        icon: '/images/characters/navia-constellation4.png',
+        effect: (attributes, talentLevels) => {
+            const newAttributes = {
+                ...attributes,
+                'Geo RES Shred': 0.2,
+            }
+
+            return { attributes: newAttributes }
+        },
+        minConstellation: 4,
+        origin: 'C4',
+        priority: 1,
+    },
+    {
+        name: "Negotiator's Resolute Negotiations",
+        description: (
+            <span>
+                Increases the Level of{' '}
+                <span style={{ color: '#DDD' }}>
+                    As the Sunlit Sky&apos;s Singing Salute
+                </span>{' '}
+                by 3. Maximum upgrade level is 15.
+            </span>
+        ),
+        icon: '/images/characters/navia-constellation5.png',
+        effect: (attributes, talentLevels) => {
+            if (!talentLevels) return { attributes }
+
+            const newTalentLevels = [...talentLevels]
+            newTalentLevels[2] = Math.min(newTalentLevels[2] + 3, 13)
+
+            return { attributes: attributes, updatedTalentLevels: newTalentLevels }
+        },
+        minConstellation: 5,
+        origin: 'C5',
+        enabled: true,
+        visible: false,
+        priority: 0,
+    },
+    {
+        name: "The Flexible Finesse of the Spina's President",
+        description: (
+            <span>
+                If more than 3 stacks of Crystal Shrapnel are consumed when using{' '}
+                <span style={{ color: '#ddd' }}>Ceremonial Crystalshot</span>, each
+                stack consumed beyond the first 3 increases the CRIT DMG of that{' '}
+                <span style={{ color: '#ddd' }}>Ceremonial Crystalshot</span> by 45%,
+                and any stacks consumed beyond the first 3 are returned to Navia.
+            </span>
+        ),
+        icon: '/images/characters/navia-constellation6.png',
+        effect: (attributes, talentLevels, currentStacks, characterState) => {
+            if (!characterState) return { attributes }
+
+            const stacks = characterState.characterActiveBonuses.find(
+                (bonus) => bonus.name === 'Ceremonial Crystalshot'
+            )?.currentStacks
+
+            if (!stacks) return { attributes }
+
+            const newAttributes = {
+                ...attributes,
+                'Ceremonial Crystalshot Crit DMG Bonus': Math.min(
+                    (stacks - 3) * 0.45,
+                    0.45
+                ),
+            }
+
+            return { attributes: newAttributes }
+        },
+        minConstellation: 6,
+        origin: 'C6',
+        priority: 1,
+    },
 ]
 
 const Navia: Character = {
@@ -524,6 +838,23 @@ const Navia: Character = {
                 'When a character in the party obtains an Elemental Shard created from the Crystallize reaction, Navia will gain 1 Crystal Shrapnel stack. Navia can have up to 6 stacks of Crystal Shrapnel at once. Each time Crystal Shrapnel gain is triggered, the duration of the Crystal Shrapnel stacks you already have will be reset.\nWhen she fires, Navia will consume all Crystal Shrapnel stacks and open her elegant yet lethal Gunbrella, firing multiple Rosula Shardshots that can penetrate opponents, dealing\nGeo DMG\nto opponents hit.\nWhen 0/1/2/3 or more stacks of Crystal Shrapnel are consumed, 5/7/9/11 Rosula Shardshots will be fired respectively. The more Rosula Shardshots that strike a single opponent, the greater the DMG dealt to them. When all 11 Rosula Shardshots strike, 200% of the original amount of DMG is dealt.\nIn addition, when more than 3 stacks of Crystal Shrapnel are consumed, every stack consumed beyond those 3 will increase the DMG dealt by this Gunbrella attack by an additional 15%.\nHold\nEnter Aiming Mode, continually collecting nearby Elemental Shards created by Crystallize reactions. When released, fire Rosula Shardshots with the same effect as when the skill is Tapped.\nTwo initial charges.\nArkhe: Ousia\nPeriodically, when Navia fires her Gunbrella, a Surging Blade will be summoned, dealing Ousia-aligned\nGeo DMG\n.\n"Maintaining the appropriate distance with those whom distance should be maintained is an essential part of etiquette. Naturally, there are also many ways to do this..."',
             data: {
                 'Rosula Shardshot Base DMG': {
+                    Lv1: '394.8%',
+                    Lv2: '424.41%',
+                    Lv3: '454.02%',
+                    Lv4: '493.5%',
+                    Lv5: '523.11%',
+                    Lv6: '552.72%',
+                    Lv7: '592.2%',
+                    Lv8: '631.68%',
+                    Lv9: '671.16%',
+                    Lv10: '710.64%',
+                    Lv11: '750.12%',
+                    Lv12: '789.6%',
+                    Lv13: '838.95%',
+                    Lv14: '888.3%',
+                    Lv15: '937.65%',
+                },
+                'Rosula Shardshot Total DMG': {
                     Lv1: '394.8%',
                     Lv2: '424.41%',
                     Lv3: '454.02%',

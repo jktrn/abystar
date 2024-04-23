@@ -64,7 +64,10 @@ export interface Bonus {
     // The index of the talent that the bonus changes the scaling of
     affectsTalentIndex?: number
     // What should be changed in the talent scaling
-    applyToTalentScaling?: (talentScaling: TalentScaling) => void
+    applyToTalentScaling?: (
+        talentScaling: TalentScaling,
+        currentStacks?: number
+    ) => void
 }
 
 export interface Effect {
@@ -86,7 +89,7 @@ export interface TalentScaling {
 }
 
 export interface TalentScalingData {
-    formulaType: FormulaType
+    formulaType?: FormulaType
     attribute?: string[]
     additiveBonusStat?: string[]
     multiplicativeBonusStat?: string[]
@@ -95,6 +98,8 @@ export interface TalentScalingData {
     damageType?: DamageType
     outputType?: FormulaOutputType
     minConstellation?: number
+    origin?: string
+    originMultiplier?: number
 }
 
 export interface BaseStat {

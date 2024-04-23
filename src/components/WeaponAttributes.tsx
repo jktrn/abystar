@@ -8,7 +8,7 @@ const roundStatValue = (statName: string, value: number) => {
             statName
         )
     ) {
-        return Math.round(value)
+        return Math.floor(value)
     } else {
         return `${(value * 100).toFixed(1)}%`
     }

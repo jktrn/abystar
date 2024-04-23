@@ -14,23 +14,44 @@ const weaponBonuses: Bonus[] = [
 
             let attackBonus = 0
 
-            if(currentStacks <= 5) {
-                attackBonus = 1 + currentStacks * attackBonusPerStack[state.weaponRefinement - 1] * 2
+            if (currentStacks <= 5) {
+                attackBonus =
+                    1 +
+                    currentStacks *
+                        attackBonusPerStack[state.weaponRefinement - 1] *
+                        2
             } else if (currentStacks > 5) {
-                attackBonus = 1 + (currentStacks - 5) * attackBonusPerStack[state.weaponRefinement - 1]
+                attackBonus =
+                    1 +
+                    (currentStacks - 5) *
+                        attackBonusPerStack[state.weaponRefinement - 1]
             }
 
             const newAttributes = {
                 ...attributes,
-                'Shield Strength': (attributes['Shield Strength'] || 0) + shieldStrengthBonusPerStack[state.weaponRefinement - 1],
-                ATK: (attributes['ATK'] || 0) * attackBonus
+                'Shield Strength':
+                    (attributes['Shield Strength'] || 0) +
+                    shieldStrengthBonusPerStack[state.weaponRefinement - 1],
+                ATK: (attributes['ATK'] || 0) * attackBonus,
             }
             return { attributes: newAttributes }
         },
         maxStacks: 10,
-        stackOptions: ['Off', 'Shielded 1 Stack', 'Shielded 2 Stacks', 'Shielded 3 Stacks', 'Shielded 4 Stacks', 'Shielded 5 Stacks', 'Unshielded 1 Stack', 'Unshielded 2 Stacks', 'Unshielded 3 Stacks', 'Unshielded 4 Stacks', 'Unshielded 5 Stacks'],
-        priority: 1
-    }
+        stackOptions: [
+            'Off',
+            'Shielded 1 Stack',
+            'Shielded 2 Stacks',
+            'Shielded 3 Stacks',
+            'Shielded 4 Stacks',
+            'Shielded 5 Stacks',
+            'Unshielded 1 Stack',
+            'Unshielded 2 Stacks',
+            'Unshielded 3 Stacks',
+            'Unshielded 4 Stacks',
+            'Unshielded 5 Stacks',
+        ],
+        priority: 1,
+    },
 ]
 
 const VortexVanquisher: Weapon = {
@@ -103,62 +124,82 @@ const VortexVanquisher: Weapon = {
     },
     refinements: [
         {
-            description:
+            description: (
                 <span>
-                    Increases Shield Strength by <span style={{ color: '#ddd' }}>20%</span>. Scoring hits on opponents increases ATK by <span style={{ color: '#ddd' }}>4%</span> {' '}
-                    for <span style={{ color: '#ddd' }}>8s</span>. Max 5 stacks. 
-                    Can only occur once every <span style={{ color: '#ddd' }}>0.3s</span>. 
-                    While protected by a shield, this ATK increase effect is increased by <span style={{ color: '#ddd' }}>100%</span>.
+                    Increases Shield Strength by{' '}
+                    <span style={{ color: '#ddd' }}>20%</span>. Scoring hits on
+                    opponents increases ATK by{' '}
+                    <span style={{ color: '#ddd' }}>4%</span> for{' '}
+                    <span style={{ color: '#ddd' }}>8s</span>. Max 5 stacks. Can only
+                    occur once every <span style={{ color: '#ddd' }}>0.3s</span>.
+                    While protected by a shield, this ATK increase effect is
+                    increased by <span style={{ color: '#ddd' }}>100%</span>.
                 </span>
-                ,
+            ),
             level: 1,
         },
         {
-            description:
-            <span>
-                Increases Shield Strength by <span style={{ color: '#ddd' }}>25%</span>. Scoring hits on opponents increases ATK by <span style={{ color: '#ddd' }}>5%</span> {' '}
-                for <span style={{ color: '#ddd' }}>8s</span>. Max 5 stacks. 
-                Can only occur once every <span style={{ color: '#ddd' }}>0.3s</span>. 
-                While protected by a shield, this ATK increase effect is increased by <span style={{ color: '#ddd' }}>100%</span>.
-            </span>
-            ,
+            description: (
+                <span>
+                    Increases Shield Strength by{' '}
+                    <span style={{ color: '#ddd' }}>25%</span>. Scoring hits on
+                    opponents increases ATK by{' '}
+                    <span style={{ color: '#ddd' }}>5%</span> for{' '}
+                    <span style={{ color: '#ddd' }}>8s</span>. Max 5 stacks. Can only
+                    occur once every <span style={{ color: '#ddd' }}>0.3s</span>.
+                    While protected by a shield, this ATK increase effect is
+                    increased by <span style={{ color: '#ddd' }}>100%</span>.
+                </span>
+            ),
             level: 2,
         },
         {
-            description:
-            <span>
-                Increases Shield Strength by <span style={{ color: '#ddd' }}>30%</span>. Scoring hits on opponents increases ATK by <span style={{ color: '#ddd' }}>6%</span> {' '}
-                for <span style={{ color: '#ddd' }}>8s</span>. Max 5 stacks. 
-                Can only occur once every <span style={{ color: '#ddd' }}>0.3s</span>. 
-                While protected by a shield, this ATK increase effect is increased by <span style={{ color: '#ddd' }}>100%</span>.
-            </span>
-            ,
+            description: (
+                <span>
+                    Increases Shield Strength by{' '}
+                    <span style={{ color: '#ddd' }}>30%</span>. Scoring hits on
+                    opponents increases ATK by{' '}
+                    <span style={{ color: '#ddd' }}>6%</span> for{' '}
+                    <span style={{ color: '#ddd' }}>8s</span>. Max 5 stacks. Can only
+                    occur once every <span style={{ color: '#ddd' }}>0.3s</span>.
+                    While protected by a shield, this ATK increase effect is
+                    increased by <span style={{ color: '#ddd' }}>100%</span>.
+                </span>
+            ),
             level: 3,
         },
         {
-            description:
-            <span>
-                Increases Shield Strength by <span style={{ color: '#ddd' }}>35%</span>. Scoring hits on opponents increases ATK by <span style={{ color: '#ddd' }}>7%</span> {' '}
-                for <span style={{ color: '#ddd' }}>8s</span>. Max 5 stacks. 
-                Can only occur once every <span style={{ color: '#ddd' }}>0.3s</span>. 
-                While protected by a shield, this ATK increase effect is increased by <span style={{ color: '#ddd' }}>100%</span>.
-            </span>
-            ,
+            description: (
+                <span>
+                    Increases Shield Strength by{' '}
+                    <span style={{ color: '#ddd' }}>35%</span>. Scoring hits on
+                    opponents increases ATK by{' '}
+                    <span style={{ color: '#ddd' }}>7%</span> for{' '}
+                    <span style={{ color: '#ddd' }}>8s</span>. Max 5 stacks. Can only
+                    occur once every <span style={{ color: '#ddd' }}>0.3s</span>.
+                    While protected by a shield, this ATK increase effect is
+                    increased by <span style={{ color: '#ddd' }}>100%</span>.
+                </span>
+            ),
             level: 4,
         },
         {
-            description:
-            <span>
-                Increases Shield Strength by <span style={{ color: '#ddd' }}>40%</span>. Scoring hits on opponents increases ATK by <span style={{ color: '#ddd' }}>8%</span> {' '}
-                for <span style={{ color: '#ddd' }}>8s</span>. Max 5 stacks. 
-                Can only occur once every <span style={{ color: '#ddd' }}>0.3s</span>. 
-                While protected by a shield, this ATK increase effect is increased by <span style={{ color: '#ddd' }}>100%</span>.
-            </span>
-            ,
+            description: (
+                <span>
+                    Increases Shield Strength by{' '}
+                    <span style={{ color: '#ddd' }}>40%</span>. Scoring hits on
+                    opponents increases ATK by{' '}
+                    <span style={{ color: '#ddd' }}>8%</span> for{' '}
+                    <span style={{ color: '#ddd' }}>8s</span>. Max 5 stacks. Can only
+                    occur once every <span style={{ color: '#ddd' }}>0.3s</span>.
+                    While protected by a shield, this ATK increase effect is
+                    increased by <span style={{ color: '#ddd' }}>100%</span>.
+                </span>
+            ),
             level: 5,
         },
     ],
-    weaponBonuses
+    weaponBonuses,
 }
 
 export default VortexVanquisher

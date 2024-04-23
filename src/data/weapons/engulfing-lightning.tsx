@@ -15,21 +15,30 @@ const weaponBonuses: Bonus[] = [
 
             let hasBurst = 0
 
-            if(currentStacks === 2) {
+            if (currentStacks === 2) {
                 hasBurst = burstEnergyRechargeBonus[state.weaponRefinement - 1]
             }
 
             const newAttributes = {
                 ...attributes,
-                ATK: attributes['ATK' || 0] * (1 + Math.min(((attributes['Energy Recharge'] || 0) - 1 + hasBurst) * energyRechargetoAttackBonus[state.weaponRefinement - 1], energyRechargetoAttackMax[state.weaponRefinement - 1])),
-                'Energy Recharge': attributes['Energy Recharge' || 0] + hasBurst
+                ATK:
+                    attributes['ATK' || 0] *
+                    (1 +
+                        Math.min(
+                            ((attributes['Energy Recharge'] || 0) - 1 + hasBurst) *
+                                energyRechargetoAttackBonus[
+                                    state.weaponRefinement - 1
+                                ],
+                            energyRechargetoAttackMax[state.weaponRefinement - 1]
+                        )),
+                'Energy Recharge': attributes['Energy Recharge' || 0] + hasBurst,
             }
             return { attributes: newAttributes }
         },
         maxStacks: 2,
         stackOptions: ['Off', 'Enabled', 'Enabled + Burst'],
-        priority: 2
-    }
+        priority: 2,
+    },
 ]
 
 const EngulfingLightning: Weapon = {
@@ -102,57 +111,72 @@ const EngulfingLightning: Weapon = {
     },
     refinements: [
         {
-            description:
+            description: (
                 <span>
-                    ATK increased by <span style={{ color: '#ddd' }}>28%</span> of Energy Recharge over the base 100%. 
-                    You can gain a maximum bonus of <span style={{ color: '#ddd' }}>80%</span> ATK.
-                    Gain <span style={{ color: '#ddd' }}>30%</span> Energy Recharge for <span style={{ color: '#ddd' }}>12s</span> after using an Elemental Burst.
+                    ATK increased by <span style={{ color: '#ddd' }}>28%</span> of
+                    Energy Recharge over the base 100%. You can gain a maximum bonus
+                    of <span style={{ color: '#ddd' }}>80%</span> ATK. Gain{' '}
+                    <span style={{ color: '#ddd' }}>30%</span> Energy Recharge for{' '}
+                    <span style={{ color: '#ddd' }}>12s</span> after using an
+                    Elemental Burst.
                 </span>
-                ,
+            ),
             level: 1,
         },
         {
-            description:
+            description: (
                 <span>
-                    ATK increased by <span style={{ color: '#ddd' }}>35%</span> of Energy Recharge over the base 100%. 
-                    You can gain a maximum bonus of <span style={{ color: '#ddd' }}>90%</span> ATK.
-                    Gain <span style={{ color: '#ddd' }}>35%</span> Energy Recharge for <span style={{ color: '#ddd' }}>12s</span> after using an Elemental Burst.
+                    ATK increased by <span style={{ color: '#ddd' }}>35%</span> of
+                    Energy Recharge over the base 100%. You can gain a maximum bonus
+                    of <span style={{ color: '#ddd' }}>90%</span> ATK. Gain{' '}
+                    <span style={{ color: '#ddd' }}>35%</span> Energy Recharge for{' '}
+                    <span style={{ color: '#ddd' }}>12s</span> after using an
+                    Elemental Burst.
                 </span>
-                ,
+            ),
             level: 2,
         },
         {
-            description:
+            description: (
                 <span>
-                    ATK increased by <span style={{ color: '#ddd' }}>42%</span> of Energy Recharge over the base 100%. 
-                    You can gain a maximum bonus of <span style={{ color: '#ddd' }}>100%</span> ATK.
-                    Gain <span style={{ color: '#ddd' }}>40%</span> Energy Recharge for <span style={{ color: '#ddd' }}>12s</span> after using an Elemental Burst.
+                    ATK increased by <span style={{ color: '#ddd' }}>42%</span> of
+                    Energy Recharge over the base 100%. You can gain a maximum bonus
+                    of <span style={{ color: '#ddd' }}>100%</span> ATK. Gain{' '}
+                    <span style={{ color: '#ddd' }}>40%</span> Energy Recharge for{' '}
+                    <span style={{ color: '#ddd' }}>12s</span> after using an
+                    Elemental Burst.
                 </span>
-                ,
+            ),
             level: 3,
         },
         {
-            description:
+            description: (
                 <span>
-                    ATK increased by <span style={{ color: '#ddd' }}>49%</span> of Energy Recharge over the base 100%. 
-                    You can gain a maximum bonus of <span style={{ color: '#ddd' }}>110%</span> ATK.
-                    Gain <span style={{ color: '#ddd' }}>45%</span> Energy Recharge for <span style={{ color: '#ddd' }}>12s</span> after using an Elemental Burst.
+                    ATK increased by <span style={{ color: '#ddd' }}>49%</span> of
+                    Energy Recharge over the base 100%. You can gain a maximum bonus
+                    of <span style={{ color: '#ddd' }}>110%</span> ATK. Gain{' '}
+                    <span style={{ color: '#ddd' }}>45%</span> Energy Recharge for{' '}
+                    <span style={{ color: '#ddd' }}>12s</span> after using an
+                    Elemental Burst.
                 </span>
-                ,
+            ),
             level: 4,
         },
         {
-            description:
+            description: (
                 <span>
-                    ATK increased by <span style={{ color: '#ddd' }}>56%</span> of Energy Recharge over the base 100%. 
-                    You can gain a maximum bonus of <span style={{ color: '#ddd' }}>120%</span> ATK.
-                    Gain <span style={{ color: '#ddd' }}>50%</span> Energy Recharge for <span style={{ color: '#ddd' }}>12s</span> after using an Elemental Burst.
+                    ATK increased by <span style={{ color: '#ddd' }}>56%</span> of
+                    Energy Recharge over the base 100%. You can gain a maximum bonus
+                    of <span style={{ color: '#ddd' }}>120%</span> ATK. Gain{' '}
+                    <span style={{ color: '#ddd' }}>50%</span> Energy Recharge for{' '}
+                    <span style={{ color: '#ddd' }}>12s</span> after using an
+                    Elemental Burst.
                 </span>
-                ,
+            ),
             level: 5,
         },
     ],
-    weaponBonuses
+    weaponBonuses,
 }
 
 export default EngulfingLightning

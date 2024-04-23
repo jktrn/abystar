@@ -14,14 +14,18 @@ const weaponBonuses: Bonus[] = [
 
             const newAttributes = {
                 ...attributes,
-                ATK: (attributes['ATK'] || 0) * (1 + attackBonusPerStack[state.weaponRefinement - 1]),
-                'Elemental Mastery': (attributes['Elemental Mastery'] || 0) + elementalMasteryBonusPerStack[state.weaponRefinement - 1]
+                ATK:
+                    (attributes['ATK'] || 0) *
+                    (1 + attackBonusPerStack[state.weaponRefinement - 1]),
+                'Elemental Mastery':
+                    (attributes['Elemental Mastery'] || 0) +
+                    elementalMasteryBonusPerStack[state.weaponRefinement - 1],
             }
             return { attributes: newAttributes }
         },
         enabled: false,
-        priority: 1
-    }
+        priority: 1,
+    },
 ]
 
 const MissiveWindspear: Weapon = {
@@ -94,52 +98,62 @@ const MissiveWindspear: Weapon = {
     },
     refinements: [
         {
-            description:
+            description: (
                 <span>
-                    Within <span style={{ color: '#ddd' }}>10s</span> after an Elemental Reaction is triggered, 
-                    ATK is increased by <span style={{ color: '#ddd' }}>12%</span> and Elemental Mastery is increased by <span style={{ color: '#ddd' }}>48</span>.
+                    Within <span style={{ color: '#ddd' }}>10s</span> after an
+                    Elemental Reaction is triggered, ATK is increased by{' '}
+                    <span style={{ color: '#ddd' }}>12%</span> and Elemental Mastery
+                    is increased by <span style={{ color: '#ddd' }}>48</span>.
                 </span>
-                ,
+            ),
             level: 1,
         },
         {
-            description:
-            <span>
-                Within <span style={{ color: '#ddd' }}>10s</span> after an Elemental Reaction is triggered, 
-                ATK is increased by <span style={{ color: '#ddd' }}>15%</span> and Elemental Mastery is increased by <span style={{ color: '#ddd' }}>60</span>.
-            </span>
-            ,
+            description: (
+                <span>
+                    Within <span style={{ color: '#ddd' }}>10s</span> after an
+                    Elemental Reaction is triggered, ATK is increased by{' '}
+                    <span style={{ color: '#ddd' }}>15%</span> and Elemental Mastery
+                    is increased by <span style={{ color: '#ddd' }}>60</span>.
+                </span>
+            ),
             level: 2,
         },
         {
-            description:
+            description: (
                 <span>
-                    Within <span style={{ color: '#ddd' }}>10s</span> after an Elemental Reaction is triggered, 
-                    ATK is increased by <span style={{ color: '#ddd' }}>18%</span> and Elemental Mastery is increased by <span style={{ color: '#ddd' }}>72</span>.
+                    Within <span style={{ color: '#ddd' }}>10s</span> after an
+                    Elemental Reaction is triggered, ATK is increased by{' '}
+                    <span style={{ color: '#ddd' }}>18%</span> and Elemental Mastery
+                    is increased by <span style={{ color: '#ddd' }}>72</span>.
                 </span>
-                ,
+            ),
             level: 3,
         },
         {
-            description:
+            description: (
                 <span>
-                    Within <span style={{ color: '#ddd' }}>10s</span> after an Elemental Reaction is triggered, 
-                    ATK is increased by <span style={{ color: '#ddd' }}>21%</span> and Elemental Mastery is increased by <span style={{ color: '#ddd' }}>84</span>.
+                    Within <span style={{ color: '#ddd' }}>10s</span> after an
+                    Elemental Reaction is triggered, ATK is increased by{' '}
+                    <span style={{ color: '#ddd' }}>21%</span> and Elemental Mastery
+                    is increased by <span style={{ color: '#ddd' }}>84</span>.
                 </span>
-                ,
+            ),
             level: 4,
         },
         {
-            description:
+            description: (
                 <span>
-                    Within <span style={{ color: '#ddd' }}>10s</span> after an Elemental Reaction is triggered, 
-                    ATK is increased by <span style={{ color: '#ddd' }}>24%</span> and Elemental Mastery is increased by <span style={{ color: '#ddd' }}>96</span>.
+                    Within <span style={{ color: '#ddd' }}>10s</span> after an
+                    Elemental Reaction is triggered, ATK is increased by{' '}
+                    <span style={{ color: '#ddd' }}>24%</span> and Elemental Mastery
+                    is increased by <span style={{ color: '#ddd' }}>96</span>.
                 </span>
-                ,
+            ),
             level: 5,
         },
     ],
-    weaponBonuses
+    weaponBonuses,
 }
 
 export default MissiveWindspear

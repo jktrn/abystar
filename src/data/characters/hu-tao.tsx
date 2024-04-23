@@ -287,6 +287,7 @@ const constellationBonuses: Bonus[] = [
         },
         minConstellation: 1,
         origin: 'C1',
+        enabled: true,
         visible: false,
         priority: 1,
     },

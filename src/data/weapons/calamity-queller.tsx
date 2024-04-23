@@ -14,29 +14,63 @@ const weaponBonuses: Bonus[] = [
 
             let attackBonus = 0
 
-            if(currentStacks <= 6) {
-                attackBonus = (attributes['ATK'] || 0) * (currentStacks * attackBonusPerStack[state.weaponRefinement - 1])
+            if (currentStacks <= 6) {
+                attackBonus =
+                    (attributes['ATK'] || 0) *
+                    (currentStacks * attackBonusPerStack[state.weaponRefinement - 1])
             } else if (currentStacks > 6) {
-                attackBonus = (attributes['ATK'] || 0) * ((currentStacks - 5) * attackBonusPerStack[state.weaponRefinement - 1] * 2)
+                attackBonus =
+                    (attributes['ATK'] || 0) *
+                    ((currentStacks - 5) *
+                        attackBonusPerStack[state.weaponRefinement - 1] *
+                        2)
             }
 
             const newAttributes = {
                 ...attributes,
                 ATK: (attributes['ATK'] || 0) + attackBonus,
-                'Pyro DMG Bonus': (attributes['Pyro DMG Bonus'] || 0) + elementalDamageBonus[state.weaponRefinement - 1],
-                'Cryo DMG Bonus': (attributes['Cryo DMG Bonus'] || 0) + elementalDamageBonus[state.weaponRefinement - 1],
-                'Hydro DMG Bonus': (attributes['Hydro DMG Bonus'] || 0) + elementalDamageBonus[state.weaponRefinement - 1],
-                'Electro DMG Bonus': (attributes['Electro DMG Bonus'] || 0) + elementalDamageBonus[state.weaponRefinement - 1],
-                'Anemo DMG Bonus': (attributes['Anemo DMG Bonus'] || 0) + elementalDamageBonus[state.weaponRefinement - 1],
-                'Geo DMG Bonus': (attributes['Geo DMG Bonus'] || 0) + elementalDamageBonus[state.weaponRefinement - 1],
-                'Dendro DMG Bonus': (attributes['Dendro DMG Bonus'] || 0) + elementalDamageBonus[state.weaponRefinement - 1]
+                'Pyro DMG Bonus':
+                    (attributes['Pyro DMG Bonus'] || 0) +
+                    elementalDamageBonus[state.weaponRefinement - 1],
+                'Cryo DMG Bonus':
+                    (attributes['Cryo DMG Bonus'] || 0) +
+                    elementalDamageBonus[state.weaponRefinement - 1],
+                'Hydro DMG Bonus':
+                    (attributes['Hydro DMG Bonus'] || 0) +
+                    elementalDamageBonus[state.weaponRefinement - 1],
+                'Electro DMG Bonus':
+                    (attributes['Electro DMG Bonus'] || 0) +
+                    elementalDamageBonus[state.weaponRefinement - 1],
+                'Anemo DMG Bonus':
+                    (attributes['Anemo DMG Bonus'] || 0) +
+                    elementalDamageBonus[state.weaponRefinement - 1],
+                'Geo DMG Bonus':
+                    (attributes['Geo DMG Bonus'] || 0) +
+                    elementalDamageBonus[state.weaponRefinement - 1],
+                'Dendro DMG Bonus':
+                    (attributes['Dendro DMG Bonus'] || 0) +
+                    elementalDamageBonus[state.weaponRefinement - 1],
             }
             return { attributes: newAttributes }
         },
         maxStacks: 12,
-        stackOptions: ['Off', '1 Stack On-Field', '2 Stacks On-Field', '3 Stacks On-Field', '4 Stacks On-Field', '5 Stacks On-Field', '6 Stacks On-Field', '1 Stack Off-Field', '2 Stacks Off-Field', '3 Stacks Off-Field', '4 Stacks Off-Field', '5 Stacks Off-Field', '6 Stacks Off-Field'],
-        priority: 1
-    }
+        stackOptions: [
+            'Off',
+            '1 Stack On-Field',
+            '2 Stacks On-Field',
+            '3 Stacks On-Field',
+            '4 Stacks On-Field',
+            '5 Stacks On-Field',
+            '6 Stacks On-Field',
+            '1 Stack Off-Field',
+            '2 Stacks Off-Field',
+            '3 Stacks Off-Field',
+            '4 Stacks Off-Field',
+            '5 Stacks Off-Field',
+            '6 Stacks Off-Field',
+        ],
+        priority: 1,
+    },
 ]
 
 const CalamityQueller: Weapon = {
@@ -109,57 +143,67 @@ const CalamityQueller: Weapon = {
     },
     refinements: [
         {
-            description:
+            description: (
                 <span>
-                    Gain <span style={{ color: '#ddd' }}>12%</span> All Elemental DMG Bonus. 
-                    After using an Elemental Skill, ATK increases by <span style={{ color: '#ddd' }}>3.2%</span> per second. 
-                    Maximum of 6 stacks. When the character equipped with this weapon is not on the field, this effect is doubled.
+                    Gain <span style={{ color: '#ddd' }}>12%</span> All Elemental DMG
+                    Bonus. After using an Elemental Skill, ATK increases by{' '}
+                    <span style={{ color: '#ddd' }}>3.2%</span> per second. Maximum
+                    of 6 stacks. When the character equipped with this weapon is not
+                    on the field, this effect is doubled.
                 </span>
-                ,
+            ),
             level: 1,
         },
         {
-            description:
+            description: (
                 <span>
-                    Gain <span style={{ color: '#ddd' }}>15%</span> All Elemental DMG Bonus. 
-                    After using an Elemental Skill, ATK increases by <span style={{ color: '#ddd' }}>4%</span> per second. 
-                    Maximum of 6 stacks. When the character equipped with this weapon is not on the field, this effect is doubled.
+                    Gain <span style={{ color: '#ddd' }}>15%</span> All Elemental DMG
+                    Bonus. After using an Elemental Skill, ATK increases by{' '}
+                    <span style={{ color: '#ddd' }}>4%</span> per second. Maximum of
+                    6 stacks. When the character equipped with this weapon is not on
+                    the field, this effect is doubled.
                 </span>
-                ,
+            ),
             level: 2,
         },
         {
-            description:
+            description: (
                 <span>
-                    Gain <span style={{ color: '#ddd' }}>18%</span> All Elemental DMG Bonus. 
-                    After using an Elemental Skill, ATK increases by <span style={{ color: '#ddd' }}>4.8%</span> per second. 
-                    Maximum of 6 stacks. When the character equipped with this weapon is not on the field, this effect is doubled.
+                    Gain <span style={{ color: '#ddd' }}>18%</span> All Elemental DMG
+                    Bonus. After using an Elemental Skill, ATK increases by{' '}
+                    <span style={{ color: '#ddd' }}>4.8%</span> per second. Maximum
+                    of 6 stacks. When the character equipped with this weapon is not
+                    on the field, this effect is doubled.
                 </span>
-                ,
+            ),
             level: 3,
         },
         {
-            description:
+            description: (
                 <span>
-                    Gain <span style={{ color: '#ddd' }}>21%</span> All Elemental DMG Bonus. 
-                    After using an Elemental Skill, ATK increases by <span style={{ color: '#ddd' }}>5.6%</span> per second. 
-                    Maximum of 6 stacks. When the character equipped with this weapon is not on the field, this effect is doubled.
+                    Gain <span style={{ color: '#ddd' }}>21%</span> All Elemental DMG
+                    Bonus. After using an Elemental Skill, ATK increases by{' '}
+                    <span style={{ color: '#ddd' }}>5.6%</span> per second. Maximum
+                    of 6 stacks. When the character equipped with this weapon is not
+                    on the field, this effect is doubled.
                 </span>
-                ,
+            ),
             level: 4,
         },
         {
-            description:
+            description: (
                 <span>
-                    Gain <span style={{ color: '#ddd' }}>24%</span> All Elemental DMG Bonus. 
-                    After using an Elemental Skill, ATK increases by <span style={{ color: '#ddd' }}>6.4%</span> per second. 
-                    Maximum of 6 stacks. When the character equipped with this weapon is not on the field, this effect is doubled.
+                    Gain <span style={{ color: '#ddd' }}>24%</span> All Elemental DMG
+                    Bonus. After using an Elemental Skill, ATK increases by{' '}
+                    <span style={{ color: '#ddd' }}>6.4%</span> per second. Maximum
+                    of 6 stacks. When the character equipped with this weapon is not
+                    on the field, this effect is doubled.
                 </span>
-                ,
+            ),
             level: 5,
         },
     ],
-    weaponBonuses
+    weaponBonuses,
 }
 
 export default CalamityQueller
