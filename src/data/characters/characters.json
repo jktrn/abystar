@@ -18905,7 +18905,8 @@
                 "description": "When initiating a Normal Attack, a Charged Attack, Elemental Skill or Elemental Burst, Keqing gains a 6%\nElectro DMG Bonus\nfor 8s.\nEffects triggered by Normal Attacks, Charged Attacks, Elemental Skills and Elemental Bursts are considered independent entities.",
                 "level": 6
             }
-        ]
+        ],
+        "implemented": true
     },
     "Kirara": {
         "name": "Kirara",

@@ -1,15 +1,394 @@
-import { TalentScaling, Bonus, Character } from '@/interfaces/Character'
+import {
+    Bonus,
+    Character,
+    DamageType,
+    FormulaOutputType,
+    FormulaType,
+    TalentScaling,
+} from '@/interfaces/Character'
 
 const talentScalings: TalentScaling = {
-    // ...
+    'Normal Attack: Yunlai Swordsmanship': {
+        '1-Hit DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Normal Attack Additive Bonus'],
+            multiplicativeBonusStat: [
+                'Physical DMG Bonus',
+                'Normal Attack DMG Bonus',
+            ],
+            damageType: DamageType.Physical,
+        },
+        '2-Hit DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Normal Attack Additive Bonus'],
+            multiplicativeBonusStat: [
+                'Physical DMG Bonus',
+                'Normal Attack DMG Bonus',
+            ],
+            damageType: DamageType.Physical,
+        },
+        '3-Hit DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Normal Attack Additive Bonus'],
+            multiplicativeBonusStat: [
+                'Physical DMG Bonus',
+                'Normal Attack DMG Bonus',
+            ],
+            damageType: DamageType.Physical,
+        },
+        '4-Hit DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Normal Attack Additive Bonus'],
+            multiplicativeBonusStat: [
+                'Physical DMG Bonus',
+                'Normal Attack DMG Bonus',
+            ],
+            damageType: DamageType.Physical,
+        },
+        '5-Hit DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Normal Attack Additive Bonus'],
+            multiplicativeBonusStat: [
+                'Physical DMG Bonus',
+                'Normal Attack DMG Bonus',
+            ],
+            damageType: DamageType.Physical,
+        },
+        'Charged Attack DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Charged Attack Additive Bonus'],
+            multiplicativeBonusStat: [
+                'Physical DMG Bonus',
+                'Charged Attack DMG Bonus',
+            ],
+            damageType: DamageType.Physical,
+        },
+        'Charged Attack Stamina Cost': {
+            formulaType: FormulaType.GenericFormulaWithoutScaling,
+            multiplicativeBonusStat: ['Charged Attack Stamina Cost Multiplier'],
+            outputType: FormulaOutputType.Generic,
+        },
+        'Plunge DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Plunging Attack Additive Bonus'],
+            multiplicativeBonusStat: [
+                'Physical DMG Bonus',
+                'Plunging Attack DMG Bonus',
+            ],
+            damageType: DamageType.Physical,
+        },
+        'Low Plunge DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Plunging Attack Additive Bonus'],
+            multiplicativeBonusStat: [
+                'Physical DMG Bonus',
+                'Plunging Attack DMG Bonus',
+            ],
+            damageType: DamageType.Physical,
+        },
+        'High Plunge DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Plunging Attack Additive Bonus'],
+            multiplicativeBonusStat: [
+                'Physical DMG Bonus',
+                'Plunging Attack DMG Bonus',
+            ],
+            damageType: DamageType.Physical,
+        },
+    },
+    'Stellar Restoration': {
+        'Lightning Stiletto DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Elemental Skill Additive Bonus'],
+            multiplicativeBonusStat: [
+                'Electro DMG Bonus',
+                'Elemental Skill DMG Bonus',
+            ],
+            damageType: DamageType.Electro,
+        },
+        'Slashing DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Elemental Skill Additive Bonus'],
+            multiplicativeBonusStat: [
+                'Electro DMG Bonus',
+                'Elemental Skill DMG Bonus',
+            ],
+            damageType: DamageType.Electro,
+        },
+        'Thunderclap Slash DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Elemental Skill Additive Bonus'],
+            multiplicativeBonusStat: [
+                'Electro DMG Bonus',
+                'Elemental Skill DMG Bonus',
+            ],
+            damageType: DamageType.Electro,
+        },
+        'Thundering Might': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ['Elemental Skill Additive Bonus'],
+            multiplicativeBonusStat: [
+                'Electro DMG Bonus',
+                'Plunging Attack DMG Bonus',
+            ],
+        },
+        CD: {
+            formulaType: FormulaType.GenericFormulaWithoutScaling,
+            multiplicativeBonusStat: ['Elemental Skill CD Reduction'],
+            outputType: FormulaOutputType.Time,
+        },
+    },
+    'Starward Sword': {
+        'Skill DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ["Elemental Burst Additive Bonus"],
+            multiplicativeBonusStat: [
+                "Electro DMG Bonus",
+                'Elemental Burst DMG Bonus',
+            ],
+            damageType: DamageType.Electro,
+        },
+        'Consecutive Slash DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ["Elemental Burst Additive Bonus"],
+            multiplicativeBonusStat: [
+                "Electro DMG Bonus",
+                'Elemental Burst DMG Bonus',
+            ],
+            damageType: DamageType.Electro,
+        },
+        'Last Attack DMG': {
+            formulaType: FormulaType.DamageFormula,
+            attribute: ['ATK'],
+            additiveBonusStat: ["Elemental Burst Additive Bonus"],
+            multiplicativeBonusStat: [
+                "Electro DMG Bonus",
+                'Elemental Burst DMG Bonus',
+            ],
+            damageType: DamageType.Electro,
+        },
+        CD: {
+            formulaType: FormulaType.GenericFormulaWithoutScaling,
+            multiplicativeBonusStat: ['Elemental Burst CD Reduction'],
+            outputType: FormulaOutputType.Time,
+        },
+        'Energy Cost': {
+            formulaType: FormulaType.GenericFormulaWithoutScaling,
+            outputType: FormulaOutputType.Generic,
+        },
+    }
 }
 
 const characterBonuses: Bonus[] = [
-    // ...
+    {
+        name: 'Thundering Penance',
+        description: (
+            <span>
+                After recasting Stellar Restoration while a Lightning Stiletto is present, Keqing&apos;s weapon deals <span style={{ color: '#8c729a' }}>Electro DMG</span> for
+                {' '}<span style={{ color: '#ddd' }}>5s</span>.
+            </span>
+        ),
+        icon: '/images/characters/keqing-passive1.png',
+        effect: (attributes) => {
+            // * Unnecessary
+            return { attributes }
+        },
+        affectsTalentIndex: 0,
+        applyToTalentScaling: (talentScaling) => {
+            const normalAttackScaling =
+                talentScaling['Normal Attack: Yunlai Swordsmanship']
+
+            if (normalAttackScaling) {
+                Object.values(normalAttackScaling).forEach((aspect) => {
+                    if (
+                        aspect.formulaType !== FormulaType.DamageFormula ||
+                        !aspect.multiplicativeBonusStat
+                    )
+                        return
+                    aspect.multiplicativeBonusStat[0] = 'Electro DMG Bonus'
+                    aspect.damageType = DamageType.Electro
+                })
+            }
+        },
+        origin: 'A1',
+        priority: 2,
+    },
+    {
+        name: 'Aristocratic Dignity',
+        description: (
+            <span>
+                When casting Starward Sword, Keqing&apos;s CRIT Rate is increased by <span style={{ color: '#ddd' }}>15%</span>, 
+                and her Energy Recharge is increased by <span style={{ color: '#ddd' }}>15%</span>. 
+                This effect lasts for <span style={{ color: '#ddd' }}>8s</span>.
+            </span>
+        ),
+        icon: '/images/characters/keqing-passive2.png',
+        effect: (attributes) => {
+            const newAttributes = {
+                ...attributes,
+                'CRIT Rate': attributes['CRIT Rate'] + 0.15,
+                'Energy Recharge': attributes['Energy Recharge'] + 0.15,
+            }
+            return { attributes: newAttributes }
+        },
+        origin: 'A4',
+        priority: 1,
+    },
 ]
 
 const constellationBonuses: Bonus[] = [
-    // ...
+    {
+        name: 'Thundering Might',
+        description: (
+            <span>
+                Recasting Stellar Restoration while a Lightning Stiletto is present causes Keqing to deal 
+                {' '}<span style={{ color: '#ddd' }}>50%</span> of her ATK as AoE <span style={{ color: '#8c729a' }}>Electro DMG</span>.
+            </span>
+        ),
+        icon: '/images/characters/keqing-constellation1.png',
+        effect: (attributes) => {
+            // * Unnecessary
+            return { attributes }
+        },
+        affectsTalentIndex: 0,
+        applyToTalentScaling: (talentScaling) => {
+            if (talentScaling['Stellar Restoration']['Thundering Might'])
+                talentScaling['Stellar Restoration']['Thundering Might'].damageType = DamageType.Electro
+        },
+        origin: 'C1',
+        minConstellation: 1,
+        priority: 2,
+    },
+    {
+        name: 'Keen Extraction',
+        description: (
+            <span>
+                When Keqing&apos;s Normal and Charged Attacks hit opponents affected by Electro, 
+                they have a <span style={{ color: '#ddd' }}>50%</span> chance of producing an Elemental Particle. 
+                This effect can only occur once every <span style={{ color: '#ddd' }}>5s</span>.
+            </span>
+        ),
+        icon: '/images/characters/keqing-constellation2.png',
+        effect: (attributes) => {
+            // * Unnecessary, this does nothing
+            return { attributes }
+        },
+        origin: 'C2',
+        visible: false,
+        minConstellation: 2,
+    },
+    {
+        name: 'Foreseen Reformation',
+        description: (
+            <span>
+                Increases the Level of{' '}
+                <span style={{ color: '#DDD' }}>Starward Sword</span> by 3.
+                <br />
+                Maximum upgrade level is 15.
+            </span>
+        ),
+        icon: '/images/characters/keqing-constellation3.png',
+        effect: (attributes, talentLevels) => {
+            if (!talentLevels) return { attributes }
+
+            const newTalentLevels = [...talentLevels]
+            newTalentLevels[2] = Math.min(newTalentLevels[2] + 3, 13)
+
+            return { attributes: attributes, updatedTalentLevels: newTalentLevels }
+        },
+        minConstellation: 3,
+        origin: 'C3',
+        enabled: true,
+        visible: false,
+        priority: 0,
+    },
+    {
+        name: 'Attunement',
+        description: (
+            <span>
+                For <span style={{ color: '#ddd' }}>10s</span> after Keqing triggers an <span style={{ color: '#8c729a' }}>Electro-related Elemental Reaction</span>, 
+                her ATK is increased by <span style={{ color: '#ddd' }}>25%</span>.
+            </span>
+        ),
+        icon: '/images/characters/keqing-constellation4.png',
+        effect: (attributes) => {
+            const newAttributes = {
+                ...attributes,
+                ATK: attributes['ATK'] * 1.25,
+            }
+            return { attributes: newAttributes }
+        },
+        origin: 'C4',
+        minConstellation: 4,
+        priority: 1
+    },
+    {
+        name: 'Beckoning Stars',
+        description: (
+            <span>
+                Increases the Level of{' '}
+                <span style={{ color: '#DDD' }}>Stellar Restoration</span> by 3.
+                <br />
+                Maximum upgrade level is 15.
+            </span>
+        ),
+        icon: '/images/characters/keqing-constellation5.png',
+        effect: (attributes, talentLevels) => {
+            if (!talentLevels) return { attributes }
+
+            const newTalentLevels = [...talentLevels]
+            newTalentLevels[1] = Math.min(newTalentLevels[1] + 3, 13)
+
+            return { attributes: attributes, updatedTalentLevels: newTalentLevels }
+        },
+        minConstellation: 5,
+        origin: 'C5',
+        enabled: true,
+        visible: false,
+        priority: 0,
+    },
+    {
+        name: 'Tenacious Star',
+        description: (
+            <span>
+                When initiating a Normal Attack, a Charged Attack, Elemental Skill or Elemental Burst, 
+                Keqing gains a <span style={{ color: '#ddd' }}>6/12/18/24%</span> 
+                {' '}<span style={{ color: '#8c729a' }}>Electro DMG Bonus</span> for <span style={{ color: '#ddd' }}>8s</span>.
+            </span>
+        ),
+        icon: '/images/characters/keqing-constellation6.png',
+        effect: (attributes, talentLevels, currentStacks) => {
+            if (!currentStacks) return { attributes }
+
+            const elementalDamageBonus = [0.06, 0.12, 0.18, 0.24]
+
+            const newAttributes = {
+                ...attributes,
+                'Electro DMG Bonus': attributes['Electro DMG Bonus'] + elementalDamageBonus[currentStacks - 1],
+            }
+            return { attributes: newAttributes }
+        },
+        maxStacks: 4,
+        stackOptions: ['None', '1 Stack', '2 Stacks', '3 Stacks', '4 Stacks'],
+        origin: 'C6',
+        minConstellation: 6,
+        priority: 1
+    },
 ]
 
 const Keqing: Character = {
@@ -370,6 +749,23 @@ const Keqing: Character = {
                     Lv13: '357.00%',
                     Lv14: '378.00%',
                     Lv15: '399.00%',
+                },
+                'Thundering Might': {
+                    Lv1: '50.00%',
+                    Lv2: '50.00%',
+                    Lv3: '50.00%',
+                    Lv4: '50.00%',
+                    Lv5: '50.00%',
+                    Lv6: '50.00%',
+                    Lv7: '50.00%',
+                    Lv8: '50.00%',
+                    Lv9: '50.00%',
+                    Lv10: '50.00%',
+                    Lv11: '50.00%',
+                    Lv12: '50.00%',
+                    Lv13: '50.00%',
+                    Lv14: '50.00%',
+                    Lv15: '50.00%',
                 },
                 CD: {
                     Lv1: '7.5s',
