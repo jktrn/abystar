@@ -379,7 +379,7 @@ async def fetch_images_from_api(api, character_name):
         for i, talent in enumerate(detail.talents):
             if talent_count < 3:
                 if len(detail.talents) == 7 and i == 2:
-                    continue # dodge the mona/ayaka sprint
+                    continue  # Skip the rare talent at index 2 when detail.talents length is 7
                 images["talents"].append(talent.icon)
                 talent_count += 1
             elif i < 9:

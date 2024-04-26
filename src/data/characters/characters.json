@@ -2724,7 +2724,7 @@
     },
     "Arlecchino": {
         "name": "Arlecchino",
-        "icon": "/images/characters/arlecchino.png",
+        "icon": "https://api.ambr.top/assets/UI/UI_AvatarIcon_Arlecchino.png",
         "weapon": "Polearm",
         "vision": "Pyro",
         "rarity": 5,
@@ -2847,7 +2847,7 @@
         "talents": [
             {
                 "name": "Normal Attack: Invitation to a Beheading",
-                "image": "https://genshin.honeyhunterworld.com/img/s_963101.webp",
+                "image": "https://api.ambr.top/assets/UI/Skill_A_03.png",
                 "description": "Normal Attack\nPerforms up to 6 consecutive spear strikes.\nCharged Attack\nConsumes a fixed amount of Stamina, dashing toward a nearby opponent and cleaving once.\nContinuously holding this button will cause Arlecchino to consume Stamina and engage in up to 5s of high-speed movement.\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.\nMasque of the Red Death\nWhen Arlecchino has a Bond of Life equal to or greater than 30% of her Max HP, she will enter the \"Masque of the Red Death\" state, where her Normal, Charged, and Plunging Attacks will be converted to deal\nPyro DMG\n. This cannot be overridden.\nWhen in the \"Masque of the Red Death\" state, Arlecchino's Normal Attacks will deal extra DMG to opponents on hit that scales off her ATK multiplied by a certain ratio of her current Bond of Life percentage. This will consume 7.5% of said current Bond of Life. Her Bond of Life can be consumed this way every 0.03s. When her Bond of Life is consumed in this manner, All Is Ash's CD will decrease by 0.8s.",
                 "data": {
                     "Masque of the Red Death Increase": {
@@ -3075,7 +3075,7 @@
             },
             {
                 "name": "All Is Ash",
-                "image": "https://genshin.honeyhunterworld.com/img/s_963201.webp",
+                "image": "https://api.ambr.top/assets/UI/Skill_S_Arlecchino_01.png",
                 "description": "Summons forth Balemoon Bloodfire, dealing\nPyro DMG\nto multiple nearby opponents and performing a dash-cleave against one of them, dealing\nAoE Pyro DMG\n.\nOpponents hit by the aforementioned attack will have a Blood-Debt Directive applied to them.\nBlood-Debt Directive\n\u00b7 Lasts 30s. Every 5s, it will deal 1 instance of\nPyro DMG\nto the opponent. Max 2 instances. This DMG will be considered Elemental Skill DMG.\n\u00b7 When Arlecchino uses a Charged Attack or her Elemental Burst, Balemoon Rising, she will absorb and clear nearby Blood-Debt Directives. Each Directive absorbed grants her a Bond of Life worth 65% of her Max HP.\n\u00b7 The maximum value of the Bond of Life she can be granted through Blood-Debt Directives within 35s after using her Elemental Skill is 145% of her Max HP. Using the Elemental Skill again during this duration will restart the count on duration and the limit on the value of Bond of Life she may gain from Blood-Debt Directives.\nAs she sees it, not every grain of wheat that falls upon the earth will grow into an ear, while those who obstruct her, once burned to ashes, can certainly be used to nourish flowers.",
                 "data": {
                     "Spike DMG": {
@@ -3150,7 +3150,7 @@
             },
             {
                 "name": "Balemoon Rising",
-                "image": "https://genshin.honeyhunterworld.com/img/s_963901.webp",
+                "image": "https://api.ambr.top/assets/UI/Skill_E_Arlecchino_01.png",
                 "description": "Arlecchino's great wings of Balemoon Bloodfire beat, absorbing and clearing Blood-Debt Directives around her, and dealing\nAoE Pyro DMG\nbefore clearing the CD of All Is Ash and healing her. The healing is based on her Bond of Life value and ATK.\nIt is commonly believed throughout Teyvat that moon phases other than the full moon are mere metaphors of ill-omen, used only by those who practice alchemy and astrology.\nShe saw this crimson moon in her dreams many times. Were those portents of disaster? Indeed they were, but the destined catastrophes belonged to those who enraged her.",
                 "data": {
                     "Skill DMG": {
@@ -3227,54 +3227,54 @@
         "passiveSkills": [
             {
                 "name": "The Balemoon Alone May Know",
-                "image": "https://genshin.honeyhunterworld.com/img/p_962301.webp",
+                "image": "https://api.ambr.top/assets/UI/UI_Talent_S_Arlecchino_05.png",
                 "description": "While in combat, Arlecchino gains a 40%\nPyro DMG Bonus\nand can only be healed through\nBalemoon Rising\n."
             },
             {
                 "name": "Agony Alone May Be Repaid",
-                "image": "https://genshin.honeyhunterworld.com/img/p_962101.webp",
+                "image": "https://api.ambr.top/assets/UI/UI_Talent_S_Arlecchino_06.png",
                 "description": "Blood-Debt Directives\nhave the following characteristics:\n\u00b7 When defeating an opponent with a Directive, Arlecchino will be granted a Life Bond worth 130% of her Max HP.\n\u00b7 5s after a Directive is applied, it will be upgraded to a Blood-Debt Due. When absorbed, it will instead grant Arlecchino a Bond of Life worth 130%.\nA Bond of Life created in the aforementioned ways cannot exceed the original limit on the value of Bonds of Life obtained through\nAll Is Ash\n."
             },
             {
                 "name": "Strength Alone Can Defend",
-                "image": "https://genshin.honeyhunterworld.com/img/p_962201.webp",
+                "image": "https://api.ambr.top/assets/UI/UI_Talent_S_Arlecchino_07.png",
                 "description": "Arlecchino gains 1% All Elemental and Physical RES for every 100 ATK she has in excess of 1,000. The maximum RES increase she can gain this way for each is 20%."
             }
         ],
         "constellations": [
             {
                 "name": "\"All Reprisals and Arrears Are Mine to Bear...\"",
-                "image": "https://genshin.honeyhunterworld.com/img/c_961.webp",
+                "image": "https://api.ambr.top/assets/UI/UI_Talent_S_Arlecchino_01.png",
                 "description": "Masque of the Red Death is further enhanced, the value of the increase is 100%. Additionally, Arlecchino's interruption resistance is increased when she performs Normal Attacks while affected by the Masque of the Red Death.",
                 "level": 1
             },
             {
                 "name": "\"All Rewards and Retribution, Mine to Bestow...\"",
-                "image": "https://genshin.honeyhunterworld.com/img/c_962.webp",
+                "image": "https://api.ambr.top/assets/UI/UI_Talent_S_Arlecchino_02.png",
                 "description": "Blood-Debt Directives\nare now already Blood-Debt Due when first applied.\nWhen Arlecchino absorbs such a Due, she unleashes Balemoon Bloodfire in front of her, dealing 900% of her ATK as\nAoE Pyro DMG\n. This effect can trigger once every 10s.\nYou must first unlock the Passive Talent \"Agony Alone May Be Repaid.\"",
                 "level": 2
             },
             {
                 "name": "\"You Shall Become a New Member of Our Family...\"",
-                "image": "https://genshin.honeyhunterworld.com/img/c_963.webp",
+                "image": "https://api.ambr.top/assets/UI/UI_Talent_U_Arlecchino_01.png",
                 "description": "Increases the Level of\nNormal Attack: Invitation to a Beheading\nby 3.\nMaximum upgrade level is 15.",
                 "level": 3
             },
             {
                 "name": "\"You Shall Love and Protect Each Other Henceforth...\"",
-                "image": "https://genshin.honeyhunterworld.com/img/c_964.webp",
+                "image": "https://api.ambr.top/assets/UI/UI_Talent_S_Arlecchino_03.png",
                 "description": "When Arlecchino successfully absorbs a Blood-Debt Directive,\nBalemoon Rising\n's CD will decrease by 2s and 15 Energy will be restored to her. This effect can occur once every 10s.",
                 "level": 4
             },
             {
                 "name": "\"For Alone, We Are as Good as Dead...\"",
-                "image": "https://genshin.honeyhunterworld.com/img/c_965.webp",
+                "image": "https://api.ambr.top/assets/UI/UI_Talent_U_Arlecchino_02.png",
                 "description": "Increases the Level of\nBalemoon Rising\nby 3.\nMaximum upgrade level is 15.",
                 "level": 5
             },
             {
                 "name": "\"From This Day On, We Shall Delight in New Life Together.\"",
-                "image": "https://genshin.honeyhunterworld.com/img/c_966.webp",
+                "image": "https://api.ambr.top/assets/UI/UI_Talent_S_Arlecchino_04.png",
                 "description": "The DMG of\nBalemoon Rising\nis increased by Arlecchino's ATK multiplied by 700% of Arlecchino's current Life Bond percentage.\nFor 20s after Arlecchino uses\nAll Is Ash\n, both her Normal Attacks and Elemental Burst gain 10% increased CRIT Rate and 70% increased CRIT DMG. This effect can be triggered up to once every 15s.",
                 "level": 6
             }
@@ -7205,7 +7205,7 @@
     },
     "Chiori": {
         "name": "Chiori",
-        "icon": "/images/characters/chiori.png",
+        "icon": "https://api.ambr.top/assets/UI/UI_AvatarIcon_Chiori.png",
         "weapon": "Sword",
         "vision": "Geo",
         "rarity": 5,
@@ -7328,7 +7328,7 @@
         "talents": [
             {
                 "name": "Normal Attack: Weaving Blade",
-                "image": "https://genshin.honeyhunterworld.com/img/s_943101.webp",
+                "image": "https://api.ambr.top/assets/UI/Skill_A_01.png",
                 "description": "Normal Attack\nPerforms up to 4 rapid strikes.\nCharged Attack\nConsumes a certain amount of Stamina to unleash 2 rapid sword strikes.\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.",
                 "data": {
                     "1-Hit DMG": {
@@ -7488,7 +7488,7 @@
             },
             {
                 "name": "Fluttering Hasode",
-                "image": "https://genshin.honeyhunterworld.com/img/s_943201.webp",
+                "image": "https://api.ambr.top/assets/UI/Skill_S_Chiori_01.png",
                 "description": "Dashes nimbly forward with silken steps. Once this dash ends, Chiori will summon the automaton doll \"Tamoto\" beside her and sweep her blade upward, dealing\nAoE Geo DMG\nto nearby opponents based on her ATK and DEF.\nHolding the Skill will cause it to behave differently.\nHold\nEnter Aiming Mode to adjust the dash direction.\nTamoto\n\u00b7 Will slash at nearby opponents at intervals, dealing\nAoE Geo DMG\nbased on Chiori's ATK and DEF.\n\u00b7 While active, if there are nearby\nGeo Construct(s)\nor\nGeo Construct(s)\nare created nearby, an additional Tamoto will be summoned next to your active character. Only 1 additional Tamoto can be summoned in this manner, and its duration is independently counted.\n\"Sakura red dyes the brocade, the fragrance suffuses the sleeves, the orioles intoxicated.\"",
                 "data": {
                     "Tamoto DMG": {
@@ -7580,7 +7580,7 @@
             },
             {
                 "name": "Hiyoku: Twin Blades",
-                "image": "https://genshin.honeyhunterworld.com/img/s_943901.webp",
+                "image": "https://api.ambr.top/assets/UI/Skill_E_Chiori_01.png",
                 "description": "Twin blades leave their sheaths as Chiori slices with the clean cuts of a master tailor, dealing\nAoE Geo DMG\nbased on her ATK and DEF.\n\"Master one principle, and the path to all others shall open to you.\"",
                 "data": {
                     "Skill DMG": {
@@ -7640,54 +7640,54 @@
         "passiveSkills": [
             {
                 "name": "Brocaded Collar's Beauteous Silhouette",
-                "image": "https://genshin.honeyhunterworld.com/img/p_942301.webp",
+                "image": "https://api.ambr.top/assets/UI/UI_Talent_S_Chiori_05.png",
                 "description": "When any party member is wearing an outfit apart from their default outfit, or is wearing a wind glider other than the Wings of First Flight, your party members will obtain the Swift Stride effect: Movement SPD is increased by 10%.\nThis effect does not take effect in Domains, Trounce Domains, and the Spiral Abyss. Swift Stride does not stack."
             },
             {
                 "name": "Tailor-Made",
-                "image": "https://genshin.honeyhunterworld.com/img/p_942101.webp",
+                "image": "https://api.ambr.top/assets/UI/UI_Talent_S_Chiori_06.png",
                 "description": "Gain different effects depending on the next action you take within a short duration after using\nFluttering Hasode\n's upward sweep. If you Press the Elemental Skill, you will trigger the Tapestry effect. If you Press your Normal Attack, the Tailoring effect will be triggered instead.\nTapestry\n\u00b7 Switches to the next character in your roster.\n\u00b7 Grants all your party members \"Seize the Moment\": When your active party member's Normal Attacks, Charged Attacks, and Plunging Attacks hit a nearby opponent, \"Tamoto\" will execute a coordinated attack, dealing 100% of Fluttering Hasode's upward sweep DMG as\nAoE Geo DMG\nat the opponent's location. DMG dealt this way is considered Elemental Skill DMG.\n\u00b7 \"Seize the Moment\" lasts 8s, and 1 of \"Tamoto\"'s coordinated attack can be unleashed every 2s. 2 such coordinated attacks can occur per \"Seize the Moment\" effect duration.\nTailoring\n\u00b7 Chiori gains\nGeo infusion\nfor 5s.\nWhen on the field, if Chiori does not either Press her Elemental Skill or use a Normal Attack within a short time after using Fluttering Hasode's upward sweep, the Tailoring effect will be triggered by default."
             },
             {
                 "name": "The Finishing Touch",
-                "image": "https://genshin.honeyhunterworld.com/img/p_942201.webp",
+                "image": "https://api.ambr.top/assets/UI/UI_Talent_S_Chiori_07.png",
                 "description": "When a nearby party member creates a\nGeo Construct\n, Chiori will gain 20%\nGeo DMG Bonus\nfor 20s."
             }
         ],
         "constellations": [
             {
                 "name": "Six Paths of Sage Silkcraft",
-                "image": "https://genshin.honeyhunterworld.com/img/c_941.webp",
+                "image": "https://api.ambr.top/assets/UI/UI_Talent_S_Chiori_01.png",
                 "description": "The AoE of the automaton doll \"Tamoto\" summoned by\nFluttering Hasode\nis increased by 50%.\nAdditionally, if there is a\nGeo\nparty member other than Chiori, Fluttering Hasode will trigger the following after the dash is completed:\n\u00b7 Summon an additional Tamoto. Only one additional Tamoto can exist at the same time, whether summoned by Chiori this way or through the presence of a Geo Construct.\n\u00b7 Triggers the Passive Talent \"The Finishing Touch.\" This effect requires you to first unlock the Passive Talent \"The Finishing Touch.\"",
                 "level": 1
             },
             {
                 "name": "In Five Colors Dyed",
-                "image": "https://genshin.honeyhunterworld.com/img/c_942.webp",
+                "image": "https://api.ambr.top/assets/UI/UI_Talent_S_Chiori_03.png",
                 "description": "For 10s after using\nHiyoku: Twin Blades\n, a simplified automaton doll, \"Kinu,\" will be summoned next to your active character every 3s. Kinu will attack nearby opponents, dealing\nAoE Geo DMG\nequivalent to 170% of Tamoto's DMG. DMG dealt this way is considered Elemental Skill DMG.\nKinu will leave the field after 1 attack or after lasting 3s.",
                 "level": 2
             },
             {
                 "name": "Four Brocade Embellishments",
-                "image": "https://genshin.honeyhunterworld.com/img/c_943.webp",
+                "image": "https://api.ambr.top/assets/UI/UI_Talent_U_Chiori_01.png",
                 "description": "Increases the Level of\nFluttering Hasode\nby 3.\nMaximum upgrade level is 15.",
                 "level": 3
             },
             {
                 "name": "A Tailor's Three Courtesies",
-                "image": "https://genshin.honeyhunterworld.com/img/c_944.webp",
+                "image": "https://api.ambr.top/assets/UI/UI_Talent_S_Chiori_02.png",
                 "description": "For 8s after triggering either follow-up effect of the Passive Talent \"Tailor-Made,\" when your current active character's Normal, Charged, or Plunging Attacks hit a nearby opponent, a simplified automaton doll, \"Kinu,\" will be summoned near this opponent. You can summon 1 Kinu every 1s in this way, and up to 3 Kinu may be summoned this way during each instance of \"Tailor-Made\"'s Seize the Moment or Tailoring effect. The above effect can be triggered up to once every 15s.\nMust unlock the Passive Talent \"Tailor-Made\" first.",
                 "level": 4
             },
             {
                 "name": "Two Silken Plumules",
-                "image": "https://genshin.honeyhunterworld.com/img/c_945.webp",
+                "image": "https://api.ambr.top/assets/UI/UI_Talent_U_Chiori_02.png",
                 "description": "Increases the Level of\nHiyoku: Twin Blades\nby 3.\nMaximum upgrade level is 15.",
                 "level": 5
             },
             {
                 "name": "Sole Principle Pursuit",
-                "image": "https://genshin.honeyhunterworld.com/img/c_946.webp",
+                "image": "https://api.ambr.top/assets/UI/UI_Talent_S_Chiori_04.png",
                 "description": "After triggering a follow-up effect of the Passive Talent \"Tailor-Made,\" Chiori's own\nFluttering Hasode\n's CD is decreased by 12s. Must unlock the Passive \"Tailor-Made\" first.\nIn addition, the DMG dealt by Chiori's own Normal Attacks is increased by an amount equal to 235% of her own DEF.",
                 "level": 6
             }
@@ -14613,7 +14613,7 @@
     },
     "Gaming": {
         "name": "Gaming",
-        "icon": "/images/characters/gaming.png",
+        "icon": "https://api.ambr.top/assets/UI/UI_AvatarIcon_Gaming.png",
         "weapon": "Claymore",
         "vision": "Pyro",
         "rarity": 4,
@@ -14736,7 +14736,7 @@
         "talents": [
             {
                 "name": "Normal Attack: Stellar Rend",
-                "image": "https://genshin.honeyhunterworld.com/img/s_923101.webp",
+                "image": "https://api.ambr.top/assets/UI/Skill_A_04.png",
                 "description": "Normal Attack\nPerforms up to 4 consecutive strikes.\nCharged Attack\nDrains Stamina over time to perform continuous spinning attacks against all nearby opponents.\nAt the end of the sequence, performs a more powerful slash.\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.",
                 "data": {
                     "1-Hit DMG": {
@@ -14930,7 +14930,7 @@
             },
             {
                 "name": "Bestial Ascent",
-                "image": "https://genshin.honeyhunterworld.com/img/s_923201.webp",
+                "image": "https://api.ambr.top/assets/UI/Skill_S_Gaming_01.png",
                 "description": "Pounces forward using the Wushou arts, leaping high into the air after coming into contact with a target or surface.\nAfter Gaming has used Bestial Ascent to rise into the air, if he immediately uses a Plunging Attack, he will use the especially powerful Plunging Attack: Charmed Cloudstrider instead.\nPlunging Attack: Charmed Cloudstrider\nThe DMG from Plunging Attacks caused by Bestial Ascent is converted to\nPyro DMG\nthat cannot be overridden by other elemental infusions. Upon landing, Gaming will consume a fixed amount of HP. Gaming's HP cannot be reduced below 10% by this method.\nCharmed Cloudstrider DMG is considered Plunging Attack DMG.\n\"Auspicious beasts leap high to pluck the greens \u2014 that symbolizes good fortune and knowing how to make some serious green, y'know \u2014 so may we all rise to new heights, one step at a time!\"",
                 "data": {
                     "Plunging Attack: Charmed Cloudstrider DMG": {
@@ -14988,7 +14988,7 @@
             },
             {
                 "name": "Suanni's Gilded Dance",
-                "image": "https://genshin.honeyhunterworld.com/img/s_923901.webp",
+                "image": "https://api.ambr.top/assets/UI/Skill_E_Gaming_01.png",
                 "description": "Gaming enters Wushou Stance, briefly applying\nPyro\nto him, recovering a fixed amount of HP, and summons his companion, the Suanni Man Chai, to smash into his target, dealing\nAoE Pyro DMG\n.\nAfter bashing its target, Man Chai will roll to a nearby location before moving towards Gaming. When it links up with Gaming, Man Chai will leave the field and reset the CD for Gaming's Elemental Skill, Bestial Ascent.\nWhile Wushou Stance is active, his resistance to interruption is increased, and when Gaming lands with Charmed Cloudstrider attack or completes the forward pounce attack from Bestial Ascent with over 50% HP, he will summon Man Chai again.\nEach Gaming can only have 1 Man Chai on the field simultaneously.\nThis effect will be canceled once Gaming leaves the field.\n\"The gilded Suanni spits out fortune like a fireworks show! Hey, now that's what's called prosperity, when business is really 'booming'!\"",
                 "data": {
                     "Suanni Man Chai Smash DMG": {
@@ -15082,54 +15082,54 @@
         "passiveSkills": [
             {
                 "name": "The Striding Beast",
-                "image": "https://genshin.honeyhunterworld.com/img/p_922301.webp",
+                "image": "https://api.ambr.top/assets/UI/UI_Talent_S_Gaming_05.png",
                 "description": "During the day (06:00 \u2013 18:00), your party members gain the Swift Stride effect: Movement SPD increased by 10%.\nDoes not take effect in Domains, Trounce Domains, or Spiral Abyss. Swift Stride does not stack."
             },
             {
                 "name": "Dance of Amity",
-                "image": "https://genshin.honeyhunterworld.com/img/p_922101.webp",
+                "image": "https://api.ambr.top/assets/UI/UI_Talent_S_Gaming_06.png",
                 "description": "After\nBestial Ascent\n's Plunging Attack: Charmed Cloudstrider hits an opponent, Gaming will regain 1.5% of his Max HP once every 0.2s for 0.8s."
             },
             {
                 "name": "Air of Prosperity",
-                "image": "https://genshin.honeyhunterworld.com/img/p_922201.webp",
+                "image": "https://api.ambr.top/assets/UI/UI_Talent_S_Dehya_07.png",
                 "description": "When Gaming has less than 50% HP, he will receive a 20% Incoming Healing Bonus. When Gaming has 50% HP or more, Plunging Attack: Charmed Cloudstrider will deal 20% more DMG."
             }
         ],
         "constellations": [
             {
                 "name": "Bringer of Blessing",
-                "image": "https://genshin.honeyhunterworld.com/img/c_921.webp",
+                "image": "https://api.ambr.top/assets/UI/UI_Talent_S_Gaming_01.png",
                 "description": "When the Suanni Man Chai from\nSuanni's Gilded Dance\nmeets back up with Gaming, it will heal 15% of Gaming's HP.",
                 "level": 1
             },
             {
                 "name": "Plum Blossoms Underfoot",
-                "image": "https://genshin.honeyhunterworld.com/img/c_922.webp",
+                "image": "https://api.ambr.top/assets/UI/UI_Talent_S_Gaming_02.png",
                 "description": "When Gaming receives healing and this instance of healing overflows, his ATK will be increased by 20% for 5s.",
                 "level": 2
             },
             {
                 "name": "Awakening Spirit",
-                "image": "https://genshin.honeyhunterworld.com/img/c_923.webp",
+                "image": "https://api.ambr.top/assets/UI/UI_Talent_U_Gaming_01.png",
                 "description": "Increases the Level of\nBestial Ascent\nby 3.\nMaximum upgrade level is 15.",
                 "level": 3
             },
             {
                 "name": "Soar Across Mountains",
-                "image": "https://genshin.honeyhunterworld.com/img/c_924.webp",
+                "image": "https://api.ambr.top/assets/UI/UI_Talent_S_Gaming_03.png",
                 "description": "When\nBestial Ascent\n's Plunging Attack: Charmed Cloudstrider hits an opponent, it will restore 2 Energy to Gaming. This effect can be triggered once every 0.2s.",
                 "level": 4
             },
             {
                 "name": "Evil-Daunting Roar",
-                "image": "https://genshin.honeyhunterworld.com/img/c_925.webp",
+                "image": "https://api.ambr.top/assets/UI/UI_Talent_U_Gaming_02.png",
                 "description": "Increases the Level of\nSuanni's Gilded Dance\nby 3.\nMaximum upgrade level is 15.",
                 "level": 5
             },
             {
                 "name": "To Tame All Beasts",
-                "image": "https://genshin.honeyhunterworld.com/img/c_926.webp",
+                "image": "https://api.ambr.top/assets/UI/UI_Talent_S_Gaming_04.png",
                 "description": "Bestial Ascent\n's Plunging Attack: Charmed Cloudstrider CRIT Rate increased by 20% and CRIT DMG increased by 40%, and its attack radius will be increased.",
                 "level": 6
             }
@@ -18368,7 +18368,7 @@
     },
     "Kamisato Ayaka": {
         "name": "Kamisato Ayaka",
-        "icon": "/images/characters/kamisato-ayaka.png",
+        "icon": "https://api.ambr.top/assets/UI/UI_AvatarIcon_Ayaka.png",
         "weapon": "Sword",
         "vision": "Cryo",
         "rarity": 5,
@@ -18491,7 +18491,7 @@
         "talents": [
             {
                 "name": "Normal Attack: Kamisato Art - Kabuki",
-                "image": "https://genshin.honeyhunterworld.com/img/s_23101.webp",
+                "image": "https://api.ambr.top/assets/UI/Skill_A_01.png",
                 "description": "Normal Attack\nPerforms up to 5 rapid strikes.\nCharged Attack\nConsumes a certain amount of Stamina to unleash a flurry of sword ki.\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging enemies along the path and dealing AoE DMG upon impact.",
                 "data": {
                     "1-Hit DMG": {
@@ -18585,7 +18585,7 @@
                         "Lv3": "192.30%",
                         "Lv4": "211.53%",
                         "Lv5": "225.00%",
-                        "Lv6": "240.36%",
+                        "Lv6": "240.39%",
                         "Lv7": "261.54%",
                         "Lv8": "282.69%",
                         "Lv9": "303.84%",
@@ -18668,7 +18668,7 @@
             },
             {
                 "name": "Kamisato Art: Hyouka",
-                "image": "https://genshin.honeyhunterworld.com/img/s_23201.webp",
+                "image": "https://api.ambr.top/assets/UI/Skill_S_Ayaka_01.png",
                 "description": "Summons blooming ice to launch nearby opponents, dealing\nAoE Cryo DMG\n.\n\"Clouds shroud the moonlit night. Longing descends like a fog, filling the one detained with wanderlust.\"",
                 "data": {
                     "Skill DMG": {
@@ -18709,14 +18709,14 @@
             },
             {
                 "name": "Kamisato Art: Soumetsu",
-                "image": "https://genshin.honeyhunterworld.com/img/s_23901.webp",
+                "image": "https://api.ambr.top/assets/UI/Skill_E_Ayaka.png",
                 "description": "Summons forth a snowstorm with flawless poise, unleashing a Frostflake Seki no To that moves forward continuously.\nFrostflake Seki no To\n\u00b7A storm of whirling icy winds that slashes repeatedly at every enemy it touches, dealing\nCryo DMG\n.\n\u00b7The snowstorm explodes after its duration ends, dealing\nAoE Cryo DMG\n.\n\"The blizzard veils the heron's thoughts, pity heavy in its heart.\"",
                 "data": {
                     "Cutting DMG": {
                         "Lv1": "112.3%",
                         "Lv2": "120.72%",
                         "Lv3": "129.15%",
-                        "Lv4": "140.37%",
+                        "Lv4": "140.38%",
                         "Lv5": "148.8%",
                         "Lv6": "157.22%",
                         "Lv7": "168.45%",
@@ -18803,54 +18803,54 @@
         "passiveSkills": [
             {
                 "name": "Fruits of Shinsa",
-                "image": "https://genshin.honeyhunterworld.com/img/p_22301.webp",
+                "image": "https://api.ambr.top/assets/UI/UI_Talent_S_Ayaka_05.png",
                 "description": "When Ayaka crafts Weapon Ascension Materials, she has a 10% chance to receive double the product."
             },
             {
                 "name": "Amatsumi Kunitsumi Sanctification",
-                "image": "https://genshin.honeyhunterworld.com/img/p_22101.webp",
+                "image": "https://api.ambr.top/assets/UI/UI_Talent_S_Ayaka_06.png",
                 "description": "After using\nKamisato Art: Hyouka\n, Kamisato Ayaka's Normal and Charged Attacks deal 30% increased DMG for 6s."
             },
             {
                 "name": "Kanten Senmyou Blessing",
-                "image": "https://genshin.honeyhunterworld.com/img/p_22201.webp",
+                "image": "https://api.ambr.top/assets/UI/UI_Talent_Combine_Weapon_Double.png",
                 "description": "When the Cryo application at the end of\nKamisato Art: Senho\nhits an opponent, Kamisato Ayaka gains the following effects:\n\u00b7Restores 10 Stamina\n\u00b7Gains 18%\nCryo DMG Bonus\nfor 10s."
             }
         ],
         "constellations": [
             {
                 "name": "Snowswept Sakura",
-                "image": "https://genshin.honeyhunterworld.com/img/c_21.webp",
+                "image": "https://api.ambr.top/assets/UI/UI_Talent_S_Ayaka_01.png",
                 "description": "When Kamisato Ayaka's Normal or Charged Attacks deal\nCryo DMG\nto opponents, it has a 50% chance of decreasing the CD of\nKamisato Art: Hyouka\nby 0.3s. This effect can occur once every 0.1s.",
                 "level": 1
             },
             {
                 "name": "Blizzard Blade Seki no To",
-                "image": "https://genshin.honeyhunterworld.com/img/c_22.webp",
+                "image": "https://api.ambr.top/assets/UI/UI_Talent_S_Ayaka_02.png",
                 "description": "When casting\nKamisato Art: Soumetsu\n, unleashes 2 smaller additional Frostflake Seki no To, each dealing 20% of the original storm's DMG.",
                 "level": 2
             },
             {
                 "name": "Frostbloom Kamifubuki",
-                "image": "https://genshin.honeyhunterworld.com/img/c_23.webp",
+                "image": "https://api.ambr.top/assets/UI/UI_Talent_U_Ayaka_02.png",
                 "description": "Increases the Level of\nKamisato Art: Soumetsu\nby 3.\nMaximum upgrade level is 15.",
                 "level": 3
             },
             {
                 "name": "Ebb and Flow",
-                "image": "https://genshin.honeyhunterworld.com/img/c_24.webp",
+                "image": "https://api.ambr.top/assets/UI/UI_Talent_S_Ayaka_03.png",
                 "description": "Opponents damaged by\nKamisato Art: Soumetsu\n's Frostflake Seki no To will have their DEF decreased by 30% for 6s.",
                 "level": 4
             },
             {
                 "name": "Blossom Cloud Irutsuki",
-                "image": "https://genshin.honeyhunterworld.com/img/c_25.webp",
+                "image": "https://api.ambr.top/assets/UI/UI_Talent_U_Ayaka_01.png",
                 "description": "Increases the Level of\nKamisato Art: Hyouka\nby 3.\nMaximum upgrade level is 15.",
                 "level": 5
             },
             {
                 "name": "Dance of Suigetsu",
-                "image": "https://genshin.honeyhunterworld.com/img/c_26.webp",
+                "image": "https://api.ambr.top/assets/UI/UI_Talent_S_Ayaka_04.png",
                 "description": "Kamisato Ayaka gains Usurahi Butou every 10s, increasing her Charged Attack DMG by 298%. This buff will be cleared 0.5s after Ayaka's Charged ATK hits an opponent, after which the timer for this ability will restart.",
                 "level": 6
             }
@@ -25385,7 +25385,7 @@
     },
     "Mona": {
         "name": "Mona",
-        "icon": "/images/characters/mona.png",
+        "icon": "https://api.ambr.top/assets/UI/UI_AvatarIcon_Mona.png",
         "weapon": "Catalyst",
         "vision": "Hydro",
         "rarity": 5,
@@ -25636,7 +25636,7 @@
                         "Lv3": "132.13%",
                         "Lv4": "145.35%",
                         "Lv5": "154.59%",
-                        "Lv6": "165.16%",
+                        "Lv6": "165.17%",
                         "Lv7": "179.7%",
                         "Lv8": "194.23%",
                         "Lv9": "208.77%",
@@ -25888,8 +25888,7 @@
                 "description": "Upon entering\nIllusory Torrent\n, Mona gains a 60% increase to the DMG of her next Charged Attack per second of movement.\nA maximum DMG Bonus of 180% can be achieved in this manner. The effect lasts for no more than 8s.",
                 "level": 6
             }
-        ],
-        "implemented": true
+        ]
     },
     "Nahida": {
         "name": "Nahida",
@@ -40878,7 +40877,7 @@
     },
     "Xianyun": {
         "name": "Xianyun",
-        "icon": "/images/characters/xianyun.png",
+        "icon": "https://api.ambr.top/assets/UI/UI_AvatarIcon_Liuyun.png",
         "weapon": "Catalyst",
         "vision": "Anemo",
         "rarity": 5,
@@ -41001,7 +41000,7 @@
         "talents": [
             {
                 "name": "Normal Attack: Word of Wind and Flower",
-                "image": "https://genshin.honeyhunterworld.com/img/s_933101.webp",
+                "image": "https://api.ambr.top/assets/UI/Skill_A_Catalyst_MD.png",
                 "description": "Normal Attack\nSummons swirling winds to perform up to 4 attacks, dealing\nAnemo DMG\n.\nCharged Attack\nConsumes a certain amount of Stamina and launches a Breeze Bolt in a straight line that deals\nAnemo DMG\nto opponents along its path.\nPlunging Attack\nGathers the power of Anemo and plunges towards the ground from mid-air, damaging all opponents in her path. Deals\nAoE Anemo DMG\nupon impact with the ground.",
                 "data": {
                     "1-Hit DMG": {
@@ -41161,7 +41160,7 @@
             },
             {
                 "name": "White Clouds at Dawn",
-                "image": "https://genshin.honeyhunterworld.com/img/s_933201.webp",
+                "image": "https://api.ambr.top/assets/UI/Skill_S_Liuyun_01.png",
                 "description": "Xianyun enters the Cloud Transmogrification state, in which she will not take Fall DMG, and uses Skyladder once.\nIn this state, her Plunging Attack will be converted into Driftcloud Wave instead, which deals\nAoE Anemo DMG\nand ends the Cloud Transmogrification state. This DMG is considered Plunging Attack DMG.\nEach use of Skyladder while in this state increases the DMG and AoE of the next Driftcloud Wave used.\nSkyladder\nCan be used while in mid-air. Xianyun leaps forward, dealing\nAnemo DMG\nto targets along her path.\nDuring each Cloud Transmogrification state Xianyun enters, Skyladder may be used up to 3 times and only 1 instance of Skyladder DMG can be dealt to any one opponent.\nIf Skyladder is not used again in a short period, the Cloud Transmogrification state will be canceled.\nIf Xianyun does not use Driftcloud Wave while in this state, the next CD of White Clouds at Dawn will be decreased by 3s.\nDo not shake Cloud Retainer's hand too tightly; cranes are quite adept at gripping.",
                 "data": {
                     "Skill DMG": {
@@ -41219,7 +41218,7 @@
             },
             {
                 "name": "Stars Gather at Dusk",
-                "image": "https://genshin.honeyhunterworld.com/img/s_933901.webp",
+                "image": "https://api.ambr.top/assets/UI/Skill_E_Liuyun_01.png",
                 "description": "Brings forth a sacred breeze that deals\nAoE Anemo DMG\nand heals all nearby characters based on Xianyun's ATK. It will also summon the \"Starwicker\" mechanism.\nStarwicker\n\u00b7Continuously follows the active character and periodically heals all nearby party members based on Xianyun's ATK.\n\u00b7Starts with 8 stacks of Adeptal Assistance. While Adeptal Assistance is active, nearby active characters in the party will have their jump height increased.\n\u00b7When the active character completes a Plunging Attack, Starwicker will consume 1 stack of Adeptal Assistance and deal\nAoE Anemo DMG\n.\nOnly 1 Starwicker can exist simultaneously.\nThis is the newest invention in the \"Lunastar Artifices\" series, of which previous creations include the Supreme Cuisine Machine, the Snowdrift Mechanism, the Supreme Housekeeping Machine, the Floating Toting Device, and the Bloom Pruner. This series was intended for young humans Cloud Retainer held in great esteem, and so was not designed with a certain half-adeptus in mind. However, when offered Starwicker, a certain female disciple of hers had these emotionless words to say: \"No thank you.\"\nCloud Retainer thus had no choice but to keep it herself.",
                 "data": {
                     "Skill DMG": {
@@ -41347,54 +41346,54 @@
         "passiveSkills": [
             {
                 "name": "Crane Form",
-                "image": "https://genshin.honeyhunterworld.com/img/p_932301.webp",
+                "image": "https://api.ambr.top/assets/UI/UI_Talent_S_Liuyun_05.png",
                 "description": "Increases gliding SPD for your own party members by 15%.\nNot stackable with Passive Talents that provide the exact same effects."
             },
             {
                 "name": "Galefeather Pursuit",
-                "image": "https://genshin.honeyhunterworld.com/img/p_932101.webp",
+                "image": "https://api.ambr.top/assets/UI/UI_Talent_S_Liuyun_06.png",
                 "description": "Each opponent hit by Driftcloud Waves from\nWhite Clouds at Dawn\nwill grant all nearby party members 1 stack of Storm Pinion for 20s. Max 4 stacks. These will cause the characters' Plunging Attack CRIT Rate to increase by 4%/6%/8%/10% respectively.\nEach Storm Pinion created by hitting an opponent has an independent duration."
             },
             {
                 "name": "Consider, the Adeptus in Her Realm",
-                "image": "https://genshin.honeyhunterworld.com/img/p_932201.webp",
+                "image": "https://api.ambr.top/assets/UI/UI_Talent_S_Liuyun_07.png",
                 "description": "When the Starwicker created by\nStars Gather at Dusk\nhas Adeptal Assistance stacks, nearby active characters' Plunging Attack shockwave DMG will be increased by 200% of Xianyun's ATK. The maximum DMG increase that can be achieved this way is 9,000.\nEach Plunging Attack shockwave DMG instance can only apply this increased DMG effect to a single opponent. Each character can trigger this effect once every 0.4s."
             }
         ],
         "constellations": [
             {
                 "name": "Purifying Wind",
-                "image": "https://genshin.honeyhunterworld.com/img/c_931.webp",
+                "image": "https://api.ambr.top/assets/UI/UI_Talent_S_Liuyun_01.png",
                 "description": "White Clouds at Dawn\ngains 1 additional charge.",
                 "level": 1
             },
             {
                 "name": "Aloof From the World",
-                "image": "https://genshin.honeyhunterworld.com/img/c_932.webp",
+                "image": "https://api.ambr.top/assets/UI/UI_Talent_S_Liuyun_02.png",
                 "description": "After using a Skyladder from\nWhite Clouds at Dawn\n, Xianyun's ATK will be increased by 20% for 15s.\nAdditionally, the effects of the Passive Talent \"Consider, the Adeptus in Her Realm\" will be enhanced: When the Starwicker created by\nStars Gather at Dusk\nhas Adeptal Assistance stacks, nearby active characters' Plunging Attack shockwave DMG will be increased by 400% of Xianyun's ATK. The maximum DMG increase that can be achieved this way is 18,000.\nEach Plunging Attack shockwave DMG instance can only apply this increased DMG effect to a single opponent. Each character can trigger this effect once every 0.4s.\nYou must first unlock the Passive Talent \"Consider, the Adeptus in Her Realm.\"",
                 "level": 2
             },
             {
                 "name": "Creations of Star and Moon",
-                "image": "https://genshin.honeyhunterworld.com/img/c_933.webp",
+                "image": "https://api.ambr.top/assets/UI/UI_Talent_U_Liuyun_02.png",
                 "description": "Increases the Level of\nStars Gather at Dusk\nby 3.\nMaximum upgrade level is 15.",
                 "level": 3
             },
             {
                 "name": "Mystery Millet Gourmet",
-                "image": "https://genshin.honeyhunterworld.com/img/c_934.webp",
+                "image": "https://api.ambr.top/assets/UI/UI_Talent_S_Liuyun_03.png",
                 "description": "After using Skyladder 1/2/3 times during one\nWhite Clouds at Dawn\nCloud Transmogrification state, when a Driftcloud Wave unleashed during that instance hits an opponent, it will heal all nearby party members for 50%/80%/150% of Xianyun's ATK. This effect can be triggered once every 5s.",
                 "level": 4
             },
             {
                 "name": "Astride Rose-Colored Clouds",
-                "image": "https://genshin.honeyhunterworld.com/img/c_935.webp",
+                "image": "https://api.ambr.top/assets/UI/UI_Talent_U_Liuyun_01.png",
                 "description": "Increases the Level of\nWhite Clouds at Dawn\nby 3.\nMaximum upgrade level is 15.",
                 "level": 5
             },
             {
                 "name": "They Call Her Cloud Retainer",
-                "image": "https://genshin.honeyhunterworld.com/img/c_936.webp",
+                "image": "https://api.ambr.top/assets/UI/UI_Talent_S_Liuyun_04.png",
                 "description": "After Xianyun uses 1/2/3 Skyladders within one Cloud Transmogrification caused by\nWhite Clouds at Dawn\n, the CRIT DMG of a Driftcloud Wave created in this instance of Cloud Transmogrification will be increased by 15%/35%/70%.\nWithin 16s after Xianyun has used\nStars Gather at Dusk\n, White Clouds at Dawn will not enter CD. This effect will be canceled once she has used White Clouds at Dawn 8 times.",
                 "level": 6
             }

@@ -9,13 +9,6 @@ interface TalentSelectProps {
 }
 
 const TalentSelect = ({ characterState, setTalentLevels }: TalentSelectProps) => {
-    //TODO: this is scuffed
-    const skillIcons = [
-        `/images/normal-attacks/${kebabCase(characterState.character.weapon)}.png`,
-        `/images/characters/${kebabCase(characterState.character.name)}-skill.png`,
-        `/images/characters/${kebabCase(characterState.character.name)}-burst.png`,
-    ]
-
     return (
         <div className="ml-4 mt-4 flex flex-row flex-wrap justify-center gap-2 md:mt-0 md:flex-col md:justify-end">
             {characterState.character.talents.map((talent, index) => {
@@ -30,7 +23,7 @@ const TalentSelect = ({ characterState, setTalentLevels }: TalentSelectProps) =>
                     >
                         <div className="flex h-9 w-9 min-w-min flex-none items-center justify-center">
                             <Image
-                                src={skillIcons[index]}
+                                src={talent.image}
                                 alt={talent.name}
                                 width={36}
                                 height={36}

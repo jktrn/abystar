@@ -155,9 +155,9 @@ const talentScalings: TalentScaling = {
         'Skill DMG': {
             formulaType: FormulaType.DamageFormula,
             attribute: ['ATK'],
-            additiveBonusStat: ["Elemental Burst Additive Bonus"],
+            additiveBonusStat: ['Elemental Burst Additive Bonus'],
             multiplicativeBonusStat: [
-                "Electro DMG Bonus",
+                'Electro DMG Bonus',
                 'Elemental Burst DMG Bonus',
             ],
             damageType: DamageType.Electro,
@@ -165,9 +165,9 @@ const talentScalings: TalentScaling = {
         'Consecutive Slash DMG': {
             formulaType: FormulaType.DamageFormula,
             attribute: ['ATK'],
-            additiveBonusStat: ["Elemental Burst Additive Bonus"],
+            additiveBonusStat: ['Elemental Burst Additive Bonus'],
             multiplicativeBonusStat: [
-                "Electro DMG Bonus",
+                'Electro DMG Bonus',
                 'Elemental Burst DMG Bonus',
             ],
             damageType: DamageType.Electro,
@@ -175,9 +175,9 @@ const talentScalings: TalentScaling = {
         'Last Attack DMG': {
             formulaType: FormulaType.DamageFormula,
             attribute: ['ATK'],
-            additiveBonusStat: ["Elemental Burst Additive Bonus"],
+            additiveBonusStat: ['Elemental Burst Additive Bonus'],
             multiplicativeBonusStat: [
-                "Electro DMG Bonus",
+                'Electro DMG Bonus',
                 'Elemental Burst DMG Bonus',
             ],
             damageType: DamageType.Electro,
@@ -191,7 +191,7 @@ const talentScalings: TalentScaling = {
             formulaType: FormulaType.GenericFormulaWithoutScaling,
             outputType: FormulaOutputType.Generic,
         },
-    }
+    },
 }
 
 const characterBonuses: Bonus[] = [
@@ -199,8 +199,10 @@ const characterBonuses: Bonus[] = [
         name: 'Thundering Penance',
         description: (
             <span>
-                After recasting Stellar Restoration while a Lightning Stiletto is present, Keqing&apos;s weapon deals <span style={{ color: '#8c729a' }}>Electro DMG</span> for
-                {' '}<span style={{ color: '#ddd' }}>5s</span>.
+                After recasting Stellar Restoration while a Lightning Stiletto is
+                present, Keqing&apos;s weapon deals{' '}
+                <span style={{ color: '#8c729a' }}>Electro DMG</span> for{' '}
+                <span style={{ color: '#ddd' }}>5s</span>.
             </span>
         ),
         icon: '/images/characters/keqing-passive1.png',
@@ -232,9 +234,10 @@ const characterBonuses: Bonus[] = [
         name: 'Aristocratic Dignity',
         description: (
             <span>
-                When casting Starward Sword, Keqing&apos;s CRIT Rate is increased by <span style={{ color: '#ddd' }}>15%</span>, 
-                and her Energy Recharge is increased by <span style={{ color: '#ddd' }}>15%</span>. 
-                This effect lasts for <span style={{ color: '#ddd' }}>8s</span>.
+                When casting Starward Sword, Keqing&apos;s CRIT Rate is increased by{' '}
+                <span style={{ color: '#ddd' }}>15%</span>, and her Energy Recharge
+                is increased by <span style={{ color: '#ddd' }}>15%</span>. This
+                effect lasts for <span style={{ color: '#ddd' }}>8s</span>.
             </span>
         ),
         icon: '/images/characters/keqing-passive2.png',
@@ -256,8 +259,9 @@ const constellationBonuses: Bonus[] = [
         name: 'Thundering Might',
         description: (
             <span>
-                Recasting Stellar Restoration while a Lightning Stiletto is present causes Keqing to deal 
-                {' '}<span style={{ color: '#ddd' }}>50%</span> of her ATK as AoE <span style={{ color: '#8c729a' }}>Electro DMG</span>.
+                Recasting Stellar Restoration while a Lightning Stiletto is present
+                causes Keqing to deal <span style={{ color: '#ddd' }}>50%</span> of
+                her ATK as AoE <span style={{ color: '#8c729a' }}>Electro DMG</span>.
             </span>
         ),
         icon: '/images/characters/keqing-constellation1.png',
@@ -268,7 +272,8 @@ const constellationBonuses: Bonus[] = [
         affectsTalentIndex: 0,
         applyToTalentScaling: (talentScaling) => {
             if (talentScaling['Stellar Restoration']['Thundering Might'])
-                talentScaling['Stellar Restoration']['Thundering Might'].damageType = DamageType.Electro
+                talentScaling['Stellar Restoration']['Thundering Might'].damageType =
+                    DamageType.Electro
         },
         origin: 'C1',
         minConstellation: 1,
@@ -278,9 +283,10 @@ const constellationBonuses: Bonus[] = [
         name: 'Keen Extraction',
         description: (
             <span>
-                When Keqing&apos;s Normal and Charged Attacks hit opponents affected by Electro, 
-                they have a <span style={{ color: '#ddd' }}>50%</span> chance of producing an Elemental Particle. 
-                This effect can only occur once every <span style={{ color: '#ddd' }}>5s</span>.
+                When Keqing&apos;s Normal and Charged Attacks hit opponents affected
+                by Electro, they have a <span style={{ color: '#ddd' }}>50%</span>{' '}
+                chance of producing an Elemental Particle. This effect can only occur
+                once every <span style={{ color: '#ddd' }}>5s</span>.
             </span>
         ),
         icon: '/images/characters/keqing-constellation2.png',
@@ -321,8 +327,12 @@ const constellationBonuses: Bonus[] = [
         name: 'Attunement',
         description: (
             <span>
-                For <span style={{ color: '#ddd' }}>10s</span> after Keqing triggers an <span style={{ color: '#8c729a' }}>Electro-related Elemental Reaction</span>, 
-                her ATK is increased by <span style={{ color: '#ddd' }}>25%</span>.
+                For <span style={{ color: '#ddd' }}>10s</span> after Keqing triggers
+                an{' '}
+                <span style={{ color: '#8c729a' }}>
+                    Electro-related Elemental Reaction
+                </span>
+                , her ATK is increased by <span style={{ color: '#ddd' }}>25%</span>.
             </span>
         ),
         icon: '/images/characters/keqing-constellation4.png',
@@ -335,7 +345,7 @@ const constellationBonuses: Bonus[] = [
         },
         origin: 'C4',
         minConstellation: 4,
-        priority: 1
+        priority: 1,
     },
     {
         name: 'Beckoning Stars',
@@ -366,9 +376,11 @@ const constellationBonuses: Bonus[] = [
         name: 'Tenacious Star',
         description: (
             <span>
-                When initiating a Normal Attack, a Charged Attack, Elemental Skill or Elemental Burst, 
-                Keqing gains a <span style={{ color: '#ddd' }}>6/12/18/24%</span> 
-                {' '}<span style={{ color: '#8c729a' }}>Electro DMG Bonus</span> for <span style={{ color: '#ddd' }}>8s</span>.
+                When initiating a Normal Attack, a Charged Attack, Elemental Skill or
+                Elemental Burst, Keqing gains a{' '}
+                <span style={{ color: '#ddd' }}>6/12/18/24%</span>{' '}
+                <span style={{ color: '#8c729a' }}>Electro DMG Bonus</span> for{' '}
+                <span style={{ color: '#ddd' }}>8s</span>.
             </span>
         ),
         icon: '/images/characters/keqing-constellation6.png',
@@ -379,7 +391,9 @@ const constellationBonuses: Bonus[] = [
 
             const newAttributes = {
                 ...attributes,
-                'Electro DMG Bonus': attributes['Electro DMG Bonus'] + elementalDamageBonus[currentStacks - 1],
+                'Electro DMG Bonus':
+                    attributes['Electro DMG Bonus'] +
+                    elementalDamageBonus[currentStacks - 1],
             }
             return { attributes: newAttributes }
         },
@@ -387,7 +401,7 @@ const constellationBonuses: Bonus[] = [
         stackOptions: ['None', '1 Stack', '2 Stacks', '3 Stacks', '4 Stacks'],
         origin: 'C6',
         minConstellation: 6,
-        priority: 1
+        priority: 1,
     },
 ]
 
