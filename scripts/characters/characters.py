@@ -1,18 +1,71 @@
 import requests
 from bs4 import BeautifulSoup
 import json
-from tqdm import tqdm
 import os
-import fix_traveler
+from tqdm import tqdm
+import argparse
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+import chromedriver_autoinstaller
 
 base_url = 'https://genshin.honeyhunterworld.com'
-icon_url = 'https://genshin-impact.fandom.com/wiki/Character'
 current_dir = os.path.dirname(os.path.abspath(__file__))
+output_dir = os.path.join(current_dir, "output")
+characters_json_path = os.path.join(current_dir, "..", "..", "src", "data", "characters", "characters.json")
+
+def fetch_paths():
+    """
+    Fetches the paths for all characters from GHH and saves it in a JSON.
+    """
+    url = 'https://genshin.honeyhunterworld.com/fam_chars/?lang=EN'
+    
+    chromedriver_autoinstaller.install()
+    driver = webdriver.Chrome()
+    driver.get(url)
+
+    dropdown = driver.find_element(By.CLASS_NAME, 'sorttable_per_page')
+    for option in dropdown.find_elements(By.TAG_NAME, 'option'):
+        if option.text == '100':
+            option.click()
+            break
+
+    driver.implicitly_wait(10)
+
+    soup = BeautifulSoup(driver.page_source, 'html.parser')
+    table = soup.find('table', {'class': 'genshin_table'})
+
+    character_data = {}
+
+    for row in table.find_all('tr'):
+        cells = row.find_all('td')
+        if len(cells) > 1:
+            name_cell = cells[1]
+            a_element = name_cell.find('a')
+            if a_element:
+                href = a_element.get('href')
+                character_name = a_element.text
+                if href:
+                    character_url = href.split('/')[1]
+                    character_data[character_url] = character_name
+
+    sorted_character_data = dict(sorted(character_data.items(), key=lambda item: item[1]))
+    unique_character_data = {k: v for k, v in sorted_character_data.items() if list(sorted_character_data.values()).index(v) == list(sorted_character_data.keys()).index(k)}
+
+    with open('paths.json', 'w') as f:
+        json.dump(unique_character_data, f, indent=4)
+
+    driver.quit()
 
 def to_kebab_case(string: str) -> str:
+    """
+    Converts a string to kebab case.
+    """
     return string.replace(' ', '-').lower()
 
 def parse_cell(cell: str) -> str:
+    """
+    Parses a table cell value and converts it to a percentage if applicable.
+    """
     if any(c.isalpha() for c in cell):
         return cell
     elif '×' in cell:
@@ -27,6 +80,9 @@ def parse_cell(cell: str) -> str:
         return cell
 
 def parse_row(row: list[str]) -> list[tuple[str, list[str]]]:
+    """
+    Parses a table row and handles special cases for 'Low/High Plunge DMG'.
+    """
     key = row[0]
     if key == 'Low/High Plunge DMG':
         low_key = 'Low Plunge DMG'
@@ -37,7 +93,10 @@ def parse_row(row: list[str]) -> list[tuple[str, list[str]]]:
     else:
         return [(key, row[1:])]
 
-def fetch_character_data(character: str) -> dict[str, dict[str, dict[str, str]]]:
+def fetch_character_data(character: str) -> dict:
+    """
+    Fetches a particular characters' data from GHH (provided slug)
+    """
     url = f'{base_url}/{character}/'
     page = requests.get(url)
     soup = BeautifulSoup(page.content, 'html.parser')
@@ -52,7 +111,7 @@ def fetch_character_data(character: str) -> dict[str, dict[str, dict[str, str]]]
     all_data["icon"] = f'/images/characters/{to_kebab_case(all_data["name"])}.png'
     all_data["weapon"] = rows[5].find_all('td')[-1].text.strip()
     all_data["vision"] = data["Vision (Introduced)"]
-    # Stupid fucking Aloy exception
+    # Stupid Aloy exception
     if all_data["name"] == "Aloy":
         all_data["rarity"] = 6
     else:
@@ -141,52 +200,206 @@ def fetch_character_data(character: str) -> dict[str, dict[str, dict[str, str]]]
 
     return all_data
 
-# def fetch_icons():
-#     # Fetch character icon from genshin-impact.fandom.com/wiki/Character and add it to the `icon` object
-#     page_icon = requests.get(icon_url)
-#     soup_icon = BeautifulSoup(page_icon.content, 'html.parser')
-#     table_icon = soup_icon.find("table", { "class": "article-table" })
-#     trs = table_icon.find_all("tr")
-#     icons = {}
-#     for tr in trs[1:]:
-#         name = tr.find_all("td")[1].text.strip()
-#         icon = tr.find("td").find("img")["data-src"].split("revision")[0]
-#         icons[name] = icon
+def fix_traveler(data):
+    """
+    Fixes the Traveler data by splitting it into separate characters based on their element.
+    """
+    traveler_data = data["Traveler"]
 
-#     return icons
+    elements = ["Hydro", "Anemo", "Geo", "Electro", "Dendro"]
+    travelers_data = {}
 
-def fetch_all_characters_data() -> dict[str, dict[str, dict[str, dict[str, str]]]]:
-    paths_path = os.path.join(current_dir, "paths", "paths.json")
+    for i, element in enumerate(elements):
+        new_traveler_data = traveler_data.copy()
+        new_traveler_data["name"] += f" ({element})"
+        new_traveler_data["vision"] = element
+        new_traveler_data["weapon"] = "Sword"
+        new_traveler_data["rarity"] = 5
+        new_traveler_data["talents"] = traveler_data["talents"][i*3:(i+1)*3]
+        new_traveler_data["passiveSkills"] = traveler_data["passiveSkills"][i*8:i*8+2]
+        new_traveler_data["constellations"] = traveler_data["passiveSkills"][i*8+2:(i+1)*8]
+
+        for j, constellation in enumerate(new_traveler_data["constellations"]):
+            constellation["level"] = j + 1
+
+        travelers_data[new_traveler_data["name"]] = new_traveler_data
+
+    del data["Traveler"]
+    data.update(travelers_data)
+
+    sorted_data = {}
+    for key in sorted(data.keys()):
+        sorted_data[key] = data[key]
+
+    return sorted_data
+
+def parse_stat_value(value):
+    """
+    Parses a stat value and converts it to a float if applicable.
+    """
+    value_str = str(value)
+
+    if value_str.endswith('%'):
+        return round(float(value_str.strip('%')) / 100, 5)
+    try:
+        return round(float(value_str), 5)
+    except ValueError:
+        return value
+
+def process_character_data(character_data):
+    """
+    Processes the character data by mapping attribute keys and parsing stat values.
+    """
+    attribute_key_map = {
+        'HP': 'Base HP',
+        'Atk': 'Base ATK',
+        'Def': 'Base DEF',
+        'EM': 'Elemental Mastery',
+        'ER': 'Energy Recharge',
+        'CritRate%': 'CRIT Rate',
+        'CritDMG%': 'CRIT DMG',
+        'Bonus Atk%': 'Bonus ATK',
+        'Bonus Def%': 'Bonus DEF',
+        'Bonus HP%': 'Bonus HP',
+        'Bonus EM': 'Bonus Elemental Mastery',
+        'Bonus ER': 'Bonus Energy Recharge',
+        'Bonus CritRate%': 'Bonus CRIT Rate',
+        'Bonus CritDMG%': 'Bonus CRIT DMG',
+        'Bonus Heal': 'Healing Bonus',
+        'Bonus Pyro%': 'Pyro DMG Bonus',
+        'Bonus Cryo%': 'Cryo DMG Bonus',
+        'Bonus Hydro%': 'Hydro DMG Bonus',
+        'Bonus Elec%': 'Electro DMG Bonus',
+        'Bonus Anemo%': 'Anemo DMG Bonus',
+        'Bonus Geo%': 'Geo DMG Bonus',
+        'Bonus Dendro%': 'Dendro DMG Bonus',
+        'Bonus Phys%': 'Physical DMG Bonus',
+    }
+
+    for level, stats in character_data.get('baseStats', {}).items():
+        new_stats = {}
+        for key, value in stats.items():
+            mapped_key = attribute_key_map.get(key, key)
+            parsed_value = parse_stat_value(value)
+            new_stats[mapped_key] = parsed_value
+        character_data['baseStats'][level] = new_stats
+
+    return character_data
+
+def kebab_case(name):
+    """
+    Converts a string to kebab case.
+    """
+    clean_name = name.replace('(', '').replace(')', '').lower()
+    return '-'.join(clean_name.split())
+
+def pascal_case(name):
+    """
+    Converts a string to Pascal case.
+    """
+    clean_name = name.replace('(', '').replace(')', '')
+    return ''.join(word.title() for word in clean_name.split())
+
+def generate_tsx_file(char_data, output_directory):
+    """
+    Generates a TSX file for a character with the provided data.
+    """
+    character_name = char_data['name']
+    filename = f"{kebab_case(character_name)}.tsx"
+    filepath = os.path.join(output_directory, filename)
+
+    os.makedirs(output_directory, exist_ok=True)
+
+    with open(filepath, 'w') as tsx_file:
+        tsx_file.write("import { TalentScaling, Bonus, Character } from '@/interfaces/Character'\n\n")
+        tsx_file.write("const talentScalings: TalentScaling = {\n// ...\n}\n\n")
+        tsx_file.write("const characterBonuses: Bonus[] = [\n// ...\n]\n\n")
+        tsx_file.write("const constellationBonuses: Bonus[] = [\n// ...\n]\n\n")
+
+        tsx_file.write(f"const {pascal_case(character_name)}: Character = {{\n")
+
+        for key, value in char_data.items():
+            tsx_file.write(f"    {key}: ")
+            json.dump(value, tsx_file, indent=4)
+            tsx_file.write(",\n")
+
+        tsx_file.write("    talentScalings,\n    characterBonuses,\n    constellationBonuses\n}\n\n")
+        tsx_file.write(f"export default {pascal_case(character_name)}\n")
+
+def update_characters_json(char_data):
+    """
+    Updates the characters.json file with the provided character data.
+    """
+    with open(characters_json_path, 'r') as json_file:
+        existing_data = json.load(json_file)
+
+    character_name = char_data['name']
+    existing_data[character_name] = char_data
+
+    sorted_data = dict(sorted(existing_data.items()))
+
+    with open(characters_json_path, 'w') as json_file:
+        json.dump(sorted_data, json_file, indent=4)
+
+def main():
+    """
+    Parses CLI arguments
+    """
+    parser = argparse.ArgumentParser(description='Scrape character data and generate TSX files.')
+    parser.add_argument('characters', nargs='*', help='Specify one or more characters to scrape (provide the character keys)')
+    parser.add_argument('--all', action='store_true', help='Scrape data for all characters')
+    parser.add_argument('--fetch-paths', action='store_true', help='Fetch paths for all characters')
+    args = parser.parse_args()
+
+    if args.fetch_paths:
+        fetch_paths()
+
+    paths_path = os.path.join(current_dir, "paths.json")
     with open(paths_path) as f:
-        characters = json.load(f)
+        characters = {v.lower(): k for k, v in json.load(f).items()}
 
-    all_data = {}
+    if args.characters:
+        for character_key in args.characters:
+            character_key = character_key.lower()
+            character_path = characters.get(character_key)
+            if character_path:
+                print(f"Fetching data for {character_key}")
+                data = fetch_character_data(character_path)
+                data = process_character_data(data)
+                generate_tsx_file(data, output_dir)
+                update_characters_json(data)
+            else:
+                print(f"Character '{character_key}' not found in paths.json. Attempting to refetch paths...")
+                fetch_paths()
+                with open(paths_path) as f:
+                    characters = {v.lower(): k for k, v in json.load(f).items()}
+                character_path = characters.get(character_key)
+                if character_path:
+                    print(f"Fetching data for {character_key}")
+                    data = fetch_character_data(character_path)
+                    data = process_character_data(data)
+                    generate_tsx_file(data, output_dir)
+                    update_characters_json(data)
+                else:
+                    print(f"Character '{character_key}' not found after refetching paths.")
+    elif args.all:
+        all_data = {}
 
-    pbar = tqdm(characters.items(), position=0)
-    for character, name in pbar:
-        pbar.set_description(f'Fetching {name}\'s data')
-        data_dict = fetch_character_data(character)
-        if data_dict:
-            all_data[name] = data_dict
+        pbar = tqdm(characters.items(), position=0)
+        for character_key, character_path in pbar:
+            pbar.set_description(f'Fetching {character_key}\'s data')
+            data_dict = fetch_character_data(character_path)
+            if data_dict:
+                all_data[character_key] = data_dict
 
-    # icons = fetch_icons()
-    # for name, data in all_data.items():
-    #     if name in icons:
-    #         data["icon"] = icons[name]
+        all_data = fix_traveler(all_data)
 
-    return all_data
-
-def save_data_to_file(data: dict[str, dict[str, dict[str, dict[str, str]]]]) -> None:
-    file_path = os.path.join(current_dir, "characters_new.json")
-    with open(file_path, 'w') as f:
-        json.dump(data, f, indent=4)
+        for character_name, character_data in all_data.items():
+            character_data = process_character_data(character_data)
+            generate_tsx_file(character_data, output_dir)
+            update_characters_json(character_data)
+    else:
+        parser.print_help()
 
 if __name__ == '__main__':
-    # Comment this out if you want to test with a single character
-    # all_data = fetch_all_characters_data()
-    # save_data_to_file(all_data)
-    # fix_traveler.fix_traveler()
-
-    # Uncomment these if you want to test a single character
-    data = fetch_character_data('chevreuse_090')
-    save_data_to_file(data)
+    main()
