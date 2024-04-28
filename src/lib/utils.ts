@@ -4,6 +4,7 @@ import {
     BaseStat,
     CharacterAttributes,
     CharacterState,
+    DamageType,
     ScalingType,
     TalentScaling,
     TalentScalingData,
@@ -21,6 +22,35 @@ const compareObjects = (a: any, b: any) => {
         }
     }
     return diff
+}
+
+function calculateDef(enemyResistances : BaseStat, characterLevel : string) {
+    const charLevel = Number(characterLevel.substring(0, characterLevel.indexOf('/')));
+    const defenseMultiplier = (charLevel + 100) / ((1 - 0)*(enemyResistances.Level + 100) + (charLevel + 100));
+    return defenseMultiplier;
+}
+
+interface enemyResistancesProp {
+    enemyResistances: BaseStat
+}
+
+interface characterAttributesProp {
+    characterAttributes : CharacterAttributes
+}
+
+function calculateRes({enemyResistances} : enemyResistancesProp, damageType : DamageType, {characterAttributes} : characterAttributesProp) {
+    const resShredType = DamageType[damageType].concat(" RES Shred");
+    const baseResistance =  Number(enemyResistances[DamageType[damageType]]) / 100;
+    const resShred = characterAttributes[resShredType];
+    const resistance = baseResistance - resShred;
+    if (resistance > 0) {
+        if (resistance >= 0.75) {
+            return 1 / (4 * resistance + 1);
+        }
+        return 1 - resistance;
+    } else {
+        return 1 - (resistance / 2);
+    }
 }
 
 const mergeAndSum = (a: BaseStat, b: BaseStat): BaseStat => {
@@ -176,5 +206,7 @@ export {
     mergeAndSum,
     getTalentScalingValue,
     insertAspect,
+    calculateDef,
+    calculateRes,
     ascensionMap,
 }
