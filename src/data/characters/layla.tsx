@@ -14,7 +14,7 @@ const constellationBonuses: Bonus[] = [
 
 const Layla: Character = {
     name: 'Layla',
-    icon: '/images/characters/layla.png',
+    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Layla.png',
     weapon: 'Sword',
     vision: 'Cryo',
     rarity: 4,
@@ -138,7 +138,7 @@ const Layla: Character = {
     talents: [
         {
             name: 'Normal Attack: Sword of the Radiant Path',
-            image: 'https://genshin.honeyhunterworld.com/img/s_743101.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_A_01.png',
             description:
                 'Normal Attack\nPerforms up to 3 rapid strikes.\nCharged Attack\nConsumes a certain amount of Stamina to unleash 2 rapid sword strikes.\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.',
             data: {
@@ -195,10 +195,10 @@ const Layla: Character = {
                 },
                 'Charged Attack DMG': {
                     Lv1: '100.28%',
-                    Lv2: '108.43%',
+                    Lv2: '108.44%',
                     Lv3: '116.60%',
                     Lv4: '128.26%',
-                    Lv5: '136.42%',
+                    Lv5: '136.43%',
                     Lv6: '145.76%',
                     Lv7: '158.58%',
                     Lv8: '171.41%',
@@ -282,7 +282,7 @@ const Layla: Character = {
         },
         {
             name: 'Nights of Formal Focus',
-            image: 'https://genshin.honeyhunterworld.com/img/s_743201.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_S_Layla_01.png',
             description:
                 "Puts forth a shield known as the Curtain of Slumber, dealing\nAoE Cryo DMG\n.\nThe Curtain of Slumber's DMG Absorption is based on Layla's Max HP and absorbs\nCryo DMG\nwith 250% effectiveness. When the shield is deployed, Layla will have\nCryo\napplied to her briefly.\nNight Stars and Shooting Stars\nWhile the Curtain of Slumber is active, it will create 1 Night Star that will be attached to it every 1.5s. When a character protected by this shield uses an Elemental Skill, 2 Night Stars will be created. Night Stars can be created once every 0.3s in this way. A maximum of 4 Night Stars can be accumulated at any one time.\nOnce the Curtain of Slumber has accumulated 4 Night Stars and there are opponents nearby, these Night Stars will transform into homing Shooting Stars that will be fired off in sequence, dealing\nCryo DMG\nto any opponents hit.\nIf the Curtain of Slumber's duration ends or it is destroyed, the Night Stars will disappear. If they are already being fired off as Shooting Stars, these Shooting Stars will last until this wave of shots ends.\nNew Night Stars cannot be created until the previous wave of Shooting Stars has been fired completely.\n\"She and I are like two master artisans who have never met, yet who sit at the same cushioned seat, embroidering the same dream-flower.\"",
             data: {
@@ -375,7 +375,7 @@ const Layla: Character = {
         },
         {
             name: 'Dream of the Star-Stream Shaker',
-            image: 'https://genshin.honeyhunterworld.com/img/s_743901.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_E_Layla_01.png',
             description:
                 'Unleashes a Celestial Dreamsphere that constantly fires Starlight Slugs at opponents within its AoE, dealing\nCryo DMG\n.\nWhen a Starlight Slug hits, it will generate 1 Night Star for nearby Curtains of Slumber. Each Curtain of Slumber can gain 1 Night Star this way every 0.5s.\n"Sleep now, sleep now; and may many destinies be revealed before your slumbering eyes, within your star-paved dreams."',
             data: {
@@ -453,19 +453,19 @@ const Layla: Character = {
     passiveSkills: [
         {
             name: 'Shadowy Dream-Signs',
-            image: 'https://genshin.honeyhunterworld.com/img/p_742301.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_Eula_Combine.png',
             description:
                 'When Layla crafts Character Talent Materials, she has a 10% chance to receive double the product.',
         },
         {
             name: 'Like Nascent Light',
-            image: 'https://genshin.honeyhunterworld.com/img/p_742101.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Layla_05.png',
             description:
                 'While the\nCurtain of Slumber\nis active, the Deep Sleep effect will activate each time the Curtain gains 1 Night Star:\n\u00b7The Shield Strength of a character under the effect of the Curtain of Slumber increases by 6%.\n\u00b7This effect can have a maximum of 4 stacks and persists until the Curtain of Slumber disappears.',
         },
         {
             name: 'Sweet Slumber Undisturbed',
-            image: 'https://genshin.honeyhunterworld.com/img/p_742201.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Layla_06.png',
             description:
                 "The DMG dealt by the Shooting Stars fired by\nNights of Formal Focus\nis increased by 1.5% of Layla's Max HP.",
         },
@@ -473,42 +473,42 @@ const Layla: Character = {
     constellations: [
         {
             name: 'Fortress of Fantasy',
-            image: 'https://genshin.honeyhunterworld.com/img/c_741.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Layla_01.png',
             description:
                 'The Shield Absorption of the Curtain of Slumber generated by\nNights of Formal Focus\nis increased by 20%.\nAdditionally, when unleashing Nights of Formal Focus, she will generate a shield for any nearby party members who are not being protected by a Curtain of Slumber. This shield will have 35% of the absorption of a Curtain of Slumber, will last for 12s, and will absorb\nCryo DMG\nwith 250% effectiveness.',
             level: 1,
         },
         {
             name: "Light's Remit",
-            image: 'https://genshin.honeyhunterworld.com/img/c_742.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Layla_02.png',
             description:
                 'When Shooting Stars from\nNights of Formal Focus\nstrike opponents, they will each restore 1 Energy to Layla. Each Shooting Star can restore Energy to her in this manner once.',
             level: 2,
         },
         {
             name: 'Secrets of the Night',
-            image: 'https://genshin.honeyhunterworld.com/img/c_743.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Layla_01.png',
             description:
                 'Increases the Level of\nNights of Formal Focus\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: 'Starry Illumination',
-            image: 'https://genshin.honeyhunterworld.com/img/c_744.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Layla_03.png',
             description:
                 "When\nNights of Formal Focus\nstarts to fire off Shooting Stars, it will grant all nearby party members the Dawn Star effect, causing their Normal and Charged Attack DMG to increase based on 5% of Layla's Max HP.\nDawn Star can last up to 3s and will be removed 0.05s after dealing Normal or Charged Attack DMG.",
             level: 4,
         },
         {
             name: 'Stream of Consciousness',
-            image: 'https://genshin.honeyhunterworld.com/img/c_745.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Layla_02.png',
             description:
                 'Increases the Level of\nDream of the Star-Stream Shaker\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: 'Radiant Soulfire',
-            image: 'https://genshin.honeyhunterworld.com/img/c_746.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Layla_04.png',
             description:
                 'Shooting Stars from\nNights of Formal Focus\ndeal 40% increased DMG, and Starlight Slugs from\nDream of the Star-Stream Shaker\ndeal 40% increased DMG.\nAdditionally, the interval between the creation of Night Stars via Nights of Formal Focus is decreased by 20%.',
             level: 6,

@@ -453,19 +453,19 @@ const Chiori: Character = {
     passiveSkills: [
         {
             name: "Brocaded Collar's Beauteous Silhouette",
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Chiori_05.png',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Chiori_07.png',
             description:
                 'When any party member is wearing an outfit apart from their default outfit, or is wearing a wind glider other than the Wings of First Flight, your party members will obtain the Swift Stride effect: Movement SPD is increased by 10%.\nThis effect does not take effect in Domains, Trounce Domains, and the Spiral Abyss. Swift Stride does not stack.',
         },
         {
             name: 'Tailor-Made',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Chiori_06.png',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Chiori_05.png',
             description:
                 'Gain different effects depending on the next action you take within a short duration after using\nFluttering Hasode\n\'s upward sweep. If you Press the Elemental Skill, you will trigger the Tapestry effect. If you Press your Normal Attack, the Tailoring effect will be triggered instead.\nTapestry\n\u00b7 Switches to the next character in your roster.\n\u00b7 Grants all your party members "Seize the Moment": When your active party member\'s Normal Attacks, Charged Attacks, and Plunging Attacks hit a nearby opponent, "Tamoto" will execute a coordinated attack, dealing 100% of Fluttering Hasode\'s upward sweep DMG as\nAoE Geo DMG\nat the opponent\'s location. DMG dealt this way is considered Elemental Skill DMG.\n\u00b7 "Seize the Moment" lasts 8s, and 1 of "Tamoto"\'s coordinated attack can be unleashed every 2s. 2 such coordinated attacks can occur per "Seize the Moment" effect duration.\nTailoring\n\u00b7 Chiori gains\nGeo infusion\nfor 5s.\nWhen on the field, if Chiori does not either Press her Elemental Skill or use a Normal Attack within a short time after using Fluttering Hasode\'s upward sweep, the Tailoring effect will be triggered by default.',
         },
         {
             name: 'The Finishing Touch',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Chiori_07.png',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Chiori_06.png',
             description:
                 'When a nearby party member creates a\nGeo Construct\n, Chiori will gain 20%\nGeo DMG Bonus\nfor 20s.',
         },

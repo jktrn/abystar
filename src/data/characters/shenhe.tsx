@@ -14,7 +14,7 @@ const constellationBonuses: Bonus[] = [
 
 const Shenhe: Character = {
     name: 'Shenhe',
-    icon: '/images/characters/shenhe.png',
+    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Shenhe.png',
     weapon: 'Polearm',
     vision: 'Cryo',
     rarity: 5,
@@ -138,7 +138,7 @@ const Shenhe: Character = {
     talents: [
         {
             name: 'Normal Attack: Dawnstar Piercer',
-            image: 'https://genshin.honeyhunterworld.com/img/s_633101.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_A_03.png',
             description:
                 'Normal Attack\nPerforms up to 5 consecutive spear strikes.\nCharged Attack\nConsumes a certain amount of Stamina to lunge forward, dealing damage to opponents along the way.\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.',
             data: {
@@ -316,7 +316,7 @@ const Shenhe: Character = {
         },
         {
             name: 'Spring Spirit Summoning',
-            image: 'https://genshin.honeyhunterworld.com/img/s_633201.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_S_Shenhe_01.png',
             description:
                 "The frosted dew, silvery and dense, shall exorcise all demons.\nGrants all nearby party members the Icy Quill effect and deals\nCryo DMG\nin different ways based on whether it is pressed or held.\nPress\nRushes forward together with a Talisman Spirit, dealing\nCryo DMG\nto opponents along the path.\nHold\nCommands the Talisman Spirit to deal\nAoE Cryo DMG\n.\nIcy Quill\nWhen Normal, Charged, and Plunging Attacks, Elemental Skills, and Elemental Bursts deal\nCryo DMG\nto opponents, the DMG dealt is increased based on Shenhe's current ATK.\nThe Icy Quill's effects will be cleared once its duration ends or after being triggered a certain number of times. When held rather than pressed, the Icy Quill's effect lasts longer and can be triggered more times.\nWhen one\nCryo DMG\ninstance strikes multiple opponents, the effect is triggered multiple times based on the number of opponents hit. The number of times the effect is triggered is calculated independently for each party member with the Icy Quill.\nThe power of the spirits is no falsehood. Burdened with her orders, the divine maiden hurries on!",
             data: {
@@ -443,7 +443,7 @@ const Shenhe: Character = {
         },
         {
             name: "Divine Maiden's Deliverance",
-            image: 'https://genshin.honeyhunterworld.com/img/s_633901.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_E_Shenhe_01.png',
             description:
                 'Unleashes the power of the Talisman Spirit, allowing it to roam free in this plane, dealing\nAoE Cryo DMG\n.\nThe Talisman Spirit then creates a field that decreases the\nCryo RES\nand Physical RES of opponents within it. It also deals periodic\nCryo DMG\nto opponents within the field.\nThe way of the adepti is not defined only by the mysterious and fantastical. Only by observing the changes in the heavens and the earth, and understanding the laws of cause and effect in this realm, may its essence be understood.',
             data: {
@@ -555,19 +555,19 @@ const Shenhe: Character = {
     passiveSkills: [
         {
             name: 'Precise Comings and Goings',
-            image: 'https://genshin.honeyhunterworld.com/img/p_632301.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_Expedition_Liyue.png',
             description:
                 'Gains 25% more rewards when dispatched on a Liyue Expedition for 20 hours.',
         },
         {
             name: 'Deific Embrace',
-            image: 'https://genshin.honeyhunterworld.com/img/p_632101.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Shenhe_05.png',
             description:
                 "An active character within the field created by\nDivine Maiden's Deliverance\ngains 15%\nCryo DMG Bonus\n.",
         },
         {
             name: 'Spirit Communion Seal',
-            image: 'https://genshin.honeyhunterworld.com/img/p_632201.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Shenhe_06.png',
             description:
                 'After Shenhe uses\nSpring Spirit Summoning\n, she will grant all nearby party members the following effects:\n\u00b7 Press: Elemental Skill and Elemental Burst DMG increased by 15% for 10s.\n\u00b7 Hold: Normal, Charged, and Plunging Attack DMG increased by 15% for 15s.',
         },
@@ -575,41 +575,41 @@ const Shenhe: Character = {
     constellations: [
         {
             name: 'Clarity of Heart',
-            image: 'https://genshin.honeyhunterworld.com/img/c_631.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Shenhe_02.png',
             description: 'Spring Spirit Summoning\ncan be used 1 more time.',
             level: 1,
         },
         {
             name: 'Centered Spirit',
-            image: 'https://genshin.honeyhunterworld.com/img/c_632.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Shenhe_01.png',
             description:
                 "Divine Maiden's Deliverance\nlasts for 6 seconds longer. Active characters within the skill's field deal 15% increased\nCryo\nCRIT DMG.",
             level: 2,
         },
         {
             name: 'Seclusion',
-            image: 'https://genshin.honeyhunterworld.com/img/c_633.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Shenhe_01.png',
             description:
                 'Increases the Level of\nSpring Spirit Summoning\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: 'Insight',
-            image: 'https://genshin.honeyhunterworld.com/img/c_634.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Shenhe_03.png',
             description:
                 'When characters under the effect of\nIcy Quill\napplied by Shenhe trigger its DMG Bonus effects, Shenhe will gain a Skyfrost Mantra stack:\n\u00b7 When Shenhe uses\nSpring Spirit Summoning\n, she will consume all stacks of Skyfrost Mantra, increasing the DMG of that Spring Spirit Summoning by 5% for each stack consumed.\n\u00b7 Max 50 stacks. Stacks last for 60s.',
             level: 4,
         },
         {
             name: 'Divine Attainment',
-            image: 'https://genshin.honeyhunterworld.com/img/c_635.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Shenhe_02.png',
             description:
                 "Increases the Level of\nDivine Maiden's Deliverance\nby 3.\nMaximum upgrade level is 15.",
             level: 5,
         },
         {
             name: 'Mystical Abandon',
-            image: 'https://genshin.honeyhunterworld.com/img/c_636.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Shenhe_04.png',
             description:
                 "When characters trigger\nIcy Quill\n's effects using Normal and Charged Attack DMG, it does not count toward the Trigger Quota.",
             level: 6,

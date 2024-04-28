@@ -14,7 +14,7 @@ const constellationBonuses: Bonus[] = [
 
 const ShikanoinHeizou: Character = {
     name: 'Shikanoin Heizou',
-    icon: '/images/characters/shikanoin-heizou.png',
+    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Heizo.png',
     weapon: 'Catalyst',
     vision: 'Anemo',
     rarity: 4,
@@ -138,7 +138,7 @@ const ShikanoinHeizou: Character = {
     talents: [
         {
             name: 'Normal Attack: Fudou Style Martial Arts',
-            image: 'https://genshin.honeyhunterworld.com/img/s_593101.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_A_Catalyst_MD.png',
             description:
                 'Normal Attack\nPerforms up to 5 fisticuffs empowered by a mighty wind, dealing\nAnemo DMG\n.\nCharged Attack\nConsumes a certain amount of Stamina and performs a sweeping kick that deals\nAnemo DMG\n.\nPlunging Attack\nCalling upon the surging wind, Heizou plunges towards the ground from mid-air, damaging all opponents in his path. Deals\nAoE Anemo DMG\nupon impact with the ground.',
             data: {
@@ -163,7 +163,7 @@ const ShikanoinHeizou: Character = {
                     Lv1: '36.85%',
                     Lv2: '39.62%',
                     Lv3: '42.38%',
-                    Lv4: '46.06%',
+                    Lv4: '46.07%',
                     Lv5: '48.83%',
                     Lv6: '51.59%',
                     Lv7: '55.28%',
@@ -180,7 +180,7 @@ const ShikanoinHeizou: Character = {
                     Lv1: '51.06%',
                     Lv2: '54.89%',
                     Lv3: '58.72%',
-                    Lv4: '63.82%',
+                    Lv4: '63.83%',
                     Lv5: '67.65%',
                     Lv6: '71.48%',
                     Lv7: '76.59%',
@@ -190,7 +190,7 @@ const ShikanoinHeizou: Character = {
                     Lv11: '97.01%',
                     Lv12: '102.12%',
                     Lv13: '108.5%',
-                    Lv14: '114.88%',
+                    Lv14: '114.89%',
                     Lv15: '121.27%',
                 },
                 '4-Hit DMG': {
@@ -227,12 +227,12 @@ const ShikanoinHeizou: Character = {
                     Lv14: '138.26%',
                     Lv15: '145.94%',
                 },
-                'Charged Attack DMG': {
+                'Charged Attack': {
                     Lv1: '73%',
-                    Lv2: '78.47%',
+                    Lv2: '78.48%',
                     Lv3: '83.95%',
                     Lv4: '91.25%',
-                    Lv5: '96.72%',
+                    Lv5: '96.73%',
                     Lv6: '102.2%',
                     Lv7: '109.5%',
                     Lv8: '116.8%',
@@ -240,9 +240,9 @@ const ShikanoinHeizou: Character = {
                     Lv10: '131.4%',
                     Lv11: '138.7%',
                     Lv12: '146%',
-                    Lv13: '155.12%',
+                    Lv13: '155.13%',
                     Lv14: '164.25%',
-                    Lv15: '173.37%',
+                    Lv15: '173.38%',
                 },
                 'Charged Attack Stamina Cost': {
                     Lv1: '25',
@@ -284,7 +284,7 @@ const ShikanoinHeizou: Character = {
                     Lv3: '132.13%',
                     Lv4: '145.35%',
                     Lv5: '154.59%',
-                    Lv6: '165.16%',
+                    Lv6: '165.17%',
                     Lv7: '179.7%',
                     Lv8: '194.23%',
                     Lv9: '208.77%',
@@ -316,7 +316,7 @@ const ShikanoinHeizou: Character = {
         },
         {
             name: 'Heartstopper Strike',
-            image: 'https://genshin.honeyhunterworld.com/img/s_593201.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_S_Heizo_01.png',
             description:
                 "Tap\nWields the swift winds to launch a Heartstopper Strike that deals\nAnemo DMG\n.\nHold\nCharges energy to unleash an even stronger blow. He will obtain the Declension effect while charging, which will increase the power of the Heartstopper Strike. When the skill button is released or the skill finishes charging, he will strike forward, dealing\nAnemo DMG\n.\nDeclension\nIncreases the power of the next Heartstopper Strike. Max 4 stacks.\nWhen you possess 4 Declension stacks, the Conviction effect will be produced, which will cause the next Heartstopper Strike to be even stronger and have a larger AoE.\nThis seemingly ordinary strike contains Heizou's desire for criminals to honestly confess and repent.",
             data: {
@@ -409,7 +409,7 @@ const ShikanoinHeizou: Character = {
         },
         {
             name: 'Windmuster Kick',
-            image: 'https://genshin.honeyhunterworld.com/img/s_593901.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_E_Heizo_01.png',
             description:
                 "Leaps into the air and uses the Fudou Style Vacuum Slugger and kicks his opponent. The Vacuum Slugger will explode upon hit and create an Arresting Windtunnel that pulls in nearby objects and opponents, dealing\nAoE Anemo DMG\n.\nWhen Vacuum Slugger hits opponents affected by\nHydro\n/\nPyro\n/\nCryo\n/\nElectro\n, these opponents will be afflicted with Windmuster Iris. This Windmuster Iris will explode after a moment and dissipate, dealing AoE DMG of the corresponding aforementioned elemental type.\nVacuum Slugger can afflict a maximum of 4 opponents with the Windmuster Iris. A single opponent cannot be under the effect of Windmuster Irises of different elements at the same time.\nA unique technique that gathers Anemo in one place before unleashing it all in one kick. Is always there in a pinch to land on some criminal's fleeing back.",
             data: {
@@ -487,19 +487,19 @@ const ShikanoinHeizou: Character = {
     passiveSkills: [
         {
             name: 'Pre-Existing Guilt',
-            image: 'https://genshin.honeyhunterworld.com/img/p_592301.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_Explosion_Sprint.png',
             description:
                 'Decreases sprinting Stamina consumption for your own party members by 20%.\nNot stackable with Passive Talents that provide the exact same effects.',
         },
         {
             name: 'Paradoxical Practice',
-            image: 'https://genshin.honeyhunterworld.com/img/p_592101.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Heizo_05.png',
             description:
                 'When Shikanoin Heizou activates a Swirl reaction while on the field, he will gain 1 Declension stack for\nHeartstopper Strike\n. This effect can be triggered once every 0.1s.',
         },
         {
             name: 'Penetrative Reasoning',
-            image: 'https://genshin.honeyhunterworld.com/img/p_592201.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Heizo_06.png',
             description:
                 "After Shikanoin Heizou's\nHeartstopper Strike\nhits an opponent, increases all party members' (excluding Shikanoin Heizou) Elemental Mastery by 80 for 10s.",
         },
@@ -507,42 +507,42 @@ const ShikanoinHeizou: Character = {
     constellations: [
         {
             name: 'Named Juvenile Casebook',
-            image: 'https://genshin.honeyhunterworld.com/img/c_591.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Heizo_01.png',
             description:
                 'For 5s after Shikanoin Heizou takes the field, his Normal Attack SPD is increased by 15%. He also gains 1 Declension stack for\nHeartstopper Strike\n. This effect can be triggered once every 10s.',
             level: 1,
         },
         {
             name: 'Investigative Collection',
-            image: 'https://genshin.honeyhunterworld.com/img/c_592.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Heizo_02.png',
             description:
                 'The pull effect of the Arresting Windtunnel created by\nWindmuster Kick\nis enhanced, and its duration is increased to 1s.',
             level: 2,
         },
         {
             name: 'Esoteric Puzzle Book',
-            image: 'https://genshin.honeyhunterworld.com/img/c_593.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Heizo_01.png',
             description:
                 'Increases the Level of\nHeartstopper Strike\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: 'Tome of Lies',
-            image: 'https://genshin.honeyhunterworld.com/img/c_594.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Heizo_03.png',
             description:
                 'The first Windmuster Iris explosion in each\nWindmuster Kick\nwill regenerate 9 Elemental Energy for Shikanoin Heizou. Every subsequent explosion in that Windmuster Kick will each regenerate an additional 1.5 Energy for Heizou.\nOne\nWindmuster Kick\ncan regenerate a total of 13.5 Energy for Heizou in this manner.',
             level: 4,
         },
         {
             name: 'Secret Archive',
-            image: 'https://genshin.honeyhunterworld.com/img/c_595.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Heizo_02.png',
             description:
                 'Increases the Level of\nWindmuster Kick\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: 'Curious Casefiles',
-            image: 'https://genshin.honeyhunterworld.com/img/c_596.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Heizo_04.png',
             description:
                 "Each Declension stack will increase the CRIT Rate of the\nHeartstopper Strike\nunleashed by 4%. When Heizou possesses Conviction, this Heartstopper Strike's CRIT DMG is increased by 32%.",
             level: 6,

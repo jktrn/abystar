@@ -205,7 +205,7 @@ const characterBonuses: Bonus[] = [
                 <span style={{ color: '#ddd' }}>5s</span>.
             </span>
         ),
-        icon: '/images/characters/keqing-passive1.png',
+        icon: 'https://api.ambr.top/assets/UI/UI_Talent_S_Keqing_05.png',
         effect: (attributes) => {
             // * Unnecessary
             return { attributes }
@@ -240,7 +240,7 @@ const characterBonuses: Bonus[] = [
                 effect lasts for <span style={{ color: '#ddd' }}>8s</span>.
             </span>
         ),
-        icon: '/images/characters/keqing-passive2.png',
+        icon: 'https://api.ambr.top/assets/UI/UI_Talent_S_Keqing_06.png',
         effect: (attributes) => {
             const newAttributes = {
                 ...attributes,
@@ -264,7 +264,7 @@ const constellationBonuses: Bonus[] = [
                 her ATK as AoE <span style={{ color: '#8c729a' }}>Electro DMG</span>.
             </span>
         ),
-        icon: '/images/characters/keqing-constellation1.png',
+        icon: 'https://api.ambr.top/assets/UI/UI_Talent_S_Keqing_01.png',
         effect: (attributes) => {
             // * Unnecessary
             return { attributes }
@@ -289,7 +289,7 @@ const constellationBonuses: Bonus[] = [
                 once every <span style={{ color: '#ddd' }}>5s</span>.
             </span>
         ),
-        icon: '/images/characters/keqing-constellation2.png',
+        icon: 'https://api.ambr.top/assets/UI/UI_Talent_S_Keqing_02.png',
         effect: (attributes) => {
             // * Unnecessary, this does nothing
             return { attributes }
@@ -308,7 +308,7 @@ const constellationBonuses: Bonus[] = [
                 Maximum upgrade level is 15.
             </span>
         ),
-        icon: '/images/characters/keqing-constellation3.png',
+        icon: 'https://api.ambr.top/assets/UI/UI_Talent_U_Keqing_01.png',
         effect: (attributes, talentLevels) => {
             if (!talentLevels) return { attributes }
 
@@ -335,7 +335,7 @@ const constellationBonuses: Bonus[] = [
                 , her ATK is increased by <span style={{ color: '#ddd' }}>25%</span>.
             </span>
         ),
-        icon: '/images/characters/keqing-constellation4.png',
+        icon: 'https://api.ambr.top/assets/UI/UI_Talent_S_Keqing_03.png',
         effect: (attributes) => {
             const newAttributes = {
                 ...attributes,
@@ -357,7 +357,7 @@ const constellationBonuses: Bonus[] = [
                 Maximum upgrade level is 15.
             </span>
         ),
-        icon: '/images/characters/keqing-constellation5.png',
+        icon: 'https://api.ambr.top/assets/UI/UI_Talent_U_Keqing_02.png',
         effect: (attributes, talentLevels) => {
             if (!talentLevels) return { attributes }
 
@@ -383,7 +383,7 @@ const constellationBonuses: Bonus[] = [
                 <span style={{ color: '#ddd' }}>8s</span>.
             </span>
         ),
-        icon: '/images/characters/keqing-constellation6.png',
+        icon: 'https://api.ambr.top/assets/UI/UI_Talent_S_Keqing_04.png',
         effect: (attributes, talentLevels, currentStacks) => {
             if (!currentStacks) return { attributes }
 
@@ -407,7 +407,7 @@ const constellationBonuses: Bonus[] = [
 
 const Keqing: Character = {
     name: 'Keqing',
-    icon: '/images/characters/keqing.png',
+    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Keqing.png',
     weapon: 'Sword',
     vision: 'Electro',
     rarity: 5,
@@ -531,7 +531,7 @@ const Keqing: Character = {
     talents: [
         {
             name: 'Normal Attack: Yunlai Swordsmanship',
-            image: 'https://genshin.honeyhunterworld.com/img/s_423101.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_A_01.png',
             description:
                 'Normal Attack\nPerforms up to 5 rapid strikes.\nCharged Attack\nConsumes a certain amount of Stamina to unleash 2 rapid sword strikes.\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.',
             data: {
@@ -541,7 +541,7 @@ const Keqing: Character = {
                     Lv3: '47.7%',
                     Lv4: '52.47%',
                     Lv5: '55.81%',
-                    Lv6: '59.62%',
+                    Lv6: '59.63%',
                     Lv7: '64.87%',
                     Lv8: '70.12%',
                     Lv9: '75.37%',
@@ -558,7 +558,7 @@ const Keqing: Character = {
                     Lv3: '47.7%',
                     Lv4: '52.47%',
                     Lv5: '55.81%',
-                    Lv6: '59.62%',
+                    Lv6: '59.63%',
                     Lv7: '64.87%',
                     Lv8: '70.12%',
                     Lv9: '75.37%',
@@ -575,7 +575,7 @@ const Keqing: Character = {
                     Lv3: '63.3%',
                     Lv4: '69.63%',
                     Lv5: '74.06%',
-                    Lv6: '79.12%',
+                    Lv6: '79.13%',
                     Lv7: '86.09%',
                     Lv8: '93.05%',
                     Lv9: '100.01%',
@@ -609,7 +609,7 @@ const Keqing: Character = {
                     Lv3: '77.9%',
                     Lv4: '85.69%',
                     Lv5: '91.14%',
-                    Lv6: '97.37%',
+                    Lv6: '97.38%',
                     Lv7: '105.94%',
                     Lv8: '114.51%',
                     Lv9: '123.08%',
@@ -709,7 +709,7 @@ const Keqing: Character = {
         },
         {
             name: 'Stellar Restoration',
-            image: 'https://genshin.honeyhunterworld.com/img/s_423201.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_S_Keqing_01.png',
             description:
                 'Hurls a Lightning Stiletto that annihilates her opponents like the swift thunder.\nWhen the Stiletto hits its target, it deals\nElectro DMG\nto opponents in a small AoE, and places a Stiletto Mark on the spot hit.\nHold\nHold to adjust the direction in which the Stiletto shall be thrown.\nStilettos thrown by the Hold attack mode can be suspended in mid-air, allowing Keqing to jump to them when using Stellar Restoration a second time.\nLightning Stiletto\nIf Keqing uses Stellar Restoration again or uses a Charged Attack while its duration lasts, it will clear the Stiletto Mark and produce different effects:\n\u00b7If she uses Stellar Restoration again, she will blink to the location of the Mark and unleash one slashing attack that deals\nAoE Electro DMG\n. When blinking to a Stiletto that was thrown from a Holding attack, Keqing can leap across obstructing terrain.\n\u00b7If Keqing uses a Charged Attack, she will ignite a series of thundering cuts at the Mark\'s location, dealing\nAoE Electro DMG\n.\n"Humans are like moths, endlessly chasing the flame we call gods and adepti. But this light that I have here is my own."',
             data: {
@@ -802,7 +802,7 @@ const Keqing: Character = {
         },
         {
             name: 'Starward Sword',
-            image: 'https://genshin.honeyhunterworld.com/img/s_423901.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_E_Keqing_01.png',
             description:
                 "Keqing unleashes the power of lightning, dealing\nElectro DMG\nin an AOE.\nShe then blends into the shadow of her blade, striking a series of thunderclap-blows to nearby opponents simultaneously that deal multiple instances of\nElectro DMG\n. The final attack deals massive\nAoE Electro DMG\n.\nThe swiftest technique in Keqing's personal arsenal is fast enough to bring stars crashing down.",
             data: {
@@ -897,19 +897,19 @@ const Keqing: Character = {
     passiveSkills: [
         {
             name: "Land's Overseer",
-            image: 'https://genshin.honeyhunterworld.com/img/p_422301.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_Expedition_Liyue.png',
             description:
                 'When dispatched on an expedition in Liyue, time consumed is reduced by 25%.',
         },
         {
             name: 'Thundering Penance',
-            image: 'https://genshin.honeyhunterworld.com/img/p_422101.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Keqing_05.png',
             description:
                 "After recasting\nStellar Restoration\nwhile a Lightning Stiletto is present, Keqing's weapon gains an\nElectro Infusion\nfor 5s.",
         },
         {
             name: 'Aristocratic Dignity',
-            image: 'https://genshin.honeyhunterworld.com/img/p_422201.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Keqing_06.png',
             description:
                 "When casting\nStarward Sword\n, Keqing's CRIT Rate is increased by 15%, and her Energy Recharge is increased by 15%. This effect lasts for 8s.",
         },
@@ -917,42 +917,42 @@ const Keqing: Character = {
     constellations: [
         {
             name: 'Thundering Might',
-            image: 'https://genshin.honeyhunterworld.com/img/c_421.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Keqing_01.png',
             description:
                 'Recasting\nStellar Restoration\nwhile a Lightning Stiletto is present causes Keqing to deal 50% of her ATK as\nAoE Electro DMG\nat the start point and terminus of her Blink.',
             level: 1,
         },
         {
             name: 'Keen Extraction',
-            image: 'https://genshin.honeyhunterworld.com/img/c_422.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Keqing_02.png',
             description:
                 "When Keqing's Normal and Charged Attacks hit opponents affected by\nElectro\n, they have a 50% chance of producing an Elemental Particle.\nThis effect can only occur once every 5s.",
             level: 2,
         },
         {
             name: 'Foreseen Reformation',
-            image: 'https://genshin.honeyhunterworld.com/img/c_423.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Keqing_01.png',
             description:
                 'Increases the Level of\nStarward Sword\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: 'Attunement',
-            image: 'https://genshin.honeyhunterworld.com/img/c_424.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Keqing_03.png',
             description:
                 'For 10s after Keqing triggers an\nElectro-related Elemental Reaction\n, her ATK is increased by 25%.',
             level: 4,
         },
         {
             name: 'Beckoning Stars',
-            image: 'https://genshin.honeyhunterworld.com/img/c_425.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Keqing_02.png',
             description:
                 'Increases the Level of\nStellar Restoration\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: 'Tenacious Star',
-            image: 'https://genshin.honeyhunterworld.com/img/c_426.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Keqing_04.png',
             description:
                 'When initiating a Normal Attack, a Charged Attack, Elemental Skill or Elemental Burst, Keqing gains a 6%\nElectro DMG Bonus\nfor 8s.\nEffects triggered by Normal Attacks, Charged Attacks, Elemental Skills and Elemental Bursts are considered independent entities.',
             level: 6,

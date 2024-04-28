@@ -14,7 +14,7 @@ const constellationBonuses: Bonus[] = [
 
 const KujouSara: Character = {
     name: 'Kujou Sara',
-    icon: '/images/characters/kujou-sara.png',
+    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Sara.png',
     weapon: 'Bow',
     vision: 'Electro',
     rarity: 4,
@@ -138,7 +138,7 @@ const KujouSara: Character = {
     talents: [
         {
             name: 'Normal Attack: Tengu Bowmanship',
-            image: 'https://genshin.honeyhunterworld.com/img/s_563101.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_A_02.png',
             description:
                 "Normal Attack\nPerforms up to 5 consecutive shots with a bow.\nCharged Attack\nPerforms a more precise\nAimed Shot\nwith increased DMG.\nWhile aiming, crackling lightning will accumulate on the arrowhead. An arrow fully charged with the storm's might will deal\nElectro DMG\n.\nWhen in the Crowfeather Cover state, a fully-charged arrow will leave a Crowfeather behind after it hits.\nPlunging Attack\nFires off a shower of arrows in mid-air before falling and striking the ground, dealing AoE DMG upon impact.",
             data: {
@@ -148,7 +148,7 @@ const KujouSara: Character = {
                     Lv3: '42.9%',
                     Lv4: '47.19%',
                     Lv5: '50.19%',
-                    Lv6: '53.62%',
+                    Lv6: '53.63%',
                     Lv7: '58.34%',
                     Lv8: '63.06%',
                     Lv9: '67.78%',
@@ -212,10 +212,10 @@ const KujouSara: Character = {
                 },
                 '5-Hit DMG': {
                     Lv1: '58.05%',
-                    Lv2: '62.77%',
+                    Lv2: '62.78%',
                     Lv3: '67.5%',
                     Lv4: '74.25%',
-                    Lv5: '78.97%',
+                    Lv5: '78.98%',
                     Lv6: '84.38%',
                     Lv7: '91.8%',
                     Lv8: '99.23%',
@@ -284,7 +284,7 @@ const KujouSara: Character = {
                     Lv3: '132.13%',
                     Lv4: '145.35%',
                     Lv5: '154.59%',
-                    Lv6: '165.16%',
+                    Lv6: '165.17%',
                     Lv7: '179.7%',
                     Lv8: '194.23%',
                     Lv9: '208.77%',
@@ -316,7 +316,7 @@ const KujouSara: Character = {
         },
         {
             name: 'Tengu Stormcall',
-            image: 'https://genshin.honeyhunterworld.com/img/s_563201.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_S_Sara_01.png',
             description:
                 'Retreats rapidly with the speed of a tengu, summoning the protection of the Crowfeather.\nGains Crowfeather Cover for 18s, and when Kujou Sara fires a fully-charged Aimed Shot, Crowfeather Cover will be consumed, and will leave a Crowfeather at the target location.\nCrowfeathers will trigger Tengu Juurai: Ambush after a short time, dealing\nElectro DMG\nand granting the active character within its AoE an ATK Bonus based on Kujou Sara\'s Base ATK.\nThe ATK Bonuses from different Tengu Juurai will not stack, and their effects and duration will be determined by the last Tengu Juurai to take effect.\nThe tengu race have never lacked for exceptional talents who have received an Electro Vision. It\'s just that they often habitually chant praises to the Electro Archon while manipulating Electro. The chants go something like this\n"Show forth your might, O praiseworthy Narukami, and grant this supplicant your thunderous might! Sowaka!"',
             data: {
@@ -392,7 +392,7 @@ const KujouSara: Character = {
         },
         {
             name: 'Subjugation: Koukou Sendou',
-            image: 'https://genshin.honeyhunterworld.com/img/s_563901.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_E_Sara_01.png',
             description:
                 'Casts down Tengu Juurai: Titanbreaker, dealing\nAoE Electro DMG\n. Afterwards, Tengu Juurai: Titanbreaker spreads out into 4 consecutive bouts of Tengu Juurai: Stormcluster, dealing\nAoE Electro DMG\n.\nTengu Juurai: Titanbreaker and Tengu Juurai: Stormcluster can provide the active character within their AoE with the same ATK Bonus as given by the Elemental Skill, Tengu Stormcall.\nThe ATK Bonus provided by various kinds of Tengu Juurai will not stack, and their effects and duration will be determined by the last Tengu Juurai to take effect.\nSara departed from her people, the tengu, and also temporarily lost her faith in the Tenryou Commission. But once the clouds over her heart cleared, she found her own lightning anew.',
             data: {
@@ -426,7 +426,7 @@ const KujouSara: Character = {
                     Lv10: '61.42%',
                     Lv11: '64.83%',
                     Lv12: '68.24%',
-                    Lv13: '72.5%',
+                    Lv13: '72.51%',
                     Lv14: '76.77%',
                     Lv15: '81.04%',
                 },
@@ -470,19 +470,19 @@ const KujouSara: Character = {
     passiveSkills: [
         {
             name: 'Land Survey',
-            image: 'https://genshin.honeyhunterworld.com/img/p_562301.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Sara_07.png',
             description:
                 'When dispatched on an expedition in Inazuma, time consumed is reduced by 25%.',
         },
         {
             name: 'Immovable Will',
-            image: 'https://genshin.honeyhunterworld.com/img/p_562101.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Sara_01.png',
             description:
                 'While in the Crowfeather Cover state provided by\nTengu Stormcall\n, Aimed Shot charge times are decreased by 60%.',
         },
         {
             name: 'Decorum',
-            image: 'https://genshin.honeyhunterworld.com/img/p_562201.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Sara_06.png',
             description:
                 'When Tengu Juurai: Ambush hits opponents, Kujou Sara will restore 1.2 Energy to all party members for every 100% Energy Recharge she has. This effect can be triggered once every 3s.',
         },
@@ -490,42 +490,42 @@ const KujouSara: Character = {
     constellations: [
         {
             name: "Crow's Eye",
-            image: 'https://genshin.honeyhunterworld.com/img/c_561.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Sara_05.png',
             description:
                 'When Tengu Juurai grant characters ATK Bonuses or hits opponents, the CD of\nTengu Stormcall\nis decreased by 1s.\nThis effect can be triggered once every 3s.',
             level: 1,
         },
         {
             name: 'Dark Wings',
-            image: 'https://genshin.honeyhunterworld.com/img/c_562.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Sara_02.png',
             description:
                 "Unleashing\nTengu Stormcall\nwill leave a weaker Crowfeather at Kujou Sara's original position that will deal 30% of its original DMG.",
             level: 2,
         },
         {
             name: 'The War Within',
-            image: 'https://genshin.honeyhunterworld.com/img/c_563.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Sara_02.png',
             description:
                 'Increases the Level of\nSubjugation: Koukou Sendou\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: 'Conclusive Proof',
-            image: 'https://genshin.honeyhunterworld.com/img/c_564.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Sara_03.png',
             description:
                 'The number of Tengu Juurai: Stormcluster released by\nSubjugation: Koukou Sendou\nis increased to 6.',
             level: 4,
         },
         {
             name: 'Spellsinger',
-            image: 'https://genshin.honeyhunterworld.com/img/c_565.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Sara_01.png',
             description:
                 'Increases the Level of\nTengu Stormcall\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: 'Sin of Pride',
-            image: 'https://genshin.honeyhunterworld.com/img/c_566.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Sara_04.png',
             description:
                 'The\nElectro DMG\nof characters who have had their ATK increased by Tengu Juurai has its Crit DMG increased by 60%.',
             level: 6,

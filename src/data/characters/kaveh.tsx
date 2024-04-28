@@ -14,7 +14,7 @@ const constellationBonuses: Bonus[] = [
 
 const Kaveh: Character = {
     name: 'Kaveh',
-    icon: '/images/characters/kaveh.png',
+    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Kaveh.png',
     weapon: 'Claymore',
     vision: 'Dendro',
     rarity: 4,
@@ -138,7 +138,7 @@ const Kaveh: Character = {
     talents: [
         {
             name: 'Normal Attack: Schematic Setup',
-            image: 'https://genshin.honeyhunterworld.com/img/s_813101.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_A_04.png',
             description:
                 'Normal Attack\nUses Mehrak to perform up to 4 consecutive attacks.\nCharged Attack\nDrains Stamina over time to perform continuous slashes.\nAt the end of the sequence, performs a more powerful slash.\nPlunging Attack\nPlunges from mid-air to strike the ground, damaging opponents along the path and dealing AoE DMG upon impact.',
             data: {
@@ -148,7 +148,7 @@ const Kaveh: Character = {
                     Lv3: '88.59%',
                     Lv4: '97.45%',
                     Lv5: '103.65%',
-                    Lv6: '110.73%',
+                    Lv6: '110.74%',
                     Lv7: '120.48%',
                     Lv8: '130.22%',
                     Lv9: '139.97%',
@@ -196,7 +196,7 @@ const Kaveh: Character = {
                 '4-Hit DMG': {
                     Lv1: '102.69%',
                     Lv2: '111.05%',
-                    Lv3: '119.4%',
+                    Lv3: '119.41%',
                     Lv4: '131.35%',
                     Lv5: '139.7%',
                     Lv6: '149.26%',
@@ -333,7 +333,7 @@ const Kaveh: Character = {
         },
         {
             name: 'Artistic Ingenuity',
-            image: 'https://genshin.honeyhunterworld.com/img/s_813201.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_S_Kaveh_01.png',
             description:
                 "Uses Mehrak's mapping ability for offensive purposes, initiating a radial scan that deals\nAoE Dendro DMG\n. It will also scan all Dendro Cores in its AoE and cause them to immediately burst.\nMehrak was created through the modification of ancient technology and may have some other functions apart from mapping work...",
             data: {
@@ -375,7 +375,7 @@ const Kaveh: Character = {
         },
         {
             name: 'Painted Dome',
-            image: 'https://genshin.honeyhunterworld.com/img/s_813901.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_E_Kaveh_01.png',
             description:
                 "Completely unleashes Mehrak's energy and creates a cubic scanned space, dealing\nAoE Dendro DMG\nto all opponents within it, causing all Dendro Cores in its AoE to immediately burst, and granting Kaveh the following enhanced combat abilities for a specific duration:\n\u00b7Increases Kaveh's Normal, Charged, and Plunging Attack AoE, and converts his attack DMG to\nDendro DMG\nthat cannot be overridden.\n\u00b7All Dendro Cores created by all your own party members through Bloom reactions will deal additional DMG when they burst.\n\u00b7Increases Kaveh's resistance to interruption.\nThese effects will be canceled once Kaveh leaves the field.\n\"Every building style includes the architect's unique worldview, and from this angle, one can say that the buildings themselves are coalescences of human memories.\"",
             data: {
@@ -470,19 +470,19 @@ const Kaveh: Character = {
     passiveSkills: [
         {
             name: 'The Art of Budgeting',
-            image: 'https://genshin.honeyhunterworld.com/img/p_812301.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Yoimiya_07.png',
             description:
                 'When Kaveh crafts Landscape, Building, and Courtyard-type Furnishings, he has a 100% chance to refund a portion of the materials used.',
         },
         {
             name: "An Architect's Undertaking",
-            image: 'https://genshin.honeyhunterworld.com/img/p_812101.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Kaveh_05.png',
             description:
                 'When DMG dealt by a Dendro Core (including DMG from Burgeon and Hyperbloom) hits Kaveh, Kaveh will regain HP equal to 300% of his Elemental Mastery. This effect can be triggered once every 0.5s.',
         },
         {
             name: "A Craftsman's Curious Conceptions",
-            image: 'https://genshin.honeyhunterworld.com/img/p_812201.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Kaveh_06.png',
             description:
                 "During\nPainted Dome\n, after Kaveh's Normal, Charged, or Plunging Attacks hit opponents, his Elemental Mastery will increase by 25. This effect can be triggered once every 0.1s. Max 4 stacks.\nThis effect will be canceled when Painted Dome's effects end.",
         },
@@ -490,42 +490,42 @@ const Kaveh: Character = {
     constellations: [
         {
             name: 'Sublime Salutations',
-            image: 'https://genshin.honeyhunterworld.com/img/c_811.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Kaveh_01.png',
             description:
                 "Within 3s after using\nArtistic Ingenuity\n, Kaveh's\nDendro RES\nand Incoming Healing Bonus will be increased by 50% and 25% respectively.",
             level: 1,
         },
         {
             name: 'Grace of Royal Roads',
-            image: 'https://genshin.honeyhunterworld.com/img/c_812.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Kaveh_02.png',
             description:
                 "Kaveh's Normal Attack SPD increases by 15% during\nPainted Dome\n.",
             level: 2,
         },
         {
             name: 'Profferings of Dur Untash',
-            image: 'https://genshin.honeyhunterworld.com/img/c_813.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Kaveh_02.png',
             description:
                 'Increases the Level of\nPainted Dome\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: 'Feast of Apadana',
-            image: 'https://genshin.honeyhunterworld.com/img/c_814.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Kaveh_03.png',
             description:
                 'Dendro Cores created from Bloom reactions Kaveh triggers will deal 60% more DMG when they burst.',
             level: 4,
         },
         {
             name: 'Treasures of Bonkhanak',
-            image: 'https://genshin.honeyhunterworld.com/img/c_815.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Kaveh_01.png',
             description:
                 'Increases the Level of\nArtistic Ingenuity\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: "Pairidaeza's Dreams",
-            image: 'https://genshin.honeyhunterworld.com/img/c_816.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Kaveh_04.png',
             description:
                 "When Kaveh's Normal, Charged, or Plunging Attacks hit opponents during\nPainted Dome\n, they will unleash Pairidaeza's Light upon the opponent's position, dealing 61.8% of Kaveh's ATK as\nAoE Dendro DMG\nand causing all Dendro Cores within that AoE to burst. This effect can be triggered once every 3s.",
             level: 6,

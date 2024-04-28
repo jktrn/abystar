@@ -14,7 +14,7 @@ const constellationBonuses: Bonus[] = [
 
 const Wanderer: Character = {
     name: 'Wanderer',
-    icon: '/images/characters/wanderer.png',
+    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Wanderer.png',
     weapon: 'Catalyst',
     vision: 'Anemo',
     rarity: 5,
@@ -138,7 +138,7 @@ const Wanderer: Character = {
     talents: [
         {
             name: 'Normal Attack: Yuuban Meigen',
-            image: 'https://genshin.honeyhunterworld.com/img/s_753101.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_A_Catalyst_MD.png',
             description:
                 'Normal Attack\nPerforms up to 3 attacks using wind blades, dealing\nAnemo DMG\n.\nCharged Attack\nConsumes a certain amount of Stamina, gathers a build up of high wind pressure, and deals\nAoE Anemo DMG\nafter a short casting time.\nPlunging Attack\nCalling upon the power of Anemo, the Wanderer plunges towards the ground from mid-air, damaging all opponents in his path. Deals\nAoE Anemo DMG\nupon impact with the ground.',
             data: {
@@ -148,7 +148,7 @@ const Wanderer: Character = {
                     Lv3: '79.9%',
                     Lv4: '87.89%',
                     Lv5: '93.48%',
-                    Lv6: '99.87%',
+                    Lv6: '99.88%',
                     Lv7: '108.66%',
                     Lv8: '117.45%',
                     Lv9: '126.24%',
@@ -250,7 +250,7 @@ const Wanderer: Character = {
                     Lv3: '132.13%',
                     Lv4: '145.35%',
                     Lv5: '154.59%',
-                    Lv6: '165.16%',
+                    Lv6: '165.17%',
                     Lv7: '179.7%',
                     Lv8: '194.23%',
                     Lv9: '208.77%',
@@ -282,7 +282,7 @@ const Wanderer: Character = {
         },
         {
             name: 'Hanega: Song of the Wind',
-            image: 'https://genshin.honeyhunterworld.com/img/s_753201.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_S_Wanderer_01.png',
             description:
                 'Concentrates the power of the winds to break free from the shackles of the earth, dealing\nAoE Anemo DMG\nbefore leaping into the air and entering the Windfavored state.\nWindfavored\nThe Wanderer cannot perform Plunging Attacks in this state. When he uses Normal and Charged Attacks, they will be converted into Kuugo: Fushoudan and Kuugo: Toufukai respectively; the DMG they deal and their AoE will be increased, and their DMG will be considered Normal and Charged Attack DMG respectively. Kuugo: Toufukai will not consume Stamina.\nThe Wanderer will hover persistently during this time. While this state is active, the Wanderer\'s movements gain the following properties:\n\u00b7Persistently consumes Kuugoryoku Points to maintain this hovering state.\n\u00b7When sprinting, additional Kuugoryoku Points will be consumed for the Wanderer to accelerate mid-air. Holding sprint will cause persistent Kuugoryoku Point consumption to maintain speed. This effect will replace his default sprint.\n\u00b7Jumping expends extra Kuugoryoku Points to increase hovering height. Holding jump will cause persistent Kuugoryoku Point consumption to keep increasing hovering height.\nRunning out of Kuugoryoku Points will end the Windfavored state.\nA second cast during the duration of Windfavored will also end it.\n"The world dances in a weightless whirl, presenting a secret that can only be found in the flowers."',
             data: {
@@ -308,14 +308,14 @@ const Wanderer: Character = {
                     Lv2: '134.96% Normal Attack DMG',
                     Lv3: '136.93% Normal Attack DMG',
                     Lv4: '139.5% Normal Attack DMG',
-                    Lv5: '141.47% Normal Attack DMG',
+                    Lv5: '141.48% Normal Attack DMG',
                     Lv6: '143.45% Normal Attack DMG',
                     Lv7: '146.02% Normal Attack DMG',
-                    Lv8: '148.58% Normal Attack DMG',
+                    Lv8: '148.59% Normal Attack DMG',
                     Lv9: '151.15% Normal Attack DMG',
                     Lv10: '153.72% Normal Attack DMG',
                     Lv11: '156.29% Normal Attack DMG',
-                    Lv12: '158.85% Normal Attack DMG',
+                    Lv12: '158.86% Normal Attack DMG',
                     Lv13: '161.42% Normal Attack DMG',
                     Lv14: '163.99% Normal Attack DMG',
                     Lv15: '166.56% Normal Attack DMG',
@@ -375,7 +375,7 @@ const Wanderer: Character = {
         },
         {
             name: 'Kyougen: Five Ceremonial Plays',
-            image: 'https://genshin.honeyhunterworld.com/img/s_753901.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_E_Wanderer_01.png',
             description:
                 'Compresses the atmosphere into a singular vacuum that grinds all troubles away, dealing multiple instances of\nAoE Anemo DMG\n.\nIf the character is in the Windfavored state due to the skill "Hanega: Song of the Wind," Windfavored state will end after casting.\n"Bright be the narrowed gaze of the sky, casting its sight on dreams both past and present, like radiance washing over dust on the winds."',
             data: {
@@ -436,19 +436,19 @@ const Wanderer: Character = {
     passiveSkills: [
         {
             name: 'Strum the Swirling Winds',
-            image: 'https://genshin.honeyhunterworld.com/img/p_752301.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Wanderer_07.png',
             description:
                 'Mora expended when ascending Bows and Catalysts is decreased by 50%.',
         },
         {
             name: 'Jade-Claimed Flower',
-            image: 'https://genshin.honeyhunterworld.com/img/p_752101.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Wanderer_05.png',
             description:
                 'If\nHanega: Song of the Wind\ncomes into contact with\nHydro\n/\nPyro\n/\nCryo\n/\nElectro\nwhen it is unleashed, this instance of the Windfavored state will obtain buffs according to the contacted element(s):\n\u00b7\nHydro\n: Kuugoryoku Point cap increases by 20.\n\u00b7\nPyro\n: ATK increases by 30%.\n\u00b7\nCryo\n: CRIT Rate increases by 20%.\n\u00b7\nElectro\n: When Normal and Charged Attacks hit an opponent, 0.8 Energy will be restored. Energy can be restored this way once every 0.2s.\nYou can have up to 2 different kinds of these buffs simultaneously.',
         },
         {
             name: 'Gales of Reverie',
-            image: 'https://genshin.honeyhunterworld.com/img/p_752201.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Wanderer_06.png',
             description:
                 'When the Wanderer hits opponents with Kuugo: Fushoudan or Kuugo: Toufukai in his\nWindfavored\nstate, he has a 16% chance to obtain the Descent effect: The next time the Wanderer accelerates in mid-air while in this instance of the Windfavored state, this effect will be removed, this acceleration instance will not consume any Kuugoryoku Points, and he will fire off 4 wind arrows that deal 35% of his ATK as\nAnemo DMG\neach.\nFor each Kuugo: Fushoudan and Kuugo: Toufukai that does not produce this effect, the next attack of those types will have a 12% increased chance of producing it. The calculation of the effect production is done once every 0.1s.',
         },
@@ -456,42 +456,42 @@ const Wanderer: Character = {
     constellations: [
         {
             name: 'Shoban: Ostentatious Plumage',
-            image: 'https://genshin.honeyhunterworld.com/img/c_751.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Wanderer_01.png',
             description:
                 'When in the\nWindfavored\nstate, the Attack SPD of the Wanderer\'s Kuugo: Fushoudan and Kuugo: Toufukai is increased by 10%.\nAdditionally, the wind arrows fired by the Passive Talent "Gales of Reverie" will deal an additional 25% of his ATK as DMG. You must unlock the Passive Talent "Gales of Reverie" first.',
             level: 1,
         },
         {
             name: 'Niban: Isle Amidst White Waves',
-            image: 'https://genshin.honeyhunterworld.com/img/c_752.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Wanderer_02.png',
             description:
                 "When in the\nWindfavored\nstate,\nKyougen: Five Ceremonial Plays\nwill see its DMG increased by 4% per point of difference between the max amount of Kuugoryoku Points contrasted with Kuugoryoku's present capacity when using this skill.\nThrough this method, you can increase Kyougen: Five Ceremonial Plays's DMG by a maximum of 200%.",
             level: 2,
         },
         {
             name: 'Sanban: Moonflower Kusemai',
-            image: 'https://genshin.honeyhunterworld.com/img/c_753.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Wanderer_02.png',
             description:
                 'Increases the Level of\nKyougen: Five Ceremonial Plays\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: 'Yonban: Set Adrift into Spring',
-            image: 'https://genshin.honeyhunterworld.com/img/c_754.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Wanderer_03.png',
             description:
                 'When casting\nHanega: Song of the Wind\n, should the Passive Talent "Jade-Claimed Flower" be triggered, the character will gain buffs in correspondence to the contacted Elemental Type(s), and also obtain a random untriggered buff. A maximum of 3 such corresponding elemental buffs can exist simultaneously.\nYou must unlock the Passive Talent "Jade-Claimed Flower" first.',
             level: 4,
         },
         {
             name: 'Matsuban: Ancient Illuminator From Abroad',
-            image: 'https://genshin.honeyhunterworld.com/img/c_755.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Wanderer_01.png',
             description:
                 'Increases the Level of\nHanega: Song of the Wind\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: "Shugen: The Curtains' Melancholic Sway",
-            image: 'https://genshin.honeyhunterworld.com/img/c_756.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Wanderer_04.png',
             description:
                 "When the Wanderer actively hits an opponent with Kuugo: Fushoudan while in the\nWindfavored\nstate, the following effects will occur:\n\u00b7Deals an additional instance of Kuugo: Fushoudan at the position hit, dealing 40% of the attack's original DMG. This DMG will be considered Normal Attack DMG.\n\u00b7When the Wanderer falls below 40 Kuugoryoku Points, restores 4 Points to him. Kuugoryoku Points can be restored in this manner once every 0.2s. This restoration can occur up to 5 times within one Windfavored duration.",
             level: 6,

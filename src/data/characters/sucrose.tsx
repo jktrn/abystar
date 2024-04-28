@@ -14,7 +14,7 @@ const constellationBonuses: Bonus[] = [
 
 const Sucrose: Character = {
     name: 'Sucrose',
-    icon: '/images/characters/sucrose.png',
+    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Sucrose.png',
     weapon: 'Catalyst',
     vision: 'Anemo',
     rarity: 4,
@@ -138,7 +138,7 @@ const Sucrose: Character = {
     talents: [
         {
             name: 'Normal Attack: Wind Spirit Creation',
-            image: 'https://genshin.honeyhunterworld.com/img/s_433101.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_A_Catalyst_MD.png',
             description:
                 'Normal Attack\nPerforms up to 4 attacks using Wind Spirits, dealing\nAnemo DMG\n.\nCharged Attack\nConsumes a certain amount of Stamina and deals\nAoE Anemo DMG\nafter a short casting time.\nPlunging Attack\nCalling upon the power of her Wind Spirits, Sucrose plunges towards the ground from mid-air, damaging all opponents in her path. Deals\nAoE Anemo DMG\nupon impact with the ground.',
             data: {
@@ -267,7 +267,7 @@ const Sucrose: Character = {
                     Lv3: '132.13%',
                     Lv4: '145.35%',
                     Lv5: '154.59%',
-                    Lv6: '165.16%',
+                    Lv6: '165.17%',
                     Lv7: '179.7%',
                     Lv8: '194.23%',
                     Lv9: '208.77%',
@@ -299,7 +299,7 @@ const Sucrose: Character = {
         },
         {
             name: 'Astable Anemohypostasis Creation - 6308',
-            image: 'https://genshin.honeyhunterworld.com/img/s_433201.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_S_Sucrose_01.png',
             description:
                 'Creates a small Wind Spirit that pulls opponents and objects towards its location, launches opponents within its AoE, and deals\nAnemo DMG\n.\nThis is a little embarrassing, but though the elemental lifeforms birthed through this procedure dissipate very rapidly, they are incredibly useful when adventuring. Even failed experiments can have practical applications.',
             data: {
@@ -341,7 +341,7 @@ const Sucrose: Character = {
         },
         {
             name: 'Forbidden Creation - Isomer 75 / Type II',
-            image: 'https://genshin.honeyhunterworld.com/img/s_433901.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_E_Sucrose_01.png',
             description:
                 'Sucrose hurls an unstable concoction that creates a Large Wind Spirit.\nWhile it persists, the Large Wind Spirit will continuously pull in surrounding opponents and objects, launch nearby opponents, and deal\nAnemo DMG\n.\nElemental Absorption\nIf the Wind Spirit comes into contact with\nHydro\n/\nPyro\n/\nCryo\n/\nElectro\nenergy, it will deal additional elemental DMG of that type.\nElemental Absorption may only occur once per use.\nSucrose used to give names to her volatile Anemo Hypostases, but their line of heirs quickly grew to surpass Baron Bunny the 893rd.',
             data: {
@@ -436,19 +436,19 @@ const Sucrose: Character = {
     passiveSkills: [
         {
             name: 'Astable Invention',
-            image: 'https://genshin.honeyhunterworld.com/img/p_432301.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_Combine_Material.png',
             description:
                 'When Sucrose crafts Character and Weapon Enhancement Materials, she has a 10% chance to obtain double the product.',
         },
         {
             name: 'Catalyst Conversion',
-            image: 'https://genshin.honeyhunterworld.com/img/p_432101.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Sucrose_05.png',
             description:
                 'When Sucrose triggers a Swirl reaction, all characters in the party with the matching element (excluding Sucrose) have their Elemental Mastery increased by 50 for 8s.',
         },
         {
             name: 'Mollis Favonius',
-            image: 'https://genshin.honeyhunterworld.com/img/p_432201.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Sucrose_06.png',
             description:
                 "When\nAstable Anemohypostasis Creation - 6308\nor\nForbidden Creation - Isomer 75 / Type II\nhits an opponent, increases all party members' (excluding Sucrose) Elemental Mastery by an amount equal to 20% of Sucrose's Elemental Mastery for 8s.",
         },
@@ -456,42 +456,42 @@ const Sucrose: Character = {
     constellations: [
         {
             name: 'Clustered Vacuum Field',
-            image: 'https://genshin.honeyhunterworld.com/img/c_431.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Sucrose_01.png',
             description:
                 'Astable Anemohypostasis Creation - 6308\ngains 1 additional charge.',
             level: 1,
         },
         {
             name: 'Beth: Unbound Form',
-            image: 'https://genshin.honeyhunterworld.com/img/c_432.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Sucrose_02.png',
             description:
                 'The duration of\nForbidden Creation - Isomer 75 / Type II\nis increased by 2s.',
             level: 2,
         },
         {
             name: 'Flawless Alchemistress',
-            image: 'https://genshin.honeyhunterworld.com/img/c_433.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Sucrose_01.png',
             description:
                 'Increases the Level of\nAstable Anemohypostasis Creation - 6308\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: 'Alchemania',
-            image: 'https://genshin.honeyhunterworld.com/img/c_434.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Sucrose_03.png',
             description:
                 'Sucrose will reduce the CD of\nAstable Anemohypostasis Creation - 6308\nby 1-7s for every 7 Normal or Charged Attack hits she scores against opponents.\nOne hit may be counted every 0.1s.',
             level: 4,
         },
         {
             name: 'Caution: Standard Flask',
-            image: 'https://genshin.honeyhunterworld.com/img/c_435.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Sucrose_02.png',
             description:
                 'Increases the Level of\nForbidden Creation - Isomer 75 / Type II\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: 'Chaotic Entropy',
-            image: 'https://genshin.honeyhunterworld.com/img/c_436.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Sucrose_04.png',
             description:
                 'If\nForbidden Creation - Isomer 75 / Type II\ntriggers an Elemental Absorption, all party members gain a 20% Elemental DMG Bonus for the corresponding absorbed element during its duration.',
             level: 6,

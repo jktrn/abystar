@@ -14,7 +14,7 @@ const constellationBonuses: Bonus[] = [
 
 const Freminet: Character = {
     name: 'Freminet',
-    icon: '/images/characters/freminet.png',
+    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Freminet.png',
     weapon: 'Claymore',
     vision: 'Cryo',
     rarity: 4,
@@ -138,7 +138,7 @@ const Freminet: Character = {
     talents: [
         {
             name: 'Normal Attack: Flowing Eddies',
-            image: 'https://genshin.honeyhunterworld.com/img/s_853101.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_A_04.png',
             description:
                 'Normal Attack\nPerforms up to 4 consecutive strikes.\nCharged Attack\nDrains Stamina over time to perform continuous spinning attacks against all nearby opponents.\nAt the end of the sequence, performs a more powerful slash.\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.',
             data: {
@@ -216,7 +216,7 @@ const Freminet: Character = {
                     Lv3: '72.7%',
                     Lv4: '79.97%',
                     Lv5: '85.06%',
-                    Lv6: '90.87%',
+                    Lv6: '90.88%',
                     Lv7: '98.87%',
                     Lv8: '106.87%',
                     Lv9: '114.87%',
@@ -229,11 +229,11 @@ const Freminet: Character = {
                 },
                 'Charged Attack Final DMG': {
                     Lv1: '113.09%',
-                    Lv2: '122.29%',
+                    Lv2: '122.3%',
                     Lv3: '131.5%',
                     Lv4: '144.65%',
                     Lv5: '153.86%',
-                    Lv6: '164.37%',
+                    Lv6: '164.38%',
                     Lv7: '178.84%',
                     Lv8: '193.31%',
                     Lv9: '207.77%',
@@ -333,7 +333,7 @@ const Freminet: Character = {
         },
         {
             name: 'Pressurized Floe',
-            image: 'https://genshin.honeyhunterworld.com/img/s_853201.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_S_Freminet_01.png',
             description:
                 'Performs an upward thrust that deals\nCryo DMG\nand causes Freminet to enter Pers Timer for 10s.\nWhile Pers Timer is active, his Elemental Skill will turn into Shattering Pressure.\nShattering Pressure\nExecutes different sorts of attacks based on the Pressure Level of Pers Timer, and then cancels Pers Timer.\n\u00b7Level 0: Unleashes a vertical cut, dealing\nCryo DMG\n.\n\u00b7Levels 1 to 3: Unleashes a vertical cut alongside Pers, dealing\nCryo DMG\nand Physical DMG. DMG dealt scales based on Pressure Level.\n\u00b7Level 4: Borrows the power of a fully-pressurized Pers to deal Physical DMG. Meanwhile, Normal Attack: Flowing Eddies will be replaced by Shattering Pressure.\nPers Timer\nWhen Freminet uses Normal Attacks, he will also unleash waves of frost that deal\nCryo DMG\nand increase Pers\'s Pressure Level.\nThe accompanying\nCryo DMG\ndealt this way is considered Elemental Skill DMG.\nArkhe: Pneuma\nAt certain intervals, after using the upward thrust, a Spiritbreath Thorn in the form of another upward thrust will be created, dealing Pneuma-aligned\nCryo DMG\n.\nTo immobilize one\'s opponent without taking their life can also be considered something of a "survival" strategy that one may choose.\n"Pers... I leave the rest to you."',
             data: {
@@ -369,7 +369,7 @@ const Freminet: Character = {
                     Lv12: '14.32%',
                     Lv13: '15.22%',
                     Lv14: '16.11%',
-                    Lv15: '17%',
+                    Lv15: '17.01%',
                 },
                 'Level 0 Shattering Pressure DMG': {
                     Lv1: '200.48%',
@@ -435,7 +435,7 @@ const Freminet: Character = {
                     Lv10: '72.17% Cryo + 219.1% Physical',
                     Lv11: '76.18% Cryo + 231.27% Physical',
                     Lv12: '80.19% Cryo + 243.44% Physical',
-                    Lv13: '85.2% Cryo + 258.65% Physical',
+                    Lv13: '85.2% Cryo + 258.66% Physical',
                     Lv14: '90.22% Cryo + 273.87% Physical',
                     Lv15: '95.23% Cryo + 289.09% Physical',
                 },
@@ -511,7 +511,7 @@ const Freminet: Character = {
         },
         {
             name: "Shadowhunter's Ambush",
-            image: 'https://genshin.honeyhunterworld.com/img/s_853901.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_E_Freminet_01.png',
             description:
                 'Unleashes a wave of untouchable cold, dealing\nAoE Cryo DMG\n, resetting the CD of the Elemental Skill "Pressurized Floe," and causing Freminet to enter the Subnautical Hunter mode for 10s.\nWhile in Subnautical Hunter mode, Freminet\'s resistance to interruption will increase, and his Elemental Skill "Pressurized Floe" will obtain the following buffs:\n\u00b7CD is decreased by 70%.\n\u00b7Normal Attacks will increase the Pers Timer by 1 additional Pressure Level, and the frost released by his Normal Attacks deal 200% of their original DMG.\nThese effects will be canceled when Freminet leaves the field.\n"Now... I have no need of any extraneous noise."',
             data: {
@@ -589,19 +589,19 @@ const Freminet: Character = {
     passiveSkills: [
         {
             name: 'Deepwater Navigation',
-            image: 'https://genshin.honeyhunterworld.com/img/p_852301.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Freminet_07.png',
             description:
                 'Decreases Aquatic Stamina consumption for your own party members by 35%.\nNot stackable with Passive Talents that provide the exact same effects.',
         },
         {
             name: 'Saturation Deep Dive',
-            image: 'https://genshin.honeyhunterworld.com/img/p_852101.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Freminet_05.png',
             description:
                 'When Freminet unleashes\nPressurized Floe: Shattering Pressure\n, if Pers Timer has yet to reach Pressure Level 4, the CD of Pressurized Floe will be decreased by 1s.',
         },
         {
             name: 'Parallel Condensers',
-            image: 'https://genshin.honeyhunterworld.com/img/p_852201.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Freminet_06.png',
             description:
                 'When Freminet triggers Shatter against opponents, the DMG dealt by\nPressurized Floe: Shattering Pressure\nwill be increased by 40% for 5s.',
         },
@@ -609,42 +609,42 @@ const Freminet: Character = {
     constellations: [
         {
             name: 'Dreams of the Foamy Deep',
-            image: 'https://genshin.honeyhunterworld.com/img/c_851.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Freminet_01.png',
             description:
                 'The CRIT Rate of\nPressurized Floe: Shattering Pressure\nwill be increased by 15%.',
             level: 1,
         },
         {
             name: 'Penguins and the Land of Plenty',
-            image: 'https://genshin.honeyhunterworld.com/img/c_852.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Freminet_02.png',
             description:
                 'Unleashing\nPressurized Floe: Shattering Pressure\nwill restore 2 Energy to Freminet. If a Pressure Level 4 Shattering Pressure is unleashed, this will restore 3 Energy.',
             level: 2,
         },
         {
             name: 'Song of the Eddies and Bleached Sands',
-            image: 'https://genshin.honeyhunterworld.com/img/c_853.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Freminet_01.png',
             description:
                 'Increases the Level of\nNormal Attack: Flowing Eddies\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: 'Dance of the Snowy Moon and Flute',
-            image: 'https://genshin.honeyhunterworld.com/img/c_854.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Freminet_03.png',
             description:
                 'After Freminet triggers Frozen, Shatter, or Superconduct against opponents, his ATK will be increased by 9% for 6s. Max 2 stacks. This can be triggered once every 0.3s.',
             level: 4,
         },
         {
             name: 'Nights of Hearth and Happiness',
-            image: 'https://genshin.honeyhunterworld.com/img/c_855.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Freminet_02.png',
             description:
                 'Increases the Level of\nPressurized Floe\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: 'Moment of Waking and Resolve',
-            image: 'https://genshin.honeyhunterworld.com/img/c_856.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Freminet_04.png',
             description:
                 'After Freminet triggers Frozen, Shatter, or Superconduct against opponents, his CRIT DMG will be increased by 12% for 6s. Max 3 stacks. This can be triggered once every 0.3s.',
             level: 6,

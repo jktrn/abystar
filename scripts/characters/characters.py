@@ -350,7 +350,19 @@ def update_characters_json(char_data):
         existing_data = json.load(json_file)
 
     character_name = char_data['name']
-    existing_data[character_name] = char_data
+    simplified_char_data = {
+        "name": char_data["name"],
+        "icon": char_data["icon"],
+        "weapon": char_data["weapon"],
+        "vision": char_data["vision"],
+        "rarity": char_data["rarity"],
+        "implemented": True
+    }
+
+    if character_name in existing_data:
+        existing_data[character_name].update(simplified_char_data)
+    else:
+        existing_data[character_name] = simplified_char_data
 
     sorted_data = dict(sorted(existing_data.items()))
 
@@ -376,14 +388,22 @@ async def fetch_images_from_api(api, character_name):
         for i, constellation in enumerate(detail.constellations):
             images["constellations"].append(constellation.icon)
         talent_count = 0
+        passives = []
         for i, talent in enumerate(detail.talents):
             if talent_count < 3:
                 if len(detail.talents) == 7 and i == 2:
-                    continue # dodge the mona/ayaka sprint
+                    continue  # dodge the mona/ayaka sprint
                 images["talents"].append(talent.icon)
                 talent_count += 1
             elif i < 9:
-                images["passives"].append(talent.icon)
+                passives.append(talent.icon)
+        
+        # Reorder the passives to be 3, 1, 2
+        if len(passives) == 3:
+            images["passives"] = [passives[2], passives[0], passives[1]]
+        else:
+            images["passives"] = passives
+        
         return images
     else:
         return None
@@ -433,21 +453,19 @@ async def main():
                 else:
                     print(f"Character '{character_key}' not found after refetching paths.")
     elif args.all:
-        all_data = {}
-
         pbar = tqdm(characters.items(), position=0)
         for character_key, character_path in pbar:
             pbar.set_description(f'Fetching {character_key}\'s data')
             data_dict = await fetch_character_data(api, character_path)
             if data_dict:
-                all_data[character_key] = data_dict
-
-        all_data = fix_traveler(all_data)
-
-        for character_name, character_data in all_data.items():
-            character_data = process_character_data(character_data)
-            generate_tsx_file(character_data, output_dir)
-            update_characters_json(character_data)
+                data_dict = process_character_data(data_dict)
+                generate_tsx_file(data_dict, output_dir)
+                update_characters_json(data_dict)
+                if data_dict["name"] == "Traveler":
+                    travelers_data = fix_traveler({"Traveler": data_dict})
+                    for traveler_name, traveler_data in travelers_data.items():
+                        generate_tsx_file(traveler_data, output_dir)
+                        update_characters_json(traveler_data)
     else:
         parser.print_help()
 

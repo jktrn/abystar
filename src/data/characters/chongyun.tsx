@@ -14,7 +14,7 @@ const constellationBonuses: Bonus[] = [
 
 const Chongyun: Character = {
     name: 'Chongyun',
-    icon: '/images/characters/chongyun.png',
+    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Chongyun.png',
     weapon: 'Claymore',
     vision: 'Cryo',
     rarity: 4,
@@ -138,7 +138,7 @@ const Chongyun: Character = {
     talents: [
         {
             name: 'Normal Attack: Demonbane',
-            image: 'https://genshin.honeyhunterworld.com/img/s_363101.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_A_04.png',
             description:
                 'Normal Attack\nPerforms up to 4 consecutive strikes.\nCharged Attack\nDrains Stamina over time to perform continuous spinning attacks against all nearby opponents.\nAt the end of the sequence, performs a more powerful slash.\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.',
             data: {
@@ -231,7 +231,7 @@ const Chongyun: Character = {
                     Lv1: '101.78%',
                     Lv2: '110.07%',
                     Lv3: '118.35%',
-                    Lv4: '130.18%',
+                    Lv4: '130.19%',
                     Lv5: '138.47%',
                     Lv6: '147.94%',
                     Lv7: '160.96%',
@@ -242,7 +242,7 @@ const Chongyun: Character = {
                     Lv12: '229.6%',
                     Lv13: '243.8%',
                     Lv14: '258%',
-                    Lv15: '272.2%',
+                    Lv15: '272.21%',
                 },
                 'Charged Attack Stamina Cost': {
                     Lv1: '40 / s',
@@ -333,7 +333,7 @@ const Chongyun: Character = {
         },
         {
             name: "Spirit Blade: Chonghua's Layered Frost",
-            image: 'https://genshin.honeyhunterworld.com/img/s_363201.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_S_Chongyun_01.png',
             description:
                 'Chongyun strikes the ground with his greatsword, causing a Cryo explosion in a circular AoE in front of him that deals\nCryo DMG\n.\nAfter a short delay, the cold air created by the Cryo explosion will coalesce into a Chonghua Frost Field, within which all Sword, Claymore and Polearm-wielding characters\' weapons will be infused with\nCryo\n.\n"A crystal-clear ring, and all is silent. The rivers move not, and the clouds are heavy with frost. The altar gates open, and evil is banished."',
             data: {
@@ -350,9 +350,9 @@ const Chongyun: Character = {
                     Lv10: '309.67%',
                     Lv11: '326.88%',
                     Lv12: '344.08%',
-                    Lv13: '365.58%',
+                    Lv13: '365.59%',
                     Lv14: '387.09%',
-                    Lv15: '408.59%',
+                    Lv15: '408.6%',
                 },
                 'Infusion Duration': {
                     Lv1: '2s',
@@ -409,7 +409,7 @@ const Chongyun: Character = {
         },
         {
             name: 'Spirit Blade: Cloud-Parting Star',
-            image: 'https://genshin.honeyhunterworld.com/img/s_363901.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_E_Chongyun_01.png',
             description:
                 'Performing the secret hand seals, Chongyun summons 3 giant spirit blades in mid-air that fall to the earth one by one after a short delay, exploding as they hit the ground.\nWhen the spirit blades explode, they will deal\nAoE Cryo DMG\nand launch opponents.\n"As ice doth give the biting frost birth, My transcendent blade shakes heaven and earth. Heed my summons and come hence!"',
             data: {
@@ -470,19 +470,19 @@ const Chongyun: Character = {
     passiveSkills: [
         {
             name: 'Gallant Journey',
-            image: 'https://genshin.honeyhunterworld.com/img/p_362301.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_Expedition_Liyue.png',
             description:
                 'When dispatched on an expedition in Liyue, time consumed is reduced by 25%.',
         },
         {
             name: 'Steady Breathing',
-            image: 'https://genshin.honeyhunterworld.com/img/p_362101.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Chongyun_05.png',
             description:
                 "Sword, Claymore, or Polearm-wielding characters within the field created by\nSpirit Blade: Chonghua's Layered Frost\nhave their Normal ATK SPD increased by 8%.",
         },
         {
             name: 'Rimechaser Blade',
-            image: 'https://genshin.honeyhunterworld.com/img/p_362201.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Chongyun_06.png',
             description:
                 "When the field created by\nSpirit Blade: Chonghua's Layered Frost\ndisappears, another spirit blade will be summoned to strike nearby opponents, dealing 100% of Chonghua's Layered Frost's Skill DMG as\nAoE Cryo DMG\n. Opponents hit by this blade will have their\nCryo RES\ndecreased by 10% for 8s.",
         },
@@ -490,42 +490,42 @@ const Chongyun: Character = {
     constellations: [
         {
             name: 'Ice Unleashed',
-            image: 'https://genshin.honeyhunterworld.com/img/c_361.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Chongyun_01.png',
             description:
                 "The last attack of Chongyun's Normal Attack combo releases 3 ice blades. Each blade deals 50% of Chongyun's ATK as\nCryo DMG\nto all opponents in its path.",
             level: 1,
         },
         {
             name: 'Atmospheric Revolution',
-            image: 'https://genshin.honeyhunterworld.com/img/c_362.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Chongyun_02.png',
             description:
                 "Elemental Skills and Elemental Bursts cast within the Frost Field created by\nSpirit Blade: Chonghua's Layered Frost\nhave their CD time decreased by 15%.",
             level: 2,
         },
         {
             name: 'Cloudburst',
-            image: 'https://genshin.honeyhunterworld.com/img/c_363.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Chongyun_01.png',
             description:
                 'Increases the Level of\nSpirit Blade: Cloud-Parting Star\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: 'Frozen Skies',
-            image: 'https://genshin.honeyhunterworld.com/img/c_364.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Chongyun_03.png',
             description:
                 'Chongyun regenerates 1 Energy every time he hits an opponent affected by\nCryo\n.\nThis effect can only occur once every 2s.',
             level: 4,
         },
         {
             name: 'The True Path',
-            image: 'https://genshin.honeyhunterworld.com/img/c_365.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Chongyun_02.png',
             description:
                 "Increases the Level of\nSpirit Blade: Chonghua's Layered Frost\nby 3.\nMaximum upgrade level is 15.",
             level: 5,
         },
         {
             name: 'Rally of Four Blades',
-            image: 'https://genshin.honeyhunterworld.com/img/c_366.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Chongyun_04.png',
             description:
                 'Spirit Blade: Cloud-Parting Star\ndeals 15% more DMG to opponents with a lower percentage of their Max HP remaining than Chongyun.\nThis skill will also summon 1 additional spirit blade.',
             level: 6,

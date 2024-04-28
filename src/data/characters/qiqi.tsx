@@ -14,7 +14,7 @@ const constellationBonuses: Bonus[] = [
 
 const Qiqi: Character = {
     name: 'Qiqi',
-    icon: '/images/characters/qiqi.png',
+    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Qiqi.png',
     weapon: 'Sword',
     vision: 'Cryo',
     rarity: 5,
@@ -138,7 +138,7 @@ const Qiqi: Character = {
     talents: [
         {
             name: 'Normal Attack: Ancient Sword Art',
-            image: 'https://genshin.honeyhunterworld.com/img/s_353101.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_A_01.png',
             description:
                 'Normal Attack\nPerforms up to 5 rapid strikes.\nCharged Attack\nConsumes a certain amount of Stamina to unleash 2 rapid sword strikes.\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.',
             data: {
@@ -148,7 +148,7 @@ const Qiqi: Character = {
                     Lv3: '43.9%',
                     Lv4: '48.29%',
                     Lv5: '51.36%',
-                    Lv6: '54.87%',
+                    Lv6: '54.88%',
                     Lv7: '59.7%',
                     Lv8: '64.53%',
                     Lv9: '69.36%',
@@ -182,7 +182,7 @@ const Qiqi: Character = {
                     Lv3: '56.20%',
                     Lv4: '61.82%',
                     Lv5: '65.76%',
-                    Lv6: '70.24%',
+                    Lv6: '70.26%',
                     Lv7: '76.44%',
                     Lv8: '82.62%',
                     Lv9: '88.80%',
@@ -199,7 +199,7 @@ const Qiqi: Character = {
                     Lv3: '57.40%',
                     Lv4: '63.14%',
                     Lv5: '67.16%',
-                    Lv6: '71.74%',
+                    Lv6: '71.76%',
                     Lv7: '78.06%',
                     Lv8: '84.38%',
                     Lv9: '90.70%',
@@ -216,7 +216,7 @@ const Qiqi: Character = {
                     Lv3: '73.3%',
                     Lv4: '80.63%',
                     Lv5: '85.76%',
-                    Lv6: '91.62%',
+                    Lv6: '91.63%',
                     Lv7: '99.69%',
                     Lv8: '107.75%',
                     Lv9: '115.81%',
@@ -316,7 +316,7 @@ const Qiqi: Character = {
         },
         {
             name: 'Adeptus Art: Herald of Frost',
-            image: 'https://genshin.honeyhunterworld.com/img/s_353201.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_S_Qiqi_01.png',
             description:
                 "Using the Icevein Talisman, Qiqi brings forth the Herald of Frost, dealing\nCryo DMG\nto surrounding opponents.\nHerald of Frost\n\u00b7On hit, Qiqi's Normal and Charged Attacks regenerate HP for your own party members and nearby teammates. Healing scales based on Qiqi's ATK.\n\u00b7Periodically regenerates your active character's HP.\n\u00b7Follows the character around, dealing\nCryo DMG\nto opponents in their path.\nI use this to prevent warming and rot... of Dr. Bai's precious ingredients. Yes.",
             data: {
@@ -426,7 +426,7 @@ const Qiqi: Character = {
         },
         {
             name: 'Adeptus Art: Preserver of Fortune',
-            image: 'https://genshin.honeyhunterworld.com/img/s_353901.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_E_Qiqi_01.png',
             description:
                 'Qiqi releases the adeptus power sealed within her body, marking nearby opponents with a Fortune-Preserving Talisman that deals\nCryo DMG\n.\nFortune-Preserving Talisman\nWhen opponents affected by this Talisman take DMG, the character that dealt this DMG regenerates HP.\n"I am the Fortune Preserver, the Maiden of Resurrection."\n\u2014 Qiqi does not remember these words.',
             data: {
@@ -521,19 +521,19 @@ const Qiqi: Character = {
     passiveSkills: [
         {
             name: 'Former Life Memories',
-            image: 'https://genshin.honeyhunterworld.com/img/p_352301.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_Collect_Local_Liyue.png',
             description:
                 'Displays the location of nearby\nresources unique to Liyue\non the mini-map.',
         },
         {
             name: 'Life-Prolonging Methods',
-            image: 'https://genshin.honeyhunterworld.com/img/p_352101.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Qiqi_05.png',
             description:
                 'When a character under the effects of\nAdeptus Art: Herald of Frost\ntriggers an Elemental Reaction, their Incoming Healing Bonus is increased by 20% for 8s.',
         },
         {
             name: 'A Glimpse Into Arcanum',
-            image: 'https://genshin.honeyhunterworld.com/img/p_352201.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Qiqi_06.png',
             description:
                 'When Qiqi hits opponents with her Normal and Charged Attacks, she has a 50% chance to apply a Fortune-Preserving Talisman to them for 6s. This effect can only occur once every 30s.',
         },
@@ -541,42 +541,42 @@ const Qiqi: Character = {
     constellations: [
         {
             name: 'Ascetics of Frost',
-            image: 'https://genshin.honeyhunterworld.com/img/c_351.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Qiqi_01.png',
             description:
                 'When the Herald of Frost hits an opponent marked by a Fortune-Preserving Talisman, Qiqi regenerates 2 Energy.',
             level: 1,
         },
         {
             name: 'Frozen to the Bone',
-            image: 'https://genshin.honeyhunterworld.com/img/c_352.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Qiqi_02.png',
             description:
                 "Qiqi's Normal and Charge Attack DMG against opponents affected by\nCryo\nis increased by 15%.",
             level: 2,
         },
         {
             name: 'Ascendant Praise',
-            image: 'https://genshin.honeyhunterworld.com/img/c_353.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Qiqi_01.png',
             description:
                 'Increases the Level of\nAdeptus Art: Preserver of Fortune\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: 'Divine Suppression',
-            image: 'https://genshin.honeyhunterworld.com/img/c_354.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Qiqi_03.png',
             description:
                 'Targets marked by the Fortune-Preserving Talisman have their ATK decreased by 20%.',
             level: 4,
         },
         {
             name: 'Crimson Lotus Bloom',
-            image: 'https://genshin.honeyhunterworld.com/img/c_355.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Qiqi_02.png',
             description:
                 'Increases the Level of\nAdeptus Art: Herald of Frost\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: 'Rite of Resurrection',
-            image: 'https://genshin.honeyhunterworld.com/img/c_356.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Qiqi_04.png',
             description:
                 'Using\nAdeptus Art: Preserver of Fortune\nrevives all fallen party members nearby and regenerates 50% of their HP.\nThis effect can only occur once every 15 mins.',
             level: 6,

@@ -14,7 +14,7 @@ const constellationBonuses: Bonus[] = [
 
 const Yanfei: Character = {
     name: 'Yanfei',
-    icon: '/images/characters/yanfei.png',
+    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Feiyan.png',
     weapon: 'Catalyst',
     vision: 'Pyro',
     rarity: 4,
@@ -138,7 +138,7 @@ const Yanfei: Character = {
     talents: [
         {
             name: 'Normal Attack: Seal of Approval',
-            image: 'https://genshin.honeyhunterworld.com/img/s_483101.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_A_Catalyst_MD.png',
             description:
                 "Normal Attack\nShoots fireballs that deal up to three counts of\nPyro DMG\n.\nWhen Yanfei's Normal Attacks hit enemies, they will grant her a single Scarlet Seal. Yanfei may possess a maximum of 3 Scarlet Seals, and each time this effect is triggered, the duration of currently possessed Scarlet Seals will refresh.\nEach Scarlet Seal will decrease Yanfei's Stamina consumption and will disappear when she leaves the field.\nCharged Attack\nConsumes Stamina and all Scarlet Seals before dealing\nAoE Pyro DMG\nto opponents after a short casting time.\nThis Charged Attack's AoE and DMG will increase according to the amount of Scarlet Seals consumed.\nPlunging Attack\nGathering the power of Pyro, Yanfei plunges towards the ground from mid-air, damaging all opponents in her path. Deals\nAoE Pyro DMG\nupon impact with the ground.",
             data: {
@@ -193,7 +193,7 @@ const Yanfei: Character = {
                     Lv14: '171.03%',
                     Lv15: '180.53%',
                 },
-                'Charged Attack DMG': {
+                'Charged Attack': {
                     Lv1: '98.23% / 115.56% / 132.9% / 150.23% / 167.57%',
                     Lv2: '104.11% / 122.48% / 140.86% / 159.23% / 177.6%',
                     Lv3: '109.99% / 129.4% / 148.81% / 168.23% / 187.64%',
@@ -284,7 +284,7 @@ const Yanfei: Character = {
                     Lv3: '132.13%',
                     Lv4: '145.35%',
                     Lv5: '154.59%',
-                    Lv6: '165.16%',
+                    Lv6: '165.17%',
                     Lv7: '179.7%',
                     Lv8: '194.23%',
                     Lv9: '208.77%',
@@ -316,7 +316,7 @@ const Yanfei: Character = {
         },
         {
             name: 'Signed Edict',
-            image: 'https://genshin.honeyhunterworld.com/img/s_483201.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_S_Feiyan_01.png',
             description:
                 "Summons blistering flames that deal\nAoE Pyro DMG\n.\nOpponents hit by the flames will grant Yanfei the maximum number of Scarlet Seals.\nApart from their legal uses, Yanfei's seals also come with her customized additional terms and conditions. Well, it's not as if the Ministry of Civil Affairs can change the laws of nature.",
             data: {
@@ -358,7 +358,7 @@ const Yanfei: Character = {
         },
         {
             name: 'Done Deal',
-            image: 'https://genshin.honeyhunterworld.com/img/s_483901.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_E_Feiyan_01.png',
             description:
                 'Triggers a spray of intense flames that rush at nearby opponents, dealing\nAoE Pyro DMG\n, granting Yanfei the maximum number of Scarlet Seals, and applying Brilliance to her.\nBrilliance\nHas the following effects:\n\u00b7Grants Yanfei a Scarlet Seal at fixed intervals.\n\u00b7Increases the DMG dealt by her Charged Attacks.\nThe effects of Brilliance will end if Yanfei leaves the field or falls in battle.\n"Here are the full terms for this matter of life and death \u2014 by which I mean my life and your death!"',
             data: {
@@ -470,19 +470,19 @@ const Yanfei: Character = {
     passiveSkills: [
         {
             name: 'Encyclopedic Expertise',
-            image: 'https://genshin.honeyhunterworld.com/img/p_482301.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_Collect_Local_Liyue.png',
             description:
                 'Displays the location of nearby\nresources unique to Liyue\non the mini-map.',
         },
         {
             name: 'Proviso',
-            image: 'https://genshin.honeyhunterworld.com/img/p_482101.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Feiyan_05.png',
             description:
                 "When Yanfei consumes Scarlet Seals by using a Charged Attack, each Scarlet Seal will increase Yanfei's\nPyro DMG Bonus\nby 5%. This effect lasts for 6s. When a Charged Attack is used again during the effect's duration, it will dispel the previous effect.",
         },
         {
             name: 'Blazing Eye',
-            image: 'https://genshin.honeyhunterworld.com/img/p_482201.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Feiyan_06.png',
             description:
                 "When Yanfei's Charged Attack deals a CRIT Hit to opponents, she will deal an additional instance of\nAoE Pyro DMG\nequal to 80% of her ATK. This DMG counts as Charged Attack DMG.",
         },
@@ -490,42 +490,42 @@ const Yanfei: Character = {
     constellations: [
         {
             name: 'The Law Knows No Kindness',
-            image: 'https://genshin.honeyhunterworld.com/img/c_481.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Feiyan_01.png',
             description:
                 'When Yanfei uses her Charged Attack, each existing Scarlet Seal additionally reduces the stamina cost of this Charged Attack by 10% and increases resistance against interruption during its release.',
             level: 1,
         },
         {
             name: 'Right of Final Interpretation',
-            image: 'https://genshin.honeyhunterworld.com/img/c_482.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Feiyan_02.png',
             description:
                 "Increases Yanfei's Charged Attack CRIT Rate by 20% against enemies below 50% HP.",
             level: 2,
         },
         {
             name: 'Samadhi Fire-Forged',
-            image: 'https://genshin.honeyhunterworld.com/img/c_483.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Feiyan_01.png',
             description:
                 'Increases the Level of\nSigned Edict\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: 'Supreme Amnesty',
-            image: 'https://genshin.honeyhunterworld.com/img/c_484.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Feiyan_03.png',
             description:
                 "When\nDone Deal\nis used:\nCreates a shield that absorbs up to 45% of Yanfei's Max HP for 15s.\nThis shield absorbs\nPyro DMG\n250% more effectively.",
             level: 4,
         },
         {
             name: 'Abiding Affidavit',
-            image: 'https://genshin.honeyhunterworld.com/img/c_485.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Feiyan_02.png',
             description:
                 'Increases the Level of\nDone Deal\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: 'Extra Clause',
-            image: 'https://genshin.honeyhunterworld.com/img/c_486.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Feiyan_04.png',
             description: 'Increases the maximum number of Scarlet Seals by 1.',
             level: 6,
         },

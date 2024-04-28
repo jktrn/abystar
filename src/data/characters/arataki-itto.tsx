@@ -14,7 +14,7 @@ const constellationBonuses: Bonus[] = [
 
 const AratakiItto: Character = {
     name: 'Arataki Itto',
-    icon: '/images/characters/arataki-itto.png',
+    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Itto.png',
     weapon: 'Claymore',
     vision: 'Geo',
     rarity: 5,
@@ -138,7 +138,7 @@ const AratakiItto: Character = {
     talents: [
         {
             name: 'Normal Attack: Fight Club Legend',
-            image: 'https://genshin.honeyhunterworld.com/img/s_573101.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_A_04.png',
             description:
                 'Normal Attack\nPerforms up to 4 consecutive strikes.\nWhen the 2nd and 4th strikes hit opponents, Itto will gain 1 and 2 stacks of Superlative Superstrength, respectively.\nMax 5 stacks. Triggering this effect will refresh the current duration of any existing stacks.\nAdditionally, Itto\'s Normal Attack combo does not immediately reset after sprinting or using his Elemental Skill, "Masatsu Zetsugi: Akaushi Burst!"\nCharged Attack\nWhen holding to perform a Charged Attack, Itto unleashes a series of Arataki Kesagiri slashes without consuming Stamina. Instead, each Arataki Kesagiri slash consumes 1 stack of Superlative Superstrength. When the final stack is consumed, Itto delivers a powerful final slash.\nIf no stacks of Superlative Superstrength are available, Itto will perform a single Saichimonji Slash.\nPlunging Attack\nPlunges from mid-air to strike the ground, damaging opponents along the path and dealing AoE DMG upon impact.',
             data: {
@@ -221,7 +221,7 @@ const AratakiItto: Character = {
                     Lv8: '155.82%',
                     Lv9: '167.48%',
                     Lv10: '180.2%',
-                    Lv11: '194.77%',
+                    Lv11: '194.78%',
                     Lv12: '211.92%',
                     Lv13: '229.06%',
                     Lv14: '246.2%',
@@ -238,7 +238,7 @@ const AratakiItto: Character = {
                     Lv8: '326.34%',
                     Lv9: '350.76%',
                     Lv10: '377.4%',
-                    Lv11: '407.92%',
+                    Lv11: '407.93%',
                     Lv12: '443.82%',
                     Lv13: '479.72%',
                     Lv14: '515.62%',
@@ -350,7 +350,7 @@ const AratakiItto: Character = {
         },
         {
             name: 'Masatsu Zetsugi: Akaushi Burst!',
-            image: 'https://genshin.honeyhunterworld.com/img/s_573201.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_S_Itto_01.png',
             description:
                 'Hurls Ushi, the young akaushi bull and auxiliary member of the Arataki Gang, dealing\nGeo DMG\nto opponents on hit. When Ushi hits opponents, Arataki Itto gains 1 stack of Superlative Superstrength.\nUshi will remain on the field and provide support in the following ways:\n\u00b7 Taunts surrounding opponents and draws their attacks.\n\u00b7 Inherits HP based on a percentage of Arataki Itto\'s Max HP.\n\u00b7 When Ushi takes DMG, Arataki Itto gains 1 stack of Superlative Superstrength. Only 1 stack can be gained in this way every 2s.\n\u00b7 Ushi will flee when its HP reaches 0 or its duration ends. It will grant Arataki Itto 1 stack of Superlative Superstrength when it leaves.\nHold\nAdjust throwing angle.\nUshi is considered a\nGeo construct\n. Arataki Itto can only deploy 1 Ushi on the field at any one time.\nThe name of this technique is derived from Onibudou (a light novel series written by Junkichi). However, calling it "Onisatsu Zetsugi" probably constitutes copyright infringement \u2014 not to mention how Itto himself is an oni and all...',
             data: {
@@ -426,7 +426,7 @@ const AratakiItto: Character = {
         },
         {
             name: 'Royal Descent: Behold, Itto the Evil!',
-            image: 'https://genshin.honeyhunterworld.com/img/s_573901.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_E_Itto_01.png',
             description:
                 "Time to show 'em the might of the Arataki Gang! For a time, Itto lets out his inner Raging Oni King, wielding his Oni King's Kanabou in battle.\nThis state has the following special properties:\n\u00b7 Converts Itto's Normal, Charged, and Plunging Attacks to\nGeo DMG\n. This cannot be overridden.\n\u00b7 Increases Itto's Normal Attack SPD. Also increases his ATK based on his DEF.\n\u00b7 On hit, the 1st and 3rd strikes of his attack combo will each grant Arataki Itto 1 stack of Superlative Superstrength.\n\u00b7 Decreases Itto's Elemental and Physical RES by 20%.\nThe Raging Oni King state will be cleared when Itto leaves the field.\nThis is the pinnacle technique of the ultimate fighting style (according to Itto). It would be pointless for Arataki Itto to reference any other fighting styles to improve his own, for he, and no other, is the strongest, most terrible oni in the land.\nShouta thinks it looks really cool.",
             data: {
@@ -521,19 +521,19 @@ const AratakiItto: Character = {
     passiveSkills: [
         {
             name: 'Woodchuck Chucked',
-            image: 'https://genshin.honeyhunterworld.com/img/p_572301.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Itto_07.png',
             description:
                 'When a party member uses attacks to obtain wood from a tree, they have a 25% chance to get an additional log of wood.',
         },
         {
             name: 'Arataki Ichiban',
-            image: 'https://genshin.honeyhunterworld.com/img/p_572101.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Itto_05.png',
             description:
                 'When Arataki Itto uses consecutive Arataki Kesagiri, he obtains the following effects:\n\u00b7 Each slash increases the ATK SPD of the next slash by 10%. Max ATK SPD increase is 30%.\n\u00b7 Increases his resistance to interruption.\nThese effects will be cleared once he stops performing consecutive slashes.',
         },
         {
             name: 'Bloodline of the Crimson Oni',
-            image: 'https://genshin.honeyhunterworld.com/img/p_572201.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Itto_06.png',
             description:
                 "Arataki Kesagiri DMG is increased by 35% of Arataki Itto's DEF.",
         },
@@ -541,42 +541,42 @@ const AratakiItto: Character = {
     constellations: [
         {
             name: 'Stay a While and Listen Up',
-            image: 'https://genshin.honeyhunterworld.com/img/c_571.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Itto_01.png',
             description:
                 'After using\nRoyal Descent: Behold, Itto the Evil!\n, Arataki Itto gains 2 stacks of Superlative Superstrength. After 1s, Itto will gain 1 stack of Superlative Superstrength every 0.5s for 1.5s.',
             level: 1,
         },
         {
             name: "Gather 'Round, It's a Brawl!",
-            image: 'https://genshin.honeyhunterworld.com/img/c_572.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Itto_02.png',
             description:
                 "After using\nRoyal Descent: Behold, Itto the Evil!\n, each party member whose Element is\nGeo\nwill decrease that skill's CD by 1.5s and restore 6 Energy to Arataki Itto.\nCD can be decreased by up to 4.5s in this manner. Max 18 Energy can be restored in this manner.",
             level: 2,
         },
         {
             name: 'Horns Lowered, Coming Through',
-            image: 'https://genshin.honeyhunterworld.com/img/c_573.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Itto_01.png',
             description:
                 'Increases the Level of\nMasatsu Zetsugi: Akaushi Burst!\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: 'Jailhouse Bread and Butter',
-            image: 'https://genshin.honeyhunterworld.com/img/c_574.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Itto_03.png',
             description:
                 'When the Raging Oni King state caused by\nRoyal Descent: Behold, Itto the Evil!\nends, all nearby party members gain 20% DEF and 20% ATK for 10s.',
             level: 4,
         },
         {
             name: '10 Years of Hanamizaka Fame',
-            image: 'https://genshin.honeyhunterworld.com/img/c_575.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Itto_02.png',
             description:
                 'Increases the Level of\nRoyal Descent: Behold, Itto the Evil!\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: 'Arataki Itto, Present!',
-            image: 'https://genshin.honeyhunterworld.com/img/c_576.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Itto_04.png',
             description:
                 "Arataki Itto's Charged Attacks deal +70% Crit DMG. Additionally, when he uses Arataki Kesagiri, he has a 50% chance to not consume stacks of Superlative Superstrength.",
             level: 6,

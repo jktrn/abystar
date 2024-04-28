@@ -14,9 +14,9 @@ const constellationBonuses: Bonus[] = [
 
 const Wriothesley: Character = {
     name: 'Wriothesley',
-    icon: '/images/characters/wriothesley.png',
+    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Wriothesley.png',
     weapon: 'Catalyst',
-    vision: '5532',
+    vision: 'Cryo',
     rarity: 5,
     description:
         'Duke of the Fortress of Meropide, Lord Incognito of the murky depths.',
@@ -138,7 +138,7 @@ const Wriothesley: Character = {
     talents: [
         {
             name: 'Normal Attack: Forceful Fists of Frost',
-            image: 'https://genshin.honeyhunterworld.com/img/s_863101.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_A_Catalyst_MD.png',
             description:
                 'Normal Attack\nCoalescing frost about his fist, Wriothesley will unleash powerful\nRepelling Fists\n, performing up to 5 rapid attacks that deal\nCryo DMG\n.\nApart from this, Normal Attack combo count will not reset for a short time after using Icefang Rush or sprinting.\nCharged Attack\nConsumes a fixed amount of Stamina to leap and unleash a\nVaulting Fist\n, dealing\nAoE Cryo DMG\n.\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing\nAoE Cryo DMG\nupon impact.',
             data: {
@@ -284,7 +284,7 @@ const Wriothesley: Character = {
                     Lv3: '132.13%',
                     Lv4: '145.35%',
                     Lv5: '154.59%',
-                    Lv6: '165.16%',
+                    Lv6: '165.17%',
                     Lv7: '179.7%',
                     Lv8: '194.23%',
                     Lv9: '208.77%',
@@ -316,7 +316,7 @@ const Wriothesley: Character = {
         },
         {
             name: 'Icefang Rush',
-            image: 'https://genshin.honeyhunterworld.com/img/s_863201.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_S_Wriothesley_01.png',
             description:
                 'Adjusting his breathing, rhythm, and pace, Wriothesley sprints forward a short distance, entering the\nChilling Penalty\nstate and unleashing more powerful attacks than before.\nChilling Penalty\n\u00b7Increases Wriothesley\'s interruption resistance\n\u00b7When his HP is above 50%, it will enhance the Repelling Fists of\nNormal Attack: Forceful Fists of Frost\nand increase its DMG. When such an attack hits, it will consume a fixed amount of Wriothesley\'s HP. HP can be lost this way once every 0.1s.\nThis effect will be canceled should Wriothesley leave the field.\n"Past convictions are past. It is our future choices that we must grasp."\n"Defy your fate, or else this glutton be, to pay your fate\'s due, by the crime and thee."',
             data: {
@@ -392,7 +392,7 @@ const Wriothesley: Character = {
         },
         {
             name: 'Darkgold Wolfbite',
-            image: 'https://genshin.honeyhunterworld.com/img/s_863901.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_E_Wriothesley_01.png',
             description:
                 "Activating his boxing gloves, Wriothesley strikes out with an icy straight, then uses Icicle Impact to cause multiple instances of\nAoE Cryo DMG\nin a frontal area.\nArkhe: Ousia\nAfter Icicle Impact ends, a Surging Blade will descend upon the opponent's position, dealing Ousia-aligned\nCryo DMG\n.\nThere are some things that even the Duke of the Fortress of Meropide can do little about \u2014 for example, complicated paperwork, the trivialities of a supervisor, or even... little kids pasting a whole host of cute but difficult-to-remove stickers on his boxing gloves.",
             data: {
@@ -487,19 +487,19 @@ const Wriothesley: Character = {
     passiveSkills: [
         {
             name: "The Duke's Grace",
-            image: 'https://genshin.honeyhunterworld.com/img/p_862301.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_Combine_Weapon_Double.png',
             description:
                 'When Wriothesley crafts Weapon Ascension Materials, he has a 10% chance to receive double the product.',
         },
         {
             name: 'There Shall Be a Plea for Justice',
-            image: 'https://genshin.honeyhunterworld.com/img/p_862101.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Wriothesley_05.png',
             description:
                 "When Wriothesley's HP is less than 60%, he will obtain a Gracious Rebuke. The next Charged Attack of his\nNormal Attack: Forceful Fists of Frost\nwill be enhanced to become Rebuke: Vaulting Fist. It will not consume Stamina, will deal 50% increased DMG, and after hitting will restore HP for Wriothesley equal to 30% of his Max HP.\nYou can gain a Gracious Rebuke this way once every 5s.",
         },
         {
             name: 'There Shall Be a Reckoning for Sin',
-            image: 'https://genshin.honeyhunterworld.com/img/p_862201.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Wriothesley_06.png',
             description:
                 "When Wriothesley's current HP increases or decreases, if he is in the Chilling Penalty state conferred by\nIcefang Rush\n, Chilling Penalty will gain one stack of Prosecution Edict. Max 5 stacks. Each stack will increase Wriothesley's ATK by 6%.",
         },
@@ -507,42 +507,42 @@ const Wriothesley: Character = {
     constellations: [
         {
             name: 'Terror for the Evildoers',
-            image: 'https://genshin.honeyhunterworld.com/img/c_861.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Wriothesley_01.png',
             description:
                 'The Gracious Rebuke from the Passive Talent "There Shall Be a Plea for Justice" is changed to this:\nWhen Wriothesley\'s HP is less than 60% or while he is in the Chilling Penalty state caused by\nIcefang Rush\n, when the fifth attack of Repelling Fists hits, it will create a Gracious Rebuke. 1 Gracious Rebuke effect can be obtained every 2.5s.\nAdditionally, Rebuke: Vaulting Fist will obtain the following enhancement:\n\u00b7The DMG Bonus gained will be further increased to 200%.\n\u00b7When it hits while Wriothesley is in the Chilling Penalty state, that state\'s duration is extended by 4s. 1 such extension can occur per 1 Chilling Penalty duration.\nYou must first unlock the Passive Talent "There Shall Be a Plea for Justice."',
             level: 1,
         },
         {
             name: 'Shackles for the Arrogant',
-            image: 'https://genshin.honeyhunterworld.com/img/c_862.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Wriothesley_02.png',
             description:
                 'When using\nDarkgold Wolfbite\n, each Prosecution Edict stack from the Passive Talent "There Shall Be a Reckoning for Sin" will increase said ability\'s DMG dealt by 40%.\nYou must first unlock the Passive Talent "There Shall Be a Reckoning for Sin."',
             level: 2,
         },
         {
             name: 'Punishment for the Frauds',
-            image: 'https://genshin.honeyhunterworld.com/img/c_863.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Wriothesley_01.png',
             description:
                 'Increases the Level of\nNormal Attack: Forceful Fists of Frost\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: 'Redemption for the Suffering',
-            image: 'https://genshin.honeyhunterworld.com/img/c_864.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Wriothesley_03.png',
             description:
                 'The HP restored to Wriothesley through Rebuke: Vaulting Fist will be increased to 50% of his Max HP. You must first unlock the Passive Talent "There Shall Be a Plea for Justice."\nAdditionally, when Wriothesley is healed, if the amount of healing overflows, the following effects will occur depending on whether he is on the field or not. If he is on the field, his ATK SPD will be increased by 20% for 4s. If he is off-field, all of your own party members\' ATK SPD will be increased by 10% for 6s. These two methods of increasing ATK SPD cannot stack.',
             level: 4,
         },
         {
             name: 'Mercy for the Wronged',
-            image: 'https://genshin.honeyhunterworld.com/img/c_865.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Wriothesley_02.png',
             description:
                 'Increases the Level of\nDarkgold Wolfbite\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: 'Esteem for the Innocent',
-            image: 'https://genshin.honeyhunterworld.com/img/c_866.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Wriothesley_04.png',
             description:
                 'The CRIT Rate of Rebuke: Vaulting Fist will be increased by 10%, and its CRIT DMG by 80%. When unleashed, it will also create an additional icicle that deals 100% of Rebuke: Vaulting Fist\'s Base DMG as\nCryo DMG\n. DMG dealt this way is regarded as Charged Attack DMG.\nYou must first unlock the Passive Talent "There Shall Be a Plea for Justice."',
             level: 6,

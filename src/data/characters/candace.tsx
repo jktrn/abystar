@@ -14,7 +14,7 @@ const constellationBonuses: Bonus[] = [
 
 const Candace: Character = {
     name: 'Candace',
-    icon: '/images/characters/candace.png',
+    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Candace.png',
     weapon: 'Polearm',
     vision: 'Hydro',
     rarity: 4,
@@ -25,7 +25,7 @@ const Candace: Character = {
         '1/20': {
             'Base HP': 912.0,
             'Base ATK': 17.81,
-            'Base DEF': 57.22,
+            'Base DEF': 57.23,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
             'Bonus HP': 0.0,
@@ -138,7 +138,7 @@ const Candace: Character = {
     talents: [
         {
             name: 'Normal Attack: Gleaming Spear - Guardian Stance',
-            image: 'https://genshin.honeyhunterworld.com/img/s_723101.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_A_03.png',
             description:
                 'Normal Attack\nPerforms up to 4 consecutive spear strikes.\nCharged Attack\nConsumes a certain amount of Stamina to lunge forward, dealing damage to opponents along the way.\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.',
             data: {
@@ -179,7 +179,7 @@ const Candace: Character = {
                 '3-Hit DMG': {
                     Lv1: '78.86%',
                     Lv2: '85.28%',
-                    Lv3: '91.70%',
+                    Lv3: '91.71%',
                     Lv4: '100.87%',
                     Lv5: '107.29%',
                     Lv6: '114.62%',
@@ -299,7 +299,7 @@ const Candace: Character = {
         },
         {
             name: "Sacred Rite: Heron's Sanctum",
-            image: 'https://genshin.honeyhunterworld.com/img/s_723201.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_S_Candace_01.png',
             description:
                 "Candace's fighting style is capable of warding off an entire tide of foes.\nTap\nRushes forward with her shield, dealing\nHydro DMG\nto opponents in front of her.\nHold\nRaises her shield to block incoming attacks from nearby opponents, forming a barrier that absorbs DMG based on her Max HP and absorbs\nHydro DMG\n250% more effectively. This barrier lasts until the Elemental Skill is unleashed.\nAfter holding for a certain period of time, Candace will finish charging, and when the skill button is released, the skill duration expires, or when the barrier is broken, she will perform a leaping strike that deals\nHydro DMG\nto opponents in front of her.\nThe oath of the guardians is more stalwart yet than the shields they inherit.",
             data: {
@@ -392,7 +392,7 @@ const Candace: Character = {
         },
         {
             name: "Sacred Rite: Wagtail's Tide",
-            image: 'https://genshin.honeyhunterworld.com/img/s_723901.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_E_Candace_01.png',
             description:
                 "Raising her weapon on high, Candace calls upon a divine blessing that deals\nAoE Hydro DMG\nbased on her Max HP and continuously confers the Prayer of the Crimson Crown on your active character.\nPrayer of the Crimson Crown\nThis effect has the following properties:\n\u00b7Characters deal increased Elemental DMG with their Normal Attacks.\n\u00b7Whenever a character takes the field, they will unleash a rippling wave of water that deals\nHydro DMG\nto nearby opponents. There is a limited number of waves that can be triggered in the duration of this skill.\n\u00b7Sword, Claymore, and Polearm-wielding characters under this effect will obtain a\nHydro Infusion\n.\nThis secret rite has been passed down through Candace's clan from generation to generation. Though the old faiths have become lost over the years, the sands still protect the heirs of the ancient realm.",
             data: {
@@ -521,19 +521,19 @@ const Candace: Character = {
     passiveSkills: [
         {
             name: "To Dawn's First Light",
-            image: 'https://genshin.honeyhunterworld.com/img/p_722301.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_Explosion_Climb.png',
             description:
                 'Decreases climbing Stamina consumption for your own party members by 20%.\nNot stackable with Passive Talents that provide the exact same effects.',
         },
         {
             name: 'Aegis of Crossed Arrows',
-            image: 'https://genshin.honeyhunterworld.com/img/p_722101.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Candace_05.png',
             description:
                 "If Candace is hit by an attack in the Hold duration of\nSacred Rite: Heron's Sanctum\n, that skill will finish charging instantly.",
         },
         {
             name: 'Celestial Dome of Sand',
-            image: 'https://genshin.honeyhunterworld.com/img/p_722201.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Candace_06.png',
             description:
                 "Characters affected by the Prayer of the Crimson Crown caused by\nSacred Rite: Wagtail's Tide\nwill deal 0.5% increased DMG to opponents for every 1,000 points of Candace's Max HP when they deal Elemental DMG with their Normal Attacks.",
         },
@@ -541,42 +541,42 @@ const Candace: Character = {
     constellations: [
         {
             name: 'Returning Heiress of the Scarlet Sands',
-            image: 'https://genshin.honeyhunterworld.com/img/c_721.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Candace_01.png',
             description:
                 "The duration of Prayer of the Crimson Crown effect triggered by\nSacred Rite: Wagtail's Tide\nis increased by 3s.",
             level: 1,
         },
         {
             name: 'Moon-Piercing Brilliance',
-            image: 'https://genshin.honeyhunterworld.com/img/c_722.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Candace_02.png',
             description:
                 "When\nSacred Rite: Heron's Sanctum\nhits opponents, Candace's Max HP will be increased by 20% for 15s.",
             level: 2,
         },
         {
             name: "Hunter's Supplication",
-            image: 'https://genshin.honeyhunterworld.com/img/c_723.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Candace_01.png',
             description:
                 "Increases the Level of\nSacred Rite: Wagtail's Tide\nby 3.\nMaximum upgrade level is 15.",
             level: 3,
         },
         {
             name: 'Sentinel Oath',
-            image: 'https://genshin.honeyhunterworld.com/img/c_724.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Candace_03.png',
             description:
                 "Shortens the Hold CD of\nSacred Rite: Heron's Sanctum\nto be the same as that of the Tapping CD.",
             level: 4,
         },
         {
             name: 'Heterochromatic Gaze',
-            image: 'https://genshin.honeyhunterworld.com/img/c_725.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Candace_02.png',
             description:
                 "Increases the Level of\nSacred Rite: Heron's Sanctum\nby 3.\nMaximum upgrade level is 15.",
             level: 5,
         },
         {
             name: 'The Overflow',
-            image: 'https://genshin.honeyhunterworld.com/img/c_726.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Candace_04.png',
             description:
                 "When characters (excluding Candace herself) affected by the Prayer of the Crimson Crown caused by\nSacred Rite: Wagtail's Tide\ndeal Elemental DMG to opponents using Normal Attacks, an attack wave will be unleashed that deals\nAoE Hydro DMG\nequal to 15% of Candace's Max HP.\nThis effect can trigger once every 2.3s and is considered Elemental Burst DMG.",
             level: 6,

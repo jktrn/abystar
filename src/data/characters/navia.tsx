@@ -226,7 +226,7 @@ const characterBonuses: Bonus[] = [
                 15% per stack consumed, with a maximum of 6 stacks.
             </span>
         ),
-        icon: '/images/characters/navia-skill.png',
+        icon: 'https://api.ambr.top/assets/UI/Skill_S_Navia_01.png',
         effect: (attributes, talentLevels, currentStacks) => {
             if (!currentStacks) return { attributes }
 
@@ -267,7 +267,7 @@ const characterBonuses: Bonus[] = [
                 these attacks is increased by 40%.
             </span>
         ),
-        icon: '/images/characters/navia-passive1.png',
+        icon: 'https://api.ambr.top/assets/UI/UI_Talent_S_Navia_05.png',
         effect: (attributes, talentLevels, currentStacks) => {
             if (!currentStacks) return { attributes }
 
@@ -310,7 +310,7 @@ const characterBonuses: Bonus[] = [
                 gains 20% increased ATK. This effect can stack up to 2 times.
             </span>
         ),
-        icon: '/images/characters/navia-passive2.png',
+        icon: 'https://api.ambr.top/assets/UI/UI_Talent_S_Navia_06.png',
         effect: (attributes, talentLevels, currentStacks) => {
             if (!currentStacks) return { attributes }
 
@@ -342,7 +342,7 @@ const constellationBonuses: Bonus[] = [
                 by 1s, with a maximum reduction of 3s.
             </span>
         ),
-        icon: '/images/characters/navia-constellation1.png',
+        icon: 'https://api.ambr.top/assets/UI/UI_Talent_S_Navia_01.png',
         effect: (attributes, talentLevels, currentStacks, characterState) => {
             if (!characterState) return { attributes }
 
@@ -375,7 +375,7 @@ const constellationBonuses: Bonus[] = [
                 instance by 12%. CRIT Rate can be increased by up to 36% in this way.
             </span>
         ),
-        icon: '/images/characters/navia-constellation2.png',
+        icon: 'https://api.ambr.top/assets/UI/UI_Talent_S_Navia_02.png',
         effect: (attributes, talentLevels, currentStacks, characterState) => {
             if (!characterState) return { attributes }
 
@@ -408,7 +408,7 @@ const constellationBonuses: Bonus[] = [
                 Maximum upgrade level is 15.
             </span>
         ),
-        icon: '/images/characters/navia-constellation3.png',
+        icon: 'https://api.ambr.top/assets/UI/UI_Talent_U_Navia_01.png',
         effect: (attributes, talentLevels) => {
             if (!talentLevels) return { attributes }
 
@@ -436,7 +436,7 @@ const constellationBonuses: Bonus[] = [
                 by 20% for 8s.
             </span>
         ),
-        icon: '/images/characters/navia-constellation4.png',
+        icon: 'https://api.ambr.top/assets/UI/UI_Talent_S_Navia_03.png',
         effect: (attributes, talentLevels) => {
             const newAttributes = {
                 ...attributes,
@@ -460,7 +460,7 @@ const constellationBonuses: Bonus[] = [
                 by 3. Maximum upgrade level is 15.
             </span>
         ),
-        icon: '/images/characters/navia-constellation5.png',
+        icon: 'https://api.ambr.top/assets/UI/UI_Talent_U_Navia_02.png',
         effect: (attributes, talentLevels) => {
             if (!talentLevels) return { attributes }
 
@@ -486,7 +486,7 @@ const constellationBonuses: Bonus[] = [
                 and any stacks consumed beyond the first 3 are returned to Navia.
             </span>
         ),
-        icon: '/images/characters/navia-constellation6.png',
+        icon: 'https://api.ambr.top/assets/UI/UI_Talent_S_Navia_04.png',
         effect: (attributes, talentLevels, currentStacks, characterState) => {
             if (!characterState) return { attributes }
 
@@ -514,7 +514,7 @@ const constellationBonuses: Bonus[] = [
 
 const Navia: Character = {
     name: 'Navia',
-    icon: '/images/characters/navia.png',
+    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Navia.png',
     weapon: 'Claymore',
     vision: 'Geo',
     rarity: 5,
@@ -638,7 +638,7 @@ const Navia: Character = {
     talents: [
         {
             name: 'Normal Attack: Blunt Refusal',
-            image: 'https://genshin.honeyhunterworld.com/img/s_913101.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_A_04.png',
             description:
                 'Normal Attack\nPerforms up to 4 consecutive strikes.\nCharged Attack\nDrains Stamina over time to perform continuous spinning attacks against all nearby opponents.\nAt the end of the sequence, performs a more powerful slash.\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.',
             data: {
@@ -679,7 +679,7 @@ const Navia: Character = {
                 '3-Hit DMG': {
                     Lv1: '104.67%',
                     Lv2: '113.19%',
-                    Lv3: '121.68%',
+                    Lv3: '121.71%',
                     Lv4: '133.86%',
                     Lv5: '142.38%',
                     Lv6: '152.13%',
@@ -716,7 +716,7 @@ const Navia: Character = {
                     Lv3: '72.7%',
                     Lv4: '79.97%',
                     Lv5: '85.06%',
-                    Lv6: '90.87%',
+                    Lv6: '90.88%',
                     Lv7: '98.87%',
                     Lv8: '106.87%',
                     Lv9: '114.87%',
@@ -729,11 +729,11 @@ const Navia: Character = {
                 },
                 'Charged Attack Final DMG': {
                     Lv1: '113.09%',
-                    Lv2: '122.29%',
+                    Lv2: '122.3%',
                     Lv3: '131.5%',
                     Lv4: '144.65%',
                     Lv5: '153.86%',
-                    Lv6: '164.37%',
+                    Lv6: '164.38%',
                     Lv7: '178.84%',
                     Lv8: '193.31%',
                     Lv9: '207.77%',
@@ -833,7 +833,7 @@ const Navia: Character = {
         },
         {
             name: 'Ceremonial Crystalshot',
-            image: 'https://genshin.honeyhunterworld.com/img/s_913201.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_S_Navia_01.png',
             description:
                 'When a character in the party obtains an Elemental Shard created from the Crystallize reaction, Navia will gain 1 Crystal Shrapnel stack. Navia can have up to 6 stacks of Crystal Shrapnel at once. Each time Crystal Shrapnel gain is triggered, the duration of the Crystal Shrapnel stacks you already have will be reset.\nWhen she fires, Navia will consume all Crystal Shrapnel stacks and open her elegant yet lethal Gunbrella, firing multiple Rosula Shardshots that can penetrate opponents, dealing\nGeo DMG\nto opponents hit.\nWhen 0/1/2/3 or more stacks of Crystal Shrapnel are consumed, 5/7/9/11 Rosula Shardshots will be fired respectively. The more Rosula Shardshots that strike a single opponent, the greater the DMG dealt to them. When all 11 Rosula Shardshots strike, 200% of the original amount of DMG is dealt.\nIn addition, when more than 3 stacks of Crystal Shrapnel are consumed, every stack consumed beyond those 3 will increase the DMG dealt by this Gunbrella attack by an additional 15%.\nHold\nEnter Aiming Mode, continually collecting nearby Elemental Shards created by Crystallize reactions. When released, fire Rosula Shardshots with the same effect as when the skill is Tapped.\nTwo initial charges.\nArkhe: Ousia\nPeriodically, when Navia fires her Gunbrella, a Surging Blade will be summoned, dealing Ousia-aligned\nGeo DMG\n.\n"Maintaining the appropriate distance with those whom distance should be maintained is an essential part of etiquette. Naturally, there are also many ways to do this..."',
             data: {
@@ -943,7 +943,7 @@ const Navia: Character = {
         },
         {
             name: "As the Sunlit Sky's Singing Salute",
-            image: 'https://genshin.honeyhunterworld.com/img/s_913901.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_E_Navia_01.png',
             description:
                 "On the orders of the President of the Spina di Rosula, call for a magnificent Rosula Dorata Salute. Unleashes a massive cannon bombardment on opponents in front of her, dealing\nAoE Geo DMG\nand providing Cannon Fire Support for a duration afterward, periodically dealing\nGeo DMG\nto nearby opponents.\nWhen cannon attacks hit opponents, Navia will gain 1 stack of Crystal Shrapnel. This effect can be triggered up to once every 2.4s.\n\"The Spina di Rosula's salute is a preemptive celebration of the successful conclusion of our negotiations and is fired just before talks begin. Don't misunderstand, it isn't in any way, shape, or form some kind of threat.\"",
             data: {
@@ -971,7 +971,7 @@ const Navia: Character = {
                     Lv4: '53.94%',
                     Lv5: '57.17%',
                     Lv6: '60.41%',
-                    Lv7: '64.72%',
+                    Lv7: '64.73%',
                     Lv8: '69.04%',
                     Lv9: '73.36%',
                     Lv10: '77.67%',
@@ -1038,19 +1038,19 @@ const Navia: Character = {
     passiveSkills: [
         {
             name: 'Painstaking Transaction',
-            image: 'https://genshin.honeyhunterworld.com/img/p_912301.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Navia_07.png',
             description:
                 'Gains 25% more rewards when dispatched on a Fontaine Expedition for 20 hours.',
         },
         {
             name: 'Undisclosed Distribution Channels',
-            image: 'https://genshin.honeyhunterworld.com/img/p_912101.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Navia_05.png',
             description:
                 "For 4s after using\nCeremonial Crystalshot\n, the DMG dealt by Navia's Normal Attacks, Charged Attacks, and Plunging Attacks will be converted into\nGeo DMG\nwhich cannot be overridden by other Elemental infusions, and the DMG dealt by Navia's Normal Attacks, Charged Attacks, and Plunging Attacks will be increased by 40%.",
         },
         {
             name: 'Mutual Assistance Network',
-            image: 'https://genshin.honeyhunterworld.com/img/p_912201.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Navia_06.png',
             description:
                 'For each\nPyro\n/\nElectro\n/\nCryo\n/\nHydro\nparty member, Navia gains 20% increased ATK. This effect can stack up to 2 times.',
         },
@@ -1058,42 +1058,42 @@ const Navia: Character = {
     constellations: [
         {
             name: "A Lady's Rules for Keeping a Courteous Distance",
-            image: 'https://genshin.honeyhunterworld.com/img/c_911.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Navia_01.png',
             description:
                 'Each stack of Crystal Shrapnel consumed when Navia uses\nCeremonial Crystalshot\nwill restore 3 Energy to her and decrease the CD of\nAs the Sunlit Sky\'s Singing Salute\nby 1s. Up to 9 Energy can be gained this way, and the CD of "As the Sunlit Sky\'s Singing Salute" can be decreased by up to 3s.',
             level: 1,
         },
         {
             name: "The President's Pursuit of Victory",
-            image: 'https://genshin.honeyhunterworld.com/img/c_912.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Navia_02.png',
             description:
                 "Each stack of Crystal Shrapnel consumed will increase the CRIT Rate of this\nCeremonial Crystalshot\ninstance by 12%. CRIT Rate can be increased by up to 36% in this way.\nIn addition, when Ceremonial Crystalshot hits an opponent, one Cannon Fire Support shot from\nAs the Sunlit Sky's Singing Salute\nwill strike near the location of the hit. Up to one instance of Cannon Fire Support can be triggered each time Ceremonial Crystalshot is used, and DMG dealt by said Cannon Fire Support this way is considered Elemental Burst DMG.",
             level: 2,
         },
         {
             name: "Businesswoman's Broad Vision",
-            image: 'https://genshin.honeyhunterworld.com/img/c_913.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Navia_01.png',
             description:
                 'Increases the Level of\nCeremonial Crystalshot\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: 'The Oathsworn Never Capitulate',
-            image: 'https://genshin.honeyhunterworld.com/img/c_914.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Navia_03.png',
             description:
                 "When\nAs the Sunlit Sky's Singing Salute\nhits an opponent, that opponent's\nGeo RES\nwill be decreased by 20% for 8s.",
             level: 4,
         },
         {
             name: "Negotiator's Resolute Negotiations",
-            image: 'https://genshin.honeyhunterworld.com/img/c_915.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Navia_02.png',
             description:
                 "Increases the Level of\nAs the Sunlit Sky's Singing Salute\nby 3.\nMaximum upgrade level is 15.",
             level: 5,
         },
         {
             name: "The Flexible Finesse of the Spina's President",
-            image: 'https://genshin.honeyhunterworld.com/img/c_916.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Navia_04.png',
             description:
                 'If more than 3 stacks of Crystal Shrapnel are consumed when using\nCeremonial Crystalshot\n, each stack consumed beyond the first 3 increases the CRIT DMG of that Ceremonial Crystalshot by 45%, and any stacks consumed beyond the first 3 are returned to Navia.',
             level: 6,

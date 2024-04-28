@@ -14,7 +14,7 @@ const constellationBonuses: Bonus[] = [
 
 const Faruzan: Character = {
     name: 'Faruzan',
-    icon: '/images/characters/faruzan.png',
+    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Faruzan.png',
     weapon: 'Bow',
     vision: 'Anemo',
     rarity: 4,
@@ -138,7 +138,7 @@ const Faruzan: Character = {
     talents: [
         {
             name: 'Normal Attack: Parthian Shot',
-            image: 'https://genshin.honeyhunterworld.com/img/s_763101.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_A_02.png',
             description:
                 'Normal Attack\nPerforms up to 4 consecutive shots with a bow.\nCharged Attack\nPerforms a more precise\nAimed Shot\nwith increased DMG.\nWhile aiming, mighty winds will accumulate on the arrowhead. A fully charged wind arrow will deal\nAnemo DMG\n.\nPlunging Attack\nFires off a shower of arrows in mid-air before falling and striking the ground, hitting opponents along the path and dealing AoE DMG upon impact.',
             data: {
@@ -267,7 +267,7 @@ const Faruzan: Character = {
                     Lv3: '132.13%',
                     Lv4: '145.35%',
                     Lv5: '154.59%',
-                    Lv6: '165.16%',
+                    Lv6: '165.17%',
                     Lv7: '179.7%',
                     Lv8: '194.23%',
                     Lv9: '208.77%',
@@ -299,7 +299,7 @@ const Faruzan: Character = {
         },
         {
             name: 'Wind Realm of Nasamjnin',
-            image: 'https://genshin.honeyhunterworld.com/img/s_763201.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_S_Faruzan_01.png',
             description:
                 'Faruzan deploys a polyhedron that deals\nAoE Anemo DMG\nto nearby opponents. She will also enter the Manifest Gale state.\nWhile in the Manifest Gale state, Faruzan\'s next fully charged shot will consume this state and will become a Hurricane Arrow that contains high-pressure currents. This arrow deals\nAnemo DMG\nbased on the DMG of a fully charged Aimed Shot from "Normal Attack: Parthian Shot."\nPressurized Collapse\nThe Hurricane Arrow will apply a Pressurized Collapse effect to the opponent or character hit. This effect will be removed after a short delay, creating a vortex that deals\nAoE Anemo DMG\nand pulls nearby objects and opponents in. If the Hurricane Arrow does not hit any opponent or character, it will create a Pressurized Collapse effect at its point of impact.\nThe vortex DMG is considered Elemental Skill DMG.\nThe winds of truth buffet the spirits of those who seek truth, dispersing the miasma of preconception.',
             data: {
@@ -375,7 +375,7 @@ const Faruzan: Character = {
         },
         {
             name: "The Wind's Secret Ways",
-            image: 'https://genshin.honeyhunterworld.com/img/s_763301.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_E_Faruzan_01.png',
             description:
                 "Faruzan deploys a Dazzling Polyhedron that unleashes a Whirlwind Pulse and deals\nAoE Anemo DMG\n.\nWhile the Dazzling Polyhedron persists, it will continuously move along a triangular path. Once it reaches each corner of that triangular path, it will unleash 1 more Whirlwind Pulse.\nWhirlwind Pulse\n\u00b7When the Whirlwind Pulse is unleashed, it will apply Perfidious Wind's Bale to nearby opponents, decreasing their\nAnemo RES\n.\n\u00b7The Whirlwind Pulse will also apply Prayerful Wind's Benefit to all nearby party members when it is unleashed, granting them an\nAnemo DMG Bonus\n.\nOne must have respect for the unknown wisdom that one might find hidden in ancient ruins.",
             data: {
@@ -521,19 +521,19 @@ const Faruzan: Character = {
     passiveSkills: [
         {
             name: 'Tomes Light the Path',
-            image: 'https://genshin.honeyhunterworld.com/img/p_762301.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Cyno_07.png',
             description:
                 'Gains 25% more rewards when dispatched on a Sumeru Expedition for 20 hours.',
         },
         {
             name: 'Impetuous Flow',
-            image: 'https://genshin.honeyhunterworld.com/img/p_762101.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Faruzan_05.png',
             description:
                 "When Faruzan is in the Manifest Gale state created by\nWind Realm of Nasamjnin\n, the amount of time taken to charge a shot is decreased by 60%, and she can apply\nThe Wind's Secret Ways\n' Perfidious Wind's Bale to opponents who are hit by the vortex created by Pressurized Collapse.",
         },
         {
             name: 'Lost Wisdom of the Seven Caverns',
-            image: 'https://genshin.honeyhunterworld.com/img/p_762201.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Faruzan_06.png',
             description:
                 "When characters affected by\nThe Wind's Secret Ways\n' Prayerful Wind's Benefit deal\nAnemo DMG\nusing Normal, Charged, Plunging Attacks, Elemental Skills, or Elemental Bursts to opponents, they will gain the Hurricane Guard effect: This DMG will be increased based on 32% of Faruzan's Base ATK. 1 instance of Hurricane Guard can occur once every 0.8s. This DMG Bonus will be cleared after Prayerful Wind's Benefit expires or after the effect is triggered once.",
         },
@@ -541,42 +541,42 @@ const Faruzan: Character = {
     constellations: [
         {
             name: 'Truth by Any Means',
-            image: 'https://genshin.honeyhunterworld.com/img/c_761.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Faruzan_01.png',
             description:
                 'Faruzan can fire off a maximum of 2 Hurricane Arrows using fully charged Aimed Shots while under the effect of a single Manifest Gale created by\nWind Realm of Nasamjnin\n.',
             level: 1,
         },
         {
             name: 'Overzealous Intellect',
-            image: 'https://genshin.honeyhunterworld.com/img/c_762.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Faruzan_02.png',
             description:
                 "The duration of the Dazzling Polyhedron created by\nThe Wind's Secret Ways\nis increased by 6s.",
             level: 2,
         },
         {
             name: 'Spirit-Orchard Stroll',
-            image: 'https://genshin.honeyhunterworld.com/img/c_763.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Faruzan_01.png',
             description:
                 'Increases the Level of\nWind Realm of Nasamjnin\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: 'Divine Comprehension',
-            image: 'https://genshin.honeyhunterworld.com/img/c_764.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Faruzan_03.png',
             description:
                 'The vortex created by\nPressurized Collapses\nwill restore Energy to Faruzan based on the number of opponents hit: If it hits 1 opponent, it will restore 2 Energy for Faruzan. Each additional opponent hit will restore 0.5 more Energy for Faruzan.\nA maximum of 4 Energy can be restored to her per vortex.',
             level: 4,
         },
         {
             name: 'Wonderland of Rumination',
-            image: 'https://genshin.honeyhunterworld.com/img/c_765.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Faruzan_02.png',
             description:
                 "Increases the Level of\nThe Wind's Secret Ways\nby 3.\nMaximum upgrade level is 15.",
             level: 5,
         },
         {
             name: 'The Wondrous Path of Truth',
-            image: 'https://genshin.honeyhunterworld.com/img/c_766.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Faruzan_04.png',
             description:
                 "Characters affected by\nThe Wind's Secret Ways\n' Prayerful Wind's Benefit have 40% increased CRIT DMG when they deal\nAnemo DMG\n. When the active character deals DMG while affected by Prayerful Wind's Benefit, they will apply Pressurized Collapse to the opponent damaged. This effect can be triggered once every 3s. This CD is shared between all party members.",
             level: 6,

@@ -14,7 +14,7 @@ const constellationBonuses: Bonus[] = [
 
 const Baizhu: Character = {
     name: 'Baizhu',
-    icon: '/images/characters/baizhu.png',
+    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Baizhuer.png',
     weapon: 'Catalyst',
     vision: 'Dendro',
     rarity: 5,
@@ -138,7 +138,7 @@ const Baizhu: Character = {
     talents: [
         {
             name: 'Normal Attack: The Classics of Acupuncture',
-            image: 'https://genshin.honeyhunterworld.com/img/s_823101.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_A_Catalyst_MD.png',
             description:
                 'Normal Attack\nPerforms up to 4 attacks that deal\nDendro DMG\nto opponents in front of him.\nCharged Attack\nConsumes a certain amount of Stamina to deal\nAoE Dendro DMG\nto opponents in front of him after a short casting time.\nPlunging Attack\nCalling upon the might of Dendro, Baizhu plunges towards the ground from mid-air, damaging all opponents in his path. Deals\nAoE Dendro DMG\nupon impact with the ground.',
             data: {
@@ -267,7 +267,7 @@ const Baizhu: Character = {
                     Lv3: '132.13%',
                     Lv4: '145.35%',
                     Lv5: '154.59%',
-                    Lv6: '165.16%',
+                    Lv6: '165.17%',
                     Lv7: '179.7%',
                     Lv8: '194.23%',
                     Lv9: '208.77%',
@@ -299,7 +299,7 @@ const Baizhu: Character = {
         },
         {
             name: 'Universal Diagnosis',
-            image: 'https://genshin.honeyhunterworld.com/img/s_823201.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_S_Baizhuer_01.png',
             description:
                 "Controls a Gossamer Sprite that cruises and attacks nearby opponents, dealing\nDendro DMG\n.\nAfter it performs 3 attacks or if there are no opponents nearby, the Sprite will return, healing all nearby party members based on Baizhu's Max HP.\nThose in the medical field who can read true signs of illness from false ones may even cure people before any symptoms can show.",
             data: {
@@ -358,7 +358,7 @@ const Baizhu: Character = {
         },
         {
             name: 'Holistic Revivification',
-            image: 'https://genshin.honeyhunterworld.com/img/s_823901.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_E_Baizhuer_01.png',
             description:
                 "Enters the Pulsing Clarity state, creating a Seamless Shield that absorbs\nDendro DMG\nwith 250% effectiveness.\nWhile in this state, Baizhu will generate a new Seamless Shield every 2.5s.\nThe Seamless Shield will heal your own active character based on Baizhu's Max HP and attack opponents by unleashing Spiritveins, dealing\nDendro DMG\nunder the following circumstances:\n\u00b7When a character is under the protection of a Seamless Shield and a new Seamless Shield is generated.\n\u00b7When the Seamless Shield's effects expire, or when it is shattered.\nIf you can perceive the heavens and the earth, defend against malignant auras with the flow of qi, and keep your mind clear, surely nothing can hinder you.",
             data: {
@@ -487,19 +487,19 @@ const Baizhu: Character = {
     passiveSkills: [
         {
             name: 'Herbal Nourishment',
-            image: 'https://genshin.honeyhunterworld.com/img/p_822301.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Baizhuer_07.png',
             description:
                 "When Baizhu is in the party, interacting with certain harvestable items will heal your current active character for 2.5% of Baizhu's Max HP.",
         },
         {
             name: 'Five Fortunes Forever',
-            image: 'https://genshin.honeyhunterworld.com/img/p_822101.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Baizhuer_05.png',
             description:
                 'Baizhu gains different effects according to the current HP of your current active character:\n\u00b7When their HP is less than 50%, Baizhu gains 20% Healing Bonus.\n\u00b7When their HP is equal to or more than 50%, Baizhu gains 25%\nDendro DMG Bonus\n.',
         },
         {
             name: 'All Things Are of the Earth',
-            image: 'https://genshin.honeyhunterworld.com/img/p_822201.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Baizhuer_06.png',
             description:
                 'Characters who are healed by\nSeamless Shields\nwill gain the Year of Verdant Favor effect: Each 1,000 Max HP that Baizhu possesses that does not exceed 50,000 will increase the Burning, Bloom, Hyperbloom, and Burgeon reaction DMG dealt by these characters by 2%, and will increase the DMG Bonus provided by Aggravate and Spread by 0.8%. This effect lasts 6s.',
         },
@@ -507,41 +507,41 @@ const Baizhu: Character = {
     constellations: [
         {
             name: 'Attentive Observation',
-            image: 'https://genshin.honeyhunterworld.com/img/c_821.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Baizhuer_01.png',
             description: 'Universal Diagnosis\ngains 1 additional charge.',
             level: 1,
         },
         {
             name: 'Incisive Discernment',
-            image: 'https://genshin.honeyhunterworld.com/img/c_822.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Baizhuer_02.png',
             description:
                 "When your own active character hits a nearby opponent with their attacks, Baizhu will unleash a Gossamer Sprite: Splice.\nGossamer Sprite: Splice will initiate 1 attack before returning, dealing 250% of Baizhu's ATK as\nDendro DMG\nand healing for 20% of\nUniversal Diagnosis\n's Gossamer Sprite's normal healing.\nDMG dealt this way is considered Elemental Skill DMG.\nThis effect can be triggered once every 5s.",
             level: 2,
         },
         {
             name: 'All Aspects Stabilized',
-            image: 'https://genshin.honeyhunterworld.com/img/c_823.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Baizhuer_01.png',
             description:
                 'Increases the Level of\nHolistic Revivification\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: 'Ancient Art of Perception',
-            image: 'https://genshin.honeyhunterworld.com/img/c_824.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Baizhuer_03.png',
             description:
                 "For 15s after\nHolistic Revivification\nis used, Baizhu will increase all nearby party members' Elemental Mastery by 80.",
             level: 4,
         },
         {
             name: 'The Hidden Ebb and Flow',
-            image: 'https://genshin.honeyhunterworld.com/img/c_825.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Baizhuer_02.png',
             description:
                 'Increases the Level of\nUniversal Diagnosis\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: 'Elimination of Malicious Qi',
-            image: 'https://genshin.honeyhunterworld.com/img/c_826.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Baizhuer_04.png',
             description:
                 "Increases the DMG dealt by\nHolistic Revivification\n's Spiritveins by 8% of Baizhu's Max HP.\nAdditionally, when a\nGossamer Sprite\nor Gossamer Sprite: Splice hits opponents, there is a 100% chance of generating one of\nHolistic Revivification\n's Seamless Shields. This effect can only be triggered once by each Gossamer Sprite or Gossamer Sprite: Splice.",
             level: 6,

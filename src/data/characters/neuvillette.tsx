@@ -14,7 +14,7 @@ const constellationBonuses: Bonus[] = [
 
 const Neuvillette: Character = {
     name: 'Neuvillette',
-    icon: '/images/characters/neuvillette.png',
+    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Neuvillette.png',
     weapon: 'Catalyst',
     vision: 'Hydro',
     rarity: 5,
@@ -138,7 +138,7 @@ const Neuvillette: Character = {
     talents: [
         {
             name: 'Normal Attack: As Water Seeks Equilibrium',
-            image: 'https://genshin.honeyhunterworld.com/img/s_873101.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_A_Catalyst_MD.png',
             description:
                 "Normal Attack\nWith light flourishes, Neuvillette commands the tides to unleash a maximum of 3 attacks, dealing\nHydro DMG\n.\nCharged Attack Empowerment: Legal Evaluation\nWhile charging up, Neuvillette will gather the power of water, forming it into a Seal of Arbitration. In this state, Neuvillette can move and change facing, and also absorb any Sourcewater Droplets in a certain AoE.\nEvery Droplet he absorbs will increase the formation speed of the Seal, and will heal Neuvillette.\nWhen the charging is stopped, if the Symbol has yet to be formed, then a Charged Attack will be unleashed. If it has been formed, then a Charged Attack: Equitable Judgment will be unleashed.\nCharged Attack\nConsumes a fixed amount of Stamina to attack opponents with a rupturing blast of water, dealing\nAoE Hydro DMG\n.\nCharged Attack: Equitable Judgment\nUnleashes surging torrents, dealing continuous\nAoE Hydro DMG\nto all opponents in a straight-line area in front of him.\nEquitable Judgment will not consume any Stamina and lasts 3s.\nIf Neuvillette's HP is above 50%, he will continuously lose HP while using this attack.\nPlunging Attack\nGathering the might of Hydro, Neuvillette plunges towards the ground from mid-air, damaging all opponents in his path. Deals\nAoE Hydro DMG\nupon impact with the ground.",
             data: {
@@ -301,7 +301,7 @@ const Neuvillette: Character = {
                     Lv3: '132.13%',
                     Lv4: '145.35%',
                     Lv5: '154.59%',
-                    Lv6: '165.16%',
+                    Lv6: '165.17%',
                     Lv7: '179.7%',
                     Lv8: '194.23%',
                     Lv9: '208.77%',
@@ -333,7 +333,7 @@ const Neuvillette: Character = {
         },
         {
             name: 'O Tears, I Shall Repay',
-            image: 'https://genshin.honeyhunterworld.com/img/s_873201.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_S_Neuvillette_01.png',
             description:
                 'Summons a Raging Waterfall that will deal\nAoE Hydro DMG\nto opponents in front of Neuvillette based on his Max HP. After hitting an opponent, this skill will generate 3 Sourcewater Droplets near that opponent.\nArkhe: Pneuma\nAt certain intervals, when the Raging Waterfall descends, a Spiritbreath Thorn will descend that will pierce opponents, dealing Pneuma-aligned\nHydro DMG\n.\n"The law can restrict all manner of crimes, but it cannot extirpate evil itself.',
             data: {
@@ -426,7 +426,7 @@ const Neuvillette: Character = {
         },
         {
             name: 'O Tides, I Have Returned',
-            image: 'https://genshin.honeyhunterworld.com/img/s_873901.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_E_Neuvillette_01.png',
             description:
                 'Unleashes waves that will deal\nAoE Hydro DMG\nbased on Neuvillette\'s Max HP. After a short interval, 2 waterfalls will descend and deal\nHydro DMG\nin a somewhat smaller AoE, and will generate 6 Sourcewater Droplets within an area in front.\n"The law is only established after its publication, and above that, the laws of nature have governed all species and eras since ancient times.',
             data: {
@@ -504,19 +504,19 @@ const Neuvillette: Character = {
     passiveSkills: [
         {
             name: 'Gather Like the Tide',
-            image: 'https://genshin.honeyhunterworld.com/img/p_872301.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Neuvillette_07.png',
             description:
                 'Increases underwater Sprint SPD for your own party members by 15%.\nNot stackable with Passive Talents that provide the exact same effects.',
         },
         {
             name: "Heir to the Ancient Sea's Authority",
-            image: 'https://genshin.honeyhunterworld.com/img/p_872101.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Neuvillette_05.png',
             description:
                 'When a party member triggers a Vaporize, Frozen, Electro-Charged, Bloom, Hydro Swirl, or a Hydro Crystallize reaction on opponents, 1 stack of Past Draconic Glories will be granted to Neuvillette for 30s. Max 3 stacks. Past Draconic Glories causes Charged Attack: Equitable Judgment to deal 110%/125%/160% of its original DMG.\nThe stacks of Past Draconic Glories created by each kind of Elemental Reaction exist independently.',
         },
         {
             name: 'Discipline of the Supreme Arbitration',
-            image: 'https://genshin.honeyhunterworld.com/img/p_872201.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Neuvillette_06.png',
             description:
                 "For each 1% of Neuvillette's current HP greater than 30% of Max HP, he will gain 0.6%\nHydro DMG Bonus\n. A maximum bonus of 30% can be obtained this way.",
         },
@@ -524,42 +524,42 @@ const Neuvillette: Character = {
     constellations: [
         {
             name: 'Venerable Institution',
-            image: 'https://genshin.honeyhunterworld.com/img/c_871.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Neuvillette_01.png',
             description:
                 'When Neuvillette takes the field, he will obtain 1 stack of Past Draconic Glories from the Passive Talent "Heir to the Ancient Sea\'s Authority." You must first unlock the Passive Talent "Heir to the Ancient Sea\'s Authority."\nAdditionally, his interruption resistance will be increased while using the Charged Attack Empowerment: Legal Evaluation and the Charged Attack: Equitable Judgment.',
             level: 1,
         },
         {
             name: 'Juridical Exhortation',
-            image: 'https://genshin.honeyhunterworld.com/img/c_872.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Neuvillette_02.png',
             description:
                 'The Passive Talent "Heir to the Ancient Sea\'s Authority" will be enhanced: Each stack of Past Draconic Glories will increase the CRIT DMG of Charged Attack: Equitable Judgment by 14%. The maximum increase that can be achieved this way is 42%.\nYou must first unlock the Passive Talent "Heir to the Ancient Sea\'s Authority."',
             level: 2,
         },
         {
             name: 'Ancient Postulation',
-            image: 'https://genshin.honeyhunterworld.com/img/c_873.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Neuvillette_01.png',
             description:
                 'Increases the Level of\nNormal Attack: As Water Seeks Equilibrium\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: 'Crown of Commiseration',
-            image: 'https://genshin.honeyhunterworld.com/img/c_874.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Neuvillette_03.png',
             description:
                 'When Neuvillette is on the field and is healed, 1 Sourcewater Droplet will be generated. This effect can occur once every 4s.',
             level: 4,
         },
         {
             name: 'Axiomatic Judgment',
-            image: 'https://genshin.honeyhunterworld.com/img/c_875.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Neuvillette_02.png',
             description:
                 'Increases the Level of\nO Tides, I Have Returned\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: 'Wrathful Recompense',
-            image: 'https://genshin.honeyhunterworld.com/img/c_876.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Neuvillette_04.png',
             description:
                 "When using Charged Attack: Equitable Judgment, Neuvillette can absorb nearby Sourcewater Droplets in an AoE. Each absorbed Droplet will increase the duration of Charged Attack: Equitable Judgment by 1s.\nAdditionally, when Equitable Judgment hits opponents, it will fire off 2 additional currents every 2s, each of which will deal 10% of Neuvillette's Max HP as\nHydro DMG\n. DMG dealt this way will count as DMG dealt by Equitable Judgment.",
             level: 6,

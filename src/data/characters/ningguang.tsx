@@ -14,7 +14,7 @@ const constellationBonuses: Bonus[] = [
 
 const Ningguang: Character = {
     name: 'Ningguang',
-    icon: '/images/characters/ningguang.png',
+    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Ningguang.png',
     weapon: 'Catalyst',
     vision: 'Geo',
     rarity: 4,
@@ -138,7 +138,7 @@ const Ningguang: Character = {
     talents: [
         {
             name: 'Normal Attack: Sparkling Scatter',
-            image: 'https://genshin.honeyhunterworld.com/img/s_273101.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_A_Catalyst_MD.png',
             description:
                 'Normal Attack\nShoots gems that deal\nGeo DMG\n.\nUpon hit, this grants Ningguang 1 Star Jade.\nCharged Attack\nConsumes a certain amount of stamina to fire off a giant gem that deals\nGeo DMG\n.\nIf Ningguang has any Star Jades, unleashing a Charged Attack will cause the Star Jades to be fired at the enemy as well, dealing additional DMG.\nPlunging Attack\nGathering the might of Geo, Ningguang plunges towards the ground from mid-air, damaging all opponents in her path. Deals\nAoE Geo DMG\nupon impact with the ground.',
             data: {
@@ -233,7 +233,7 @@ const Ningguang: Character = {
                     Lv3: '132.13%',
                     Lv4: '145.35%',
                     Lv5: '154.59%',
-                    Lv6: '165.16%',
+                    Lv6: '165.17%',
                     Lv7: '179.7%',
                     Lv8: '194.23%',
                     Lv9: '208.77%',
@@ -265,7 +265,7 @@ const Ningguang: Character = {
         },
         {
             name: 'Jade Screen',
-            image: 'https://genshin.honeyhunterworld.com/img/s_273201.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_S_Ningguang_01.png',
             description:
                 "Ningguang creates a Jade Screen out of gold, obsidian, and her great opulence, dealing\nAoE Geo DMG\n.\nJade Screen\n\u00b7Blocks opponents' projectiles.\n\u00b7Endurance scales based on Ningguang's Max HP.\nJade Screen is considered a\nGeo Construct\nand can be used to block certain attacks, but cannot be climbed. Only one Jade Screen may exist at any one time.\nThe canvas of stars is written upon this jade screen.",
             data: {
@@ -324,7 +324,7 @@ const Ningguang: Character = {
         },
         {
             name: 'Starshatter',
-            image: 'https://genshin.honeyhunterworld.com/img/s_273901.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_E_Ningguang_01.png',
             description:
                 'Gathering a great number of gems, Ningguang scatters them all at once, sending homing projectiles at her opponents that deal massive\nGeo DMG\n.\nIf Starshatter is cast when a Jade Screen is nearby, the Jade Screen will fire additional gem projectiles at the same time.\nStars shatter. Silence falls.',
             data: {
@@ -385,19 +385,19 @@ const Ningguang: Character = {
     passiveSkills: [
         {
             name: 'Trove of Marvelous Treasures',
-            image: 'https://genshin.honeyhunterworld.com/img/p_272301.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_Collect_Ore.png',
             description:
                 'Displays the location of nearby\nore veins used in forging\non the mini-map.',
         },
         {
             name: 'Backup Plan',
-            image: 'https://genshin.honeyhunterworld.com/img/p_272101.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Ningguang_02.png',
             description:
                 'When Ningguang is in possession of Star Jades, her Charged Attack does not consume Stamina.',
         },
         {
             name: 'Strategic Reserve',
-            image: 'https://genshin.honeyhunterworld.com/img/p_272201.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Ningguang_06.png',
             description:
                 'A character that passes through the\nJade Screen\nwill gain a 12%\nGeo DMG Bonus\nfor 10s.',
         },
@@ -405,41 +405,41 @@ const Ningguang: Character = {
     constellations: [
         {
             name: 'Piercing Fragments',
-            image: 'https://genshin.honeyhunterworld.com/img/c_271.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Ningguang_01.png',
             description: 'When a Normal Attack hits, it deals AoE DMG.',
             level: 1,
         },
         {
             name: 'Shock Effect',
-            image: 'https://genshin.honeyhunterworld.com/img/c_272.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Ningguang_05.png',
             description:
                 'When\nJade Screen\nis shattered, its CD will reset.\nCan occur once every 6s.',
             level: 2,
         },
         {
             name: 'Majesty Be the Array of Stars',
-            image: 'https://genshin.honeyhunterworld.com/img/c_273.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Ningguang_02.png',
             description:
                 'Increases the Level of\nStarshatter\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: 'Exquisite be the Jade, Outshining All Beneath',
-            image: 'https://genshin.honeyhunterworld.com/img/c_274.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Ningguang_03.png',
             description:
                 "Jade Screen\nincreases nearby characters' Elemental RES by 10%.",
             level: 4,
         },
         {
             name: 'Invincible Be the Jade Screen',
-            image: 'https://genshin.honeyhunterworld.com/img/c_275.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Ningguang_01.png',
             description:
                 'Increases the Level of\nJade Screen\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: 'Grandeur Be the Seven Stars',
-            image: 'https://genshin.honeyhunterworld.com/img/c_276.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Ningguang_04.png',
             description: 'When\nStarshatter\nis used, Ningguang gains 7 Star Jades.',
             level: 6,
         },

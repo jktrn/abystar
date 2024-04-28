@@ -14,7 +14,7 @@ const constellationBonuses: Bonus[] = [
 
 const Barbara: Character = {
     name: 'Barbara',
-    icon: '/images/characters/barbara.png',
+    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Barbara.png',
     weapon: 'Catalyst',
     vision: 'Hydro',
     rarity: 4,
@@ -138,7 +138,7 @@ const Barbara: Character = {
     talents: [
         {
             name: 'Normal Attack: Whisper of Water',
-            image: 'https://genshin.honeyhunterworld.com/img/s_143101.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_A_Catalyst_MD.png',
             description:
                 'Normal Attack\nPerforms up to 4 water splash attacks that deal\nHydro DMG\n.\nCharged Attack\nConsumes a certain amount of Stamina to deal\nAoE Hydro DMG\nafter a short casting time.\nPlunging Attack\nGathering the might of Hydro, Barbara plunges towards the ground from mid-air, damaging all opponents in her path. Deals\nAoE Hydro DMG\nupon impact with the ground.',
             data: {
@@ -267,7 +267,7 @@ const Barbara: Character = {
                     Lv3: '132.13%',
                     Lv4: '145.35%',
                     Lv5: '154.59%',
-                    Lv6: '165.16%',
+                    Lv6: '165.17%',
                     Lv7: '179.7%',
                     Lv8: '194.23%',
                     Lv9: '208.77%',
@@ -299,7 +299,7 @@ const Barbara: Character = {
         },
         {
             name: 'Let the Show Begin\u266a',
-            image: 'https://genshin.honeyhunterworld.com/img/s_143201.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_S_Barbara_01.png',
             description:
                 "Summons water droplets resembling musical notes that form a Melody Loop, dealing\nHydro DMG\nto surrounding opponents and applying the\nWet\nstatus to them.\nMelody Loop\n\u00b7On hit, Barbara's Normal Attacks heal your own party members and nearby teammates for a certain amount of HP, which scales with Barbara's Max HP.\n\u00b7On hit, Barbara's Charged Attack generates 4 times the amount of healing.\n\u00b7Periodically regenerates your own active character's HP.\n\u00b7Applies the\nWet\nstatus to the character and to opponents who come in contact with them.\nBarbara's music is the magic that heals her companions.",
             data: {
@@ -312,7 +312,7 @@ const Barbara: Character = {
                     Lv6: '1.05% Max HP + 114.36',
                     Lv7: '1.13% Max HP + 124.59',
                     Lv8: '1.2% Max HP + 135.43',
-                    Lv9: '1.27% Max HP + 146.86',
+                    Lv9: '1.28% Max HP + 146.86',
                     Lv10: '1.35% Max HP + 158.9',
                     Lv11: '1.43% Max HP + 171.54',
                     Lv12: '1.5% Max HP + 184.79',
@@ -392,7 +392,7 @@ const Barbara: Character = {
         },
         {
             name: 'Shining Miracle\u266a',
-            image: 'https://genshin.honeyhunterworld.com/img/s_143901.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_E_Barbara_01.png',
             description:
                 "Heals your own party members and nearby teammates for a large amount of HP that scales with Barbara's Max HP.\nBarbara's desire to heal strengthens her will to fight and sing.",
             data: {
@@ -408,7 +408,7 @@ const Barbara: Character = {
                     Lv9: '29.92% Max HP + 3445.28',
                     Lv10: '31.68% Max HP + 3727.7',
                     Lv11: '33.44% Max HP + 4024.24',
-                    Lv12: '35.2% Max HP + 4334.9',
+                    Lv12: '35.2% Max HP + 4334.91',
                     Lv13: '37.4% Max HP + 4659.69',
                     Lv14: '39.6% Max HP + 4998.59',
                     Lv15: '41.8% Max HP + 5351.62',
@@ -453,19 +453,19 @@ const Barbara: Character = {
     passiveSkills: [
         {
             name: 'With My Whole Heart\u266a',
-            image: 'https://genshin.honeyhunterworld.com/img/p_142301.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_Cook_Heal.png',
             description:
                 'When a Perfect Cooking is achieved on a dish with restorative effects, there is a 12% chance to obtain double the product.',
         },
         {
             name: 'Glorious Season',
-            image: 'https://genshin.honeyhunterworld.com/img/p_142101.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Barbara_05.png',
             description:
                 "The Stamina Consumption of characters within\nLet the Show Begin\u266a\n's Melody Loop is reduced by 12%.",
         },
         {
             name: 'Encore',
-            image: 'https://genshin.honeyhunterworld.com/img/p_142201.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Barbara_06.png',
             description:
                 'When your active character gains an Elemental Orb/Particle, the duration of the Melody Loop of\nLet the Show Begin\u266a\nis extended by 1s.\nThe maximum extension is 5s.',
         },
@@ -473,41 +473,41 @@ const Barbara: Character = {
     constellations: [
         {
             name: 'Gleeful Songs',
-            image: 'https://genshin.honeyhunterworld.com/img/c_141.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Barbara_01.png',
             description: 'Barbara regenerates 1 Energy every 10s.',
             level: 1,
         },
         {
             name: 'Vitality Burst',
-            image: 'https://genshin.honeyhunterworld.com/img/c_142.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Barbara_02.png',
             description:
                 "Decreases the CD of\nLet the Show Begin\u266a\nby 15%.\nDuring the ability's duration, your active character gains a 15%\nHydro DMG Bonus\n.",
             level: 2,
         },
         {
             name: 'Star of Tomorrow',
-            image: 'https://genshin.honeyhunterworld.com/img/c_143.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Barbara_02.png',
             description:
                 'Increases the Level of\nShining Miracle\u266a\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: 'Attentiveness Be My Power',
-            image: 'https://genshin.honeyhunterworld.com/img/c_144.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Barbara_03.png',
             description:
                 'Every opponent Barbara hits with her Charged Attack regenerates 1 Energy for her.\nA maximum of 5 energy can be regenerated in this manner with any one Charged Attack.',
             level: 4,
         },
         {
             name: 'The Purest Companionship',
-            image: 'https://genshin.honeyhunterworld.com/img/c_145.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Barbara_01.png',
             description:
                 'Increases the Level of\nLet the Show Begin\u266a\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: 'Dedicating Everything to You',
-            image: 'https://genshin.honeyhunterworld.com/img/c_146.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Barbara_04.png',
             description:
                 "When Barbara is in the party but not on the field, and one of your own party members falls:\n\u00b7Automatically revives the fallen character.\n\u00b7Fully restores the revived character's HP to 100%.\nThis effect can only occur once every 15 mins.",
             level: 6,

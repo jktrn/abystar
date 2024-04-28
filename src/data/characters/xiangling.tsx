@@ -14,7 +14,7 @@ const constellationBonuses: Bonus[] = [
 
 const Xiangling: Character = {
     name: 'Xiangling',
-    icon: '/images/characters/xiangling.png',
+    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Xiangling.png',
     weapon: 'Polearm',
     vision: 'Pyro',
     rarity: 4,
@@ -138,7 +138,7 @@ const Xiangling: Character = {
     talents: [
         {
             name: 'Normal Attack: Dough-Fu',
-            image: 'https://genshin.honeyhunterworld.com/img/s_233101.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_A_03.png',
             description:
                 'Normal Attack\nPerforms up to five consecutive spear strikes.\nCharged Attack\nConsumes a certain amount of Stamina to lunge forward, dealing damage to opponents along the way.\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.',
             data: {
@@ -148,7 +148,7 @@ const Xiangling: Character = {
                     Lv3: '48.9%',
                     Lv4: '53.79%',
                     Lv5: '57.21%',
-                    Lv6: '61.12%',
+                    Lv6: '61.13%',
                     Lv7: '66.5%',
                     Lv8: '71.88%',
                     Lv9: '77.26%',
@@ -182,7 +182,7 @@ const Xiangling: Character = {
                     Lv3: '60.60%',
                     Lv4: '66.66%',
                     Lv5: '70.90%',
-                    Lv6: '75.74%',
+                    Lv6: '75.76%',
                     Lv7: '82.42%',
                     Lv8: '89.08%',
                     Lv9: '95.74%',
@@ -204,7 +204,7 @@ const Xiangling: Character = {
                     Lv8: '24.11%*4',
                     Lv9: '25.91%*4',
                     Lv10: '27.88%*4',
-                    Lv11: '30.13%*4',
+                    Lv11: '30.14%*4',
                     Lv12: '32.79%*4',
                     Lv13: '35.44%*4',
                     Lv14: '38.09%*4',
@@ -233,9 +233,9 @@ const Xiangling: Character = {
                     Lv3: '141.5%',
                     Lv4: '155.65%',
                     Lv5: '165.56%',
-                    Lv6: '176.87%',
+                    Lv6: '176.88%',
                     Lv7: '192.44%',
-                    Lv8: '208%',
+                    Lv8: '208.01%',
                     Lv9: '223.57%',
                     Lv10: '240.55%',
                     Lv11: '260.01%',
@@ -316,7 +316,7 @@ const Xiangling: Character = {
         },
         {
             name: 'Guoba Attack',
-            image: 'https://genshin.honeyhunterworld.com/img/s_233201.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_S_Xiangling_01.png',
             description:
                 "Summons Guoba, who will continuously breathe fire at opponents, dealing\nAoE Pyro DMG\n.\nGuoba loves to eat spicy food. Problem is, his stomach can't handle something this spicy.",
             data: {
@@ -358,7 +358,7 @@ const Xiangling: Character = {
         },
         {
             name: 'Pyronado',
-            image: 'https://genshin.honeyhunterworld.com/img/s_233901.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_E_Xiangling_01.png',
             description:
                 "Displaying her mastery over both fire and polearms, Xiangling sends a Pyronado whirling around her.\nThe Pyronado will move with your character for the ability's duration, dealing\nPyro DMG\nto all opponents in its path.\nThere will never be enough heat. Never.",
             data: {
@@ -487,18 +487,18 @@ const Xiangling: Character = {
     passiveSkills: [
         {
             name: 'Chef de Cuisine',
-            image: 'https://genshin.honeyhunterworld.com/img/p_232301.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_Cook_Attack.png',
             description:
                 'When Xiangling cooks an ATK-boosting dish perfectly, she has a 12% chance to receive double the product.',
         },
         {
             name: 'Crossfire',
-            image: 'https://genshin.honeyhunterworld.com/img/p_232101.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Xiangling_05.png',
             description: 'Increases the flame range of Guoba by 20%.',
         },
         {
             name: "Beware, It's Super Hot!",
-            image: 'https://genshin.honeyhunterworld.com/img/p_232201.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Xiangling_06.png',
             description:
                 "When\nGuoba Attack\n's effect ends, Guoba leaves a chili pepper on the spot where it disappeared. Picking up a chili pepper increases ATK by 10% for 10s.",
         },
@@ -506,41 +506,41 @@ const Xiangling: Character = {
     constellations: [
         {
             name: 'Crispy Outside, Tender Inside',
-            image: 'https://genshin.honeyhunterworld.com/img/c_231.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Xiangling_01.png',
             description:
                 "Opponents hit by Guoba's attacks have their\nPyro RES\nreduced by 15% for 6s.",
             level: 1,
         },
         {
             name: 'Oil Meets Fire',
-            image: 'https://genshin.honeyhunterworld.com/img/c_232.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Xiangling_02.png',
             description:
                 "The last attack in a Normal Attack sequence applies the Implode status onto the opponent for 2s. An explosion will occur once this duration ends, dealing 75% of Xiangling's ATK as\nAoE Pyro DMG\n.",
             level: 2,
         },
         {
             name: 'Deepfry',
-            image: 'https://genshin.honeyhunterworld.com/img/c_233.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Xiangling_02.png',
             description:
                 'Increases the Level of\nPyronado\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: 'Slowbake',
-            image: 'https://genshin.honeyhunterworld.com/img/c_234.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Xiangling_03.png',
             description: "Pyronado\n's duration is increased by 40%.",
             level: 4,
         },
         {
             name: 'Guoba Mad',
-            image: 'https://genshin.honeyhunterworld.com/img/c_235.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Xiangling_01.png',
             description:
                 'Increases the Level of\nGuoba Attack\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: 'Condensed Pyronado',
-            image: 'https://genshin.honeyhunterworld.com/img/c_236.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Xiangling_04.png',
             description:
                 'For the duration of\nPyronado\n, all party members receive a 15%\nPyro DMG Bonus\n.',
             level: 6,

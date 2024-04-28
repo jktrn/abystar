@@ -521,19 +521,19 @@ const Arlecchino: Character = {
     passiveSkills: [
         {
             name: 'The Balemoon Alone May Know',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Arlecchino_05.png',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Arlecchino_07.png',
             description:
                 'While in combat, Arlecchino gains a 40%\nPyro DMG Bonus\nand can only be healed through\nBalemoon Rising\n.',
         },
         {
             name: 'Agony Alone May Be Repaid',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Arlecchino_06.png',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Arlecchino_05.png',
             description:
                 'Blood-Debt Directives\nhave the following characteristics:\n\u00b7 When defeating an opponent with a Directive, Arlecchino will be granted a Life Bond worth 130% of her Max HP.\n\u00b7 5s after a Directive is applied, it will be upgraded to a Blood-Debt Due. When absorbed, it will instead grant Arlecchino a Bond of Life worth 130%.\nA Bond of Life created in the aforementioned ways cannot exceed the original limit on the value of Bonds of Life obtained through\nAll Is Ash\n.',
         },
         {
             name: 'Strength Alone Can Defend',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Arlecchino_07.png',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Arlecchino_06.png',
             description:
                 'Arlecchino gains 1% All Elemental and Physical RES for every 100 ATK she has in excess of 1,000. The maximum RES increase she can gain this way for each is 20%.',
         },

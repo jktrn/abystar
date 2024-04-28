@@ -14,7 +14,7 @@ const constellationBonuses: Bonus[] = [
 
 const Charlotte: Character = {
     name: 'Charlotte',
-    icon: '/images/characters/charlotte.png',
+    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Charlotte.png',
     weapon: 'Catalyst',
     vision: 'Cryo',
     rarity: 4,
@@ -138,7 +138,7 @@ const Charlotte: Character = {
     talents: [
         {
             name: 'Normal Attack: Cool-Color Capture',
-            image: 'https://genshin.honeyhunterworld.com/img/s_883101.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_A_Catalyst_MD.png',
             description:
                 "Normal Attack\nTaking aim at targets using Monsieur Verite, her custom Kamera, Charlotte performs up to 3 consecutive attacks, dealing\nCryo DMG\n.\nCharged Attack\nConsumes a fixed amount of Stamina, and after a moment's preparation, will deploy Monsieur Verite to deal\nAoE Cryo DMG\n.\nPlunging Attack\nGathering the power of Cryo, Charlotte plunges toward the ground, dealing DMG to all opponents in her path and dealing\nAoE Cryo DMG\nupon landing.\nArkhe: Pneuma\nAt certain intervals, upon using a Charged Attack, Charlotte will cause a Spiritbreath Thorn to descend and pierce opponents, dealing Pneuma-aligned\nAoE Cryo DMG\n.",
             data: {
@@ -250,7 +250,7 @@ const Charlotte: Character = {
                     Lv3: '132.13%',
                     Lv4: '145.35%',
                     Lv5: '154.59%',
-                    Lv6: '165.16%',
+                    Lv6: '165.17%',
                     Lv7: '179.7%',
                     Lv8: '194.23%',
                     Lv9: '208.77%',
@@ -316,7 +316,7 @@ const Charlotte: Character = {
         },
         {
             name: 'Framing: Freezing Point Composition',
-            image: 'https://genshin.honeyhunterworld.com/img/s_883201.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_S_Charlotte_01.png',
             description:
                 'Using the keen instincts of an ace reporter, Charlotte uses her photography skills to produce different effects based on whether the ability is Tapped or Held.\nTap\nTakes a snapshot using Monsieur Verite, dealing\nAoE Cryo DMG\nto opponents in front of her and applying Snappy Silhouette to a maximum of 5 opponents. During this effect\'s duration, it will deal\nCryo DMG\nto affected opponents at intervals.\nHold\nPopping Monsieur Verite\'s viewfinder open, Charlotte enters Composition Mode, and during this time, the viewfinder will expand as you hold until you reach a Finisher Frame state. In this state, Charlotte can move and change direction freely.\nWhen the hold state ends, Monsieur Verite will deal\nCryo DMG\nto all opponents locked on within the viewfinder, and apply the same Snappy Silhouette as Tap Mode does to them. If you unleash this ability only after reaching Finisher Frame, you will instead apply Focused Impression, which lasts longer and deals more DMG, although the Skill CD will be longer.\nComposition Mode lasts a maximum of 15s and allows a maximum of 5 opponents to be selected.\n"Press photography requires simple shots with exceptional theming, but most of all, you need to have a knack for capturing the moment!"',
             data: {
@@ -410,7 +410,7 @@ const Charlotte: Character = {
                     Lv2: '43.65%',
                     Lv3: '46.69%',
                     Lv4: '50.75%',
-                    Lv5: '53.79%',
+                    Lv5: '53.8%',
                     Lv6: '56.84%',
                     Lv7: '60.9%',
                     Lv8: '64.96%',
@@ -418,7 +418,7 @@ const Charlotte: Character = {
                     Lv10: '73.08%',
                     Lv11: '77.14%',
                     Lv12: '81.2%',
-                    Lv13: '86.27%',
+                    Lv13: '86.28%',
                     Lv14: '91.35%',
                     Lv15: '96.43%',
                 },
@@ -494,7 +494,7 @@ const Charlotte: Character = {
         },
         {
             name: 'Still Photo: Comprehensive Confirmation',
-            image: 'https://genshin.honeyhunterworld.com/img/s_883901.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_E_Charlotte_01.png',
             description:
                 "Condensing ice to create The Steambird's signature, Charlotte creates a Newsflash Field that will deal\nAoE Cryo DMG\nand restores HP for all nearby party members based on Charlotte's ATK.\nNewsflash Field\n\u00b7While the ability is active, Monsieur Verite will deal\nCryo DMG\nat intervals to opponents within its AoE.\n\u00b7Will continuously restore HP to active character(s) within its AoE based on Charlotte's ATK.\n\"Hearing stories from multiple perspectives to recreate what really happened is key to a good report... I mean, that's how you can pick the best angle for your article!\"",
             data: {
@@ -553,7 +553,7 @@ const Charlotte: Character = {
                     Lv1: '6.47%',
                     Lv2: '6.95%',
                     Lv3: '7.44%',
-                    Lv4: '8.08%',
+                    Lv4: '8.09%',
                     Lv5: '8.57%',
                     Lv6: '9.06%',
                     Lv7: '9.7%',
@@ -623,19 +623,19 @@ const Charlotte: Character = {
     passiveSkills: [
         {
             name: 'First-Person Shutter',
-            image: 'https://genshin.honeyhunterworld.com/img/p_882301.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Charlotte_07.png',
             description:
                 'After activating the Special Analysis Zoom Lens, Charlotte\'s "Framing: Freezing Point Composition" Hold Mode cannot trigger its original effects, but instead enables her to take photos in a rather unique manner...',
         },
         {
             name: 'Moment of Impact',
-            image: 'https://genshin.honeyhunterworld.com/img/p_882101.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Charlotte_05.png',
             description:
                 'When opponents marked by "Focused Impression" are defeated,\nFraming: Freezing Point Composition\n\'s CD will be decreased by 2s. This CD decrease can be triggered 4 times every 12s.',
         },
         {
             name: 'Diversified Investigation',
-            image: 'https://genshin.honeyhunterworld.com/img/p_882201.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Charlotte_06.png',
             description:
                 'When the party contains 1/2/3 Fontainians other than herself, Charlotte gains a 5%/10%/15% Healing Bonus. When the party contains 1/2/3 non-Fontainians, Charlotte gains a 5%/10%/15% Cryo DMG Bonus.',
         },
@@ -643,42 +643,42 @@ const Charlotte: Character = {
     constellations: [
         {
             name: 'A Need to Verify Facts',
-            image: 'https://genshin.honeyhunterworld.com/img/c_881.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Charlotte_01.png',
             description:
                 "After\nStill Photo: Comprehensive Confirmation\nheals a character, it will mark them with Verification, which will heal them once every 2s for 80% of Charlotte's ATK. This effect lasts 6s.",
             level: 1,
         },
         {
             name: 'A Duty to Pursue Truth',
-            image: 'https://genshin.honeyhunterworld.com/img/c_882.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Charlotte_02.png',
             description:
                 "When using\nFraming: Freezing Point Composition\n, when Monsieur Verite hits 1/2/3 (or more) opponents, Charlotte's own ATK will be increased by 10%/20%/30% for 12s.",
             level: 2,
         },
         {
             name: 'An Imperative to Independence',
-            image: 'https://genshin.honeyhunterworld.com/img/c_883.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Charlotte_01.png',
             description:
                 'Increases the Level of\nStill Photo: Comprehensive Confirmation\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: 'A Responsibility to Oversee',
-            image: 'https://genshin.honeyhunterworld.com/img/c_884.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Charlotte_03.png',
             description:
                 'When\nStill Photo: Comprehensive Confirmation\nhits an opponent marked by Snappy Silhouette or Focused Impression, it will deal 10% more DMG and restore 2 Energy to Charlotte. This restoration can be triggered 5 times every 20s.',
             level: 4,
         },
         {
             name: 'A Principle of Conscience',
-            image: 'https://genshin.honeyhunterworld.com/img/c_885.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Charlotte_02.png',
             description:
                 'Increases the Level of\nFraming: Freezing Point Composition\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: 'A Summation of Interest',
-            image: 'https://genshin.honeyhunterworld.com/img/c_886.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Charlotte_04.png',
             description:
                 "When the active character's Normal and Charged Attacks hit an opponent marked by\nFraming: Freezing Point Composition\n's Focused Impression, Monsieur Verite will initiate a coordinated attack that deals 180% of Charlotte's ATK as\nAoE Cryo DMG\nand heals active character(s) within the AoE for 42% of Charlotte's ATK. This effect can be triggered once every 6s and both DMG and healing dealt in this way will be considered as having been done by Charlotte's Elemental Burst.",
             level: 6,

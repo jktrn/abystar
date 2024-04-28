@@ -195,7 +195,7 @@ const characterBonuses: Bonus[] = [
                 based on Max HP (maximum gained cannot exceed 400% original ATK)
             </span>
         ),
-        icon: '/images/characters/hu-tao-skill.png',
+        icon: 'https://api.ambr.top/assets/UI/Skill_S_Hutao_01.png',
         effect: (attributes, talentLevels, currentStacks, state) => {
             if (!state || !talentLevels) return { attributes }
 
@@ -247,14 +247,14 @@ const characterBonuses: Bonus[] = [
         priority: 2,
     },
     {
-        name: 'Sanguine Rogue',
+        name: 'Sanguine Rouge',
         description: (
             <span>
                 +33% <span style={{ color: '#bf612d' }}>Pyro DMG Bonus</span> when
                 under 50% Max HP
             </span>
         ),
-        icon: '/images/characters/hu-tao-passive2.png',
+        icon: 'https://api.ambr.top/assets/UI/UI_Talent_S_Hutao_06.png',
         effect: (attributes) => {
             const newAttributes = {
                 ...attributes,
@@ -277,7 +277,7 @@ const constellationBonuses: Bonus[] = [
                 state, Hu Tao&apos;s Charge Attacks do not consume Stamina.
             </span>
         ),
-        icon: '/images/characters/hu-tao-constellation1.png',
+        icon: 'https://api.ambr.top/assets/UI/UI_Talent_S_Hutao_03.png',
         effect: (attributes) => {
             const newAttributes = {
                 ...attributes,
@@ -302,7 +302,7 @@ const constellationBonuses: Bonus[] = [
                 the <span style={{ color: '#DDD' }}>Blood Blossom</span> effect.
             </span>
         ),
-        icon: '/images/characters/hu-tao-constellation2.png',
+        icon: 'https://api.ambr.top/assets/UI/UI_Talent_S_Hutao_01.png',
         effect: (attributes) => {
             const newAttributes = {
                 ...attributes,
@@ -326,7 +326,7 @@ const constellationBonuses: Bonus[] = [
                 Maximum upgrade level is 15.
             </span>
         ),
-        icon: '/images/characters/hu-tao-constellation3.png',
+        icon: 'https://api.ambr.top/assets/UI/UI_Talent_U_Hutao_01.png',
         effect: (attributes, talentLevels) => {
             if (!talentLevels) return { attributes }
 
@@ -351,7 +351,7 @@ const constellationBonuses: Bonus[] = [
                 herself) will have their CRIT Rate increased by 12% for 15s.
             </span>
         ),
-        icon: '/images/characters/hu-tao-constellation4.png',
+        icon: 'https://api.ambr.top/assets/UI/UI_Talent_S_Hutao_02.png',
         effect: (attributes) => {
             // TODO: Handle
             return { attributes }
@@ -369,7 +369,7 @@ const constellationBonuses: Bonus[] = [
                 upgrade level is 15.
             </span>
         ),
-        icon: '/images/characters/hu-tao-constellation5.png',
+        icon: 'https://api.ambr.top/assets/UI/UI_Talent_U_Hutao_02.png',
         effect: (attributes, talentLevels) => {
             if (!talentLevels) return { attributes }
 
@@ -392,7 +392,7 @@ const constellationBonuses: Bonus[] = [
                 Elemental/Physical RES increased by 200%, CRIT Rate increased by 100%
             </span>
         ),
-        icon: '/images/characters/hu-tao-constellation6.png',
+        icon: 'https://api.ambr.top/assets/UI/UI_Talent_S_Hutao_04.png',
         effect: (attributes) => {
             const newAttributes = {
                 ...attributes,
@@ -417,7 +417,7 @@ const constellationBonuses: Bonus[] = [
 
 const HuTao: Character = {
     name: 'Hu Tao',
-    icon: '/images/characters/hu-tao.png',
+    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Hutao.png',
     weapon: 'Polearm',
     vision: 'Pyro',
     rarity: 5,
@@ -541,7 +541,7 @@ const HuTao: Character = {
     talents: [
         {
             name: 'Normal Attack: Secret Spear of Wangsheng',
-            image: 'https://genshin.honeyhunterworld.com/img/s_463101.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_A_03.png',
             description:
                 'Normal Attack\nPerforms up to 6 consecutive spear strikes.\nCharged Attack\nConsumes a certain amount of Stamina to lunge forward, dealing damage to opponents along the way.\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.',
             data: {
@@ -583,12 +583,12 @@ const HuTao: Character = {
                     Lv1: '61.05%',
                     Lv2: '65.21%',
                     Lv3: '69.38%',
-                    Lv4: '74.92%',
+                    Lv4: '74.93%',
                     Lv5: '79.09%',
                     Lv6: '83.94%',
                     Lv7: '90.19%',
                     Lv8: '96.43%',
-                    Lv9: '102.67%',
+                    Lv9: '102.68%',
                     Lv10: '108.92%',
                     Lv11: '115.16%',
                     Lv12: '121.41%',
@@ -647,21 +647,21 @@ const HuTao: Character = {
                     Lv14: '188.52%',
                     Lv15: '197.31%',
                 },
-                'Charged Attack DMG': {
+                'Charged Attack': {
                     Lv1: '135.96%',
                     Lv2: '145.23%',
                     Lv3: '154.5%',
                     Lv4: '166.86%',
                     Lv5: '176.13%',
-                    Lv6: '186.94%',
+                    Lv6: '186.95%',
                     Lv7: '200.85%',
                     Lv8: '214.76%',
                     Lv9: '228.66%',
-                    Lv10: '242.56%',
+                    Lv10: '242.57%',
                     Lv11: '256.47%',
-                    Lv12: '270.37%',
+                    Lv12: '270.38%',
                     Lv13: '284.28%',
-                    Lv14: '298.18%',
+                    Lv14: '298.19%',
                     Lv15: '312.09%',
                 },
                 'Charged Attack Stamina Cost': {
@@ -736,7 +736,7 @@ const HuTao: Character = {
         },
         {
             name: 'Guide to Afterlife',
-            image: 'https://genshin.honeyhunterworld.com/img/s_463201.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_S_Hutao_01.png',
             description:
                 "Only an unwavering flame can cleanse the impurities of this world.\nHu Tao consumes a set portion of her HP to knock the surrounding enemies back and enter the Paramita Papilio state.\nParamita Papilio\n\u00b7Increases Hu Tao's ATK based on her Max HP at the time of entering this state. ATK Bonus gained this way cannot exceed 400% of Hu Tao's Base ATK.\n\u00b7Converts attack DMG to\nPyro DMG\n, which cannot be overridden by any other elemental infusion.\n\u00b7Charged Attacks apply the Blood Blossom effect to the enemies hit.\n\u00b7Increases Hu Tao's resistance to interruption.\nBlood Blossom\nEnemies affected by Blood Blossom will take\nPyro DMG\nevery 4s. This DMG is considered Elemental Skill DMG.\nEach enemy can be affected by only one Blood Blossom effect at a time, and its duration may only be refreshed by Hu Tao herself.\nParamita Papilio\nends when its duration is over, or Hu Tao has left the battlefield or fallen.\nHu Tao's Secret Spear technique is based on several rules, the first of which is: \"The spear opens the path to the afterlife, and the butterflies bridge this world and the next.\"",
             data: {
@@ -768,7 +768,7 @@ const HuTao: Character = {
                     Lv8: '5.66% Max HP',
                     Lv9: '5.96% Max HP',
                     Lv10: '6.26% Max HP',
-                    Lv11: '6.55% Max HP',
+                    Lv11: '6.56% Max HP',
                     Lv12: '6.85% Max HP',
                     Lv13: '7.15% Max HP',
                     Lv14: '7.45% Max HP',
@@ -846,7 +846,7 @@ const HuTao: Character = {
         },
         {
             name: 'Spirit Soother',
-            image: 'https://genshin.honeyhunterworld.com/img/s_463901.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_E_Hutao_01.png',
             description:
                 "Commands a blazing spirit to attack, dealing\nPyro DMG\nin a large AoE.\nUpon striking the enemy, regenerates a percentage of Hu Tao's Max HP. This effect can be triggered up to 5 times, based on the number of enemies hit.\nIf Hu Tao's HP is below or equal to 50% when the enemy is hit, both the DMG and HP Regeneration are increased.\nSupernatural activity by those who have already left this world is a source of great anxiety for the Wangsheng Funeral Parlor. In such cases, cremation always lets Hu Tao find peace of mind. The more anxious she feels, the stronger the flame.",
             data: {
@@ -889,14 +889,14 @@ const HuTao: Character = {
                     Lv2: '6.64% Max HP',
                     Lv3: '7.01% Max HP',
                     Lv4: '7.5% Max HP',
-                    Lv5: '7.87% Max HP',
+                    Lv5: '7.88% Max HP',
                     Lv6: '8.25% Max HP',
                     Lv7: '8.74% Max HP',
-                    Lv8: '9.22% Max HP',
+                    Lv8: '9.23% Max HP',
                     Lv9: '9.71% Max HP',
                     Lv10: '10.2% Max HP',
                     Lv11: '10.69% Max HP',
-                    Lv12: '11.17% Max HP',
+                    Lv12: '11.18% Max HP',
                     Lv13: '11.66% Max HP',
                     Lv14: '12.15% Max HP',
                     Lv15: '12.64% Max HP',
@@ -958,19 +958,19 @@ const HuTao: Character = {
     passiveSkills: [
         {
             name: 'The More the Merrier',
-            image: 'https://genshin.honeyhunterworld.com/img/p_462301.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_Cook_ExtraFailedItem.png',
             description:
                 'When Hu Tao cooks a dish perfectly, she has a 18% chance to receive an additional "Suspicious" dish of the same type.',
         },
         {
             name: 'Flutter By',
-            image: 'https://genshin.honeyhunterworld.com/img/p_462101.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Hutao_05.png',
             description:
                 'When a\nParamita Papilio\nstate activated by\nGuide to Afterlife\nends, all allies in the party (excluding Hu Tao herself) will have their CRIT Rate increased by 12% for 8s.',
         },
         {
             name: 'Sanguine Rouge',
-            image: 'https://genshin.honeyhunterworld.com/img/p_462201.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Hutao_06.png',
             description:
                 "When Hu Tao's HP is equal to or less than 50%, her\nPyro DMG Bonus\nis increased by 33%.",
         },
@@ -978,42 +978,42 @@ const HuTao: Character = {
     constellations: [
         {
             name: 'Crimson Bouquet',
-            image: 'https://genshin.honeyhunterworld.com/img/c_461.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Hutao_03.png',
             description:
                 "While in a\nParamita Papilio\nstate activated by\nGuide to Afterlife\n, Hu Tao's Charged Attacks do not consume Stamina.",
             level: 1,
         },
         {
             name: 'Ominous Rainfall',
-            image: 'https://genshin.honeyhunterworld.com/img/c_462.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Hutao_01.png',
             description:
                 "Increases the\nBlood Blossom\nDMG by an amount equal to 10% of Hu Tao's Max HP at the time the effect is applied.\nAdditionally,\nSpirit Soother\nwill also apply the\nBlood Blossom\neffect.",
             level: 2,
         },
         {
             name: 'Lingering Carmine',
-            image: 'https://genshin.honeyhunterworld.com/img/c_463.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Hutao_01.png',
             description:
                 'Increases the Level of\nGuide to Afterlife\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: 'Garden of Eternal Rest',
-            image: 'https://genshin.honeyhunterworld.com/img/c_464.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Hutao_02.png',
             description:
                 'Upon defeating an enemy affected by a\nBlood Blossom\nthat Hu Tao applied herself, all nearby allies in the party (excluding Hu Tao herself) will have their CRIT Rate increased by 12% for 15s.',
             level: 4,
         },
         {
             name: 'Floral Incense',
-            image: 'https://genshin.honeyhunterworld.com/img/c_465.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Hutao_02.png',
             description:
                 'Increases the Level of\nSpirit Soother\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: "Butterfly's Embrace",
-            image: 'https://genshin.honeyhunterworld.com/img/c_466.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Hutao_04.png',
             description:
                 "Triggers when Hu Tao's HP drops below 25%, or when she suffers a lethal strike:\nHu Tao will not fall as a result of the DMG sustained. Additionally, for the next 10s, her All Elemental and Physical RES is increased by 200%, her CRIT Rate is increased by 100%, and her resistance to interruption is greatly increased.\nThis effect triggers automatically when Hu Tao has 1 HP left.\nCan only occur once every 60s.",
             level: 6,

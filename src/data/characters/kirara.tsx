@@ -14,7 +14,7 @@ const constellationBonuses: Bonus[] = [
 
 const Kirara: Character = {
     name: 'Kirara',
-    icon: '/images/characters/kirara.png',
+    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Momoka.png',
     weapon: 'Sword',
     vision: 'Dendro',
     rarity: 4,
@@ -138,7 +138,7 @@ const Kirara: Character = {
     talents: [
         {
             name: 'Normal Attack: Boxcutter',
-            image: 'https://genshin.honeyhunterworld.com/img/s_613101.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_A_01.png',
             description:
                 'Normal Attack\nPerforms up to 4 rapid strikes.\nCharged Attack\nConsumes a certain amount of Stamina to unleash 3 rapid claw strikes.\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.',
             data: {
@@ -165,7 +165,7 @@ const Kirara: Character = {
                     Lv3: '53.9%',
                     Lv4: '59.29%',
                     Lv5: '63.06%',
-                    Lv6: '67.37%',
+                    Lv6: '67.38%',
                     Lv7: '73.3%',
                     Lv8: '79.23%',
                     Lv9: '85.16%',
@@ -216,7 +216,7 @@ const Kirara: Character = {
                     Lv3: '130.10%',
                     Lv4: '143.10%',
                     Lv5: '152.22%',
-                    Lv6: '162.62%',
+                    Lv6: '162.63%',
                     Lv7: '176.93%',
                     Lv8: '191.25%',
                     Lv9: '205.55%',
@@ -299,7 +299,7 @@ const Kirara: Character = {
         },
         {
             name: 'Meow-teor Kick',
-            image: 'https://genshin.honeyhunterworld.com/img/s_613201.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_S_Momoka_01.png',
             description:
                 'Press\nLeaps into the air with all the agility of a cat passing through the bushes, and thwacks her foes with a flying kick that deals\nAoE Dendro DMG\nwhile creating a Shield of Safe Transport. This will also briefly\napply Dendro\nto Kirara. The shield will absorb\nDendro DMG\nwith 250% effectiveness. The shield\'s DMG absorption will be based on Kirara\'s Max HP and will not exceed a certain percentage of that Max HP. The remaining DMG absorption on a Shield of Safe Transport will stack on a new one when it is created, and its duration will reset.\nHold\nOut of her desire to "deliver within half a day," Kirara deploys a Shield of Safe Transport identical to the one that can be created by pressing the skill. She will also curl up into a special express delivery box, entering the Urgent Neko Parcel state in order to move and fight more swiftly.\nUrgent Neko Parcel\n\u00b7 Deals\nDendro DMG\nto opponents she crashes into. This effect can be triggered once on each opponent every 0.5s.\n\u00b7 When in this state, Kirara\'s movement speed, climbing speed, and jumping power are all increased, and her Stamina Consumption from climbing is increased.\n\u00b7 When the duration ends or the skill is used again, a Flipclaw Strike more powerful than the attack in the Press Mode will be unleashed, dealing\nAoE Dendro DMG\n.\n\u00b7 The Urgent Neko Parcel state lasts a maximum of 10s. When the state ends, the skill will enter CD. The longer Kirara spends in this state, the longer the CD will be.\n\u00b7 Sprinting or actively canceling climbing will end this state early.\n"So you wanna know the secret to speedy deliveries? Well, it\'s all in the legs!"',
             data: {
@@ -443,7 +443,7 @@ const Kirara: Character = {
         },
         {
             name: 'Secret Art: Surprise Dispatch',
-            image: 'https://genshin.honeyhunterworld.com/img/s_613901.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_E_Momoka_01.png',
             description:
                 'Smash opponents with a Special Delivery Package used for punishing parcel thieves, dealing\nAoE Dendro DMG\n. After the Special Delivery Package explodes, it will split up into many\nCat Grass Cardamoms\nthat will explode either upon contact with opponents or after a period of time, dealing\nAoE Dendro DMG\n.\n"Hehe, that\'s right, this stuff was made to deal with those parcel thieves! Remember to leave a 5-star rating once you\'ve received yours!"',
             data: {
@@ -479,7 +479,7 @@ const Kirara: Character = {
                     Lv12: '71.28%',
                     Lv13: '75.74%',
                     Lv14: '80.19%',
-                    Lv15: '84.64%',
+                    Lv15: '84.65%',
                 },
                 'Cat Grass Cardamom Duration': {
                     Lv1: '12s',
@@ -538,19 +538,19 @@ const Kirara: Character = {
     passiveSkills: [
         {
             name: "Cat's Creeping Carriage",
-            image: 'https://genshin.honeyhunterworld.com/img/p_612301.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Aloy_07.png',
             description:
                 'When Kirara is in the party, animals who produce Fowl, Raw Meat, or Chilled Meat will not be startled when party members approach them.',
         },
         {
             name: 'Bewitching, Betwitching Tails',
-            image: 'https://genshin.honeyhunterworld.com/img/p_612101.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Momoka_05.png',
             description:
                 'When Kirara is in the Urgent Neko Parcel state of\nMeow-teor Kick\n, each impact against an opponent will grant her a stack of\nReinforced Packaging\n. This effect can be triggered once for each opponent hit every 0.5s. Max 3 stacks. When the Urgent Neko Parcel state ends, each stack of Reinforced Packaging will create 1 Shield of Safe Transport for Kirara. The shields that are created this way will have 20% of the DMG absorption that the Shield of Safe Transport produced by\nMeow-teor Kick\nwould have. If Kirara is already protected by a Shield of Safe Transport created by Meow-teor Kick, its DMG absorption will stack with these shields and its duration will reset.',
         },
         {
             name: 'Pupillary Variance',
-            image: 'https://genshin.honeyhunterworld.com/img/p_612201.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Momoka_06.png',
             description:
                 'Every 1,000 Max HP Kirara possesses will increase the DMG dealt by\nMeow-teor Kick\nby 0.4%, and the DMG dealt by\nSecret Art: Surprise Dispatch\nby 0.3%.',
         },
@@ -558,42 +558,42 @@ const Kirara: Character = {
     constellations: [
         {
             name: 'Material Circulation',
-            image: 'https://genshin.honeyhunterworld.com/img/c_611.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Momoka_01.png',
             description:
                 'Every 8,000 Max HP Kirara possesses will cause her to create 1 extra\nCat Grass Cardamom\nwhen she uses\nSecret Art: Surprise Dispatch\n. A maximum of 4 extra can be created this way.',
             level: 1,
         },
         {
             name: 'Perfectly Packaged',
-            image: 'https://genshin.honeyhunterworld.com/img/c_612.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Momoka_02.png',
             description:
                 "When Kirara is in the Urgent Neko Parcel state of\nMeow-teor Kick\n, she will grant other party members she crashes into Critical Transport Shields.\nThe DMG absorption of Critical Transport Shield is 40% of the maximum absorption\nMeow-teor Kick\n's normal Shields of Safe Transport are capable of, and will absorb\nDendro DMG\nwith 250% effectiveness.\nCritical Transport Shields last 12s and can be triggered once on each character every 10s.",
             level: 2,
         },
         {
             name: 'Universal Recognition',
-            image: 'https://genshin.honeyhunterworld.com/img/c_613.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Momoka_01.png',
             description:
                 'Increases the Level of\nMeow-teor Kick\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: 'Steed of Skanda',
-            image: 'https://genshin.honeyhunterworld.com/img/c_614.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Momoka_04.png',
             description:
                 'After active character(s) protected by\nShields of Safe Transport\nor\nCritical Transport Shields\nhit opponents with Normal, Charged, or Plunging Attacks, Kirara will perform a coordinated attack with them using\nSmall Cat Grass Cardamoms\n, dealing 200% of her ATK as\nDendro DMG\n. DMG dealt this way is considered Elemental Burst DMG. This effect can be triggered once every 3.8s. This CD is shared between all party members.',
             level: 4,
         },
         {
             name: 'A Thousand Miles in a Day',
-            image: 'https://genshin.honeyhunterworld.com/img/c_615.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Momoka_02.png',
             description:
                 'Increases the Level of\nSecret Art: Surprise Dispatch\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: 'Countless Sights to See',
-            image: 'https://genshin.honeyhunterworld.com/img/c_616.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Momoka_03.png',
             description:
                 'All nearby party members will gain 12% All Elemental DMG Bonus within 15s after Kirara uses her Elemental Skill or Burst.',
             level: 6,

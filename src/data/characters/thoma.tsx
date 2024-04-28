@@ -14,7 +14,7 @@ const constellationBonuses: Bonus[] = [
 
 const Thoma: Character = {
     name: 'Thoma',
-    icon: '/images/characters/thoma.png',
+    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Tohma.png',
     weapon: 'Polearm',
     vision: 'Pyro',
     rarity: 4,
@@ -138,7 +138,7 @@ const Thoma: Character = {
     talents: [
         {
             name: 'Normal Attack: Swiftshatter Spear',
-            image: 'https://genshin.honeyhunterworld.com/img/s_503101.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_A_03.png',
             description:
                 'Normal Attack\nPerforms up to 4 consecutive spear strikes.\nCharged Attack\nConsumes a certain amount of Stamina to lunge forward, dealing damage to opponents along the way.\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.',
             data: {
@@ -180,7 +180,7 @@ const Thoma: Character = {
                     Lv1: '53.58%',
                     Lv2: '57.94%',
                     Lv3: '62.30%',
-                    Lv4: '68.52%',
+                    Lv4: '68.54%',
                     Lv5: '72.90%',
                     Lv6: '77.88%',
                     Lv7: '84.72%',
@@ -191,7 +191,7 @@ const Thoma: Character = {
                     Lv12: '120.86%',
                     Lv13: '128.34%',
                     Lv14: '135.82%',
-                    Lv15: '143.28%',
+                    Lv15: '143.30%',
                 },
                 '4-Hit DMG': {
                     Lv1: '67.36%',
@@ -216,7 +216,7 @@ const Thoma: Character = {
                     Lv3: '131.1%',
                     Lv4: '144.21%',
                     Lv5: '153.39%',
-                    Lv6: '163.87%',
+                    Lv6: '163.88%',
                     Lv7: '178.3%',
                     Lv8: '192.72%',
                     Lv9: '207.14%',
@@ -299,7 +299,7 @@ const Thoma: Character = {
         },
         {
             name: 'Blazing Blessing',
-            image: 'https://genshin.honeyhunterworld.com/img/s_503201.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_S_Tohma_01.png',
             description:
                 'Thoma vaults forward with his polearm and delivers a flame-filled flying kick that deals\nAoE Pyro DMG\n, while also summoning a defensive Blazing Barrier. At the moment of casting, Thoma\'s Elemental Skill applies\nPyro\nto himself.\nThe DMG Absorption of the Blazing Barrier scales off Thoma\'s Max HP.\nThe Blazing Barrier has the following traits:\n\u00b7Absorbs\nPyro DMG\n250% more effectively.\n\u00b7When a new Blazing Barrier is obtained, the remaining DMG Absorption of an existing Blazing Barrier will stack and its duration will be refreshed.\nThe maximum DMG Absorption of the Blazing Barrier will not exceed a certain percentage of Thoma\'s Max HP.\nAs a guest from afar, only the most burning passion would allow one to master the pure and precise spear arts of Inazuma. Thoma\'s mastery, indeed, is not limited to being the "swiftest-studying student" or "a master of the spear," but he has imbued his will to protect others and fend off foes into his art as well.',
             data: {
@@ -363,7 +363,7 @@ const Thoma: Character = {
                     Lv6: '27.44% Max HP + 2988.57',
                     Lv7: '29.4% Max HP + 3255.99',
                     Lv8: '31.36% Max HP + 3539.14',
-                    Lv9: '33.32% Max HP + 3838.02',
+                    Lv9: '33.32% Max HP + 3838.03',
                     Lv10: '35.28% Max HP + 4152.64',
                     Lv11: '37.24% Max HP + 4482.98',
                     Lv12: '39.2% Max HP + 4829.06',
@@ -392,7 +392,7 @@ const Thoma: Character = {
         },
         {
             name: 'Crimson Ooyoroi',
-            image: 'https://genshin.honeyhunterworld.com/img/s_503901.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_E_Tohma_01.png',
             description:
                 "Thoma spins his polearm, slicing at his foes with roaring flames that deal\nAoE Pyro DMG\nand weave themselves into a Scorching Ooyoroi.\nScorching Ooyoroi\nWhile Scorching Ooyoroi is in effect, the active character's Normal Attacks will trigger Fiery Collapse, dealing\nAoE Pyro DMG\nand summoning a Blazing Barrier.\nFiery Collapse can be triggered once every 1s.\nExcept for the amount of DMG they can absorb, the Blazing Barriers created in this way are identical to those created by Thoma's Elemental Skill, Blazing Blessing:\n\u00b7Absorbs\nPyro DMG\n250% more effectively.\n\u00b7When a new Blazing Barrier is obtained, the remaining DMG Absorption of an existing Blazing Barrier will stack and its duration will be refreshed.\nThe maximum DMG Absorption of the Blazing Barrier will not exceed a certain percentage of Thoma's Max HP.\nIf Thoma falls, the effects of Scorching Ooyoroi will be cleared.\n\"I will not forget my initial promise. Let this burning flame protect those I cherish, and may it never be extinguished.\"",
             data: {
@@ -521,19 +521,19 @@ const Thoma: Character = {
     passiveSkills: [
         {
             name: 'Snap and Swing',
-            image: 'https://genshin.honeyhunterworld.com/img/p_502301.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Tohma_07.png',
             description:
                 "When you\nfish\nsuccessfully in Inazuma, Thoma's help grants a 20% chance of scoring a double catch.",
         },
         {
             name: 'Imbricated Armor',
-            image: 'https://genshin.honeyhunterworld.com/img/p_502101.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Tohma_05.png',
             description:
                 "When your current active character obtains or refreshes a\nBlazing Barrier\n, this character's Shield Strength will increase by 5% for 6s.\nThis effect can be triggered once every 0.3s seconds. Max 5 stacks.",
         },
         {
             name: 'Flaming Assault',
-            image: 'https://genshin.honeyhunterworld.com/img/p_502201.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Tohma_06.png',
             description:
                 "DMG dealt by\nCrimson Ooyoroi\n's Fiery Collapse is increased by 2.2% of Thoma's Max HP.",
         },
@@ -541,41 +541,41 @@ const Thoma: Character = {
     constellations: [
         {
             name: "A Comrade's Duty",
-            image: 'https://genshin.honeyhunterworld.com/img/c_501.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Tohma_01.png',
             description:
                 "When a character protected by Thoma's own\nBlazing Barrier\n(Thoma excluded) is attacked, Thoma's own\nBlazing Blessing\nCD is decreased by 3s, while his own\nCrimson Ooyoroi\n's CD is decreased by 3s.\nThis effect can be triggered once every 20s.",
             level: 1,
         },
         {
             name: "A Subordinate's Skills",
-            image: 'https://genshin.honeyhunterworld.com/img/c_502.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Tohma_02.png',
             description: "Crimson Ooyoroi\n's duration is increased by 3s.",
             level: 2,
         },
         {
             name: 'Fortified Resolve',
-            image: 'https://genshin.honeyhunterworld.com/img/c_503.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Tohma_01.png',
             description:
                 'Increases the Level of\nBlazing Blessing\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: 'Long-Term Planning',
-            image: 'https://genshin.honeyhunterworld.com/img/c_504.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Tohma_03.png',
             description:
                 'After using\nCrimson Ooyoroi\n, 15 Energy will be restored to Thoma.',
             level: 4,
         },
         {
             name: 'Raging Wildfire',
-            image: 'https://genshin.honeyhunterworld.com/img/c_505.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Tohma_02.png',
             description:
                 'Increases the Level of\nCrimson Ooyoroi\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: 'Burning Heart',
-            image: 'https://genshin.honeyhunterworld.com/img/c_506.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Tohma_04.png',
             description:
                 "When a\nBlazing Barrier\nis obtained or refreshed, the DMG dealt by all party members' Normal, Charged, and Plunging Attacks is increased by 15% for 6s.",
             level: 6,

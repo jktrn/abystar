@@ -14,7 +14,7 @@ const constellationBonuses: Bonus[] = [
 
 const Beidou: Character = {
     name: 'Beidou',
-    icon: '/images/characters/beidou.png',
+    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Beidou.png',
     weapon: 'Claymore',
     vision: 'Electro',
     rarity: 4,
@@ -28,7 +28,7 @@ const Beidou: Character = {
             'Base DEF': 54.36,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Electro DMG Bonus': 0.0,
+            'Bonuse Elec%': 0.0,
         },
         '20/20': {
             'Base HP': 2811.0,
@@ -36,7 +36,7 @@ const Beidou: Character = {
             'Base DEF': 139.66,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Electro DMG Bonus': 0.0,
+            'Bonuse Elec%': 0.0,
         },
         '20/40': {
             'Base HP': 3628.0,
@@ -44,7 +44,7 @@ const Beidou: Character = {
             'Base DEF': 180.27,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Electro DMG Bonus': 0.0,
+            'Bonuse Elec%': 0.0,
         },
         '40/40': {
             'Base HP': 5435.0,
@@ -52,7 +52,7 @@ const Beidou: Character = {
             'Base DEF': 270.03,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Electro DMG Bonus': 0.0,
+            'Bonuse Elec%': 0.0,
         },
         '40/50': {
             'Base HP': 6015.0,
@@ -60,7 +60,7 @@ const Beidou: Character = {
             'Base DEF': 298.88,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Electro DMG Bonus': 0.06,
+            'Bonuse Elec%': 0.06,
         },
         '50/50': {
             'Base HP': 6919.0,
@@ -68,7 +68,7 @@ const Beidou: Character = {
             'Base DEF': 343.79,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Electro DMG Bonus': 0.06,
+            'Bonuse Elec%': 0.06,
         },
         '50/60': {
             'Base HP': 7694.0,
@@ -76,7 +76,7 @@ const Beidou: Character = {
             'Base DEF': 382.26,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Electro DMG Bonus': 0.12,
+            'Bonuse Elec%': 0.12,
         },
         '60/60': {
             'Base HP': 8597.0,
@@ -84,7 +84,7 @@ const Beidou: Character = {
             'Base DEF': 427.17,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Electro DMG Bonus': 0.12,
+            'Bonuse Elec%': 0.12,
         },
         '60/70': {
             'Base HP': 9178.0,
@@ -92,7 +92,7 @@ const Beidou: Character = {
             'Base DEF': 456.02,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Electro DMG Bonus': 0.12,
+            'Bonuse Elec%': 0.12,
         },
         '70/70': {
             'Base HP': 10081.0,
@@ -100,7 +100,7 @@ const Beidou: Character = {
             'Base DEF': 500.87,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Electro DMG Bonus': 0.12,
+            'Bonuse Elec%': 0.12,
         },
         '70/80': {
             'Base HP': 10662.0,
@@ -108,7 +108,7 @@ const Beidou: Character = {
             'Base DEF': 529.73,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Electro DMG Bonus': 0.18,
+            'Bonuse Elec%': 0.18,
         },
         '80/80': {
             'Base HP': 11565.0,
@@ -116,7 +116,7 @@ const Beidou: Character = {
             'Base DEF': 574.63,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Electro DMG Bonus': 0.18,
+            'Bonuse Elec%': 0.18,
         },
         '80/90': {
             'Base HP': 12146.0,
@@ -124,7 +124,7 @@ const Beidou: Character = {
             'Base DEF': 603.49,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Electro DMG Bonus': 0.24,
+            'Bonuse Elec%': 0.24,
         },
         '90/90': {
             'Base HP': 13050.0,
@@ -132,13 +132,13 @@ const Beidou: Character = {
             'Base DEF': 648.4,
             'CRIT Rate': 0.05,
             'CRIT DMG': 0.5,
-            'Electro DMG Bonus': 0.24,
+            'Bonuse Elec%': 0.24,
         },
     },
     talents: [
         {
             name: 'Normal Attack: Oceanborne',
-            image: 'https://genshin.honeyhunterworld.com/img/s_243101.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_A_04.png',
             description:
                 'Normal Attack\nPerforms up to 5 consecutive strikes.\nCharged Attack\nDrains Stamina over time to perform continuous slashes.\nAt the end of the sequence, performs a more powerful slash.\nPlunging Attack\nPlunges from mid-air to strike the ground, damaging opponents along the path and dealing AoE DMG upon impact.',
             data: {
@@ -350,7 +350,7 @@ const Beidou: Character = {
         },
         {
             name: 'Tidecaller',
-            image: 'https://genshin.honeyhunterworld.com/img/s_243201.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_S_Beidou_01.png',
             description:
                 "Nothing to worry about. Should anyone raise a hand against her or her men, she will avenge it ten-fold with sword and thunder.\nPress\nAccumulating the power of lightning, Beidou swings her blade forward fiercely, dealing\nElectro DMG\n.\nHold\nLifts her weapon up as a shield. Max DMG absorbed scales off Beidou's Max HP.\nAttacks using the energy stored within the greatsword upon release or once this ability's duration expires, dealing\nElectro DMG\n. DMG dealt scales with the number of times Beidou is attacked in the skill's duration. The greatest DMG Bonus will be attained once this effect is triggered twice.\nThe shield possesses the following properties:\n\u00b7Has 250%\nElectro DMG\nAbsorption Efficiency.\n\u00b7Applies the\nElectro element\nto Beidou upon activation.\nConquer the high seas! Pursue the waves and chase the storm!",
             data: {
@@ -426,7 +426,7 @@ const Beidou: Character = {
         },
         {
             name: 'Stormbreaker',
-            image: 'https://genshin.honeyhunterworld.com/img/s_243901.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_E_Beidou_01.png',
             description:
                 "Recalling her slaying of the great beast Haishan, Beidou calls upon that monstrous strength and the lightning to create a Thunderbeast's Targe around herself, dealing\nElectro DMG\nto nearby opponents.\nThunderbeast's Targe\n\u00b7When Normal and Charged Attacks hit, they create a lightning discharge that can jump between opponents, dealing\nElectro DMG\n.\n\u00b7Increases the character's resistance to interruption, and decreases DMG taken.\nA maximum of 1 lightning discharge can be triggered per second.\nWith a peal of thunder, Haishan is slain.",
             data: {
@@ -538,19 +538,19 @@ const Beidou: Character = {
     passiveSkills: [
         {
             name: 'Conqueror of Tides',
-            image: 'https://genshin.honeyhunterworld.com/img/p_242301.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_Explosion_Swim.png',
             description:
                 'Decreases swimming Stamina consumption for your own party members by 20%.\nNot stackable with Passive Talents that provide the exact same effects.',
         },
         {
             name: 'Retribution',
-            image: 'https://genshin.honeyhunterworld.com/img/p_242101.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Beidou_05.png',
             description:
                 'Counterattacking with\nTidecaller\nat the precise moment when the character is hit grants the maximum DMG Bonus.',
         },
         {
             name: 'Lightning Storm',
-            image: 'https://genshin.honeyhunterworld.com/img/p_242201.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Beidou_06.png',
             description:
                 'Gain the following effects for 10s after unleashing\nTidecaller\nwith its maximum DMG Bonus:\n\u00b7DMG dealt by Normal and Charged Attacks is increased by 15%. ATK SPD of Normal and Charged Attacks is increased by 15%.\n\u00b7Greatly reduced delay before unleashing Charged Attacks.',
         },
@@ -558,42 +558,42 @@ const Beidou: Character = {
     constellations: [
         {
             name: "Sea Beast's Scourge",
-            image: 'https://genshin.honeyhunterworld.com/img/c_241.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Beidou_02.png',
             description:
                 "When\nStormbreaker\nis used:\nCreates a shield that absorbs up to 16% of Beidou's Max HP for 15s.\nThis shield absorbs\nElectro DMG\n250% more effectively.",
             level: 1,
         },
         {
             name: 'Upon the Turbulent Sea, the Thunder Arises',
-            image: 'https://genshin.honeyhunterworld.com/img/c_242.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Beidou_01.png',
             description:
                 "Stormbreaker\n's arc lightning can jump to 2 additional targets.",
             level: 2,
         },
         {
             name: 'Summoner of Storm',
-            image: 'https://genshin.honeyhunterworld.com/img/c_243.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Beidou_01.png',
             description:
                 'Increases the Level of\nTidecaller\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: 'Stunning Revenge',
-            image: 'https://genshin.honeyhunterworld.com/img/c_244.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Beidou_03.png',
             description:
                 "Upon being attacked, Beidou's Normal Attacks gain an additional instance of 20%\nElectro DMG\nfor 10s.",
             level: 4,
         },
         {
             name: 'Crimson Tidewalker',
-            image: 'https://genshin.honeyhunterworld.com/img/c_245.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Beidou_02.png',
             description:
                 'Increases the Level of\nStormbreaker\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: 'Bane of Evil',
-            image: 'https://genshin.honeyhunterworld.com/img/c_246.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Beidou_04.png',
             description:
                 'During the duration of\nStormbreaker\n, the\nElectro RES\nof surrounding opponents is decreased by 15%.',
             level: 6,

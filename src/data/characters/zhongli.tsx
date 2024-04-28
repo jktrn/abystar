@@ -14,7 +14,7 @@ const constellationBonuses: Bonus[] = [
 
 const Zhongli: Character = {
     name: 'Zhongli',
-    icon: '/images/characters/zhongli.png',
+    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Zhongli.png',
     weapon: 'Polearm',
     vision: 'Geo',
     rarity: 5,
@@ -138,7 +138,7 @@ const Zhongli: Character = {
     talents: [
         {
             name: 'Normal Attack: Rain of Stone',
-            image: 'https://genshin.honeyhunterworld.com/img/s_303101.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_A_03.png',
             description:
                 'Normal Attack\nPerforms up to 6 consecutive spear strikes.\nCharged Attack\nConsumes a certain amount of Stamina to lunge forward, causing stone spears to fall along his path.\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.',
             data: {
@@ -215,7 +215,7 @@ const Zhongli: Character = {
                     Lv2: '46.52%',
                     Lv3: '50.00%',
                     Lv4: '55.00%',
-                    Lv5: '58.48%',
+                    Lv5: '58.52%',
                     Lv6: '62.52%',
                     Lv7: '68.00%',
                     Lv8: '73.52%',
@@ -250,7 +250,7 @@ const Zhongli: Character = {
                     Lv3: '129.1%',
                     Lv4: '142.01%',
                     Lv5: '151.05%',
-                    Lv6: '161.37%',
+                    Lv6: '161.38%',
                     Lv7: '175.58%',
                     Lv8: '189.78%',
                     Lv9: '203.98%',
@@ -333,7 +333,7 @@ const Zhongli: Character = {
         },
         {
             name: 'Dominus Lapidis',
-            image: 'https://genshin.honeyhunterworld.com/img/s_303201.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_S_Zhongli_01.png',
             description:
                 "Every mountain, rock and inch of land is filled with the power of Geo, but those who can wield such powers freely are few and far between.\nPress\nCommands the power of earth to create a Stone Stele.\nHold\nCauses nearby Geo energy to explode, causing the following effects:\n\u00b7If their maximum number hasn't been reached, creates a Stone Stele.\n\u00b7Creates a shield of jade. The shield's DMG Absorption scales based on Zhongli's Max HP.\n\u00b7Deals\nAoE Geo DMG\n.\n\u00b7If there are nearby targets with the\nGeo element\n, it will drain a large amount of\nGeo element\nfrom a maximum of 2 such targets. This effect does not cause DMG.\nStone Stele\nWhen created, deals\nAoE Geo DMG\n.\nAdditionally, it will intermittently resonate with other nearby\nGeo constructs\n, dealing\nGeo DMG\nto nearby opponents.\nThe Stone Stele is considered a\nGeo construct\nthat can both be climbed and used to block attacks.\nOnly one Stele created by Zhongli himself may initially exist at any one time.\nJade Shield\nPossesses 150% DMG Absorption against all Elemental and Physical DMG.\nCharacters protected by the Jade Shield will decrease the Elemental RES and Physical RES of opponents in a small AoE by 20%. This effect cannot be stacked.\nA true master of stone may carve jade and shape gold.",
             data: {
@@ -460,7 +460,7 @@ const Zhongli: Character = {
         },
         {
             name: 'Planet Befall',
-            image: 'https://genshin.honeyhunterworld.com/img/s_303901.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_E_Zhongli_01.png',
             description:
                 'Brings a falling meteor down to earth, dealing massive\nGeo DMG\nto opponents caught in its AoE and applying the\nPetrification\nstatus to them.\nPetrification\nOpponents affected by the\nPetrification\nstatus cannot move.\nThe falling meteor punishes the unjust.',
             data: {
@@ -538,19 +538,19 @@ const Zhongli: Character = {
     passiveSkills: [
         {
             name: 'Arcanum of Crystal',
-            image: 'https://genshin.honeyhunterworld.com/img/p_302301.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_Forge_Pole.png',
             description:
                 'Refunds 15% of the ore used when crafting Polearm-type weapons.',
         },
         {
             name: 'Resonant Waves',
-            image: 'https://genshin.honeyhunterworld.com/img/p_302101.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Zhongli_05.png',
             description:
                 'When the Jade Shield takes DMG, it will Fortify:\n\u00b7Fortified characters have 5% increased Shield Strength.\nCan stack up to 5 times, and lasts until the Jade Shield disappears.',
         },
         {
             name: 'Dominance of Earth',
-            image: 'https://genshin.honeyhunterworld.com/img/p_302201.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Zhongli_06.png',
             description:
                 "Zhongli deals bonus DMG based on his Max HP:\n\u00b7Normal Attack, Charged Attack, and Plunging Attack DMG is increased by 1.39% of Max HP.\n\u00b7\nDominus Lapidis'\nStone Stele, resonance, and hold DMG is increased by 1.9% of Max HP.\n\u00b7\nPlanet Befall's\nDMG is increased by 33% of Max HP.",
         },
@@ -558,42 +558,42 @@ const Zhongli: Character = {
     constellations: [
         {
             name: 'Rock, the Backbone of Earth',
-            image: 'https://genshin.honeyhunterworld.com/img/c_301.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Zhongli_01.png',
             description:
                 'Increases the maximum number of Stone Steles created by\nDominus Lapidis\nthat may exist simultaneously to 2.',
             level: 1,
         },
         {
             name: 'Stone, the Cradle of Jade',
-            image: 'https://genshin.honeyhunterworld.com/img/c_302.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Zhongli_02.png',
             description:
                 'Planet Befall\ngrants nearby characters on the field a Jade Shield when it descends.',
             level: 2,
         },
         {
             name: 'Jade, Shimmering through Darkness',
-            image: 'https://genshin.honeyhunterworld.com/img/c_303.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Zhongli_01.png',
             description:
                 'Increases the Level of\nDominus Lapidis\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: 'Topaz, Unbreakable and Fearless',
-            image: 'https://genshin.honeyhunterworld.com/img/c_304.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Zhongli_03.png',
             description:
                 "Increases\nPlanet Befall\n's AoE by 20% and increases the duration of Planet Befall's Petrification effect by 2s.",
             level: 4,
         },
         {
             name: 'Lazuli, Herald of the Order',
-            image: 'https://genshin.honeyhunterworld.com/img/c_305.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Zhongli_02.png',
             description:
                 'Increases the Level of\nPlanet Befall\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: 'Chrysos, Bounty of Dominator',
-            image: 'https://genshin.honeyhunterworld.com/img/c_306.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Zhongli_04.png',
             description:
                 "When the Jade Shield takes DMG, 40% of that incoming DMG is converted to HP for the current character.\nA single instance of regeneration cannot exceed 8% of that character's Max HP.",
             level: 6,

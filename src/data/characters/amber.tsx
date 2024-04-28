@@ -14,7 +14,7 @@ const constellationBonuses: Bonus[] = [
 
 const Amber: Character = {
     name: 'Amber',
-    icon: '/images/characters/amber.png',
+    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Ambor.png',
     weapon: 'Bow',
     vision: 'Pyro',
     rarity: 4,
@@ -138,7 +138,7 @@ const Amber: Character = {
     talents: [
         {
             name: 'Normal Attack: Sharpshooter',
-            image: 'https://genshin.honeyhunterworld.com/img/s_213101.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_A_02.png',
             description:
                 'Normal Attack\nPerforms up to 5 consecutive shots with a bow.\nCharged Attack\nPerforms a more precise\nAimed Shot\nwith increased DMG.\nWhile aiming, flames will accumulate on the arrowhead. A fully charged flaming arrow will deal\nPyro DMG\n.\nPlunging Attack\nFires off a shower of arrows in mid-air before falling and striking the ground, dealing AoE DMG upon impact.',
             data: {
@@ -284,7 +284,7 @@ const Amber: Character = {
                     Lv3: '132.13%',
                     Lv4: '145.35%',
                     Lv5: '154.59%',
-                    Lv6: '165.16%',
+                    Lv6: '165.17%',
                     Lv7: '179.7%',
                     Lv8: '194.23%',
                     Lv9: '208.77%',
@@ -316,7 +316,7 @@ const Amber: Character = {
         },
         {
             name: 'Explosive Puppet',
-            image: 'https://genshin.honeyhunterworld.com/img/s_213201.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_S_Ambor_01.png',
             description:
                 "The ever-reliable Baron Bunny takes the stage.\nBaron Bunny\n\u00b7Continuously taunts the enemy, drawing their fire.\n\u00b7Baron Bunny's HP scales with Amber's Max HP.\n\u00b7When destroyed or when its timer expires, Baron Bunny explodes, dealing\nAoE Pyro DMG\n.\nHold\nAdjusts the throwing direction of Baron Bunny.\nThe longer the button is held, the further the throw.\nBaron Bunny hails from a storied lineage, but Amber has stopped keeping count since Baron Bunny the 893rd.",
             data: {
@@ -375,7 +375,7 @@ const Amber: Character = {
         },
         {
             name: 'Fiery Rain',
-            image: 'https://genshin.honeyhunterworld.com/img/s_213901.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_E_Ambor.png',
             description:
                 "Fires off a shower of arrows, dealing continuous\nAoE Pyro DMG\n.\nAmber's passion truly burns hot.",
             data: {
@@ -470,19 +470,19 @@ const Amber: Character = {
     passiveSkills: [
         {
             name: 'Gliding Champion',
-            image: 'https://genshin.honeyhunterworld.com/img/p_212301.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_Explosion_Glide.png',
             description:
                 'Decreases gliding Stamina consumption for your own party members by 20%.\nNot stackable with Passive Talents that provide the exact same effects.',
         },
         {
             name: 'Every Arrow Finds Its Target',
-            image: 'https://genshin.honeyhunterworld.com/img/p_212101.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Ambor_05.png',
             description:
                 'Increases the CRIT Rate of\nFiery Rain\nby 10% and widens its AoE by 30%.',
         },
         {
             name: 'Precise Shot',
-            image: 'https://genshin.honeyhunterworld.com/img/p_212201.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Ambor_06.png',
             description:
                 'Aimed Shot hits on weak points increase ATK by 15% for 10s.',
         },
@@ -490,42 +490,42 @@ const Amber: Character = {
     constellations: [
         {
             name: 'One Arrow to Rule Them All',
-            image: 'https://genshin.honeyhunterworld.com/img/c_211.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Ambor_01.png',
             description:
                 "Fires 2 arrows per\nAimed Shot\n. The second arrow deals 20% of the first arrow's DMG.",
             level: 1,
         },
         {
             name: 'Bunny Triggered',
-            image: 'https://genshin.honeyhunterworld.com/img/c_212.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Ambor_02.png',
             description:
                 "Baron Bunny, new and improved! Hitting Baron Bunny's foot with a fully-charged Aimed Shot manually detonates it.\nExplosion via manual detonation deals 200% additional DMG.",
             level: 2,
         },
         {
             name: 'It Burns!',
-            image: 'https://genshin.honeyhunterworld.com/img/c_213.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Ambor_02.png',
             description:
                 'Increases the Level of\nFiery Rain\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: "It's Not Just Any Doll...",
-            image: 'https://genshin.honeyhunterworld.com/img/c_214.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Ambor_03.png',
             description:
                 "Decreases\nExplosive Puppet\n's CD by 20%. Adds 1 additional charge.",
             level: 4,
         },
         {
             name: "It's Baron Bunny!",
-            image: 'https://genshin.honeyhunterworld.com/img/c_215.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Ambor_01.png',
             description:
                 'Increases the Level of\nExplosive Puppet\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: 'Wildfire',
-            image: 'https://genshin.honeyhunterworld.com/img/c_216.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Ambor_04.png',
             description:
                 "Fiery Rain\nincreases all party members' Movement SPD by 15% and ATK by 15% for 10s.",
             level: 6,

@@ -487,19 +487,19 @@ const Xianyun: Character = {
     passiveSkills: [
         {
             name: 'Crane Form',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Liuyun_05.png',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Liuyun_07.png',
             description:
                 'Increases gliding SPD for your own party members by 15%.\nNot stackable with Passive Talents that provide the exact same effects.',
         },
         {
             name: 'Galefeather Pursuit',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Liuyun_06.png',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Liuyun_05.png',
             description:
                 "Each opponent hit by Driftcloud Waves from\nWhite Clouds at Dawn\nwill grant all nearby party members 1 stack of Storm Pinion for 20s. Max 4 stacks. These will cause the characters' Plunging Attack CRIT Rate to increase by 4%/6%/8%/10% respectively.\nEach Storm Pinion created by hitting an opponent has an independent duration.",
         },
         {
             name: 'Consider, the Adeptus in Her Realm',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Liuyun_07.png',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Liuyun_06.png',
             description:
                 "When the Starwicker created by\nStars Gather at Dusk\nhas Adeptal Assistance stacks, nearby active characters' Plunging Attack shockwave DMG will be increased by 200% of Xianyun's ATK. The maximum DMG increase that can be achieved this way is 9,000.\nEach Plunging Attack shockwave DMG instance can only apply this increased DMG effect to a single opponent. Each character can trigger this effect once every 0.4s.",
         },

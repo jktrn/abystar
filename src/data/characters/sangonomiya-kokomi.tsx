@@ -14,7 +14,7 @@ const constellationBonuses: Bonus[] = [
 
 const SangonomiyaKokomi: Character = {
     name: 'Sangonomiya Kokomi',
-    icon: '/images/characters/sangonomiya-kokomi.png',
+    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Kokomi.png',
     weapon: 'Catalyst',
     vision: 'Hydro',
     rarity: 5,
@@ -138,7 +138,7 @@ const SangonomiyaKokomi: Character = {
     talents: [
         {
             name: 'Normal Attack: The Shape of Water',
-            image: 'https://genshin.honeyhunterworld.com/img/s_543101.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_A_Catalyst_MD.png',
             description:
                 'Normal Attack\nPerforms up to 3 consecutive attacks that take the form of swimming fish, dealing\nHydro DMG\n.\nCharged Attack\nConsumes a certain amount of Stamina to deal\nAoE Hydro DMG\nafter a short casting time.\nPlunging Attack\nGathering the might of Hydro, Kokomi plunges towards the ground from mid-air, damaging all opponents in her path. Deals\nAoE Hydro DMG\nupon impact with the ground.',
             data: {
@@ -250,7 +250,7 @@ const SangonomiyaKokomi: Character = {
                     Lv3: '132.13%',
                     Lv4: '145.35%',
                     Lv5: '154.59%',
-                    Lv6: '165.16%',
+                    Lv6: '165.17%',
                     Lv7: '179.7%',
                     Lv8: '194.23%',
                     Lv9: '208.77%',
@@ -282,7 +282,7 @@ const SangonomiyaKokomi: Character = {
         },
         {
             name: "Kurage's Oath",
-            image: 'https://genshin.honeyhunterworld.com/img/s_543201.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_S_Kokomi_01.png',
             description:
                 'Summons a "Bake-Kurage" created from water that can heal her allies.\nUsing this skill will apply the\nWet\nstatus to Sangonomiya Kokomi.\nBake-Kurage\nDeals\nHydro DMG\nto surrounding opponents and heals nearby active characters at fixed intervals. This healing is based on Kokomi\'s Max HP.\nKokomi needs timely "refreshment" in order to maintain optimal work efficiency\n.',
             data: {
@@ -358,7 +358,7 @@ const SangonomiyaKokomi: Character = {
         },
         {
             name: "Nereid's Ascension",
-            image: 'https://genshin.honeyhunterworld.com/img/s_543901.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Kokomi_05.png',
             description:
                 "Summons the might of Watatsumi, dealing\nHydro DMG\nto surrounding opponents, before robing Kokomi in a Ceremonial Garment made from the flowing waters of Sangonomiya.\nCeremonial Garment\n\u00b7Sangonomiya Kokomi's Normal Attack, Charged Attack and Bake-Kurage DMG are increased based on her Max HP.\n\u00b7When her Normal and Charged Attacks hit opponents, Kokomi will restore HP for all nearby party members, and the amount restored is based on her Max HP.\n\u00b7Increases Sangonomiya Kokomi's resistance to interruption and allows her to walk on the water's surface.\nThese effects will be cleared once Sangonomiya Kokomi leaves the field.\nClear light coalesces into robes around Her Excellency, Sangonomiya Kokomi, reflecting her magnificent form.",
             data: {
@@ -392,7 +392,7 @@ const SangonomiyaKokomi: Character = {
                     Lv10: '8.71% Max HP',
                     Lv11: '9.2% Max HP',
                     Lv12: '9.68% Max HP',
-                    Lv13: '10.28% Max HP',
+                    Lv13: '10.29% Max HP',
                     Lv14: '10.89% Max HP',
                     Lv15: '11.5% Max HP',
                 },
@@ -504,19 +504,19 @@ const SangonomiyaKokomi: Character = {
     passiveSkills: [
         {
             name: 'Flawless Strategy',
-            image: 'https://genshin.honeyhunterworld.com/img/p_542501.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Kokomi_07.png',
             description:
                 'Sangonomiya Kokomi has a 25% Healing Bonus, but a 100% decrease in CRIT Rate.',
         },
         {
             name: 'Princess of Watatsumi',
-            image: 'https://genshin.honeyhunterworld.com/img/p_542301.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Kokomi_06.png',
             description:
                 'Decreases swimming Stamina consumption for your own party members by 20%.\nNot stackable with Passive Talents that provide the exact same effects.',
         },
         {
             name: 'Tamakushi Casket',
-            image: 'https://genshin.honeyhunterworld.com/img/p_542101.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_Explosion_Swim.png',
             description:
                 "If Sangonomiya Kokomi's own Bake-Kurage is on the field when she uses\nNereid's Ascension\n, the Bake-Kurage's duration will be refreshed.",
         },
@@ -530,42 +530,42 @@ const SangonomiyaKokomi: Character = {
     constellations: [
         {
             name: "At Water's Edge",
-            image: 'https://genshin.honeyhunterworld.com/img/c_541.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Kokomi_01.png',
             description:
                 "While donning the Ceremonial Garment created by\nNereid's Ascension\n, the final Normal Attack in Sangonomiya Kokomi's combo will unleash a swimming fish to deal 30% of her Max HP as\nHydro DMG\n.\nThis DMG is not considered Normal Attack DMG.",
             level: 1,
         },
         {
             name: 'The Clouds Like Waves Rippling',
-            image: 'https://genshin.honeyhunterworld.com/img/c_542.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Kokomi_02.png',
             description:
                 "Sangonomiya Kokomi gains the following Healing Bonuses with regard to characters with 50% or less HP via the following methods:\n\u00b7\nKurage's Oath\nBake-Kurage: 4.5% of Kokomi's Max HP.\n\u00b7\nNereid's Ascension\nNormal and Charged Attacks: 0.6% of Kokomi's Max HP.",
             level: 2,
         },
         {
             name: "The Moon, A Ship O'er the Seas",
-            image: 'https://genshin.honeyhunterworld.com/img/c_543.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Kokomi_02.png',
             description:
                 "Increases the Level of\nNereid's Ascension\nby 3.\nMaximum upgrade level is 15.",
             level: 3,
         },
         {
             name: 'The Moon Overlooks the Waters',
-            image: 'https://genshin.honeyhunterworld.com/img/c_544.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Kokomi_03.png',
             description:
                 "While donning the Ceremonial Garment created by\nNereid's Ascension\n, Sangonomiya Kokomi's Normal Attack SPD is increased by 10%, and Normal Attacks that hit opponents will restore 0.8 Energy for her.\nThis effect can occur once every 0.2s.",
             level: 4,
         },
         {
             name: 'All Streams Flow to the Sea',
-            image: 'https://genshin.honeyhunterworld.com/img/c_545.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Kokomi_01.png',
             description:
                 "Increases the Level of\nKurage's Oath\nby 3.\nMaximum upgrade level is 15.",
             level: 5,
         },
         {
             name: 'Sango Isshin',
-            image: 'https://genshin.honeyhunterworld.com/img/c_546.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Kokomi_04.png',
             description:
                 "While donning the Ceremonial Garment created by\nNereid's Ascension\n, Sangonomiya Kokomi gains a 40%\nHydro DMG Bonus\nfor 4s when her Normal and Charged Attacks heal, or would heal, any party member with 80% or more HP.",
             level: 6,

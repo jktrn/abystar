@@ -13,6 +13,14 @@ export interface CharacterState {
 }
 
 export interface Character extends RawCharacter {
+    description: string
+    occupation: string
+    baseStats: {
+        [key: string]: BaseStat
+    }
+    talents: Talent[]
+    passiveSkills?: PassiveSkill[]
+    constellations: Constellation[]
     talentScalings: TalentScaling
     characterBonuses: Bonus[]
     constellationBonuses: Bonus[]
@@ -24,14 +32,6 @@ export interface RawCharacter {
     weapon: string
     vision: string
     rarity: number
-    description: string
-    occupation: string
-    baseStats: {
-        [key: string]: BaseStat
-    }
-    talents: Talent[]
-    passiveSkills?: PassiveSkill[]
-    constellations: Constellation[]
     implemented?: boolean
 }
 

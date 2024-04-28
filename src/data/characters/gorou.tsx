@@ -14,7 +14,7 @@ const constellationBonuses: Bonus[] = [
 
 const Gorou: Character = {
     name: 'Gorou',
-    icon: '/images/characters/gorou.png',
+    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Gorou.png',
     weapon: 'Bow',
     vision: 'Geo',
     rarity: 4,
@@ -138,7 +138,7 @@ const Gorou: Character = {
     talents: [
         {
             name: 'Normal Attack: Ripping Fang Fletching',
-            image: 'https://genshin.honeyhunterworld.com/img/s_553101.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_A_02.png',
             description:
                 'Normal Attack\nPerforms up to 4 consecutive shots with a bow.\nCharged Attack\nPerforms a more precise\nAimed Shot\nwith increased DMG.\nWhile aiming, stone crystals will accumulate on the arrowhead. A fully charged crystalline arrow will deal\nGeo DMG\n.\nPlunging Attack\nFires off a shower of arrows in mid-air before falling and striking the ground, dealing AoE DMG upon impact.',
             data: {
@@ -148,7 +148,7 @@ const Gorou: Character = {
                     Lv3: '43.9%',
                     Lv4: '48.29%',
                     Lv5: '51.36%',
-                    Lv6: '54.87%',
+                    Lv6: '54.88%',
                     Lv7: '59.7%',
                     Lv8: '64.53%',
                     Lv9: '69.36%',
@@ -178,10 +178,10 @@ const Gorou: Character = {
                 },
                 '3-Hit DMG': {
                     Lv1: '49.45%',
-                    Lv2: '53.47%',
+                    Lv2: '53.48%',
                     Lv3: '57.5%',
                     Lv4: '63.25%',
-                    Lv5: '67.27%',
+                    Lv5: '67.28%',
                     Lv6: '71.88%',
                     Lv7: '78.2%',
                     Lv8: '84.53%',
@@ -267,7 +267,7 @@ const Gorou: Character = {
                     Lv3: '132.13%',
                     Lv4: '145.35%',
                     Lv5: '154.59%',
-                    Lv6: '165.16%',
+                    Lv6: '165.17%',
                     Lv7: '179.7%',
                     Lv8: '194.23%',
                     Lv9: '208.77%',
@@ -299,7 +299,7 @@ const Gorou: Character = {
         },
         {
             name: 'Inuzaka All-Round Defense',
-            image: 'https://genshin.honeyhunterworld.com/img/s_553201.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_S_Gorou_01.png',
             description:
                 'Deals\nAoE Geo DMG\nand sets up a General\'s War Banner.\nGeneral\'s War Banner\nProvides up to 3 buffs to active characters within the skill\'s AoE based on the number of\nGeo\ncharacters in the party at the time of casting:\n\u00b7 1 Geo character: Adds "Standing Firm" - DEF Bonus.\n\u00b7 2 Geo characters: Adds "Impregnable" - Increased resistance to interruption.\n\u00b7 3 Geo characters: Adds "Crunch" -\nGeo DMG Bonus\n.\nGorou can deploy only 1 General\'s War Banner on the field at any one time. Characters can only benefit from 1 General\'s War Banner at a time. When a party member leaves the field, the active buff will last for 2s.\nHold\nAdjust the location of the skill.\n"Take up this formation and we\'ll be safe \u2014 I guarantee it!" As a general and a leader of troops, the last thing Gorou wants is to see is those who follow him getting hurt.',
             data: {
@@ -392,7 +392,7 @@ const Gorou: Character = {
         },
         {
             name: 'Juuga: Forward Unto Victory',
-            image: 'https://genshin.honeyhunterworld.com/img/s_553901.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_E_Gorou_01.png',
             description:
                 "Displaying his valor as a general, Gorou deals\nAoE Geo DMG\nand creates a field known as General's Glory to embolden his comrades.\nGeneral's Glory\nThis field has the following properties:\n\u00b7 Like the General's War Banner created by Inuzaka All-Round Defense, provides buffs to active characters within the skill's AoE based on the number of\nGeo\ncharacters in the party. Also moves together with your active character.\n\u00b7 Generates 1 Crystal Collapse every 1.5s that deals\nAoE Geo DMG\nto 1 opponent within the skill's AoE.\n\u00b7 Pulls 1 elemental shard in the skill's AoE to your active character's position every 1.5s (elemental shards are created by Crystallize reactions).\nIf a General's War Banner created by Gorou currently exists on the field when this ability is used, it will be destroyed. In addition, for the duration of General's Glory, Gorou's Elemental Skill \"Inuzaka All-Round Defense\" will not create the General's War Banner.\nIf Gorou falls, the effects of General's Glory will be cleared.\n\"We have the high ground!\" Gorou can ever so slightly change the terrain of the battlefield to help win victory. This technique has seen him through many battles against seemingly superior opposition.",
             data: {
@@ -416,7 +416,7 @@ const Gorou: Character = {
                 'Crystal Collapse DMG': {
                     Lv1: '61.3% DEF',
                     Lv2: '65.9% DEF',
-                    Lv3: '70.49% DEF',
+                    Lv3: '70.5% DEF',
                     Lv4: '76.63% DEF',
                     Lv5: '81.22% DEF',
                     Lv6: '85.82% DEF',
@@ -487,19 +487,19 @@ const Gorou: Character = {
     passiveSkills: [
         {
             name: 'Seeker of Shinies',
-            image: 'https://genshin.honeyhunterworld.com/img/p_552301.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Gorou_07.png',
             description:
                 'Displays the location of nearby\nresources unique to Inazuma\non the mini-map.',
         },
         {
             name: 'Heedless of the Wind and Weather',
-            image: 'https://genshin.honeyhunterworld.com/img/p_552101.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Gorou_05.png',
             description:
                 "After using\nJuuga: Forward Unto Victory\n, all nearby party members' DEF is increased by 25% for 12s.",
         },
         {
             name: 'A Favor Repaid',
-            image: 'https://genshin.honeyhunterworld.com/img/p_552201.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Gorou_06.png',
             description:
                 'Gorou receives the following DMG Bonuses to his attacks based on his DEF:\n\u00b7\nInuzaka All-Round Defense\n: Skill DMG increased by 156% of DEF\n\u00b7\nJuuga: Forward Unto Victory\n: Skill DMG and Crystal Collapse DMG increased by 15.6% of DEF',
         },
@@ -507,42 +507,42 @@ const Gorou: Character = {
     constellations: [
         {
             name: 'Rushing Hound: Swift as the Wind',
-            image: 'https://genshin.honeyhunterworld.com/img/c_551.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Gorou_01.png',
             description:
                 "When characters (other than Gorou) within the AoE of Gorou's\nGeneral's War Banner\nor\nGeneral's Glory\ndeal Geo DMG to opponents, the CD of Gorou's\nInuzaka All-Round Defense\nis decreased by 2s.\nThis effect can occur once every 10s.",
             level: 1,
         },
         {
             name: 'Sitting Hound: Steady as a Clock',
-            image: 'https://genshin.honeyhunterworld.com/img/c_552.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Gorou_02.png',
             description:
                 "While\nGeneral's Glory\nis in effect, its duration is extended by 1s when a nearby active character obtains an Elemental Shard from a Crystallize reaction.\nThis effect can occur once every 0.1s. Max extension is 3s.",
             level: 2,
         },
         {
             name: 'Mauling Hound: Fierce as Fire',
-            image: 'https://genshin.honeyhunterworld.com/img/c_553.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Gorou_01.png',
             description:
                 'Increases the Level of\nInuzaka All-Round Defense\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: 'Lapping Hound: Warm as Water',
-            image: 'https://genshin.honeyhunterworld.com/img/c_554.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Gorou_03.png',
             description:
                 'When\nGeneral\'s Glory\nis in the "Impregnable" or "Crunch" states, it will also heal active characters within its AoE by 50% of Gorou\'s own DEF every 1.5s.',
             level: 4,
         },
         {
             name: 'Striking Hound: Thunderous Force',
-            image: 'https://genshin.honeyhunterworld.com/img/c_555.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Gorou_02.png',
             description:
                 'Increases the Level of\nJuuga: Forward Unto Victory\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: 'Valiant Hound: Mountainous Fealty',
-            image: 'https://genshin.honeyhunterworld.com/img/c_556.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Gorou_04.png',
             description:
                 'For 12s after using\nInuzaka All-Round Defense\nor\nJuuga: Forward Unto Victory\n, increases the CRIT DMG of all nearby party members\'\nGeo DMG\nbased on the buff level of the skill\'s field at the time of use:\n\u00b7 "Standing Firm": +10%\n\u00b7 "Impregnable": +20%\n\u00b7 "Crunch": +40%\nThis effect cannot stack and will take reference from the last instance of the effect that is triggered.',
             level: 6,

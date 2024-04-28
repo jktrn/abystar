@@ -487,19 +487,19 @@ const Gaming: Character = {
     passiveSkills: [
         {
             name: 'The Striding Beast',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Gaming_05.png',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Dehya_07.png',
             description:
                 'During the day (06:00 \u2013 18:00), your party members gain the Swift Stride effect: Movement SPD increased by 10%.\nDoes not take effect in Domains, Trounce Domains, or Spiral Abyss. Swift Stride does not stack.',
         },
         {
             name: 'Dance of Amity',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Gaming_06.png',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Gaming_05.png',
             description:
                 "After\nBestial Ascent\n's Plunging Attack: Charmed Cloudstrider hits an opponent, Gaming will regain 1.5% of his Max HP once every 0.2s for 0.8s.",
         },
         {
             name: 'Air of Prosperity',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Dehya_07.png',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Gaming_06.png',
             description:
                 'When Gaming has less than 50% HP, he will receive a 20% Incoming Healing Bonus. When Gaming has 50% HP or more, Plunging Attack: Charmed Cloudstrider will deal 20% more DMG.',
         },

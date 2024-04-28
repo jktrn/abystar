@@ -14,7 +14,7 @@ const constellationBonuses: Bonus[] = [
 
 const Xinyan: Character = {
     name: 'Xinyan',
-    icon: '/images/characters/xinyan.png',
+    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Xinyan.png',
     weapon: 'Claymore',
     vision: 'Pyro',
     rarity: 4,
@@ -138,7 +138,7 @@ const Xinyan: Character = {
     talents: [
         {
             name: 'Normal Attack: Dance on Fire',
-            image: 'https://genshin.honeyhunterworld.com/img/s_443101.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_A_04.png',
             description:
                 'Normal Attack\nPerforms up to 4 consecutive strikes.\nCharged Attack\nDrains Stamina over time to perform continuous spinning attacks against all nearby opponents.\nAt the end of the sequence, performs a more powerful slash.\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.',
             data: {
@@ -229,11 +229,11 @@ const Xinyan: Character = {
                 },
                 'Charged Attack Final DMG': {
                     Lv1: '113.09%',
-                    Lv2: '122.29%',
+                    Lv2: '122.3%',
                     Lv3: '131.5%',
                     Lv4: '144.65%',
                     Lv5: '153.86%',
-                    Lv6: '164.37%',
+                    Lv6: '164.38%',
                     Lv7: '178.84%',
                     Lv8: '193.31%',
                     Lv9: '207.77%',
@@ -333,7 +333,7 @@ const Xinyan: Character = {
         },
         {
             name: 'Sweeping Fervor',
-            image: 'https://genshin.honeyhunterworld.com/img/s_443201.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_S_Xinyan_01.png',
             description:
                 "Xinyan brandishes her instrument, dealing\nPyro DMG\non nearby opponents, forming a shield made out of her audience's passion.\nThe shield's DMG Absorption scales based on Xinyan's DEF and on the number of opponents hit.\n\u00b7Hitting 0\u20131 opponents grants Shield Level 1: Ad Lib.\n\u00b7Hitting 2 opponents grants Shield Level 2: Lead-In.\n\u00b7Hitting 3 or more opponents grants Shield Level 3: Rave, which will also deal intermittent\nPyro DMG\nto nearby opponents.\nThe shield has the following special properties:\n\u00b7When unleashed, it infuses Xinyan with\nPyro\n.\n\u00b7It has 250% DMG Absorption effectiveness against\nPyro DMG\n.\nXinyan insists that these pyrotechnics are the apex of performative art, and that they are physical phenomena that have nothing to do with her Vision.",
             data: {
@@ -356,7 +356,7 @@ const Xinyan: Character = {
                 },
                 'Shield Level 1 DMG Absorption': {
                     Lv1: '104.04% DEF + 500.55',
-                    Lv2: '111.84% DEF + 550.61',
+                    Lv2: '111.84% DEF + 550.62',
                     Lv3: '119.65% DEF + 604.85',
                     Lv4: '130.05% DEF + 663.26',
                     Lv5: '137.85% DEF + 725.83',
@@ -369,7 +369,7 @@ const Xinyan: Character = {
                     Lv12: '208.08% DEF + 1280.69',
                     Lv13: '221.09% DEF + 1376.64',
                     Lv14: '234.09% DEF + 1476.77',
-                    Lv15: '247.09% DEF + 1581.06',
+                    Lv15: '247.1% DEF + 1581.06',
                 },
                 'Shield Level 2 DMG Absorption': {
                     Lv1: '122.4% DEF + 588.89',
@@ -460,7 +460,7 @@ const Xinyan: Character = {
         },
         {
             name: 'Riff Revolution',
-            image: 'https://genshin.honeyhunterworld.com/img/s_443901.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_E_Xinyan_01.png',
             description:
                 'Strumming rapidly, Xinyan launches nearby opponents and deals Physical DMG to them, hyping up the crowd.\nThe sheer intensity of the atmosphere will cause explosions that deal\nPyro DMG\nto nearby opponents.\nXinyan used to end all her performances with this move. She didn\'t stop because it was dangerous, however, but because she didn\'t have a more epic finale in case someone shouted "Encore!"',
             data: {
@@ -555,19 +555,19 @@ const Xinyan: Character = {
     passiveSkills: [
         {
             name: 'A Rad Recipe',
-            image: 'https://genshin.honeyhunterworld.com/img/p_442301.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_Cook_Defense.png',
             description:
                 'When a Perfect Cooking is achieved on a DEF-boosting dish, Xinyan has a 12% chance to obtain double the product.',
         },
         {
             name: '"The Show Goes On, Even Without an Audience..."',
-            image: 'https://genshin.honeyhunterworld.com/img/p_442101.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Xinyan_05.png',
             description:
                 'Decreases the number of opponents\nSweeping Fervor\nmust hit to trigger each level of shielding.\n\u00b7Shield Level 2: Lead-In requirement reduced to 1 opponent hit.\n\u00b7Shield Level 3: Rave requirement reduced to 2 opponents hit or more.',
         },
         {
             name: "\"...Now That's Rock 'N' Roll!\"",
-            image: 'https://genshin.honeyhunterworld.com/img/p_442201.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Xinyan_06.png',
             description:
                 'Characters shielded by\nSweeping Fervor\ndeal 15% increased Physical DMG.',
         },
@@ -575,42 +575,42 @@ const Xinyan: Character = {
     constellations: [
         {
             name: 'Fatal Acceleration',
-            image: 'https://genshin.honeyhunterworld.com/img/c_441.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Xinyan_01.png',
             description:
                 "Upon scoring a CRIT Hit, increases ATK SPD of Xinyan's Normal and Charged Attacks by 12% for 5s.\nCan only occur once every 5s.",
             level: 1,
         },
         {
             name: 'Impromptu Opening',
-            image: 'https://genshin.honeyhunterworld.com/img/c_442.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Xinyan_02.png',
             description:
                 "Riff Revolution\n's Physical DMG has its CRIT Rate increased by 100%, and will form a shield at Shield Level 3: Rave when cast.",
             level: 2,
         },
         {
             name: 'Double-Stop',
-            image: 'https://genshin.honeyhunterworld.com/img/c_443.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Xinyan_01.png',
             description:
                 'Increases the Level of\nSweeping Fervor\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: 'Wildfire Rhythm',
-            image: 'https://genshin.honeyhunterworld.com/img/c_444.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Xinyan_03.png',
             description:
                 "Sweeping Fervor\n's swing DMG decreases opponent's Physical RES by 15% for 12s.",
             level: 4,
         },
         {
             name: "Screamin' for an Encore",
-            image: 'https://genshin.honeyhunterworld.com/img/c_445.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Xinyan_02.png',
             description:
                 'Increases the Level of\nRiff Revolution\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: "Rockin' in a Flaming World",
-            image: 'https://genshin.honeyhunterworld.com/img/c_446.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Xinyan_04.png',
             description:
                 "Decreases the Stamina Consumption of Xinyan's Charged Attacks by 30%. Additionally, Xinyan's Charged Attacks gain an ATK Bonus equal to 50% of her DEF.",
             level: 6,

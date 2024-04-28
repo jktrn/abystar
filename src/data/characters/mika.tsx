@@ -14,7 +14,7 @@ const constellationBonuses: Bonus[] = [
 
 const Mika: Character = {
     name: 'Mika',
-    icon: '/images/characters/mika.png',
+    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Mika.png',
     weapon: 'Polearm',
     vision: 'Cryo',
     rarity: 4,
@@ -138,7 +138,7 @@ const Mika: Character = {
     talents: [
         {
             name: "Normal Attack: Spear of Favonius - Arrow's Passage",
-            image: 'https://genshin.honeyhunterworld.com/img/s_803101.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_A_03.png',
             description:
                 'Normal Attack\nPerforms up to 5 consecutive strikes using his crossbow and spear.\nCharged Attack\nConsumes a certain amount of Stamina to lunge forward, dealing damage to opponents along the way.\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.',
             data: {
@@ -233,7 +233,7 @@ const Mika: Character = {
                     Lv3: '131.1%',
                     Lv4: '144.21%',
                     Lv5: '153.39%',
-                    Lv6: '163.87%',
+                    Lv6: '163.88%',
                     Lv7: '178.3%',
                     Lv8: '192.72%',
                     Lv9: '207.14%',
@@ -316,7 +316,7 @@ const Mika: Character = {
         },
         {
             name: 'Starfrost Swirl',
-            image: 'https://genshin.honeyhunterworld.com/img/s_803201.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_S_Mika_01.png',
             description:
                 "Mika uses his crossbow to attack, granting all nearby characters in your party Soulwind. When characters in the Soulwind state are on the field, their ATK SPD will be increased.\nWill take effect in different ways if Tapped or Held.\nTap\nFires a Flowfrost Arrow that can pierce through opponents, dealing\nCryo DMG\nto enemies it comes into contact with.\nHold\nGoes into Aiming Mode, locking on to an opponent and firing a Rimestar Flare at them, dealing\nCryo DMG\n. When the Rimestar Flare hits, it will rise before exploding, launching Rimestar Shards into a maximum of 3 other opponents, dealing\nCryo DMG\n.\nStars burst 'neath the frosted skies.",
             data: {
@@ -426,7 +426,7 @@ const Mika: Character = {
         },
         {
             name: 'Skyfeather Song',
-            image: 'https://genshin.honeyhunterworld.com/img/s_803901.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_E_Mika_01.png',
             description:
                 'Derives the ability to spur his teammates on from the recited prayers of the knightly order, regenerating HP for all nearby party members. This healing is based on Mika\'s Max HP and will grant them the Eagleplume state.\nEagleplume\nWhen the Normal Attacks of active characters affected by Eagleplume hit an opponent, Mika will help them regenerate HP based on his Max HP.\nCharacters affected by this state can only regenerate HP in this way once per short interval of time.\n"Carry hope when in dire straits, and keep vigil when all is well... For that pure white plume shall at last guide the lost wayfarers."',
             data: {
@@ -538,19 +538,19 @@ const Mika: Character = {
     passiveSkills: [
         {
             name: 'Demarcation',
-            image: 'https://genshin.honeyhunterworld.com/img/p_802301.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_Collect_Local_Mengde.png',
             description:
                 'Displays the location of nearby\nresources unique to Mondstadt\non the mini-map.',
         },
         {
             name: 'Suppressive Barrage',
-            image: 'https://genshin.honeyhunterworld.com/img/p_802101.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Mika_05.png',
             description:
                 'Per the following circumstances, the Soulwind state caused by\nStarfrost Swirl\nwill grant characters the Detector effect, increasing their Physical DMG by 10% when they are on the field.\n\u00b7If the Flowfrost Arrow hits more than one opponent, each additional opponent hit will generate 1 Detector stack.\n\u00b7When a Rimestar Shard hits an opponent, it will generate 1 Detector stack. Each Rimestar Shard can trigger the effect 1 time.\nThe Soulwind state can have a maximum of 3 Detector stacks, and if Starfrost Swirl is cast again during this duration, the pre-existing Soulwind state and all its Detector stacks will be cleared.',
         },
         {
             name: 'Topographical Mapping',
-            image: 'https://genshin.honeyhunterworld.com/img/p_802201.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Mika_06.png',
             description:
                 "When an active character affected by both\nSkyfeather Song\n's Eagleplume and\nStarfrost Swirl\n's Soulwind at once scores a CRIT Hit with their attacks, Soulwind will grant them 1 stack of Detector from Suppressive Barrage. During a single instance of Soulwind, 1 Detector stack can be gained in this manner.\nAdditionally, the maximum number of stacks that can be gained through Soulwind alone is increased by 1.\nRequires Suppressive Barrage to be unlocked first.",
         },
@@ -558,42 +558,42 @@ const Mika: Character = {
     constellations: [
         {
             name: 'Factor Confluence',
-            image: 'https://genshin.honeyhunterworld.com/img/c_801.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Mika_01.png',
             description:
                 "The Soulwind state of\nStarfrost Swirl\ncan decrease the healing interval between instances caused by\nSkyfeather Song\n's Eagleplume state. This decrease percentage is equal to the ATK SPD increase provided by Soulwind.",
             level: 1,
         },
         {
             name: "Companion's Ingress",
-            image: 'https://genshin.honeyhunterworld.com/img/c_802.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Mika_02.png',
             description:
                 'When\nStarfrost Swirl\n\'s Flowfrost Arrow first hits an opponent, or its Rimestar Flare hits an opponent, 1 Detector stack from Passive Talent "Suppressive Barrage" will be generated.\nYou must have unlocked the Passive Talent "Suppressive Barrage" first.',
             level: 2,
         },
         {
             name: 'Reconnaissance Experience',
-            image: 'https://genshin.honeyhunterworld.com/img/c_803.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Mika_01.png',
             description:
                 'Increases the Level of\nSkyfeather Song\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: 'Sunfrost Encomium',
-            image: 'https://genshin.honeyhunterworld.com/img/c_804.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Mika_03.png',
             description:
                 "When Mika's own\nSkyfeather Song\n's Eagleplume state heals party members, this will restore 3 Energy to Mika. This form of Energy restoration can occur 5 times during the Eagleplume state created by 1 use of Skyfeather Song.",
             level: 4,
         },
         {
             name: 'Signal Arrow',
-            image: 'https://genshin.honeyhunterworld.com/img/c_805.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Mika_02.png',
             description:
                 'Increases the Level of\nStarfrost Swirl\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: "Companion's Counsel",
-            image: 'https://genshin.honeyhunterworld.com/img/c_806.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Mika_04.png',
             description:
                 'The maximum number of Detector stacks that\nStarfrost Swirl\n\'s Soulwind can gain is increased by 1. You need to have unlocked the Passive Talent "Suppressive Barrage" first.\nAdditionally, active characters affected by Soulwind will deal 60% more Physical CRIT DMG.',
             level: 6,

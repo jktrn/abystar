@@ -195,7 +195,7 @@ const characterBonuses: Bonus[] = [
                 additional elemental DMG of that type.
             </span>
         ),
-        icon: '/images/characters/kaedehara-kazuha-burst.png',
+        icon: 'https://api.ambr.top/assets/UI/Skill_E_Kazuha_01.png',
         effect: (attributes) => {
             // * Unnecessary
             return { attributes }
@@ -247,7 +247,7 @@ const characterBonuses: Bonus[] = [
                 elemental type as DMG. This will be considered Plunging Attack DMG.
             </span>
         ),
-        icon: '/images/characters/kaedehara-kazuha-passive1.png',
+        icon: 'https://api.ambr.top/assets/UI/UI_Talent_S_Kazuha_05.png',
         effect: (attributes) => {
             return { attributes }
         },
@@ -295,7 +295,7 @@ const characterBonuses: Bonus[] = [
                 obtained through this method can co-exist.
             </span>
         ),
-        icon: '/images/characters/kaedehara-kazuha-passive2.png',
+        icon: 'https://api.ambr.top/assets/UI/UI_Talent_S_Kazuha_06.png',
         effect: (attributes, talentLevels, currentStacks) => {
             if (!currentStacks) return { attributes }
 
@@ -336,7 +336,7 @@ const constellationBonuses: Bonus[] = [
                 the CD of Chihayaburu.
             </span>
         ),
-        icon: '/images/characters/kaedehara-kazuha-constellation1.png',
+        icon: 'https://api.ambr.top/assets/UI/UI_Talent_S_Kazuha_01.png',
         effect: (attributes) => {
             const newAttributes = {
                 ...attributes,
@@ -362,7 +362,7 @@ const constellationBonuses: Bonus[] = [
                 Mastery-increasing effects of this Constellation do not stack.
             </span>
         ),
-        icon: '/images/characters/kaedehara-kazuha-constellation2.png',
+        icon: 'https://api.ambr.top/assets/UI/UI_Talent_S_Kazuha_02.png',
         effect: (attributes) => {
             const newAttributes = {
                 ...attributes,
@@ -385,7 +385,7 @@ const constellationBonuses: Bonus[] = [
                 Maximum upgrade level is 15.
             </span>
         ),
-        icon: '/images/characters/kaedehara-kazuha-constellation3.png',
+        icon: 'https://api.ambr.top/assets/UI/UI_Talent_U_Kazuha_01.png',
         effect: (attributes, talentLevels) => {
             if (!talentLevels) return { attributes }
 
@@ -410,7 +410,7 @@ const constellationBonuses: Bonus[] = [
                 Kazuha regenerates 2 Energy per second.
             </span>
         ),
-        icon: '/images/characters/kaedehara-kazuha-constellation4.png',
+        icon: 'https://api.ambr.top/assets/UI/UI_Talent_S_Kazuha_03.png',
         effect: (attributes) => {
             const newAttributes = {
                 ...attributes,
@@ -432,7 +432,7 @@ const constellationBonuses: Bonus[] = [
                 Maximum upgrade level is 15.
             </span>
         ),
-        icon: '/images/characters/kaedehara-kazuha-constellation5.png',
+        icon: 'https://api.ambr.top/assets/UI/UI_Talent_U_Kazuha_02.png',
         effect: (attributes, talentLevels) => {
             if (!talentLevels) return { attributes }
 
@@ -458,7 +458,7 @@ const constellationBonuses: Bonus[] = [
                 Attacks by <span style={{ color: '#ddd' }}>0.2%</span>.
             </span>
         ),
-        icon: '/images/characters/kaedehara-kazuha-constellation6.png',
+        icon: 'https://api.ambr.top/assets/UI/UI_Talent_S_Kazuha_04.png',
         effect: (attributes) => {
             const newAttributes = {
                 ...attributes,
@@ -504,7 +504,7 @@ const constellationBonuses: Bonus[] = [
 
 const KaedeharaKazuha: Character = {
     name: 'Kaedehara Kazuha',
-    icon: '/images/characters/kaedehara-kazuha.png',
+    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Kazuha.png',
     weapon: 'Sword',
     vision: 'Anemo',
     rarity: 5,
@@ -628,7 +628,7 @@ const KaedeharaKazuha: Character = {
     talents: [
         {
             name: 'Normal Attack: Garyuu Bladework',
-            image: 'https://genshin.honeyhunterworld.com/img/s_473101.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_A_01.png',
             description:
                 'Normal Attack\nPerforms up to 5 rapid strikes.\nCharged Attack\nConsumes a certain amount of Stamina to unleash 2 rapid sword strikes.\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact. If this Plunging Attack is triggered by Chihayaburu, it will be converted to Plunging Attack: Midare Ranzan.\nPlunging Attack: Midare Ranzan\nWhen a Plunging Attack is performed using the effects of the Elemental Skill Chihayaburu, Plunging Attack DMG is converted to\nAnemo DMG\nand will create a small wind tunnel via a secret blade technique that pulls in nearby objects and opponents.',
             data: {
@@ -677,7 +677,7 @@ const KaedeharaKazuha: Character = {
                     Lv8: '97.02%',
                     Lv9: '104.28%',
                     Lv10: '112.20%',
-                    Lv11: '121.27%',
+                    Lv11: '121.28%',
                     Lv12: '131.95%',
                     Lv13: '142.62%',
                     Lv14: '153.29%',
@@ -702,13 +702,13 @@ const KaedeharaKazuha: Character = {
                 },
                 '5-Hit DMG': {
                     Lv1: '76.11%',
-                    Lv2: '82.29%',
+                    Lv2: '82.32%',
                     Lv3: '88.50%',
                     Lv4: '97.35%',
-                    Lv5: '103.53%',
+                    Lv5: '103.56%',
                     Lv6: '110.64%',
                     Lv7: '120.36%',
-                    Lv8: '130.08%',
+                    Lv8: '130.11%',
                     Lv9: '139.83%',
                     Lv10: '150.45%',
                     Lv11: '162.63%',
@@ -728,7 +728,7 @@ const KaedeharaKazuha: Character = {
                     Lv8: '201.10%',
                     Lv9: '216.14%',
                     Lv10: '232.56%',
-                    Lv11: '251.36%',
+                    Lv11: '251.38%',
                     Lv12: '273.49%',
                     Lv13: '295.62%',
                     Lv14: '317.73%',
@@ -823,7 +823,7 @@ const KaedeharaKazuha: Character = {
         },
         {
             name: 'Chihayaburu',
-            image: 'https://genshin.honeyhunterworld.com/img/s_473201.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_S_Kazuha_01.png',
             description:
                 'Unleashes a secret technique as fierce as the rushing wind that pulls objects and opponents towards Kazuha\'s current position before launching opponents within the AoE, dealing\nAnemo DMG\nand lifting Kazuha into the air on a rushing gust of wind.\nWithin 10s of remaining airborne after casting Chihayaburu, Kazuha can unleash a powerful Plunging Attack known as Midare Ranzan.\nPress\nCan be used in mid-air.\nHold\nCharges up before unleashing greater\nAnemo DMG\nover a larger AoE than Press Mode.\nPlunging Attack: Midare Ranzan\nWhen a Plunging Attack is performed using the effects of the Elemental Skill Chihayaburu, Plunging Attack DMG is converted to\nAnemo DMG\n. On landing, Kazuha creates a small wind tunnel via a secret blade technique that pulls in nearby objects and opponents.\nMidare Ranzan\'s DMG is considered Plunging Attack DMG.\n"Wind in branches grieves\nBygone ages, gods of old\nWithered autumn leaves"',
             data: {
@@ -899,7 +899,7 @@ const KaedeharaKazuha: Character = {
         },
         {
             name: 'Kazuha Slash',
-            image: 'https://genshin.honeyhunterworld.com/img/s_473901.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_E_Kazuha_01.png',
             description:
                 'The signature technique of Kazuha\'s self-styled bladework \u2014 a single slash that strikes with the force of the first winds of autumn, dealing\nAoE Anemo DMG\n.\nThe blade\'s passage will leave behind a field named "Autumn Whirlwind" that periodically deals\nAoE Anemo DMG\nto opponents within its range.\nElemental Absorption\nIf Autumn Whirlwind comes into contact with\nHydro\n/\nPyro\n/\nCryo\n/\nElectro\n, it will deal additional elemental DMG of that type.\nElemental Absorption may only occur once per use.\n"I see eternity go by in an instant, the autumns of many years from a single leaf. Thus I shall slice this maple in a flash, and ask a question of the ages."',
             data: {
@@ -1011,19 +1011,19 @@ const KaedeharaKazuha: Character = {
     passiveSkills: [
         {
             name: 'Cloud Strider',
-            image: 'https://genshin.honeyhunterworld.com/img/p_472301.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_Explosion_Sprint.png',
             description:
                 'Decreases sprinting Stamina consumption for your own party members by 20%.\nNot stackable with Passive Talents that provide the exact same effects.',
         },
         {
             name: 'Soumon Swordsmanship',
-            image: 'https://genshin.honeyhunterworld.com/img/p_472101.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Kazuha_05.png',
             description:
                 'If\nChihayaburu\ncomes into contact with\nHydro\n/\nPyro\n/\nCryo\n/\nElectro\nwhen cast, this\nChihayaburu\nwill absorb that element and if Plunging Attack: Midare Ranzan is used before the effect expires, it will deal an additional 200% ATK of the absorbed elemental type as DMG. This will be considered Plunging Attack DMG.\nElemental Absorption may only occur once per use of\nChihayaburu\n.',
         },
         {
             name: 'Poetics of Fuubutsu',
-            image: 'https://genshin.honeyhunterworld.com/img/p_472201.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Kazuha_06.png',
             description:
                 'Upon triggering a Swirl reaction, Kaedehara Kazuha will grant all party members a 0.04% Elemental DMG Bonus to the element absorbed by Swirl for every point of Elemental Mastery he has for 8s. Bonuses for different elements obtained through this method can co-exist.',
         },
@@ -1031,42 +1031,42 @@ const KaedeharaKazuha: Character = {
     constellations: [
         {
             name: 'Scarlet Hills',
-            image: 'https://genshin.honeyhunterworld.com/img/c_471.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Kazuha_01.png',
             description:
                 "Decreases\nChihayaburu\n's CD by 10%.\nUsing\nKazuha Slash\nresets the CD of\nChihayaburu\n.",
             level: 1,
         },
         {
             name: 'Yamaarashi Tailwind',
-            image: 'https://genshin.honeyhunterworld.com/img/c_472.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Kazuha_02.png',
             description:
                 "The Autumn Whirlwind field created by\nKazuha Slash\nhas the following effects:\n\u00b7 Increases Kaedehara Kazuha's own Elemental Mastery by 200 for its duration.\n\u00b7 Increases the Elemental Mastery of characters within the field by 200.\nThe Elemental Mastery-increasing effects of this Constellation do not stack.",
             level: 2,
         },
         {
             name: 'Maple Monogatari',
-            image: 'https://genshin.honeyhunterworld.com/img/c_473.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Kazuha_01.png',
             description:
                 'Increases the Level of\nChihayaburu\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: 'Oozora Genpou',
-            image: 'https://genshin.honeyhunterworld.com/img/c_474.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Kazuha_03.png',
             description:
                 "When Kaedehara Kazuha's Energy is lower than 45, he obtains the following effects:\n\u00b7Pressing or Holding\nChihayaburu\nregenerates 3 or 4 Energy for Kaedehara Kazuha, respectively.\n\u00b7When gliding, Kaedehara Kazuha regenerates 2 Energy per second.",
             level: 4,
         },
         {
             name: 'Wisdom of Bansei',
-            image: 'https://genshin.honeyhunterworld.com/img/c_475.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Kazuha_02.png',
             description:
                 'Increases the Level of\nKazuha Slash\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: 'Crimson Momiji',
-            image: 'https://genshin.honeyhunterworld.com/img/c_476.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Kazuha_04.png',
             description:
                 "After using\nChihayaburu\nor\nKazuha Slash\n, Kaedehara Kazuha gains an\nAnemo Infusion\nfor 5s. Additionally, each point of Elemental Mastery will increase the DMG dealt by Kaedehara Kazuha's Normal, Charged, and Plunging Attacks by 0.2%.",
             level: 6,

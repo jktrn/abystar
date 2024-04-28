@@ -14,7 +14,7 @@ const constellationBonuses: Bonus[] = [
 
 const Lisa: Character = {
     name: 'Lisa',
-    icon: '/images/characters/lisa.png',
+    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Lisa.png',
     weapon: 'Catalyst',
     vision: 'Electro',
     rarity: 4,
@@ -138,7 +138,7 @@ const Lisa: Character = {
     talents: [
         {
             name: 'Normal Attack: Lightning Touch',
-            image: 'https://genshin.honeyhunterworld.com/img/s_43101.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_A_Catalyst_MD.png',
             description:
                 'Normal Attack\nPerforms up to 4 lightning attacks that deal\nElectro DMG\n.\nCharged Attack\nConsumes a certain amount of Stamina to deal\nAoE Electro DMG\nafter a short casting time.\nPlunging Attack\nGathering the might of Electro, Lisa plunges towards the ground from mid-air, damaging all opponents in her path. Deals\nAoE Electro DMG\nupon impact with the ground.',
             data: {
@@ -267,7 +267,7 @@ const Lisa: Character = {
                     Lv3: '132.13%',
                     Lv4: '145.35%',
                     Lv5: '154.59%',
-                    Lv6: '165.16%',
+                    Lv6: '165.17%',
                     Lv7: '179.7%',
                     Lv8: '194.23%',
                     Lv9: '208.77%',
@@ -299,7 +299,7 @@ const Lisa: Character = {
         },
         {
             name: 'Violet Arc',
-            image: 'https://genshin.honeyhunterworld.com/img/s_43201.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_S_Lisa_01.png',
             description:
                 'Channels the power of lightning to sweep bothersome matters away.\nPress\nReleases a homing Lightning Orb.\nOn hit, it deals\nElectro DMG\nand applies a stack of the Conductive status (max 3 stacks) to opponents in a small AoE.\nHold\nAfter an extended casting time, calls down lightning from the heavens, dealing massive\nElectro DMG\nto all nearby opponents.\nDeals great amounts of extra damage to opponents based on the number of Conductive stacks applied to them, and clears their Conductive status.\nElectro Purple is the raiment of the Witch of Purple Rose.',
             data: {
@@ -426,7 +426,7 @@ const Lisa: Character = {
         },
         {
             name: 'Lightning Rose',
-            image: 'https://genshin.honeyhunterworld.com/img/s_43901.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_E_Lisa_01.png',
             description:
                 "Summons a Lightning Rose that unleashes powerful lightning bolts, launching surrounding opponents and dealing\nElectro DMG\n.\nThe Lightning Rose will continuously emit lightning to knock back opponents and deal\nElectro DMG\nthroughout the ability's duration.\nThis rose is beautiful, but beware its mortal thorns.",
             data: {
@@ -504,19 +504,19 @@ const Lisa: Character = {
     passiveSkills: [
         {
             name: 'General Pharmaceutics',
-            image: 'https://genshin.honeyhunterworld.com/img/p_42301.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_Combine_Potion.png',
             description:
                 'When Lisa crafts a potion, she has a 20% chance to refund a portion of the crafting materials used.',
         },
         {
             name: 'Induced Aftershock',
-            image: 'https://genshin.honeyhunterworld.com/img/p_42101.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Lisa_05.png',
             description:
                 "Hits by Charged Attacks apply\nViolet Arc\n's Conductive status to opponents.",
         },
         {
             name: 'Static Electricity Field',
-            image: 'https://genshin.honeyhunterworld.com/img/p_42201.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Lisa_06.png',
             description:
                 'Opponents hit by\nLightning Rose\nhave their DEF decreased by 15% for 10s.',
         },
@@ -524,42 +524,42 @@ const Lisa: Character = {
     constellations: [
         {
             name: 'Infinite Circuit',
-            image: 'https://genshin.honeyhunterworld.com/img/c_41.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Lisa_01.png',
             description:
                 'Lisa regenerates 2 Energy for every opponent hit while holding\nViolet Arc\n.\nA maximum of 10 Energy can be regenerated in this manner at any one time.',
             level: 1,
         },
         {
             name: 'Electromagnetic Field',
-            image: 'https://genshin.honeyhunterworld.com/img/c_42.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Lisa_02.png',
             description:
                 "Holding\nViolet Arc\nhas the following effects:\n\u00b7Increases DEF by 25%.\n\u00b7Increases Lisa's resistance to interruption.",
             level: 2,
         },
         {
             name: 'Resonant Thunder',
-            image: 'https://genshin.honeyhunterworld.com/img/c_43.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Lisa_02.png',
             description:
                 'Increases the Level of\nLightning Rose\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: 'Plasma Eruption',
-            image: 'https://genshin.honeyhunterworld.com/img/c_44.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Lisa_03.png',
             description:
                 'Lightning Rose\nnow unleashes 1-3 lightning bolts when it attacks.',
             level: 4,
         },
         {
             name: 'Electrocute',
-            image: 'https://genshin.honeyhunterworld.com/img/c_45.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Lisa_01.png',
             description:
                 'Increases the Level of\nViolet Arc\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: 'Pulsating Witch',
-            image: 'https://genshin.honeyhunterworld.com/img/c_46.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Lisa_04.png',
             description:
                 "When Lisa takes the field, she applies 3 stacks of\nViolet Arc\n's Conductive status onto nearby opponents.\nThis effect can only occur once every 5s.",
             level: 6,

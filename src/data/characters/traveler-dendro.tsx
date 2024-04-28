@@ -138,7 +138,7 @@ const TravelerDendro: Character = {
     talents: [
         {
             name: 'Normal Attack: Foreign Fieldcleaver',
-            image: 'https://genshin.honeyhunterworld.com/img/s_113001.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_A_01.png',
             description:
                 'Normal Attack\nPerforms up to 5 rapid strikes.\nCharged Attack\nConsumes a certain amount of Stamina to unleash 2 rapid sword strikes.\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.',
             data: {
@@ -316,7 +316,7 @@ const TravelerDendro: Character = {
         },
         {
             name: 'Razorgrass Blade',
-            image: 'https://genshin.honeyhunterworld.com/img/s_113201.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_E_PlayerGrass_01.png',
             description:
                 'With a flourish of your blade, you unleash a spray of razor-sharp leaves that go before you and deal\nDendro DMG\n.\nYou and Paimon observed the flowing edges of grass and leaf.',
             data: {
@@ -358,7 +358,7 @@ const TravelerDendro: Character = {
         },
         {
             name: 'Surgent Manifestation',
-            image: 'https://genshin.honeyhunterworld.com/img/s_113901.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_S_PlayerGrass_01.png',
             description:
                 "Calling upon the might of the flora all around you, you create a Lea Lotus Lamp.\nThis Lamp will deal continuous\nDendro DMG\nto opponents within its AoE.\nLotuslight Transfiguration\nThe Lea Lotus Lamp will undergo the following changes after it comes into contact with\nHydro\n/\nElectro\n/\nPyro\n:\n\u00b7\nHydro\n: the Lamp's AoE and the AoE of its attacks are increased.\n\u00b7\nElectro\n: the Lamp's ATK SPD is increased.\n\u00b7\nPyro\n: the Lamp will explode after a short delay and then disappear, dealing\nAoE Dendro DMG\n.\nThe Lea Lotus Lamp can only undergo one Lotuslight Transfiguration in its duration.\nOnly one Lamp created by the Traveler can exist at any one time.\nYou and Paimon studied the sounds of plants that sprout after the rain.",
             data: {
@@ -453,13 +453,13 @@ const TravelerDendro: Character = {
     passiveSkills: [
         {
             name: 'Verdant Overgrowth',
-            image: 'https://genshin.honeyhunterworld.com/img/p_112101.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_PlayerGrass_01.png',
             description:
                 'Lea Lotus Lamp\nwill obtain one level of Overflowing Lotuslight every second it is on the field, increasing the Elemental Mastery of active character(s) within its AoE by 6. Overflowing Lotuslight has a maximum of 10 stacks.',
         },
         {
             name: 'Verdant Luxury',
-            image: 'https://genshin.honeyhunterworld.com/img/p_112201.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_PlayerGrass_02.png',
             description:
                 'Every point of Elemental Mastery the Traveler possesses increases the DMG dealt by\nRazorgrass Blade\nby 0.15% and the DMG dealt by\nSurgent Manifestation\nby 0.1%.',
         },
@@ -467,41 +467,41 @@ const TravelerDendro: Character = {
     constellations: [
         {
             name: 'Symbiotic Creeper',
-            image: 'https://genshin.honeyhunterworld.com/img/c_111.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_PlayerGrass_01.png',
             description:
                 'After\nRazorgrass Blade\nhits an opponent, it will regenerate 3.5 Energy for the Traveler.',
             level: 1,
         },
         {
             name: 'Green Resilience',
-            image: 'https://genshin.honeyhunterworld.com/img/c_112.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_PlayerGrass_02.png',
             description: "Lea Lotus Lamp\n's duration is increased by 3s.",
             level: 2,
         },
         {
             name: 'Whirling Weeds',
-            image: 'https://genshin.honeyhunterworld.com/img/c_113.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_PlayerGrass_03.png',
             description:
                 'Increases the Level of\nRazorgrass Blade\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: 'Treacle Grass',
-            image: 'https://genshin.honeyhunterworld.com/img/c_114.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_PlayerGrass_04.png',
             description:
                 'After the\nLea Lotus Lamp\ntriggers a Lotuslight Transfiguration, it will obtain 5 stacks of the Overflowing Lotuslight effect from the Passive Talent "Verdant Overgrowth."\nYou must have unlocked this Passive Talent first.',
             level: 4,
         },
         {
             name: 'Viridian Transience',
-            image: 'https://genshin.honeyhunterworld.com/img/c_115.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_PlayerGrass_05.png',
             description:
                 'Increases the Level of\nSurgent Manifestation\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: 'Withering Aggregation',
-            image: 'https://genshin.honeyhunterworld.com/img/c_116.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_PlayerGrass_06.png',
             description:
                 'The\nDendro DMG Bonus\nof the character under the effect of Overflowing Lotuslight as created by the\nLea Lotus Lamp\nis increased by 12%. If the Lamp has experienced a Lotuslight Transfiguration previously, the character will also gain 12% DMG Bonus for the corresponding element.',
             level: 6,

@@ -14,7 +14,7 @@ const constellationBonuses: Bonus[] = [
 
 const Xiao: Character = {
     name: 'Xiao',
-    icon: '/images/characters/xiao.png',
+    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Xiao.png',
     weapon: 'Polearm',
     vision: 'Anemo',
     rarity: 5,
@@ -138,7 +138,7 @@ const Xiao: Character = {
     talents: [
         {
             name: 'Normal Attack: Whirlwind Thrust',
-            image: 'https://genshin.honeyhunterworld.com/img/s_263101.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_A_03.png',
             description:
                 'Normal Attack\nPerforms up to 6 consecutive spear strikes.\nCharged Attack\nConsumes a certain amount of Stamina to perform an upward thrust.\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.\nXiao does not take DMG from performing Plunging Attacks.',
             data: {
@@ -154,7 +154,7 @@ const Xiao: Character = {
                     Lv9: '92.64%',
                     Lv10: '98.28%',
                     Lv11: '103.92%',
-                    Lv12: '109.54%',
+                    Lv12: '109.56%',
                     Lv13: '115.18%',
                     Lv14: '120.82%',
                     Lv15: '126.46%',
@@ -171,7 +171,7 @@ const Xiao: Character = {
                     Lv9: '95.76%',
                     Lv10: '101.58%',
                     Lv11: '107.4%',
-                    Lv12: '113.22%',
+                    Lv12: '113.23%',
                     Lv13: '119.05%',
                     Lv14: '124.87%',
                     Lv15: '130.69%',
@@ -222,7 +222,7 @@ const Xiao: Character = {
                     Lv9: '120.32%',
                     Lv10: '127.64%',
                     Lv11: '134.96%',
-                    Lv12: '142.27%',
+                    Lv12: '142.28%',
                     Lv13: '149.59%',
                     Lv14: '156.91%',
                     Lv15: '164.23%',
@@ -333,7 +333,7 @@ const Xiao: Character = {
         },
         {
             name: 'Lemniscatic Wind Cycling',
-            image: 'https://genshin.honeyhunterworld.com/img/s_263201.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_S_Xiao_01.png',
             description:
                 "Xiao lunges forward, dealing\nAnemo DMG\nto opponents in his path.\nCan be used in mid-air.\nStarts with 2 charges.\nAccording to the legends of another land, the world will someday be crushed by two great wind wheels. Xiao's mastery over polearms is transcendent, ripping his foes apart like those legendary wind wheels.",
             data: {
@@ -375,7 +375,7 @@ const Xiao: Character = {
         },
         {
             name: 'Bane of All Evil',
-            image: 'https://genshin.honeyhunterworld.com/img/s_263901.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_E_Xiao_01.png',
             description:
                 'Xiao dons the Yaksha Mask that set gods and demons trembling millennia ago.\nYaksha\'s Mask\n\u00b7Greatly increases Xiao\'s jumping ability.\n\u00b7Increases his attack AoE and attack DMG.\n\u00b7Converts attack DMG into\nAnemo DMG\n, which cannot be overridden by any other elemental infusion.\nIn this state, Xiao will continuously lose HP.\nThe effects of this skill end when Xiao leaves the field.\nDonning the Mask of the Yaksha, Xiao takes the terrifying, demon-conquering form of the Vigilant Yaksha. But this great power has also brought him great suffering. Some call him "The Bane of All Evil."',
             data: {
@@ -470,19 +470,19 @@ const Xiao: Character = {
     passiveSkills: [
         {
             name: 'Transcension: Gravity Defier',
-            image: 'https://genshin.honeyhunterworld.com/img/p_262301.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_Explosion_Climb.png',
             description:
                 'Decreases climbing Stamina consumption for your own party members by 20%.\nNot stackable with Passive Talents that provide the exact same effects.',
         },
         {
             name: 'Conqueror of Evil: Tamer of Demons',
-            image: 'https://genshin.honeyhunterworld.com/img/p_262101.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Xiao_05.png',
             description:
                 'While under the effects of\nBane of All Evil\n, all DMG dealt by Xiao increases by 5%. DMG increases by a further 5% for every 3s the ability persists.\nThe maximum DMG Bonus is 25%.',
         },
         {
             name: 'Dissolution Eon: Heaven Fall',
-            image: 'https://genshin.honeyhunterworld.com/img/p_262201.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Xiao_06.png',
             description:
                 "Using\nLemniscatic Wind Cycling\nincreases the DMG of subsequent uses of Lemniscatic Wind Cycling by 15%.\nThis effect lasts for 7s, and has a maximum of 3 stacks. Gaining a new stack refreshes the effect's duration.",
         },
@@ -490,41 +490,41 @@ const Xiao: Character = {
     constellations: [
         {
             name: 'Dissolution Eon: Destroyer of Worlds',
-            image: 'https://genshin.honeyhunterworld.com/img/c_261.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Xiao_01.png',
             description: "Increases\nLemniscatic Wind Cycling\n's charges by 1.",
             level: 1,
         },
         {
             name: 'Annihilation Eon: Blossom of Kaleidos',
-            image: 'https://genshin.honeyhunterworld.com/img/c_262.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Xiao_02.png',
             description:
                 "When in the party and not on the field, Xiao's Energy Recharge is increased by 25%.",
             level: 2,
         },
         {
             name: 'Conqueror of Evil: Wrath Deity',
-            image: 'https://genshin.honeyhunterworld.com/img/c_263.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Xiao_01.png',
             description:
                 'Increases the Level of\nLemniscatic Wind Cycling\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: 'Transcension: Extinction of Suffering',
-            image: 'https://genshin.honeyhunterworld.com/img/c_264.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Xiao_03.png',
             description:
                 "When Xiao's HP falls below 50%, he gains a 100% DEF Bonus.",
             level: 4,
         },
         {
             name: 'Evolution Eon: Origin of Ignorance',
-            image: 'https://genshin.honeyhunterworld.com/img/c_265.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Xiao_02.png',
             description:
                 'Increases the Level of\nBane of All Evil\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: 'Conqueror of Evil: Guardian Yaksha',
-            image: 'https://genshin.honeyhunterworld.com/img/c_266.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Xiao_04.png',
             description:
                 "While under the effects of\nBane of All Evil\n, hitting at least 2 opponents with Xiao's Plunging Attack will immediately grant him 1 charge of\nLemniscatic Wind Cycling\n, and for the next 1s, he may use Lemniscatic Wind Cycling while ignoring its CD.",
             level: 6,

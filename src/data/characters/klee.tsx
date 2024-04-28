@@ -14,7 +14,7 @@ const constellationBonuses: Bonus[] = [
 
 const Klee: Character = {
     name: 'Klee',
-    icon: '/images/characters/klee.png',
+    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Klee.png',
     weapon: 'Catalyst',
     vision: 'Pyro',
     rarity: 5,
@@ -138,7 +138,7 @@ const Klee: Character = {
     talents: [
         {
             name: 'Normal Attack: Kaboom!',
-            image: 'https://genshin.honeyhunterworld.com/img/s_293101.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_A_Catalyst_MD.png',
             description:
                 'Normal Attack\nThrows things that go boom when they hit things! Performs up to 3 explosive attacks, dealing\nAoE Pyro DMG\n.\nCharged Attack\nConsumes a certain amount of Stamina and deals\nAoE Pyro DMG\nto opponents after a short casting time.\nPlunging Attack\nGathering the power of Pyro, Klee plunges towards the ground from mid-air, damaging all opponents in her path. Deals\nAoE Pyro DMG\nupon impact with the ground.',
             data: {
@@ -190,7 +190,7 @@ const Klee: Character = {
                     Lv11: '171.21%',
                     Lv12: '183.44%',
                     Lv13: '195.67%',
-                    Lv14: '207.89%',
+                    Lv14: '207.9%',
                     Lv15: '220.12%',
                 },
                 'Charged Attack DMG': {
@@ -250,7 +250,7 @@ const Klee: Character = {
                     Lv3: '132.13%',
                     Lv4: '145.35%',
                     Lv5: '154.59%',
-                    Lv6: '165.16%',
+                    Lv6: '165.17%',
                     Lv7: '179.7%',
                     Lv8: '194.23%',
                     Lv9: '208.77%',
@@ -282,7 +282,7 @@ const Klee: Character = {
         },
         {
             name: 'Jumpy Dumpty',
-            image: 'https://genshin.honeyhunterworld.com/img/s_293201.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_S_Klee_01.png',
             description:
                 "Jumpy Dumpty is tons of boom-bang-fun!\nWhen thrown, Jumpy Dumpty bounces thrice, igniting and dealing\nAoE Pyro DMG\nwith every bounce.\nOn the third bounce, the bomb splits into many mines.\nThe mines will explode upon contact with opponents, or after a short period of time, dealing\nAoE Pyro DMG\n.\nStarts with 2 charges.\nJumpy Dumpty is Klee's good friend! She can't help but introduce him to everyone.",
             data: {
@@ -358,7 +358,7 @@ const Klee: Character = {
         },
         {
             name: "Sparks 'n' Splash",
-            image: 'https://genshin.honeyhunterworld.com/img/s_293901.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_E_Klee_01.png',
             description:
                 "Klee's Blazing Delight! For the duration of this ability, continuously summons Sparks 'n' Splash to attack nearby opponents, dealing\nAoE Pyro DMG\n.\nThe knights all believe that Klee must have a lucky star watching over her to have never been hurt by any of her own bombs...",
             data: {
@@ -436,19 +436,19 @@ const Klee: Character = {
     passiveSkills: [
         {
             name: 'All Of My Treasures!',
-            image: 'https://genshin.honeyhunterworld.com/img/p_292301.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_Collect_Local_Mengde.png',
             description:
                 'Displays the location of nearby\nresources unique to Mondstadt\non the mini-map.',
         },
         {
             name: 'Pounding Surprise',
-            image: 'https://genshin.honeyhunterworld.com/img/p_292101.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Klee_05.png',
             description:
                 'When\nJumpy Dumpty\nand Normal Attacks deal DMG, Klee has a 50% chance to obtain an Explosive Spark.\nThis Explosive Spark is consumed by the next Charged Attack, which costs no Stamina and deals 50% increased DMG.',
         },
         {
             name: 'Sparkling Burst',
-            image: 'https://genshin.honeyhunterworld.com/img/p_292201.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Klee_06.png',
             description:
                 "When Klee's Charged Attack results in a CRIT Hit, all party members gain 2 Elemental Energy.",
         },
@@ -456,42 +456,42 @@ const Klee: Character = {
     constellations: [
         {
             name: 'Chained Reactions',
-            image: 'https://genshin.honeyhunterworld.com/img/c_291.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Klee_01.png',
             description:
                 "Attacks and Skills have a certain chance to summon sparks that bombard opponents, dealing DMG equal to 120% of\nSparks 'n' Splash\n's DMG.",
             level: 1,
         },
         {
             name: 'Explosive Frags',
-            image: 'https://genshin.honeyhunterworld.com/img/c_292.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Klee_02.png',
             description:
                 "Being hit by\nJumpy Dumpty\n's mines decreases opponents' DEF by 23% for 10s.",
             level: 2,
         },
         {
             name: 'Exquisite Compound',
-            image: 'https://genshin.honeyhunterworld.com/img/c_293.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Klee_01.png',
             description:
                 'Increases the Level of\nJumpy Dumpty\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: 'Sparkly Explosion',
-            image: 'https://genshin.honeyhunterworld.com/img/c_294.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Klee_03.png',
             description:
                 "If Klee leaves the field during the duration of\nSparks 'n' Splash\n, her departure triggers an explosion that deals 555% of her ATK as\nAoE Pyro DMG\n.",
             level: 4,
         },
         {
             name: 'Nova Burst',
-            image: 'https://genshin.honeyhunterworld.com/img/c_295.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Klee_02.png',
             description:
                 "Increases the Level of\nSparks 'n' Splash\nby 3.\nMaximum upgrade level is 15.",
             level: 5,
         },
         {
             name: 'Blazing Delight',
-            image: 'https://genshin.honeyhunterworld.com/img/c_296.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Klee_04.png',
             description:
                 "While under the effects of\nSparks 'n' Splash\n, Klee will regenerate 3 Energy for all members of the party (excluding Klee) every 3s.\nWhen\nSparks 'n' Splash\nis used, all party members will gain a 10%\nPyro DMG Bonus\nfor 25s.",
             level: 6,

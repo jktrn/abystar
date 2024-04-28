@@ -14,7 +14,7 @@ const constellationBonuses: Bonus[] = [
 
 const Sayu: Character = {
     name: 'Sayu',
-    icon: '/images/characters/sayu.png',
+    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Sayu.png',
     weapon: 'Claymore',
     vision: 'Anemo',
     rarity: 4,
@@ -138,7 +138,7 @@ const Sayu: Character = {
     talents: [
         {
             name: 'Normal Attack: Shuumatsuban Ninja Blade',
-            image: 'https://genshin.honeyhunterworld.com/img/s_533101.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_A_04.png',
             description:
                 'Normal Attack\nPerforms up to 4 consecutive strikes.\nCharged Attack\nDrains Stamina over time to perform continuous spinning attacks against all nearby opponents.\nAt the end of the sequence, performs a more powerful slash.\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.',
             data: {
@@ -181,10 +181,10 @@ const Sayu: Character = {
                     Lv2: '93.94%',
                     Lv3: '101.00%',
                     Lv4: '111.10%',
-                    Lv5: '118.16%',
+                    Lv5: '118.18%',
                     Lv6: '126.26%',
                     Lv7: '137.36%',
-                    Lv8: '148.46%',
+                    Lv8: '148.48%',
                     Lv9: '159.58%',
                     Lv10: '171.70%',
                     Lv11: '185.58%',
@@ -199,7 +199,7 @@ const Sayu: Character = {
                     Lv3: '114.1%',
                     Lv4: '125.51%',
                     Lv5: '133.5%',
-                    Lv6: '142.62%',
+                    Lv6: '142.63%',
                     Lv7: '155.18%',
                     Lv8: '167.73%',
                     Lv9: '180.28%',
@@ -229,11 +229,11 @@ const Sayu: Character = {
                 },
                 'Charged Attack Final DMG': {
                     Lv1: '113.09%',
-                    Lv2: '122.29%',
+                    Lv2: '122.3%',
                     Lv3: '131.5%',
                     Lv4: '144.65%',
                     Lv5: '153.86%',
-                    Lv6: '164.37%',
+                    Lv6: '164.38%',
                     Lv7: '178.84%',
                     Lv8: '193.31%',
                     Lv9: '207.77%',
@@ -333,7 +333,7 @@ const Sayu: Character = {
         },
         {
             name: 'Yoohoo Art: Fuuin Dash',
-            image: 'https://genshin.honeyhunterworld.com/img/s_533201.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_S_Sayu_01.png',
             description:
                 "The special technique of the Yoohoo Ninja Arts!\nSayu curls up into a rolling Fuufuu Windwheel and smashes into opponents at high speed, dealing\nAnemo DMG\n. When the duration ends, she unleashes a Fuufuu Whirlwind Kick, dealing\nAoE Anemo DMG\n.\nPress\nEnters the Fuufuu Windwheel state, rolling forward a short distance before using the Fuufuu Whirlwind Kick.\nHold\nRolls about continuously in the Fuufuu Windwheel state, increasing Sayu's resistance to interruption while within that state.\nDuring this time, Sayu can control the direction of her roll, and can use the skill again to end her Windwheel state early and unleash a stronger version of the Fuufuu Whirlwind Kick.\nThe Hold version of this skill can trigger Elemental Absorption.\nThis skill has a maximum duration of 10s and enters CD once its effects end. The longer Sayu remains in her Windwheel state, the longer the CD.\nElemental Absorption\nIf Sayu comes into contact with\nHydro\n/\nPyro\n/\nCryo\n/\nElectro\nwhile in her Windwheel state, she will deal additional elemental DMG of that type.\nElemental Absorption may only occur once per use of this skill.\nSayu can pull this skill off with her eyes closed. This technique was originally created for escaping, but now that she's got a Vision, might as well make her foes eat dirt while she's at it.",
             data: {
@@ -460,7 +460,7 @@ const Sayu: Character = {
         },
         {
             name: 'Yoohoo Art: Mujina Flurry',
-            image: 'https://genshin.honeyhunterworld.com/img/s_533901.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_E_Sayu_01.png',
             description:
                 "The other super special technique of the Yoohoo Ninja Arts! It summons a pair of helping hands for Sayu.\nDeals\nAnemo DMG\nto nearby opponents and heals all nearby party members. The amount of HP restored is based on Sayu's ATK. This skill then summons a Muji-Muji Daruma.\nMuji-Muji Daruma\nAt specific intervals, the Daruma will take one of several actions based on the situation around it:\n\u00b7If the HP of nearby characters is above 70%, it will attack a nearby opponent, dealing\nAnemo DMG\n.\n\u00b7If there are active characters with 70% or less HP nearby, it will heal the active character with the lowest percentage HP left. If there are no opponents nearby, it will heal active characters nearby even if they have 70% HP or more.\nPeople who don't know the first thing about ninjutsu love to watch Sayu show off this skill, and some have tried to learn it from her. But Sayu just wants to sleep and not be disturbed.",
             data: {
@@ -589,19 +589,19 @@ const Sayu: Character = {
     passiveSkills: [
         {
             name: "Yoohoo Art: Silencer's Secret",
-            image: 'https://genshin.honeyhunterworld.com/img/p_532301.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Sayu_07.png',
             description:
                 'When Sayu is in the party, your characters will not startle Crystalflies and certain other animals when getting near them.\nCheck the "Other" sub-category of the "Living Beings / Wildlife" section in the Archive for creatures this skill works on.',
         },
         {
             name: 'Someone More Capable',
-            image: 'https://genshin.honeyhunterworld.com/img/p_532101.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Sayu_05.png',
             description:
                 'When Sayu triggers a Swirl reaction while active, she heals all your characters and nearby allies for 300 HP. She will also heal an additional 1.2 HP for every point of Elemental Mastery she has.\nThis effect can be triggered once every 2s.',
         },
         {
             name: 'No Work Today!',
-            image: 'https://genshin.honeyhunterworld.com/img/p_532201.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Sayu_06.png',
             description:
                 'The Muji-Muji Daruma created by\nYoohoo Art: Mujina Flurry\ngains the following effects:\n\u00b7When healing a character, it will also heal characters near that healed character for 20% the amount of HP.\n\u00b7Increases the AoE of its attack against opponents.',
         },
@@ -609,42 +609,42 @@ const Sayu: Character = {
     constellations: [
         {
             name: 'Multi-Task no Jutsu',
-            image: 'https://genshin.honeyhunterworld.com/img/c_531.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Sayu_01.png',
             description:
                 'The Muji-Muji Daruma created by\nYoohoo Art: Mujina Flurry\nwill ignore HP limits and can simultaneously attack nearby opponents and heal characters.',
             level: 1,
         },
         {
             name: 'Egress Prep',
-            image: 'https://genshin.honeyhunterworld.com/img/c_532.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Sayu_02.png',
             description:
                 'Yoohoo Art: Fuuin Dash\ngains the following effects:\n\u00b7DMG of Fuufuu Whirlwind Kick in Press Mode increased by 3.3%.\n\u00b7Every 0.5s in the Fuufuu Windwheel state will increase the DMG of this Fuufuu Whirlwind Kick by 3.3%. The maximum DMG increase possible through this method is 66%.',
             level: 2,
         },
         {
             name: 'Eh, the Bunshin Can Handle It',
-            image: 'https://genshin.honeyhunterworld.com/img/c_533.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Sayu_02.png',
             description:
                 'Increases the Level of\nYoohoo Art: Mujina Flurry\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: 'Skiving: New and Improved',
-            image: 'https://genshin.honeyhunterworld.com/img/c_534.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Sayu_03.png',
             description:
                 'Sayu recovers 1.2 Energy when she triggers a Swirl reaction.\nThis effect occurs once every 2s.',
             level: 4,
         },
         {
             name: 'Speed Comes First',
-            image: 'https://genshin.honeyhunterworld.com/img/c_535.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Sayu_01.png',
             description:
                 'Increases the Level of\nYoohoo Art: Fuuin Dash\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: "Sleep O'Clock",
-            image: 'https://genshin.honeyhunterworld.com/img/c_536.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Sayu_04.png',
             description:
                 "The Muji-Muji Daruma created by Sayu's\nYoohoo Art: Mujina Flurry\nwill now also benefit from her Elemental Mastery. Each point of Sayu's Elemental Mastery will produce the following effects:\n\u00b7Increases the damage dealt by the Muji-Muji Daruma's attacks by 0.2% ATK. A maximum DMG increase of 400% ATK can be gained via this method.\n\u00b7Increases the HP restored by the Muji-Muji Daruma by 3. A maximum of 6,000 additional HP can be restored in this manner.",
             level: 6,

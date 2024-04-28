@@ -14,7 +14,7 @@ const constellationBonuses: Bonus[] = [
 
 const Ganyu: Character = {
     name: 'Ganyu',
-    icon: '/images/characters/ganyu.png',
+    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Ganyu.png',
     weapon: 'Bow',
     vision: 'Cryo',
     rarity: 5,
@@ -138,7 +138,7 @@ const Ganyu: Character = {
     talents: [
         {
             name: 'Normal Attack: Liutian Archery',
-            image: 'https://genshin.honeyhunterworld.com/img/s_373101.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_A_02.png',
             description:
                 'Normal Attack\nPerforms up to 6 consecutive shots with a bow.\nCharged Attack\nPerforms a more precise\nAimed Shot\nwith increased DMG.\nWhile aiming, an icy aura will accumulate on the arrowhead before the arrow is fired. Has different effects based on how long the energy has been charged:\n\u00b7Charge Level 1: Fires off an icy arrow that deals\nCryo DMG\n.\n\u00b7Charge Level 2: Fires off a Frostflake Arrow that deals\nCryo DMG\n. The Frostflake Arrow blooms after hitting its target, dealing\nAoE Cryo DMG\n.\nPlunging Attack\nFires off a shower of arrows in mid-air before falling and striking the ground, dealing AoE DMG upon impact.',
             data: {
@@ -182,7 +182,7 @@ const Ganyu: Character = {
                     Lv3: '52.9%',
                     Lv4: '58.19%',
                     Lv5: '61.89%',
-                    Lv6: '66.12%',
+                    Lv6: '66.13%',
                     Lv7: '71.94%',
                     Lv8: '77.76%',
                     Lv9: '83.58%',
@@ -199,7 +199,7 @@ const Ganyu: Character = {
                     Lv3: '52.9%',
                     Lv4: '58.19%',
                     Lv5: '61.89%',
-                    Lv6: '66.12%',
+                    Lv6: '66.13%',
                     Lv7: '71.94%',
                     Lv8: '77.76%',
                     Lv9: '83.58%',
@@ -335,7 +335,7 @@ const Ganyu: Character = {
                     Lv3: '132.13%',
                     Lv4: '145.35%',
                     Lv5: '154.59%',
-                    Lv6: '165.16%',
+                    Lv6: '165.17%',
                     Lv7: '179.7%',
                     Lv8: '194.23%',
                     Lv9: '208.77%',
@@ -367,7 +367,7 @@ const Ganyu: Character = {
         },
         {
             name: 'Trail of the Qilin',
-            image: 'https://genshin.honeyhunterworld.com/img/s_373201.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_S_Ganyu_01.png',
             description:
                 'Leaving a single Ice Lotus behind, Ganyu dashes backward, shunning all impurity and dealing\nAoE Cryo DMG\n.\nIce Lotus\n\u00b7Continuously taunts surrounding opponents, attracting them to attack it.\n\u00b7Endurance scales based on Ganyu\'s Max HP.\n\u00b7Blooms profusely when destroyed or once its duration ends, dealing\nAoE Cryo DMG\n.\n"You saw me, you say? You must be mistaken. I was working overtime then."',
             data: {
@@ -443,7 +443,7 @@ const Ganyu: Character = {
         },
         {
             name: 'Celestial Shower',
-            image: 'https://genshin.honeyhunterworld.com/img/s_373901.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_E_Ganyu_01.png',
             description:
                 'Coalesces atmospheric frost and snow to summon a Sacred Cryo Pearl that exorcises evil.\nDuring its ability duration, the Sacred Cryo Pearl will continuously rain down shards of ice, striking opponents within an AoE and dealing\nCryo DMG\n.\nGanyu can bring down sweet rains as a matter of course. But against demons and heretics, they become bitter, freezing snow.',
             data: {
@@ -521,19 +521,19 @@ const Ganyu: Character = {
     passiveSkills: [
         {
             name: 'Preserved for the Hunt',
-            image: 'https://genshin.honeyhunterworld.com/img/p_372301.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_Forge_Bow.png',
             description:
                 'Refunds 15% of the ore used when crafting Bow-type weapons.',
         },
         {
             name: 'Undivided Heart',
-            image: 'https://genshin.honeyhunterworld.com/img/p_372101.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Ganyu_05.png',
             description:
                 'After firing a Frostflake Arrow, the CRIT Rate of subsequent Frostflake Arrows and their resulting bloom effects is increased by 20% for 5s.',
         },
         {
             name: 'Harmony Between Heaven and Earth',
-            image: 'https://genshin.honeyhunterworld.com/img/p_372201.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Ganyu_06.png',
             description:
                 'Celestial Shower\ngrants a 20%\nCryo DMG Bonus\nto active party members in the AoE.',
         },
@@ -541,41 +541,41 @@ const Ganyu: Character = {
     constellations: [
         {
             name: 'Dew-Drinker',
-            image: 'https://genshin.honeyhunterworld.com/img/c_371.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Ganyu_01.png',
             description:
                 "Charge Level 2 Frostflake Arrows or Frostflake Arrow Blooms decrease opponents'\nCryo RES\nby 15% for 6s upon hit.\nA hit also regenerates 2 Energy for Ganyu. This effect can only occur once per Charge Level 2 Frostflake Arrow, regardless if Frostflake Arrow itself or its Bloom hits the target.",
             level: 1,
         },
         {
             name: 'The Auspicious',
-            image: 'https://genshin.honeyhunterworld.com/img/c_372.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Ganyu_02.png',
             description: 'Trail of the Qilin\ngains 1 additional charge.',
             level: 2,
         },
         {
             name: 'Cloud-Strider',
-            image: 'https://genshin.honeyhunterworld.com/img/c_373.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Ganyu_01.png',
             description:
                 'Increases the Level of\nCelestial Shower\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: 'Westward Sojourn',
-            image: 'https://genshin.honeyhunterworld.com/img/c_374.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Ganyu_03.png',
             description:
                 'Opponents standing within the AoE of\nCelestial Shower\ntake increased DMG. This effect strengthens over time.\nIncreased DMG taken begins at 5% and increases by 5% every 3s, up to a maximum of 25%.\nThe effect lingers for 3s after the opponent leaves the AoE.',
             level: 4,
         },
         {
             name: 'The Merciful',
-            image: 'https://genshin.honeyhunterworld.com/img/c_375.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Ganyu_02.png',
             description:
                 'Increases the Level of\nTrail of the Qilin\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: 'The Clement',
-            image: 'https://genshin.honeyhunterworld.com/img/c_376.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Ganyu_04.png',
             description:
                 'Using\nTrail of the Qilin\ncauses the next Frostflake Arrow shot within 30s to not require charging.',
             level: 6,

@@ -190,7 +190,7 @@ const characterBonuses: Bonus[] = [
                 Yelan&apos;s Max HP is increased by 6%/12%/18%/30%
             </span>
         ),
-        icon: '/images/characters/yelan-passive1.png',
+        icon: 'https://api.ambr.top/assets/UI/UI_Talent_S_Yelan_05.png',
         effect: (attributes, talentLevels, currentStacks) => {
             if (!currentStacks) return { attributes }
 
@@ -218,7 +218,7 @@ const characterBonuses: Bonus[] = [
                 more DMG, increasing by a further 3.5% per second (up to 50%)
             </span>
         ),
-        icon: '/images/characters/yelan-passive2.png',
+        icon: 'https://api.ambr.top/assets/UI/UI_Talent_S_Yelan_06.png',
         effect: (attributes, talentLevels, currentStacks) => {
             if (!currentStacks) return { attributes }
 
@@ -265,7 +265,7 @@ const constellationBonuses: Bonus[] = [
                 Skill) gains 1 additional charge
             </span>
         ),
-        icon: '/images/characters/yelan-constellation1.png',
+        icon: 'https://api.ambr.top/assets/UI/UI_Talent_S_Yelan_01.png',
         effect: (attributes) => {
             // * Unimplementable
             return { attributes }
@@ -285,7 +285,7 @@ const constellationBonuses: Bonus[] = [
                 {''}. This effect can trigger once every 1.8s.
             </span>
         ),
-        icon: '/images/characters/yelan-constellation2.png',
+        icon: 'https://api.ambr.top/assets/UI/UI_Talent_S_Yelan_02.png',
         effect: (attributes) => {
             // * Already handled in talentScalings
             return { attributes }
@@ -304,7 +304,7 @@ const constellationBonuses: Bonus[] = [
                 Maximum upgrade level is 15.
             </span>
         ),
-        icon: '/images/characters/yelan-constellation3.png',
+        icon: 'https://api.ambr.top/assets/UI/UI_Talent_U_Yelan_01.png',
         effect: (attributes, talentLevels) => {
             if (!talentLevels) return { attributes }
 
@@ -328,7 +328,7 @@ const constellationBonuses: Bonus[] = [
                 when the Lifeline explodes (up to 40% Max HP)
             </span>
         ),
-        icon: '/images/characters/yelan-constellation4.png',
+        icon: 'https://api.ambr.top/assets/UI/UI_Talent_S_Yelan_03.png',
         effect: (attributes, talentLevels, currentStacks) => {
             if (!currentStacks) return { attributes }
 
@@ -355,7 +355,7 @@ const constellationBonuses: Bonus[] = [
                 Maximum upgrade level is 15.
             </span>
         ),
-        icon: '/images/characters/yelan-constellation5.png',
+        icon: 'https://api.ambr.top/assets/UI/UI_Talent_U_Yelan_02.png',
         effect: (attributes, talentLevels) => {
             if (!talentLevels) return { attributes }
 
@@ -383,7 +383,7 @@ const constellationBonuses: Bonus[] = [
                 and will be cleared after Yelan fires 5 arrows.
             </span>
         ),
-        icon: '/images/characters/yelan-constellation6.png',
+        icon: 'https://api.ambr.top/assets/UI/UI_Talent_S_Yelan_04.png',
         effect: (attributes) => {
             // * Already handled in talentScalings
             return { attributes }
@@ -396,7 +396,7 @@ const constellationBonuses: Bonus[] = [
 
 const Yelan: Character = {
     name: 'Yelan',
-    icon: '/images/characters/yelan.png',
+    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Yelan.png',
     weapon: 'Bow',
     vision: 'Hydro',
     rarity: 5,
@@ -520,7 +520,7 @@ const Yelan: Character = {
     talents: [
         {
             name: 'Normal Attack: Stealthy Bowshot',
-            image: 'https://genshin.honeyhunterworld.com/img/s_603101.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_A_02.png',
             description:
                 'Normal Attack\nPerforms up to 4 consecutive shots with a bow.\nCharged Attack\nPerforms a more precise\nAimed Shot\nwith increased DMG.\nWhile aiming, flowing water will accumulate on the arrowhead. A fully charged torrential arrow will deal\nHydro DMG\n.\nBreakthrough\nYelan will enter a "Breakthrough" state after spending 5s out of combat, which will cause her next Charged Aimed Shot to have 80% decreased charge time, and once charged, she can fire a "Breakthrough Barb" that will deal\nAoE Hydro DMG\nbased on Yelan\'s Max HP.\nPlunging Attack\nFires off a shower of arrows in mid-air before falling and striking the ground, dealing AoE DMG upon impact.',
             data: {
@@ -683,7 +683,7 @@ const Yelan: Character = {
                     Lv3: '132.13%',
                     Lv4: '145.35%',
                     Lv5: '154.59%',
-                    Lv6: '165.16%',
+                    Lv6: '165.17%',
                     Lv7: '179.7%',
                     Lv8: '194.23%',
                     Lv9: '208.77%',
@@ -715,7 +715,7 @@ const Yelan: Character = {
         },
         {
             name: 'Lingering Lifeline',
-            image: 'https://genshin.honeyhunterworld.com/img/s_603201.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_S_Yelan_01.png',
             description:
                 "Fires off a Lifeline that allows her to move rapidly, entangling and marking opponents along its path.\nWhen this rapid movement ends, the Lifeline will explode, dealing\nHydro DMG\nto the marked opponents based on Yelan's Max HP.\nTap\nMoves a certain distance forward swiftly.\nHold\nEngages in continuous, swift movement, during which Yelan's resistance to interruption is increased.\nDuring this time, Yelan can control this rapid movement and end it by using this Skill again.\nAdditionally, each opponent marked by the Lifeline when it explodes grants Yelan a 34% chance to reset her Breakthrough state.\nNot until she begins to tug on the strings do evildoers, crooks, and scheming villains alike know that there is no escape.",
             data: {
@@ -774,7 +774,7 @@ const Yelan: Character = {
         },
         {
             name: 'Depth-Clarion Dice',
-            image: 'https://genshin.honeyhunterworld.com/img/s_603901.webp',
+            image: 'https://api.ambr.top/assets/UI/Skill_E_Yelan_01.png',
             description:
                 'Deals\nAoE Hydro DMG\nand creates an "Exquisite Throw," which aids her in battle.\nExquisite Throw\nFollows the character around and will initiate a coordinated attack under the following circumstances, dealing\nHydro DMG\nbased on Yelan\'s Max HP:\n\u00b7Can occur once every second when your active character uses a Normal Attack.\n\u00b7Will occur each time Yelan\'s Lifeline explodes and hits opponents.\n"A gambling addiction is going to do you no good. I mean, let me just do the math for you as the dealer. What do you think your odds of beating me are, when I have seven dice and you, only one?"',
             data: {
@@ -782,7 +782,7 @@ const Yelan: Character = {
                     Lv1: '7.31% Max HP',
                     Lv2: '7.86% Max HP',
                     Lv3: '8.4% Max HP',
-                    Lv4: '9.13% Max HP',
+                    Lv4: '9.14% Max HP',
                     Lv5: '9.68% Max HP',
                     Lv6: '10.23% Max HP',
                     Lv7: '10.96% Max HP',
@@ -886,19 +886,19 @@ const Yelan: Character = {
     passiveSkills: [
         {
             name: 'Necessary Calculation',
-            image: 'https://genshin.honeyhunterworld.com/img/p_602301.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_Expedition_Liyue.png',
             description:
                 'Gains 25% more rewards when dispatched on a Liyue Expedition for 20 hours.',
         },
         {
             name: 'Turn Control',
-            image: 'https://genshin.honeyhunterworld.com/img/p_602101.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Yelan_05.png',
             description:
                 "When the party has 1/2/3/4 Elemental Types, Yelan's Max HP is increased by 6%/12%/18%/30%.",
         },
         {
             name: 'Adapt With Ease',
-            image: 'https://genshin.honeyhunterworld.com/img/p_602201.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Yelan_06.png',
             description:
                 'So long as an\nExquisite Throw\nis in play, your own active character deals 1% more DMG. This increases by a further 3.5% DMG every second. The maximum increase to DMG dealt is 50%.\nThe pre-existing effect will be dispelled if Depth-Clarion Dice is recast during its duration.',
         },
@@ -906,41 +906,41 @@ const Yelan: Character = {
     constellations: [
         {
             name: 'Enter the Plotters',
-            image: 'https://genshin.honeyhunterworld.com/img/c_601.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Yelan_01.png',
             description: 'Lingering Lifeline\ngains 1 additional charge.',
             level: 1,
         },
         {
             name: 'Taking All Comers',
-            image: 'https://genshin.honeyhunterworld.com/img/c_602.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Yelan_02.png',
             description:
                 "When\nExquisite Throw\nconducts a coordinated attack, it will fire an additional water arrow that will deal 14% of Yelan's Max HP as Hydro DMG.\nThis effect can trigger once every 1.8s.",
             level: 2,
         },
         {
             name: "Beware the Trickster's Dice",
-            image: 'https://genshin.honeyhunterworld.com/img/c_603.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Yelan_01.png',
             description:
                 'Increases the Level of\nDepth-Clarion Dice\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: 'Bait-and-Switch',
-            image: 'https://genshin.honeyhunterworld.com/img/c_604.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Yelan_03.png',
             description:
                 "Increases all party members' Max HP by 10% for 25s for every opponent marked by\nLifeline\nwhen the Lifeline explodes. A maximum increase of 40% Max HP can be attained in this manner.",
             level: 4,
         },
         {
             name: "Dealer's Sleight",
-            image: 'https://genshin.honeyhunterworld.com/img/c_605.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Yelan_02.png',
             description:
                 'Increases the Level of\nLingering Lifeline\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: 'Winner Takes All',
-            image: 'https://genshin.honeyhunterworld.com/img/c_606.webp',
+            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Yelan_04.png',
             description:
                 "After using\nDepth-Clarion Dice\n, Yelan will enter the Mastermind state.\nIn this state, all of Yelan's Normal Attacks will be special Breakthrough Barbs. These Breakthrough Barbs will have similar abilities to normal ones and the DMG dealt will be considered Charged Attack DMG, dealing 156% of a normal Breakthrough Barb's DMG.\nThe Mastermind state lasts 20s and will be cleared after Yelan fires 5 arrows.",
             level: 6,
