@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const IronSting: Weapon = {
     name: 'Iron Sting',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Exotic.png',
+    image: '/images/weapons/UI_EquipIcon_Sword_Exotic.png',
     type: 'Weapon',
     rarity: 4,
     description:

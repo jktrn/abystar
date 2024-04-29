@@ -14,7 +14,7 @@ const constellationBonuses: Bonus[] = [
 
 const Beidou: Character = {
     name: 'Beidou',
-    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Beidou.png',
+    icon: '/images/characters/UI_AvatarIcon_Beidou.png',
     weapon: 'Claymore',
     vision: 'Electro',
     rarity: 4,
@@ -138,7 +138,7 @@ const Beidou: Character = {
     talents: [
         {
             name: 'Normal Attack: Oceanborne',
-            image: 'https://api.ambr.top/assets/UI/Skill_A_04.png',
+            image: '/images/characters/Skill_A_04.png',
             description:
                 'Normal Attack\nPerforms up to 5 consecutive strikes.\nCharged Attack\nDrains Stamina over time to perform continuous slashes.\nAt the end of the sequence, performs a more powerful slash.\nPlunging Attack\nPlunges from mid-air to strike the ground, damaging opponents along the path and dealing AoE DMG upon impact.',
             data: {
@@ -350,7 +350,7 @@ const Beidou: Character = {
         },
         {
             name: 'Tidecaller',
-            image: 'https://api.ambr.top/assets/UI/Skill_S_Beidou_01.png',
+            image: '/images/characters/Skill_S_Beidou_01.png',
             description:
                 "Nothing to worry about. Should anyone raise a hand against her or her men, she will avenge it ten-fold with sword and thunder.\nPress\nAccumulating the power of lightning, Beidou swings her blade forward fiercely, dealing\nElectro DMG\n.\nHold\nLifts her weapon up as a shield. Max DMG absorbed scales off Beidou's Max HP.\nAttacks using the energy stored within the greatsword upon release or once this ability's duration expires, dealing\nElectro DMG\n. DMG dealt scales with the number of times Beidou is attacked in the skill's duration. The greatest DMG Bonus will be attained once this effect is triggered twice.\nThe shield possesses the following properties:\n\u00b7Has 250%\nElectro DMG\nAbsorption Efficiency.\n\u00b7Applies the\nElectro element\nto Beidou upon activation.\nConquer the high seas! Pursue the waves and chase the storm!",
             data: {
@@ -426,7 +426,7 @@ const Beidou: Character = {
         },
         {
             name: 'Stormbreaker',
-            image: 'https://api.ambr.top/assets/UI/Skill_E_Beidou_01.png',
+            image: '/images/characters/Skill_E_Beidou_01.png',
             description:
                 "Recalling her slaying of the great beast Haishan, Beidou calls upon that monstrous strength and the lightning to create a Thunderbeast's Targe around herself, dealing\nElectro DMG\nto nearby opponents.\nThunderbeast's Targe\n\u00b7When Normal and Charged Attacks hit, they create a lightning discharge that can jump between opponents, dealing\nElectro DMG\n.\n\u00b7Increases the character's resistance to interruption, and decreases DMG taken.\nA maximum of 1 lightning discharge can be triggered per second.\nWith a peal of thunder, Haishan is slain.",
             data: {
@@ -538,19 +538,19 @@ const Beidou: Character = {
     passiveSkills: [
         {
             name: 'Conqueror of Tides',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_Explosion_Swim.png',
+            image: '/images/characters/UI_Talent_Explosion_Swim.png',
             description:
                 'Decreases swimming Stamina consumption for your own party members by 20%.\nNot stackable with Passive Talents that provide the exact same effects.',
         },
         {
             name: 'Retribution',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Beidou_05.png',
+            image: '/images/characters/UI_Talent_S_Beidou_05.png',
             description:
                 'Counterattacking with\nTidecaller\nat the precise moment when the character is hit grants the maximum DMG Bonus.',
         },
         {
             name: 'Lightning Storm',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Beidou_06.png',
+            image: '/images/characters/UI_Talent_S_Beidou_06.png',
             description:
                 'Gain the following effects for 10s after unleashing\nTidecaller\nwith its maximum DMG Bonus:\n\u00b7DMG dealt by Normal and Charged Attacks is increased by 15%. ATK SPD of Normal and Charged Attacks is increased by 15%.\n\u00b7Greatly reduced delay before unleashing Charged Attacks.',
         },
@@ -558,42 +558,42 @@ const Beidou: Character = {
     constellations: [
         {
             name: "Sea Beast's Scourge",
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Beidou_02.png',
+            image: '/images/characters/UI_Talent_S_Beidou_02.png',
             description:
                 "When\nStormbreaker\nis used:\nCreates a shield that absorbs up to 16% of Beidou's Max HP for 15s.\nThis shield absorbs\nElectro DMG\n250% more effectively.",
             level: 1,
         },
         {
             name: 'Upon the Turbulent Sea, the Thunder Arises',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Beidou_01.png',
+            image: '/images/characters/UI_Talent_S_Beidou_01.png',
             description:
                 "Stormbreaker\n's arc lightning can jump to 2 additional targets.",
             level: 2,
         },
         {
             name: 'Summoner of Storm',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Beidou_01.png',
+            image: '/images/characters/UI_Talent_U_Beidou_01.png',
             description:
                 'Increases the Level of\nTidecaller\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: 'Stunning Revenge',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Beidou_03.png',
+            image: '/images/characters/UI_Talent_S_Beidou_03.png',
             description:
                 "Upon being attacked, Beidou's Normal Attacks gain an additional instance of 20%\nElectro DMG\nfor 10s.",
             level: 4,
         },
         {
             name: 'Crimson Tidewalker',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Beidou_02.png',
+            image: '/images/characters/UI_Talent_U_Beidou_02.png',
             description:
                 'Increases the Level of\nStormbreaker\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: 'Bane of Evil',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Beidou_04.png',
+            image: '/images/characters/UI_Talent_S_Beidou_04.png',
             description:
                 'During the duration of\nStormbreaker\n, the\nElectro RES\nof surrounding opponents is decreased by 15%.',
             level: 6,

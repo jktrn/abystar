@@ -5,7 +5,7 @@ const weaponBonuses: Bonus[] = []
 
 const BeginnersProtector: Weapon = {
     name: "Beginner's Protector",
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Gewalt.png',
+    image: '/images/weapons/UI_EquipIcon_Pole_Gewalt.png',
     type: 'Polearm',
     rarity: 1,
     description:

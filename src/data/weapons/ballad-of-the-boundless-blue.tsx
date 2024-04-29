@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const BalladOfTheBoundlessBlue: Weapon = {
     name: 'Ballad of the Boundless Blue',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_DandelionPoem.png',
+    image: '/images/weapons/UI_EquipIcon_Catalyst_DandelionPoem.png',
     type: 'Catalyst',
     rarity: 4,
     description:

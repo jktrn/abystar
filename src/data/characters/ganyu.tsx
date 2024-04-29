@@ -14,7 +14,7 @@ const constellationBonuses: Bonus[] = [
 
 const Ganyu: Character = {
     name: 'Ganyu',
-    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Ganyu.png',
+    icon: '/images/characters/UI_AvatarIcon_Ganyu.png',
     weapon: 'Bow',
     vision: 'Cryo',
     rarity: 5,
@@ -138,7 +138,7 @@ const Ganyu: Character = {
     talents: [
         {
             name: 'Normal Attack: Liutian Archery',
-            image: 'https://api.ambr.top/assets/UI/Skill_A_02.png',
+            image: '/images/characters/Skill_A_02.png',
             description:
                 'Normal Attack\nPerforms up to 6 consecutive shots with a bow.\nCharged Attack\nPerforms a more precise\nAimed Shot\nwith increased DMG.\nWhile aiming, an icy aura will accumulate on the arrowhead before the arrow is fired. Has different effects based on how long the energy has been charged:\n\u00b7Charge Level 1: Fires off an icy arrow that deals\nCryo DMG\n.\n\u00b7Charge Level 2: Fires off a Frostflake Arrow that deals\nCryo DMG\n. The Frostflake Arrow blooms after hitting its target, dealing\nAoE Cryo DMG\n.\nPlunging Attack\nFires off a shower of arrows in mid-air before falling and striking the ground, dealing AoE DMG upon impact.',
             data: {
@@ -367,7 +367,7 @@ const Ganyu: Character = {
         },
         {
             name: 'Trail of the Qilin',
-            image: 'https://api.ambr.top/assets/UI/Skill_S_Ganyu_01.png',
+            image: '/images/characters/Skill_S_Ganyu_01.png',
             description:
                 'Leaving a single Ice Lotus behind, Ganyu dashes backward, shunning all impurity and dealing\nAoE Cryo DMG\n.\nIce Lotus\n\u00b7Continuously taunts surrounding opponents, attracting them to attack it.\n\u00b7Endurance scales based on Ganyu\'s Max HP.\n\u00b7Blooms profusely when destroyed or once its duration ends, dealing\nAoE Cryo DMG\n.\n"You saw me, you say? You must be mistaken. I was working overtime then."',
             data: {
@@ -443,7 +443,7 @@ const Ganyu: Character = {
         },
         {
             name: 'Celestial Shower',
-            image: 'https://api.ambr.top/assets/UI/Skill_E_Ganyu_01.png',
+            image: '/images/characters/Skill_E_Ganyu_01.png',
             description:
                 'Coalesces atmospheric frost and snow to summon a Sacred Cryo Pearl that exorcises evil.\nDuring its ability duration, the Sacred Cryo Pearl will continuously rain down shards of ice, striking opponents within an AoE and dealing\nCryo DMG\n.\nGanyu can bring down sweet rains as a matter of course. But against demons and heretics, they become bitter, freezing snow.',
             data: {
@@ -521,19 +521,19 @@ const Ganyu: Character = {
     passiveSkills: [
         {
             name: 'Preserved for the Hunt',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_Forge_Bow.png',
+            image: '/images/characters/UI_Talent_Forge_Bow.png',
             description:
                 'Refunds 15% of the ore used when crafting Bow-type weapons.',
         },
         {
             name: 'Undivided Heart',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Ganyu_05.png',
+            image: '/images/characters/UI_Talent_S_Ganyu_05.png',
             description:
                 'After firing a Frostflake Arrow, the CRIT Rate of subsequent Frostflake Arrows and their resulting bloom effects is increased by 20% for 5s.',
         },
         {
             name: 'Harmony Between Heaven and Earth',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Ganyu_06.png',
+            image: '/images/characters/UI_Talent_S_Ganyu_06.png',
             description:
                 'Celestial Shower\ngrants a 20%\nCryo DMG Bonus\nto active party members in the AoE.',
         },
@@ -541,41 +541,41 @@ const Ganyu: Character = {
     constellations: [
         {
             name: 'Dew-Drinker',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Ganyu_01.png',
+            image: '/images/characters/UI_Talent_S_Ganyu_01.png',
             description:
                 "Charge Level 2 Frostflake Arrows or Frostflake Arrow Blooms decrease opponents'\nCryo RES\nby 15% for 6s upon hit.\nA hit also regenerates 2 Energy for Ganyu. This effect can only occur once per Charge Level 2 Frostflake Arrow, regardless if Frostflake Arrow itself or its Bloom hits the target.",
             level: 1,
         },
         {
             name: 'The Auspicious',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Ganyu_02.png',
+            image: '/images/characters/UI_Talent_S_Ganyu_02.png',
             description: 'Trail of the Qilin\ngains 1 additional charge.',
             level: 2,
         },
         {
             name: 'Cloud-Strider',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Ganyu_01.png',
+            image: '/images/characters/UI_Talent_U_Ganyu_01.png',
             description:
                 'Increases the Level of\nCelestial Shower\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: 'Westward Sojourn',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Ganyu_03.png',
+            image: '/images/characters/UI_Talent_S_Ganyu_03.png',
             description:
                 'Opponents standing within the AoE of\nCelestial Shower\ntake increased DMG. This effect strengthens over time.\nIncreased DMG taken begins at 5% and increases by 5% every 3s, up to a maximum of 25%.\nThe effect lingers for 3s after the opponent leaves the AoE.',
             level: 4,
         },
         {
             name: 'The Merciful',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Ganyu_02.png',
+            image: '/images/characters/UI_Talent_U_Ganyu_02.png',
             description:
                 'Increases the Level of\nTrail of the Qilin\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: 'The Clement',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Ganyu_04.png',
+            image: '/images/characters/UI_Talent_S_Ganyu_04.png',
             description:
                 'Using\nTrail of the Qilin\ncauses the next Frostflake Arrow shot within 30s to not require charging.',
             level: 6,

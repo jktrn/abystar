@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const BlackcliffLongsword: Weapon = {
     name: 'Blackcliff Longsword',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Blackrock.png',
+    image: '/images/weapons/UI_EquipIcon_Sword_Blackrock.png',
     type: 'Sword',
     rarity: 4,
     description:

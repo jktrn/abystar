@@ -26,7 +26,7 @@ const weaponBonuses: Bonus[] = [
 
 const BalladOfTheFjords: Weapon = {
     name: 'Ballad of the Fjords',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Shanty.png',
+    image: '/images/weapons/UI_EquipIcon_Pole_Shanty.png',
     type: 'Polearm',
     rarity: 4,
     description:

@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const SwordOfNarzissenkreuz: Weapon = {
     name: 'Sword of Narzissenkreuz',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Purewill.png',
+    image: '/images/weapons/UI_EquipIcon_Sword_Purewill.png',
     type: 'Sword',
     rarity: 4,
     description:

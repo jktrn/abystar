@@ -33,7 +33,7 @@ const weaponBonuses: Bonus[] = [
 
 const AThousandFloatingDreams: Weapon = {
     name: 'A Thousand Floating Dreams',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Ayus.png',
+    image: '/images/weapons/UI_EquipIcon_Catalyst_Ayus.png',
     type: 'Catalyst',
     rarity: 5,
     description:

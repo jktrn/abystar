@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const TheAlleyFlash: Weapon = {
     name: 'The Alley Flash',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Outlaw.png',
+    image: '/images/weapons/UI_EquipIcon_Sword_Outlaw.png',
     type: 'Sword',
     rarity: 4,
     description:

@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const RoyalGrimoire: Weapon = {
     name: 'Royal Grimoire',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Theocrat.png',
+    image: '/images/weapons/UI_EquipIcon_Catalyst_Theocrat.png',
     type: 'Catalyst',
     rarity: 4,
     description:

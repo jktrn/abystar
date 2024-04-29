@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const EyeOfPerception: Weapon = {
     name: 'Eye of Perception',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Truelens.png',
+    image: '/images/weapons/UI_EquipIcon_Catalyst_Truelens.png',
     type: 'Catalyst',
     rarity: 4,
     description:

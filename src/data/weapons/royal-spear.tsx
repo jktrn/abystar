@@ -35,7 +35,7 @@ const weaponBonuses: Bonus[] = [
 
 const RoyalSpear: Weapon = {
     name: 'Royal Spear',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Theocrat.png',
+    image: '/images/weapons/UI_EquipIcon_Pole_Theocrat.png',
     type: 'Polearm',
     rarity: 4,
     description:

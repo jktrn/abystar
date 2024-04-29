@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const SongOfBrokenPines: Weapon = {
     name: 'Song of Broken Pines',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Widsith.png',
+    image: '/images/weapons/UI_EquipIcon_Claymore_Widsith.png',
     type: 'Claymore',
     rarity: 5,
     description:

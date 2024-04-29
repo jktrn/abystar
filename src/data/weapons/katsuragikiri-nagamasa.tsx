@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const KatsuragikiriNagamasa: Weapon = {
     name: 'Katsuragikiri Nagamasa',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Bakufu.png',
+    image: '/images/weapons/UI_EquipIcon_Claymore_Bakufu.png',
     type: 'Weapon',
     rarity: 4,
     description: 'A blade that was once made in Tatarasuna. Heavy and tough.',

@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const KagurasVerity: Weapon = {
     name: "Kagura's Verity",
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Narukami.png',
+    image: '/images/weapons/UI_EquipIcon_Catalyst_Narukami.png',
     type: 'Catalyst',
     rarity: 5,
     description:

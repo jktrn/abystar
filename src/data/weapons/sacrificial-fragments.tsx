@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const SacrificialFragments: Weapon = {
     name: 'Sacrificial Fragments',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Fossil.png',
+    image: '/images/weapons/UI_EquipIcon_Catalyst_Fossil.png',
     type: 'Catalyst',
     rarity: 4,
     description:

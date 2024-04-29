@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const AquilaFavonia: Weapon = {
     name: 'Aquila Favonia',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Falcon.png',
+    image: '/images/weapons/UI_EquipIcon_Sword_Falcon.png',
     type: 'Sword',
     rarity: 5,
     description:

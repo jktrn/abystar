@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const SolarPearl: Weapon = {
     name: 'Solar Pearl',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Resurrection.png',
+    image: '/images/weapons/UI_EquipIcon_Catalyst_Resurrection.png',
     type: 'Catalyst',
     rarity: 4,
     description:

@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const OtherworldlyStory: Weapon = {
     name: 'Otherworldly Story',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Lightnov.png',
+    image: '/images/weapons/UI_EquipIcon_Catalyst_Lightnov.png',
     type: 'Catalyst',
     rarity: 3,
     description:

@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const ToukabouShigure: Weapon = {
     name: 'Toukabou Shigure',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Kasabouzu.png',
+    image: '/images/weapons/UI_EquipIcon_Sword_Kasabouzu.png',
     type: 'Sword',
     rarity: 4,
     description:

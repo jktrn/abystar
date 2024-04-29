@@ -37,7 +37,7 @@ const weaponBonuses: Bonus[] = [
 
 const StaffOfHoma: Weapon = {
     name: 'Staff of Homa',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Homa.png',
+    image: '/images/weapons/UI_EquipIcon_Pole_Homa.png',
     type: 'Polearm',
     rarity: 5,
     description:

@@ -5,7 +5,7 @@ const weaponBonuses: Bonus[] = []
 
 const PocketGrimoire: Weapon = {
     name: 'Pocket Grimoire',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Pocket.png',
+    image: '/images/weapons/UI_EquipIcon_Catalyst_Pocket.png',
     type: 'Catalyst',
     rarity: 2,
     description:

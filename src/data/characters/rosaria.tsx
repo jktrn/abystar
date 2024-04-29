@@ -14,7 +14,7 @@ const constellationBonuses: Bonus[] = [
 
 const Rosaria: Character = {
     name: 'Rosaria',
-    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Rosaria.png',
+    icon: '/images/characters/UI_AvatarIcon_Rosaria.png',
     weapon: 'Polearm',
     vision: 'Cryo',
     rarity: 4,
@@ -138,7 +138,7 @@ const Rosaria: Character = {
     talents: [
         {
             name: 'Normal Attack: Spear of the Church',
-            image: 'https://api.ambr.top/assets/UI/Skill_A_03.png',
+            image: '/images/characters/Skill_A_03.png',
             description:
                 'Normal Attack\nPerforms up to 5 consecutive spear strikes.\nCharged Attack\nConsumes a certain amount of Stamina to lunge forward, dealing damage to opponents along the way.\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.',
             data: {
@@ -316,7 +316,7 @@ const Rosaria: Character = {
         },
         {
             name: 'Ravaging Confession',
-            image: 'https://api.ambr.top/assets/UI/Skill_S_Rosaria_01.png',
+            image: '/images/characters/Skill_S_Rosaria_01.png',
             description:
                 'Rosaria swiftly shifts her position to appear behind her opponent, then stabs and slashes them with her polearm, dealing\nCryo DMG\n.\nThis ability cannot be used to travel behind opponents of a larger build.\nThose who confess to Sister Rosaria will be granted no absolution. All sinners shall be met with the piercing cold of punishment proportionate to the weight of their sins.',
             data: {
@@ -358,7 +358,7 @@ const Rosaria: Character = {
         },
         {
             name: 'Rites of Termination',
-            image: 'https://api.ambr.top/assets/UI/Skill_E_Rosaria_01.png',
+            image: '/images/characters/Skill_E_Rosaria_01.png',
             description:
                 "Rosaria's unique take on this prayer ritual: First, she swings her weapon to slash surrounding opponents; then, she summons a frigid Ice Lance that strikes the ground. Both actions deal\nCryo DMG\n.\nWhile active, the Ice Lance periodically releases a blast of cold air, dealing\nCryo DMG\nto surrounding opponents.\nJudgment is such a tedious ordeal \u2014 much easier to skip that phase and get straight to the last rites. Rosaria was never very devoted to the Anemo God anyway, which makes performing them all too easy.",
             data: {
@@ -453,19 +453,19 @@ const Rosaria: Character = {
     passiveSkills: [
         {
             name: 'Night Walk',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_Rosaria_NightRunner.png',
+            image: '/images/characters/UI_Talent_Rosaria_NightRunner.png',
             description:
                 'At night (18:00 \u2013 06:00), your party members gain the Swift Stride effect: Movement SPD increased by 10%.\nDoes not take effect in Domains, Trounce Domains, or Spiral Abyss. Swift Stride does not stack.',
         },
         {
             name: 'Regina Probationum',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Rosaria_05.png',
+            image: '/images/characters/UI_Talent_S_Rosaria_05.png',
             description:
                 "When Rosaria strikes an opponent from behind using\nRavaging Confession\n, Rosaria's CRIT Rate increases by 12% for 5s.",
         },
         {
             name: 'Shadow Samaritan',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Rosaria_06.png',
+            image: '/images/characters/UI_Talent_S_Rosaria_06.png',
             description:
                 "Casting\nRites of Termination\nincreases CRIT Rate of all nearby party members (except Rosaria herself) by 15% of Rosaria's CRIT Rate for 10s.\nCRIT Rate Bonus gained this way cannot exceed 15%.",
         },
@@ -473,42 +473,42 @@ const Rosaria: Character = {
     constellations: [
         {
             name: 'Unholy Revelation',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Rosaria_01.png',
+            image: '/images/characters/UI_Talent_S_Rosaria_01.png',
             description:
                 'When Rosaria deals a CRIT Hit, her ATK SPD increases by 10% and her Normal Attack DMG increases by 10% for 4s.',
             level: 1,
         },
         {
             name: 'Land Without Promise',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Rosaria_02.png',
+            image: '/images/characters/UI_Talent_S_Rosaria_02.png',
             description:
                 'The duration of the Ice Lance created by\nRites of Termination\nis increased by 4s.',
             level: 2,
         },
         {
             name: 'The Wages of Sin',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Rosaria_01.png',
+            image: '/images/characters/UI_Talent_U_Rosaria_01.png',
             description:
                 'Increases the Level of\nRavaging Confession\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: 'Painful Grace',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Rosaria_03.png',
+            image: '/images/characters/UI_Talent_S_Rosaria_03.png',
             description:
                 "Ravaging Confession\n's CRIT Hits regenerate 5 Energy for Rosaria.\nCan only be triggered once each time Ravaging Confession is cast.",
             level: 4,
         },
         {
             name: 'Last Rites',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Rosaria_02.png',
+            image: '/images/characters/UI_Talent_U_Rosaria_02.png',
             description:
                 'Increases the Level of\nRites of Termination\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: 'Divine Retribution',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Rosaria_04.png',
+            image: '/images/characters/UI_Talent_S_Rosaria_04.png',
             description:
                 "Rites of Termination\n's attack decreases opponents' Physical RES by 20% for 10s.",
             level: 6,

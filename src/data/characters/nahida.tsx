@@ -201,7 +201,7 @@ const characterBonuses: Bonus[] = [
                 (Elemental Skill) (capped at 80% Bonus DMG and 24% CRIT Rate)
             </span>
         ),
-        icon: 'https://api.ambr.top/assets/UI/UI_Talent_S_Nahida_06.png',
+        icon: '/images/characters/UI_Talent_S_Nahida_06.png',
         effect: (attributes) => {
             const bonusDMG = Math.min(
                 0.8,
@@ -240,7 +240,7 @@ const characterBonuses: Bonus[] = [
                 Purification Trigger Interval decreased
             </span>
         ),
-        icon: 'https://api.ambr.top/assets/UI/Skill_E_Nahida_01.png',
+        icon: '/images/characters/Skill_E_Nahida_01.png',
         effect: (attributes, talentLevels, currentStacks, state) => {
             if (!state || !talentLevels || !currentStacks) return { attributes }
 
@@ -297,7 +297,7 @@ const characterBonuses: Bonus[] = [
                 the highest EM
             </span>
         ),
-        icon: 'https://api.ambr.top/assets/UI/UI_Talent_S_Nahida_05.png',
+        icon: '/images/characters/UI_Talent_S_Nahida_05.png',
         effect: (attributes, talentLevels, currentStacks) => {
             if (!currentStacks) return { attributes }
 
@@ -331,7 +331,7 @@ const constellationBonuses: Bonus[] = [
                 Hydro characters respectively.
             </span>
         ),
-        icon: 'https://api.ambr.top/assets/UI/UI_Talent_S_Nahida_01.png',
+        icon: '/images/characters/UI_Talent_S_Nahida_01.png',
         effect: (attributes) => {
             // TODO: Implement
             return { attributes }
@@ -351,7 +351,7 @@ const constellationBonuses: Bonus[] = [
                 by Quicken, Aggravate, or Spread, enemies have DEF decreased by 30%
             </span>
         ),
-        icon: 'https://api.ambr.top/assets/UI/UI_Talent_S_Nahida_02.png',
+        icon: '/images/characters/UI_Talent_S_Nahida_02.png',
         effect: (attributes) => {
             // TODO: Implement
             return { attributes }
@@ -370,7 +370,7 @@ const constellationBonuses: Bonus[] = [
                 Maximum upgrade level is 15.
             </span>
         ),
-        icon: 'https://api.ambr.top/assets/UI/UI_Talent_U_Nahida_01.png',
+        icon: '/images/characters/UI_Talent_U_Nahida_01.png',
         effect: (attributes, talentLevels) => {
             if (!talentLevels) return { attributes }
 
@@ -394,7 +394,7 @@ const constellationBonuses: Bonus[] = [
                 Nahida&apos;s EM will be increased by 100/120/140/160
             </span>
         ),
-        icon: 'https://api.ambr.top/assets/UI/UI_Talent_S_Nahida_03.png',
+        icon: '/images/characters/UI_Talent_S_Nahida_03.png',
         effect: (attributes, talentLevels, currentStacks) => {
             if (!currentStacks) return { attributes }
 
@@ -425,7 +425,7 @@ const constellationBonuses: Bonus[] = [
                 Maximum upgrade level is 15.
             </span>
         ),
-        icon: 'https://api.ambr.top/assets/UI/UI_Talent_U_Nahida_02.png',
+        icon: '/images/characters/UI_Talent_U_Nahida_02.png',
         effect: (attributes, talentLevels) => {
             if (!talentLevels) return { attributes }
 
@@ -458,7 +458,7 @@ const constellationBonuses: Bonus[] = [
                 instances of Tri-Karma Purification: Karmic Oblivion.
             </span>
         ),
-        icon: 'https://api.ambr.top/assets/UI/UI_Talent_S_Nahida_04.png',
+        icon: '/images/characters/UI_Talent_S_Nahida_04.png',
         effect: (attributes) => {
             // Handled already
             return { attributes }
@@ -471,7 +471,7 @@ const constellationBonuses: Bonus[] = [
 
 const Nahida: Character = {
     name: 'Nahida',
-    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Nahida.png',
+    icon: '/images/characters/UI_AvatarIcon_Nahida.png',
     weapon: 'Catalyst',
     vision: 'Dendro',
     rarity: 5,
@@ -595,7 +595,7 @@ const Nahida: Character = {
     talents: [
         {
             name: 'Normal Attack: Akara',
-            image: 'https://api.ambr.top/assets/UI/Skill_A_Catalyst_MD.png',
+            image: '/images/characters/Skill_A_Catalyst_MD.png',
             description:
                 'Normal Attack\nPerforms up to 4 attacks that deal\nDendro DMG\nto opponents in front of her.\nCharged Attack\nConsumes a certain amount of Stamina to deal\nAoE Dendro DMG\nto opponents in front of her after a short casting time.\nPlunging Attack\nCalling upon the might of Dendro, Nahida plunges towards the ground from mid-air, damaging all opponents in her path. Deals\nAoE Dendro DMG\nupon impact with the ground.',
             data: {
@@ -756,7 +756,7 @@ const Nahida: Character = {
         },
         {
             name: 'All Schemes to Know',
-            image: 'https://api.ambr.top/assets/UI/Skill_S_Nahida_01.png',
+            image: '/images/characters/Skill_S_Nahida_01.png',
             description:
                 "Sends forth karmic bonds of wood and tree from her side, dealing\nAoE Dendro DMG\nand marking up to 8 opponents hit with the Seed of Skandha.\nWhen held, this skill will trigger differently.\nHold\nEnters Aiming Mode, which will allow you to select a limited number of opponents within a limited area. During this time, Nahida's resistance to interruption will be increased.\nWhen released, this skill deals\nDendro DMG\nto these opponents and marks them with the Seed of Skandha.\nAiming Mode will last up to 5s and can select a maximum of 8 opponents.\nSeed of Skandha\nOpponents who have been marked by the Seed of Skandha will be linked to one another up till a certain distance.\nAfter you trigger Elemental Reactions on opponents who are affected by the Seeds of Skandha or when they take DMG from Dendro Cores (including Burgeon and Hyperbloom DMG), Nahida will unleash Tri-Karma Purification on the opponents and all connected opponents, dealing\nDendro DMG\nbased on her ATK and Elemental Mastery.\nYou can trigger at most 1 Tri-Karma Purification within a short period of time.\nLo, the god of grass and trees shines her ultimate truth into the void, illuminating the origin and destruction of the three karmas.",
             data: {
@@ -900,7 +900,7 @@ const Nahida: Character = {
         },
         {
             name: 'Illusory Heart',
-            image: 'https://api.ambr.top/assets/UI/Skill_E_Nahida_01.png',
+            image: '/images/characters/Skill_E_Nahida_01.png',
             description:
                 'Manifests the Court of Dreams and expands the Shrine of Maya.\nWhen the Shrine of Maya field is unleashed, the following effects will be separately unleashed based on the Elemental Types present within the party.\n\u00b7\nPyro\n: While Nahida remains within the Shrine of Maya, the DMG dealt by Tri-Karma Purification from "All Schemes to Know" is increased.\n\u00b7\nElectro\n: While Nahida remains within the Shrine of Maya, the interval between each Tri-Karma Purification from "All Schemes to Know" is decreased.\n\u00b7\nHydro\n: The Shrine of Maya\'s duration is increased.\nIf there are at least 2 party members of the aforementioned Elemental Types present when the field is deployed, the aforementioned effects will be increased further.\nEven if Nahida is not on the field, these bonuses will still take effect so long as party members are within the Shrine of Maya.\nPerhaps all that dwell under the bowers of trees are naught but a fleeting upside-down dream in the eyes of the God of Wisdom.',
             data: {
@@ -1063,19 +1063,19 @@ const Nahida: Character = {
     passiveSkills: [
         {
             name: 'On All Things Meditated',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Nahida_07.png',
+            image: '/images/characters/UI_Talent_S_Nahida_07.png',
             description:
                 'Nahida can use\nAll Schemes to Know\nto interact with some harvestable items within a fixed AoE.\nThis skill may even have some other effects...',
         },
         {
             name: 'Compassion Illuminated',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Nahida_05.png',
+            image: '/images/characters/UI_Talent_S_Nahida_05.png',
             description:
                 'When unleashing\nIllusory Heart\n, the Shrine of Maya will gain the following effects:\nThe Elemental Mastery of the active character within the field will be increased by 25% of the Elemental Mastery of the party member with the highest Elemental Mastery.\nYou can gain a maximum of 250 Elemental Mastery in this manner.',
         },
         {
             name: 'Awakening Elucidated',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Nahida_06.png',
+            image: '/images/characters/UI_Talent_S_Nahida_06.png',
             description:
                 "Each point of Nahida's Elemental Mastery beyond 200 will grant 0.1% Bonus DMG and 0.03% CRIT Rate to Tri-Karma Purification from\nAll Schemes to Know\n.\nA maximum of 80% Bonus DMG and 24% CRIT Rate can be granted to Tri-Karma Purification in this manner.",
         },
@@ -1083,42 +1083,42 @@ const Nahida: Character = {
     constellations: [
         {
             name: 'The Seed of Stored Knowledge',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Nahida_01.png',
+            image: '/images/characters/UI_Talent_S_Nahida_01.png',
             description:
                 'When the\nShrine of Maya\nis unleashed and the Elemental Types of the party members are being tabulated, the count will add 1 to the number of Pyro, Electro, and Hydro characters respectively.',
             level: 1,
         },
         {
             name: 'The Root of All Fullness',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Nahida_02.png',
+            image: '/images/characters/UI_Talent_S_Nahida_02.png',
             description:
                 'Opponents that are marked by\nSeeds of Skandha\napplied by Nahida herself will be affected by the following effects:\n\u00b7Burning, Bloom, Hyperbloom, and Burgeon Reaction DMG they receive can score CRIT Hits. CRIT Rate and CRIT DMG are fixed at 20% and 100% respectively.\n\u00b7Within 8s of being affected by Quicken, Aggravate, Spread, DEF is decreased by 30%.',
             level: 2,
         },
         {
             name: 'The Shoot of Conscious Attainment',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Nahida_01.png',
+            image: '/images/characters/UI_Talent_U_Nahida_01.png',
             description:
                 'Increases the Level of\nAll Schemes to Know\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: 'The Stem of Manifest Inference',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Nahida_03.png',
+            image: '/images/characters/UI_Talent_S_Nahida_03.png',
             description:
                 "When 1/2/3/4 (or more) nearby opponents are affected by\nAll Schemes to Know\n's Seeds of Skandha, Nahida's Elemental Mastery will be increased by 100/120/140/160.",
             level: 4,
         },
         {
             name: 'The Leaves of Enlightening Speech',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Nahida_02.png',
+            image: '/images/characters/UI_Talent_U_Nahida_02.png',
             description:
                 'Increases the Level of\nIllusory Heart\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: "The Fruit of Reason's Culmination",
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Nahida_04.png',
+            image: '/images/characters/UI_Talent_S_Nahida_04.png',
             description:
                 "When Nahida hits an opponent affected by\nAll Schemes to Know\n's Seeds of Skandha with Normal or Charged Attacks after unleashing\nIllusory Heart\n, she will use Tri-Karma Purification: Karmic Oblivion on this opponent and all connected opponents, dealing\nDendro DMG\nbased on 200% of Nahida's ATK and 400% of her Elemental Mastery.\nDMG dealt by Tri-Karma Purification: Karmic Oblivion is considered Elemental Skill DMG and can be triggered once every 0.2s.\nThis effect can last up to 10s and will be removed after Nahida has unleashed 6 instances of Tri-Karma Purification: Karmic Oblivion.",
             level: 6,

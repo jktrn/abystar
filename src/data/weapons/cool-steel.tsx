@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const CoolSteel: Weapon = {
     name: 'Cool Steel',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Steel.png',
+    image: '/images/weapons/UI_EquipIcon_Sword_Steel.png',
     type: 'Sword',
     rarity: 3,
     description:

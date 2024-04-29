@@ -14,7 +14,7 @@ const constellationBonuses: Bonus[] = [
 
 const Razor: Character = {
     name: 'Razor',
-    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Razor.png',
+    icon: '/images/characters/UI_AvatarIcon_Razor.png',
     weapon: 'Claymore',
     vision: 'Electro',
     rarity: 4,
@@ -138,7 +138,7 @@ const Razor: Character = {
     talents: [
         {
             name: 'Normal Attack: Steel Fang',
-            image: 'https://api.ambr.top/assets/UI/Skill_A_04.png',
+            image: '/images/characters/Skill_A_04.png',
             description:
                 'Normal Attack\nPerforms up to 4 consecutive strikes.\nCharged Attack\nDrains Stamina over time to perform continuous spinning attacks against all nearby opponents.\nAt the end of the sequence, performs a more powerful slash.\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.',
             data: {
@@ -333,7 +333,7 @@ const Razor: Character = {
         },
         {
             name: 'Claw and Thunder',
-            image: 'https://api.ambr.top/assets/UI/Skill_S_Razor_01.png',
+            image: '/images/characters/Skill_S_Razor_01.png',
             description:
                 "Hunts his prey using the techniques taught to him by his master and his lupical.\nPress\nSwings the Thunder Wolf Claw, dealing\nElectro DMG\nto opponents in front of Razor.\nUpon striking an opponent, Razor will gain an Electro Sigil, which increases his Energy Recharge rate.\nRazor can have up to 3 Electro Sigils simultaneously, and gaining a new Electro Sigil refreshes their duration.\nHold\nGathers Electro energy to unleash a lightning storm over a small AoE, causing massive\nElectro DMG\n, and clears all of Razor's Electro Sigils.\nEach Electro Sigil cleared in this manner will be converted into Energy for Razor.\nIn the moment when lightning strikes, you can sometimes glimpse the look of a predator sizing up his prey deep within Razor's eyes.",
             data: {
@@ -460,7 +460,7 @@ const Razor: Character = {
         },
         {
             name: 'Lightning Fang',
-            image: 'https://api.ambr.top/assets/UI/Skill_E_Razor_01.png',
+            image: '/images/characters/Skill_E_Razor_01.png',
             description:
                 "Summons the Wolf Within, which deals\nElectro DMG\nto all nearby opponents. This clears all of Razor's Electro Sigils, which will be converted into Elemental Energy for him.\nThe Wolf Within will fight alongside Razor for the skill's duration.\nThe Wolf Within\n\u00b7Strikes alongside Razor's normal attacks, dealing\nElectro DMG\n.\n\u00b7Raises Razor's ATK SPD and\nElectro RES\n.\n\u00b7Causes Razor to be immune to DMG inflicted by the\nElectro-Charged\nstatus.\n\u00b7Disables Razor's Charged Attacks.\n\u00b7Increases Razor's resistance to interruption.\nThese effects end when Razor leaves the battlefield.\nWhen Razor leaves the field, a maximum of 10 Energy will be returned to him based off the duration remaining on this skill.\nThe wolf has awoken. The hunt is on.",
             data: {
@@ -589,19 +589,19 @@ const Razor: Character = {
     passiveSkills: [
         {
             name: 'Wolvensprint',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_Explosion_Sprint.png',
+            image: '/images/characters/UI_Talent_Explosion_Sprint.png',
             description:
                 'Decreases sprinting Stamina consumption for your own party members by 20%.\nNot stackable with Passive Talents that provide the exact same effects.',
         },
         {
             name: 'Awakening',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Razor_05.png',
+            image: '/images/characters/UI_Talent_S_Razor_05.png',
             description:
                 "Decreases\nClaw and Thunder\n's CD by 18%.\nUsing\nLightning Fang\nresets the CD of\nClaw and Thunder\n.",
         },
         {
             name: 'Hunger',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Razor_06.png',
+            image: '/images/characters/UI_Talent_S_Razor_06.png',
             description:
                 "When Razor's Energy is below 50%, increases Energy Recharge by 30%.",
         },
@@ -609,42 +609,42 @@ const Razor: Character = {
     constellations: [
         {
             name: "Wolf's Instinct",
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Razor_01.png',
+            image: '/images/characters/UI_Talent_S_Razor_01.png',
             description:
                 "Picking up an Elemental Orb or Particle increases Razor's DMG by 10% for 8s.",
             level: 1,
         },
         {
             name: 'Suppression',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Razor_02.png',
+            image: '/images/characters/UI_Talent_S_Razor_02.png',
             description:
                 'Increases CRIT Rate against opponents with less than 30% HP by 10%.',
             level: 2,
         },
         {
             name: 'Soul Companion',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Razor_02.png',
+            image: '/images/characters/UI_Talent_U_Razor_02.png',
             description:
                 'Increases the Level of\nLightning Fang\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: 'Bite',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Razor_03.png',
+            image: '/images/characters/UI_Talent_S_Razor_03.png',
             description:
                 'When casting\nClaw and Thunder\n(Press), opponents hit will have their DEF decreased by 15% for 7s.',
             level: 4,
         },
         {
             name: 'Sharpened Claws',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Razor_01.png',
+            image: '/images/characters/UI_Talent_U_Razor_01.png',
             description:
                 'Increases the Level of\nClaw and Thunder\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: 'Lupus Fulguris',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Razor_04.png',
+            image: '/images/characters/UI_Talent_S_Razor_04.png',
             description:
                 "Every 10s, Razor's sword charges up, causing the next Normal Attack to release lightning that deals 100% of Razor's ATK as\nElectro DMG\n.\nWhen Razor is not using\nLightning Fang\n, a lightning strike on an opponent will grant Razor an Electro Sigil for\nClaw and Thunder\n.",
             level: 6,

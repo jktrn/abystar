@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const TidalShadow: Weapon = {
     name: 'Tidal Shadow',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Vorpal.png',
+    image: '/images/weapons/UI_EquipIcon_Claymore_Vorpal.png',
     type: 'Weapon',
     rarity: 4,
     description:

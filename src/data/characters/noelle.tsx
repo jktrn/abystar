@@ -14,7 +14,7 @@ const constellationBonuses: Bonus[] = [
 
 const Noelle: Character = {
     name: 'Noelle',
-    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Noel.png',
+    icon: '/images/characters/UI_AvatarIcon_Noel.png',
     weapon: 'Claymore',
     vision: 'Geo',
     rarity: 4,
@@ -138,7 +138,7 @@ const Noelle: Character = {
     talents: [
         {
             name: 'Normal Attack: Favonius Bladework - Maid',
-            image: 'https://api.ambr.top/assets/UI/Skill_A_04.png',
+            image: '/images/characters/Skill_A_04.png',
             description:
                 'Normal Attack\nPerforms up to 4 consecutive strikes.\nCharged Attack\nDrains Stamina over time to perform continuous spinning attacks against all nearby opponents.\nAt the end of the sequence, performs a more powerful slash.\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.',
             data: {
@@ -333,7 +333,7 @@ const Noelle: Character = {
         },
         {
             name: 'Breastplate',
-            image: 'https://api.ambr.top/assets/UI/Skill_S_Noel_01.png',
+            image: '/images/characters/Skill_S_Noel_01.png',
             description:
                 "Summons protective stone armor, dealing\nGeo DMG\nto surrounding opponents and creating a shield. The shield's DMG Absorption scales based on Noelle's DEF.\nThe shield has the following properties:\n\u00b7When Noelle's Normal and Charged Attacks hit a target, they have a certain chance to regenerate HP for all characters.\n\u00b7Possesses 150% DMG Absorption efficiency against all Elemental and Physical DMG.\nThe amount of HP healed when regeneration is triggered scales based on Noelle's DEF.\nNoelle is both a dutiful maid and a valiant knight.",
             data: {
@@ -443,7 +443,7 @@ const Noelle: Character = {
         },
         {
             name: 'Sweeping Time',
-            image: 'https://api.ambr.top/assets/UI/Skill_E_Noel_01.png',
+            image: '/images/characters/Skill_E_Noel_01.png',
             description:
                 "Gathering the strength of stone around her weapon, Noelle strikes the opponents surrounding her within a large AoE, dealing\nGeo DMG\n.\nAfterwards, Noelle gains the following effects:\n\u00b7Larger attack AoE.\n\u00b7Converts attack DMG to\nGeo DMG\nthat cannot be overridden by any other elemental infusion.\n\u00b7Increased ATK that scales based on her DEF.\nSometimes, it's not just dust that needs sweeping...",
             data: {
@@ -555,19 +555,19 @@ const Noelle: Character = {
     passiveSkills: [
         {
             name: "Maid's Knighthood",
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_Cook_Defense.png',
+            image: '/images/characters/UI_Talent_Cook_Defense.png',
             description:
                 'When a Perfect Cooking is achieved on a DEF-boosting dish, Noelle has a 12% chance to obtain double the product.',
         },
         {
             name: 'Devotion',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Noel_05.png',
+            image: '/images/characters/UI_Talent_S_Noel_05.png',
             description:
                 "When Noelle is in the party but not on the field, this ability triggers automatically when your active character's HP falls below 30%:\nCreates a shield for your active character that lasts for 20s and absorbs DMG equal to 400% of Noelle's DEF.\nThe shield has a 150% DMG Absorption effectiveness against all Elemental and Physical DMG.\nThis effect can only occur once every 60s.",
         },
         {
             name: 'Nice and Clean',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Noel_06.png',
+            image: '/images/characters/UI_Talent_S_Noel_06.png',
             description:
                 'Noelle will decrease the CD of\nBreastplate\nby 1s for every 4 Normal or Charged Attack hits she scores on opponents.\nOne hit may be counted every 0.1s.',
         },
@@ -575,42 +575,42 @@ const Noelle: Character = {
     constellations: [
         {
             name: 'I Got Your Back',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Noel_01.png',
+            image: '/images/characters/UI_Talent_S_Noel_01.png',
             description:
                 "While\nSweeping Time\nand\nBreastplate\nare both in effect, the chance of Breastplate's healing effects activating is increased to 100%.",
             level: 1,
         },
         {
             name: 'Combat Maid',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Noel_02.png',
+            image: '/images/characters/UI_Talent_S_Noel_02.png',
             description:
                 "Decreases the Stamina Consumption of Noelle's Charged Attacks by 20% and increases her Charged Attack DMG by 15%.",
             level: 2,
         },
         {
             name: 'Invulnerable Maid',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Noel_01.png',
+            image: '/images/characters/UI_Talent_U_Noel_01.png',
             description:
                 'Increases the Level of\nBreastplate\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: 'To Be Cleaned',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Noel_03.png',
+            image: '/images/characters/UI_Talent_S_Noel_03.png',
             description:
                 "When\nBreastplate\n's duration expires or it is destroyed by DMG, it will deal 400% of Noelle's ATK as\nGeo DMG\nto surrounding opponents.",
             level: 4,
         },
         {
             name: 'Favonius Sweeper Master',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Noel_02.png',
+            image: '/images/characters/UI_Talent_U_Noel_02.png',
             description:
                 'Increases the Level of\nSweeping Time\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: 'Must Be Spotless',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Noel_04.png',
+            image: '/images/characters/UI_Talent_S_Noel_04.png',
             description:
                 "Sweeping Time\nincreases Noelle's ATK by an additional 50% of her DEF.\nAdditionally, every opponent defeated during the skill's duration adds 1s to the duration, up to 10s.",
             level: 6,

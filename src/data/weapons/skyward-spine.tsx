@@ -26,7 +26,7 @@ const weaponBonuses: Bonus[] = [
 
 const SkywardSpine: Weapon = {
     name: 'Skyward Spine',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Dvalin.png',
+    image: '/images/weapons/UI_EquipIcon_Pole_Dvalin.png',
     type: 'Polearm',
     rarity: 5,
     description:

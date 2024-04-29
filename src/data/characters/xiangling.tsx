@@ -14,7 +14,7 @@ const constellationBonuses: Bonus[] = [
 
 const Xiangling: Character = {
     name: 'Xiangling',
-    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Xiangling.png',
+    icon: '/images/characters/UI_AvatarIcon_Xiangling.png',
     weapon: 'Polearm',
     vision: 'Pyro',
     rarity: 4,
@@ -138,7 +138,7 @@ const Xiangling: Character = {
     talents: [
         {
             name: 'Normal Attack: Dough-Fu',
-            image: 'https://api.ambr.top/assets/UI/Skill_A_03.png',
+            image: '/images/characters/Skill_A_03.png',
             description:
                 'Normal Attack\nPerforms up to five consecutive spear strikes.\nCharged Attack\nConsumes a certain amount of Stamina to lunge forward, dealing damage to opponents along the way.\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.',
             data: {
@@ -316,7 +316,7 @@ const Xiangling: Character = {
         },
         {
             name: 'Guoba Attack',
-            image: 'https://api.ambr.top/assets/UI/Skill_S_Xiangling_01.png',
+            image: '/images/characters/Skill_S_Xiangling_01.png',
             description:
                 "Summons Guoba, who will continuously breathe fire at opponents, dealing\nAoE Pyro DMG\n.\nGuoba loves to eat spicy food. Problem is, his stomach can't handle something this spicy.",
             data: {
@@ -358,7 +358,7 @@ const Xiangling: Character = {
         },
         {
             name: 'Pyronado',
-            image: 'https://api.ambr.top/assets/UI/Skill_E_Xiangling_01.png',
+            image: '/images/characters/Skill_E_Xiangling_01.png',
             description:
                 "Displaying her mastery over both fire and polearms, Xiangling sends a Pyronado whirling around her.\nThe Pyronado will move with your character for the ability's duration, dealing\nPyro DMG\nto all opponents in its path.\nThere will never be enough heat. Never.",
             data: {
@@ -487,18 +487,18 @@ const Xiangling: Character = {
     passiveSkills: [
         {
             name: 'Chef de Cuisine',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_Cook_Attack.png',
+            image: '/images/characters/UI_Talent_Cook_Attack.png',
             description:
                 'When Xiangling cooks an ATK-boosting dish perfectly, she has a 12% chance to receive double the product.',
         },
         {
             name: 'Crossfire',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Xiangling_05.png',
+            image: '/images/characters/UI_Talent_S_Xiangling_05.png',
             description: 'Increases the flame range of Guoba by 20%.',
         },
         {
             name: "Beware, It's Super Hot!",
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Xiangling_06.png',
+            image: '/images/characters/UI_Talent_S_Xiangling_06.png',
             description:
                 "When\nGuoba Attack\n's effect ends, Guoba leaves a chili pepper on the spot where it disappeared. Picking up a chili pepper increases ATK by 10% for 10s.",
         },
@@ -506,41 +506,41 @@ const Xiangling: Character = {
     constellations: [
         {
             name: 'Crispy Outside, Tender Inside',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Xiangling_01.png',
+            image: '/images/characters/UI_Talent_S_Xiangling_01.png',
             description:
                 "Opponents hit by Guoba's attacks have their\nPyro RES\nreduced by 15% for 6s.",
             level: 1,
         },
         {
             name: 'Oil Meets Fire',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Xiangling_02.png',
+            image: '/images/characters/UI_Talent_S_Xiangling_02.png',
             description:
                 "The last attack in a Normal Attack sequence applies the Implode status onto the opponent for 2s. An explosion will occur once this duration ends, dealing 75% of Xiangling's ATK as\nAoE Pyro DMG\n.",
             level: 2,
         },
         {
             name: 'Deepfry',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Xiangling_02.png',
+            image: '/images/characters/UI_Talent_U_Xiangling_02.png',
             description:
                 'Increases the Level of\nPyronado\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: 'Slowbake',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Xiangling_03.png',
+            image: '/images/characters/UI_Talent_S_Xiangling_03.png',
             description: "Pyronado\n's duration is increased by 40%.",
             level: 4,
         },
         {
             name: 'Guoba Mad',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Xiangling_01.png',
+            image: '/images/characters/UI_Talent_U_Xiangling_01.png',
             description:
                 'Increases the Level of\nGuoba Attack\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: 'Condensed Pyronado',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Xiangling_04.png',
+            image: '/images/characters/UI_Talent_S_Xiangling_04.png',
             description:
                 'For the duration of\nPyronado\n, all party members receive a 15%\nPyro DMG Bonus\n.',
             level: 6,

@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const Frostbearer: Weapon = {
     name: 'Frostbearer',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Everfrost.png',
+    image: '/images/weapons/UI_EquipIcon_Catalyst_Everfrost.png',
     type: 'Weapon',
     rarity: 4,
     description:

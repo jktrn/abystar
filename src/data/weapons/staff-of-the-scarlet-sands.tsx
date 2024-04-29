@@ -38,7 +38,7 @@ const weaponBonuses: Bonus[] = [
 
 const StaffOfTheScarletSands: Weapon = {
     name: 'Staff of the Scarlet Sands',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Deshret.png',
+    image: '/images/weapons/UI_EquipIcon_Pole_Deshret.png',
     type: 'Polearm',
     rarity: 5,
     description:

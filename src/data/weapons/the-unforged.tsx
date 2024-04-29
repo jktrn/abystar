@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const TheUnforged: Weapon = {
     name: 'The Unforged',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Kunwu.png',
+    image: '/images/weapons/UI_EquipIcon_Claymore_Kunwu.png',
     type: 'Claymore',
     rarity: 5,
     description:

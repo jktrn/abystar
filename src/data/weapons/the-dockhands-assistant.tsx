@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const TheDockhandsAssistant: Weapon = {
     name: "The Dockhand's Assistant",
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Mechanic.png',
+    image: '/images/weapons/UI_EquipIcon_Sword_Mechanic.png',
     type: 'Sword',
     rarity: 4,
     description:

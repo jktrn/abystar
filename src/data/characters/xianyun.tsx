@@ -14,7 +14,7 @@ const constellationBonuses: Bonus[] = [
 
 const Xianyun: Character = {
     name: 'Xianyun',
-    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Liuyun.png',
+    icon: '/images/characters/UI_AvatarIcon_Liuyun.png',
     weapon: 'Catalyst',
     vision: 'Anemo',
     rarity: 5,
@@ -138,7 +138,7 @@ const Xianyun: Character = {
     talents: [
         {
             name: 'Normal Attack: Word of Wind and Flower',
-            image: 'https://api.ambr.top/assets/UI/Skill_A_Catalyst_MD.png',
+            image: '/images/characters/Skill_A_Catalyst_MD.png',
             description:
                 'Normal Attack\nSummons swirling winds to perform up to 4 attacks, dealing\nAnemo DMG\n.\nCharged Attack\nConsumes a certain amount of Stamina and launches a Breeze Bolt in a straight line that deals\nAnemo DMG\nto opponents along its path.\nPlunging Attack\nGathers the power of Anemo and plunges towards the ground from mid-air, damaging all opponents in her path. Deals\nAoE Anemo DMG\nupon impact with the ground.',
             data: {
@@ -299,7 +299,7 @@ const Xianyun: Character = {
         },
         {
             name: 'White Clouds at Dawn',
-            image: 'https://api.ambr.top/assets/UI/Skill_S_Liuyun_01.png',
+            image: '/images/characters/Skill_S_Liuyun_01.png',
             description:
                 "Xianyun enters the Cloud Transmogrification state, in which she will not take Fall DMG, and uses Skyladder once.\nIn this state, her Plunging Attack will be converted into Driftcloud Wave instead, which deals\nAoE Anemo DMG\nand ends the Cloud Transmogrification state. This DMG is considered Plunging Attack DMG.\nEach use of Skyladder while in this state increases the DMG and AoE of the next Driftcloud Wave used.\nSkyladder\nCan be used while in mid-air. Xianyun leaps forward, dealing\nAnemo DMG\nto targets along her path.\nDuring each Cloud Transmogrification state Xianyun enters, Skyladder may be used up to 3 times and only 1 instance of Skyladder DMG can be dealt to any one opponent.\nIf Skyladder is not used again in a short period, the Cloud Transmogrification state will be canceled.\nIf Xianyun does not use Driftcloud Wave while in this state, the next CD of White Clouds at Dawn will be decreased by 3s.\nDo not shake Cloud Retainer's hand too tightly; cranes are quite adept at gripping.",
             data: {
@@ -358,7 +358,7 @@ const Xianyun: Character = {
         },
         {
             name: 'Stars Gather at Dusk',
-            image: 'https://api.ambr.top/assets/UI/Skill_E_Liuyun_01.png',
+            image: '/images/characters/Skill_E_Liuyun_01.png',
             description:
                 'Brings forth a sacred breeze that deals\nAoE Anemo DMG\nand heals all nearby characters based on Xianyun\'s ATK. It will also summon the "Starwicker" mechanism.\nStarwicker\n\u00b7Continuously follows the active character and periodically heals all nearby party members based on Xianyun\'s ATK.\n\u00b7Starts with 8 stacks of Adeptal Assistance. While Adeptal Assistance is active, nearby active characters in the party will have their jump height increased.\n\u00b7When the active character completes a Plunging Attack, Starwicker will consume 1 stack of Adeptal Assistance and deal\nAoE Anemo DMG\n.\nOnly 1 Starwicker can exist simultaneously.\nThis is the newest invention in the "Lunastar Artifices" series, of which previous creations include the Supreme Cuisine Machine, the Snowdrift Mechanism, the Supreme Housekeeping Machine, the Floating Toting Device, and the Bloom Pruner. This series was intended for young humans Cloud Retainer held in great esteem, and so was not designed with a certain half-adeptus in mind. However, when offered Starwicker, a certain female disciple of hers had these emotionless words to say: "No thank you."\nCloud Retainer thus had no choice but to keep it herself.',
             data: {
@@ -487,19 +487,19 @@ const Xianyun: Character = {
     passiveSkills: [
         {
             name: 'Crane Form',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Liuyun_07.png',
+            image: '/images/characters/UI_Talent_S_Liuyun_07.png',
             description:
                 'Increases gliding SPD for your own party members by 15%.\nNot stackable with Passive Talents that provide the exact same effects.',
         },
         {
             name: 'Galefeather Pursuit',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Liuyun_05.png',
+            image: '/images/characters/UI_Talent_S_Liuyun_05.png',
             description:
                 "Each opponent hit by Driftcloud Waves from\nWhite Clouds at Dawn\nwill grant all nearby party members 1 stack of Storm Pinion for 20s. Max 4 stacks. These will cause the characters' Plunging Attack CRIT Rate to increase by 4%/6%/8%/10% respectively.\nEach Storm Pinion created by hitting an opponent has an independent duration.",
         },
         {
             name: 'Consider, the Adeptus in Her Realm',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Liuyun_06.png',
+            image: '/images/characters/UI_Talent_S_Liuyun_06.png',
             description:
                 "When the Starwicker created by\nStars Gather at Dusk\nhas Adeptal Assistance stacks, nearby active characters' Plunging Attack shockwave DMG will be increased by 200% of Xianyun's ATK. The maximum DMG increase that can be achieved this way is 9,000.\nEach Plunging Attack shockwave DMG instance can only apply this increased DMG effect to a single opponent. Each character can trigger this effect once every 0.4s.",
         },
@@ -507,41 +507,41 @@ const Xianyun: Character = {
     constellations: [
         {
             name: 'Purifying Wind',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Liuyun_01.png',
+            image: '/images/characters/UI_Talent_S_Liuyun_01.png',
             description: 'White Clouds at Dawn\ngains 1 additional charge.',
             level: 1,
         },
         {
             name: 'Aloof From the World',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Liuyun_02.png',
+            image: '/images/characters/UI_Talent_S_Liuyun_02.png',
             description:
                 'After using a Skyladder from\nWhite Clouds at Dawn\n, Xianyun\'s ATK will be increased by 20% for 15s.\nAdditionally, the effects of the Passive Talent "Consider, the Adeptus in Her Realm" will be enhanced: When the Starwicker created by\nStars Gather at Dusk\nhas Adeptal Assistance stacks, nearby active characters\' Plunging Attack shockwave DMG will be increased by 400% of Xianyun\'s ATK. The maximum DMG increase that can be achieved this way is 18,000.\nEach Plunging Attack shockwave DMG instance can only apply this increased DMG effect to a single opponent. Each character can trigger this effect once every 0.4s.\nYou must first unlock the Passive Talent "Consider, the Adeptus in Her Realm."',
             level: 2,
         },
         {
             name: 'Creations of Star and Moon',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Liuyun_02.png',
+            image: '/images/characters/UI_Talent_U_Liuyun_02.png',
             description:
                 'Increases the Level of\nStars Gather at Dusk\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: 'Mystery Millet Gourmet',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Liuyun_03.png',
+            image: '/images/characters/UI_Talent_S_Liuyun_03.png',
             description:
                 "After using Skyladder 1/2/3 times during one\nWhite Clouds at Dawn\nCloud Transmogrification state, when a Driftcloud Wave unleashed during that instance hits an opponent, it will heal all nearby party members for 50%/80%/150% of Xianyun's ATK. This effect can be triggered once every 5s.",
             level: 4,
         },
         {
             name: 'Astride Rose-Colored Clouds',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Liuyun_01.png',
+            image: '/images/characters/UI_Talent_U_Liuyun_01.png',
             description:
                 'Increases the Level of\nWhite Clouds at Dawn\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: 'They Call Her Cloud Retainer',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Liuyun_04.png',
+            image: '/images/characters/UI_Talent_S_Liuyun_04.png',
             description:
                 'After Xianyun uses 1/2/3 Skyladders within one Cloud Transmogrification caused by\nWhite Clouds at Dawn\n, the CRIT DMG of a Driftcloud Wave created in this instance of Cloud Transmogrification will be increased by 15%/35%/70%.\nWithin 16s after Xianyun has used\nStars Gather at Dusk\n, White Clouds at Dawn will not enter CD. This effect will be canceled once she has used White Clouds at Dawn 8 times.',
             level: 6,

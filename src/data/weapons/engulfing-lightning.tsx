@@ -43,7 +43,7 @@ const weaponBonuses: Bonus[] = [
 
 const EngulfingLightning: Weapon = {
     name: 'Engulfing Lightning',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Narukami.png',
+    image: '/images/weapons/UI_EquipIcon_Pole_Narukami.png',
     type: 'Polearm',
     rarity: 5,
     description:

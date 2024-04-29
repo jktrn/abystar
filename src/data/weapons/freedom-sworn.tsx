@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const Freedomsworn: Weapon = {
     name: 'Freedom-Sworn',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Widsith.png',
+    image: '/images/weapons/UI_EquipIcon_Sword_Widsith.png',
     type: 'Sword',
     rarity: 5,
     description:

@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const UrakuMisugiri: Weapon = {
     name: 'Uraku Misugiri',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Needle.png',
+    image: '/images/weapons/UI_EquipIcon_Sword_Needle.png',
     type: 'Sword',
     rarity: 5,
     description:

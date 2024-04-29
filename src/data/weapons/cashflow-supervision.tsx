@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const CashflowSupervision: Weapon = {
     name: 'Cashflow Supervision',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Wheatley.png',
+    image: '/images/weapons/UI_EquipIcon_Catalyst_Wheatley.png',
     type: 'Catalyst',
     rarity: 5,
     description:

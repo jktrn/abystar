@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const MouunsMoon: Weapon = {
     name: "Mouun's Moon",
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Maria.png',
+    image: '/images/weapons/UI_EquipIcon_Bow_Maria.png',
     type: 'Bow',
     rarity: 4,
     description:

@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const MappaMare: Weapon = {
     name: 'Mappa Mare',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Exotic.png',
+    image: '/images/weapons/UI_EquipIcon_Catalyst_Exotic.png',
     type: 'Weapon',
     rarity: 4,
     description:

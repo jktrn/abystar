@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const HuntersPath: Weapon = {
     name: "Hunter's Path",
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Ayus.png',
+    image: '/images/weapons/UI_EquipIcon_Bow_Ayus.png',
     type: 'Bow',
     rarity: 5,
     description:

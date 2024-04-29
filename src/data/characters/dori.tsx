@@ -14,7 +14,7 @@ const constellationBonuses: Bonus[] = [
 
 const Dori: Character = {
     name: 'Dori',
-    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Dori.png',
+    icon: '/images/characters/UI_AvatarIcon_Dori.png',
     weapon: 'Claymore',
     vision: 'Electro',
     rarity: 4,
@@ -137,7 +137,7 @@ const Dori: Character = {
     talents: [
         {
             name: 'Normal Attack: Marvelous Sword-Dance (Modified)',
-            image: 'https://api.ambr.top/assets/UI/Skill_A_04.png',
+            image: '/images/characters/Skill_A_04.png',
             description:
                 'Normal Attack\nPerforms up to 3 consecutive strikes.\nCharged Attack\nDrains Stamina over time to perform continuous spinning attacks against all nearby opponents.\nAt the end of the sequence, performs a more powerful slash.\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.',
             data: {
@@ -315,7 +315,7 @@ const Dori: Character = {
         },
         {
             name: 'Spirit-Warding Lamp: Troubleshooter Cannon',
-            image: 'https://api.ambr.top/assets/UI/Skill_S_Dori_01.png',
+            image: '/images/characters/Skill_S_Dori_01.png',
             description:
                 'Directs a Spirit-Warding Lamp to fire off a Troubleshooter Shot at opponents, dealing\nElectro DMG\n.\nAfter the Troubleshooter Shot hits, it will create 2 After-Sales Service Rounds that will automatically track nearby opponents and deal\nElectro DMG\n.\nIt is said that Dori can fix any problem for you... for the right price.',
             data: {
@@ -374,7 +374,7 @@ const Dori: Character = {
         },
         {
             name: "Alcazarzaray's Exactitude",
-            image: 'https://api.ambr.top/assets/UI/Skill_E_Dori_01.png',
+            image: '/images/characters/Skill_E_Dori_01.png',
             description:
                 "Summons forth the Jinni within the lamp to give the client various kinds of aid.\nJinni\nConnects to a nearby character. The connected character will:\n\u00b7 Continuously restore HP based on Dori's Max HP.\n\u00b7 Continuously regenerate Energy.\n\u00b7 Be affected by\nElectro\n.\nWhen the connector between the Jinni and the character touches opponents, it will deal one instance of\nElectro DMG\nto them every 0.4s.\nOnly one Jinni can exist at one time.\n\"Hmm? You'll pick this lamp, will you? Oh my, you've got good taste! Unfortunately, there's no price on this treasure \u2014 comparable, I'd say, to how you will not sell that mascot by your side for any price in the world.\"",
             data: {
@@ -486,19 +486,19 @@ const Dori: Character = {
     passiveSkills: [
         {
             name: 'Unexpected Order',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Dori_07.png',
+            image: '/images/characters/UI_Talent_S_Dori_07.png',
             description:
                 'Has a 25% chance to recover some of the materials used when crafting Character and Weapon Materials.',
         },
         {
             name: 'An Eye for Gold',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Dori_05.png',
+            image: '/images/characters/UI_Talent_S_Dori_05.png',
             description:
                 'After a character connected to the\nJinni\ntriggers an Electro-Charged, Superconduct, Overloaded, Quicken, Aggravate, Hyperbloom, or an Electro Swirl or Crystallize reaction, the CD of\nSpirit-Warding Lamp: Troubleshooter Cannon\nis decreased by 1s.\nThis effect can be triggered once every 3s.',
         },
         {
             name: 'Compound Interest',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Dori_06.png',
+            image: '/images/characters/UI_Talent_S_Dori_06.png',
             description:
                 'When the Troubleshooter Shots or After-Sales Service Rounds from\nSpirit-Warding Lamp: Troubleshooter Cannon\nhit opponents, Dori will restore 5 Elemental Energy for every 100% Energy Recharge possessed.\nPer Spirit-Warding Lamp: Troubleshooter Cannon, only one instance of Energy restoration can be triggered and a maximum of 15 Energy can be restored this way.',
         },
@@ -506,42 +506,42 @@ const Dori: Character = {
     constellations: [
         {
             name: 'Additional Investment',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Dori_01.png',
+            image: '/images/characters/UI_Talent_S_Dori_01.png',
             description:
                 'The number of After-Sales Service Rounds created by\nTroubleshooter Shots\nis increased by 1.',
             level: 1,
         },
         {
             name: 'Special Franchise',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Dori_02.png',
+            image: '/images/characters/UI_Talent_S_Dori_02.png',
             description:
                 "When you are in combat and the\nJinni\nheals the character it is connected to, it will fire a Jinni Toop from that character's position that deals 50% of Dori's ATK DMG.",
             level: 2,
         },
         {
             name: 'Wonders Never Cease',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Dori_02.png',
+            image: '/images/characters/UI_Talent_U_Dori_02.png',
             description:
                 "Increases the Level of\nAlcazarzaray's Exactitude\nby 3.\nMaximum upgrade level is 15.",
             level: 3,
         },
         {
             name: 'Discretionary Supplement',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Dori_03.png',
+            image: '/images/characters/UI_Talent_S_Dori_03.png',
             description:
                 'The character connected to the\nJinni\nwill obtain the following buffs based on their current HP and Energy:\n\u00b7When their HP is lower than 50%, they gain 50% Incoming Healing Bonus.\n\u00b7When their Energy is less than 50%, they gain 30% Energy Recharge.',
             level: 4,
         },
         {
             name: 'Value for Mora',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Dori_01.png',
+            image: '/images/characters/UI_Talent_U_Dori_01.png',
             description:
                 'Increases the Level of\nSpirit-Warding Lamp: Troubleshooter Cannon\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: 'Sprinkling Weight',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Dori_04.png',
+            image: '/images/characters/UI_Talent_S_Dori_04.png',
             description:
                 "Dori gains the following effects for 3s after using\nSpirit-Warding Lamp: Troubleshooter Cannon\n:\n\u00b7\nElectro Infusion\n.\n\u00b7When Normal Attacks hit opponents, all nearby party members will heal HP equivalent to 4% of Dori's Max HP. This type of healing can occur once every 0.1s.",
             level: 6,

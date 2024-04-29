@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const RecurveBow: Weapon = {
     name: 'Recurve Bow',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Curve.png',
+    image: '/images/weapons/UI_EquipIcon_Bow_Curve.png',
     type: 'Bow',
     rarity: 3,
     description:

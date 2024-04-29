@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const RedhornStonethresher: Weapon = {
     name: 'Redhorn Stonethresher',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Itadorimaru.png',
+    image: '/images/weapons/UI_EquipIcon_Claymore_Itadorimaru.png',
     type: 'Claymore',
     rarity: 5,
     description:

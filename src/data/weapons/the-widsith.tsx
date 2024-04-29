@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const TheWidsith: Weapon = {
     name: 'The Widsith',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Troupe.png',
+    image: '/images/weapons/UI_EquipIcon_Catalyst_Troupe.png',
     type: 'Catalyst',
     rarity: 4,
     description:

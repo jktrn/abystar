@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const SkyriderSword: Weapon = {
     name: 'Skyrider Sword',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Mitsurugi.png',
+    image: '/images/weapons/UI_EquipIcon_Sword_Mitsurugi.png',
     type: 'Sword',
     rarity: 3,
     description:

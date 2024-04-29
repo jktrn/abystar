@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const SapwoodBlade: Weapon = {
     name: 'Sapwood Blade',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Arakalari.png',
+    image: '/images/weapons/UI_EquipIcon_Sword_Arakalari.png',
     type: 'Weapon',
     rarity: 4,
     description:

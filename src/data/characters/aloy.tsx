@@ -14,7 +14,7 @@ const constellationBonuses: Bonus[] = [
 
 const Aloy: Character = {
     name: 'Aloy',
-    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Aloy.png',
+    icon: '/images/characters/UI_AvatarIcon_Aloy.png',
     weapon: 'Bow',
     vision: 'Cryo',
     rarity: 6,
@@ -138,7 +138,7 @@ const Aloy: Character = {
     talents: [
         {
             name: 'Normal Attack: Rapid Fire',
-            image: 'https://api.ambr.top/assets/UI/Skill_A_02.png',
+            image: '/images/characters/Skill_A_02.png',
             description:
                 'Normal Attack\nPerforms up to 4 consecutive shots with a bow.\nCharged Attack\nPerforms a more precise\nAimed Shot\nwith increased DMG.\nWhile aiming, biting frost will accumulate on the arrowhead. A fully charged frost arrow will deal\nCryo DMG\n.\nPlunging Attack\nFires off a shower of arrows in mid-air before falling and striking the ground, dealing AoE DMG upon impact.',
             data: {
@@ -299,7 +299,7 @@ const Aloy: Character = {
         },
         {
             name: 'Frozen Wilds',
-            image: 'https://api.ambr.top/assets/UI/Skill_S_Aloy_01.png',
+            image: '/images/characters/Skill_S_Aloy_01.png',
             description:
                 "Aloy throws a Freeze Bomb in the targeted direction that explodes on impact, dealing\nCryo DMG\n. After it explodes, the Freeze Bomb will split up into many Chillwater Bomblets that explode on contact with opponents or after a short delay, dealing\nCryo DMG\n.\nWhen a Freeze Bomb or Chillwater Bomblet hits an opponent, the opponent's ATK is decreased and Aloy receives 1 Coil stack.\nAloy can gain up to 1 Coil stack every 0.1s.\nCoil\n\u00b7Each stack increases Aloy's Normal Attack DMG.\n\u00b7When Aloy has 4 Coil stacks, all stacks of Coil are cleared. She then enters the Rushing Ice state, which further increases the DMG dealt by her Normal Attacks and converts her Normal Attack DMG to\nCryo DMG\n.\nWhile in the Rushing Ice state, Aloy cannot obtain new Coil stacks.\nCoil effects will be cleared 30s after Aloy leaves combat.\nYou think that's cold? Guess you've never been to The Cut.",
             data: {
@@ -443,7 +443,7 @@ const Aloy: Character = {
         },
         {
             name: 'Prophecies of Dawn',
-            image: 'https://api.ambr.top/assets/UI/Skill_E_Aloy_01.png',
+            image: '/images/characters/Skill_E_Aloy_01.png',
             description:
                 'Aloy throws a Power Cell filled with Cryo in the targeted direction, then detonates it with an arrow, dealing\nAoE Cryo DMG\n.\nWhether "Zero Dawn" referred to hope or extinction no longer matters. Aloy has already saved her world, and the fate of this one is still being forged by its own heroes.',
             data: {
@@ -504,19 +504,19 @@ const Aloy: Character = {
     passiveSkills: [
         {
             name: 'Easy Does It',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Aloy_07.png',
+            image: '/images/characters/UI_Talent_S_Aloy_07.png',
             description:
                 'When Aloy is in the party, animals who produce Fowl, Raw Meat, or Chilled Meat will not be startled when party members approach them.',
         },
         {
             name: 'Combat Override',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Aloy_05.png',
+            image: '/images/characters/UI_Talent_S_Aloy_05.png',
             description:
                 "When Aloy receives the Coil effect from\nFrozen Wilds\n, her ATK is increased by 16%, while nearby party members' ATK is increased by 8%. This effect lasts 10s.",
         },
         {
             name: 'Strong Strike',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Aloy_06.png',
+            image: '/images/characters/UI_Talent_S_Aloy_06.png',
             description:
                 'When Aloy is in the Rushing Ice state conferred by\nFrozen Wilds\n, her\nCryo DMG Bonus\nincreases by 3.5% every 1s. A maximum\nCryo DMG Bonus\nincrease of 35% can be gained in this way.',
         },
@@ -524,42 +524,42 @@ const Aloy: Character = {
     constellations: [
         {
             name: 'Star of Another World',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Aloy_Lock.png',
+            image: '/images/characters/UI_Talent_S_Aloy_Lock.png',
             description:
                 "The time has not yet come for this person's corner of the night sky to light up.",
             level: 1,
         },
         {
             name: 'Star of Another World',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Aloy_Lock.png',
+            image: '/images/characters/UI_Talent_S_Aloy_Lock.png',
             description:
                 "The time has not yet come for this person's corner of the night sky to light up.",
             level: 2,
         },
         {
             name: 'Star of Another World',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Aloy_Lock.png',
+            image: '/images/characters/UI_Talent_S_Aloy_Lock.png',
             description:
                 "The time has not yet come for this person's corner of the night sky to light up.",
             level: 3,
         },
         {
             name: 'Star of Another World',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Aloy_Lock.png',
+            image: '/images/characters/UI_Talent_S_Aloy_Lock.png',
             description:
                 "The time has not yet come for this person's corner of the night sky to light up.",
             level: 4,
         },
         {
             name: 'Star of Another World',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Aloy_Lock.png',
+            image: '/images/characters/UI_Talent_S_Aloy_Lock.png',
             description:
                 "The time has not yet come for this person's corner of the night sky to light up.",
             level: 5,
         },
         {
             name: 'Star of Another World',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Aloy_Lock.png',
+            image: '/images/characters/UI_Talent_S_Aloy_Lock.png',
             description:
                 "The time has not yet come for this person's corner of the night sky to light up.",
             level: 6,

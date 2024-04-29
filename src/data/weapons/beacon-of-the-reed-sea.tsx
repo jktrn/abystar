@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const BeaconOfTheReedSea: Weapon = {
     name: 'Beacon of the Reed Sea',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Deshret.png',
+    image: '/images/weapons/UI_EquipIcon_Claymore_Deshret.png',
     type: 'Claymore',
     rarity: 5,
     description:

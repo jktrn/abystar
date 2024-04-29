@@ -14,7 +14,7 @@ const constellationBonuses: Bonus[] = [
 
 const Lynette: Character = {
     name: 'Lynette',
-    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Linette.png',
+    icon: '/images/characters/UI_AvatarIcon_Linette.png',
     weapon: 'Sword',
     vision: 'Anemo',
     rarity: 4,
@@ -138,7 +138,7 @@ const Lynette: Character = {
     talents: [
         {
             name: 'Normal Attack: Rapid Ritesword',
-            image: 'https://api.ambr.top/assets/UI/Skill_A_01.png',
+            image: '/images/characters/Skill_A_01.png',
             description:
                 'Normal Attack\nPerforms up to 4 rapid strikes.\nCharged Attack\nConsumes a certain amount of Stamina to unleash 2 rapid sword strikes.\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.',
             data: {
@@ -299,7 +299,7 @@ const Lynette: Character = {
         },
         {
             name: 'Enigmatic Feint',
-            image: 'https://api.ambr.top/assets/UI/Skill_S_Linette_01.png',
+            image: '/images/characters/Skill_S_Linette_01.png',
             description:
                 'Flicks her mantle and executes an Enigma Thrust, dealing\nAnemo DMG\n.\nWhen the Enigma Thrust hits an opponent, it will restore Lynette\'s HP based on her Max HP, and in the 4s afterward, she will lose a certain amount of HP per second.\nBased on whether you press or hold this ability, she will use Enigma Thrust differently.\nPress\nShe swiftly uses an Enigma Thrust.\nHold\nLynette will enter a high-speed Pilfering Shadow state and apply Shadowsign to a nearby opponent. You can control her movement direction during this state, and you can end it prematurely by using this skill again.\nWhen this high-speed state ends, Lynette will unleash her Enigma Thrust. If there is an opponent with Shadowsign applied to them nearby, Lynette will approach them in a flash before using Enigma Thrust.\nA maximum of 1 opponent can have Shadowsign at any one time. When this opponent gets too far from Lynette, the Shadowsign will be canceled.\nArkhe: Ousia\nAt specific intervals, Lynette will unleash a Surging Blade when she uses Enigma Thrust, dealing Ousia-aligned\nAnemo DMG\n.\n"Now then, turn your eyes to the stage and continue to enjoy the performance. When I next appear, I\'ll be where you least expect."',
             data: {
@@ -426,7 +426,7 @@ const Lynette: Character = {
         },
         {
             name: 'Magic Trick: Astonishing Shift',
-            image: 'https://api.ambr.top/assets/UI/Skill_E_Linette_01.png',
+            image: '/images/characters/Skill_E_Linette_01.png',
             description:
                 'Lynette raises her mantle high, dealing\nAoE Anemo DMG\n, using skillful sleight of hand to make a giant Bogglecat Box appear!\nBogglecat Box\n\u00b7Taunts nearby opponents, attracting their attacks.\n\u00b7Deals\nAnemo DMG\nto nearby opponents at intervals.\n\u00b7When the Bogglecat Box comes into contact with\nHydro\n/\nPyro\n/\nCryo\n/\nElectro\n, it will gain the corresponding element and additionally fire Vivid Shots that will deal DMG from that element at intervals.\nElemental Absorption of this kind will only occur once during this ability\'s duration.\n"Look this way, and look closely. This is a time for miracles, just for us."',
             data: {
@@ -538,19 +538,19 @@ const Lynette: Character = {
     passiveSkills: [
         {
             name: 'Loci-Based Mnemonics',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Linette_07.png',
+            image: '/images/characters/UI_Talent_S_Linette_07.png',
             description:
                 'Shows the location of nearby\nRecovery Orbs\non the minimap. The Aquatic Stamina and HP gained from touching Orbs will be increased by 25%.',
         },
         {
             name: 'Sophisticated Synergy',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Linette_05.png',
+            image: '/images/characters/UI_Talent_S_Linette_05.png',
             description:
                 "Within 10s after using\nMagic Trick: Astonishing Shift\n, when there are 1/2/3/4 Elemental Types in the party, all party members' ATK will be increased by 8%/12%/16%/20% respectively.",
         },
         {
             name: 'Props Positively Prepped',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Linette_06.png',
+            image: '/images/characters/UI_Talent_S_Linette_06.png',
             description:
                 "After the Bogglecat Box summoned by\nMagic Trick: Astonishing Shift\nperforms Elemental Conversion, Lynette's Elemental Burst will deal 15% more DMG. This effect will persist until the Bogglecat Box's duration ends.",
         },
@@ -558,41 +558,41 @@ const Lynette: Character = {
     constellations: [
         {
             name: 'A Cold Blade Like a Shadow',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Linette_01.png',
+            image: '/images/characters/UI_Talent_S_Linette_01.png',
             description:
                 "When\nEnigmatic Feint\n's Enigma Thrust hits an opponent with Shadowsign, a vortex will be created at that opponent's position that will pull nearby opponents in.",
             level: 1,
         },
         {
             name: 'Endless Mysteries',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Linette_02.png',
+            image: '/images/characters/UI_Talent_S_Linette_02.png',
             description:
                 'Whenever the Bogglecat Box summoned by\nMagic Trick: Astonishing Shift\nfires a Vivid Shot, it will fire an extra Vivid Shot.',
             level: 2,
         },
         {
             name: 'Cognition-Inverting Gaze',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Linette_01.png',
+            image: '/images/characters/UI_Talent_U_Linette_01.png',
             description:
                 'Increases the Level of\nMagic Trick: Astonishing Shift\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: 'Tacit Coordination',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Linette_03.png',
+            image: '/images/characters/UI_Talent_S_Linette_03.png',
             description: "Increases\nEnigmatic Feint\n's charges by 1.",
             level: 4,
         },
         {
             name: 'Obscuring Ambiguity',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Linette_02.png',
+            image: '/images/characters/UI_Talent_U_Linette_02.png',
             description:
                 'Increases the Level of\nEnigmatic Feint\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: 'Watchful Eye',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Linette_04.png',
+            image: '/images/characters/UI_Talent_S_Linette_04.png',
             description:
                 "When Lynette uses\nEnigmatic Feint\n's Enigma Thrust, she will gain an\nAnemo Infusion\nand 20%\nAnemo DMG Bonus\nfor 6s.",
             level: 6,

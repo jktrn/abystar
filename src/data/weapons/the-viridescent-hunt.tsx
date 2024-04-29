@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const TheViridescentHunt: Weapon = {
     name: 'The Viridescent Hunt',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Viridescent.png',
+    image: '/images/weapons/UI_EquipIcon_Bow_Viridescent.png',
     type: 'Bow',
     rarity: 4,
     description:

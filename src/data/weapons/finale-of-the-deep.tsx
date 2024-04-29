@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const FinaleOfTheDeep: Weapon = {
     name: 'Finale of the Deep',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Vorpal.png',
+    image: '/images/weapons/UI_EquipIcon_Sword_Vorpal.png',
     type: 'Weapon',
     rarity: 4,
     description:

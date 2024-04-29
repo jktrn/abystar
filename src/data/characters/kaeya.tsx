@@ -14,7 +14,7 @@ const constellationBonuses: Bonus[] = [
 
 const Kaeya: Character = {
     name: 'Kaeya',
-    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Kaeya.png',
+    icon: '/images/characters/UI_AvatarIcon_Kaeya.png',
     weapon: 'Sword',
     vision: 'Cryo',
     rarity: 4,
@@ -138,7 +138,7 @@ const Kaeya: Character = {
     talents: [
         {
             name: 'Normal Attack: Ceremonial Bladework',
-            image: 'https://api.ambr.top/assets/UI/Skill_A_01.png',
+            image: '/images/characters/Skill_A_01.png',
             description:
                 'Normal Attack\nPerforms up to 5 rapid strikes.\nCharged Attack\nConsumes a certain amount of Stamina to unleash 2 rapid sword strikes.\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.',
             data: {
@@ -316,7 +316,7 @@ const Kaeya: Character = {
         },
         {
             name: 'Frostgnaw',
-            image: 'https://api.ambr.top/assets/UI/Skill_S_Kaeya_01.png',
+            image: '/images/characters/Skill_S_Kaeya_01.png',
             description:
                 'Unleashes a frigid blast, dealing\nCryo DMG\nto opponents in front of Kaeya.\nKaeya seems affable, but his nature is that of unyielding ice.',
             data: {
@@ -358,7 +358,7 @@ const Kaeya: Character = {
         },
         {
             name: 'Glacial Waltz',
-            image: 'https://api.ambr.top/assets/UI/Skill_E_Kaeya_01.png',
+            image: '/images/characters/Skill_E_Kaeya_01.png',
             description:
                 "Coalescing the frost in the air, Kaeya summons 3 icicles that revolve around him.\nThese icicles will follow the character around and deal\nCryo DMG\nto opponents in their path for the ability's duration.\nA winsome smile, genial words, and the merciless hoarfrost that lies beneath... These are all Kaeya's weapons.",
             data: {
@@ -436,19 +436,19 @@ const Kaeya: Character = {
     passiveSkills: [
         {
             name: 'Hidden Strength',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_Explosion_Sprint.png',
+            image: '/images/characters/UI_Talent_Explosion_Sprint.png',
             description:
                 'Decreases sprinting Stamina consumption for your own party members by 20%.\nNot stackable with Passive Talents that provide the exact same effects.',
         },
         {
             name: 'Cold-Blooded Strike',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Kaeya_05.png',
+            image: '/images/characters/UI_Talent_S_Kaeya_05.png',
             description:
                 'Every hit with\nFrostgnaw\nregenerates HP for Kaeya equal to 15% of his ATK.',
         },
         {
             name: 'Glacial Heart',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Kaeya_06.png',
+            image: '/images/characters/UI_Talent_S_Kaeya_06.png',
             description:
                 'Opponents\nFrozen\nby\nFrostgnaw\nwill drop additional Elemental Particles.\nFrostgnaw may only produce a maximum of 2 additional Elemental Particles per use.',
         },
@@ -456,42 +456,42 @@ const Kaeya: Character = {
     constellations: [
         {
             name: 'Excellent Blood',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Kaeya_01.png',
+            image: '/images/characters/UI_Talent_S_Kaeya_01.png',
             description:
                 "The CRIT Rate of Kaeya's Normal and Charge Attacks against opponents affected by\nCryo\nis increased by 15%.",
             level: 1,
         },
         {
             name: 'Never-Ending Performance',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Kaeya_02.png',
+            image: '/images/characters/UI_Talent_S_Kaeya_02.png',
             description:
                 'While\nGlacial Waltz\nis in effect, for each opponent defeated, its duration is increased by 2.5s, up to a maximum of 15s.',
             level: 2,
         },
         {
             name: 'Dance of Frost',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Kaeya_01.png',
+            image: '/images/characters/UI_Talent_U_Kaeya_01.png',
             description:
                 'Increases the Level of\nFrostgnaw\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: 'Frozen Kiss',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Kaeya_03.png',
+            image: '/images/characters/UI_Talent_S_Kaeya_03.png',
             description:
                 "Triggers automatically when Kaeya's HP falls below 20%:\nCreates a shield that absorbs damage equal to 30% of Kaeya's Max HP. Lasts for 20s.\nThis shield absorbs\nCryo DMG\nwith 250% efficiency.\nCan only occur once every 60s.",
             level: 4,
         },
         {
             name: 'Frostbiting Embrace',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Kaeya_02.png',
+            image: '/images/characters/UI_Talent_U_Kaeya_02.png',
             description:
                 'Increases the Level of\nGlacial Waltz\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: 'Glacial Whirlwind',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Kaeya_04.png',
+            image: '/images/characters/UI_Talent_S_Kaeya_04.png',
             description:
                 'Glacial Waltz\nwill generate 1 additional icicle, and will regenerate 15 Energy when cast.',
             level: 6,

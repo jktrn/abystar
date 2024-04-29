@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const WolfsGravestone: Weapon = {
     name: "Wolf's Gravestone",
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Wolfmound.png',
+    image: '/images/weapons/UI_EquipIcon_Claymore_Wolfmound.png',
     type: 'Claymore',
     rarity: 5,
     description:

@@ -14,7 +14,7 @@ const constellationBonuses: Bonus[] = [
 
 const Tartaglia: Character = {
     name: 'Tartaglia',
-    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Tartaglia.png',
+    icon: '/images/characters/UI_AvatarIcon_Tartaglia.png',
     weapon: 'Bow',
     vision: 'Hydro',
     rarity: 5,
@@ -138,7 +138,7 @@ const Tartaglia: Character = {
     talents: [
         {
             name: 'Normal Attack: Cutting Torrent',
-            image: 'https://api.ambr.top/assets/UI/Skill_A_02.png',
+            image: '/images/characters/Skill_A_02.png',
             description:
                 "Normal Attack\nPerforms up to 6 consecutive shots with a bow.\nCharged Attack\nPerforms a more precise\nAimed Shot\nwith increased DMG.\nWhile aiming, the power of Hydro will accumulate on the arrowhead. An arrow fully charged with the torrent will deal\nHydro DMG\nand apply the Riptide status.\nRiptide\nOpponents affected by Riptide will suffer from\nAoE Hydro DMG\neffects when attacked by Tartaglia in various ways. DMG dealt in this way is considered Normal Attack DMG.\n\u00b7Riptide Flash: A fully-charged Aimed Shot that hits an opponent affected by Riptide deals consecutive bouts of AoE DMG. Can occur once every 0.7s.\n\u00b7Riptide Burst: Defeating an opponent affected by Riptide creates a Hydro burst that inflicts the Riptide status on nearby opponents hit.\nPlunging Attack\nFires off a shower of arrows in mid-air before falling and striking the ground, dealing AoE DMG upon impact.\nWhen Tartaglia is in Foul Legacy: Raging Tide's Melee Stance, he cannot perform a plunging attack.",
             data: {
@@ -384,7 +384,7 @@ const Tartaglia: Character = {
         },
         {
             name: 'Foul Legacy: Raging Tide',
-            image: 'https://api.ambr.top/assets/UI/Skill_S_Tartaglia_01.png',
+            image: '/images/characters/Skill_S_Tartaglia_01.png',
             description:
                 "Unleashes a set of weaponry made of pure water, dealing\nHydro DMG\nto surrounding opponents and entering Melee Stance.\nIn this Stance, Tartaglia's Normal and Charged Attacks are converted to\nHydro DMG\nthat cannot be overridden by any other elemental infusion and change as follows:\nNormal Attack\nPerforms up to 6 consecutive\nHydro\nstrikes.\nCharged Attack\nConsumes a certain amount of Stamina to unleash a cross slash, dealing\nHydro DMG\n.\nRiptide Slash\nHitting an opponent affected by Riptide with a melee attack unleashes a Riptide Slash that deals\nAoE Hydro DMG\n. DMG dealt in this way is considered Elemental Skill DMG, and can only occur once every 1.5s.\nAfter 30s, or when the ability is unleashed again, this skill will end. Tartaglia will return to his Ranged Stance and this ability will enter CD. The longer Tartaglia stays in his Melee Stance, the longer the CD.\nIf the return to a ranged stance occurs automatically after 30s, the CD is even longer.\nHe chose the bow as his weapon precisely to overcome his weakness with it. But a serious fight demands that he gets serious...",
             data: {
@@ -613,7 +613,7 @@ const Tartaglia: Character = {
         },
         {
             name: 'Havoc: Obliteration',
-            image: 'https://api.ambr.top/assets/UI/Skill_E_Tartaglia_01.png',
+            image: '/images/characters/Skill_E_Tartaglia_01.png',
             description:
                 'Performs different attacks based on what stance Tartaglia is in when casting.\nRanged Stance: Flash of Havoc\nSwiftly fires a Hydro-imbued magic arrow, dealing\nAoE Hydro DMG\nand applying the Riptide status.\nReturns a portion of its Energy Cost after use.\nMelee Stance: Light of Obliteration\nPerforms a slash with a large AoE, dealing massive\nHydro DMG\nto all surrounding opponents, which triggers Riptide Blast.\nRiptide Blast\nWhen the obliterating waters hit an opponent affected by Riptide, it clears their Riptide status and triggers a Hydro Explosion that deals\nAoE Hydro DMG\n.\nDMG dealt in this way is considered Elemental Burst DMG.\nRushing waters are rarely seen in his snowy homeland. Perhaps his ability to command water is due to his understanding of just how precious it is.',
             data: {
@@ -725,18 +725,18 @@ const Tartaglia: Character = {
     passiveSkills: [
         {
             name: 'Master of Weaponry',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Tartaglia_07.png',
+            image: '/images/characters/UI_Talent_S_Tartaglia_07.png',
             description:
                 "Increases your own party members'\nNormal Attack\nLevel by 1.",
         },
         {
             name: 'Never Ending',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Tartaglia_03.png',
+            image: '/images/characters/UI_Talent_S_Tartaglia_03.png',
             description: 'Extends Riptide duration by 8s.',
         },
         {
             name: 'Sword of Torrents',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Tartaglia_06.png',
+            image: '/images/characters/UI_Talent_S_Tartaglia_06.png',
             description:
                 "When Tartaglia is in\nFoul Legacy: Raging Tide\n's Melee Stance, on dealing a CRIT hit, Normal and Charged Attacks apply the Riptide status effect to opponents.",
         },
@@ -744,41 +744,41 @@ const Tartaglia: Character = {
     constellations: [
         {
             name: 'Foul Legacy: Tide Withholder',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Tartaglia_01.png',
+            image: '/images/characters/UI_Talent_S_Tartaglia_01.png',
             description: 'Decreases the CD of\nFoul Legacy: Raging Tide\nby 20%',
             level: 1,
         },
         {
             name: 'Foul Legacy: Understream',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Tartaglia_02.png',
+            image: '/images/characters/UI_Talent_S_Tartaglia_02.png',
             description:
                 'When opponents affected by Riptide are defeated, Tartaglia regenerates 4 Elemental Energy.',
             level: 2,
         },
         {
             name: 'Abyssal Mayhem: Vortex of Turmoil',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Tartaglia_01.png',
+            image: '/images/characters/UI_Talent_U_Tartaglia_01.png',
             description:
                 'Increases the Level of\nFoul Legacy: Raging Tide\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: 'Abyssal Mayhem: Hydrospout',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Tartaglia_05.png',
+            image: '/images/characters/UI_Talent_S_Tartaglia_05.png',
             description:
                 "If Tartaglia is in\nFoul Legacy: Raging Tide\n's Melee Stance, triggers Riptide Slash against opponents on the field affected by Riptide every 4s, otherwise, triggers Riptide Flash.\nRiptide Slashes and Riptide Flashes triggered by this Constellation effect are not subject to the time intervals that would typically apply to these two Riptide effects, nor do they have any effect on those time intervals.",
             level: 4,
         },
         {
             name: 'Havoc: Formless Blade',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Tartaglia_02.png',
+            image: '/images/characters/UI_Talent_U_Tartaglia_02.png',
             description:
                 'Increases the Level of\nHavoc: Obliteration\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: 'Havoc: Annihilation',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Tartaglia_04.png',
+            image: '/images/characters/UI_Talent_S_Tartaglia_04.png',
             description:
                 'When\nHavoc: Obliteration\nis cast in Melee Stance, the CD of\nFoul Legacy: Raging Tide\nis reset.\nThis effect will only take place once Tartaglia returns to his Ranged Stance.',
             level: 6,

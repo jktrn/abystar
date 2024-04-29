@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const TheStringless: Weapon = {
     name: 'The Stringless',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Troupe.png',
+    image: '/images/weapons/UI_EquipIcon_Bow_Troupe.png',
     type: 'Bow',
     rarity: 4,
     description:

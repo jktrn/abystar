@@ -14,7 +14,7 @@ const constellationBonuses: Bonus[] = [
 
 const YaeMiko: Character = {
     name: 'Yae Miko',
-    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Yae.png',
+    icon: '/images/characters/UI_AvatarIcon_Yae.png',
     weapon: 'Catalyst',
     vision: 'Electro',
     rarity: 5,
@@ -138,7 +138,7 @@ const YaeMiko: Character = {
     talents: [
         {
             name: 'Normal Attack: Spiritfox Sin-Eater',
-            image: 'https://api.ambr.top/assets/UI/Skill_A_Catalyst_MD.png',
+            image: '/images/characters/Skill_A_Catalyst_MD.png',
             description:
                 'Normal Attack\nSummons forth kitsune spirits, initiating a maximum of 3 attacks that deal\nElectro DMG\n.\nCharged Attack\nConsumes a certain amount of Stamina to deal\nAoE Electro DMG\nafter a short casting time.\nPlunging Attack\nPlunges towards the ground from mid-air, damaging all opponents in her path with thunderous might. Deals\nAoE Electro DMG\nupon impact with the ground.',
             data: {
@@ -282,7 +282,7 @@ const YaeMiko: Character = {
         },
         {
             name: 'Yakan Evocation: Sesshou Sakura',
-            image: 'https://api.ambr.top/assets/UI/Skill_S_Yae_01.png',
+            image: '/images/characters/Skill_S_Yae_01.png',
             description:
                 'To Yae, such dull tasks as can be accomplished by driving spirits out need not be done personally.\nMoves swiftly, leaving a Sesshou Sakura behind.\nSesshou Sakura\nHas the following properties:\n\u00b7 Periodically strikes one nearby opponent with lightning, dealing\nElectro DMG\n\u00b7 When there are other Sesshou Sakura nearby, their level will increase, boosting the DMG dealt by these lightning strikes.\nThis skill has three charges.\nA maximum of 3 Sesshou Sakura can exist simultaneously. The initial level of each Sesshou Sakura is 1, and the initial highest level each sakura can reach is 3. If a new Sesshou Sakura is created too close to an existing one, the existing one will be destroyed.\n"The kitsune spirits sealed in the branches are all yakan who stooped to preying upon humans. The yakan are two grades lower than us Sky Kitsune, and so, I hardly see the problem with... asking that they do my bidding. Now, this doesn\'t mean that you humans should go learning from our grading systems, no indeed \u2014 and as for which of us, kitsune or human, is higher up in the pecking order... Heh, wouldn\'t you like to know?"',
             data: {
@@ -392,7 +392,7 @@ const YaeMiko: Character = {
         },
         {
             name: 'Great Secret Art: Tenko Kenshin',
-            image: 'https://api.ambr.top/assets/UI/Skill_E_Yae_01.png',
+            image: '/images/characters/Skill_E_Yae_01.png',
             description:
                 "Legends of \"kitsunetsuki,\" or the manifestation of a kitsune's might, are common in Inazuma's folktales. One that particularly captures the imagination is that of the Sky Kitsune, said to cause lightning to fall down upon the foes of the Grand Narukami Shrine. Summons a lightning strike, dealing\nAoE Electro DMG\n.\nWhen she uses this skill, Yae Miko will unseal nearby Sesshou Sakura, destroying their outer forms and transforming them into Tenko Thunderbolts that descend from the skies, dealing\nAoE Electro DMG\n. Each Sesshou Sakura destroyed in this way will create one Tenko Thunderbolt.\nOnly at times like these will Yae reveal her Sky Kitsune form and wield lightning itself. None have seen the Lady Guuji's tails and lived to tell the story... so remember, as far as you are concerned, Lady Yae does not have a tail.",
             data: {
@@ -470,19 +470,19 @@ const YaeMiko: Character = {
     passiveSkills: [
         {
             name: 'Meditations of a Yako',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Yae_07.png',
+            image: '/images/characters/UI_Talent_S_Yae_07.png',
             description:
                 'Has a 25% chance to get 1 regional Character Talent Material (base material excluded) when crafting. The rarity is that of the base material.',
         },
         {
             name: "The Shrine's Sacred Shade",
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Yae_05.png',
+            image: '/images/characters/UI_Talent_S_Yae_05.png',
             description:
                 'When casting\nGreat Secret Art: Tenko Kenshin\n, each Sesshou Sakura destroyed resets the cooldown for 1 charge of\nYakan Evocation: Sesshou Sakura\n.',
         },
         {
             name: 'Enlightened Blessing',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Yae_06.png',
+            image: '/images/characters/UI_Talent_S_Yae_06.png',
             description:
                 'Every point of Elemental Mastery Yae Miko possesses will increase\nSesshou Sakura\nDMG by 0.15%.',
         },
@@ -490,42 +490,42 @@ const YaeMiko: Character = {
     constellations: [
         {
             name: 'Yakan Offering',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Yae_01.png',
+            image: '/images/characters/UI_Talent_S_Yae_01.png',
             description:
                 'Each time\nGreat Secret Art: Tenko Kenshin\nactivates a Tenko Thunderbolt, Yae Miko will restore 8 Elemental Energy for herself.',
             level: 1,
         },
         {
             name: "Fox's Mooncall",
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Yae_02.png',
+            image: '/images/characters/UI_Talent_S_Yae_02.png',
             description:
                 'Sesshou Sakura\nstart at Level 2 when created, their max level is increased to 4, and their attack range is increased by 60%.',
             level: 2,
         },
         {
             name: 'The Seven Glamours',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Yae_01.png',
+            image: '/images/characters/UI_Talent_U_Yae_01.png',
             description:
                 'Increases the Level of\nYakan Evocation: Sesshou Sakura\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: 'Sakura Channeling',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Yae_03.png',
+            image: '/images/characters/UI_Talent_S_Yae_03.png',
             description:
                 'When\nSesshou Sakura\nlightning hits opponents, the\nElectro DMG Bonus\nof all nearby party members is increased by 20% for 5s.',
             level: 4,
         },
         {
             name: 'Mischievous Teasing',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Yae_02.png',
+            image: '/images/characters/UI_Talent_U_Yae_02.png',
             description:
                 'Increases the Level of\nGreat Secret Art: Tenko Kenshin\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: 'Forbidden Art: Daisesshou',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Yae_04.png',
+            image: '/images/characters/UI_Talent_S_Yae_04.png',
             description:
                 "The Sesshou Sakura's\nattacks will ignore 60% of the opponents' DEF.",
             level: 6,

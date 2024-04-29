@@ -14,7 +14,7 @@ const constellationBonuses: Bonus[] = [
 
 const Venti: Character = {
     name: 'Venti',
-    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Venti.png',
+    icon: '/images/characters/UI_AvatarIcon_Venti.png',
     weapon: 'Bow',
     vision: 'Anemo',
     rarity: 5,
@@ -138,7 +138,7 @@ const Venti: Character = {
     talents: [
         {
             name: 'Normal Attack: Divine Marksmanship',
-            image: 'https://api.ambr.top/assets/UI/Skill_A_02.png',
+            image: '/images/characters/Skill_A_02.png',
             description:
                 'Normal Attack\nPerforms up to 6 consecutive shots with a bow.\nCharged Attack\nPerforms a more precise\nAimed Shot\nwith increased DMG.\nWhile aiming, favorable winds will accumulate on the arrowhead. A fully charged wind arrow will deal\nAnemo DMG\n.\nPlunging Attack\nFires off a shower of arrows in mid-air before falling and striking the ground, dealing AoE DMG upon impact.',
             data: {
@@ -333,7 +333,7 @@ const Venti: Character = {
         },
         {
             name: 'Skyward Sonnet',
-            image: 'https://api.ambr.top/assets/UI/Skill_S_Venti_01.png',
+            image: '/images/characters/Skill_S_Venti_01.png',
             description:
                 "O wind upon which all hymns and songs fly, bear these earth-walkers up into the sky!\nPress\nSummons a Wind Domain at the opponent's location, dealing\nAoE Anemo DMG\nand launching opponents into the air.\nHold\nSummons an even larger Wind Domain with Venti as the epicenter, dealing\nAoE Anemo DMG\nand launching affected opponents into the air.\nAfter unleashing the Hold version of this ability, Venti rides the wind into the air.\nOpponents hit by Skyward Sonnet will fall to the ground slowly.\nIn the days when gods and men walked the earth together, the heavens were filled with countless songs. This melody has long since been forgotten.",
             data: {
@@ -409,7 +409,7 @@ const Venti: Character = {
         },
         {
             name: "Wind's Grand Ode",
-            image: 'https://api.ambr.top/assets/UI/Skill_E_Venti_01.png',
+            image: '/images/characters/Skill_E_Venti_01.png',
             description:
                 'Fires off an arrow made of countless coalesced winds, creating a huge Stormeye that sucks in opponents and deals continuous\nAnemo DMG\n.\nElemental Absorption\nIf the Stormeye comes into contact with\nHydro\n/\nPyro\n/\nCryo\n/\nElectro\n, it will deal additional elemental DMG of that type.\nElemental Absorption may only occur once per use.\nMany hymns written in praise of the Anemo Archon have been lost to time. This one sings of his mastery over the wind.',
             data: {
@@ -504,19 +504,19 @@ const Venti: Character = {
     passiveSkills: [
         {
             name: 'Windrider',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_Explosion_Glide.png',
+            image: '/images/characters/UI_Talent_Explosion_Glide.png',
             description:
                 'Decreases gliding Stamina consumption for your own party members by 20%.\nNot stackable with Passive Talents that provide the exact same effects.',
         },
         {
             name: 'Embrace of Winds',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Venti_05.png',
+            image: '/images/characters/UI_Talent_S_Venti_05.png',
             description:
                 'Holding\nSkyward Sonnet\ncreates an upcurrent that lasts for 20s.',
         },
         {
             name: 'Stormeye',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Venti_06.png',
+            image: '/images/characters/UI_Talent_S_Venti_06.png',
             description:
                 "Regenerates 15 Energy for Venti after the effects of\nWind's Grand Ode\nend.\nIf an Elemental Absorption occurred, this also restores 15 Energy to all characters of that corresponding element in the party.",
         },
@@ -524,42 +524,42 @@ const Venti: Character = {
     constellations: [
         {
             name: 'Splitting Gales',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Venti_01.png',
+            image: '/images/characters/UI_Talent_S_Venti_01.png',
             description:
                 "Fires 2 additional arrows per\nAimed Shot\n, each dealing 33% of the original arrow's DMG.",
             level: 1,
         },
         {
             name: 'Breeze of Reminiscence',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Venti_02.png',
+            image: '/images/characters/UI_Talent_S_Venti_02.png',
             description:
                 "Skyward Sonnet\ndecreases opponents'\nAnemo RES\nand Physical RES by 12% for 10s.\nOpponents launched by\nSkyward Sonnet\nsuffer an additional 12%\nAnemo RES\nand Physical RES decrease while airborne.",
             level: 2,
         },
         {
             name: 'Ode to Thousand Winds',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Venti_02.png',
+            image: '/images/characters/UI_Talent_U_Venti_02.png',
             description:
                 "Increases the Level of\nWind's Grand Ode\nby 3.\nMaximum upgrade level is 15.",
             level: 3,
         },
         {
             name: 'Hurricane of Freedom',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Venti_03.png',
+            image: '/images/characters/UI_Talent_S_Venti_03.png',
             description:
                 'When Venti picks up an Elemental Orb or Particle, he receives a 25%\nAnemo DMG Bonus\nfor 10s.',
             level: 4,
         },
         {
             name: 'Concerto dal Cielo',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Venti_01.png',
+            image: '/images/characters/UI_Talent_U_Venti_01.png',
             description:
                 'Increases the Level of\nSkyward Sonnet\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: 'Storm of Defiance',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Venti_04.png',
+            image: '/images/characters/UI_Talent_S_Venti_04.png',
             description:
                 "Targets who take DMG from\nWind's Grand Ode\nhave their\nAnemo RES\ndecreased by 20%.\nIf an Elemental Absorption occurred, then their RES towards the corresponding Element is also decreased by 20%.",
             level: 6,

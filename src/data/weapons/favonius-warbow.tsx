@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const FavoniusWarbow: Weapon = {
     name: 'Favonius Warbow',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Zephyrus.png',
+    image: '/images/weapons/UI_EquipIcon_Bow_Zephyrus.png',
     type: 'Bow',
     rarity: 4,
     description:

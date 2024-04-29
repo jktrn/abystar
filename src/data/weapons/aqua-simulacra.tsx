@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const AquaSimulacra: Weapon = {
     name: 'Aqua Simulacra',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Kirin.png',
+    image: '/images/weapons/UI_EquipIcon_Bow_Kirin.png',
     type: 'Bow',
     rarity: 5,
     description:

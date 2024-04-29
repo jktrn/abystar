@@ -14,7 +14,7 @@ const constellationBonuses: Bonus[] = [
 
 const Tighnari: Character = {
     name: 'Tighnari',
-    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Tighnari.png',
+    icon: '/images/characters/UI_AvatarIcon_Tighnari.png',
     weapon: 'Bow',
     vision: 'Dendro',
     rarity: 5,
@@ -138,7 +138,7 @@ const Tighnari: Character = {
     talents: [
         {
             name: 'Normal Attack: Khanda Barrier-Buster',
-            image: 'https://api.ambr.top/assets/UI/Skill_A_02.png',
+            image: '/images/characters/Skill_A_02.png',
             description:
                 'Normal Attack\nPerforms up to 4 consecutive shots with a bow.\nCharged Attack\nPerforms a more precise\nAimed Shot\nwith increased DMG.\nWhile aiming, the power of Dendro will accumulate on the arrowhead before the arrow is fired. Has different effects based on how long the energy has been charged:\n\u00b7Charge Level 1: Fires off an arrow carrying the power of flora that deals\nDendro DMG\n.\n\u00b7Charge Level 2: Fires off a Wreath Arrow that deals\nDendro DMG\n. Upon hit, the Wreath Arrow will create 4 Clusterbloom Arrows that will track nearby opponents automatically and deal\nDendro DMG\n.\nPlunging Attack\nFires off a shower of arrows in mid-air before falling and striking the ground, dealing AoE DMG upon impact.',
             data: {
@@ -333,7 +333,7 @@ const Tighnari: Character = {
         },
         {
             name: 'Vijnana-Phala Mine',
-            image: 'https://api.ambr.top/assets/UI/Skill_S_Tighnari_01.png',
+            image: '/images/characters/Skill_S_Tighnari_01.png',
             description:
                 'Tighnari throws a Vijnana Stormheart ahead that deals\nAoE Dendro DMG\n, creating a Vijnana-Khanda Field that creates mysterious illusions that taunt opponents and draw their fire.\nAdditionally, Tighnari gains the Vijnana Suffusion effect, which will decrease the Wreath Arrow\'s charging time by 2.4s. This effect will dissipate once the skill duration ends or after Tighnari has fired 3 Wreath Arrows.\n"If seeds wither apart from the soil, they will remain a single seed. But if returned to the soil, they shall multiply ten-million fold."',
             data: {
@@ -409,7 +409,7 @@ const Tighnari: Character = {
         },
         {
             name: "Fashioner's Tanglevine Shaft",
-            image: 'https://api.ambr.top/assets/UI/Skill_E_Tighnari_01.png',
+            image: '/images/characters/Skill_E_Tighnari_01.png',
             description:
                 'Combines the power of all seeds to fire 6 Tanglevine Shafts that can track opponents and deal\nDendro DMG\n.\nAfter they hit, the Tanglevine Shafts will create a secondary wave of Tanglevine Shafts that can also track nearby opponents and deal\nDendro DMG\non hit.\n"Do not seek to escape so easily. The vines grow and regrow ever on. Things might get dicey if you don\'t clear every last one of them out."',
             data: {
@@ -487,19 +487,19 @@ const Tighnari: Character = {
     passiveSkills: [
         {
             name: 'Encyclopedic Knowledge',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Tighnari_07.png',
+            image: '/images/characters/UI_Talent_S_Tighnari_07.png',
             description:
                 'Displays the location of nearby\nresources unique to Sumeru\non the mini-map.',
         },
         {
             name: 'Keen Sight',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Tighnari_05.png',
+            image: '/images/characters/UI_Talent_S_Tighnari_05.png',
             description:
                 'After Tighnari fires a\nWreath Arrow\n, his Elemental Mastery is increased by 50 for 4s.',
         },
         {
             name: 'Scholarly Blade',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Tighnari_06.png',
+            image: '/images/characters/UI_Talent_S_Tighnari_06.png',
             description:
                 "For every point of Elemental Mastery Tighnari possesses, his Charged Attack and\nFashioner's Tanglevine Shaft\nDMG are increased by 0.06%.\nThe maximum DMG Bonus obtainable this way is 60%.",
         },
@@ -507,41 +507,41 @@ const Tighnari: Character = {
     constellations: [
         {
             name: 'Beginnings Determined at the Roots',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Tighnari_01.png',
+            image: '/images/characters/UI_Talent_S_Tighnari_01.png',
             description: "Tighnari's Charged Attack CRIT Rate is increased by 15%.",
             level: 1,
         },
         {
             name: 'Origins Known From the Stem',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Tighnari_02.png',
+            image: '/images/characters/UI_Talent_S_Tighnari_02.png',
             description:
                 "When there are opponents within the Vijnana-Khanda Field created by\nVijnana-Phala Mine\n, Tighnari gains 20%\nDendro DMG Bonus\n.\nThe effect will last up to 6s if the field's duration ends or if it no longer has opponents within it.",
             level: 2,
         },
         {
             name: 'Fortunes Read Amongst the Branches',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Tighnari_01.png',
+            image: '/images/characters/UI_Talent_U_Tighnari_01.png',
             description:
                 "Increases the Level of\nFashioner's Tanglevine Shaft\nby 3.\nMaximum upgrade level is 15.",
             level: 3,
         },
         {
             name: 'Withering Glimpsed in the Leaves',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Tighnari_03.png',
+            image: '/images/characters/UI_Talent_S_Tighnari_03.png',
             description:
                 "When\nFashioner's Tanglevine Shaft\nis unleashed, all nearby party members gain 60 Elemental Mastery for 8s. If the Fashioner's Tanglevine Shaft triggers a Burning, Bloom, Quicken, or Spread reaction, their Elemental Mastery will be further increased by 60. This latter case will also refresh the buff state's duration.",
             level: 4,
         },
         {
             name: 'Comprehension Amidst the Flowers',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Tighnari_02.png',
+            image: '/images/characters/UI_Talent_U_Tighnari_02.png',
             description:
                 'Increases the Level of\nVijnana-Phala Mine\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: 'Karma Adjudged From the Leaden Fruit',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Tighnari_04.png',
+            image: '/images/characters/UI_Talent_S_Tighnari_04.png',
             description:
                 "Wreath Arrow\n's charging time is decreased by 0.9s, and will produce 1 additional Clusterbloom Arrow upon hit. This arrow deals 150% of Tighnari's ATK as DMG.",
             level: 6,

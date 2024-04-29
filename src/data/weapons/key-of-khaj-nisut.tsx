@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const KeyOfKhajnisut: Weapon = {
     name: 'Key of Khaj-Nisut',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Deshret.png',
+    image: '/images/weapons/UI_EquipIcon_Sword_Deshret.png',
     type: 'Sword',
     rarity: 5,
     description:

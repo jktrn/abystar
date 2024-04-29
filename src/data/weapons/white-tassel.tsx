@@ -26,7 +26,7 @@ const weaponBonuses: Bonus[] = [
 
 const WhiteTassel: Weapon = {
     name: 'White Tassel',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Ruby.png',
+    image: '/images/weapons/UI_EquipIcon_Pole_Ruby.png',
     type: 'Polearm',
     rarity: 3,
     description:

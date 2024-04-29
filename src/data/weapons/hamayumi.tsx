@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const Hamayumi: Weapon = {
     name: 'Hamayumi',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Bakufu.png',
+    image: '/images/weapons/UI_EquipIcon_Bow_Bakufu.png',
     type: 'Weapon',
     rarity: 4,
     description:

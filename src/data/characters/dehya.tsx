@@ -14,7 +14,7 @@ const constellationBonuses: Bonus[] = [
 
 const Dehya: Character = {
     name: 'Dehya',
-    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Dehya.png',
+    icon: '/images/characters/UI_AvatarIcon_Dehya.png',
     weapon: 'Claymore',
     vision: 'Pyro',
     rarity: 5,
@@ -138,7 +138,7 @@ const Dehya: Character = {
     talents: [
         {
             name: 'Normal Attack: Sandstorm Assault',
-            image: 'https://api.ambr.top/assets/UI/Skill_A_04.png',
+            image: '/images/characters/Skill_A_04.png',
             description:
                 'Normal Attack\nPerforms up to 4 consecutive strikes using her Claymore and her martial arts.\nCharged Attack\nDrains Stamina over time to perform continuous slashes.\nAt the end of the sequence, performs a more powerful slash.\nPlunging Attack\nPlunges from mid-air to strike the ground, damaging opponents along the path and dealing AoE DMG upon impact.',
             data: {
@@ -333,7 +333,7 @@ const Dehya: Character = {
         },
         {
             name: 'Molten Inferno',
-            image: 'https://api.ambr.top/assets/UI/Skill_S_Dehya_01.png',
+            image: '/images/characters/Skill_S_Dehya_01.png',
             description:
                 "This art of Dehya's own invention changes its method of use depending on the combat situation.\nIndomitable Flame\nThis skill will be unleashed should there be no Fiery Sanctum field created by Dehya herself present at the time.\nDeals\nAoE Pyro DMG\n, and creates a field known as Fiery Sanctum.\nRanging Flame\nThis skill will be unleashed should a Fiery Sanctum field created by Dehya herself already exist.\nDehya will perform a leaping attack, dealing\nAoE Pyro DMG\nbefore recreating a Fiery Sanctum field at her new position.\nA Fiery Sanctum field created this way will inherit the remaining duration of the previous field.\nRanging Flame can be used only once throughout a single Fiery Sanctum field's duration.\nFiery Sanctum\nWhen an opponent within a Fiery Sanctum field takes DMG, the field will unleash a coordinated attack, dealing\nAoE Pyro DMG\nto them based on Dehya's ATK and Max HP. This effect can be triggered once every 2.5s.\nActive characters within this field have their resistance to interruption increased, and when such characters take DMG, a portion of that damage will be mitigated and flow into Redmane's Blood. Dehya will then take this DMG over 10s. When the mitigated DMG stored by Redmane's Blood reaches or goes over a certain percentage of Dehya's Max HP, she will stop mitigating DMG in this way.\nOnly 1 Fiery Sanctum created by Dehya herself can exist at the same time.\nWalk this fiery ordeal with me and purge all impurity, just as a beast of flames that must descend from the blaze.",
             data: {
@@ -460,7 +460,7 @@ const Dehya: Character = {
         },
         {
             name: 'Leonine Bite',
-            image: 'https://api.ambr.top/assets/UI/Skill_E_Dehya_01.png',
+            image: '/images/characters/Skill_E_Dehya_01.png',
             description:
                 'Unleashing her burning anger and casting her inconvenient blade aside, Dehya enters the Blazing Lioness state and increases her resistance to interruption.\nIn this state, Dehya will automatically and continuously unleash the Flame-Mane\'s Fists, dealing\nPyro DMG\nbased on her ATK and Max HP, and when its duration ends, she will unleash an Incineration Drive, dealing\nAoE Pyro DMG\nbased on her ATK and Max HP.\nIf a Fiery Sanctum field created by Dehya\'s own Elemental Skill "Molten Inferno" exists when this ability is unleashed, Dehya will retrieve it, and then create another field once Blazing Lioness\'s duration expires. This field will take on the retrieved field\'s duration at the moment of its retrieval.\nIn this state, Dehya will be unable to cast her Elemental Skill, or perform Normal, Charged, and Plunging Attacks. "Normal Attack: Sandstorm Assault" and Elemental Skill "Molten Inferno" will be replaced by "Roaring Barrage."\nRoaring Barrage\nUnleashing Roaring Barrage within 0.4s after each Flame-Mane\'s Fist strike will increase the speed at which the next Flame-Mane\'s Fist strike will be triggered.\nEven the flowing flames must obey her rage and at her command become her fangs and claws.',
             data: {
@@ -555,19 +555,19 @@ const Dehya: Character = {
     passiveSkills: [
         {
             name: 'The Sunlit Way',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Dehya_07.png',
+            image: '/images/characters/UI_Talent_S_Dehya_07.png',
             description:
                 'During the day (06:00 \u2013 18:00), your party members gain the Swift Stride effect: Movement SPD increased by 10%.\nDoes not take effect in Domains, Trounce Domains, or Spiral Abyss. Swift Stride does not stack.',
         },
         {
             name: 'Unstinting Succor',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Dehya_05.png',
+            image: '/images/characters/UI_Talent_S_Dehya_05.png',
             description:
                 "Within 6 seconds after Dehya retrieves the Fiery Sanctum field through\nMolten Inferno: Ranging Flame\nor\nLeonine Bite\n, she will take 60% less DMG when receiving DMG from Redmane's Blood. This effect can be triggered once every 2s.\nAdditionally, within 9s after Dehya unleashes\nMolten Inferno: Indomitable Flame\n, she will grant all party members the Gold-Forged Form state. This state will further increase a character's resistance to interruption when they are within the Fiery Sanctum field. Gold-Forged Form can be activated once every 18s.",
         },
         {
             name: 'Stalwart and True',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Dehya_06.png',
+            image: '/images/characters/UI_Talent_S_Dehya_06.png',
             description:
                 'When her HP is less than 40%, Dehya will recover 20% of her Max HP and will restore 6% of her Max HP every 2s for the next 10s. This effect can be triggered once every 20s.',
         },
@@ -575,42 +575,42 @@ const Dehya: Character = {
     constellations: [
         {
             name: 'The Flame Incandescent',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Dehya_01.png',
+            image: '/images/characters/UI_Talent_S_Dehya_01.png',
             description:
                 "Dehya's Max HP is increased by 20%, and she deals bonus DMG based on her Max HP when using the following attacks:\n\u00b7\nMolten Inferno\n's DMG will be increased by 3.6% of her Max HP.\n\u00b7\nLeonine Bite\n's DMG will be increased by 6% of her Max HP.",
             level: 1,
         },
         {
             name: 'The Sand-Blades Glittering',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Dehya_02.png',
+            image: '/images/characters/UI_Talent_S_Dehya_02.png',
             description:
                 'When Dehya uses\nMolten Inferno: Ranging Flame\n, the duration of the recreated Fiery Sanctum field will be increased by 6s.\nAdditionally, when a Fiery Sanctum exists on the field, DMG dealt by its next coordinated attack will be increased by 50% when active character(s) within the Fiery Sanctum field are attacked.',
             level: 2,
         },
         {
             name: 'A Rage Swift as Fire',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Dehya_01.png',
+            image: '/images/characters/UI_Talent_U_Dehya_01.png',
             description:
                 'Increases the Level of\nLeonine Bite\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: 'An Oath Abiding',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Dehya_03.png',
+            image: '/images/characters/UI_Talent_S_Dehya_03.png',
             description:
                 "When Flame-Mane's Fist and Incineration Drive attacks unleashed during\nLeonine Bite\nhit opponents, they will restore 1.5 Energy for Dehya and 2.5% of her Max HP. This effect can be triggered once every 0.2s.",
             level: 4,
         },
         {
             name: 'The Alpha Unleashed',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Dehya_02.png',
+            image: '/images/characters/UI_Talent_U_Dehya_02.png',
             description:
                 'Increases the Level of\nMolten Inferno\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: 'The Burning Claws Cleaving',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Dehya_04.png',
+            image: '/images/characters/UI_Talent_S_Dehya_04.png',
             description:
                 "The CRIT Rate of\nLeonine Bite\nis increased by 10%.\nAdditionally, after a Flame-Mane's Fist attack hits an opponent and deals CRIT Hits during a single Blazing Lioness state, it will cause the CRIT DMG of Leonine Bite to increase by 15% for the rest of Blazing Lioness's duration and extend that duration by 0.5s. This effect can be triggered every 0.2s. The duration can be extended for a maximum of 2s and CRIT DMG can be increased by a maximum of 60% this way.",
             level: 6,

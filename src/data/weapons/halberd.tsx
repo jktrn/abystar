@@ -27,7 +27,7 @@ const weaponBonuses: Bonus[] = [
 
 const Halberd: Weapon = {
     name: 'Halberd',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Halberd.png',
+    image: '/images/weapons/UI_EquipIcon_Pole_Halberd.png',
     type: 'Polearm',
     rarity: 3,
     description:

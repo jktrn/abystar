@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const KagotsurubeIsshin: Weapon = {
     name: 'Kagotsurube Isshin',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Youtou.png',
+    image: '/images/weapons/UI_EquipIcon_Sword_Youtou.png',
     type: 'Sword',
     rarity: 4,
     description:

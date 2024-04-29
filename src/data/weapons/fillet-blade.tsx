@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const FilletBlade: Weapon = {
     name: 'Fillet Blade',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Sashimi.png',
+    image: '/images/weapons/UI_EquipIcon_Sword_Sashimi.png',
     type: 'Sword',
     rarity: 3,
     description:

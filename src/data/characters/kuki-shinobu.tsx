@@ -14,7 +14,7 @@ const constellationBonuses: Bonus[] = [
 
 const KukiShinobu: Character = {
     name: 'Kuki Shinobu',
-    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Shinobu.png',
+    icon: '/images/characters/UI_AvatarIcon_Shinobu.png',
     weapon: 'Sword',
     vision: 'Electro',
     rarity: 4,
@@ -138,7 +138,7 @@ const KukiShinobu: Character = {
     talents: [
         {
             name: "Normal Attack: Shinobu's Shadowsword",
-            image: 'https://api.ambr.top/assets/UI/Skill_A_01.png',
+            image: '/images/characters/Skill_A_01.png',
             description:
                 'Normal Attack\nPerforms up to 4 rapid strikes.\nCharged Attack\nConsumes a certain amount of Stamina to unleash 2 rapid sword strikes.\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.',
             data: {
@@ -299,7 +299,7 @@ const KukiShinobu: Character = {
         },
         {
             name: 'Sanctifying Ring',
-            image: 'https://api.ambr.top/assets/UI/Skill_S_Shinobu_01.png',
+            image: '/images/characters/Skill_S_Shinobu_01.png',
             description:
                 'Creates a Grass Ring of Sanctification at the cost of part of her HP, dealing\nElectro DMG\nto nearby opponents.\nGrass Ring of Sanctification\nFollows your current active character around. Deals\nElectro DMG\nto nearby opponents every 1.5s and restores HP for active character(s) within the ring\'s AoE based on Kuki Shinobu\'s Max HP.\nThe HP consumption from using this skill can only bring her to 20% HP.\n"\nBand the Naku Weed into a loop around your waist, and it shall exorcise evil.\n"',
             data: {
@@ -409,7 +409,7 @@ const KukiShinobu: Character = {
         },
         {
             name: 'Gyoei Narukami Kariyama Rite',
-            image: 'https://api.ambr.top/assets/UI/Skill_E_Shinobu_01.png',
+            image: '/images/characters/Skill_E_Shinobu_01.png',
             description:
                 "Stabs an evil-excoriating blade into the ground, creating a field that cleanses the area of all that is foul, dealing continuous\nElectro DMG\nto opponents within its AoE based on Shinobu's Max HP.\nIf Shinobu's HP is less than or equal to 50% when this skill is used, the field will last longer.\nThis was originally a technique used in weeding and in ritual prayers for the yearly harvest, but Shinobu has not forgotten it, though her career as a shrine maiden may have ended.",
             data: {
@@ -504,19 +504,19 @@ const KukiShinobu: Character = {
     passiveSkills: [
         {
             name: 'Protracted Prayers',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Shinobu_07.png',
+            image: '/images/characters/UI_Talent_S_Shinobu_07.png',
             description:
                 'Gains 25% more rewards when dispatched on an Inazuma Expedition for 20 hours.',
         },
         {
             name: 'Breaking Free',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Shinobu_05.png',
+            image: '/images/characters/UI_Talent_S_Shinobu_05.png',
             description:
                 "When Shinobu's HP is not higher than 50%, her Healing Bonus is increased by 15%.",
         },
         {
             name: "Heart's Repose",
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Shinobu_06.png',
+            image: '/images/characters/UI_Talent_S_Shinobu_06.png',
             description:
                 "Sanctifying Ring\n's abilities will be boosted based on Shinobu's Elemental Mastery:\n\u00b7Healing amount will be increased by 75% of Elemental Mastery.\n\u00b7DMG dealt is increased by 25% of Elemental Mastery.",
         },
@@ -524,41 +524,41 @@ const KukiShinobu: Character = {
     constellations: [
         {
             name: 'To Cloister Compassion',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Shinobu_01.png',
+            image: '/images/characters/UI_Talent_S_Shinobu_01.png',
             description: "Gyoei Narukami Kariyama Rite\n's AoE is increased by 50%.",
             level: 1,
         },
         {
             name: 'To Forsake Fortune',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Shinobu_02.png',
+            image: '/images/characters/UI_Talent_S_Shinobu_02.png',
             description:
                 "Grass Ring of Sanctification\n's duration is increased by 3s.",
             level: 2,
         },
         {
             name: 'To Sequester Sorrow',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Shinobu_01.png',
+            image: '/images/characters/UI_Talent_U_Shinobu_01.png',
             description:
                 'Increases the Level of\nSanctifying Ring\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: 'To Sever Sealing',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Shinobu_03.png',
+            image: '/images/characters/UI_Talent_S_Shinobu_03.png',
             description:
                 "When the Normal, Charged, or Plunging Attacks of the character affected by Shinobu's\nGrass Ring of Sanctification\nhit opponents, a Thundergrass Mark will land on the opponent's position and deal\nAoE Electro DMG\nbased on 9.7% of Shinobu's Max HP.\nThis effect can occur once every 5s.",
             level: 4,
         },
         {
             name: 'To Cease Courtesies',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Shinobu_02.png',
+            image: '/images/characters/UI_Talent_U_Shinobu_02.png',
             description:
                 'Increases the Level of\nGyoei Narukami Kariyama Rite\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: 'To Ward Weakness',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Shinobu_04.png',
+            image: '/images/characters/UI_Talent_S_Shinobu_04.png',
             description:
                 "When Kuki Shinobu takes lethal DMG, this instance of DMG will not take her down. This effect will automatically trigger when her HP reaches 1 and will trigger once every 60s.\nWhen Shinobu's HP drops below 25%, she will gain 150 Elemental Mastery for 15s. This effect will trigger once every 60s.",
             level: 6,

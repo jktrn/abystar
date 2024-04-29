@@ -138,7 +138,7 @@ const TravelerAnemo: Character = {
     talents: [
         {
             name: 'Normal Attack: Foreign Ironwind',
-            image: 'https://api.ambr.top/assets/UI/Skill_A_01.png',
+            image: '/images/characters/Skill_A_01.png',
             description:
                 'Normal Attack\nPerforms up to 5 rapid strikes.\nCharged Attack\nConsumes a certain amount of Stamina to unleash 2 rapid sword strikes.\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.',
             data: {
@@ -316,7 +316,7 @@ const TravelerAnemo: Character = {
         },
         {
             name: 'Palm Vortex',
-            image: 'https://api.ambr.top/assets/UI/Skill_S_PlayerWind_01.png',
+            image: '/images/characters/Skill_S_PlayerWind_01.png',
             description:
                 "Grasping the wind's might, you form a vortex of vacuum in your palm, causing continuous\nAnemo DMG\nto opponents in front of you.\nThe vacuum vortex explodes when the skill duration ends, causing a greater amount of Anemo DMG over a larger area.\nHold\nDMG and AoE will gradually increase.\nElemental Absorption\nIf the vortex comes into contact with\nHydro\n/\nPyro\n/\nCryo\n/\nElectro\n, it will deal additional elemental DMG of that type.\nElemental Absorption may only occur once per use.\nYou discussed the way to grasp the formless wind with Paimon.",
             data: {
@@ -426,7 +426,7 @@ const TravelerAnemo: Character = {
         },
         {
             name: 'Gust Surge',
-            image: 'https://api.ambr.top/assets/UI/Skill_E_PlayerWind_01.png',
+            image: '/images/characters/Skill_E_PlayerWind_01.png',
             description:
                 "Guiding the path of the wind currents, you summon a forward-moving tornado that pulls objects and opponents towards itself, dealing continuous\nAnemo DMG\n.\nElemental Absorption\nIf the tornado comes into contact with\nHydro\n/\nPyro\n/\nCryo\n/\nElectro\n, it will deal additional elemental DMG of that type.\nElemental Absorption may only occur once per use.\nYou and Paimon studied the flapping of a butterfly's wings.",
             data: {
@@ -521,13 +521,13 @@ const TravelerAnemo: Character = {
     passiveSkills: [
         {
             name: 'Slitting Wind',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_PlayerWind_05.png',
+            image: '/images/characters/UI_Talent_S_PlayerWind_05.png',
             description:
                 'The last hit of a Normal Attack combo unleashes a wind blade, dealing 60% of ATK as\nAnemo DMG\nto all opponents in its path.',
         },
         {
             name: 'Second Wind',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_PlayerWind_06.png',
+            image: '/images/characters/UI_Talent_S_PlayerWind_06.png',
             description:
                 'Palm Vortex\nkills regenerate 2% HP for 5s.\nThis effect can only occur once every 5s.',
         },
@@ -535,40 +535,40 @@ const TravelerAnemo: Character = {
     constellations: [
         {
             name: 'Raging Vortex',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_PlayerWind_01.png',
+            image: '/images/characters/UI_Talent_S_PlayerWind_01.png',
             description:
                 'Palm Vortex\npulls in opponents and objects within a 5m radius.',
             level: 1,
         },
         {
             name: 'Uprising Whirlwind',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_PlayerWind_02.png',
+            image: '/images/characters/UI_Talent_S_PlayerWind_02.png',
             description: 'Increases Energy Recharge by 16%.',
             level: 2,
         },
         {
             name: 'Sweeping Gust',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_PlayerWind_02.png',
+            image: '/images/characters/UI_Talent_U_PlayerWind_02.png',
             description:
                 'Increases the Level of\nGust Surge\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: 'Cherishing Breezes',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_PlayerWind_03.png',
+            image: '/images/characters/UI_Talent_S_PlayerWind_03.png',
             description: 'Reduces DMG taken while casting\nPalm Vortex\nby 10%.',
             level: 4,
         },
         {
             name: 'Vortex Stellaris',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_PlayerWind_01.png',
+            image: '/images/characters/UI_Talent_U_PlayerWind_01.png',
             description:
                 'Increases the Level of\nPalm Vortex\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: 'Intertwined Winds',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_PlayerWind_04.png',
+            image: '/images/characters/UI_Talent_S_PlayerWind_04.png',
             description:
                 'Targets who take DMG from\nGust Surge\nhave their\nAnemo RES\ndecreased by 20%.\nIf an Elemental Absorption occurred, then their RES towards the corresponding Element is also decreased by 20%.',
             level: 6,

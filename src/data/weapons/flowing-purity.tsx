@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const FlowingPurity: Weapon = {
     name: 'Flowing Purity',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Vorpal.png',
+    image: '/images/weapons/UI_EquipIcon_Catalyst_Vorpal.png',
     type: 'Weapon',
     rarity: 4,
     description:

@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const BloodtaintedGreatsword: Weapon = {
     name: 'Bloodtainted Greatsword',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Siegfry.png',
+    image: '/images/weapons/UI_EquipIcon_Claymore_Siegfry.png',
     type: 'Claymore',
     rarity: 3,
     description:

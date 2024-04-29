@@ -14,7 +14,7 @@ const constellationBonuses: Bonus[] = [
 
 const Jean: Character = {
     name: 'Jean',
-    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Qin.png',
+    icon: '/images/characters/UI_AvatarIcon_Qin.png',
     weapon: 'Sword',
     vision: 'Anemo',
     rarity: 5,
@@ -138,7 +138,7 @@ const Jean: Character = {
     talents: [
         {
             name: 'Normal Attack: Favonius Bladework',
-            image: 'https://api.ambr.top/assets/UI/Skill_A_01.png',
+            image: '/images/characters/Skill_A_01.png',
             description:
                 'Normal Attack\nPerforms up to 5 consecutive strikes.\nCharged Attack\nConsumes a certain amount of stamina to launch an opponent using the power of wind.\nLaunched opponents will slowly fall to the ground.\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.',
             data: {
@@ -316,7 +316,7 @@ const Jean: Character = {
         },
         {
             name: 'Gale Blade',
-            image: 'https://api.ambr.top/assets/UI/Skill_S_Qin_02.png',
+            image: '/images/characters/Skill_S_Qin_02.png',
             description:
                 "Focusing the might of the formless wind around her blade, Jean releases a miniature storm, launching opponents in the direction she aims at, dealing massive\nAnemo DMG\n.\nHold\nAt the cost of continued stamina consumption, Jean can command the whirlwind to pull surrounding opponents and objects towards her front.\nDirection can be adjusted.\nCharacter is immobile during skill duration.\nThat which follows Jean, the wholehearted defender, is a guardian wind that can banish danger from her comrades' presence.",
             data: {
@@ -392,7 +392,7 @@ const Jean: Character = {
         },
         {
             name: 'Dandelion Breeze',
-            image: 'https://api.ambr.top/assets/UI/Skill_E_Qin_01.png',
+            image: '/images/characters/Skill_E_Qin_01.png',
             description:
                 "Calling upon the wind's protection, Jean creates a swirling Dandelion Field, launching surrounding opponents and dealing\nAnemo DMG\n.\nAt the same time, she instantly regenerates a large amount of HP for all party members. The amount of HP restored scales off Jean's ATK.\nDandelion Field\n\u00b7Continuously regenerates HP of characters within the AoE and continuously imbues them with\nAnemo\n.\n\u00b7Deals\nAnemo DMG\nto opponents entering or exiting the Dandelion Field.\nJean's magnanimity is as vast as the dandelion fields, and it is the root of her wish to protect others.",
             data: {
@@ -504,19 +504,19 @@ const Jean: Character = {
     passiveSkills: [
         {
             name: 'Guiding Breeze',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_Cook_Heal.png',
+            image: '/images/characters/UI_Talent_Cook_Heal.png',
             description:
                 'When a Perfect Cooking is achieved on a dish with restorative effects, there is a 12% chance to obtain double the product.',
         },
         {
             name: 'Wind Companion',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Qin_05.png',
+            image: '/images/characters/UI_Talent_S_Qin_05.png',
             description:
                 "On hit, Jean's Normal Attacks have a 50% chance to regenerate HP equal to 15% of Jean's ATK for all party members.",
         },
         {
             name: 'Let the Wind Lead',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Qin_06.png',
+            image: '/images/characters/UI_Talent_S_Qin_06.png',
             description:
                 'Using\nDandelion Breeze\nwill regenerate 20% of its Energy.',
         },
@@ -524,42 +524,42 @@ const Jean: Character = {
     constellations: [
         {
             name: 'Spiraling Tempest',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Qin_01.png',
+            image: '/images/characters/UI_Talent_S_Qin_01.png',
             description:
                 'Increases the pulling speed of\nGale Blade\nafter holding for more than 1s, and increases the DMG dealt by 40%.',
             level: 1,
         },
         {
             name: "People's Aegis",
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Qin_02.png',
+            image: '/images/characters/UI_Talent_S_Qin_02.png',
             description:
                 'When Jean picks up an Elemental Orb/Particle, all party members have their Movement SPD and ATK SPD increased by 15% for 15s.',
             level: 2,
         },
         {
             name: 'When the West Wind Arises',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Qin_02.png',
+            image: '/images/characters/UI_Talent_U_Qin_02.png',
             description:
                 'Increases the Level of\nDandelion Breeze\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: 'Lands of Dandelion',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Qin_03.png',
+            image: '/images/characters/UI_Talent_S_Qin_03.png',
             description:
                 'Within the Field created by\nDandelion Breeze\n, all opponents have their\nAnemo RES\ndecreased by 40%.',
             level: 4,
         },
         {
             name: 'Outbursting Gust',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Qin_01.png',
+            image: '/images/characters/UI_Talent_U_Qin_01.png',
             description:
                 'Increases the Level of\nGale Blade\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: "Lion's Fang, Fair Protector of Mondstadt",
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Qin_04.png',
+            image: '/images/characters/UI_Talent_S_Qin_04.png',
             description:
                 'Incoming DMG is decreased by 35% within the Field created by\nDandelion Breeze\n. Upon leaving the Dandelion Field, this effect lasts for 3 attacks or 10s.',
             level: 6,

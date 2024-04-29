@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const LostPrayerToTheSacredWinds: Weapon = {
     name: 'Lost Prayer to the Sacred Winds',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Fourwinds.png',
+    image: '/images/weapons/UI_EquipIcon_Catalyst_Fourwinds.png',
     type: 'Catalyst',
     rarity: 5,
     description:

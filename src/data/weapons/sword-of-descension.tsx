@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const SwordOfDescension: Weapon = {
     name: 'Sword of Descension',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Psalmus.png',
+    image: '/images/weapons/UI_EquipIcon_Sword_Psalmus.png',
     type: 'Sword',
     rarity: 4,
     description:

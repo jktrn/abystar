@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const FavoniusCodex: Weapon = {
     name: 'Favonius Codex',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Zephyrus.png',
+    image: '/images/weapons/UI_EquipIcon_Catalyst_Zephyrus.png',
     type: 'Catalyst',
     rarity: 4,
     description:

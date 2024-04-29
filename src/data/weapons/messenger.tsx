@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const Messenger: Weapon = {
     name: 'Messenger',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Msg.png',
+    image: '/images/weapons/UI_EquipIcon_Bow_Msg.png',
     type: 'Bow',
     rarity: 3,
     description:

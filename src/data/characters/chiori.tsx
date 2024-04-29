@@ -14,7 +14,7 @@ const constellationBonuses: Bonus[] = [
 
 const Chiori: Character = {
     name: 'Chiori',
-    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Chiori.png',
+    icon: '/images/characters/UI_AvatarIcon_Chiori.png',
     weapon: 'Sword',
     vision: 'Geo',
     rarity: 5,
@@ -138,7 +138,7 @@ const Chiori: Character = {
     talents: [
         {
             name: 'Normal Attack: Weaving Blade',
-            image: 'https://api.ambr.top/assets/UI/Skill_A_01.png',
+            image: '/images/characters/Skill_A_01.png',
             description:
                 'Normal Attack\nPerforms up to 4 rapid strikes.\nCharged Attack\nConsumes a certain amount of Stamina to unleash 2 rapid sword strikes.\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.',
             data: {
@@ -299,7 +299,7 @@ const Chiori: Character = {
         },
         {
             name: 'Fluttering Hasode',
-            image: 'https://api.ambr.top/assets/UI/Skill_S_Chiori_01.png',
+            image: '/images/characters/Skill_S_Chiori_01.png',
             description:
                 'Dashes nimbly forward with silken steps. Once this dash ends, Chiori will summon the automaton doll "Tamoto" beside her and sweep her blade upward, dealing\nAoE Geo DMG\nto nearby opponents based on her ATK and DEF.\nHolding the Skill will cause it to behave differently.\nHold\nEnter Aiming Mode to adjust the dash direction.\nTamoto\n\u00b7 Will slash at nearby opponents at intervals, dealing\nAoE Geo DMG\nbased on Chiori\'s ATK and DEF.\n\u00b7 While active, if there are nearby\nGeo Construct(s)\nor\nGeo Construct(s)\nare created nearby, an additional Tamoto will be summoned next to your active character. Only 1 additional Tamoto can be summoned in this manner, and its duration is independently counted.\n"Sakura red dyes the brocade, the fragrance suffuses the sleeves, the orioles intoxicated."',
             data: {
@@ -392,7 +392,7 @@ const Chiori: Character = {
         },
         {
             name: 'Hiyoku: Twin Blades',
-            image: 'https://api.ambr.top/assets/UI/Skill_E_Chiori_01.png',
+            image: '/images/characters/Skill_E_Chiori_01.png',
             description:
                 'Twin blades leave their sheaths as Chiori slices with the clean cuts of a master tailor, dealing\nAoE Geo DMG\nbased on her ATK and DEF.\n"Master one principle, and the path to all others shall open to you."',
             data: {
@@ -453,19 +453,19 @@ const Chiori: Character = {
     passiveSkills: [
         {
             name: "Brocaded Collar's Beauteous Silhouette",
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Chiori_07.png',
+            image: '/images/characters/UI_Talent_S_Chiori_07.png',
             description:
                 'When any party member is wearing an outfit apart from their default outfit, or is wearing a wind glider other than the Wings of First Flight, your party members will obtain the Swift Stride effect: Movement SPD is increased by 10%.\nThis effect does not take effect in Domains, Trounce Domains, and the Spiral Abyss. Swift Stride does not stack.',
         },
         {
             name: 'Tailor-Made',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Chiori_05.png',
+            image: '/images/characters/UI_Talent_S_Chiori_05.png',
             description:
                 'Gain different effects depending on the next action you take within a short duration after using\nFluttering Hasode\n\'s upward sweep. If you Press the Elemental Skill, you will trigger the Tapestry effect. If you Press your Normal Attack, the Tailoring effect will be triggered instead.\nTapestry\n\u00b7 Switches to the next character in your roster.\n\u00b7 Grants all your party members "Seize the Moment": When your active party member\'s Normal Attacks, Charged Attacks, and Plunging Attacks hit a nearby opponent, "Tamoto" will execute a coordinated attack, dealing 100% of Fluttering Hasode\'s upward sweep DMG as\nAoE Geo DMG\nat the opponent\'s location. DMG dealt this way is considered Elemental Skill DMG.\n\u00b7 "Seize the Moment" lasts 8s, and 1 of "Tamoto"\'s coordinated attack can be unleashed every 2s. 2 such coordinated attacks can occur per "Seize the Moment" effect duration.\nTailoring\n\u00b7 Chiori gains\nGeo infusion\nfor 5s.\nWhen on the field, if Chiori does not either Press her Elemental Skill or use a Normal Attack within a short time after using Fluttering Hasode\'s upward sweep, the Tailoring effect will be triggered by default.',
         },
         {
             name: 'The Finishing Touch',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Chiori_06.png',
+            image: '/images/characters/UI_Talent_S_Chiori_06.png',
             description:
                 'When a nearby party member creates a\nGeo Construct\n, Chiori will gain 20%\nGeo DMG Bonus\nfor 20s.',
         },
@@ -473,42 +473,42 @@ const Chiori: Character = {
     constellations: [
         {
             name: 'Six Paths of Sage Silkcraft',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Chiori_01.png',
+            image: '/images/characters/UI_Talent_S_Chiori_01.png',
             description:
                 'The AoE of the automaton doll "Tamoto" summoned by\nFluttering Hasode\nis increased by 50%.\nAdditionally, if there is a\nGeo\nparty member other than Chiori, Fluttering Hasode will trigger the following after the dash is completed:\n\u00b7 Summon an additional Tamoto. Only one additional Tamoto can exist at the same time, whether summoned by Chiori this way or through the presence of a Geo Construct.\n\u00b7 Triggers the Passive Talent "The Finishing Touch." This effect requires you to first unlock the Passive Talent "The Finishing Touch."',
             level: 1,
         },
         {
             name: 'In Five Colors Dyed',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Chiori_03.png',
+            image: '/images/characters/UI_Talent_S_Chiori_03.png',
             description:
                 'For 10s after using\nHiyoku: Twin Blades\n, a simplified automaton doll, "Kinu," will be summoned next to your active character every 3s. Kinu will attack nearby opponents, dealing\nAoE Geo DMG\nequivalent to 170% of Tamoto\'s DMG. DMG dealt this way is considered Elemental Skill DMG.\nKinu will leave the field after 1 attack or after lasting 3s.',
             level: 2,
         },
         {
             name: 'Four Brocade Embellishments',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Chiori_01.png',
+            image: '/images/characters/UI_Talent_U_Chiori_01.png',
             description:
                 'Increases the Level of\nFluttering Hasode\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: "A Tailor's Three Courtesies",
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Chiori_02.png',
+            image: '/images/characters/UI_Talent_S_Chiori_02.png',
             description:
                 'For 8s after triggering either follow-up effect of the Passive Talent "Tailor-Made," when your current active character\'s Normal, Charged, or Plunging Attacks hit a nearby opponent, a simplified automaton doll, "Kinu," will be summoned near this opponent. You can summon 1 Kinu every 1s in this way, and up to 3 Kinu may be summoned this way during each instance of "Tailor-Made"\'s Seize the Moment or Tailoring effect. The above effect can be triggered up to once every 15s.\nMust unlock the Passive Talent "Tailor-Made" first.',
             level: 4,
         },
         {
             name: 'Two Silken Plumules',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Chiori_02.png',
+            image: '/images/characters/UI_Talent_U_Chiori_02.png',
             description:
                 'Increases the Level of\nHiyoku: Twin Blades\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: 'Sole Principle Pursuit',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Chiori_04.png',
+            image: '/images/characters/UI_Talent_S_Chiori_04.png',
             description:
                 'After triggering a follow-up effect of the Passive Talent "Tailor-Made," Chiori\'s own\nFluttering Hasode\n\'s CD is decreased by 12s. Must unlock the Passive "Tailor-Made" first.\nIn addition, the DMG dealt by Chiori\'s own Normal Attacks is increased by an amount equal to 235% of her own DEF.',
             level: 6,

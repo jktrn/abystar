@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const UltimateOverlordsMegaMagicSword: Weapon = {
     name: '"Ultimate Overlord\'s Mega Magic Sword"',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Champion.png',
+    image: '/images/weapons/UI_EquipIcon_Claymore_Champion.png',
     type: 'Claymore',
     rarity: 4,
     description:

@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const DodocoTales: Weapon = {
     name: 'Dodoco Tales',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Ludiharpastum.png',
+    image: '/images/weapons/UI_EquipIcon_Catalyst_Ludiharpastum.png',
     type: 'Catalyst',
     rarity: 4,
     description:

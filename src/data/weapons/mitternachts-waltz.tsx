@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const MitternachtsWaltz: Weapon = {
     name: 'Mitternachts Waltz',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Nachtblind.png',
+    image: '/images/weapons/UI_EquipIcon_Bow_Nachtblind.png',
     type: 'Bow',
     rarity: 4,
     description: 'A bow painted the color of transgression and nights of illusion.',

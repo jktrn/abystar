@@ -26,7 +26,7 @@ const weaponBonuses: Bonus[] = [
 
 const DragonsBane: Weapon = {
     name: "Dragon's Bane",
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Stardust.png',
+    image: '/images/weapons/UI_EquipIcon_Pole_Stardust.png',
     type: 'Polearm',
     rarity: 4,
     description:

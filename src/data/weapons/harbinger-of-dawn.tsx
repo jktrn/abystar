@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const HarbingerOfDawn: Weapon = {
     name: 'Harbinger of Dawn',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Dawn.png',
+    image: '/images/weapons/UI_EquipIcon_Sword_Dawn.png',
     type: 'Sword',
     rarity: 3,
     description:

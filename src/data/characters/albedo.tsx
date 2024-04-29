@@ -178,7 +178,7 @@ const characterBonuses: Bonus[] = [
                 deal 25% more DMG to opponents whose HP is below 50%
             </span>
         ),
-        icon: 'https://api.ambr.top/assets/UI/UI_Talent_S_Albedo_06.png',
+        icon: '/images/characters/UI_Talent_S_Albedo_06.png',
         effect: (attributes) => {
             const newAttributes = {
                 ...attributes,
@@ -202,7 +202,7 @@ const characterBonuses: Bonus[] = [
                 increases the Elemental Mastery of all party members by 125 for 10s
             </span>
         ),
-        icon: 'https://api.ambr.top/assets/UI/UI_Talent_Combine_Weapon_Double.png',
+        icon: '/images/characters/UI_Talent_Combine_Weapon_Double.png',
         effect: (attributes) => {
             const newAttributes = {
                 ...attributes,
@@ -226,7 +226,7 @@ const constellationBonuses: Bonus[] = [
                 regenerate 1.2 Energy for Albedo.
             </span>
         ),
-        icon: 'https://api.ambr.top/assets/UI/UI_Talent_S_Albedo_01.png',
+        icon: '/images/characters/UI_Talent_S_Albedo_01.png',
         effect: (attributes) => {
             // * Unimplementable
             return { attributes }
@@ -247,7 +247,7 @@ const constellationBonuses: Bonus[] = [
                 30% of Albedo&apos;s DEF (up to 4 stacks)
             </span>
         ),
-        icon: 'https://api.ambr.top/assets/UI/UI_Talent_S_Albedo_02.png',
+        icon: '/images/characters/UI_Talent_S_Albedo_02.png',
         effect: (attributes, talentLevels, currentStacks) => {
             if (!currentStacks) return { attributes }
 
@@ -275,7 +275,7 @@ const constellationBonuses: Bonus[] = [
                 3. Maximum upgrade level is 15.
             </span>
         ),
-        icon: 'https://api.ambr.top/assets/UI/UI_Talent_U_Albedo_01.png',
+        icon: '/images/characters/UI_Talent_U_Albedo_01.png',
         effect: (attributes, talentLevels) => {
             if (!talentLevels) return { attributes }
 
@@ -298,7 +298,7 @@ const constellationBonuses: Bonus[] = [
                 Plunging Attack DMG increased by 30%
             </span>
         ),
-        icon: 'https://api.ambr.top/assets/UI/UI_Talent_S_Albedo_03.png',
+        icon: '/images/characters/UI_Talent_S_Albedo_03.png',
         effect: (attributes) => {
             const newAttributes = {
                 ...attributes,
@@ -322,7 +322,7 @@ const constellationBonuses: Bonus[] = [
                 by 3. Maximum upgrade level is 15.
             </span>
         ),
-        icon: 'https://api.ambr.top/assets/UI/UI_Talent_U_Albedo_02.png',
+        icon: '/images/characters/UI_Talent_U_Albedo_02.png',
         effect: (attributes, talentLevels) => {
             if (!talentLevels) return { attributes }
 
@@ -345,7 +345,7 @@ const constellationBonuses: Bonus[] = [
                 by a shield created by Crystallize have their DMG increased by 17%
             </span>
         ),
-        icon: 'https://api.ambr.top/assets/UI/UI_Talent_S_Albedo_04.png',
+        icon: '/images/characters/UI_Talent_S_Albedo_04.png',
         effect: (attributes) => {
             const newAttributes = {
                 ...attributes,
@@ -361,7 +361,7 @@ const constellationBonuses: Bonus[] = [
 
 const Albedo: Character = {
     name: 'Albedo',
-    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Albedo.png',
+    icon: '/images/characters/UI_AvatarIcon_Albedo.png',
     weapon: 'Sword',
     vision: 'Geo',
     rarity: 5,
@@ -485,7 +485,7 @@ const Albedo: Character = {
     talents: [
         {
             name: 'Normal Attack: Favonius Bladework - Weiss',
-            image: 'https://api.ambr.top/assets/UI/Skill_A_01.png',
+            image: '/images/characters/Skill_A_01.png',
             description:
                 'Normal Attack\nPerforms up to 5 rapid strikes.\nCharged Attack\nConsumes a certain amount of Stamina to unleash 2 rapid sword strikes.\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.',
             data: {
@@ -663,7 +663,7 @@ const Albedo: Character = {
         },
         {
             name: 'Abiogenesis: Solar Isotoma',
-            image: 'https://api.ambr.top/assets/UI/Skill_S_Albedo_01.png',
+            image: '/images/characters/Skill_S_Albedo_01.png',
             description:
                 "Albedo creates a Solar Isotoma using alchemy, which deals\nAoE Geo DMG\non appearance.\nSolar Isotoma\nhas the following properties:\n\u00b7When opponents within the Solar Isotoma field take DMG, the Solar Isotoma will generate Transient Blossoms which deal\nAoE Geo DMG\n. DMG dealt scales off Albedo's DEF.\n\u00b7Transient Blossoms can only be generated once every 2s.\n\u00b7When a character is located at the locus of the Solar Isotoma, the Solar Isotoma will accumulate Geo power to form a crystallized platform that lifts the character up to a certain height. Only one crystallized platform can exist at a time.\n\u00b7Solar Isotoma is considered a\nGeo construct\n. Only one Solar Isotoma created by Albedo himself can exist at a time.\nHold\nto designate the location of the skill.\nThis Geo bloom has an unusual property mirrored in the aim of alchemy. To rise from the earth, soar into the sky, and become the sun.",
             data: {
@@ -739,7 +739,7 @@ const Albedo: Character = {
         },
         {
             name: 'Rite of Progeniture: Tectonic Tide',
-            image: 'https://api.ambr.top/assets/UI/Skill_E_Albedo_01.png',
+            image: '/images/characters/Skill_E_Albedo_01.png',
             description:
                 "Under Albedo's command, Geo crystals surge and burst forth, dealing\nAoE Geo DMG\nin front of him.\nIf a Solar Isotoma created by Albedo himself is on the field, 7 Fatal Blossoms will be generated in the Solar Isotoma field, bursting violently into bloom and dealing\nAoE Geo DMG\n.\nTectonic Tide DMG and Fatal Blossom DMG will not generate Transient Blossoms.\nUnder the Kreideprinz's command, the tectonic tide of creation seethes into life.",
             data: {
@@ -834,19 +834,19 @@ const Albedo: Character = {
     passiveSkills: [
         {
             name: 'Flash of Genius',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_Combine_Weapon_Double.png',
+            image: '/images/characters/UI_Talent_Combine_Weapon_Double.png',
             description:
                 'When Albedo crafts Weapon Ascension Materials, he has a 10% chance to receive double the product.',
         },
         {
             name: 'Calcite Might',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Albedo_05.png',
+            image: '/images/characters/UI_Talent_S_Albedo_05.png',
             description:
                 'Transient Blossoms generated by\nAbiogenesis: Solar Isotoma\ndeal 25% more DMG to opponents whose HP is below 50%.',
         },
         {
             name: 'Homuncular Nature',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Albedo_06.png',
+            image: '/images/characters/UI_Talent_S_Albedo_06.png',
             description:
                 'Using\nRite of Progeniture: Tectonic Tide\nincreases the Elemental Mastery of nearby party members by 125 for 10s.',
         },
@@ -854,42 +854,42 @@ const Albedo: Character = {
     constellations: [
         {
             name: 'Flower of Eden',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Albedo_01.png',
+            image: '/images/characters/UI_Talent_S_Albedo_01.png',
             description:
                 "Transient Blossoms generated by Albedo's\nAbiogenesis: Solar Isotoma\nregenerate 1.2 Energy for Albedo.",
             level: 1,
         },
         {
             name: 'Opening of Phanerozoic',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Albedo_02.png',
+            image: '/images/characters/UI_Talent_S_Albedo_02.png',
             description:
                 "Transient Blossoms generated by\nAbiogenesis: Solar Isotoma\ngrant Albedo Fatal Reckoning for 30s:\n\u00b7Unleashing\nRite of Progeniture: Tectonic Tide\nconsumes all stacks of Fatal Reckoning. Each stack of Fatal Reckoning consumed increases the DMG dealt by Fatal Blossoms and Rite of Progeniture: Tectonic Tide's burst DMG by 30% of Albedo's DEF.\n\u00b7This effect stacks up to 4 times.",
             level: 2,
         },
         {
             name: 'Grace of Helios',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Albedo_01.png',
+            image: '/images/characters/UI_Talent_U_Albedo_01.png',
             description:
                 'Increases the Level of\nAbiogenesis: Solar Isotoma\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: 'Descent of Divinity',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Albedo_03.png',
+            image: '/images/characters/UI_Talent_S_Albedo_03.png',
             description:
                 'Active party members within the Solar Isotoma field have their Plunging Attack DMG increased by 30%.',
             level: 4,
         },
         {
             name: 'Tide of Hadean',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Albedo_02.png',
+            image: '/images/characters/UI_Talent_U_Albedo_02.png',
             description:
                 'Increases the Level of\nRite of Progeniture: Tectonic Tide\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: 'Dust of Purification',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Albedo_04.png',
+            image: '/images/characters/UI_Talent_S_Albedo_04.png',
             description:
                 'Active party members within the Solar Isotoma field who are protected by a shield created by Crystallize have their DMG increased by 17%.',
             level: 6,

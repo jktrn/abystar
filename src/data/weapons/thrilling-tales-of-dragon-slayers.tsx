@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const ThrillingTalesOfDragonSlayers: Weapon = {
     name: 'Thrilling Tales of Dragon Slayers',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Pulpfic.png',
+    image: '/images/weapons/UI_EquipIcon_Catalyst_Pulpfic.png',
     type: 'Catalyst',
     rarity: 3,
     description:

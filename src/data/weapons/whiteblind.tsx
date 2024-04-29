@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const Whiteblind: Weapon = {
     name: 'Whiteblind',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Exotic.png',
+    image: '/images/weapons/UI_EquipIcon_Claymore_Exotic.png',
     type: 'Weapon',
     rarity: 4,
     description:

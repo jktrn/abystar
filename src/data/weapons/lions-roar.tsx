@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const LionsRoar: Weapon = {
     name: "Lion's Roar",
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Rockkiller.png',
+    image: '/images/weapons/UI_EquipIcon_Sword_Rockkiller.png',
     type: 'Sword',
     rarity: 4,
     description:

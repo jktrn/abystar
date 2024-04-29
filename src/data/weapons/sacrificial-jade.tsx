@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const SacrificialJade: Weapon = {
     name: 'Sacrificial Jade',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Yue.png',
+    image: '/images/weapons/UI_EquipIcon_Catalyst_Yue.png',
     type: 'Catalyst',
     rarity: 4,
     description:

@@ -29,7 +29,7 @@ const weaponBonuses: Bonus[] = [
 
 const BlackcliffPole: Weapon = {
     name: 'Blackcliff Pole',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Blackrock.png',
+    image: '/images/weapons/UI_EquipIcon_Pole_Blackrock.png',
     type: 'Polearm',
     rarity: 4,
     description:

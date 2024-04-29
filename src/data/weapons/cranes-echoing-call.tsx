@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const CranesEchoingCall: Weapon = {
     name: "Crane's Echoing Call",
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_MountainGale.png',
+    image: '/images/weapons/UI_EquipIcon_Catalyst_MountainGale.png',
     type: 'Catalyst',
     rarity: 5,
     description:

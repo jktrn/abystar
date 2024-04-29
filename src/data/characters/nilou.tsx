@@ -14,7 +14,7 @@ const constellationBonuses: Bonus[] = [
 
 const Nilou: Character = {
     name: 'Nilou',
-    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Nilou.png',
+    icon: '/images/characters/UI_AvatarIcon_Nilou.png',
     weapon: 'Sword',
     vision: 'Hydro',
     rarity: 5,
@@ -138,7 +138,7 @@ const Nilou: Character = {
     talents: [
         {
             name: 'Normal Attack: Dance of Samser',
-            image: 'https://api.ambr.top/assets/UI/Skill_A_01.png',
+            image: '/images/characters/Skill_A_01.png',
             description:
                 'Normal Attack\nPerforms up to 3 consecutive sword strikes.\nCharged Attack\nConsumes a certain amount of Stamina to perform a twirling slash.\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.',
             data: {
@@ -282,7 +282,7 @@ const Nilou: Character = {
         },
         {
             name: 'Dance of Haftkarsvar',
-            image: 'https://api.ambr.top/assets/UI/Skill_S_Nilou_01.png',
+            image: '/images/characters/Skill_S_Nilou_01.png',
             description:
                 "Enters the Pirouette state, dealing\nHydro DMG\nto nearby opponents based on Nilou's Max HP.\nWhile she is in the Pirouette state, Nilou's Normal Attacks and Elemental Skill will cause her to enter the Sword Dance and Whirling Steps stances respectively, causing DMG she deals to be converted to\nHydro DMG\nthat cannot be overridden and that is considered Elemental Skill DMG.\nIn these stances, Nilou's third dance step will end Pirouette, and has the following effects based on the type of said dance step:\n\u00b7Sword Dance: unleashes a Luminous Illusion that deals\nHydro DMG\nto opponents it touches and grants Nilou the Lunar Prayer effect. This effect converts Nilou's Normal Attacks into Sword Dance techniques, and her final hit will unleash a Luminous Illusion.\n\u00b7Whirling Steps: Nilou unleashes a Whirling Water Wheel that deals\nAoE Hydro DMG\nand creates a Tranquility Aura that follows your active character around and applies\nWet\nto opponents within its AoE.\nNilou is unable to perform Charged Attacks when under the effect of Pirouette or Lunar Prayer. These effects will be removed once she leaves the field.\n\"Daintily her toes touch the water's face, and the light that ripples forth equals even the seven heavens.\"",
             data: {
@@ -426,7 +426,7 @@ const Nilou: Character = {
         },
         {
             name: 'Dance of Abzendegi: Distant Dreams, Listening Spring',
-            image: 'https://api.ambr.top/assets/UI/Skill_E_Nilou_01.png',
+            image: '/images/characters/Skill_E_Nilou_01.png',
             description:
                 'Begins the dance of faraway dreams and springs that hear, causing a Lotus of Distant Waters to bloom, dealing\nAoE Hydro DMG\nbased on Nilou\'s Max HP and applying the Lingering Aeon effect to all opponents hit.\nAfter an interval, opponents affected by Lingering Aeon will take\nHydro DMG\n.\n"We have never witnessed that distant dream, but this dance can bring it to life."',
             data: {
@@ -504,19 +504,19 @@ const Nilou: Character = {
     passiveSkills: [
         {
             name: 'White Jade Lotus',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Yunjin_07.png',
+            image: '/images/characters/UI_Talent_S_Yunjin_07.png',
             description:
                 'When Perfect Cooking is achieved on Food with Adventure-related effects, there is a 12% chance to obtain double the product.',
         },
         {
             name: 'Court of Dancing Petals',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Nilou_05.png',
+            image: '/images/characters/UI_Talent_S_Nilou_05.png',
             description:
                 "When all characters in the party are all\nDendro\nor\nHydro\n, and there are at least one Dendro character and one Hydro character:\nThe completion of the third dance step of Nilou's\nDance of Haftkarsvar\nwill grant all nearby characters the Golden Chalice's Bounty for 30s.\nCharacters under the effect of Golden Chalice's Bounty will increase the Elemental Mastery of all nearby characters by 100 for 10s whenever they are hit by\nDendro attacks\n. Also, triggering the Bloom reaction will create Bountiful Cores instead of Dendro Cores.\nSuch Cores will burst very quickly after being created, and they have larger AoEs.\nBountiful Cores cannot trigger Hyperbloom or Burgeon, and they share an upper numerical limit with Dendro Cores. Bountiful Core DMG is considered DMG dealt by Dendro Cores produced by Bloom.\nShould the party not meet the conditions for this Passive Talent, any existing Golden Chalice's Bounty effects will be canceled.",
         },
         {
             name: 'Dreamy Dance of Aeons',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Nilou_06.png',
+            image: '/images/characters/UI_Talent_S_Nilou_06.png',
             description:
                 "Every 1,000 points of Nilou's Max HP above 30,000 will cause the DMG dealt by Bountiful Cores created by characters affected by Golden Chalice's Bounty to increase by 9%.\nThe maximum increase in Bountiful Core DMG that can be achieved this way is 400%.",
         },
@@ -524,42 +524,42 @@ const Nilou: Character = {
     constellations: [
         {
             name: 'Dance of the Waning Moon',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Nilou_01.png',
+            image: '/images/characters/UI_Talent_S_Nilou_01.png',
             description:
                 "Dance of Haftkarsvar\nwill be enhanced as follows:\n\u00b7Luminous Illusion DMG is increased by 65%.\n\u00b7The Tranquility Aura's duration is extended by 6s.",
             level: 1,
         },
         {
             name: 'The Starry Skies Their Flowers Rain',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Nilou_02.png',
+            image: '/images/characters/UI_Talent_S_Nilou_02.png',
             description:
                 'After characters affected by the Golden Chalice\'s Bounty deal\nHydro DMG\nto an opponent, that opponent\'s\nHydro RES\nwill be decreased by 35% for 10s. After a triggered Bloom reaction deals DMG to opponents, their\nDendro RES\nwill be decreased by 35% for 10s.\nYou need to have unlocked the "Court of Dancing Petals" Talent.',
             level: 2,
         },
         {
             name: 'Beguiling Shadowstep',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Nilou_01.png',
+            image: '/images/characters/UI_Talent_U_Nilou_01.png',
             description:
                 'Increases the Level of\nDance of Abzendegi: Distant Dreams, Listening Spring\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: 'Fricative Pulse',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Nilou_03.png',
+            image: '/images/characters/UI_Talent_S_Nilou_03.png',
             description:
                 "After the third dance step of\nDance of Haftkarsvar\n's Pirouette hits opponents, Nilou will gain 15 Elemental Energy, and DMG from her\nDance of Abzendegi: Distant Dreams, Listening Spring\nwill be increased by 50% for 8s.",
             level: 4,
         },
         {
             name: 'Twirling Light',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Nilou_02.png',
+            image: '/images/characters/UI_Talent_U_Nilou_02.png',
             description:
                 'Increases the Level of\nDance of Haftkarsvar\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: "Frostbreaker's Melody",
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Nilou_04.png',
+            image: '/images/characters/UI_Talent_S_Nilou_04.png',
             description:
                 "For every 1,000 points of Max HP, Nilou's CRIT Rate and CRIT DMG will increase by 0.6% and 1.2% respectively.\nThe maximum increase in CRIT Rate and CRIT DMG via this method is 30% and 60% respectively.",
             level: 6,

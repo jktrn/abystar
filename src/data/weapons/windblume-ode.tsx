@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const WindblumeOde: Weapon = {
     name: 'Windblume Ode',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Fleurfair.png',
+    image: '/images/weapons/UI_EquipIcon_Bow_Fleurfair.png',
     type: 'Bow',
     rarity: 4,
     description:

@@ -138,7 +138,7 @@ const TravelerHydro: Character = {
     talents: [
         {
             name: 'Normal Attack: Foreign Stream',
-            image: 'https://api.ambr.top/assets/UI/Skill_A_01.png',
+            image: '/images/characters/Skill_A_01.png',
             description:
                 'Normal Attack\nPerforms up to 5 rapid strikes.\nCharged Attack\nConsumes a certain amount of Stamina to unleash 2 rapid sword strikes.\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.',
             data: {
@@ -316,7 +316,7 @@ const TravelerHydro: Character = {
         },
         {
             name: 'Aquacrest Saber',
-            image: 'https://api.ambr.top/assets/UI/Skill_S_PlayerWater_01.png',
+            image: '/images/characters/Skill_S_PlayerWater_01.png',
             description:
                 "Unleashes a torrent that can cleanse the world.\nPress\nSends a Torrent Surge forward that will deal\nHydro DMG\nto opponents it comes into contact with.\nHold\nEnter Aiming Mode and constantly fire off Dewdrops in the direction in which you are aiming, dealing\nHydro DMG\nto opponents they hit.\nWhen the skill ends, it will send a Torrent Surge forward that will deal\nHydro DMG\nto opponents it comes into contact with.\nSuffusion: When using the Hold configuration of this skill, if the Traveler's HP is higher than 50%, the DMG dealt by Dewdrops will increase based on the Traveler's Max HP, and the Traveler will lose a fixed amount of HP every second.\nArkhe: Pneuma\nAt certain intervals, after using Torrent Surge, this skill will unleash a Spiritbreath Thorn that pierces opponents, dealing Pneuma-aligned\nHydro DMG\n.\nYou studied the ripples in the water with Paimon.",
             data: {
@@ -460,7 +460,7 @@ const TravelerHydro: Character = {
         },
         {
             name: 'Rising Waters',
-            image: 'https://api.ambr.top/assets/UI/Skill_E_PlayerWater_01.png',
+            image: '/images/characters/Skill_E_PlayerWater_01.png',
             description:
                 'Unleashes a slow-moving floating bubble that deals continuous\nHydro DMG\nto nearby opponents.\nYou studied the ebb and flow of the tides with Paimon.',
             data: {
@@ -538,13 +538,13 @@ const TravelerHydro: Character = {
     passiveSkills: [
         {
             name: 'Spotless Waters',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_PlayerWater_05.png',
+            image: '/images/characters/UI_Talent_S_PlayerWater_05.png',
             description:
                 'After the Dewdrop fired by the Hold Mode of the\nAquacrest Saber\nhits an opponent, a Sourcewater Droplet will be generated near to the Traveler. If the Traveler picks it up, they will restore 7% HP.\n1 Droplet can be created this way every second, and each use of Aquacrest Saber can create 4 Droplets at most.',
         },
         {
             name: 'Clear Waters',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_PlayerWater_06.png',
+            image: '/images/characters/UI_Talent_S_PlayerWater_06.png',
             description:
                 "If HP has been consumed via Suffusion while using the Hold Mode\nAquacrest Saber\n, the Torrent Surge at the skill's end will deal Bonus DMG equal to 45% of the total HP the Traveler has consumed in this skill use via Suffusion.\nThe maximum DMG Bonus that can be gained this way is 5,000.",
         },
@@ -552,42 +552,42 @@ const TravelerHydro: Character = {
     constellations: [
         {
             name: 'Swelling Lake',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_PlayerWater_01.png',
+            image: '/images/characters/UI_Talent_S_PlayerWater_01.png',
             description:
                 'Picking up a Sourcewater Droplet will restore 2 Energy to the Traveler.\nRequires the Passive Talent "Spotless Waters."',
             level: 1,
         },
         {
             name: 'Trickling Purity',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_PlayerWater_02.png',
+            image: '/images/characters/UI_Talent_S_PlayerWater_02.png',
             description:
                 "The Movement SPD of\nRising Waters\n' bubble will be decreased by 30%, and its duration increased by 3s.",
             level: 2,
         },
         {
             name: 'Turbulent Ripples',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_PlayerWater_01.png',
+            image: '/images/characters/UI_Talent_U_PlayerWater_01.png',
             description:
                 'Increases the Level of\nAquacrest Saber\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: 'Pouring Descent',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_PlayerWater_03.png',
+            image: '/images/characters/UI_Talent_S_PlayerWater_03.png',
             description:
                 "When using\nAquacrest Saber\n, an Aquacrest Aegis that can absorb 10% of the Traveler's Max HP in DMG will be created and will absorb\nHydro DMG\nwith 250% effectiveness. It will persist until the Traveler finishes using the skill.\nOnce every 2s, after a Dewdrop hits an opponent, if the Traveler is being protected by Aquacrest Aegis, the DMG Absorption of the Aegis will be restored to 10% of the Traveler's Max HP. If the Traveler is not presently being protected by an Aegis, one will be redeployed.",
             level: 4,
         },
         {
             name: 'Churning Whirlpool',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_PlayerWater_02.png',
+            image: '/images/characters/UI_Talent_U_PlayerWater_02.png',
             description:
                 'Increases the Level of\nRising Waters\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: 'Tides of Justice',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_PlayerWater_04.png',
+            image: '/images/characters/UI_Talent_S_PlayerWater_04.png',
             description:
                 "When the Traveler picks up a Sourcewater Droplet, they will restore HP to a nearby party member with the lowest remaining HP percentage based on 6% of said member's Max HP.",
             level: 6,

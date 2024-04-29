@@ -263,7 +263,7 @@ const characterBonuses: Bonus[] = [
                 more) increases the Salon Members&apos; DMG by 10%/20%/30%/40%
             </span>
         ),
-        icon: 'https://api.ambr.top/assets/UI/Skill_S_Furina_01.png',
+        icon: '/images/characters/Skill_S_Furina_01.png',
         effect: (attributes, talentLevels, currentStacks) => {
             if (!currentStacks) return { attributes }
             const newAttributes = {
@@ -299,7 +299,7 @@ const characterBonuses: Bonus[] = [
                 for percentages)
             </span>
         ),
-        icon: 'https://api.ambr.top/assets/UI/Skill_E_Furina_01.png',
+        icon: '/images/characters/Skill_E_Furina_01.png',
         effect: (attributes, talentLevels, currentStacks, state) => {
             if (!currentStacks || !talentLevels || !state) {
                 return { attributes }
@@ -359,7 +359,7 @@ const characterBonuses: Bonus[] = [
                 Member DMG by 0.7% (up to 28%)
             </span>
         ),
-        icon: 'https://api.ambr.top/assets/UI/UI_Talent_S_Furina_06.png',
+        icon: '/images/characters/UI_Talent_S_Furina_06.png',
         effect: (attributes) => {
             const bonusDamage = Math.min(
                 0.28,
@@ -391,7 +391,7 @@ const constellationBonuses: Bonus[] = [
                 Furina&apos;s maximum Fanfare stacks is increase by 100 (up to 400)
             </span>
         ),
-        icon: 'https://api.ambr.top/assets/UI/UI_Talent_S_Furina_01.png',
+        icon: '/images/characters/UI_Talent_S_Furina_01.png',
         effect: (attributes) => {
             const newAttributes = {
                 ...attributes,
@@ -417,7 +417,7 @@ const constellationBonuses: Bonus[] = [
                 Max HP increase is 140%.
             </span>
         ),
-        icon: 'https://api.ambr.top/assets/UI/UI_Talent_S_Furina_04.png',
+        icon: '/images/characters/UI_Talent_S_Furina_04.png',
         effect: (attributes) => {
             // * Unimplementable; no options allow for >400 stacks
             return { attributes }
@@ -436,7 +436,7 @@ const constellationBonuses: Bonus[] = [
                 Maximum upgrade level is 15.
             </span>
         ),
-        icon: 'https://api.ambr.top/assets/UI/UI_Talent_U_Furina_02.png',
+        icon: '/images/characters/UI_Talent_U_Furina_02.png',
         effect: (attributes, talentLevels) => {
             if (!talentLevels) return { attributes }
 
@@ -460,7 +460,7 @@ const constellationBonuses: Bonus[] = [
                 will restore 4 Energy. This effect can be triggered once every 5s.
             </span>
         ),
-        icon: 'https://api.ambr.top/assets/UI/UI_Talent_S_Furina_03.png',
+        icon: '/images/characters/UI_Talent_S_Furina_03.png',
         effect: (attributes) => {
             // * Unimplementable
             return { attributes }
@@ -479,7 +479,7 @@ const constellationBonuses: Bonus[] = [
                 Maximum upgrade level is 15.
             </span>
         ),
-        icon: 'https://api.ambr.top/assets/UI/UI_Talent_U_Furina_01.png',
+        icon: '/images/characters/UI_Talent_U_Furina_01.png',
         effect: (attributes, talentLevels) => {
             if (!talentLevels) return { attributes }
 
@@ -518,7 +518,7 @@ const constellationBonuses: Bonus[] = [
                 </ul>
             </span>
         ),
-        icon: 'https://api.ambr.top/assets/UI/UI_Talent_S_Furina_02.png',
+        icon: '/images/characters/UI_Talent_S_Furina_02.png',
         effect: (attributes, talentLevels, currentStacks, state) => {
             if (!talentLevels || !state) return { attributes }
 
@@ -561,7 +561,7 @@ const constellationBonuses: Bonus[] = [
 
 const Furina: Character = {
     name: 'Furina',
-    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Furina.png',
+    icon: '/images/characters/UI_AvatarIcon_Furina.png',
     weapon: 'Sword',
     vision: 'Hydro',
     rarity: 5,
@@ -685,7 +685,7 @@ const Furina: Character = {
     talents: [
         {
             name: "Normal Attack: Soloist's Solicitation",
-            image: 'https://api.ambr.top/assets/UI/Skill_A_01.png',
+            image: '/images/characters/Skill_A_01.png',
             description:
                 'Normal Attack\nPerforms up to 4 consecutive strikes.\nCharged Attack\nConsumes a certain amount of Stamina to unleash a solo dance, dealing Physical DMG to nearby opponents and changing her Arkhe alignment. If Salon Members or Singer of Many Waters summoned by her Elemental Skill "Salon Solitaire" are present, their lineup will switch in response.\nArkhe: Seats Sacred and Secular\nAt intervals, when Furina\'s Normal Attacks hit, a Spiritbreath Thorn or a Surging Blade will descend based on her current alignment, dealing\nHydro DMG\nbased on her current alignment.\nWhen Furina takes the field, her starting Arkhe will be Ousia.\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.',
             data: {
@@ -914,7 +914,7 @@ const Furina: Character = {
         },
         {
             name: 'Salon Solitaire',
-            image: 'https://api.ambr.top/assets/UI/Skill_S_Furina_01.png',
+            image: '/images/characters/Skill_S_Furina_01.png',
             description:
                 "Invites the guests of the Salon Solitaire to come forth and abet in Furina's performance. Will summon either the Salon Members or the Singer of Many Waters based on Furina's current\nArkhe alignment\n.\nOusia\nFoaming bubbles like celebrants shall dance, dealing\nAoE Hydro DMG\nbased on Furina's Max HP and summoning 3 Salon Members: the Ball Octopus-shaped Gentilhomme Usher, the Bubbly Seahorse-shaped Surintendante Chevalmarin, and the Armored Crab-shaped Mademoiselle Crabaletta.\nThey will attack nearby opponents at intervals, prioritizing the target of the active character, dealing\nHydro\nDMG based on Max HP.\nWhen they attack, if character(s) with more than 50% HP are nearby, the Members will increase their current attack's power based on the number of such characters, and consume said characters' HP. If 1/2/3/4 (or more) characters meet these requirements, the Members' attacks will deal 110%/120%/130%/140% of their original DMG.\nPneuma\nSummons the Singer of Many Waters, who will heal nearby active character(s) based on Max HP at intervals.\nThe Salon Members and Singer of Many Waters share a duration, and when Furina uses her Charged Attack to change the guest type, the new guests will inherit the initial duration.\nWhile the Salon Members or the Singer of Many Waters is on the field, Furina can move on the water's surface.\nA fixed roster of regulars frequent Furina's Salon Solitaire. At other times, Mademoiselle Crabaletta, Surintendante Chevalmarin, and Gentilhomme Usher shall visit, and on gloomy Wednesdays, it is the singer who comes by.",
             data: {
@@ -1092,7 +1092,7 @@ const Furina: Character = {
         },
         {
             name: 'Let the People Rejoice',
-            image: 'https://api.ambr.top/assets/UI/Skill_E_Furina_01.png',
+            image: '/images/characters/Skill_E_Furina_01.png',
             description:
                 "Rouses the impulse to revel, creating a stage of foam that will deal\nAoE Hydro DMG\nbased on Furina's Max HP and cause nearby party members to enter the Universal Revelry state: During this time, when nearby party members' HP increases or decreases, 1 Fanfare point will be granted to Furina for each percentage point of their Max HP by which their HP changes.\nAt the same time, Furina will increase the DMG dealt by and Incoming Healing Bonus of all nearby party members based on the amount of Fanfare she has.\nWhen the duration ends, Furina's Fanfare points will be cleared.\n\"Cheer! Give praise! Be awed! Raise your glasses! Every night bereft of banqueting is a sordid squandering of sore, sober daylight... And, uh, those who are not yet of age may have grape juice instead!\"",
             data: {
@@ -1221,19 +1221,19 @@ const Furina: Character = {
     passiveSkills: [
         {
             name: 'The Sea Is My Stage',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Furina_07.png',
+            image: '/images/characters/UI_Talent_S_Furina_07.png',
             description:
                 'Xenochromatic Fontemer Aberrant ability CD decreased by 30%.',
         },
         {
             name: 'Endless Waltz',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Furina_05.png',
+            image: '/images/characters/UI_Talent_S_Furina_05.png',
             description:
                 'When the active character in your party receives healing, if the source of the healing is not Furina herself and the healing overflows, then Furina will heal nearby party members for 2% of their Max HP once every 2s for the next 4s.',
         },
         {
             name: 'Unheard Confession',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Furina_06.png',
+            image: '/images/characters/UI_Talent_S_Furina_06.png',
             description:
                 "Every 1,000 points of Furina's Max HP can buff the different Arkhe-aligned\nSalon Solitaire\nin the following ways:\nWill increase Salon Members' DMG dealt by 0.7%, up to a maximum of 28%.\nWill decrease the Singer of Many Waters' healing interval for nearby active characters by 0.4%, up to a maximum of 16%.",
         },
@@ -1241,42 +1241,42 @@ const Furina: Character = {
     constellations: [
         {
             name: '"Love Is a Rebellious Bird That None Can Tame"',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Furina_01.png',
+            image: '/images/characters/UI_Talent_S_Furina_01.png',
             description:
                 "When using\nLet the People Rejoice\n, Furina will gain 150 Fanfare.\nAdditionally, Furina's Fanfare limit is increased by 100.",
             level: 1,
         },
         {
             name: '"A Woman Adapts Like Duckweed in Water"',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Furina_04.png',
+            image: '/images/characters/UI_Talent_S_Furina_04.png',
             description:
                 "While\nLet the People Rejoice\nlasts, Furina's Fanfare gain from increases or decreases in nearby characters' HP is increased by 250%. Each point of Fanfare above the limit will increase Furina's Max HP by 0.35%. Her maximum Max HP increase is 140%.",
             level: 2,
         },
         {
             name: '"My Secret Is Hidden Within Me, No One Will Know My Name"',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Furina_02.png',
+            image: '/images/characters/UI_Talent_U_Furina_02.png',
             description:
                 'Increases the Level of\nLet the People Rejoice\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: '"They Know Not Life, Who Dwelt in the Netherworld Not!"',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Furina_03.png',
+            image: '/images/characters/UI_Talent_S_Furina_03.png',
             description:
                 'When the Salon Members from\nSalon Solitaire\nhit an opponent, or the Singer of Many Waters restores HP to nearby active characters, Furina will restore 4 Energy. This effect can be triggered once every 5s.',
             level: 4,
         },
         {
             name: '"His Name I Now Know, It Is...!"',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Furina_01.png',
+            image: '/images/characters/UI_Talent_U_Furina_01.png',
             description:
                 'Increases the Level of\nSalon Solitaire\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: '"Hear Me \u2014 Let Us Raise the Chalice of Love!"',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Furina_02.png',
+            image: '/images/characters/UI_Talent_S_Furina_02.png',
             description:
                 'When using\nSalon Solitaire\n, Furina gains "Center of Attention" for 10s.\nThroughout the duration, Furina\'s Normal Attacks, Charged Attacks, and Plunging Attacks are converted into\nHydro DMG\nwhich cannot be overridden by any other elemental infusion. DMG is also increased by an amount equivalent to 18% of Furina\'s max HP.\nThroughout the duration, Furina\'s Normal Attacks (not including Arkhe: Seats Sacred and Secular Attacks), Charged Attacks, and the impact of Plunging Attacks will cause different effects up to every 0.1s after hitting opponents depending on her current Arkhe alignment:\nArkhe: Ousia\nEvery 1s, all nearby characters in the party will be healed by 4% of Furina\'s max HP, for a duration of 2.9s. Triggering this effect again will extend its duration.\nArkhe: Pneuma\nThis Normal Attack (not including Arkhe: Seats Sacred and Secular Attacks), Charged Attack, or Plunging Attack ground impact DMG will be further increased by an amount equivalent to 25% of Furina\'s max HP. When any of the attacks mentioned previously hit an opponent, all nearby characters in the party will consume 1% of their current HP.\nDuring the duration of each instance of "Center of Attention," the above effects can be triggered up to 6 times. "Center of Attention" will end when its effects have triggered 6 times or when the duration expires.',
             level: 6,

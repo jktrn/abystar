@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const WanderingEvenstar: Weapon = {
     name: 'Wandering Evenstar',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Pleroma.png',
+    image: '/images/weapons/UI_EquipIcon_Catalyst_Pleroma.png',
     type: 'Catalyst',
     rarity: 4,
     description:

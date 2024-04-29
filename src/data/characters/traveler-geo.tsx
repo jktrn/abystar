@@ -138,7 +138,7 @@ const TravelerGeo: Character = {
     talents: [
         {
             name: 'Normal Attack: Foreign Rockblade',
-            image: 'https://api.ambr.top/assets/UI/Skill_A_01.png',
+            image: '/images/characters/Skill_A_01.png',
             description:
                 'Normal Attack\nPerforms up to 5 rapid strikes.\nCharged Attack\nConsumes a certain amount of Stamina to unleash 2 rapid sword strikes.\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.',
             data: {
@@ -316,7 +316,7 @@ const TravelerGeo: Character = {
         },
         {
             name: 'Starfell Sword',
-            image: 'https://api.ambr.top/assets/UI/Skill_S_PlayerRock_01.png',
+            image: '/images/characters/Skill_S_PlayerRock_01.png',
             description:
                 "You disgorge a meteorite from the depths of the earth, dealing\nAoE Geo DMG\n.\nThe meteorite is considered a\nGeo Construct\n, and can be climbed or used to block attacks.\nHold\nThis skill's positioning may be adjusted.\nYou spoke with Paimon about the final destination of falling stars.",
             data: {
@@ -375,7 +375,7 @@ const TravelerGeo: Character = {
         },
         {
             name: 'Wake of Earth',
-            image: 'https://api.ambr.top/assets/UI/Skill_E_PlayerRock_01.png',
+            image: '/images/characters/Skill_E_PlayerRock_01.png',
             description:
                 'Energizing the Geo deep underground, you set off expanding shockwaves.\nLaunches surrounding opponents back and deals\nAoE Geo DMG\n.\nA stone wall is erected at the edges of the shockwave.\nThe stone wall is considered a\nGeo Construct\n, and may be used to block attacks.\nYou and Paimon studied the pulse of the mountains.',
             data: {
@@ -453,12 +453,12 @@ const TravelerGeo: Character = {
     passiveSkills: [
         {
             name: 'Shattered Darkrock',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_PlayerRock_05.png',
+            image: '/images/characters/UI_Talent_S_PlayerRock_05.png',
             description: "Reduces\nStarfell Sword\n's CD by 2s.",
         },
         {
             name: 'Frenzied Rockslide',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_PlayerRock_06.png',
+            image: '/images/characters/UI_Talent_S_PlayerRock_06.png',
             description:
                 'The final hit of a Normal Attack combo triggers a collapse, dealing 60% of ATK as\nAoE Geo DMG\n.',
         },
@@ -466,42 +466,42 @@ const TravelerGeo: Character = {
     constellations: [
         {
             name: 'Invincible Stonewall',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_PlayerRock_01.png',
+            image: '/images/characters/UI_Talent_S_PlayerRock_01.png',
             description:
                 'Party members within the radius of\nWake of Earth\nhave their CRIT Rate increased by 10% and have increased resistance against interruption.',
             level: 1,
         },
         {
             name: 'Rockcore Meltdown',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_PlayerRock_02.png',
+            image: '/images/characters/UI_Talent_S_PlayerRock_02.png',
             description:
                 'When the meteorite created by\nStarfell Sword\nis destroyed, it will also explode, dealing additional\nAoE Geo DMG\nequal to the amount of damage dealt by Starfell Sword.',
             level: 2,
         },
         {
             name: 'Will of the Rock',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_PlayerRock_02.png',
+            image: '/images/characters/UI_Talent_U_PlayerRock_02.png',
             description:
                 'Increases the Level of\nWake of Earth\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: 'Reaction Force',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_PlayerRock_03.png',
+            image: '/images/characters/UI_Talent_S_PlayerRock_03.png',
             description:
                 'The shockwave triggered by\nWake of Earth\nregenerates 5 Energy for every opponent hit.\nA maximum of 25 Energy can be regenerated in this manner at any one time.',
             level: 4,
         },
         {
             name: 'Meteorite Impact',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_PlayerRock_01.png',
+            image: '/images/characters/UI_Talent_U_PlayerRock_01.png',
             description:
                 'Increases the Level of\nStarfell Sword\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: 'Everlasting Boulder',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_PlayerRock_04.png',
+            image: '/images/characters/UI_Talent_S_PlayerRock_04.png',
             description:
                 'The barrier created by\nWake of Earth\nlasts 5s longer.\nThe meteorite created by\nStarfell Sword\nlasts 10s longer.',
             level: 6,

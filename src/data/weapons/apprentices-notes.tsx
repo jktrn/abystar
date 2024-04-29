@@ -5,7 +5,7 @@ const weaponBonuses: Bonus[] = []
 
 const ApprenticesNotes: Weapon = {
     name: "Apprentice's Notes",
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Apprentice.png',
+    image: '/images/weapons/UI_EquipIcon_Catalyst_Apprentice.png',
     type: 'Catalyst',
     rarity: 1,
     description:

@@ -5,7 +5,7 @@ const weaponBonuses: Bonus[] = []
 
 const DullBlade: Weapon = {
     name: 'Dull Blade',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Blunt.png',
+    image: '/images/weapons/UI_EquipIcon_Sword_Blunt.png',
     type: 'Sword',
     rarity: 1,
     description:

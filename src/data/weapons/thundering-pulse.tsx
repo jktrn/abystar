@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const ThunderingPulse: Weapon = {
     name: 'Thundering Pulse',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Narukami.png',
+    image: '/images/weapons/UI_EquipIcon_Bow_Narukami.png',
     type: 'Bow',
     rarity: 5,
     description:

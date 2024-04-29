@@ -1,1274 +1,1274 @@
 {
     "\"The Catch\"": {
         "name": "\"The Catch\"",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Mori.png",
+        "image": "/images/weapons/UI_EquipIcon_Pole_Mori.png",
         "type": "Polearm",
         "rarity": 4,
         "implemented": true
     },
     "\"Ultimate Overlord's Mega Magic Sword\"": {
         "name": "\"Ultimate Overlord's Mega Magic Sword\"",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Champion.png",
+        "image": "/images/weapons/UI_EquipIcon_Claymore_Champion.png",
         "type": "Claymore",
         "rarity": 4,
         "implemented": false
     },
     "A Thousand Floating Dreams": {
         "name": "A Thousand Floating Dreams",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Ayus.png",
+        "image": "/images/weapons/UI_EquipIcon_Catalyst_Ayus.png",
         "type": "Catalyst",
         "rarity": 5,
         "implemented": true
     },
     "Akuoumaru": {
         "name": "Akuoumaru",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Maria.png",
+        "image": "/images/weapons/UI_EquipIcon_Claymore_Maria.png",
         "type": "Claymore",
         "rarity": 4,
         "implemented": false
     },
     "Alley Hunter": {
         "name": "Alley Hunter",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Outlaw.png",
+        "image": "/images/weapons/UI_EquipIcon_Bow_Outlaw.png",
         "type": "Bow",
         "rarity": 4,
         "implemented": false
     },
     "Amenoma Kageuchi": {
         "name": "Amenoma Kageuchi",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Bakufu.png",
+        "image": "/images/weapons/UI_EquipIcon_Sword_Bakufu.png",
         "type": "Weapon",
         "rarity": 4,
         "implemented": false
     },
     "Amos' Bow": {
         "name": "Amos' Bow",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Amos.png",
+        "image": "/images/weapons/UI_EquipIcon_Bow_Amos.png",
         "type": "Bow",
         "rarity": 5,
         "implemented": false
     },
     "Apprentice's Notes": {
         "name": "Apprentice's Notes",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Apprentice.png",
+        "image": "/images/weapons/UI_EquipIcon_Catalyst_Apprentice.png",
         "type": "Catalyst",
         "rarity": 1,
         "implemented": true
     },
     "Aqua Simulacra": {
         "name": "Aqua Simulacra",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Kirin.png",
+        "image": "/images/weapons/UI_EquipIcon_Bow_Kirin.png",
         "type": "Bow",
         "rarity": 5,
         "implemented": false
     },
     "Aquila Favonia": {
         "name": "Aquila Favonia",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Falcon.png",
+        "image": "/images/weapons/UI_EquipIcon_Sword_Falcon.png",
         "type": "Sword",
         "rarity": 5,
         "implemented": false
     },
     "Ballad of the Boundless Blue": {
         "name": "Ballad of the Boundless Blue",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_DandelionPoem.png",
+        "image": "/images/weapons/UI_EquipIcon_Catalyst_DandelionPoem.png",
         "type": "Catalyst",
         "rarity": 4,
         "implemented": false
     },
     "Ballad of the Fjords": {
         "name": "Ballad of the Fjords",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Shanty.png",
+        "image": "/images/weapons/UI_EquipIcon_Pole_Shanty.png",
         "type": "Polearm",
         "rarity": 4,
         "implemented": true
     },
     "Beacon of the Reed Sea": {
         "name": "Beacon of the Reed Sea",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Deshret.png",
+        "image": "/images/weapons/UI_EquipIcon_Claymore_Deshret.png",
         "type": "Claymore",
         "rarity": 5,
         "implemented": false
     },
     "Beginner's Protector": {
         "name": "Beginner's Protector",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Gewalt.png",
+        "image": "/images/weapons/UI_EquipIcon_Pole_Gewalt.png",
         "type": "Polearm",
         "rarity": 1,
         "implemented": true
     },
     "Black Tassel": {
         "name": "Black Tassel",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Noire.png",
+        "image": "/images/weapons/UI_EquipIcon_Pole_Noire.png",
         "type": "Polearm",
         "rarity": 3,
         "implemented": true
     },
     "Blackcliff Agate": {
         "name": "Blackcliff Agate",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Blackrock.png",
+        "image": "/images/weapons/UI_EquipIcon_Catalyst_Blackrock.png",
         "type": "Catalyst",
         "rarity": 4,
         "implemented": false
     },
     "Blackcliff Longsword": {
         "name": "Blackcliff Longsword",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Blackrock.png",
+        "image": "/images/weapons/UI_EquipIcon_Sword_Blackrock.png",
         "type": "Sword",
         "rarity": 4,
         "implemented": false
     },
     "Blackcliff Pole": {
         "name": "Blackcliff Pole",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Blackrock.png",
+        "image": "/images/weapons/UI_EquipIcon_Pole_Blackrock.png",
         "type": "Polearm",
         "rarity": 4,
         "implemented": true
     },
     "Blackcliff Slasher": {
         "name": "Blackcliff Slasher",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Blackrock.png",
+        "image": "/images/weapons/UI_EquipIcon_Claymore_Blackrock.png",
         "type": "Claymore",
         "rarity": 4,
         "implemented": false
     },
     "Blackcliff Warbow": {
         "name": "Blackcliff Warbow",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Blackrock.png",
+        "image": "/images/weapons/UI_EquipIcon_Bow_Blackrock.png",
         "type": "Bow",
         "rarity": 4,
         "implemented": false
     },
     "Bloodtainted Greatsword": {
         "name": "Bloodtainted Greatsword",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Siegfry.png",
+        "image": "/images/weapons/UI_EquipIcon_Claymore_Siegfry.png",
         "type": "Claymore",
         "rarity": 3,
         "implemented": false
     },
     "Calamity Queller": {
         "name": "Calamity Queller",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Santika.png",
+        "image": "/images/weapons/UI_EquipIcon_Pole_Santika.png",
         "type": "Polearm",
         "rarity": 5,
         "implemented": true
     },
     "Cashflow Supervision": {
         "name": "Cashflow Supervision",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Wheatley.png",
+        "image": "/images/weapons/UI_EquipIcon_Catalyst_Wheatley.png",
         "type": "Catalyst",
         "rarity": 5,
         "implemented": false
     },
     "Cinnabar Spindle": {
         "name": "Cinnabar Spindle",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Opus.png",
+        "image": "/images/weapons/UI_EquipIcon_Sword_Opus.png",
         "type": "Sword",
         "rarity": 4,
         "implemented": false
     },
     "Compound Bow": {
         "name": "Compound Bow",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Exotic.png",
+        "image": "/images/weapons/UI_EquipIcon_Bow_Exotic.png",
         "type": "Weapon",
         "rarity": 4,
         "implemented": false
     },
     "Cool Steel": {
         "name": "Cool Steel",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Steel.png",
+        "image": "/images/weapons/UI_EquipIcon_Sword_Steel.png",
         "type": "Sword",
         "rarity": 3,
         "implemented": false
     },
     "Crane's Echoing Call": {
         "name": "Crane's Echoing Call",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_MountainGale.png",
+        "image": "/images/weapons/UI_EquipIcon_Catalyst_MountainGale.png",
         "type": "Catalyst",
         "rarity": 5,
         "implemented": false
     },
     "Crescent Pike": {
         "name": "Crescent Pike",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Exotic.png",
+        "image": "/images/weapons/UI_EquipIcon_Pole_Exotic.png",
         "type": "Weapon",
         "rarity": 4,
         "implemented": false
     },
     "Crimson Moon's Semblance": {
         "name": "Crimson Moon's Semblance",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_BloodMoon.png",
+        "image": "/images/weapons/UI_EquipIcon_Pole_BloodMoon.png",
         "type": "Polearm",
         "rarity": 5,
         "implemented": false
     },
     "Dark Iron Sword": {
         "name": "Dark Iron Sword",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Darker.png",
+        "image": "/images/weapons/UI_EquipIcon_Sword_Darker.png",
         "type": "Sword",
         "rarity": 3,
         "implemented": false
     },
     "Deathmatch": {
         "name": "Deathmatch",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Gladiator.png",
+        "image": "/images/weapons/UI_EquipIcon_Pole_Gladiator.png",
         "type": "Polearm",
         "rarity": 4,
         "implemented": true
     },
     "Debate Club": {
         "name": "Debate Club",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Reasoning.png",
+        "image": "/images/weapons/UI_EquipIcon_Claymore_Reasoning.png",
         "type": "Claymore",
         "rarity": 3,
         "implemented": false
     },
     "Dialogues of the Desert Sages": {
         "name": "Dialogues of the Desert Sages",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Caduceus.png",
+        "image": "/images/weapons/UI_EquipIcon_Pole_Caduceus.png",
         "type": "Polearm",
         "rarity": 4,
         "implemented": false
     },
     "Dodoco Tales": {
         "name": "Dodoco Tales",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Ludiharpastum.png",
+        "image": "/images/weapons/UI_EquipIcon_Catalyst_Ludiharpastum.png",
         "type": "Catalyst",
         "rarity": 4,
         "implemented": false
     },
     "Dragon's Bane": {
         "name": "Dragon's Bane",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Stardust.png",
+        "image": "/images/weapons/UI_EquipIcon_Pole_Stardust.png",
         "type": "Polearm",
         "rarity": 4,
         "implemented": true
     },
     "Dragonspine Spear": {
         "name": "Dragonspine Spear",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Everfrost.png",
+        "image": "/images/weapons/UI_EquipIcon_Pole_Everfrost.png",
         "type": "Weapon",
         "rarity": 4,
         "implemented": false
     },
     "Dull Blade": {
         "name": "Dull Blade",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Blunt.png",
+        "image": "/images/weapons/UI_EquipIcon_Sword_Blunt.png",
         "type": "Sword",
         "rarity": 1,
         "implemented": true
     },
     "Elegy for the End": {
         "name": "Elegy for the End",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Widsith.png",
+        "image": "/images/weapons/UI_EquipIcon_Bow_Widsith.png",
         "type": "Bow",
         "rarity": 5,
         "implemented": false
     },
     "Emerald Orb": {
         "name": "Emerald Orb",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Jade.png",
+        "image": "/images/weapons/UI_EquipIcon_Catalyst_Jade.png",
         "type": "Catalyst",
         "rarity": 3,
         "implemented": false
     },
     "End of the Line": {
         "name": "End of the Line",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Fin.png",
+        "image": "/images/weapons/UI_EquipIcon_Bow_Fin.png",
         "type": "Bow",
         "rarity": 4,
         "implemented": false
     },
     "Engulfing Lightning": {
         "name": "Engulfing Lightning",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Narukami.png",
+        "image": "/images/weapons/UI_EquipIcon_Pole_Narukami.png",
         "type": "Polearm",
         "rarity": 5,
         "implemented": true
     },
     "Everlasting Moonglow": {
         "name": "Everlasting Moonglow",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Kaleido.png",
+        "image": "/images/weapons/UI_EquipIcon_Catalyst_Kaleido.png",
         "type": "Catalyst",
         "rarity": 5,
         "implemented": false
     },
     "Eye of Perception": {
         "name": "Eye of Perception",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Truelens.png",
+        "image": "/images/weapons/UI_EquipIcon_Catalyst_Truelens.png",
         "type": "Catalyst",
         "rarity": 4,
         "implemented": false
     },
     "Fading Twilight": {
         "name": "Fading Twilight",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Fallensun.png",
+        "image": "/images/weapons/UI_EquipIcon_Bow_Fallensun.png",
         "type": "Bow",
         "rarity": 4,
         "implemented": false
     },
     "Favonius Codex": {
         "name": "Favonius Codex",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Zephyrus.png",
+        "image": "/images/weapons/UI_EquipIcon_Catalyst_Zephyrus.png",
         "type": "Catalyst",
         "rarity": 4,
         "implemented": false
     },
     "Favonius Greatsword": {
         "name": "Favonius Greatsword",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Zephyrus.png",
+        "image": "/images/weapons/UI_EquipIcon_Claymore_Zephyrus.png",
         "type": "Claymore",
         "rarity": 4,
         "implemented": false
     },
     "Favonius Lance": {
         "name": "Favonius Lance",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Zephyrus.png",
+        "image": "/images/weapons/UI_EquipIcon_Pole_Zephyrus.png",
         "type": "Polearm",
         "rarity": 4,
         "implemented": true
     },
     "Favonius Sword": {
         "name": "Favonius Sword",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Zephyrus.png",
+        "image": "/images/weapons/UI_EquipIcon_Sword_Zephyrus.png",
         "type": "Sword",
         "rarity": 4,
         "implemented": false
     },
     "Favonius Warbow": {
         "name": "Favonius Warbow",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Zephyrus.png",
+        "image": "/images/weapons/UI_EquipIcon_Bow_Zephyrus.png",
         "type": "Bow",
         "rarity": 4,
         "implemented": false
     },
     "Ferrous Shadow": {
         "name": "Ferrous Shadow",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Glaive.png",
+        "image": "/images/weapons/UI_EquipIcon_Claymore_Glaive.png",
         "type": "Claymore",
         "rarity": 3,
         "implemented": false
     },
     "Festering Desire": {
         "name": "Festering Desire",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Magnum.png",
+        "image": "/images/weapons/UI_EquipIcon_Sword_Magnum.png",
         "type": "Sword",
         "rarity": 4,
         "implemented": false
     },
     "Fillet Blade": {
         "name": "Fillet Blade",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Sashimi.png",
+        "image": "/images/weapons/UI_EquipIcon_Sword_Sashimi.png",
         "type": "Sword",
         "rarity": 3,
         "implemented": false
     },
     "Finale of the Deep": {
         "name": "Finale of the Deep",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Vorpal.png",
+        "image": "/images/weapons/UI_EquipIcon_Sword_Vorpal.png",
         "type": "Weapon",
         "rarity": 4,
         "implemented": false
     },
     "Fleuve Cendre Ferryman": {
         "name": "Fleuve Cendre Ferryman",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Machination.png",
+        "image": "/images/weapons/UI_EquipIcon_Sword_Machination.png",
         "type": "Sword",
         "rarity": 4,
         "implemented": false
     },
     "Flowing Purity": {
         "name": "Flowing Purity",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Vorpal.png",
+        "image": "/images/weapons/UI_EquipIcon_Catalyst_Vorpal.png",
         "type": "Weapon",
         "rarity": 4,
         "implemented": false
     },
     "Forest Regalia": {
         "name": "Forest Regalia",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Arakalari.png",
+        "image": "/images/weapons/UI_EquipIcon_Claymore_Arakalari.png",
         "type": "Weapon",
         "rarity": 4,
         "implemented": false
     },
     "Freedom-Sworn": {
         "name": "Freedom-Sworn",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Widsith.png",
+        "image": "/images/weapons/UI_EquipIcon_Sword_Widsith.png",
         "type": "Sword",
         "rarity": 5,
         "implemented": false
     },
     "Frostbearer": {
         "name": "Frostbearer",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Everfrost.png",
+        "image": "/images/weapons/UI_EquipIcon_Catalyst_Everfrost.png",
         "type": "Weapon",
         "rarity": 4,
         "implemented": false
     },
     "Fruit of Fulfillment": {
         "name": "Fruit of Fulfillment",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Arakalari.png",
+        "image": "/images/weapons/UI_EquipIcon_Catalyst_Arakalari.png",
         "type": "Weapon",
         "rarity": 4,
         "implemented": false
     },
     "Hakushin Ring": {
         "name": "Hakushin Ring",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Bakufu.png",
+        "image": "/images/weapons/UI_EquipIcon_Catalyst_Bakufu.png",
         "type": "Weapon",
         "rarity": 4,
         "implemented": false
     },
     "Halberd": {
         "name": "Halberd",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Halberd.png",
+        "image": "/images/weapons/UI_EquipIcon_Pole_Halberd.png",
         "type": "Polearm",
         "rarity": 3,
         "implemented": true
     },
     "Hamayumi": {
         "name": "Hamayumi",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Bakufu.png",
+        "image": "/images/weapons/UI_EquipIcon_Bow_Bakufu.png",
         "type": "Weapon",
         "rarity": 4,
         "implemented": false
     },
     "Haran Geppaku Futsu": {
         "name": "Haran Geppaku Futsu",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Amenoma.png",
+        "image": "/images/weapons/UI_EquipIcon_Sword_Amenoma.png",
         "type": "Sword",
         "rarity": 5,
         "implemented": false
     },
     "Harbinger of Dawn": {
         "name": "Harbinger of Dawn",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Dawn.png",
+        "image": "/images/weapons/UI_EquipIcon_Sword_Dawn.png",
         "type": "Sword",
         "rarity": 3,
         "implemented": false
     },
     "Hunter's Bow": {
         "name": "Hunter's Bow",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Hunters.png",
+        "image": "/images/weapons/UI_EquipIcon_Bow_Hunters.png",
         "type": "Bow",
         "rarity": 1,
         "implemented": true
     },
     "Hunter's Path": {
         "name": "Hunter's Path",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Ayus.png",
+        "image": "/images/weapons/UI_EquipIcon_Bow_Ayus.png",
         "type": "Bow",
         "rarity": 5,
         "implemented": false
     },
     "Ibis Piercer": {
         "name": "Ibis Piercer",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Ibis.png",
+        "image": "/images/weapons/UI_EquipIcon_Bow_Ibis.png",
         "type": "Bow",
         "rarity": 4,
         "implemented": false
     },
     "Iron Point": {
         "name": "Iron Point",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Rod.png",
+        "image": "/images/weapons/UI_EquipIcon_Pole_Rod.png",
         "type": "Polearm",
         "rarity": 2,
         "implemented": true
     },
     "Iron Sting": {
         "name": "Iron Sting",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Exotic.png",
+        "image": "/images/weapons/UI_EquipIcon_Sword_Exotic.png",
         "type": "Weapon",
         "rarity": 4,
         "implemented": false
     },
     "Jadefall's Splendor": {
         "name": "Jadefall's Splendor",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Morax.png",
+        "image": "/images/weapons/UI_EquipIcon_Catalyst_Morax.png",
         "type": "Catalyst",
         "rarity": 5,
         "implemented": false
     },
     "Kagotsurube Isshin": {
         "name": "Kagotsurube Isshin",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Youtou.png",
+        "image": "/images/weapons/UI_EquipIcon_Sword_Youtou.png",
         "type": "Sword",
         "rarity": 4,
         "implemented": false
     },
     "Kagura's Verity": {
         "name": "Kagura's Verity",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Narukami.png",
+        "image": "/images/weapons/UI_EquipIcon_Catalyst_Narukami.png",
         "type": "Catalyst",
         "rarity": 5,
         "implemented": false
     },
     "Katsuragikiri Nagamasa": {
         "name": "Katsuragikiri Nagamasa",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Bakufu.png",
+        "image": "/images/weapons/UI_EquipIcon_Claymore_Bakufu.png",
         "type": "Weapon",
         "rarity": 4,
         "implemented": false
     },
     "Key of Khaj-Nisut": {
         "name": "Key of Khaj-Nisut",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Deshret.png",
+        "image": "/images/weapons/UI_EquipIcon_Sword_Deshret.png",
         "type": "Sword",
         "rarity": 5,
         "implemented": false
     },
     "King's Squire": {
         "name": "King's Squire",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Arakalari.png",
+        "image": "/images/weapons/UI_EquipIcon_Bow_Arakalari.png",
         "type": "Weapon",
         "rarity": 4,
         "implemented": false
     },
     "Kitain Cross Spear": {
         "name": "Kitain Cross Spear",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Bakufu.png",
+        "image": "/images/weapons/UI_EquipIcon_Pole_Bakufu.png",
         "type": "Weapon",
         "rarity": 4,
         "implemented": false
     },
     "Light of Foliar Incision": {
         "name": "Light of Foliar Incision",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Ayus.png",
+        "image": "/images/weapons/UI_EquipIcon_Sword_Ayus.png",
         "type": "Sword",
         "rarity": 5,
         "implemented": false
     },
     "Lion's Roar": {
         "name": "Lion's Roar",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Rockkiller.png",
+        "image": "/images/weapons/UI_EquipIcon_Sword_Rockkiller.png",
         "type": "Sword",
         "rarity": 4,
         "implemented": false
     },
     "Lithic Blade": {
         "name": "Lithic Blade",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Lapis.png",
+        "image": "/images/weapons/UI_EquipIcon_Claymore_Lapis.png",
         "type": "Claymore",
         "rarity": 4,
         "implemented": false
     },
     "Lithic Spear": {
         "name": "Lithic Spear",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Lapis.png",
+        "image": "/images/weapons/UI_EquipIcon_Pole_Lapis.png",
         "type": "Polearm",
         "rarity": 4,
         "implemented": true
     },
     "Lost Prayer to the Sacred Winds": {
         "name": "Lost Prayer to the Sacred Winds",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Fourwinds.png",
+        "image": "/images/weapons/UI_EquipIcon_Catalyst_Fourwinds.png",
         "type": "Catalyst",
         "rarity": 5,
         "implemented": false
     },
     "Luxurious Sea-Lord": {
         "name": "Luxurious Sea-Lord",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_MillenniaTuna.png",
+        "image": "/images/weapons/UI_EquipIcon_Claymore_MillenniaTuna.png",
         "type": "Claymore",
         "rarity": 4,
         "implemented": false
     },
     "Magic Guide": {
         "name": "Magic Guide",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Intro.png",
+        "image": "/images/weapons/UI_EquipIcon_Catalyst_Intro.png",
         "type": "Catalyst",
         "rarity": 3,
         "implemented": false
     },
     "Mailed Flower": {
         "name": "Mailed Flower",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Fleurfair.png",
+        "image": "/images/weapons/UI_EquipIcon_Claymore_Fleurfair.png",
         "type": "Claymore",
         "rarity": 4,
         "implemented": false
     },
     "Makhaira Aquamarine": {
         "name": "Makhaira Aquamarine",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Pleroma.png",
+        "image": "/images/weapons/UI_EquipIcon_Claymore_Pleroma.png",
         "type": "Claymore",
         "rarity": 4,
         "implemented": false
     },
     "Mappa Mare": {
         "name": "Mappa Mare",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Exotic.png",
+        "image": "/images/weapons/UI_EquipIcon_Catalyst_Exotic.png",
         "type": "Weapon",
         "rarity": 4,
         "implemented": false
     },
     "Memory of Dust": {
         "name": "Memory of Dust",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Kunwu.png",
+        "image": "/images/weapons/UI_EquipIcon_Catalyst_Kunwu.png",
         "type": "Catalyst",
         "rarity": 5,
         "implemented": false
     },
     "Messenger": {
         "name": "Messenger",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Msg.png",
+        "image": "/images/weapons/UI_EquipIcon_Bow_Msg.png",
         "type": "Bow",
         "rarity": 3,
         "implemented": false
     },
     "Missive Windspear": {
         "name": "Missive Windspear",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Windvane.png",
+        "image": "/images/weapons/UI_EquipIcon_Pole_Windvane.png",
         "type": "Polearm",
         "rarity": 4,
         "implemented": true
     },
     "Mistsplitter Reforged": {
         "name": "Mistsplitter Reforged",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Narukami.png",
+        "image": "/images/weapons/UI_EquipIcon_Sword_Narukami.png",
         "type": "Sword",
         "rarity": 5,
         "implemented": false
     },
     "Mitternachts Waltz": {
         "name": "Mitternachts Waltz",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Nachtblind.png",
+        "image": "/images/weapons/UI_EquipIcon_Bow_Nachtblind.png",
         "type": "Bow",
         "rarity": 4,
         "implemented": false
     },
     "Moonpiercer": {
         "name": "Moonpiercer",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Arakalari.png",
+        "image": "/images/weapons/UI_EquipIcon_Pole_Arakalari.png",
         "type": "Weapon",
         "rarity": 4,
         "implemented": false
     },
     "Mouun's Moon": {
         "name": "Mouun's Moon",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Maria.png",
+        "image": "/images/weapons/UI_EquipIcon_Bow_Maria.png",
         "type": "Bow",
         "rarity": 4,
         "implemented": false
     },
     "Oathsworn Eye": {
         "name": "Oathsworn Eye",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Jyanome.png",
+        "image": "/images/weapons/UI_EquipIcon_Catalyst_Jyanome.png",
         "type": "Catalyst",
         "rarity": 4,
         "implemented": false
     },
     "Old Merc's Pal": {
         "name": "Old Merc's Pal",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Oyaji.png",
+        "image": "/images/weapons/UI_EquipIcon_Claymore_Oyaji.png",
         "type": "Claymore",
         "rarity": 2,
         "implemented": true
     },
     "Otherworldly Story": {
         "name": "Otherworldly Story",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Lightnov.png",
+        "image": "/images/weapons/UI_EquipIcon_Catalyst_Lightnov.png",
         "type": "Catalyst",
         "rarity": 3,
         "implemented": false
     },
     "Pocket Grimoire": {
         "name": "Pocket Grimoire",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Pocket.png",
+        "image": "/images/weapons/UI_EquipIcon_Catalyst_Pocket.png",
         "type": "Catalyst",
         "rarity": 2,
         "implemented": true
     },
     "Polar Star": {
         "name": "Polar Star",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Worldbane.png",
+        "image": "/images/weapons/UI_EquipIcon_Bow_Worldbane.png",
         "type": "Bow",
         "rarity": 5,
         "implemented": false
     },
     "Portable Power Saw": {
         "name": "Portable Power Saw",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Mechanic.png",
+        "image": "/images/weapons/UI_EquipIcon_Claymore_Mechanic.png",
         "type": "Claymore",
         "rarity": 4,
         "implemented": false
     },
     "Predator": {
         "name": "Predator",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Predator.png",
+        "image": "/images/weapons/UI_EquipIcon_Bow_Predator.png",
         "type": "Bow",
         "rarity": 4,
         "implemented": false
     },
     "Primordial Jade Cutter": {
         "name": "Primordial Jade Cutter",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Morax.png",
+        "image": "/images/weapons/UI_EquipIcon_Sword_Morax.png",
         "type": "Sword",
         "rarity": 5,
         "implemented": false
     },
     "Primordial Jade Winged-Spear": {
         "name": "Primordial Jade Winged-Spear",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Morax.png",
+        "image": "/images/weapons/UI_EquipIcon_Pole_Morax.png",
         "type": "Polearm",
         "rarity": 5,
         "implemented": true
     },
     "Prospector's Drill": {
         "name": "Prospector's Drill",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Mechanic.png",
+        "image": "/images/weapons/UI_EquipIcon_Pole_Mechanic.png",
         "type": "Polearm",
         "rarity": 4,
         "implemented": true
     },
     "Prototype Amber": {
         "name": "Prototype Amber",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Proto.png",
+        "image": "/images/weapons/UI_EquipIcon_Catalyst_Proto.png",
         "type": "Weapon",
         "rarity": 4,
         "implemented": false
     },
     "Prototype Archaic": {
         "name": "Prototype Archaic",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Proto.png",
+        "image": "/images/weapons/UI_EquipIcon_Claymore_Proto.png",
         "type": "Weapon",
         "rarity": 4,
         "implemented": false
     },
     "Prototype Crescent": {
         "name": "Prototype Crescent",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Proto.png",
+        "image": "/images/weapons/UI_EquipIcon_Bow_Proto.png",
         "type": "Weapon",
         "rarity": 4,
         "implemented": false
     },
     "Prototype Rancour": {
         "name": "Prototype Rancour",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Proto.png",
+        "image": "/images/weapons/UI_EquipIcon_Sword_Proto.png",
         "type": "Weapon",
         "rarity": 4,
         "implemented": false
     },
     "Prototype Starglitter": {
         "name": "Prototype Starglitter",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Proto.png",
+        "image": "/images/weapons/UI_EquipIcon_Pole_Proto.png",
         "type": "Weapon",
         "rarity": 4,
         "implemented": false
     },
     "Rainslasher": {
         "name": "Rainslasher",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Perdue.png",
+        "image": "/images/weapons/UI_EquipIcon_Claymore_Perdue.png",
         "type": "Claymore",
         "rarity": 4,
         "implemented": false
     },
     "Range Gauge": {
         "name": "Range Gauge",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Mechanic.png",
+        "image": "/images/weapons/UI_EquipIcon_Bow_Mechanic.png",
         "type": "Bow",
         "rarity": 4,
         "implemented": false
     },
     "Raven Bow": {
         "name": "Raven Bow",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Crowfeather.png",
+        "image": "/images/weapons/UI_EquipIcon_Bow_Crowfeather.png",
         "type": "Bow",
         "rarity": 3,
         "implemented": false
     },
     "Recurve Bow": {
         "name": "Recurve Bow",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Curve.png",
+        "image": "/images/weapons/UI_EquipIcon_Bow_Curve.png",
         "type": "Bow",
         "rarity": 3,
         "implemented": false
     },
     "Redhorn Stonethresher": {
         "name": "Redhorn Stonethresher",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Itadorimaru.png",
+        "image": "/images/weapons/UI_EquipIcon_Claymore_Itadorimaru.png",
         "type": "Claymore",
         "rarity": 5,
         "implemented": false
     },
     "Rightful Reward": {
         "name": "Rightful Reward",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Vorpal.png",
+        "image": "/images/weapons/UI_EquipIcon_Pole_Vorpal.png",
         "type": "Weapon",
         "rarity": 4,
         "implemented": false
     },
     "Royal Bow": {
         "name": "Royal Bow",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Theocrat.png",
+        "image": "/images/weapons/UI_EquipIcon_Bow_Theocrat.png",
         "type": "Bow",
         "rarity": 4,
         "implemented": false
     },
     "Royal Greatsword": {
         "name": "Royal Greatsword",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Theocrat.png",
+        "image": "/images/weapons/UI_EquipIcon_Claymore_Theocrat.png",
         "type": "Claymore",
         "rarity": 4,
         "implemented": false
     },
     "Royal Grimoire": {
         "name": "Royal Grimoire",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Theocrat.png",
+        "image": "/images/weapons/UI_EquipIcon_Catalyst_Theocrat.png",
         "type": "Catalyst",
         "rarity": 4,
         "implemented": false
     },
     "Royal Longsword": {
         "name": "Royal Longsword",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Theocrat.png",
+        "image": "/images/weapons/UI_EquipIcon_Sword_Theocrat.png",
         "type": "Sword",
         "rarity": 4,
         "implemented": false
     },
     "Royal Spear": {
         "name": "Royal Spear",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Theocrat.png",
+        "image": "/images/weapons/UI_EquipIcon_Pole_Theocrat.png",
         "type": "Polearm",
         "rarity": 4,
         "implemented": true
     },
     "Rust": {
         "name": "Rust",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Recluse.png",
+        "image": "/images/weapons/UI_EquipIcon_Bow_Recluse.png",
         "type": "Bow",
         "rarity": 4,
         "implemented": false
     },
     "Sacrificial Bow": {
         "name": "Sacrificial Bow",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Fossil.png",
+        "image": "/images/weapons/UI_EquipIcon_Bow_Fossil.png",
         "type": "Bow",
         "rarity": 4,
         "implemented": false
     },
     "Sacrificial Fragments": {
         "name": "Sacrificial Fragments",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Fossil.png",
+        "image": "/images/weapons/UI_EquipIcon_Catalyst_Fossil.png",
         "type": "Catalyst",
         "rarity": 4,
         "implemented": false
     },
     "Sacrificial Greatsword": {
         "name": "Sacrificial Greatsword",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Fossil.png",
+        "image": "/images/weapons/UI_EquipIcon_Claymore_Fossil.png",
         "type": "Claymore",
         "rarity": 4,
         "implemented": false
     },
     "Sacrificial Jade": {
         "name": "Sacrificial Jade",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Yue.png",
+        "image": "/images/weapons/UI_EquipIcon_Catalyst_Yue.png",
         "type": "Catalyst",
         "rarity": 4,
         "implemented": false
     },
     "Sacrificial Sword": {
         "name": "Sacrificial Sword",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Fossil.png",
+        "image": "/images/weapons/UI_EquipIcon_Sword_Fossil.png",
         "type": "Sword",
         "rarity": 4,
         "implemented": false
     },
     "Sapwood Blade": {
         "name": "Sapwood Blade",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Arakalari.png",
+        "image": "/images/weapons/UI_EquipIcon_Sword_Arakalari.png",
         "type": "Weapon",
         "rarity": 4,
         "implemented": false
     },
     "Scion of the Blazing Sun": {
         "name": "Scion of the Blazing Sun",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Gurabad.png",
+        "image": "/images/weapons/UI_EquipIcon_Bow_Gurabad.png",
         "type": "Bow",
         "rarity": 4,
         "implemented": false
     },
     "Seasoned Hunter's Bow": {
         "name": "Seasoned Hunter's Bow",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Old.png",
+        "image": "/images/weapons/UI_EquipIcon_Bow_Old.png",
         "type": "Bow",
         "rarity": 2,
         "implemented": true
     },
     "Serpent Spine": {
         "name": "Serpent Spine",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Kione.png",
+        "image": "/images/weapons/UI_EquipIcon_Claymore_Kione.png",
         "type": "Claymore",
         "rarity": 4,
         "implemented": false
     },
     "Sharpshooter's Oath": {
         "name": "Sharpshooter's Oath",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Arjuna.png",
+        "image": "/images/weapons/UI_EquipIcon_Bow_Arjuna.png",
         "type": "Bow",
         "rarity": 3,
         "implemented": false
     },
     "Silver Sword": {
         "name": "Silver Sword",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Silver.png",
+        "image": "/images/weapons/UI_EquipIcon_Sword_Silver.png",
         "type": "Sword",
         "rarity": 2,
         "implemented": true
     },
     "Skyrider Greatsword": {
         "name": "Skyrider Greatsword",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Mitsurugi.png",
+        "image": "/images/weapons/UI_EquipIcon_Claymore_Mitsurugi.png",
         "type": "Claymore",
         "rarity": 3,
         "implemented": false
     },
     "Skyrider Sword": {
         "name": "Skyrider Sword",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Mitsurugi.png",
+        "image": "/images/weapons/UI_EquipIcon_Sword_Mitsurugi.png",
         "type": "Sword",
         "rarity": 3,
         "implemented": false
     },
     "Skyward Atlas": {
         "name": "Skyward Atlas",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Dvalin.png",
+        "image": "/images/weapons/UI_EquipIcon_Catalyst_Dvalin.png",
         "type": "Catalyst",
         "rarity": 5,
         "implemented": false
     },
     "Skyward Blade": {
         "name": "Skyward Blade",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Dvalin.png",
+        "image": "/images/weapons/UI_EquipIcon_Sword_Dvalin.png",
         "type": "Sword",
         "rarity": 5,
         "implemented": false
     },
     "Skyward Harp": {
         "name": "Skyward Harp",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Dvalin.png",
+        "image": "/images/weapons/UI_EquipIcon_Bow_Dvalin.png",
         "type": "Bow",
         "rarity": 5,
         "implemented": false
     },
     "Skyward Pride": {
         "name": "Skyward Pride",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Dvalin.png",
+        "image": "/images/weapons/UI_EquipIcon_Claymore_Dvalin.png",
         "type": "Claymore",
         "rarity": 5,
         "implemented": false
     },
     "Skyward Spine": {
         "name": "Skyward Spine",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Dvalin.png",
+        "image": "/images/weapons/UI_EquipIcon_Pole_Dvalin.png",
         "type": "Polearm",
         "rarity": 5,
         "implemented": true
     },
     "Slingshot": {
         "name": "Slingshot",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Sling.png",
+        "image": "/images/weapons/UI_EquipIcon_Bow_Sling.png",
         "type": "Bow",
         "rarity": 3,
         "implemented": false
     },
     "Snow-Tombed Starsilver": {
         "name": "Snow-Tombed Starsilver",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Dragonfell.png",
+        "image": "/images/weapons/UI_EquipIcon_Claymore_Dragonfell.png",
         "type": "Weapon",
         "rarity": 4,
         "implemented": false
     },
     "Solar Pearl": {
         "name": "Solar Pearl",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Resurrection.png",
+        "image": "/images/weapons/UI_EquipIcon_Catalyst_Resurrection.png",
         "type": "Catalyst",
         "rarity": 4,
         "implemented": false
     },
     "Song of Broken Pines": {
         "name": "Song of Broken Pines",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Widsith.png",
+        "image": "/images/weapons/UI_EquipIcon_Claymore_Widsith.png",
         "type": "Claymore",
         "rarity": 5,
         "implemented": false
     },
     "Song of Stillness": {
         "name": "Song of Stillness",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Vorpal.png",
+        "image": "/images/weapons/UI_EquipIcon_Bow_Vorpal.png",
         "type": "Weapon",
         "rarity": 4,
         "implemented": false
     },
     "Splendor of Tranquil Waters": {
         "name": "Splendor of Tranquil Waters",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Regalis.png",
+        "image": "/images/weapons/UI_EquipIcon_Sword_Regalis.png",
         "type": "Sword",
         "rarity": 5,
         "implemented": false
     },
     "Staff of Homa": {
         "name": "Staff of Homa",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Homa.png",
+        "image": "/images/weapons/UI_EquipIcon_Pole_Homa.png",
         "type": "Polearm",
         "rarity": 5,
         "implemented": true
     },
     "Staff of the Scarlet Sands": {
         "name": "Staff of the Scarlet Sands",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Deshret.png",
+        "image": "/images/weapons/UI_EquipIcon_Pole_Deshret.png",
         "type": "Polearm",
         "rarity": 5,
         "implemented": true
     },
     "Summit Shaper": {
         "name": "Summit Shaper",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Kunwu.png",
+        "image": "/images/weapons/UI_EquipIcon_Sword_Kunwu.png",
         "type": "Sword",
         "rarity": 5,
         "implemented": false
     },
     "Sword of Descension": {
         "name": "Sword of Descension",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Psalmus.png",
+        "image": "/images/weapons/UI_EquipIcon_Sword_Psalmus.png",
         "type": "Sword",
         "rarity": 4,
         "implemented": false
     },
     "Sword of Narzissenkreuz": {
         "name": "Sword of Narzissenkreuz",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Purewill.png",
+        "image": "/images/weapons/UI_EquipIcon_Sword_Purewill.png",
         "type": "Sword",
         "rarity": 4,
         "implemented": false
     },
     "Talking Stick": {
         "name": "Talking Stick",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_BeastTamer.png",
+        "image": "/images/weapons/UI_EquipIcon_Claymore_BeastTamer.png",
         "type": "Claymore",
         "rarity": 4,
         "implemented": false
     },
     "The Alley Flash": {
         "name": "The Alley Flash",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Outlaw.png",
+        "image": "/images/weapons/UI_EquipIcon_Sword_Outlaw.png",
         "type": "Sword",
         "rarity": 4,
         "implemented": false
     },
     "The Bell": {
         "name": "The Bell",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Troupe.png",
+        "image": "/images/weapons/UI_EquipIcon_Claymore_Troupe.png",
         "type": "Claymore",
         "rarity": 4,
         "implemented": false
     },
     "The Black Sword": {
         "name": "The Black Sword",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Bloodstained.png",
+        "image": "/images/weapons/UI_EquipIcon_Sword_Bloodstained.png",
         "type": "Sword",
         "rarity": 4,
         "implemented": false
     },
     "The Dockhand's Assistant": {
         "name": "The Dockhand's Assistant",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Mechanic.png",
+        "image": "/images/weapons/UI_EquipIcon_Sword_Mechanic.png",
         "type": "Sword",
         "rarity": 4,
         "implemented": false
     },
     "The First Great Magic": {
         "name": "The First Great Magic",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Pledge.png",
+        "image": "/images/weapons/UI_EquipIcon_Bow_Pledge.png",
         "type": "Bow",
         "rarity": 5,
         "implemented": false
     },
     "The Flute": {
         "name": "The Flute",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Troupe.png",
+        "image": "/images/weapons/UI_EquipIcon_Sword_Troupe.png",
         "type": "Sword",
         "rarity": 4,
         "implemented": false
     },
     "The Stringless": {
         "name": "The Stringless",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Troupe.png",
+        "image": "/images/weapons/UI_EquipIcon_Bow_Troupe.png",
         "type": "Bow",
         "rarity": 4,
         "implemented": false
     },
     "The Unforged": {
         "name": "The Unforged",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Kunwu.png",
+        "image": "/images/weapons/UI_EquipIcon_Claymore_Kunwu.png",
         "type": "Claymore",
         "rarity": 5,
         "implemented": false
     },
     "The Viridescent Hunt": {
         "name": "The Viridescent Hunt",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Viridescent.png",
+        "image": "/images/weapons/UI_EquipIcon_Bow_Viridescent.png",
         "type": "Bow",
         "rarity": 4,
         "implemented": false
     },
     "The Widsith": {
         "name": "The Widsith",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Troupe.png",
+        "image": "/images/weapons/UI_EquipIcon_Catalyst_Troupe.png",
         "type": "Catalyst",
         "rarity": 4,
         "implemented": false
     },
     "Thrilling Tales of Dragon Slayers": {
         "name": "Thrilling Tales of Dragon Slayers",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Pulpfic.png",
+        "image": "/images/weapons/UI_EquipIcon_Catalyst_Pulpfic.png",
         "type": "Catalyst",
         "rarity": 3,
         "implemented": false
     },
     "Thundering Pulse": {
         "name": "Thundering Pulse",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Narukami.png",
+        "image": "/images/weapons/UI_EquipIcon_Bow_Narukami.png",
         "type": "Bow",
         "rarity": 5,
         "implemented": false
     },
     "Tidal Shadow": {
         "name": "Tidal Shadow",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Vorpal.png",
+        "image": "/images/weapons/UI_EquipIcon_Claymore_Vorpal.png",
         "type": "Weapon",
         "rarity": 4,
         "implemented": false
     },
     "Tome of the Eternal Flow": {
         "name": "Tome of the Eternal Flow",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Iudex.png",
+        "image": "/images/weapons/UI_EquipIcon_Catalyst_Iudex.png",
         "type": "Catalyst",
         "rarity": 5,
         "implemented": false
     },
     "Toukabou Shigure": {
         "name": "Toukabou Shigure",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Kasabouzu.png",
+        "image": "/images/weapons/UI_EquipIcon_Sword_Kasabouzu.png",
         "type": "Sword",
         "rarity": 4,
         "implemented": false
     },
     "Traveler's Handy Sword": {
         "name": "Traveler's Handy Sword",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Traveler.png",
+        "image": "/images/weapons/UI_EquipIcon_Sword_Traveler.png",
         "type": "Sword",
         "rarity": 3,
         "implemented": false
     },
     "Tulaytullah's Remembrance": {
         "name": "Tulaytullah's Remembrance",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Alaya.png",
+        "image": "/images/weapons/UI_EquipIcon_Catalyst_Alaya.png",
         "type": "Catalyst",
         "rarity": 5,
         "implemented": false
     },
     "Twin Nephrite": {
         "name": "Twin Nephrite",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Phoney.png",
+        "image": "/images/weapons/UI_EquipIcon_Catalyst_Phoney.png",
         "type": "Catalyst",
         "rarity": 3,
         "implemented": false
     },
     "Uraku Misugiri": {
         "name": "Uraku Misugiri",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Needle.png",
+        "image": "/images/weapons/UI_EquipIcon_Sword_Needle.png",
         "type": "Sword",
         "rarity": 5,
         "implemented": false
     },
     "Verdict": {
         "name": "Verdict",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_GoldenVerdict.png",
+        "image": "/images/weapons/UI_EquipIcon_Claymore_GoldenVerdict.png",
         "type": "Claymore",
         "rarity": 5,
         "implemented": false
     },
     "Vortex Vanquisher": {
         "name": "Vortex Vanquisher",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Kunwu.png",
+        "image": "/images/weapons/UI_EquipIcon_Pole_Kunwu.png",
         "type": "Polearm",
         "rarity": 5,
         "implemented": true
     },
     "Wandering Evenstar": {
         "name": "Wandering Evenstar",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Pleroma.png",
+        "image": "/images/weapons/UI_EquipIcon_Catalyst_Pleroma.png",
         "type": "Catalyst",
         "rarity": 4,
         "implemented": false
     },
     "Waster Greatsword": {
         "name": "Waster Greatsword",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Aniki.png",
+        "image": "/images/weapons/UI_EquipIcon_Claymore_Aniki.png",
         "type": "Claymore",
         "rarity": 1,
         "implemented": true
     },
     "Wavebreaker's Fin": {
         "name": "Wavebreaker's Fin",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Maria.png",
+        "image": "/images/weapons/UI_EquipIcon_Pole_Maria.png",
         "type": "Polearm",
         "rarity": 4,
         "implemented": true
     },
     "White Iron Greatsword": {
         "name": "White Iron Greatsword",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Tin.png",
+        "image": "/images/weapons/UI_EquipIcon_Claymore_Tin.png",
         "type": "Claymore",
         "rarity": 3,
         "implemented": false
     },
     "White Tassel": {
         "name": "White Tassel",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Ruby.png",
+        "image": "/images/weapons/UI_EquipIcon_Pole_Ruby.png",
         "type": "Polearm",
         "rarity": 3,
         "implemented": true
     },
     "Whiteblind": {
         "name": "Whiteblind",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Exotic.png",
+        "image": "/images/weapons/UI_EquipIcon_Claymore_Exotic.png",
         "type": "Weapon",
         "rarity": 4,
         "implemented": false
     },
     "Windblume Ode": {
         "name": "Windblume Ode",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Fleurfair.png",
+        "image": "/images/weapons/UI_EquipIcon_Bow_Fleurfair.png",
         "type": "Bow",
         "rarity": 4,
         "implemented": false
     },
     "Wine and Song": {
         "name": "Wine and Song",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Outlaw.png",
+        "image": "/images/weapons/UI_EquipIcon_Catalyst_Outlaw.png",
         "type": "Catalyst",
         "rarity": 4,
         "implemented": false
     },
     "Wolf's Gravestone": {
         "name": "Wolf's Gravestone",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Wolfmound.png",
+        "image": "/images/weapons/UI_EquipIcon_Claymore_Wolfmound.png",
         "type": "Claymore",
         "rarity": 5,
         "implemented": false
     },
     "Wolf-Fang": {
         "name": "Wolf-Fang",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Boreas.png",
+        "image": "/images/weapons/UI_EquipIcon_Sword_Boreas.png",
         "type": "Sword",
         "rarity": 4,
         "implemented": false
     },
     "Xiphos' Moonlight": {
         "name": "Xiphos' Moonlight",
-        "image": "https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Pleroma.png",
+        "image": "/images/weapons/UI_EquipIcon_Sword_Pleroma.png",
         "type": "Sword",
         "rarity": 4,
         "implemented": false

@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const MagicGuide: Weapon = {
     name: 'Magic Guide',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Intro.png',
+    image: '/images/weapons/UI_EquipIcon_Catalyst_Intro.png',
     type: 'Catalyst',
     rarity: 3,
     description:

@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const PrototypeAmber: Weapon = {
     name: 'Prototype Amber',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Proto.png',
+    image: '/images/weapons/UI_EquipIcon_Catalyst_Proto.png',
     type: 'Weapon',
     rarity: 4,
     description:

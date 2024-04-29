@@ -34,7 +34,7 @@ const weaponBonuses: Bonus[] = [
 
 const LithicSpear: Weapon = {
     name: 'Lithic Spear',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Lapis.png',
+    image: '/images/weapons/UI_EquipIcon_Pole_Lapis.png',
     type: 'Polearm',
     rarity: 4,
     description:

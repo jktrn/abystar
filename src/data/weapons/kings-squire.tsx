@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const KingsSquire: Weapon = {
     name: "King's Squire",
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Arakalari.png',
+    image: '/images/weapons/UI_EquipIcon_Bow_Arakalari.png',
     type: 'Weapon',
     rarity: 4,
     description:

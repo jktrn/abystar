@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const FruitOfFulfillment: Weapon = {
     name: 'Fruit of Fulfillment',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Arakalari.png',
+    image: '/images/weapons/UI_EquipIcon_Catalyst_Arakalari.png',
     type: 'Weapon',
     rarity: 4,
     description:

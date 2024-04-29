@@ -5,7 +5,7 @@ const weaponBonuses: Bonus[] = []
 
 const SeasonedHuntersBow: Weapon = {
     name: "Seasoned Hunter's Bow",
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Old.png',
+    image: '/images/weapons/UI_EquipIcon_Bow_Old.png',
     type: 'Bow',
     rarity: 2,
     description:

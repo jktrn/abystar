@@ -44,7 +44,7 @@ const weaponBonuses: Bonus[] = [
 
 const Deathmatch: Weapon = {
     name: 'Deathmatch',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Gladiator.png',
+    image: '/images/weapons/UI_EquipIcon_Pole_Gladiator.png',
     type: 'Polearm',
     rarity: 4,
     description:

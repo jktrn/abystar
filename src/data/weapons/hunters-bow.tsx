@@ -5,7 +5,7 @@ const weaponBonuses: Bonus[] = []
 
 const HuntersBow: Weapon = {
     name: "Hunter's Bow",
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Hunters.png',
+    image: '/images/weapons/UI_EquipIcon_Bow_Hunters.png',
     type: 'Bow',
     rarity: 1,
     description:

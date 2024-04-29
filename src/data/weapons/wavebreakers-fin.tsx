@@ -42,7 +42,7 @@ const weaponBonuses: Bonus[] = [
 
 const WavebreakersFin: Weapon = {
     name: "Wavebreaker's Fin",
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Maria.png',
+    image: '/images/weapons/UI_EquipIcon_Pole_Maria.png',
     type: 'Polearm',
     rarity: 4,
     description:

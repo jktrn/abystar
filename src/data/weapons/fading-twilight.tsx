@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const FadingTwilight: Weapon = {
     name: 'Fading Twilight',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Fallensun.png',
+    image: '/images/weapons/UI_EquipIcon_Bow_Fallensun.png',
     type: 'Bow',
     rarity: 4,
     description:

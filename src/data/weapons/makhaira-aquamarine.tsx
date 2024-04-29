@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const MakhairaAquamarine: Weapon = {
     name: 'Makhaira Aquamarine',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Pleroma.png',
+    image: '/images/weapons/UI_EquipIcon_Claymore_Pleroma.png',
     type: 'Claymore',
     rarity: 4,
     description:

@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const Rainslasher: Weapon = {
     name: 'Rainslasher',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Perdue.png',
+    image: '/images/weapons/UI_EquipIcon_Claymore_Perdue.png',
     type: 'Claymore',
     rarity: 4,
     description:

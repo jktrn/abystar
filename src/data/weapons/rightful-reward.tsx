@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const RightfulReward: Weapon = {
     name: 'Rightful Reward',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Vorpal.png',
+    image: '/images/weapons/UI_EquipIcon_Pole_Vorpal.png',
     type: 'Weapon',
     rarity: 4,
     description: 'A sharp spear. Only its tip remains freshly bloodstained.',

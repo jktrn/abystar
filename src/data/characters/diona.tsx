@@ -14,7 +14,7 @@ const constellationBonuses: Bonus[] = [
 
 const Diona: Character = {
     name: 'Diona',
-    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Diona.png',
+    icon: '/images/characters/UI_AvatarIcon_Diona.png',
     weapon: 'Bow',
     vision: 'Cryo',
     rarity: 4,
@@ -138,7 +138,7 @@ const Diona: Character = {
     talents: [
         {
             name: 'Normal Attack: K\u00e4tzlein Style',
-            image: 'https://api.ambr.top/assets/UI/Skill_A_02.png',
+            image: '/images/characters/Skill_A_02.png',
             description:
                 'Normal Attack\nPerforms up to 5 consecutive shots with a bow.\nCharged Attack\nPerforms a more precise\nAimed Shot\nwith increased DMG.\nWhile aiming, biting frost will accumulate on the arrowhead. A fully charged frost arrow will deal\nCryo DMG\n.\nPlunging Attack\nFires off a shower of arrows in mid-air before falling and striking the ground, dealing AoE DMG upon impact.',
             data: {
@@ -316,7 +316,7 @@ const Diona: Character = {
         },
         {
             name: 'Icy Paws',
-            image: 'https://api.ambr.top/assets/UI/Skill_S_Diona_01.png',
+            image: '/images/characters/Skill_S_Diona_01.png',
             description:
                 "Fires an Icy Paw that deals\nCryo DMG\nto opponents and forms a shield on hit.\nThe shield's DMG Absorption scales based on Diona's Max HP, and its duration scales off the number of Icy Paws that hit their target.\nPress\nRapidly fires off 2 Icy Paws.\nHold\nDashes back quickly before firing 5 Icy Paws.\nThe shield created by a Hold attack will gain a 75% DMG Absorption Bonus.\nThe shield has a 250%\nCryo DMG\nAbsorption Bonus, and will cause your active character to become affected by\nCryo\nat the point of formation for a short duration.\nWhen she first started bartending, Diona found that no matter how much ice she put in her cocktails, it would never do a drunkard any harm. That all changed when she received her Vision \u2014 now she can form ice cold enough to cause severe brainfreeze. Five out of five stars!",
             data: {
@@ -409,7 +409,7 @@ const Diona: Character = {
         },
         {
             name: 'Signature Mix',
-            image: 'https://api.ambr.top/assets/UI/Skill_E_Diona_01.png',
+            image: '/images/characters/Skill_E_Diona_01.png',
             description:
                 "Tosses out a special cold brew that deals\nAoE Cryo DMG\nand creates a Drunken Mist in an AoE.\nDrunken Mist\n\u00b7Deals continuous\nCryo DMG\nto opponents within the AoE.\n\u00b7Continuously regenerates the HP of characters within the AoE.\nA horrific mix that even Diona considers inhumane. The horrifying foretaste should be left for one's opponents. It has a crisp aftertaste, but unfortunately, one can only feel it on one's nose and skin.",
             data: {
@@ -521,19 +521,19 @@ const Diona: Character = {
     passiveSkills: [
         {
             name: 'Complimentary Bar Food',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_Cook_Heal.png',
+            image: '/images/characters/UI_Talent_Cook_Heal.png',
             description:
                 'When a Perfect Cooking is achieved on a dish with restorative effects, there is a 12% chance to obtain double the product.',
         },
         {
             name: "Cat's Tail Secret Menu",
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Diona_05.png',
+            image: '/images/characters/UI_Talent_S_Diona_05.png',
             description:
                 'Characters shielded by\nIcy Paws\nhave their Movement SPD increased by 10% and their Stamina Consumption decreased by 10%.',
         },
         {
             name: "Drunkards' Farce",
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Diona_06.png',
+            image: '/images/characters/UI_Talent_S_Diona_06.png',
             description:
                 'Opponents who enter the AoE of\nSignature Mix\nhave 10% decreased ATK for 15s.',
         },
@@ -541,42 +541,42 @@ const Diona: Character = {
     constellations: [
         {
             name: 'A Lingering Flavor',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Diona_01.png',
+            image: '/images/characters/UI_Talent_S_Diona_01.png',
             description:
                 'Regenerates 15 Energy for Diona after the effects of\nSignature Mix\nend.',
             level: 1,
         },
         {
             name: 'Shaken, Not Purred',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Diona_02.png',
+            image: '/images/characters/UI_Talent_S_Diona_02.png',
             description:
                 "Increases\nIcy Paws\n' DMG by 15%, and increases its shield's DMG Absorption by 15%.\nAdditionally, when paws hit their targets, creates a shield for other nearby characters on the field with 50% of the\nIcy Paws\nshield's DMG Absorption for 5s.",
             level: 2,
         },
         {
             name: 'A\u2014Another Round?',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Diona_01.png',
+            image: '/images/characters/UI_Talent_U_Diona_01.png',
             description:
                 'Increases the Level of\nSignature Mix\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: 'Wine Industry Slayer',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Diona_03.png',
+            image: '/images/characters/UI_Talent_S_Diona_03.png',
             description:
                 "Within the radius of\nSignature Mix\n, Diona's charge time for aimed shots is reduced by 60%",
             level: 4,
         },
         {
             name: 'Double Shot, on the Rocks',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Diona_02.png',
+            image: '/images/characters/UI_Talent_U_Diona_02.png',
             description:
                 'Increases the Level of\nIcy Paws\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: "Cat's Tail Closing Time",
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Diona_04.png',
+            image: '/images/characters/UI_Talent_S_Diona_04.png',
             description:
                 "Characters within\nSignature Mix\n's radius will gain the following effects based on their HP amounts:\n\u00b7Increases Incoming Healing Bonus by 30% when HP falls below or is equal to 50%.\n\u00b7Elemental Mastery increased by 200 when HP is above 50%.",
             level: 6,

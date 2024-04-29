@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const RoyalLongsword: Weapon = {
     name: 'Royal Longsword',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Theocrat.png',
+    image: '/images/weapons/UI_EquipIcon_Sword_Theocrat.png',
     type: 'Sword',
     rarity: 4,
     description:

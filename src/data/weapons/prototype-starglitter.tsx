@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const PrototypeStarglitter: Weapon = {
     name: 'Prototype Starglitter',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Proto.png',
+    image: '/images/weapons/UI_EquipIcon_Pole_Proto.png',
     type: 'Weapon',
     rarity: 4,
     description:

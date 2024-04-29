@@ -14,7 +14,7 @@ const constellationBonuses: Bonus[] = [
 
 const Collei: Character = {
     name: 'Collei',
-    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Collei.png',
+    icon: '/images/characters/UI_AvatarIcon_Collei.png',
     weapon: 'Bow',
     vision: 'Dendro',
     rarity: 4,
@@ -138,7 +138,7 @@ const Collei: Character = {
     talents: [
         {
             name: "Normal Attack: Supplicant's Bowmanship",
-            image: 'https://api.ambr.top/assets/UI/Skill_A_02.png',
+            image: '/images/characters/Skill_A_02.png',
             description:
                 'Normal Attack\nPerforms up to 4 consecutive shots with a bow.\nCharged Attack\nPerforms a more precise\nAimed Shot\nwith increased DMG.\nWhile aiming, Dendro energy will accumulate on the arrowhead. A fully charged arrow will deal\nDendro DMG\n.\nPlunging Attack\nFires off a shower of arrows in mid-air before falling and striking the ground, dealing AoE DMG upon impact.',
             data: {
@@ -299,7 +299,7 @@ const Collei: Character = {
         },
         {
             name: 'Floral Brush',
-            image: 'https://api.ambr.top/assets/UI/Skill_S_Collei_01.png',
+            image: '/images/characters/Skill_S_Collei_01.png',
             description:
                 "Throws out a Floral Ring that deals 1 instance of\nDendro DMG\nto targets it comes into contact with.\nThe Floral Ring will return after a set time, dealing\nDendro DMG\nonce again.\nThis is Collei's go-to gadget for dealing with unruly wild beasts. A few good thwacks from this tool will generally improve their behavior. This same principle works just as well on evildoers.",
             data: {
@@ -341,7 +341,7 @@ const Collei: Character = {
         },
         {
             name: 'Trump-Card Kitty',
-            image: 'https://api.ambr.top/assets/UI/Skill_E_Collei_01.png',
+            image: '/images/characters/Skill_E_Collei_01.png',
             description:
                 'Trusty Cuilein-Anbar comes to save the day!\nThrows the doll named Cuilein-Anbar, causing an explosion that deals\nAoE Dendro DMG\n, creating a Cuilein-Anbar Zone. Cuilein-Anbar will bounce around within this zone, dealing\nAoE Dendro DMG\n.\n"Pretty impressive, huh? ... Eh? You want to know how I came up with the name Cuilein-Anbar? Uh, well, I..."',
             data: {
@@ -436,19 +436,19 @@ const Collei: Character = {
     passiveSkills: [
         {
             name: 'Gliding Champion of Sumeru',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_Explosion_Glide.png',
+            image: '/images/characters/UI_Talent_Explosion_Glide.png',
             description:
                 'Decreases gliding Stamina consumption for your own party members by 20%.\nNot stackable with Passive Talents that provide the exact same effects.',
         },
         {
             name: 'Floral Sidewinder',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Collei_05.png',
+            image: '/images/characters/UI_Talent_S_Collei_05.png',
             description:
                 "If one of your party members has triggered Burning, Quicken, Aggravate, Spread, Bloom, Hyperbloom, or Burgeon reactions before the\nFloral Ring\nreturns, it will grant the character the Sprout effect upon return, which will continuously deal\nDendro DMG\nequivalent to 40% of Collei's ATK to nearby opponents for 3s.\nIf another Sprout effect is triggered during its initial duration, the initial effect will be removed. DMG dealt by Sprout is considered Elemental Skill DMG.",
         },
         {
             name: 'The Languid Wood',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Collei_06.png',
+            image: '/images/characters/UI_Talent_S_Collei_06.png',
             description:
                 "When a character within the\nCuilein-Anbar Zone\ntriggers Burning, Quicken, Aggravate, Spread, Bloom, Hyperbloom, or Burgeon reactions, the Zone's duration will be increased by 1s.\nA single\nTrump-Card Kitty\ncan be extended this way by up to 3s.",
         },
@@ -456,42 +456,42 @@ const Collei: Character = {
     constellations: [
         {
             name: 'Deepwood Patrol',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Collei_01.png',
+            image: '/images/characters/UI_Talent_S_Collei_01.png',
             description:
                 "When in the party and not on the field, Collei's Energy Recharge is increased by 20%.",
             level: 1,
         },
         {
             name: 'Through Hill and Copse',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Collei_02.png',
+            image: '/images/characters/UI_Talent_S_Collei_02.png',
             description:
                 "The Passive Talent Floral Sidewinder is changed to this:\nThe\nFloral Ring\nwill grant the character the Sprout effect from Floral Sidewinder upon return, dealing 40% of Collei's ATK as\nDendro DMG\nto nearby opponents for 3s.\nFrom the moment of using\nFloral Brush\nto the moment when this instance of Sprout effect ends, if any of your party members triggers Burning, Quicken, Aggravate, Spread, Bloom, Hyperbloom, or Burgeon reactions, the Sprout effect will be extended by 3s.\nThe Sprout effect can only be extended this way once. If another Sprout effect is triggered during its initial duration, the initial effect will be removed. DMG dealt by Sprout is considered Elemental Skill DMG.\nRequires you to have unlocked the Floral Sidewinder Passive Talent.",
             level: 2,
         },
         {
             name: 'Scent of Summer',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Collei_02.png',
+            image: '/images/characters/UI_Talent_U_Collei_02.png',
             description:
                 'Increases the Level of\nFloral Brush\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: 'Gift of the Woods',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Collei_03.png',
+            image: '/images/characters/UI_Talent_S_Collei_03.png',
             description:
                 "Using\nTrump-Card Kitty\nwill increase all nearby characters' Elemental Mastery by 60 for 12s (not including Collei herself).",
             level: 4,
         },
         {
             name: 'All Embers',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Collei_01.png',
+            image: '/images/characters/UI_Talent_U_Collei_01.png',
             description:
                 'Increases the Level of\nTrump-Card Kitty\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: 'Forest of Falling Arrows',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Collei_04.png',
+            image: '/images/characters/UI_Talent_S_Collei_04.png',
             description:
                 "When the\nFloral Ring\nhits, it will create a miniature Cuilein-Anbar that will deal 200% of Collei's ATK as\nDendro DMG\n.\nEach\nFloral Brush\ncan only create one such miniature Cuilein-Anbar.",
             level: 6,

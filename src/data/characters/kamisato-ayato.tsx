@@ -14,7 +14,7 @@ const constellationBonuses: Bonus[] = [
 
 const KamisatoAyato: Character = {
     name: 'Kamisato Ayato',
-    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Ayato.png',
+    icon: '/images/characters/UI_AvatarIcon_Ayato.png',
     weapon: 'Sword',
     vision: 'Hydro',
     rarity: 5,
@@ -138,7 +138,7 @@ const KamisatoAyato: Character = {
     talents: [
         {
             name: 'Normal Attack: Kamisato Art - Marobashi',
-            image: 'https://api.ambr.top/assets/UI/Skill_A_01.png',
+            image: '/images/characters/Skill_A_01.png',
             description:
                 'Normal Attack\nPerforms up to 5 rapid strikes.\nCharged Attack\nConsumes a certain amount of Stamina to dash forward and performs an iai.\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.',
             data: {
@@ -316,7 +316,7 @@ const KamisatoAyato: Character = {
         },
         {
             name: 'Kamisato Art: Kyouka',
-            image: 'https://api.ambr.top/assets/UI/Skill_S_Ayato_01.png',
+            image: '/images/characters/Skill_S_Ayato_01.png',
             description:
                 'Kamisato Ayato shifts positions and enters the Takimeguri Kanka state.\nAfter this shift, he will leave a watery illusion at his original location. After it is formed, the watery illusion will explode if opponents are nearby or after its duration ends, dealing\nAoE Hydro DMG\n.\nTakimeguri Kanka\nIn this state, Kamisato Ayato uses his Shunsuiken to engage in blindingly fast attacks, causing DMG from his Normal Attacks to be converted into\nAoE Hydro DMG\n. This cannot be overridden.\nIt also has the following properties:\n\u00b7After a Shunsuiken attack hits an opponent, it will grant Ayato the Namisen effect, increasing the DMG dealt by Shunsuiken based on Ayato\'s current Max HP. The initial maximum number of Namisen stacks is 4, and 1 stack can be gained through Shunsuiken every 0.1s. This effect will be dispelled when Takimeguri Kanka ends.\n\u00b7Kamisato Ayato\'s resistance to interruption is increased.\n\u00b7Unable to use Charged or Plunging Attacks.\nTakimeguri Kanka will be cleared when Ayato leaves the field. Using Kamisato Art: Kyouka again while in the Takimeguri Kanka state will reset and replace the pre-existing state.\n"When, I wonder, did you come under the illusion that you were winning?"\n\u2014 Ayato is like this in both matter of martial prowess and political intrigue, but to preserve the dignity of his fellow Commissioners, he does not say such things to them. As such, only Thoma, Itto, and Ayaka have ever heard this line.',
             data: {
@@ -460,7 +460,7 @@ const KamisatoAyato: Character = {
         },
         {
             name: 'Kamisato Art: Suiyuu',
-            image: 'https://api.ambr.top/assets/UI/Skill_E_Ayato_01.png',
+            image: '/images/characters/Skill_E_Ayato_01.png',
             description:
                 'Unveils a garden of purity that silences the cacophony within.\nWhile this space exists, Bloomwater Blades will constantly rain down and attack opponents within its AoE, dealing\nHydro DMG\nand increasing the Normal Attack DMG of characters within.\n"I can see them, you know. The ripples of your beating heart within this realm of still waters."',
             data: {
@@ -555,19 +555,19 @@ const KamisatoAyato: Character = {
     passiveSkills: [
         {
             name: 'Kamisato Art: Daily Cooking',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Ayato_07.png',
+            image: '/images/characters/UI_Talent_S_Ayato_07.png',
             description:
                 'When Ayato cooks a dish perfectly, he has a 18% chance to receive an additional "Suspicious" dish of the same type.',
         },
         {
             name: 'Kamisato Art: Mine Wo Matoishi Kiyotaki',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Ayato_05.png',
+            image: '/images/characters/UI_Talent_S_Ayato_05.png',
             description:
                 'Kamisato Art: Kyouka\nhas the following properties:\n\u00b7After it is used, Kamisato Ayato will gain 2 Namisen stacks.\n\u00b7When the water illusion explodes, Ayato will gain a Namisen effect equal to the maximum number of stacks possible.',
         },
         {
             name: 'Kamisato Art: Michiyuku Hagetsu',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Ayato_06.png',
+            image: '/images/characters/UI_Talent_S_Ayato_06.png',
             description:
                 'If Kamisato Ayato is not on the field and his Energy is less than 40, he will regenerate 2 Energy for himself every second.',
         },
@@ -575,42 +575,42 @@ const KamisatoAyato: Character = {
     constellations: [
         {
             name: 'Kyouka Fuushi',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Ayato_01.png',
+            image: '/images/characters/UI_Talent_S_Ayato_01.png',
             description:
                 'Shunsuiken\nDMG is increased by 40% against opponents with 50% HP or less.',
             level: 1,
         },
         {
             name: 'World Source',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Ayato_02.png',
+            image: '/images/characters/UI_Talent_S_Ayato_02.png',
             description:
                 "Namisen\n's maximum stack count is increased to 5. When Kamisato Ayato has at least 3 Namisen stacks, his Max HP is increased by 50%.",
             level: 2,
         },
         {
             name: 'To Admire the Flowers',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Ayato_02.png',
+            image: '/images/characters/UI_Talent_U_Ayato_02.png',
             description:
                 'Increases the Level of\nKamisato Art: Kyouka\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: 'Endless Flow',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Ayato_03.png',
+            image: '/images/characters/UI_Talent_S_Ayato_03.png',
             description:
                 'After using\nKamisato Art: Suiyuu\n, all nearby party members will have 15% increased Normal Attack SPD for 15s.',
             level: 4,
         },
         {
             name: 'Bansui Ichiro',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Ayato_01.png',
+            image: '/images/characters/UI_Talent_U_Ayato_01.png',
             description:
                 'Increases the Level of\nKamisato Art: Suiyuu\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: 'Boundless Origin',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Ayato_04.png',
+            image: '/images/characters/UI_Talent_S_Ayato_04.png',
             description:
                 "After using\nKamisato Art: Kyouka\n, Ayato's next Shunsuiken attack will create 2 extra Shunsuiken strikes when they hit opponents, each one dealing 450% of Ayato's ATK as DMG.\nBoth these Shunsuiken attacks will not be affected by Namisen.",
             level: 6,

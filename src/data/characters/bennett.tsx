@@ -14,7 +14,7 @@ const constellationBonuses: Bonus[] = [
 
 const Bennett: Character = {
     name: 'Bennett',
-    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Bennett.png',
+    icon: '/images/characters/UI_AvatarIcon_Bennett.png',
     weapon: 'Sword',
     vision: 'Pyro',
     rarity: 4,
@@ -138,7 +138,7 @@ const Bennett: Character = {
     talents: [
         {
             name: 'Normal Attack: Strike of Fortune',
-            image: 'https://api.ambr.top/assets/UI/Skill_A_01.png',
+            image: '/images/characters/Skill_A_01.png',
             description:
                 'Normal Attack\nPerforms up to 5 rapid strikes.\nCharged Attack\nConsumes a certain amount of Stamina to unleash 2 rapid sword strikes.\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.',
             data: {
@@ -316,7 +316,7 @@ const Bennett: Character = {
         },
         {
             name: 'Passion Overload',
-            image: 'https://api.ambr.top/assets/UI/Skill_S_Bennett_01.png',
+            image: '/images/characters/Skill_S_Bennett_01.png',
             description:
                 "Bennett puts all his fire and passion for adventuring into his sword. Results may vary based on how fired up he is...\nPress\nA single, swift flame strike that deals\nPyro DMG\n.\nHold (Short)\nCharges up, resulting in different effects when unleashed based on the Charge Level.\n\u00b7Level 1: Strikes twice, dealing\nPyro DMG\nand launching opponents.\n\u00b7Level 2: Unleashes 3 consecutive attacks that deal impressive\nPyro DMG\n, but the last attack triggers an explosion that launches both Bennett and the enemy.\nBennett takes no damage from being launched.\nAn attack that combines Bennett's dreams and passion with Pyro. But passion is sometimes overblown, and Pyro sometimes blows over.",
             data: {
@@ -409,7 +409,7 @@ const Bennett: Character = {
         },
         {
             name: 'Fantastic Voyage',
-            image: 'https://api.ambr.top/assets/UI/Skill_E_Bennett_01.png',
+            image: '/images/characters/Skill_E_Bennett_01.png',
             description:
                 "Bennett performs a jumping attack that deals\nPyro DMG\n, creating an Inspiration Field.\nInspiration Field\n\u00b7If the health of a character within the AoE is equal to or falls below 70%, their health will continuously regenerate. The amount of HP restored scales off Bennett's Max HP.\n\u00b7If the health of a character within the AoE is higher than 70%, they gain an ATK Bonus that is based on Bennett's Base ATK.\n\u00b7Imbues characters within the AoE with\nPyro\n.\nBenny's Adventure Team's adventures are always fraught with unexpected danger. However, Bennett is more inclined to call them \"journeys full of wonder, excitement, and beauty.\"",
             data: {
@@ -521,18 +521,18 @@ const Bennett: Character = {
     passiveSkills: [
         {
             name: 'It Should Be Safe...',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_Expedition_Mengde.png',
+            image: '/images/characters/UI_Talent_Expedition_Mengde.png',
             description:
                 'When dispatched on an expedition in Mondstadt, time consumed is reduced by 25%.',
         },
         {
             name: 'Rekindle',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Bennett_05.png',
+            image: '/images/characters/UI_Talent_S_Bennett_05.png',
             description: "Decreases\nPassion Overload\n's CD by 20%.",
         },
         {
             name: 'Fearnaught',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Bennett_06.png',
+            image: '/images/characters/UI_Talent_S_Bennett_06.png',
             description:
                 'Within the area created by\nFantastic Voyage\n,\nPassion Overload\ntakes on the following effects:\n\u00b7CD is reduced by 50%.\n\u00b7Bennett will not be launched by the effects of Charge Level 2.',
         },
@@ -540,42 +540,42 @@ const Bennett: Character = {
     constellations: [
         {
             name: 'Grand Expectation',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Bennett_01.png',
+            image: '/images/characters/UI_Talent_S_Bennett_01.png',
             description:
                 "Fantastic Voyage\n's ATK increase no longer has an HP restriction, and gains an additional 20% of Bennett's Base ATK.",
             level: 1,
         },
         {
             name: 'Impasse Conqueror',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Bennett_02.png',
+            image: '/images/characters/UI_Talent_S_Bennett_02.png',
             description:
                 "When Bennett's HP falls below 70%, his Energy Recharge is increased by 30%.",
             level: 2,
         },
         {
             name: 'Unstoppable Fervor',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Bennett_01.png',
+            image: '/images/characters/UI_Talent_U_Bennett_01.png',
             description:
                 'Increases the Level of\nPassion Overload\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: 'Unexpected Odyssey',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Bennett_03.png',
+            image: '/images/characters/UI_Talent_S_Bennett_03.png',
             description:
                 "Using a Normal Attack as the second attack of\nPassion Overload\n's Charge Level 1 will perform a follow-up attack.\nThis additional attack does 135% of the second attack's DMG.",
             level: 4,
         },
         {
             name: 'True Explorer',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Bennett_02.png',
+            image: '/images/characters/UI_Talent_U_Bennett_02.png',
             description:
                 'Increases the Level of\nFantastic Voyage\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: 'Fire Ventures With Me',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Bennett_04.png',
+            image: '/images/characters/UI_Talent_S_Bennett_04.png',
             description:
                 "Sword, Claymore, or Polearm-wielding characters inside\nFantastic Voyage\n's radius gain a 15%\nPyro DMG Bonus\nand their weapons are infused with\nPyro\n.",
             level: 6,

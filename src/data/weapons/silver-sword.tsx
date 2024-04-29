@@ -5,7 +5,7 @@ const weaponBonuses: Bonus[] = []
 
 const SilverSword: Weapon = {
     name: 'Silver Sword',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Silver.png',
+    image: '/images/weapons/UI_EquipIcon_Sword_Silver.png',
     type: 'Sword',
     rarity: 2,
     description:

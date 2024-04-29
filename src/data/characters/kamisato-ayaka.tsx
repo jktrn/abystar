@@ -14,7 +14,7 @@ const constellationBonuses: Bonus[] = [
 
 const KamisatoAyaka: Character = {
     name: 'Kamisato Ayaka',
-    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Ayaka.png',
+    icon: '/images/characters/UI_AvatarIcon_Ayaka.png',
     weapon: 'Sword',
     vision: 'Cryo',
     rarity: 5,
@@ -138,7 +138,7 @@ const KamisatoAyaka: Character = {
     talents: [
         {
             name: 'Normal Attack: Kamisato Art - Kabuki',
-            image: 'https://api.ambr.top/assets/UI/Skill_A_01.png',
+            image: '/images/characters/Skill_A_01.png',
             description:
                 'Normal Attack\nPerforms up to 5 rapid strikes.\nCharged Attack\nConsumes a certain amount of Stamina to unleash a flurry of sword ki.\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging enemies along the path and dealing AoE DMG upon impact.',
             data: {
@@ -316,7 +316,7 @@ const KamisatoAyaka: Character = {
         },
         {
             name: 'Kamisato Art: Hyouka',
-            image: 'https://api.ambr.top/assets/UI/Skill_S_Ayaka_01.png',
+            image: '/images/characters/Skill_S_Ayaka_01.png',
             description:
                 'Summons blooming ice to launch nearby opponents, dealing\nAoE Cryo DMG\n.\n"Clouds shroud the moonlit night. Longing descends like a fog, filling the one detained with wanderlust."',
             data: {
@@ -358,7 +358,7 @@ const KamisatoAyaka: Character = {
         },
         {
             name: 'Kamisato Art: Soumetsu',
-            image: 'https://api.ambr.top/assets/UI/Skill_E_Ayaka.png',
+            image: '/images/characters/Skill_E_Ayaka.png',
             description:
                 'Summons forth a snowstorm with flawless poise, unleashing a Frostflake Seki no To that moves forward continuously.\nFrostflake Seki no To\n\u00b7A storm of whirling icy winds that slashes repeatedly at every enemy it touches, dealing\nCryo DMG\n.\n\u00b7The snowstorm explodes after its duration ends, dealing\nAoE Cryo DMG\n.\n"The blizzard veils the heron\'s thoughts, pity heavy in its heart."',
             data: {
@@ -453,19 +453,19 @@ const KamisatoAyaka: Character = {
     passiveSkills: [
         {
             name: 'Fruits of Shinsa',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_Combine_Weapon_Double.png',
+            image: '/images/characters/UI_Talent_Combine_Weapon_Double.png',
             description:
                 'When Ayaka crafts Weapon Ascension Materials, she has a 10% chance to receive double the product.',
         },
         {
             name: 'Amatsumi Kunitsumi Sanctification',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Ayaka_05.png',
+            image: '/images/characters/UI_Talent_S_Ayaka_05.png',
             description:
                 "After using\nKamisato Art: Hyouka\n, Kamisato Ayaka's Normal and Charged Attacks deal 30% increased DMG for 6s.",
         },
         {
             name: 'Kanten Senmyou Blessing',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Ayaka_06.png',
+            image: '/images/characters/UI_Talent_S_Ayaka_06.png',
             description:
                 'When the Cryo application at the end of\nKamisato Art: Senho\nhits an opponent, Kamisato Ayaka gains the following effects:\n\u00b7Restores 10 Stamina\n\u00b7Gains 18%\nCryo DMG Bonus\nfor 10s.',
         },
@@ -473,42 +473,42 @@ const KamisatoAyaka: Character = {
     constellations: [
         {
             name: 'Snowswept Sakura',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Ayaka_01.png',
+            image: '/images/characters/UI_Talent_S_Ayaka_01.png',
             description:
                 "When Kamisato Ayaka's Normal or Charged Attacks deal\nCryo DMG\nto opponents, it has a 50% chance of decreasing the CD of\nKamisato Art: Hyouka\nby 0.3s. This effect can occur once every 0.1s.",
             level: 1,
         },
         {
             name: 'Blizzard Blade Seki no To',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Ayaka_02.png',
+            image: '/images/characters/UI_Talent_S_Ayaka_02.png',
             description:
                 "When casting\nKamisato Art: Soumetsu\n, unleashes 2 smaller additional Frostflake Seki no To, each dealing 20% of the original storm's DMG.",
             level: 2,
         },
         {
             name: 'Frostbloom Kamifubuki',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Ayaka_02.png',
+            image: '/images/characters/UI_Talent_U_Ayaka_02.png',
             description:
                 'Increases the Level of\nKamisato Art: Soumetsu\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: 'Ebb and Flow',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Ayaka_03.png',
+            image: '/images/characters/UI_Talent_S_Ayaka_03.png',
             description:
                 "Opponents damaged by\nKamisato Art: Soumetsu\n's Frostflake Seki no To will have their DEF decreased by 30% for 6s.",
             level: 4,
         },
         {
             name: 'Blossom Cloud Irutsuki',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Ayaka_01.png',
+            image: '/images/characters/UI_Talent_U_Ayaka_01.png',
             description:
                 'Increases the Level of\nKamisato Art: Hyouka\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: 'Dance of Suigetsu',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Ayaka_04.png',
+            image: '/images/characters/UI_Talent_S_Ayaka_04.png',
             description:
                 "Kamisato Ayaka gains Usurahi Butou every 10s, increasing her Charged Attack DMG by 298%. This buff will be cleared 0.5s after Ayaka's Charged ATK hits an opponent, after which the timer for this ability will restart.",
             level: 6,

@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const TheBell: Weapon = {
     name: 'The Bell',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Troupe.png',
+    image: '/images/weapons/UI_EquipIcon_Claymore_Troupe.png',
     type: 'Claymore',
     rarity: 4,
     description:

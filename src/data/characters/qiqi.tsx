@@ -14,7 +14,7 @@ const constellationBonuses: Bonus[] = [
 
 const Qiqi: Character = {
     name: 'Qiqi',
-    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Qiqi.png',
+    icon: '/images/characters/UI_AvatarIcon_Qiqi.png',
     weapon: 'Sword',
     vision: 'Cryo',
     rarity: 5,
@@ -138,7 +138,7 @@ const Qiqi: Character = {
     talents: [
         {
             name: 'Normal Attack: Ancient Sword Art',
-            image: 'https://api.ambr.top/assets/UI/Skill_A_01.png',
+            image: '/images/characters/Skill_A_01.png',
             description:
                 'Normal Attack\nPerforms up to 5 rapid strikes.\nCharged Attack\nConsumes a certain amount of Stamina to unleash 2 rapid sword strikes.\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.',
             data: {
@@ -316,7 +316,7 @@ const Qiqi: Character = {
         },
         {
             name: 'Adeptus Art: Herald of Frost',
-            image: 'https://api.ambr.top/assets/UI/Skill_S_Qiqi_01.png',
+            image: '/images/characters/Skill_S_Qiqi_01.png',
             description:
                 "Using the Icevein Talisman, Qiqi brings forth the Herald of Frost, dealing\nCryo DMG\nto surrounding opponents.\nHerald of Frost\n\u00b7On hit, Qiqi's Normal and Charged Attacks regenerate HP for your own party members and nearby teammates. Healing scales based on Qiqi's ATK.\n\u00b7Periodically regenerates your active character's HP.\n\u00b7Follows the character around, dealing\nCryo DMG\nto opponents in their path.\nI use this to prevent warming and rot... of Dr. Bai's precious ingredients. Yes.",
             data: {
@@ -426,7 +426,7 @@ const Qiqi: Character = {
         },
         {
             name: 'Adeptus Art: Preserver of Fortune',
-            image: 'https://api.ambr.top/assets/UI/Skill_E_Qiqi_01.png',
+            image: '/images/characters/Skill_E_Qiqi_01.png',
             description:
                 'Qiqi releases the adeptus power sealed within her body, marking nearby opponents with a Fortune-Preserving Talisman that deals\nCryo DMG\n.\nFortune-Preserving Talisman\nWhen opponents affected by this Talisman take DMG, the character that dealt this DMG regenerates HP.\n"I am the Fortune Preserver, the Maiden of Resurrection."\n\u2014 Qiqi does not remember these words.',
             data: {
@@ -521,19 +521,19 @@ const Qiqi: Character = {
     passiveSkills: [
         {
             name: 'Former Life Memories',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_Collect_Local_Liyue.png',
+            image: '/images/characters/UI_Talent_Collect_Local_Liyue.png',
             description:
                 'Displays the location of nearby\nresources unique to Liyue\non the mini-map.',
         },
         {
             name: 'Life-Prolonging Methods',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Qiqi_05.png',
+            image: '/images/characters/UI_Talent_S_Qiqi_05.png',
             description:
                 'When a character under the effects of\nAdeptus Art: Herald of Frost\ntriggers an Elemental Reaction, their Incoming Healing Bonus is increased by 20% for 8s.',
         },
         {
             name: 'A Glimpse Into Arcanum',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Qiqi_06.png',
+            image: '/images/characters/UI_Talent_S_Qiqi_06.png',
             description:
                 'When Qiqi hits opponents with her Normal and Charged Attacks, she has a 50% chance to apply a Fortune-Preserving Talisman to them for 6s. This effect can only occur once every 30s.',
         },
@@ -541,42 +541,42 @@ const Qiqi: Character = {
     constellations: [
         {
             name: 'Ascetics of Frost',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Qiqi_01.png',
+            image: '/images/characters/UI_Talent_S_Qiqi_01.png',
             description:
                 'When the Herald of Frost hits an opponent marked by a Fortune-Preserving Talisman, Qiqi regenerates 2 Energy.',
             level: 1,
         },
         {
             name: 'Frozen to the Bone',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Qiqi_02.png',
+            image: '/images/characters/UI_Talent_S_Qiqi_02.png',
             description:
                 "Qiqi's Normal and Charge Attack DMG against opponents affected by\nCryo\nis increased by 15%.",
             level: 2,
         },
         {
             name: 'Ascendant Praise',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Qiqi_01.png',
+            image: '/images/characters/UI_Talent_U_Qiqi_01.png',
             description:
                 'Increases the Level of\nAdeptus Art: Preserver of Fortune\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: 'Divine Suppression',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Qiqi_03.png',
+            image: '/images/characters/UI_Talent_S_Qiqi_03.png',
             description:
                 'Targets marked by the Fortune-Preserving Talisman have their ATK decreased by 20%.',
             level: 4,
         },
         {
             name: 'Crimson Lotus Bloom',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Qiqi_02.png',
+            image: '/images/characters/UI_Talent_U_Qiqi_02.png',
             description:
                 'Increases the Level of\nAdeptus Art: Herald of Frost\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: 'Rite of Resurrection',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Qiqi_04.png',
+            image: '/images/characters/UI_Talent_S_Qiqi_04.png',
             description:
                 'Using\nAdeptus Art: Preserver of Fortune\nrevives all fallen party members nearby and regenerates 50% of their HP.\nThis effect can only occur once every 15 mins.',
             level: 6,

@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const JadefallsSplendor: Weapon = {
     name: "Jadefall's Splendor",
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Morax.png',
+    image: '/images/weapons/UI_EquipIcon_Catalyst_Morax.png',
     type: 'Catalyst',
     rarity: 5,
     description:

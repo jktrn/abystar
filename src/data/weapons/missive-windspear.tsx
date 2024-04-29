@@ -30,7 +30,7 @@ const weaponBonuses: Bonus[] = [
 
 const MissiveWindspear: Weapon = {
     name: 'Missive Windspear',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Windvane.png',
+    image: '/images/weapons/UI_EquipIcon_Pole_Windvane.png',
     type: 'Polearm',
     rarity: 4,
     description:

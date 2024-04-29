@@ -14,7 +14,7 @@ const constellationBonuses: Bonus[] = [
 
 const Lyney: Character = {
     name: 'Lyney',
-    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Liney.png',
+    icon: '/images/characters/UI_AvatarIcon_Liney.png',
     weapon: 'Bow',
     vision: 'Pyro',
     rarity: 5,
@@ -138,7 +138,7 @@ const Lyney: Character = {
     talents: [
         {
             name: 'Normal Attack: Card Force Translocation',
-            image: 'https://api.ambr.top/assets/UI/Skill_A_02.png',
+            image: '/images/characters/Skill_A_02.png',
             description:
                 "Normal Attack\nPerforms up to 4 consecutive shots with a bow.\nPlunging Attack\nFires off a shower of arrows in mid-air before falling and striking the ground, dealing AoE DMG upon impact.\nCharged Attack\nPerforms a more precise\nAimed Shot\nwith increased DMG.\nWhile aiming, flames will run across the arrowhead before being fired. Different effects will occur based on the time spent charging.\n\u00b7Charge Level 1: Fires off a Pyro-infused arrow, dealing\nPyro DMG\n.\n\u00b7Charge Level 2: Fires off a Prop Arrow that deals\nPyro DMG\n, and upon hit, it will summon a Grin-Malkin Hat.\nWhen firing the Prop Arrow, and when Lyney has more than 60% HP, he will consume a portion of his HP to obtain 1 Prop Surplus stack. Max 5 stacks. The effect will be removed after the character spends 30s out of combat.\nThe lowest Lyney can drop to through this method is 60% of his Max HP.\nGrin-Malkin Hat\n\u00b7Can taunt nearby opponents and attract their attacks. Each opponent can only be taunted by the Hat once every 5s.\n\u00b7The Hat will inherit a percentage of Lyney's Max HP.\n\u00b7If destroyed, or if its duration expires, it will fire off a\nPyrotechnic Strike\nat 1 nearby opponent, dealing\nPyro DMG\n.\nOnly 1 Hat can exist at any given time.\nArkhe: Pneuma\nAt certain intervals, the Prop Arrow will cause a Spiritbreath Thorn to descend upon its hit location, dealing Pneuma-aligned\nPyro DMG\n.",
             data: {
@@ -418,7 +418,7 @@ const Lyney: Character = {
         },
         {
             name: 'Bewildering Lights',
-            image: 'https://api.ambr.top/assets/UI/Skill_S_Liney_01.png',
+            image: '/images/characters/Skill_S_Liney_01.png',
             description:
                 'Lyney does a flourish with his hat, unleashing a firework surprise!\nWhen used, he will clear all current Prop Surplus stacks and deal\nAoE Pyro DMG\nto opponents in front of him. DMG will be increased according to the stacks cleared, and this will also regenerate Lyney\'s HP based on his Max HP.\nWhen a Grin-Malkin Hat created by Lyney is on the field, the fireworks will cause it to explode, dealing\nAoE Pyro DMG\nequal to that of a Pyrotechnic Strike.\nThe DMG dealt through the Grin-Malkin Hat in this way is considered Charged Attack DMG.\n"Everyone knows that magicians will intentionally misdirect the audience... Ah, yes, while you were looking my way, the hat and assistant over there have both disappeared... Fascinating, is it not?"',
             data: {
@@ -494,7 +494,7 @@ const Lyney: Character = {
         },
         {
             name: 'Wondrous Trick: Miracle Parade',
-            image: 'https://api.ambr.top/assets/UI/Skill_E_Liney_01.png',
+            image: '/images/characters/Skill_E_Liney_01.png',
             description:
                 'Unleashing his magic, Lyney turns himself into a Grin-Malkin Cat that can move around quickly. (Not to be mistaken for the Grin-Malkin Hat. They\'re two different props!)\nWhen the Grin-Malkin Cat gets close to opponents, it will send flames falling down on them, dealing at most 1 instance of\nPyro DMG\nto each opponent. When the duration ends, he will dismiss the Grin-Malkin Cat and ignite fireworks that deal\nAoE Pyro DMG\n, summon 1 Grin-Malkin Hat, and grant himself 1 Prop Surplus stack.\nGrin-Malkin Cat can be actively canceled.\n"Watch closely now. This is a time for miracles, and it belongs to just the two of us!"',
             data: {
@@ -589,19 +589,19 @@ const Lyney: Character = {
     passiveSkills: [
         {
             name: 'Trivial Observations',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Liney_07.png',
+            image: '/images/characters/UI_Talent_S_Liney_07.png',
             description:
                 'Displays the location of nearby\nresources unique to Fontaine\non the mini-map.',
         },
         {
             name: 'Perilous Performance',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Liney_05.png',
+            image: '/images/characters/UI_Talent_S_Liney_05.png',
             description:
                 'If Lyney consumes HP when firing off a\nProp Arrow\n, the Grin-Malkin hat summoned by the arrow will, upon hitting an opponent, restore 3 Energy to Lyney and increase DMG dealt by 80% of his ATK.',
         },
         {
             name: 'Conclusive Ovation',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Liney_06.png',
+            image: '/images/characters/UI_Talent_S_Liney_06.png',
             description:
                 'The DMG Lyney deals to opponents affected by\nPyro\nwill receive the following buffs:\n\u00b7Increases the DMG dealt by 60%.\n\u00b7Each\nPyro\nparty member other than Lyney will cause the DMG dealt to increase by an additional 20%.\nLyney can deal up to 100% increased DMG to opponents affected by\nPyro\nin this way.',
         },
@@ -609,42 +609,42 @@ const Lyney: Character = {
     constellations: [
         {
             name: 'Whimsical Wonders',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Liney_01.png',
+            image: '/images/characters/UI_Talent_S_Liney_01.png',
             description:
                 'Lyney can have 2\nGrin-Malkin Hats\npresent at once.\nAdditionally, Prop Arrows will summon 2 Grin-Malkin Hats and grant Lyney 1 extra stack of Prop Surplus. This effect can occur once every 15s.',
             level: 1,
         },
         {
             name: 'Loquacious Cajoling',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Liney_03.png',
+            image: '/images/characters/UI_Talent_S_Liney_03.png',
             description:
                 'When Lyney is on the field, he will gain a stack of Crisp Focus every 2s. Each stack will increase his CRIT DMG by 20%. Max 3 stacks. This effect will be canceled when Lyney leaves the field.',
             level: 2,
         },
         {
             name: 'Prestidigitation',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Liney_01.png',
+            image: '/images/characters/UI_Talent_U_Liney_01.png',
             description:
                 'Increases the Level of\nNormal Attack: Card Force Translocation\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: 'Well-Versed, Well-Rehearsed',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Liney_02.png',
+            image: '/images/characters/UI_Talent_S_Liney_02.png',
             description:
                 "After an opponent is hit by Lyney's\nPyro\nCharged Attack, this opponent's\nPyro RES\nwill be decreased by 20% for 6s.",
             level: 4,
         },
         {
             name: 'To Pierce Enigmas',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Liney_02.png',
+            image: '/images/characters/UI_Talent_U_Liney_02.png',
             description:
                 'Increases the Level of\nWondrous Trick: Miracle Parade\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: 'Guarded Smile',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Liney_04.png',
+            image: '/images/characters/UI_Talent_S_Liney_04.png',
             description:
                 "When Lyney fires a\nProp Arrow\n, he will fire a Pyrotechnic Strike: Reprised that will deal 80% of a Pyrotechnic Strike's DMG. This DMG is considered Charged Attack DMG.",
             level: 6,

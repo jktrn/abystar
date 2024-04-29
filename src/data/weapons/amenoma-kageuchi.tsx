@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const AmenomaKageuchi: Weapon = {
     name: 'Amenoma Kageuchi',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Bakufu.png',
+    image: '/images/weapons/UI_EquipIcon_Sword_Bakufu.png',
     type: 'Weapon',
     rarity: 4,
     description:

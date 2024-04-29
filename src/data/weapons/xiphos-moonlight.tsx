@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const XiphosMoonlight: Weapon = {
     name: "Xiphos' Moonlight",
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Pleroma.png',
+    image: '/images/weapons/UI_EquipIcon_Sword_Pleroma.png',
     type: 'Sword',
     rarity: 4,
     description:

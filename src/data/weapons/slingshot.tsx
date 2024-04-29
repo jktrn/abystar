@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const Slingshot: Weapon = {
     name: 'Slingshot',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Sling.png',
+    image: '/images/weapons/UI_EquipIcon_Bow_Sling.png',
     type: 'Bow',
     rarity: 3,
     description:

@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const TravelersHandySword: Weapon = {
     name: "Traveler's Handy Sword",
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Traveler.png',
+    image: '/images/weapons/UI_EquipIcon_Sword_Traveler.png',
     type: 'Sword',
     rarity: 3,
     description:

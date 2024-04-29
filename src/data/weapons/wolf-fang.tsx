@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const Wolffang: Weapon = {
     name: 'Wolf-Fang',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Boreas.png',
+    image: '/images/weapons/UI_EquipIcon_Sword_Boreas.png',
     type: 'Sword',
     rarity: 4,
     description:

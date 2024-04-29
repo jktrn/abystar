@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const ForestRegalia: Weapon = {
     name: 'Forest Regalia',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Arakalari.png',
+    image: '/images/weapons/UI_EquipIcon_Claymore_Arakalari.png',
     type: 'Weapon',
     rarity: 4,
     description:

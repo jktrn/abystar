@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const CrimsonMoonsSemblance: Weapon = {
     name: "Crimson Moon's Semblance",
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_BloodMoon.png',
+    image: '/images/weapons/UI_EquipIcon_Pole_BloodMoon.png',
     type: 'Polearm',
     rarity: 5,
     description:

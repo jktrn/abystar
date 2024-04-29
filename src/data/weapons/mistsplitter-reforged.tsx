@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const MistsplitterReforged: Weapon = {
     name: 'Mistsplitter Reforged',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Narukami.png',
+    image: '/images/weapons/UI_EquipIcon_Sword_Narukami.png',
     type: 'Sword',
     rarity: 5,
     description:

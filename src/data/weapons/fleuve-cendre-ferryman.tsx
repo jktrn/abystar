@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const FleuveCendreFerryman: Weapon = {
     name: 'Fleuve Cendre Ferryman',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Machination.png',
+    image: '/images/weapons/UI_EquipIcon_Sword_Machination.png',
     type: 'Sword',
     rarity: 4,
     description:

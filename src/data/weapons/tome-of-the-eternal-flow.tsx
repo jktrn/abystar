@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const TomeOfTheEternalFlow: Weapon = {
     name: 'Tome of the Eternal Flow',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Iudex.png',
+    image: '/images/weapons/UI_EquipIcon_Catalyst_Iudex.png',
     type: 'Catalyst',
     rarity: 5,
     description:

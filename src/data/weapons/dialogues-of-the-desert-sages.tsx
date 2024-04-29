@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const DialoguesOfTheDesertSages: Weapon = {
     name: 'Dialogues of the Desert Sages',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Caduceus.png',
+    image: '/images/weapons/UI_EquipIcon_Pole_Caduceus.png',
     type: 'Polearm',
     rarity: 4,
     description:

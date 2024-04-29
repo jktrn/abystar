@@ -32,7 +32,7 @@ const weaponBonuses: Bonus[] = [
 
 const TheCatch: Weapon = {
     name: '"The Catch"',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Mori.png',
+    image: '/images/weapons/UI_EquipIcon_Pole_Mori.png',
     type: 'Polearm',
     rarity: 4,
     description:

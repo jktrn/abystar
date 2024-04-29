@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const RangeGauge: Weapon = {
     name: 'Range Gauge',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Mechanic.png',
+    image: '/images/weapons/UI_EquipIcon_Bow_Mechanic.png',
     type: 'Bow',
     rarity: 4,
     description:

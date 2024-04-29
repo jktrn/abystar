@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const DragonspineSpear: Weapon = {
     name: 'Dragonspine Spear',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Everfrost.png',
+    image: '/images/weapons/UI_EquipIcon_Pole_Everfrost.png',
     type: 'Weapon',
     rarity: 4,
     description:

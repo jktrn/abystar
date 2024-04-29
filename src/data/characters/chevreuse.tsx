@@ -14,7 +14,7 @@ const constellationBonuses: Bonus[] = [
 
 const Chevreuse: Character = {
     name: 'Chevreuse',
-    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Chevreuse.png',
+    icon: '/images/characters/UI_AvatarIcon_Chevreuse.png',
     weapon: 'Polearm',
     vision: 'Pyro',
     rarity: 4,
@@ -138,7 +138,7 @@ const Chevreuse: Character = {
     talents: [
         {
             name: 'Normal Attack: Line Bayonet Thrust EX',
-            image: 'https://api.ambr.top/assets/UI/Skill_A_03.png',
+            image: '/images/characters/Skill_A_03.png',
             description:
                 'Normal Attack\nPerforms up to 4 consecutive spear strikes.\nCharged Attack\nConsumes a certain amount of Stamina to lunge forward, dealing damage to opponents along the way.\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.',
             data: {
@@ -299,7 +299,7 @@ const Chevreuse: Character = {
         },
         {
             name: 'Short-Range Rapid Interdiction Fire',
-            image: 'https://api.ambr.top/assets/UI/Skill_S_Chevreuse_01.png',
+            image: '/images/characters/Skill_S_Chevreuse_01.png',
             description:
                 'Chevreuse quickly shoulders her musket and fires at her opponent(s), dealing\nAoE Pyro DMG\n.\nFor a short duration after Chevreuse fires a shot, she will continuously restore HP to your active character on the field. The amount healed is based on her Max HP.\nHold to fire in a different fashion.\nHold\nEnter Aiming Mode, locking a target in her sights to fire a precise interdiction shot. If Chevreuse has an Overcharged Ball, then she will fire the Overcharged Ball instead, dealing greater\nPyro DMG\nin a larger area.\nChevreuse gains 1 Overcharged Ball every time a nearby character in the party triggers an Overloaded reaction, and can have up to 1 Overcharged Ball at a time.\nArkhe: Ousia\nPeriodically, after Chevreuse\'s Short-Range Rapid Interdiction Fire hits, a Surging Blade will be called forth that deals Ousia-aligned\nPyro DMG\n.\n"Actually, training regulations only had the phrase "interdiction fire," but the protagonist of this novel believes that even how stylish your terminology is can affect how motivated your troops are, which can put your opponents on the back foot right from the get-go... I think that\'s a good point, so I changed the regulations!"',
             data: {
@@ -443,7 +443,7 @@ const Chevreuse: Character = {
         },
         {
             name: 'Ring of Bursting Grenades',
-            image: 'https://api.ambr.top/assets/UI/Skill_E_Chevreuse_01.png',
+            image: '/images/characters/Skill_E_Chevreuse_01.png',
             description:
                 'Chevreuse fires an explosive grenade at opponents with her musket, dealing\nAoE Pyro DMG.\nAfter the projectile hits, it will split into many secondary explosive shells.\nThe secondary explosive shells will burst after a short interval, dealing\nPyro DMG\nto nearby opponents.\n"Theoretically, a rectangular blast would be most efficient at destroying enemy formations. Unfortunately, the cross-section of an explosive shock wave is round, like most cakes. So, the secondary explosive shells can only be arranged like the fruit on a cake, forming a ring around the edge."',
             data: {
@@ -521,19 +521,19 @@ const Chevreuse: Character = {
     passiveSkills: [
         {
             name: 'Double Time March',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_Explosion_Sprint.png',
+            image: '/images/characters/UI_Talent_Explosion_Sprint.png',
             description:
                 'Decreases sprinting Stamina consumption for your own party members by 20%.\nNot stackable with Passive Talents that provide the exact same effects.',
         },
         {
             name: "Vanguard's Coordinated Tactics",
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Chevreuse_05.png',
+            image: '/images/characters/UI_Talent_S_Chevreuse_05.png',
             description:
                 'When all party members are\nPyro\nand\nElectro\ncharacters and there is at least one Pyro and one Electro character each in the party:\nChevreuse grants "Coordinated Tactics" to nearby party members: After a character triggers the Overloaded reaction, the\nPyro\nand\nElectro\nRES of the opponent(s) affected by this Overloaded reaction will be decreased by 40% for 6s.\nThe "Coordinated Tactics" effect will be removed when the Elemental Types of the characters in the party do not meet the basic requirements for the Passive Talent.',
         },
         {
             name: 'Vertical Force Coordination',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Chevreuse_06.png',
+            image: '/images/characters/UI_Talent_S_Chevreuse_06.png',
             description:
                 'After Chevreuse fires an Overcharged Ball using\nShort-Range Rapid Interdiction Fire\n, nearby\nPyro\nand\nElectro\ncharacters in the party gain 1% increased ATK for every 1,000 Max HP Chevreuse has for 30s. ATK can be increased by up to 40% in this way.',
         },
@@ -541,42 +541,42 @@ const Chevreuse: Character = {
     constellations: [
         {
             name: "Stable Front Line's Resolve",
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Chevreuse_01.png',
+            image: '/images/characters/UI_Talent_S_Chevreuse_01.png',
             description:
                 'When the active character with the "Coordinated Tactics" status (not including Chevreuse herself) triggers the Overloaded reaction, they will recover 6 Energy. This effect can be triggered once every 10s.\nYou must first unlock the Passive Talent "Vanguard\'s Coordinated Tactics."',
             level: 1,
         },
         {
             name: 'Sniper Induced Explosion',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Chevreuse_02.png',
+            image: '/images/characters/UI_Talent_S_Chevreuse_02.png',
             description:
                 "After Holding\nShort-Range Rapid Interdiction Fire\nand hitting a target, 2 chain explosions will be triggered near the location where said target is hit. Each explosion deals\nPyro DMG\nequal to 120% of Chevreuse's ATK. This effect can be triggered up to once every 10s, and DMG dealt this way is considered Elemental Skill DMG.",
             level: 2,
         },
         {
             name: 'Practiced Field Stripping Technique',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Chevreuse_01.png',
+            image: '/images/characters/UI_Talent_U_Chevreuse_01.png',
             description:
                 'Increases the Level of\nShort-Range Rapid Interdiction Fire\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: 'The Secret to Rapid-Fire Multishots',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Chevreuse_03.png',
+            image: '/images/characters/UI_Talent_S_Chevreuse_03.png',
             description:
                 'After using\nRing of Bursting Grenades\n, the Hold mode of\nShort-Range Rapid Interdiction Fire\nwill not go on cooldown when Chevreuse uses it. This effect is removed after Short-Range Rapid Interdiction Fire has been fired twice using Hold or after 6s.',
             level: 4,
         },
         {
             name: 'Enhanced Incendiary Firepower',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Chevreuse_02.png',
+            image: '/images/characters/UI_Talent_U_Chevreuse_02.png',
             description:
                 'Increases the Level of\nRing of Bursting Grenades\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: 'In Pursuit of Ending Evil',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Chevreuse_04.png',
+            image: '/images/characters/UI_Talent_S_Chevreuse_04.png',
             description:
                 "After 12s of the healing effect from\nShort-Range Rapid Interdiction Fire\n, all nearby party members recover HP equivalent to 10% of Chevreuse's Max HP once.\nAfter a party member is healed by Short-Range Rapid Interdiction Fire, they gain a 20%\nPyro DMG Bonus\nand\nElectro DMG Bonus\nfor 8s. Max 3 stacks. Each stack's duration is counted independently.",
             level: 6,

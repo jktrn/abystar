@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const FerrousShadow: Weapon = {
     name: 'Ferrous Shadow',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Glaive.png',
+    image: '/images/weapons/UI_EquipIcon_Claymore_Glaive.png',
     type: 'Claymore',
     rarity: 3,
     description:

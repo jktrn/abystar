@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const TheFirstGreatMagic: Weapon = {
     name: 'The First Great Magic',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Pledge.png',
+    image: '/images/weapons/UI_EquipIcon_Bow_Pledge.png',
     type: 'Bow',
     rarity: 5,
     description:

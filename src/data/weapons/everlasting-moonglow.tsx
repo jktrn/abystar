@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const EverlastingMoonglow: Weapon = {
     name: 'Everlasting Moonglow',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Kaleido.png',
+    image: '/images/weapons/UI_EquipIcon_Catalyst_Kaleido.png',
     type: 'Catalyst',
     rarity: 5,
     description:

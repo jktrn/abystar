@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const ScionOfTheBlazingSun: Weapon = {
     name: 'Scion of the Blazing Sun',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Gurabad.png',
+    image: '/images/weapons/UI_EquipIcon_Bow_Gurabad.png',
     type: 'Bow',
     rarity: 4,
     description:

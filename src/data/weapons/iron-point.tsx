@@ -5,7 +5,7 @@ const weaponBonuses: Bonus[] = []
 
 const IronPoint: Weapon = {
     name: 'Iron Point',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Rod.png',
+    image: '/images/weapons/UI_EquipIcon_Pole_Rod.png',
     type: 'Polearm',
     rarity: 2,
     description:

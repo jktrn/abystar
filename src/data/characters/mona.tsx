@@ -159,7 +159,7 @@ const characterBonuses: Bonus[] = [
                 percentages)
             </span>
         ),
-        icon: 'https://api.ambr.top/assets/UI/Skill_E_Mona_01.png',
+        icon: '/images/characters/Skill_E_Mona_01.png',
         effect: (attributes, talentLevels, currentStacks, state) => {
             if (!state || !talentLevels) return { attributes }
 
@@ -190,7 +190,7 @@ const characterBonuses: Bonus[] = [
                 her Energy Recharge rate
             </span>
         ),
-        icon: 'https://api.ambr.top/assets/UI/UI_Talent_S_Mona_06.png',
+        icon: '/images/characters/UI_Talent_S_Mona_06.png',
         effect: (attributes) => {
             const newAttributes = {
                 ...attributes,
@@ -227,7 +227,7 @@ const constellationBonuses: Bonus[] = [
                 </ul>
             </span>
         ),
-        icon: 'https://api.ambr.top/assets/UI/UI_Talent_S_Mona_01.png',
+        icon: '/images/characters/UI_Talent_S_Mona_01.png',
         effect: (attributes) => {
             const newAttributes = {
                 ...attributes,
@@ -254,7 +254,7 @@ const constellationBonuses: Bonus[] = [
                 occur once every 5s.
             </span>
         ),
-        icon: 'https://api.ambr.top/assets/UI/UI_Talent_S_Mona_02.png',
+        icon: '/images/characters/UI_Talent_S_Mona_02.png',
         effect: (attributes) => {
             // * Unimplementable
             return { attributes }
@@ -273,7 +273,7 @@ const constellationBonuses: Bonus[] = [
                 Maximum upgrade level is 15.
             </span>
         ),
-        icon: 'https://api.ambr.top/assets/UI/UI_Talent_U_Mona_01.png',
+        icon: '/images/characters/UI_Talent_U_Mona_01.png',
         effect: (attributes, talentLevels) => {
             if (!talentLevels) return { attributes }
 
@@ -296,7 +296,7 @@ const constellationBonuses: Bonus[] = [
                 CRIT Rate is increased by 15%
             </span>
         ),
-        icon: 'https://api.ambr.top/assets/UI/UI_Talent_S_Mona_03.png',
+        icon: '/images/characters/UI_Talent_S_Mona_03.png',
         effect: (attributes) => {
             const newAttributes = {
                 ...attributes,
@@ -320,7 +320,7 @@ const constellationBonuses: Bonus[] = [
                 Maximum upgrade level is 15.
             </span>
         ),
-        icon: 'https://api.ambr.top/assets/UI/UI_Talent_U_Mona_02.png',
+        icon: '/images/characters/UI_Talent_U_Mona_02.png',
         effect: (attributes, talentLevels) => {
             if (!talentLevels) return { attributes }
 
@@ -344,7 +344,7 @@ const constellationBonuses: Bonus[] = [
                 second of movement, with a maximum of 180% (lasting up to 8s)
             </span>
         ),
-        icon: 'https://api.ambr.top/assets/UI/UI_Talent_S_Mona_04.png',
+        icon: '/images/characters/UI_Talent_S_Mona_04.png',
         effect: (attributes, talentLevels, currentStacks) => {
             if (!currentStacks) return { attributes }
 
@@ -366,7 +366,7 @@ const constellationBonuses: Bonus[] = [
 
 const Mona: Character = {
     name: 'Mona',
-    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Mona.png',
+    icon: '/images/characters/UI_AvatarIcon_Mona.png',
     weapon: 'Catalyst',
     vision: 'Hydro',
     rarity: 5,
@@ -490,7 +490,7 @@ const Mona: Character = {
     talents: [
         {
             name: 'Normal Attack: Ripple of Fate',
-            image: 'https://api.ambr.top/assets/UI/Skill_A_Catalyst_MD.png',
+            image: '/images/characters/Skill_A_Catalyst_MD.png',
             description:
                 'Normal Attack\nPerforms up to 4 water splash attacks that deal\nHydro DMG\n.\nCharged Attack\nConsumes a certain amount of Stamina to deal\nAoE Hydro DMG\nafter a short casting time.\nPlunging Attack\nGathering the might of Hydro, Mona plunges towards the ground from mid-air, damaging all opponents in her path. Deals\nAoE Hydro DMG\nupon impact with the ground.',
             data: {
@@ -651,7 +651,7 @@ const Mona: Character = {
         },
         {
             name: 'Mirror Reflection of Doom',
-            image: 'https://api.ambr.top/assets/UI/Skill_S_Mona_01.png',
+            image: '/images/characters/Skill_S_Mona_01.png',
             description:
                 'Creates an illusory Phantom of Fate from coalesced waterspouts.\nPhantom\nHas the following special properties:\n\u00b7Continuously taunts nearby opponents, attracting their fire.\n\u00b7Continuously deals\nHydro DMG\nto nearby opponents.\n\u00b7When its duration expires, the Phantom explodes, dealing\nAoE Hydro DMG\n.\nHold\nUtilizes water currents to move backwards swiftly before conjuring a Phantom.\nOnly one Phantom created by Mirror Reflection of Doom can exist at any time.\nSkilled astrologers have always dreamed of using a phantom facsimile of themselves to ward off imminent ill fate, but Mona must be the first to make such a mockery of it in all of Teyvat.',
             data: {
@@ -710,7 +710,7 @@ const Mona: Character = {
         },
         {
             name: 'Stellaris Phantasm',
-            image: 'https://api.ambr.top/assets/UI/Skill_E_Mona_01.png',
+            image: '/images/characters/Skill_E_Mona_01.png',
             description:
                 'Mona summons the sparkling waves and creates a reflection of the starry sky, applying the Illusory Bubble status to opponents in a large AoE.\nIllusory Bubble\nTraps opponents inside a pocket of destiny and also makes them\nWet\n. Renders weaker opponents immobile.\nWhen an opponent affected by Illusory Bubble sustains DMG, it has the following effects:\n\u00b7Applies an Omen to the opponent, which gives a DMG Bonus, also increasing the DMG of the attack that causes it.\n\u00b7Removes the Illusory Bubble, dealing\nHydro\nDMG in the process.\nOmen\nDuring its duration, increases DMG taken by opponents.\nIt was from the time that gods first traced the lights in the heavens with their eyes that the notion of "fate" was born.',
             data: {
@@ -822,19 +822,19 @@ const Mona: Character = {
     passiveSkills: [
         {
             name: 'Principium of Astrology',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_Combine_Weapon.png',
+            image: '/images/characters/UI_Talent_Combine_Weapon.png',
             description:
                 'When Mona crafts Weapon Ascension Materials, she has a 25% chance to refund a portion of the crafting materials used.',
         },
         {
             name: '"Come \'n\' Get Me, Hag!"',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Mona_05.png',
+            image: '/images/characters/UI_Talent_S_Mona_05.png',
             description:
                 'After she has used\nIllusory Torrent\nfor 2s, if there are any opponents nearby, Mona will automatically create a Phantom.\nA Phantom created in this manner lasts for 2s, and its explosion DMG is equal to 50% of\nMirror Reflection of Doom\n.',
         },
         {
             name: 'Waterborne Destiny',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Mona_06.png',
+            image: '/images/characters/UI_Talent_S_Mona_06.png',
             description:
                 "Increases Mona's\nHydro DMG Bonus\nby a degree equivalent to 20% of her Energy Recharge rate.",
         },
@@ -842,42 +842,42 @@ const Mona: Character = {
     constellations: [
         {
             name: 'Prophecy of Submersion',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Mona_01.png',
+            image: '/images/characters/UI_Talent_S_Mona_01.png',
             description:
                 'When any of your own party members hits an opponent affected by an Omen, the effects of\nHydro-related Elemental Reactions\nare enhanced for 8s:\n\u00b7Electro-Charged DMG increases by 15%.\n\u00b7Vaporize DMG increases by 15%.\n\u00b7Hydro Swirl DMG increases by 15%.\n\u00b7Frozen duration is extended by 15%.',
             level: 1,
         },
         {
             name: 'Lunar Chain',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Mona_02.png',
+            image: '/images/characters/UI_Talent_S_Mona_02.png',
             description:
                 'When a Normal Attack hits, there is a 20% chance that it will be automatically followed by a Charged Attack.\nThis effect can only occur once every 5s.',
             level: 2,
         },
         {
             name: 'Restless Revolution',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Mona_01.png',
+            image: '/images/characters/UI_Talent_U_Mona_01.png',
             description:
                 'Increases the Level of\nStellaris Phantasm\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: 'Prophecy of Oblivion',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Mona_03.png',
+            image: '/images/characters/UI_Talent_S_Mona_03.png',
             description:
                 'When any party member attacks an opponent affected by an Omen, their CRIT Rate is increased by 15%.',
             level: 4,
         },
         {
             name: 'Mockery of Fortuna',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Mona_02.png',
+            image: '/images/characters/UI_Talent_U_Mona_02.png',
             description:
                 'Increases the Level of\nMirror Reflection of Doom\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: 'Rhetorics of Calamitas',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Mona_04.png',
+            image: '/images/characters/UI_Talent_S_Mona_04.png',
             description:
                 'Upon entering\nIllusory Torrent\n, Mona gains a 60% increase to the DMG of her next Charged Attack per second of movement.\nA maximum DMG Bonus of 180% can be achieved in this manner. The effect lasts for no more than 8s.',
             level: 6,

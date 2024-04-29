@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const AlleyHunter: Weapon = {
     name: 'Alley Hunter',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Outlaw.png',
+    image: '/images/weapons/UI_EquipIcon_Bow_Outlaw.png',
     type: 'Bow',
     rarity: 4,
     description:

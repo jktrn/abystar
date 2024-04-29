@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const Akuoumaru: Weapon = {
     name: 'Akuoumaru',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Maria.png',
+    image: '/images/weapons/UI_EquipIcon_Claymore_Maria.png',
     type: 'Claymore',
     rarity: 4,
     description:

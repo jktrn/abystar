@@ -14,7 +14,7 @@ const constellationBonuses: Bonus[] = [
 
 const Xingqiu: Character = {
     name: 'Xingqiu',
-    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Xingqiu.png',
+    icon: '/images/characters/UI_AvatarIcon_Xingqiu.png',
     weapon: 'Sword',
     vision: 'Hydro',
     rarity: 4,
@@ -138,7 +138,7 @@ const Xingqiu: Character = {
     talents: [
         {
             name: 'Normal Attack: Guhua Style',
-            image: 'https://api.ambr.top/assets/UI/Skill_A_01.png',
+            image: '/images/characters/Skill_A_01.png',
             description:
                 'Normal Attack\nPerforms up to 5 rapid strikes.\nCharged Attack\nConsumes a certain amount of Stamina to unleash 2 rapid sword strikes.\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.',
             data: {
@@ -316,7 +316,7 @@ const Xingqiu: Character = {
         },
         {
             name: 'Guhua Sword: Fatal Rainscreen',
-            image: 'https://api.ambr.top/assets/UI/Skill_S_Xingqiu_01.png',
+            image: '/images/characters/Skill_S_Xingqiu_01.png',
             description:
                 'Xingqiu performs twin strikes with his sword, dealing\nHydro DMG\n. At the same time, this ability creates the maximum number of Rain Swords, which will orbit your active character.\nThe Rain Swords have the following properties:\n\u00b7When a character takes DMG, the Rain Sword will shatter, reducing the amount of DMG taken.\n\u00b7Increases the character\'s resistance to interruption.\n20% of Xingqiu\'s\nHydro DMG Bonus\nwill be converted to additional DMG Reduction for the Rain Swords.\nThe maximum amount of additional DMG Reduction that can be gained this way is 24%.\nThe initial maximum number of Rain Swords is 3.\nUsing this ability applies the\nWet\nstatus onto the character.\n"Easier to slay a rain dragon than to sever the rain."',
             data: {
@@ -392,7 +392,7 @@ const Xingqiu: Character = {
         },
         {
             name: 'Guhua Sword: Raincutter',
-            image: 'https://api.ambr.top/assets/UI/Skill_E_Xingqiu_01.png',
+            image: '/images/characters/Skill_E_Xingqiu_01.png',
             description:
                 'Initiate Rainbow Bladework and fight using an illusory sword rain, while creating the maximum number of Rain Swords.\nRainbow Bladework\n\u00b7Your active character\'s Normal Attacks will trigger consecutive sword rain attacks, dealing\nHydro DMG\n.\n\u00b7Rain Swords will remain at the maximum number throughout the ability\'s duration.\nThe "Way of the Rain Cutter" is one of the esoteric secret techniques of the Guhua Sect.',
             data: {
@@ -470,60 +470,60 @@ const Xingqiu: Character = {
     passiveSkills: [
         {
             name: 'Flash of Genius',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_Combine_Talent.png',
+            image: '/images/characters/UI_Talent_Combine_Talent.png',
             description:
                 'When Xingqiu crafts Character Talent Materials, he has a 25% chance to refund a portion of the crafting materials used.',
         },
         {
             name: 'Hydropathic',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Xingqiu_05.png',
+            image: '/images/characters/UI_Talent_S_Xingqiu_05.png',
             description:
                 "When a Rain Sword is shattered or when its duration expires, it regenerates the current character's HP based on 6% of Xingqiu's Max HP.",
         },
         {
             name: 'Blades Amidst Raindrops',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Xingqiu_06.png',
+            image: '/images/characters/UI_Talent_S_Xingqiu_06.png',
             description: 'Xingqiu gains a 20%\nHydro DMG Bonus\n.',
         },
     ],
     constellations: [
         {
             name: 'The Scent Remained',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Xingqiu_01.png',
+            image: '/images/characters/UI_Talent_S_Xingqiu_01.png',
             description: 'Increases the maximum number of Rain Swords by 1.',
             level: 1,
         },
         {
             name: 'Rainbow Upon the Azure Sky',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Xingqiu_02.png',
+            image: '/images/characters/UI_Talent_S_Xingqiu_02.png',
             description:
                 'Extends the duration of\nGuhua Sword: Raincutter\nby 3s.\nDecreases the\nHydro RES\nof opponents hit by sword rain attacks by 15% for 4s.',
             level: 2,
         },
         {
             name: 'Weaver of Verses',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Xingqiu_01.png',
+            image: '/images/characters/UI_Talent_U_Xingqiu_01.png',
             description:
                 'Increases the Level of\nGuhua Sword: Raincutter\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: 'Evilsoother',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Xingqiu_03.png',
+            image: '/images/characters/UI_Talent_S_Xingqiu_03.png',
             description:
                 'Throughout the duration of\nGuhua Sword: Raincutter\n, the DMG dealt by\nGuhua Sword: Fatal Rainscreen\nis increased by 50%.',
             level: 4,
         },
         {
             name: 'Embrace of Rain',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Xingqiu_02.png',
+            image: '/images/characters/UI_Talent_U_Xingqiu_02.png',
             description:
                 'Increases the Level of\nGuhua Sword: Fatal Rainscreen\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: 'Hence, Call Them My Own Verses',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Xingqiu_04.png',
+            image: '/images/characters/UI_Talent_S_Xingqiu_04.png',
             description:
                 "Activating 2 of\nGuhua Sword: Raincutter\n's sword rain attacks greatly enhances the third sword rain attack. On hit, the third sword rain attack also regenerates 3 Energy for Xingqiu.",
             level: 6,

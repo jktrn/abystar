@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const FesteringDesire: Weapon = {
     name: 'Festering Desire',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Magnum.png',
+    image: '/images/weapons/UI_EquipIcon_Sword_Magnum.png',
     type: 'Sword',
     rarity: 4,
     description:

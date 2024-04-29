@@ -5,7 +5,7 @@ const weaponBonuses: Bonus[] = []
 
 const OldMercsPal: Weapon = {
     name: "Old Merc's Pal",
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Oyaji.png',
+    image: '/images/weapons/UI_EquipIcon_Claymore_Oyaji.png',
     type: 'Claymore',
     rarity: 2,
     description: 'A battle-tested greatsword that has seen better days and worse.',

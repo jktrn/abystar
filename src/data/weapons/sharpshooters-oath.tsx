@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const SharpshootersOath: Weapon = {
     name: "Sharpshooter's Oath",
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Arjuna.png',
+    image: '/images/weapons/UI_EquipIcon_Bow_Arjuna.png',
     type: 'Bow',
     rarity: 3,
     description:

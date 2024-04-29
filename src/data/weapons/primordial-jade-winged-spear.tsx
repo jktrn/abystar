@@ -46,7 +46,7 @@ const weaponBonuses: Bonus[] = [
 
 const PrimordialJadeWingedspear: Weapon = {
     name: 'Primordial Jade Winged-Spear',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Morax.png',
+    image: '/images/weapons/UI_EquipIcon_Pole_Morax.png',
     type: 'Polearm',
     rarity: 5,
     description:

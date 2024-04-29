@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const PolarStar: Weapon = {
     name: 'Polar Star',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Worldbane.png',
+    image: '/images/weapons/UI_EquipIcon_Bow_Worldbane.png',
     type: 'Bow',
     rarity: 5,
     description: 'A pristine bow that is as sharp as the glaciers of the far north.',

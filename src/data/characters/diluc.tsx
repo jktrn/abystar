@@ -14,7 +14,7 @@ const constellationBonuses: Bonus[] = [
 
 const Diluc: Character = {
     name: 'Diluc',
-    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Diluc.png',
+    icon: '/images/characters/UI_AvatarIcon_Diluc.png',
     weapon: 'Claymore',
     vision: 'Pyro',
     rarity: 5,
@@ -138,7 +138,7 @@ const Diluc: Character = {
     talents: [
         {
             name: 'Normal Attack: Tempered Sword',
-            image: 'https://api.ambr.top/assets/UI/Skill_A_04.png',
+            image: '/images/characters/Skill_A_04.png',
             description:
                 'Normal Attack\nPerforms up to 4 consecutive strikes.\nCharged Attack\nDrains Stamina over time to perform continuous slashes.\nAt the end of the sequence, performs a more powerful slash.\nPlunging Attack\nPlunges from mid-air to strike the ground, damaging opponents along the path and dealing AoE DMG upon impact.',
             data: {
@@ -333,7 +333,7 @@ const Diluc: Character = {
         },
         {
             name: 'Searing Onslaught',
-            image: 'https://api.ambr.top/assets/UI/Skill_S_Diluc_01_01.png',
+            image: '/images/characters/Skill_S_Diluc_01_01.png',
             description:
                 'Performs a forward slash that deals\nPyro DMG\n.\nThis skill can be consecutively used 3 times.\nEnters CD if not cast again within a short period.\nThe slashes represent the values that Diluc holds dear: one for justice, one for courage, and one for duty.',
             data: {
@@ -409,7 +409,7 @@ const Diluc: Character = {
         },
         {
             name: 'Dawn',
-            image: 'https://api.ambr.top/assets/UI/Skill_E_Diluc_01.png',
+            image: '/images/characters/Skill_E_Diluc_01.png',
             description:
                 'Releases intense flames to knock back nearby opponents, dealing\nPyro DMG\n. The flames then converge into the weapon, summoning a Phoenix that flies forward and deals massive\nPyro DMG\nto all opponents in its path. The Phoenix explodes upon reaching its destination, causing a large amount of\nAoE Pyro DMG\n.\nThe searing flames that run down his blade cause it to be infused with\nPyro\n.\nThe only reason to walk in the darkness is to light it up. Behold, that fleeing light in the dead of night is the herald of the coming dawn.',
             data: {
@@ -521,19 +521,19 @@ const Diluc: Character = {
     passiveSkills: [
         {
             name: 'Tradition of the Dawn Knight',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_Forge_Claymore.png',
+            image: '/images/characters/UI_Talent_Forge_Claymore.png',
             description:
                 'Refunds 15% of the ore used when crafting Claymore-type weapons.',
         },
         {
             name: 'Relentless',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Diluc_05.png',
+            image: '/images/characters/UI_Talent_S_Diluc_05.png',
             description:
                 "Diluc's Charged Attack Stamina Cost is decreased by 50%, and its duration is increased by 3s.",
         },
         {
             name: 'Blessing of Phoenix',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Diluc_06.png',
+            image: '/images/characters/UI_Talent_S_Diluc_06.png',
             description:
                 'The\nPyro Infusion\nprovided by\nDawn\nlasts for 4s longer. Additionally, Diluc gains 20%\nPyro DMG Bonus\nduring the duration of this effect.',
         },
@@ -541,42 +541,42 @@ const Diluc: Character = {
     constellations: [
         {
             name: 'Conviction',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Diluc_01.png',
+            image: '/images/characters/UI_Talent_S_Diluc_01.png',
             description:
                 'Diluc deals 15% more DMG to opponents whose HP is above 50%.',
             level: 1,
         },
         {
             name: 'Searing Ember',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Diluc_02.png',
+            image: '/images/characters/UI_Talent_S_Diluc_02.png',
             description:
                 'When Diluc takes DMG, his ATK increases by 10% and his ATK SPD increases by 5%. Lasts for 10s.\nThis effect can stack up to 3 times and can only occur once every 1.5s.',
             level: 2,
         },
         {
             name: 'Fire and Steel',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Diluc_01.png',
+            image: '/images/characters/UI_Talent_U_Diluc_01.png',
             description:
                 'Increases the Level of\nSearing Onslaught\nby 3.\nMaximum upgrade level is 15.',
             level: 3,
         },
         {
             name: 'Flowing Flame',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Diluc_03.png',
+            image: '/images/characters/UI_Talent_S_Diluc_03.png',
             description:
                 'Casting\nSearing Onslaught\nin rhythm greatly increases damage dealt.\n2s after casting\nSearing Onslaught\n, casting the next Searing Onslaught in the combo deals 40% additional DMG. This effect lasts for 2s.',
             level: 4,
         },
         {
             name: 'Phoenix, Harbinger of Dawn',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Diluc_02.png',
+            image: '/images/characters/UI_Talent_U_Diluc_02.png',
             description:
                 'Increases the Level of\nDawn\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: 'Flaming Sword, Nemesis of the Dark',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Diluc_04.png',
+            image: '/images/characters/UI_Talent_S_Diluc_04.png',
             description:
                 'After casting\nSearing Onslaught\n, the next 2 Normal Attacks within the next 6s will have their DMG and ATK SPD increased by 30%.\nAdditionally, Searing Onslaught will not interrupt the Normal Attack combo.',
             level: 6,

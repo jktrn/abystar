@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const HaranGeppakuFutsu: Weapon = {
     name: 'Haran Geppaku Futsu',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Amenoma.png',
+    image: '/images/weapons/UI_EquipIcon_Sword_Amenoma.png',
     type: 'Sword',
     rarity: 5,
     description:

@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const SkywardHarp: Weapon = {
     name: 'Skyward Harp',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Dvalin.png',
+    image: '/images/weapons/UI_EquipIcon_Bow_Dvalin.png',
     type: 'Bow',
     rarity: 5,
     description:

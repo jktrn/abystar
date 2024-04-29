@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const EmeraldOrb: Weapon = {
     name: 'Emerald Orb',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Jade.png',
+    image: '/images/weapons/UI_EquipIcon_Catalyst_Jade.png',
     type: 'Catalyst',
     rarity: 3,
     description:

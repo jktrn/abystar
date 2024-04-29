@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const SummitShaper: Weapon = {
     name: 'Summit Shaper',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Kunwu.png',
+    image: '/images/weapons/UI_EquipIcon_Sword_Kunwu.png',
     type: 'Sword',
     rarity: 5,
     description:

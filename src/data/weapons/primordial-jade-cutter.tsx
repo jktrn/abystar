@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const PrimordialJadeCutter: Weapon = {
     name: 'Primordial Jade Cutter',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Morax.png',
+    image: '/images/weapons/UI_EquipIcon_Sword_Morax.png',
     type: 'Sword',
     rarity: 5,
     description:

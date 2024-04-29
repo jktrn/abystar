@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const SongOfStillness: Weapon = {
     name: 'Song of Stillness',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Vorpal.png',
+    image: '/images/weapons/UI_EquipIcon_Bow_Vorpal.png',
     type: 'Weapon',
     rarity: 4,
     description:

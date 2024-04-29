@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const LightOfFoliarIncision: Weapon = {
     name: 'Light of Foliar Incision',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Ayus.png',
+    image: '/images/weapons/UI_EquipIcon_Sword_Ayus.png',
     type: 'Sword',
     rarity: 5,
     description:

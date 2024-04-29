@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const SplendorOfTranquilWaters: Weapon = {
     name: 'Splendor of Tranquil Waters',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Regalis.png',
+    image: '/images/weapons/UI_EquipIcon_Sword_Regalis.png',
     type: 'Sword',
     rarity: 5,
     description:

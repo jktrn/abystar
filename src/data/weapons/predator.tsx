@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const Predator: Weapon = {
     name: 'Predator',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Predator.png',
+    image: '/images/weapons/UI_EquipIcon_Bow_Predator.png',
     type: 'Bow',
     rarity: 4,
     description: 'A uniquely-designed bow. This should not belong in this world.',

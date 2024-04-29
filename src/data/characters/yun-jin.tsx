@@ -14,7 +14,7 @@ const constellationBonuses: Bonus[] = [
 
 const YunJin: Character = {
     name: 'Yun Jin',
-    icon: 'https://api.ambr.top/assets/UI/UI_AvatarIcon_Yunjin.png',
+    icon: '/images/characters/UI_AvatarIcon_Yunjin.png',
     weapon: 'Polearm',
     vision: 'Geo',
     rarity: 4,
@@ -138,7 +138,7 @@ const YunJin: Character = {
     talents: [
         {
             name: 'Normal Attack: Cloud-Grazing Strike',
-            image: 'https://api.ambr.top/assets/UI/Skill_A_03.png',
+            image: '/images/characters/Skill_A_03.png',
             description:
                 'Normal Attack\nPerforms up to 5 consecutive spear strikes.\nCharged Attack\nConsumes a certain amount of Stamina to lunge forward, dealing damage to opponents along the way.\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.',
             data: {
@@ -316,7 +316,7 @@ const YunJin: Character = {
         },
         {
             name: 'Opening Flourish',
-            image: 'https://api.ambr.top/assets/UI/Skill_S_Yunjin_01.png',
+            image: '/images/characters/Skill_S_Yunjin_01.png',
             description:
                 "Ms. Yun may just be acting out fights on stage, but her skills with the spear are real enough to defend against her foes.\nPress\nFlourishes her polearm in a cloud-grasping stance, dealing\nGeo DMG\n.\nHold\nTakes up the Opening Flourish stance and charges up, forming a shield. DMG Absorption is based on Yun Jin's Max HP and has 150% effectiveness against all Elemental DMG and Physical DMG. The shield lasts until she finishes unleashing her Elemental Skill.\nWhen the skill is released, when its duration ends, or when the shield breaks, Yun Jin will unleash the charged energy as an attack, dealing\nGeo DMG\n.\nBased on the time spent charging, it will either unleash an attack at Charge Level 1 or Level 2.\nOne glorious moment on-stage, a decade of preparation behind it.",
             data: {
@@ -409,7 +409,7 @@ const YunJin: Character = {
         },
         {
             name: "Cliffbreaker's Banner",
-            image: 'https://api.ambr.top/assets/UI/Skill_E_Yunjin_01.png',
+            image: '/images/characters/Skill_E_Yunjin_01.png',
             description:
                 "Deals\nAoE Geo DMG\nand grants all nearby party members a Flying Cloud Flag Formation.\nFlying Cloud Flag Formation\nWhen Normal Attack DMG is dealt to opponents, Bonus DMG will be dealt based on Yun Jin's current DEF.\nThe effects of this skill will be cleared after a set duration or after being triggered a specific number of times.\nWhen one Normal Attack hits multiple opponents, the effect is triggered multiple times according to the number of opponents hit. The number of times that the effect is triggered is counted independently for each member of the party with Flying Cloud Flag Formation.\nAs the drums resound, as swords and halberds weave and clash, the doyenne is transformed into a mighty general.\nAs the instruments on stage strum in unison, lo, see how she vanquishes these demons!",
             data: {
@@ -521,19 +521,19 @@ const YunJin: Character = {
     passiveSkills: [
         {
             name: 'Light Nourishment',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Yunjin_07.png',
+            image: '/images/characters/UI_Talent_S_Yunjin_07.png',
             description:
                 'When Perfect Cooking is achieved on Food with Adventure-related effects, there is a 12% chance to obtain double the product.',
         },
         {
             name: 'True to Oneself',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Yunjin_05.png',
+            image: '/images/characters/UI_Talent_S_Yunjin_05.png',
             description:
                 'Using\nOpening Flourish\nat the precise moment when Yun Jin is attacked will unleash its Level 2 Charged (Hold) form.',
         },
         {
             name: 'Breaking Conventions',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Yunjin_06.png',
+            image: '/images/characters/UI_Talent_S_Yunjin_06.png',
             description:
                 "The Normal Attack DMG Bonus granted by\nFlying Cloud Flag Formation\nis further increased by 2.5%/5%/7.5%/11.5% of Yun Jin's DEF when the party contains characters of 1/2/3/4 Elemental Types, respectively.",
         },
@@ -541,41 +541,41 @@ const YunJin: Character = {
     constellations: [
         {
             name: 'Thespian Gallop',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Yunjin_01.png',
+            image: '/images/characters/UI_Talent_S_Yunjin_01.png',
             description: "Opening Flourish's\nCD is decreased by 18%.",
             level: 1,
         },
         {
             name: 'Myriad Mise-En-Sc\u00e8ne',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Yunjin_02.png',
+            image: '/images/characters/UI_Talent_S_Yunjin_02.png',
             description:
                 "After\nCliffbreaker's Banner\nis unleashed, all nearby party members' Normal Attack DMG is increased by 15% for 12s.",
             level: 2,
         },
         {
             name: 'Seafaring General',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Yunjin_01.png',
+            image: '/images/characters/UI_Talent_U_Yunjin_01.png',
             description:
                 "Increases the Level of\nCliffbreaker's Banner\nby 3.\nMaximum upgrade level is 15.",
             level: 3,
         },
         {
             name: 'Flower and a Fighter',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Yunjin_03.png',
+            image: '/images/characters/UI_Talent_S_Yunjin_03.png',
             description:
                 'When Yun Jin triggers the Crystallize Reaction, her DEF is increased by 20% for 12s.',
             level: 4,
         },
         {
             name: 'Famed Throughout the Land',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_U_Yunjin_02.png',
+            image: '/images/characters/UI_Talent_U_Yunjin_02.png',
             description:
                 'Increases the Level of\nOpening Flourish\nby 3.\nMaximum upgrade level is 15.',
             level: 5,
         },
         {
             name: 'Decorous Harmony',
-            image: 'https://api.ambr.top/assets/UI/UI_Talent_S_Yunjin_04.png',
+            image: '/images/characters/UI_Talent_S_Yunjin_04.png',
             description:
                 'Characters under the effects of the\nFlying Cloud Flag Formation\nhave their Normal ATK SPD increased by 12%.',
             level: 6,

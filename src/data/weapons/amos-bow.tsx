@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const AmosBow: Weapon = {
     name: "Amos' Bow",
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Amos.png',
+    image: '/images/weapons/UI_EquipIcon_Bow_Amos.png',
     type: 'Bow',
     rarity: 5,
     description:

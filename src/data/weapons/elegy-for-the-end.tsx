@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const ElegyForTheEnd: Weapon = {
     name: 'Elegy for the End',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Widsith.png',
+    image: '/images/weapons/UI_EquipIcon_Bow_Widsith.png',
     type: 'Bow',
     rarity: 5,
     description:

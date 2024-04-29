@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const EndOfTheLine: Weapon = {
     name: 'End of the Line',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Fin.png',
+    image: '/images/weapons/UI_EquipIcon_Bow_Fin.png',
     type: 'Bow',
     rarity: 4,
     description:

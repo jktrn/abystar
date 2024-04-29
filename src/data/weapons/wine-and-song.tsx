@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const WineAndSong: Weapon = {
     name: 'Wine and Song',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Outlaw.png',
+    image: '/images/weapons/UI_EquipIcon_Catalyst_Outlaw.png',
     type: 'Catalyst',
     rarity: 4,
     description:

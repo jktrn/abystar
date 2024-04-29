@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const CrescentPike: Weapon = {
     name: 'Crescent Pike',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Exotic.png',
+    image: '/images/weapons/UI_EquipIcon_Pole_Exotic.png',
     type: 'Weapon',
     rarity: 4,
     description:

@@ -5,7 +5,7 @@ const weaponBonuses: Bonus[] = []
 
 const WasterGreatsword: Weapon = {
     name: 'Waster Greatsword',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Aniki.png',
+    image: '/images/weapons/UI_EquipIcon_Claymore_Aniki.png',
     type: 'Claymore',
     rarity: 1,
     description:

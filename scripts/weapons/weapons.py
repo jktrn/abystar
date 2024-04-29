@@ -6,11 +6,23 @@ from tqdm import tqdm
 import argparse
 import ambr
 import asyncio
+import aiohttp
 
 base_url = 'https://genshin.honeyhunterworld.com'
 current_dir = os.path.dirname(os.path.abspath(__file__))
 output_dir = os.path.join(current_dir, "output")
 weapons_json_path = os.path.join(current_dir, "..", "..", "src", "data", "weapons", "weapons.json")
+
+async def download_image(url, file_path):
+    async with aiohttp.ClientSession() as session:
+        async with session.get(url) as response:
+            if response.status == 200:
+                with open(file_path, 'wb') as f:
+                    while True:
+                        chunk = await response.content.read(1024)
+                        if not chunk:
+                            break
+                        f.write(chunk)
 
 async def fetch_paths(api):
     response = await api.fetch_weapons()
@@ -205,11 +217,24 @@ async def fetch_images_from_api(api, weapon_name):
             return weapon.icon
     return None
 
+async def fetch_weapon_images_from_api(api, output_directory):
+    response = await api.fetch_weapons()
+    pbar = tqdm(response, position=0)
+    for weapon in pbar:
+        pbar.set_description(f'Fetching {weapon.name}\'s icon')
+        
+        # Download weapon icon
+        icon_url = weapon.icon
+        icon_file_name = os.path.basename(icon_url)
+        icon_file_path = os.path.join(output_directory, icon_file_name)
+        await download_image(icon_url, icon_file_path)
+
 async def main():
     parser = argparse.ArgumentParser(description='Scrape weapon data and generate TSX files.')
     parser.add_argument('weapons', nargs='*', help='Specify one or more weapons to scrape (provide the weapon keys)')
     parser.add_argument('--all', action='store_true', help='Scrape data for all weapons')
     parser.add_argument('--fetch-paths', action='store_true', help='Fetch paths for all weapons')
+    parser.add_argument('--fetch-icons', action='store_true', help='Fetch icons for all weapons')
     args = parser.parse_args()
 
     api = ambr.AmbrAPI()
@@ -217,6 +242,10 @@ async def main():
 
     if args.fetch_paths:
         await fetch_paths(api)
+        return
+
+    if args.fetch_icons:
+        await fetch_weapon_images_from_api(api, output_dir)
         return
 
     paths_path = os.path.join(current_dir, "paths.json")
@@ -231,7 +260,13 @@ async def main():
                 print(f"Fetching data for {weapon_key}")
                 data = fetch_weapon_data(weapon_path)
                 data = process_weapon_data(data)
-                data['image'] = await fetch_images_from_api(api, data['name'])
+                
+                icon_url = await fetch_images_from_api(api, data['name'])
+                icon_file_name = os.path.basename(icon_url)
+                icon_file_path = os.path.join(output_dir, icon_file_name)
+                await download_image(icon_url, icon_file_path)
+                data['image'] = icon_url
+                
                 generate_tsx_file(data, output_dir)
                 update_weapons_json(data)
             else:
