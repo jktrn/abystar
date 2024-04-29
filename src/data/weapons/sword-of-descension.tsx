@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const SwordOfDescension: Weapon = {
     name: 'Sword of Descension',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n11412_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Psalmus.png',
     type: 'Sword',
     rarity: 4,
     description:

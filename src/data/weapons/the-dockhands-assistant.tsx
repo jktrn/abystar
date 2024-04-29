@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const TheDockhandsAssistant: Weapon = {
     name: "The Dockhand's Assistant",
-    image: 'https://genshin.honeyhunterworld.com/img/i_n11427_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Mechanic.png',
     type: 'Sword',
     rarity: 4,
     description:

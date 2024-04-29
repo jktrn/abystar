@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const SkyriderGreatsword: Weapon = {
     name: 'Skyrider Greatsword',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n12306_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Mitsurugi.png',
     type: 'Claymore',
     rarity: 3,
     description:

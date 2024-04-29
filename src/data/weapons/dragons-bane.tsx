@@ -26,7 +26,7 @@ const weaponBonuses: Bonus[] = [
 
 const DragonsBane: Weapon = {
     name: "Dragon's Bane",
-    image: 'https://genshin.honeyhunterworld.com/img/i_n13401_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Stardust.png',
     type: 'Polearm',
     rarity: 4,
     description:

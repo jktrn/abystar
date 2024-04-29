@@ -5,16 +5,16 @@ import { Weapon } from '@/interfaces/Weapon'
 // TODO: Implement
 // ]
 
-const RedhornStonethresher: Weapon = {
-    name: 'Redhorn Stonethresher',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Itadorimaru.png',
-    type: 'Claymore',
+const UrakuMisugiri: Weapon = {
+    name: 'Uraku Misugiri',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Needle.png',
+    type: 'Sword',
     rarity: 5,
     description:
-        'According to its previous owner, this weapon is the "Mighty Redhorn Stoic Stonethreshing Gilded Goldcrushing Lion Lord" that can send any monster packing with its tail between its legs.',
-    effectName: 'Gokadaiou Otogibanashi',
+        'This famous blade was once created by the hand of Urakusai, the renowned literatus. Legend has it that it has never cut any living creature in all these hundreds of years.',
+    effectName: 'Brocade Bloom, Shrine Sword',
     effectDescription:
-        'DEF is increased by 28%. Normal and Charged Attack DMG is increased by 40% of DEF.',
+        "Normal Attack DMG is increased by 16% and Elemental Skill DMG is increased by 24%. After a nearby active character deals Geo DMG, the aforementioned effects increase by 100% for 15s. Additionally, the wielder's DEF is increased by 20%.",
     baseStats: {
         '1/20': {
             'Base ATK': 44.34,
@@ -76,31 +76,31 @@ const RedhornStonethresher: Weapon = {
     refinements: [
         {
             description:
-                'DEF is increased by 28%. Normal and Charged Attack DMG is increased by 40% of DEF.',
+                "Normal Attack DMG is increased by 16% and Elemental Skill DMG is increased by 24%. After a nearby active character deals Geo DMG, the aforementioned effects increase by 100% for 15s. Additionally, the wielder's DEF is increased by 20%.",
             level: 1,
         },
         {
             description:
-                'DEF is increased by 35%. Normal and Charged Attack DMG is increased by 50% of DEF.',
+                "Normal Attack DMG is increased by 20% and Elemental Skill DMG is increased by 30%. After a nearby active character deals Geo DMG, the aforementioned effects increase by 100% for 15s. Additionally, the wielder's DEF is increased by 25%.",
             level: 2,
         },
         {
             description:
-                'DEF is increased by 42%. Normal and Charged Attack DMG is increased by 60% of DEF.',
+                "Normal Attack DMG is increased by 24% and Elemental Skill DMG is increased by 36%. After a nearby active character deals Geo DMG, the aforementioned effects increase by 100% for 15s. Additionally, the wielder's DEF is increased by 30%.",
             level: 3,
         },
         {
             description:
-                'DEF is increased by 49%. Normal and Charged Attack DMG is increased by 70% of DEF.',
+                "Normal Attack DMG is increased by 28% and Elemental Skill DMG is increased by 42%. After a nearby active character deals Geo DMG, the aforementioned effects increase by 100% for 15s. Additionally, the wielder's DEF is increased by 35%.",
             level: 4,
         },
         {
             description:
-                'DEF is increased by 56%. Normal and Charged Attack DMG is increased by 80% of DEF.',
+                "Normal Attack DMG is increased by 32% and Elemental Skill DMG is increased by 48%. After a nearby active character deals Geo DMG, the aforementioned effects increase by 100% for 15s. Additionally, the wielder's DEF is increased by 40%.",
             level: 5,
         },
     ],
     // weaponBonuses
 }
 
-export default RedhornStonethresher
+export default UrakuMisugiri

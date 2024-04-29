@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const PrototypeStarglitter: Weapon = {
     name: 'Prototype Starglitter',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n13402_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Proto.png',
     type: 'Weapon',
     rarity: 4,
     description:

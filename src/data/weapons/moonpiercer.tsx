@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const Moonpiercer: Weapon = {
     name: 'Moonpiercer',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n13417_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Arakalari.png',
     type: 'Weapon',
     rarity: 4,
     description:

@@ -17,7 +17,7 @@ const WeaponImage = ({ characterState, ...props }: WeaponImageProps) => {
             {...props}
         >
             <Image
-                src={`/images/weapons/${kebabCase(characterState.weapon.name)}.png`}
+                src={characterState.weapon.image}
                 alt="weapon"
                 className="object-fit cursor-pointer rounded-lg drop-shadow duration-100 ease-in"
                 width={148}

@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const DragonspineSpear: Weapon = {
     name: 'Dragonspine Spear',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n13409_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Everfrost.png',
     type: 'Weapon',
     rarity: 4,
     description:

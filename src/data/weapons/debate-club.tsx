@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const DebateClub: Weapon = {
     name: 'Debate Club',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n12305_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Reasoning.png',
     type: 'Claymore',
     rarity: 3,
     description:

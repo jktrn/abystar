@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const HaranGeppakuFutsu: Weapon = {
     name: 'Haran Geppaku Futsu',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n11510_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Amenoma.png',
     type: 'Sword',
     rarity: 5,
     description:

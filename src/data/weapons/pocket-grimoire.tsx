@@ -5,7 +5,7 @@ const weaponBonuses: Bonus[] = []
 
 const PocketGrimoire: Weapon = {
     name: 'Pocket Grimoire',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n14201_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Pocket.png',
     type: 'Catalyst',
     rarity: 2,
     description:

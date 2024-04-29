@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const EndOfTheLine: Weapon = {
     name: 'End of the Line',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n15418_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Fin.png',
     type: 'Bow',
     rarity: 4,
     description:

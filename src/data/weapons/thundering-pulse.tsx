@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const ThunderingPulse: Weapon = {
     name: 'Thundering Pulse',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n15509_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Narukami.png',
     type: 'Bow',
     rarity: 5,
     description:

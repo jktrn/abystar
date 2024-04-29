@@ -58,7 +58,7 @@ const weaponBonuses: Bonus[] = [
 
 const ProspectorsDrill: Weapon = {
     name: "Prospector's Drill",
-    image: 'https://genshin.honeyhunterworld.com/img/i_n13427_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Mechanic.png',
     type: 'Polearm',
     rarity: 4,
     description:

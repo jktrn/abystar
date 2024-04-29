@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const LostPrayerToTheSacredWinds: Weapon = {
     name: 'Lost Prayer to the Sacred Winds',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n14502_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Fourwinds.png',
     type: 'Catalyst',
     rarity: 5,
     description:

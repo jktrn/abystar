@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const WolfsGravestone: Weapon = {
     name: "Wolf's Gravestone",
-    image: 'https://genshin.honeyhunterworld.com/img/i_n12502_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Wolfmound.png',
     type: 'Claymore',
     rarity: 5,
     description:

@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const Rust: Weapon = {
     name: 'Rust',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n15405_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Recluse.png',
     type: 'Bow',
     rarity: 4,
     description:

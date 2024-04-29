@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const SkywardPride: Weapon = {
     name: 'Skyward Pride',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n12501_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Dvalin.png',
     type: 'Claymore',
     rarity: 5,
     description:

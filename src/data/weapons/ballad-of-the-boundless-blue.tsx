@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const BalladOfTheBoundlessBlue: Weapon = {
     name: 'Ballad of the Boundless Blue',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n14426_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_DandelionPoem.png',
     type: 'Catalyst',
     rarity: 4,
     description:

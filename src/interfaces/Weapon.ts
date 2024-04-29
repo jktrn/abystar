@@ -10,6 +10,10 @@ export interface RawWeapon {
     image: string
     type: string
     rarity: number
+    implemented?: boolean
+}
+
+export interface Weapon extends RawWeapon {
     description: string
     effectName?: string
     effectDescription?: string
@@ -17,9 +21,5 @@ export interface RawWeapon {
         [level: string]: BaseStat
     }
     refinements?: WeaponRefinement[]
-    implemented?: boolean
-}
-
-export interface Weapon extends RawWeapon {
     weaponBonuses?: Bonus[]
 }

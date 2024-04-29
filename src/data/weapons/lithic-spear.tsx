@@ -34,7 +34,7 @@ const weaponBonuses: Bonus[] = [
 
 const LithicSpear: Weapon = {
     name: 'Lithic Spear',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n13406_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Lapis.png',
     type: 'Polearm',
     rarity: 4,
     description:

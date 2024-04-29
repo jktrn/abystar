@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const Verdict: Weapon = {
     name: 'Verdict',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n12512_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_GoldenVerdict.png',
     type: 'Claymore',
     rarity: 5,
     description:

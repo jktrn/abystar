@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const HakushinRing: Weapon = {
     name: 'Hakushin Ring',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n14414_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Bakufu.png',
     type: 'Weapon',
     rarity: 4,
     description:

@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const OathswornEye: Weapon = {
     name: 'Oathsworn Eye',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n14415_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Jyanome.png',
     type: 'Catalyst',
     rarity: 4,
     description:

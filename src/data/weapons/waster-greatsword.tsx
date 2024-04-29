@@ -5,7 +5,7 @@ const weaponBonuses: Bonus[] = []
 
 const WasterGreatsword: Weapon = {
     name: 'Waster Greatsword',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n12101_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Aniki.png',
     type: 'Claymore',
     rarity: 1,
     description:

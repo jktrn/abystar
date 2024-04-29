@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const SongOfStillness: Weapon = {
     name: 'Song of Stillness',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n15425_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Vorpal.png',
     type: 'Weapon',
     rarity: 4,
     description:

@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const Akuoumaru: Weapon = {
     name: 'Akuoumaru',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n12416_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Maria.png',
     type: 'Claymore',
     rarity: 4,
     description:

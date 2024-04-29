@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const RangeGauge: Weapon = {
     name: 'Range Gauge',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n15427_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Mechanic.png',
     type: 'Bow',
     rarity: 4,
     description:

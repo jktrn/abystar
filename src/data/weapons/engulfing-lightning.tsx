@@ -43,7 +43,7 @@ const weaponBonuses: Bonus[] = [
 
 const EngulfingLightning: Weapon = {
     name: 'Engulfing Lightning',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n13509_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Narukami.png',
     type: 'Polearm',
     rarity: 5,
     description:

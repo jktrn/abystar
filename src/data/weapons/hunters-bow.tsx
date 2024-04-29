@@ -5,7 +5,7 @@ const weaponBonuses: Bonus[] = []
 
 const HuntersBow: Weapon = {
     name: "Hunter's Bow",
-    image: 'https://genshin.honeyhunterworld.com/img/i_n15101_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Hunters.png',
     type: 'Bow',
     rarity: 1,
     description:

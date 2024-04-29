@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const TravelersHandySword: Weapon = {
     name: "Traveler's Handy Sword",
-    image: 'https://genshin.honeyhunterworld.com/img/i_n11303_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Traveler.png',
     type: 'Sword',
     rarity: 3,
     description:

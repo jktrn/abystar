@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const EyeOfPerception: Weapon = {
     name: 'Eye of Perception',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n14409_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Truelens.png',
     type: 'Catalyst',
     rarity: 4,
     description:

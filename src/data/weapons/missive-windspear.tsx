@@ -30,7 +30,7 @@ const weaponBonuses: Bonus[] = [
 
 const MissiveWindspear: Weapon = {
     name: 'Missive Windspear',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n13419_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Windvane.png',
     type: 'Polearm',
     rarity: 4,
     description:

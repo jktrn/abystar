@@ -5,7 +5,7 @@ const weaponBonuses: Bonus[] = []
 
 const BeginnersProtector: Weapon = {
     name: "Beginner's Protector",
-    image: 'https://genshin.honeyhunterworld.com/img/i_n13101_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Gewalt.png',
     type: 'Polearm',
     rarity: 1,
     description:

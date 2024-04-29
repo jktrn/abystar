@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const FadingTwilight: Weapon = {
     name: 'Fading Twilight',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n15411_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Fallensun.png',
     type: 'Bow',
     rarity: 4,
     description:

@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const SkywardHarp: Weapon = {
     name: 'Skyward Harp',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n15501_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Dvalin.png',
     type: 'Bow',
     rarity: 5,
     description:

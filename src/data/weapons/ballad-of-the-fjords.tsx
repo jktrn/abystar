@@ -26,7 +26,7 @@ const weaponBonuses: Bonus[] = [
 
 const BalladOfTheFjords: Weapon = {
     name: 'Ballad of the Fjords',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n13424_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Shanty.png',
     type: 'Polearm',
     rarity: 4,
     description:

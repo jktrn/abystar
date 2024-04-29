@@ -7,14 +7,14 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const SwordOfNarzissenkreuz: Weapon = {
     name: 'Sword of Narzissenkreuz',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n11429_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Purewill.png',
     type: 'Sword',
     rarity: 4,
     description:
-        'A sacred blade indwelt with great enough reason and will to create and destroy a universe, or a dream.',
-    effectName: '"Holy Sword"',
+        'A sword whose power faded when the story ended. It will now embark upon a new journey with the power that remains within it, which commemorates a certain great dream.',
+    effectName: "Hero's Blade",
     effectDescription:
-        "In countless stories, the weapon that befits the legendary hero is also the key to opening all gates, required to surpass the climax and reach destiny's denouement.",
+        'When the equipping character does not have an Arkhe: When Normal Attacks, Charged Attacks, or Plunging Attacks strike, a Pneuma or Ousia energy blast will be unleashed, dealing 160% of ATK as DMG. This effect can be triggered once every 12s. The energy blast type is determined by the current type of the Sword of Narzissenkreuz.',
     baseStats: {
         '1/20': {
             'Base ATK': 42.4,
@@ -76,8 +76,28 @@ const SwordOfNarzissenkreuz: Weapon = {
     refinements: [
         {
             description:
-                "In countless stories, the weapon that befits the legendary hero is also the key to opening all gates, required to surpass the climax and reach destiny's denouement.",
+                'When the equipping character does not have an Arkhe: When Normal Attacks, Charged Attacks, or Plunging Attacks strike, a Pneuma or Ousia energy blast will be unleashed, dealing 160% of ATK as DMG. This effect can be triggered once every 12s. The energy blast type is determined by the current type of the Sword of Narzissenkreuz.',
             level: 1,
+        },
+        {
+            description:
+                'When the equipping character does not have an Arkhe: When Normal Attacks, Charged Attacks, or Plunging Attacks strike, a Pneuma or Ousia energy blast will be unleashed, dealing 200% of ATK as DMG. This effect can be triggered once every 12s. The energy blast type is determined by the current type of the Sword of Narzissenkreuz.',
+            level: 2,
+        },
+        {
+            description:
+                'When the equipping character does not have an Arkhe: When Normal Attacks, Charged Attacks, or Plunging Attacks strike, a Pneuma or Ousia energy blast will be unleashed, dealing 240% of ATK as DMG. This effect can be triggered once every 12s. The energy blast type is determined by the current type of the Sword of Narzissenkreuz.',
+            level: 3,
+        },
+        {
+            description:
+                'When the equipping character does not have an Arkhe: When Normal Attacks, Charged Attacks, or Plunging Attacks strike, a Pneuma or Ousia energy blast will be unleashed, dealing 280% of ATK as DMG. This effect can be triggered once every 12s. The energy blast type is determined by the current type of the Sword of Narzissenkreuz.',
+            level: 4,
+        },
+        {
+            description:
+                'When the equipping character does not have an Arkhe: When Normal Attacks, Charged Attacks, or Plunging Attacks strike, a Pneuma or Ousia energy blast will be unleashed, dealing 320% of ATK as DMG. This effect can be triggered once every 12s. The energy blast type is determined by the current type of the Sword of Narzissenkreuz.',
+            level: 5,
         },
     ],
     // weaponBonuses

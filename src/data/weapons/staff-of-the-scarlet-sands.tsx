@@ -38,7 +38,7 @@ const weaponBonuses: Bonus[] = [
 
 const StaffOfTheScarletSands: Weapon = {
     name: 'Staff of the Scarlet Sands',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n13511_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Deshret.png',
     type: 'Polearm',
     rarity: 5,
     description:

@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const Whiteblind: Weapon = {
     name: 'Whiteblind',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n12407_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Exotic.png',
     type: 'Weapon',
     rarity: 4,
     description:

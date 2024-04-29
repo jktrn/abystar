@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const RecurveBow: Weapon = {
     name: 'Recurve Bow',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n15303_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Curve.png',
     type: 'Bow',
     rarity: 3,
     description:

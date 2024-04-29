@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const MemoryOfDust: Weapon = {
     name: 'Memory of Dust',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n14504_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Kunwu.png',
     type: 'Catalyst',
     rarity: 5,
     description:

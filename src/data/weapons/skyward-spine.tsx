@@ -26,7 +26,7 @@ const weaponBonuses: Bonus[] = [
 
 const SkywardSpine: Weapon = {
     name: 'Skyward Spine',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n13502_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Dvalin.png',
     type: 'Polearm',
     rarity: 5,
     description:

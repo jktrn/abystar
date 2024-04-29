@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const LightOfFoliarIncision: Weapon = {
     name: 'Light of Foliar Incision',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n11512_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Ayus.png',
     type: 'Sword',
     rarity: 5,
     description:

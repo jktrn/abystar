@@ -356,7 +356,7 @@ def update_characters_json(char_data):
         "weapon": char_data["weapon"],
         "vision": char_data["vision"],
         "rarity": char_data["rarity"],
-        "implemented": True
+        "implemented": existing_data.get(character_name, {}).get("implemented", False)
     }
 
     if character_name in existing_data:

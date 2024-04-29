@@ -56,7 +56,7 @@ const weaponBonuses: Bonus[] = [
 
 const VortexVanquisher: Weapon = {
     name: 'Vortex Vanquisher',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n13504_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Kunwu.png',
     type: 'Polearm',
     rarity: 5,
     description:

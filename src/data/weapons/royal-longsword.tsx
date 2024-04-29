@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const RoyalLongsword: Weapon = {
     name: 'Royal Longsword',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n11404_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Theocrat.png',
     type: 'Sword',
     rarity: 4,
     description:

@@ -32,7 +32,7 @@ const weaponBonuses: Bonus[] = [
 
 const TheCatch: Weapon = {
     name: '"The Catch"',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n13415_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Mori.png',
     type: 'Polearm',
     rarity: 4,
     description:

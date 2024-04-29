@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const CinnabarSpindle: Weapon = {
     name: 'Cinnabar Spindle',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n11415_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Opus.png',
     type: 'Sword',
     rarity: 4,
     description:

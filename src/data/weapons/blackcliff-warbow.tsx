@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const BlackcliffWarbow: Weapon = {
     name: 'Blackcliff Warbow',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n15408_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Blackrock.png',
     type: 'Bow',
     rarity: 4,
     description:

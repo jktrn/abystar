@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const TalkingStick: Weapon = {
     name: 'Talking Stick',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n12424_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_BeastTamer.png',
     type: 'Claymore',
     rarity: 4,
     description:

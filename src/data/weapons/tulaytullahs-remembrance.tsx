@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const TulaytullahsRemembrance: Weapon = {
     name: "Tulaytullah's Remembrance",
-    image: 'https://genshin.honeyhunterworld.com/img/i_n14512_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Alaya.png',
     type: 'Catalyst',
     rarity: 5,
     description:

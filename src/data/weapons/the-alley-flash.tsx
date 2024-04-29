@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const TheAlleyFlash: Weapon = {
     name: 'The Alley Flash',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n11410_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Outlaw.png',
     type: 'Sword',
     rarity: 4,
     description:

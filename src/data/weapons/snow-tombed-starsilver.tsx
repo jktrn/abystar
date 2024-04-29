@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const SnowtombedStarsilver: Weapon = {
     name: 'Snow-Tombed Starsilver',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n12411_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Dragonfell.png',
     type: 'Weapon',
     rarity: 4,
     description:

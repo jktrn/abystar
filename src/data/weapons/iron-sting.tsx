@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const IronSting: Weapon = {
     name: 'Iron Sting',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n11407_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Exotic.png',
     type: 'Weapon',
     rarity: 4,
     description:

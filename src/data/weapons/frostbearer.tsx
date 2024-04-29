@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const Frostbearer: Weapon = {
     name: 'Frostbearer',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n14412_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Everfrost.png',
     type: 'Weapon',
     rarity: 4,
     description:

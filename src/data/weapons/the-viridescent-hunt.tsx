@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const TheViridescentHunt: Weapon = {
     name: 'The Viridescent Hunt',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n15409_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Viridescent.png',
     type: 'Bow',
     rarity: 4,
     description:

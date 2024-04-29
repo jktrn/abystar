@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const PrototypeArchaic: Weapon = {
     name: 'Prototype Archaic',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n12406_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Proto.png',
     type: 'Weapon',
     rarity: 4,
     description:

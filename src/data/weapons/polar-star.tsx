@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const PolarStar: Weapon = {
     name: 'Polar Star',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n15507_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Worldbane.png',
     type: 'Bow',
     rarity: 5,
     description: 'A pristine bow that is as sharp as the glaciers of the far north.',

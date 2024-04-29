@@ -35,7 +35,7 @@ const weaponBonuses: Bonus[] = [
 
 const RoyalSpear: Weapon = {
     name: 'Royal Spear',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n13408_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Theocrat.png',
     type: 'Polearm',
     rarity: 4,
     description:

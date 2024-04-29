@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const FlowingPurity: Weapon = {
     name: 'Flowing Purity',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n14425_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Vorpal.png',
     type: 'Weapon',
     rarity: 4,
     description:

@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const BlackcliffLongsword: Weapon = {
     name: 'Blackcliff Longsword',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n11408_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Blackrock.png',
     type: 'Sword',
     rarity: 4,
     description:

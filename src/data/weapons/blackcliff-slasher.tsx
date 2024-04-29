@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const BlackcliffSlasher: Weapon = {
     name: 'Blackcliff Slasher',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n12408_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Blackrock.png',
     type: 'Claymore',
     rarity: 4,
     description:

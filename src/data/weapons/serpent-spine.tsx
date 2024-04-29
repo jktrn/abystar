@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const SerpentSpine: Weapon = {
     name: 'Serpent Spine',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n12409_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Kione.png',
     type: 'Claymore',
     rarity: 4,
     description:

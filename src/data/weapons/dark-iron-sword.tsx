@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const DarkIronSword: Weapon = {
     name: 'Dark Iron Sword',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n11304_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Darker.png',
     type: 'Sword',
     rarity: 3,
     description: 'A perfectly ordinary iron sword, just slightly darker than most.',

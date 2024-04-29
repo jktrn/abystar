@@ -26,7 +26,7 @@ const weaponBonuses: Bonus[] = [
 
 const BlackTassel: Weapon = {
     name: 'Black Tassel',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n13303_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Noire.png',
     type: 'Polearm',
     rarity: 3,
     description:

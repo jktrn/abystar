@@ -5,16 +5,16 @@ import { Weapon } from '@/interfaces/Weapon'
 // TODO: Implement
 // ]
 
-const PrototypeAmber: Weapon = {
-    name: 'Prototype Amber',
-    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Proto.png',
-    type: 'Weapon',
+const DialoguesOfTheDesertSages: Weapon = {
+    name: 'Dialogues of the Desert Sages',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Caduceus.png',
+    type: 'Polearm',
     rarity: 4,
     description:
-        'A dully gilded catalyst secretly guarded in the Blackcliff Forge. It seems to glow with the very light from the sky.',
-    effectName: 'Gilding',
+        'A caduceus symbolizing the glory of alchemy, made from special alloys to match its special status. It is exceedingly rigid and heavy, and would probably hurt pretty bad if used as a cudgel.',
+    effectName: 'Principle of Equilibrium',
     effectDescription:
-        'Using an Elemental Burst regenerates 4 Energy every 2s for 6s. All party members will regenerate 4% HP every 2s for this duration.',
+        'When the wielder performs healing, restore 8 Energy. This effect can be triggered once every 10s and can occur even when the character is not on the field.',
     baseStats: {
         '1/20': {
             'Base ATK': 42.4,
@@ -76,31 +76,31 @@ const PrototypeAmber: Weapon = {
     refinements: [
         {
             description:
-                'Using an Elemental Burst regenerates 4 Energy every 2s for 6s. All party members will regenerate 4% HP every 2s for this duration.',
+                'When the wielder performs healing, restore 8 Energy. This effect can be triggered once every 10s and can occur even when the character is not on the field.',
             level: 1,
         },
         {
             description:
-                'Using an Elemental Burst regenerates 4.5 Energy every 2s for 6s. All party members will regenerate 4.5% HP every 2s for this duration.',
+                'When the wielder performs healing, restore 10 Energy. This effect can be triggered once every 10s and can occur even when the character is not on the field.',
             level: 2,
         },
         {
             description:
-                'Using an Elemental Burst regenerates 5 Energy every 2s for 6s. All party members will regenerate 5% HP every 2s for this duration.',
+                'When the wielder performs healing, restore 12 Energy. This effect can be triggered once every 10s and can occur even when the character is not on the field.',
             level: 3,
         },
         {
             description:
-                'Using an Elemental Burst regenerates 5.5 Energy every 2s for 6s. All party members will regenerate 5.5% HP every 2s for this duration.',
+                'When the wielder performs healing, restore 14 Energy. This effect can be triggered once every 10s and can occur even when the character is not on the field.',
             level: 4,
         },
         {
             description:
-                'Using an Elemental Burst regenerates 6 Energy every 2s for 6s. All party members will regenerate 6% HP every 2s for this duration.',
+                'When the wielder performs healing, restore 16 Energy. This effect can be triggered once every 10s and can occur even when the character is not on the field.',
             level: 5,
         },
     ],
     // weaponBonuses
 }
 
-export default PrototypeAmber
+export default DialoguesOfTheDesertSages

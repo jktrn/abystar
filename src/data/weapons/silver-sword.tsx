@@ -5,7 +5,7 @@ const weaponBonuses: Bonus[] = []
 
 const SilverSword: Weapon = {
     name: 'Silver Sword',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n11201_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Silver.png',
     type: 'Sword',
     rarity: 2,
     description:

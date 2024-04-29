@@ -5,7 +5,7 @@ const weaponBonuses: Bonus[] = []
 
 const OldMercsPal: Weapon = {
     name: "Old Merc's Pal",
-    image: 'https://genshin.honeyhunterworld.com/img/i_n12201_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Oyaji.png',
     type: 'Claymore',
     rarity: 2,
     description: 'A battle-tested greatsword that has seen better days and worse.',

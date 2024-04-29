@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const PrototypeCrescent: Weapon = {
     name: 'Prototype Crescent',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n15406_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Proto.png',
     type: 'Weapon',
     rarity: 4,
     description:

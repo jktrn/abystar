@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const MitternachtsWaltz: Weapon = {
     name: 'Mitternachts Waltz',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n15412_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Nachtblind.png',
     type: 'Bow',
     rarity: 4,
     description: 'A bow painted the color of transgression and nights of illusion.',

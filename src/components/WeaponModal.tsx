@@ -122,9 +122,7 @@ const WeaponModal = ({
                                 <Tooltip delayDuration={300}>
                                     <TooltipTrigger asChild>
                                         <Image
-                                            src={`/images/weapons/${kebabCase(
-                                                rawWeapon.name
-                                            )}.png`}
+                                            src={rawWeapon.image}
                                             alt={rawWeapon.name}
                                             width={100}
                                             height={100}

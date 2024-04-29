@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const ForestRegalia: Weapon = {
     name: 'Forest Regalia',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n12417_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Arakalari.png',
     type: 'Weapon',
     rarity: 4,
     description:

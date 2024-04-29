@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const FavoniusCodex: Weapon = {
     name: 'Favonius Codex',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n14401_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Zephyrus.png',
     type: 'Catalyst',
     rarity: 4,
     description:

@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const KagurasVerity: Weapon = {
     name: "Kagura's Verity",
-    image: 'https://genshin.honeyhunterworld.com/img/i_n14509_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Narukami.png',
     type: 'Catalyst',
     rarity: 5,
     description:

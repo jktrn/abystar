@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const PortablePowerSaw: Weapon = {
     name: 'Portable Power Saw',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n12427_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Mechanic.png',
     type: 'Claymore',
     rarity: 4,
     description:

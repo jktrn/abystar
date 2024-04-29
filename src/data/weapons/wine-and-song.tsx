@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const WineAndSong: Weapon = {
     name: 'Wine and Song',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n14410_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Outlaw.png',
     type: 'Catalyst',
     rarity: 4,
     description:

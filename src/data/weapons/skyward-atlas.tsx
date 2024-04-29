@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const SkywardAtlas: Weapon = {
     name: 'Skyward Atlas',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n14501_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Dvalin.png',
     type: 'Catalyst',
     rarity: 5,
     description:

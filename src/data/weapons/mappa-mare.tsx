@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const MappaMare: Weapon = {
     name: 'Mappa Mare',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n14407_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Exotic.png',
     type: 'Weapon',
     rarity: 4,
     description:

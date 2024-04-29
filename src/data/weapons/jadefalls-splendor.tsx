@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const JadefallsSplendor: Weapon = {
     name: "Jadefall's Splendor",
-    image: 'https://genshin.honeyhunterworld.com/img/i_n14505_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Morax.png',
     type: 'Catalyst',
     rarity: 5,
     description:

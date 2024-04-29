@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const Freedomsworn: Weapon = {
     name: 'Freedom-Sworn',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n11503_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Widsith.png',
     type: 'Sword',
     rarity: 5,
     description:

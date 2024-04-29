@@ -1,13 +1,33 @@
 import requests
 from bs4 import BeautifulSoup
 import json
-from tqdm import tqdm
 import os
+from tqdm import tqdm
+import argparse
+import ambr
+import asyncio
 
 base_url = 'https://genshin.honeyhunterworld.com'
 current_dir = os.path.dirname(os.path.abspath(__file__))
+output_dir = os.path.join(current_dir, "output")
+weapons_json_path = os.path.join(current_dir, "..", "..", "src", "data", "weapons", "weapons.json")
 
-def fetch_weapon_data(weapon: str) -> dict[str, dict[str, dict[str, str]]]:
+async def fetch_paths(api):
+    response = await api.fetch_weapons()
+    weapon_data = {}
+
+    for weapon in response:
+        weapon_id = weapon.id
+        weapon_name = weapon.name
+        weapon_url = f"i_n{weapon_id}"
+        weapon_data[weapon_url] = weapon_name
+
+    sorted_weapon_data = dict(sorted(weapon_data.items(), key=lambda item: item[1]))
+
+    with open('paths.json', 'w') as f:
+        json.dump(sorted_weapon_data, f, indent=4)
+
+def fetch_weapon_data(weapon: str) -> dict:
     url = f'{base_url}/{weapon}/'
     with requests.get(url) as page:
         soup = BeautifulSoup(page.content, 'html.parser')
@@ -59,33 +79,177 @@ def fetch_weapon_data(weapon: str) -> dict[str, dict[str, dict[str, str]]]:
 
     return all_data
 
-def fetch_all_weapons_data() -> dict[str, dict[str, dict[str, str]]]:
-    paths_path = os.path.join(current_dir, "paths", "paths.json")
+def parse_stat_value(value):
+    value_str = str(value)
+    if value_str.endswith('%'):
+        return round(float(value_str.strip('%')) / 100, 5)
+    try:
+        return round(float(value_str), 5)
+    except ValueError:
+        return value
+
+key_map = {
+    "1": "1/20",
+    "20": "20/20",
+    "20+": "20/40",
+    "40": "40/40",
+    "40+": "40/50",
+    "50": "50/50",
+    "50+": "50/60",
+    "60": "60/60",
+    "60+": "60/70",
+    "70": "70/70",
+    "70+": "70/80",
+    "80": "80/80",
+    "80+": "80/90",
+    "90": "90/90",
+}
+
+def process_weapon_data(weapon_data):
+    attribute_key_map = {
+        'HP': 'Base HP',
+        'Atk': 'Base ATK',
+        'Def': 'Base DEF',
+        'EM': 'Elemental Mastery',
+        'ER': 'Energy Recharge',
+        'CritRate%': 'CRIT Rate',
+        'CritDMG%': 'CRIT DMG',
+        'Bonus Atk%': 'Bonus ATK',
+        'Bonus Def%': 'Bonus DEF',
+        'Bonus HP%': 'Bonus HP',
+        'Bonus EM': 'Bonus Elemental Mastery',
+        'Bonus ER': 'Bonus Energy Recharge',
+        'Bonus CritRate%': 'Bonus CRIT Rate',
+        'Bonus CritDMG%': 'Bonus CRIT DMG',
+        'Bonus Heal': 'Healing Bonus',
+        'Bonus Pyro%': 'Pyro DMG Bonus',
+        'Bonus Cryo%': 'Cryo DMG Bonus',
+        'Bonus Hydro%': 'Hydro DMG Bonus',
+        'Bonus Elec%': 'Electro DMG Bonus',
+        'Bonus Anemo%': 'Anemo DMG Bonus',
+        'Bonus Geo%': 'Geo DMG Bonus',
+        'Bonus Dendro%': 'Dendro DMG Bonus',
+        'Bonus Phys%': 'Physical DMG Bonus',
+    }
+
+    new_main_stats = {}
+    for key, stats in weapon_data.get('baseStats', {}).items():
+        new_key = key_map.get(key, key)
+        new_stats = {}
+        for stat_key, value in stats.items():
+            mapped_key = attribute_key_map.get(stat_key, stat_key)
+            parsed_value = parse_stat_value(value)
+            new_stats[mapped_key] = parsed_value
+        new_main_stats[new_key] = new_stats
+    weapon_data['baseStats'] = new_main_stats
+
+    return weapon_data
+
+def sanitize_filename(name):
+    return '-'.join(name.replace('(', '').replace(')', '').replace('"', '').replace("'", '').lower().split())
+
+def pascal_case(name):
+    return ''.join(word.title() for word in name.replace('(', '').replace(')', '').replace('-', '').replace('"', '').replace("'", '').split())
+
+def generate_tsx_file(weapon_data, output_directory):
+    weapon_name = weapon_data['name']
+    sanitized_name = sanitize_filename(weapon_name)
+    filename = f"{sanitized_name}.tsx"
+    filepath = os.path.join(output_directory, filename)
+
+    os.makedirs(output_directory, exist_ok=True)
+
+    with open(filepath, 'w', encoding='utf-8') as tsx_file:
+        tsx_file.write("import { Weapon } from '@/interfaces/Weapon'\n")
+        tsx_file.write("// import { Bonus } from '@/interfaces/Character'\n\n")
+        tsx_file.write("""// const weaponBonuses: Bonus[] = [
+        // TODO: Implement
+        // ]\n\n""")
+        
+        tsx_file.write(f"const {pascal_case(weapon_name)}: Weapon = {{\n")
+        for key, value in weapon_data.items():
+            tsx_file.write(f"    {key}: ")
+            json.dump(value, tsx_file, indent=4)
+            tsx_file.write(",\n")
+
+        tsx_file.write("   // weaponBonuses\n}\n\n")
+        tsx_file.write(f"export default {pascal_case(weapon_name)}\n")
+
+def update_weapons_json(weapon_data):
+    with open(weapons_json_path, 'r') as json_file:
+        existing_data = json.load(json_file)
+
+    weapon_name = weapon_data['name']
+    simplified_weapon_data = {
+        "name": weapon_data["name"],
+        "image": weapon_data["image"],
+        "type": weapon_data["type"],
+        "rarity": weapon_data["rarity"],
+        "implemented": existing_data.get(weapon_name, {}).get("implemented", False)
+    }
+
+    if weapon_name in existing_data:
+        existing_data[weapon_name].update(simplified_weapon_data)
+    else:
+        existing_data[weapon_name] = simplified_weapon_data
+
+    sorted_data = dict(sorted(existing_data.items()))
+
+    with open(weapons_json_path, 'w') as json_file:
+        json.dump(sorted_data, json_file, indent=4)
+
+async def fetch_images_from_api(api, weapon_name):
+    response = await api.fetch_weapons()
+    for weapon in response:
+        if weapon.name.lower() == weapon_name.lower():
+            return weapon.icon
+    return None
+
+async def main():
+    parser = argparse.ArgumentParser(description='Scrape weapon data and generate TSX files.')
+    parser.add_argument('weapons', nargs='*', help='Specify one or more weapons to scrape (provide the weapon keys)')
+    parser.add_argument('--all', action='store_true', help='Scrape data for all weapons')
+    parser.add_argument('--fetch-paths', action='store_true', help='Fetch paths for all weapons')
+    args = parser.parse_args()
+
+    api = ambr.AmbrAPI()
+    await api.start()
+
+    if args.fetch_paths:
+        await fetch_paths(api)
+        return
+
+    paths_path = os.path.join(current_dir, "paths.json")
     with open(paths_path) as f:
-        weapons = json.load(f)
+        weapons = {v.lower(): k for k, v in json.load(f).items()}
 
-    all_data = {}
+    if args.weapons:
+        for weapon_key in args.weapons:
+            weapon_key = weapon_key.lower()
+            weapon_path = weapons.get(weapon_key)
+            if weapon_path:
+                print(f"Fetching data for {weapon_key}")
+                data = fetch_weapon_data(weapon_path)
+                data = process_weapon_data(data)
+                data['image'] = await fetch_images_from_api(api, data['name'])
+                generate_tsx_file(data, output_dir)
+                update_weapons_json(data)
+            else:
+                print(f"Weapon '{weapon_key}' not found in paths.json.")
+    elif args.all:
+        pbar = tqdm(weapons.items(), position=0)
+        for weapon_key, weapon_path in pbar:
+            pbar.set_description(f'Fetching {weapon_key}\'s data')
+            data_dict = fetch_weapon_data(weapon_path)
+            if data_dict:
+                data_dict = process_weapon_data(data_dict)
+                data_dict['image'] = await fetch_images_from_api(api, data_dict['name'])
+                generate_tsx_file(data_dict, output_dir)
+                update_weapons_json(data_dict)
+    else:
+        parser.print_help()
 
-    pbar = tqdm(weapons.items(), position=0)
-    for weapon, name in pbar:
-        pbar.set_description(f'Fetching data for [{name}]')
-        data_dict = fetch_weapon_data(weapon)
-        if data_dict:
-            all_data[name] = data_dict
-
-    return all_data
-
-def save_data_to_file(data: dict[str, dict[str, dict[str, str]]]) -> None:
-    file_path = os.path.join(current_dir, "weapons_new.json")
-    with open(file_path, 'w') as f:
-        json.dump(data, f, indent=4)
+    await api.close()
 
 if __name__ == '__main__':
-    # Comment these if you want to test a single weapon
-    # all_data = fetch_all_weapons_data()
-    # save_data_to_file(all_data)
-
-    # Uncomment these if you want to test a single weapon
-    data = fetch_weapon_data('i_n12512') # Verdict
-    save_data_to_file(data)
-
+    asyncio.run(main())

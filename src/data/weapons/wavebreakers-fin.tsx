@@ -42,7 +42,7 @@ const weaponBonuses: Bonus[] = [
 
 const WavebreakersFin: Weapon = {
     name: "Wavebreaker's Fin",
-    image: 'https://genshin.honeyhunterworld.com/img/i_n13416_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Maria.png',
     type: 'Polearm',
     rarity: 4,
     description:

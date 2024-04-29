@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const TheFlute: Weapon = {
     name: 'The Flute',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n11402_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Troupe.png',
     type: 'Sword',
     rarity: 4,
     description:

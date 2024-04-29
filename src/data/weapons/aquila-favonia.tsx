@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const AquilaFavonia: Weapon = {
     name: 'Aquila Favonia',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n11501_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Falcon.png',
     type: 'Sword',
     rarity: 5,
     description:

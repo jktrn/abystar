@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const LithicBlade: Weapon = {
     name: 'Lithic Blade',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n12410_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Lapis.png',
     type: 'Claymore',
     rarity: 4,
     description: 'A greatsword carved and chiseled from the very bedrock of Liyue.',

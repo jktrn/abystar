@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const KagotsurubeIsshin: Weapon = {
     name: 'Kagotsurube Isshin',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n11416_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Youtou.png',
     type: 'Sword',
     rarity: 4,
     description:

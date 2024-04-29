@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const FavoniusGreatsword: Weapon = {
     name: 'Favonius Greatsword',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n12401_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Zephyrus.png',
     type: 'Claymore',
     rarity: 4,
     description:

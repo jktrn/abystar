@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const AlleyHunter: Weapon = {
     name: 'Alley Hunter',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n15410_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Outlaw.png',
     type: 'Bow',
     rarity: 4,
     description:

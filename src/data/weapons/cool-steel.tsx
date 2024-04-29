@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const CoolSteel: Weapon = {
     name: 'Cool Steel',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n11301_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Steel.png',
     type: 'Sword',
     rarity: 3,
     description:

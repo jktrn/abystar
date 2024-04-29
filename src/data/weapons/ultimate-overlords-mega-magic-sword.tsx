@@ -7,12 +7,12 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const UltimateOverlordsMegaMagicSword: Weapon = {
     name: '"Ultimate Overlord\'s Mega Magic Sword"',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n12426_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Champion.png',
     type: 'Claymore',
     rarity: 4,
     description:
-        'A magical sword that can only be wielded by the ultimate overlord who rules the seas. As it has been made with special water-resistant materials, it will not get soaked even when immersed in water. Why, one might even call it invincible!',
-    effectName: 'We Believe in You!',
+        'A magical sword that can only be wielded by the ultimate overlord who rules the seas. As it has been made with special water-resistant materials, it will not get ruined by water damage even after being immersed. Why, one might even call it invincible!',
+    effectName: 'Melussistance!',
     effectDescription:
         "ATK increased by 12%. That's not all! The support from all Melusines you've helped in Merusea Village fills you with strength! Based on the number of them you've helped, your ATK is increased by up to an additional 12%.",
     baseStats: {

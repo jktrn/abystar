@@ -27,7 +27,7 @@ const weaponBonuses: Bonus[] = [
 
 const Halberd: Weapon = {
     name: 'Halberd',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n13302_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Halberd.png',
     type: 'Polearm',
     rarity: 3,
     description:

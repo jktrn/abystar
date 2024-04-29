@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const TwinNephrite: Weapon = {
     name: 'Twin Nephrite',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n14305_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Phoney.png',
     type: 'Catalyst',
     rarity: 3,
     description: 'A jade pendant formed by piecing together two jade stones.',

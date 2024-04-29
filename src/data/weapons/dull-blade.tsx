@@ -5,7 +5,7 @@ const weaponBonuses: Bonus[] = []
 
 const DullBlade: Weapon = {
     name: 'Dull Blade',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n11101_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Blunt.png',
     type: 'Sword',
     rarity: 1,
     description:

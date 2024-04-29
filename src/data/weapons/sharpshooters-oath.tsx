@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const SharpshootersOath: Weapon = {
     name: "Sharpshooter's Oath",
-    image: 'https://genshin.honeyhunterworld.com/img/i_n15302_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Arjuna.png',
     type: 'Bow',
     rarity: 3,
     description:
@@ -29,11 +29,11 @@ const SharpshootersOath: Weapon = {
         },
         '40/40': {
             'Base ATK': 169.27,
-            'Bonus CRIT DMG': 0.2626,
+            'Bonus CRIT DMG': 0.2627,
         },
         '40/50': {
             'Base ATK': 188.67,
-            'Bonus CRIT DMG': 0.2626,
+            'Bonus CRIT DMG': 0.2627,
         },
         '50/50': {
             'Base ATK': 216.1,

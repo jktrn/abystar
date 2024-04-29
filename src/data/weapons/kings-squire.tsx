@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const KingsSquire: Weapon = {
     name: "King's Squire",
-    image: 'https://genshin.honeyhunterworld.com/img/i_n15417_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Arakalari.png',
     type: 'Weapon',
     rarity: 4,
     description:

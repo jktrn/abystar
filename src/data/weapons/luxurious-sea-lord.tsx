@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const LuxuriousSealord: Weapon = {
     name: 'Luxurious Sea-Lord',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n12412_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_MillenniaTuna.png',
     type: 'Claymore',
     rarity: 4,
     description:

@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const FerrousShadow: Weapon = {
     name: 'Ferrous Shadow',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n12301_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Glaive.png',
     type: 'Claymore',
     rarity: 3,
     description:

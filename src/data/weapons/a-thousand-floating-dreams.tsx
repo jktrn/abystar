@@ -33,7 +33,7 @@ const weaponBonuses: Bonus[] = [
 
 const AThousandFloatingDreams: Weapon = {
     name: 'A Thousand Floating Dreams',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n14511_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Ayus.png',
     type: 'Catalyst',
     rarity: 5,
     description:

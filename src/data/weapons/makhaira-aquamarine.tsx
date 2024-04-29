@@ -7,7 +7,7 @@ import { Weapon } from '@/interfaces/Weapon'
 
 const MakhairaAquamarine: Weapon = {
     name: 'Makhaira Aquamarine',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n12415_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Pleroma.png',
     type: 'Claymore',
     rarity: 4,
     description:

@@ -44,7 +44,7 @@ const weaponBonuses: Bonus[] = [
 
 const Deathmatch: Weapon = {
     name: 'Deathmatch',
-    image: 'https://genshin.honeyhunterworld.com/img/i_n13405_gacha_icon_w145.webp',
+    image: 'https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Gladiator.png',
     type: 'Polearm',
     rarity: 4,
     description:
