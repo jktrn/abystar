@@ -40,7 +40,7 @@ const ResistanceShred = ({attributes}: attributesProp) => {
                                 <span className="flex items-center gap-2"> 
                                     <Image
                                         src={resImages[resType as keyof typeof resImages]}
-                                        alt={"anemo"}
+                                        alt={resType}
                                         width={20}
                                         height={20}
                                     />

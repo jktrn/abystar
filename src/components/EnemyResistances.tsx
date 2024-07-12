@@ -34,8 +34,8 @@ const EnemyResistances = ({ resTable, onChange }: EnemyResistancesProps ) => {
     }
     /* lg:max-std:w-1/5 lg:w-1/2 xl:w-3/4 */
     return (
-        <div className = "flex flex-row flex-wrap p-3 justify-between">
-            <div className = "h-20 w-20 p-2 flex flex-col flex-row items-center">
+        <div className = "px-3 pb-3 grid grid-cols-3 md:grid-cols-4 lrg:grid-cols-9 place-items-center space-y-2">
+            <div className = "h-20 w-20 p-2 space-y-2 flex flex-col items-center">
                 <Image 
                     src={`/images/elements/def.svg`}
                     alt="level"
@@ -52,7 +52,7 @@ const EnemyResistances = ({ resTable, onChange }: EnemyResistancesProps ) => {
             </div>
             {attributeSections[4].attributes.map((resType) => (
                 <Fragment key = {resType}>
-                    <div className = "h-20 w-20 p-2 flex flex-col flex-row items-center">
+                    <div className = "h-20 w-20 px-2 space-y-2 flex flex-col items-center">
                         <Image 
                             src={resImages[resType as keyof typeof resImages]}
                             alt="level"
