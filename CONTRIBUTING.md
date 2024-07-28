@@ -26,6 +26,14 @@ The following is a set of guidelines which pertain to the fair-use of the open s
       - [TypeScript Styleguide](#typescript-styleguide)
     - [Implementing Characters](#implementing-characters)
       - [Choosing A Character](#choosing-a-character)
+      - [Understanding The Layout](#understanding-the-layout)
+      - [Implementing `talentScalings`](#implementing-talentscalings)
+        - [Checking The Metadata](#checking-the-metadata)
+        - [Defining The Talent Property](#defining-the-talent-property)
+        - [Attributes and Bonus Stats](#attributes-and-bonus-stats)
+        - [`damageType` And `outputType`](#damagetype-and-outputtype)
+        - [Creating Custom Talents](#creating-custom-talents)
+        - [Toggable Talents](#toggable-talents)
     - [Implementing Weapons](#implementing-weapons)
     - [Implementing Artifacts](#implementing-artifacts)
 
@@ -163,7 +171,7 @@ All TypeScript code is linted with [Prettier](https://prettier.io/).
 - We largely prefer the object spread operator (`{...anotherObj}`) to `Object.assign()`.
 - We prefer not to inline any `export` instances with expressions. However, there are some exceptions within the repository.
 
-  ```ts
+  ```tsx
   // Most of the time, we use this:
   class ClassName {
 
@@ -188,21 +196,194 @@ All TypeScript code is linted with [Prettier](https://prettier.io/).
 
 #### Choosing A Character
 
-Cross-reference the `issues` tab to make sure that it someone isn't already assigning themselves to the character that you wish to implement. If you aren't sure where to begin, choosing characters from earlier versions of the game is typically a good starting point as they often have simpler kits.
+Cross-reference the [issues](https://github.com/jktrn/abystar/issues) tab to make sure that it someone isn't already assigning themselves to the character that you wish to implement. If you aren't sure where to begin, choosing characters from earlier versions of the game is typically a good starting point as they often have simpler kits.
 
 The most intuitive way of checking the current state of all implemented characters is to directly access Abystar either through the [main webpage](https://abystar.vercel.app), or through your localhost. Characters that are greyed out are not considered implemented.
 
-This code is reflected through the `characters.json` file located in the `\src\components\data\characters` directory. Keep this file in mind, as it is crucial for finishing implementation later on.
+This code is reflected through the `characters.json` file located in the `\src\components\data\characters` directory. Keep this file in mind, as it is crucial for finishing implementation later on. When you are ready to choose a character to work on, please select their corresponding `.tsx` file from the same directory as above.
+
+#### Understanding The Layout
+
+All characters will have some initial code pre-baked within their corresponding file. Before you begin, make sure to take a good look and comprehend the code first.
+
+At a baseline, **4** constants are defined across every character:
+
+- `talentScalings`: An instance of the `TalentScaling` interface. This defines the type and attribute of formulas that all talents scaling off of, like the name suggests. It provides context for the scalings from the metadata of the character, which the program **MUST** have before it can properly display calculations to the frontend.
+- `characterBonuses`: An array of `Bonus` interfaces. Any passives or specific effects (apart from those granted by character constellations) that the character's kit may enable which directly affects the results of the calculation will be held within here. This part **MUST** be implemented, as the program will force register the character as unimplemented if left empty. However, calculations will still show on the right as long as `talentScalings` is implemented.
+- `constellationBonuses`: An array of `Bonus` interfaces. Functions similarly to `characterBonuses`, except reserved for any and all effects that come from constellations. This distinction is made so that the rest of the program may identify and distinguish these bonuses before reflecting it on the frontend. Similar to the above, this cannot be left unimplemented, otherwise the program flags the character as incomplete.
+- `{Character_Name}`: An instance of the `Character` interface. This holds the metadata of the character that is scraped from the in-built API of Abystar. It's not necessary to touch this under most circumstances. However, because the program relies on the metadata for calculations, there are situations where you may have to modify this in order to implement unique aspects of a character's kit.
+
+> [!TIP]
+> It's **highly recommended** you implement these in-order from top to bottom. `talentScalings` should be completed first in order to display all the calculations visually on the frontend. This way, you may manually test `characterBonuses` and `constellationBonuses` for bugs as their effects will be reflected within the calculation. Any additional modifications within the metadata is recommended be done last in order to avoid confusion within your workflow.
+
+#### Implementing `talentScalings`
+
+It is crucial to implement every property within the metadata to ensure that every talent gets a scaling. You do not have to worry about actually calculating the damage as that will be automatically done in the background. What you are doing here is defining the individual properties of every attack, as the metadata does not naturally provide information on what kind of scaling each talent is, only the actual numbers.
+
+##### Checking The Metadata
+
+Because the program **must** cross-reference the properties of each scaling to the metadata, you must correctly use the **exact name** for each property ID ***(case and space sensitive)***. Luckily, the talent property within the metadata holds every name and data, located here:
+
+```tsx
+const {Character_Name} {
+  name: ...,
+  icon: ...,
+  weapon: ...,
+  vision: ...,
+  rarity: ...,
+  description: ...,
+  occupation: ...,
+  baseStats: {
+    ...
+  }
+  talents: [
+    {
+      name: '{Here is the name for your NA talents}',
+      ...
+      data: {
+        '{Here is the name for each individual talent scalings}' {
+          ...
+        }
+      }
+    },
+    {
+      name: '{Here is the name for your skill talents}',
+      ...
+      data: {
+        '{Here is the name for each individual talent scalings}' {
+          ...
+        }
+      }
+    },
+    {
+      name: '{Here is the name for your burst talents}',
+      ...
+      data: {
+        '{Here is the name for each individual talent scalings}' {
+          ...
+        }
+      }
+    }
+  ]
+}
+```
+
+The heirarchy follows the same scope and structure as the talent property from the metadata. As such, you can expect the general structure of the code to mimic something along the lines of this:
+
+```tsx
+const talentScalings: TalentScaling = {
+  '{name}': {
+    '{data_name}': {
+      ... // fields
+    },
+    ...
+  },
+  ...
+}
+```
+
+##### Defining The Talent Property
+
+> [!IMPORTANT]
+> In order for the program to display the calculations for each talent on the right-hand side of the website, **all** mandatory fields **must be defined** for each talent that exists on the character.
+
+There's **3 types** of `formulaTypes` which are used to define the specific scaling of each talent you're using.
+
+| Type | Description | Fields |
+| :--- | :--- | :--- |
+| `DamageFormula` | Any talent which deals damage to the enemy will use this formula. Ex: *Normal Attacks, Elemental Skills, Elemental Bursts, etc...*  | `attribute`\*, `additiveBonusStat`, `multiplicativeBonusStat`, `critRateBonusStat`, `critDamageBonusStat`, `damageType`\*, `minConstellation` |
+| `GenericFormulaWithScaling` | If the talent doesn't deal damage but still relies on an attribute, use this. Ex: *ATK Buff, HP Drain, HP Regen, etc...* | `attribute`, `additiveBonusStat`, `multiplicativeBonusStat`, `critRateBonusStat`, `critDamageBonusStat`, `outputType`\*, `minConstellation` |
+| `GenericFormulaWithoutScaling` | If the talent doesn't deal damage and doesn't rely on an attibute, use this. Ex: *Stamina Cost, Energy Cost, Cooldown, Duration, Trigger Interval, Buff DMG%, etc...* | `additiveBonusStat`, `multiplicativeBonusStat`, `critRateBonusStat`, `critDamageBonusStat`, `outputType`\*, `minConstellation` |
+| `ElementalReactionFormula` | Currently unimplemented. Will be used for elemental reaction damage scalings in the future. ***DO NOT USE.*** | None |
+
+> For the table above, the `*` within the fields indicates that the specific data is required to be defined in order for the talent property to be considered valid.
+
+##### Attributes and Bonus Stats
+
+For the sake of keeping this section from growing far too long (like the dialogue in the Aranara Quest), not all attributes will be listed here. As of this document's live status, all `DamageFormula` talents in the game scales ***exclusively*** off a combination of attributes of the **Basic Attributes** located within the `attributeSections.ts` file. You can find this file in the directory `\src\lib\`.
+
+If this document does not accurately reflect this change in future versions and still isn't updated by the time you're viewing this, please notify the maintainers.
+
+All bonus stats are defined to be an array of attributes. These bonus stats will manipulate the calculation of the talent and can be altered by `characterBonuses`, `constellationBonuses`, and in the hopefully near-future when they are implemented, party buffs. A list of all attributes can be found in the `characterAttributes.ts` file located within the same directory as the one mentioned above.
+
+While `DamageFormula` type talents don't require you to define the bonus stats in order for the property to be considered valid, we necessitate the fact that each type of these talents should have some corresponding general bonus attribute that exists within the library. If you're confused on which general bonus stats to use, cross-reference other existing characters which are already implemented.
+
+> [!WARNING]
+> There ***are no restrictions*** on what kind of attributes you can choose, **including completely fabricated ones that don't exist in the source library**. As such, it's your sole responsibility to ensure that you don't create any typos in this part of the code. This laxness is because certain characters require unique attributes that only exist for themselves, which can't exist within the general library of attributes.
+
+**Example:** Nahida has a passive which gives a bonus to both the crit rate and damage of her elemental skill in particular. As such, she has 2 unique attributes defined only for her.
+
+```tsx
+'Tri-Karma Purification DMG': {
+    formulaType: FormulaType.DamageFormula,
+    attribute: ['ATK', 'Elemental Mastery'],
+    additiveBonusStat: ['Elemental Skill Additive Bonus'],
+    multiplicativeBonusStat: [
+        'Dendro DMG Bonus',
+        'Elemental Skill DMG Bonus',
+        'Tri-Karma Purification DMG Bonus',
+    ],
+    critRateBonusStat: ['Elemental Skill CRIT Rate'],
+    damageType: DamageType.Dendro,
+},
+```
+
+##### `damageType` And `outputType`
+
+This is the final piece of the property for a talent. To reiterate, this field is **always required to be defined** in order for the talent to be considered valid and show up in the calculation.
+
+`damageType` is relatively simple. It takes in the enum `DamageType`, which as of current consists of 8 types. Use these to identify what type of elemental (or lack thereof) damage the specific talent deals.
+
+- `DamageType.Physical`
+- `DamageType.Pyro`
+- `DamageType.Electro`
+- `DamageType.Hydro`
+- `DamageType.Anemo`
+- `DamageType.Geo`
+- `DamageType.Dendro`
+- `DamageType.Cryo`
+
+`outputType` takes in the enum `FormulaOutputType` to identify what kind of value the numbers are.
+
+- `Healing`: This refers to any value that heals a character.
+- `Drain`: This refers to any value that drains a character's health.
+- `Time`: This refers to any value that is a unit of time. Always in seconds. Ex: *CD, Duration, etc...*
+- `Percentage`: This refers to any value which isn't considered a heal nor a drain, but is still measured in percentages. Ex: *DMG buff, Bonuses, etc...*
+- `Generic`: This refers to any value that doesn't meet any of the above. Ex: *Energy cost, Stamina cost, Stacks, etc...*
+
+##### Creating Custom Talents
+
+While the metadata for the character provides all of the necessary talents, a select few characters have kits which innately deals a special type of damage which isn't defined in the metadata. If this is the case, you may add it manually by appending your own scalings to the metadata. Use your best discretion to name this talent as accurately as possible.
+
+**Example:** Kaedehara Kazuha has a passive which causes him to do an additional *200%* plunge damage if he absorbs an element after using his elemental skill. This is separate from his actual plunge damage. However, this specific damage is not defined within the metadata, yet it wouldn't be correct to merge this with his plunge damage either. As such, it requires its own talent.
+
+> [!NOTE]
+> These types of talents often are a flat value. However, in order for the metadata to be considered valid, the scaling must be defined for every level from 1-15 regardless. If this is the case and your added talent is a flat value, simply set the value to be the same across every level.
+
+##### Toggable Talents
+
+There are currently 2 methods to make a talent toggable in its visibility. Both are often used in conjunction with [custom talents](#creating-custom-talents).
+
+1. The `minConstellation` field. You may add this optional field to any one of the 3 formula types. It has 6 possible values, `1-6`, which as the name suggests, represents the minimum constellations of the character needed to activate the talent. This is typically used if a constellation for a character deals a special type of damage.
+2. Intentionally omitting `damageType` or `outputType`. As stated numerously before, without these mandatory fields, the talent simply won't display on the calculator. This may be used intentionally to toggle the visibility, as it's possible to modify talent properties from either `characterBonuses` or `constellationBonuses`. This will be explained more in-depth later on in the document.
+
+> [!TIP]
+> Due to the strict restrictions imposed upon talent scaling properties, you may find it easier to debug your instance manually by visually verifying that each and every talent is present within the calculator. Once a talent is considered to be defined validly, it will appear in the calculator.
+> The most common issues which aren't directly caused by runtime violations are often caused by one of the following:
+>
+> - Scopes that aren't structured correctly
+> - Incorrect name for the talent, typically caused by a typo or wrong casing
+> - Mandatory fields that either aren't defined, or defined incorrectly
 
 ### Implementing Weapons
 
 > [!CAUTION]
-> **W.I.P**: Guide not created yet.
+> **W.I.P**: Guide in progress.
 
 ### Implementing Artifacts
 
 > [!CAUTION]
-> **W.I.P:** Artifact system isn't implemented yet.
+> **W.I.P:** Artifact system under development.
 
 ---
 
