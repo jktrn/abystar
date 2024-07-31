@@ -34,6 +34,15 @@ The following is a set of guidelines which pertain to the fair-use of the open s
         - [`damageType` And `outputType`](#damagetype-and-outputtype)
         - [Creating Custom Talents](#creating-custom-talents)
         - [Toggable Talents](#toggable-talents)
+      - [Implementing `characterBonuses` and `constellationBonuses`](#implementing-characterbonuses-and-constellationbonuses)
+        - [Naming Bonuses](#naming-bonuses)
+        - [Writing The Description](#writing-the-description)
+        - [Parameters For Bonuses](#parameters-for-bonuses)
+        - [The Priority System](#the-priority-system)
+        - [Utils For Bonuses](#utils-for-bonuses)
+        - [Implementing `effect`](#implementing-effect)
+        - [Implementing `applyToTalentScaling`](#implementing-applytotalentscaling)
+      - [Finishing Up](#finishing-up)
     - [Implementing Weapons](#implementing-weapons)
     - [Implementing Artifacts](#implementing-artifacts)
 
@@ -311,7 +320,7 @@ While `DamageFormula` type talents don't require you to define the bonus stats i
 > [!WARNING]
 > There ***are no restrictions*** on what kind of attributes you can choose, **including completely fabricated ones that don't exist in the source library**. As such, it's your sole responsibility to ensure that you don't create any typos in this part of the code. This laxness is because certain characters require unique attributes that only exist for themselves, which can't exist within the general library of attributes.
 
-**Example:** Nahida has a passive which gives a bonus to both the crit rate and damage of her elemental skill in particular. As such, she has 2 unique attributes defined only for her.
+**Example:** Nahida has a passive which gives a bonus to both the crit rate and damage of her elemental skill in particular. As such, she has 2 unique attributes defined only for her, which do not exist within the `characterAttributes.ts` file.
 
 ```tsx
 'Tri-Karma Purification DMG': {
@@ -374,6 +383,113 @@ There are currently 2 methods to make a talent toggable in its visibility. Both 
 > - Scopes that aren't structured correctly
 > - Incorrect name for the talent, typically caused by a typo or wrong casing
 > - Mandatory fields that either aren't defined, or defined incorrectly
+
+#### Implementing `characterBonuses` and `constellationBonuses`
+
+> [!NOTE]
+> Since both of these bonuses follow a similar structure in implementation, we will group them together under one topic within the document for the sake of conciseness.
+
+**Bonuses** are the effects and passives of every character. While the calculator may calculate damage off of characters from their base stats and scalings, every character in the game possesses either a passive, or a state within their talents which alter how the calculations are done. This is often the most complicated part of coding a character, as there are no strict guidelines for every scenario, given that every character does something largely unique. It's ***highly recommended*** you cross-reference other completed characters to get an feel for how certain bonuses are programmed.
+
+##### Naming Bonuses
+
+Unlike `talentScalings`, there is no need to cross-reference any metadata when it comes to implementing bonuses, as everything is defined by the user's image. That said, we still need to uphold consistency across the board. By doing this, we must avoid coming up with arbitrary names whenever possible.
+
+All bonuses currently come from talents, passives, and constellations. All of these will have a predefined name in the metadata. Use them exactly like you would for `talentScalings`. If this is to change anytime in the future, then use a name that best describes the bonus.
+
+##### Writing The Description
+
+While the metadata contains a description for every talent/constellation, there is a limited amount of space on the website to display all of that information. As such, we attempt to shave off as much unnecessary text as possible when it comes to the description of bonuses. Additionally, descriptions are formatted with **HTML**.
+
+There are some general rules you should follow when creating descriptions.
+
+- Apostrophies may frequently appear in descriptions across bonuses. Without the character code, rendering this character may confuse the HTML parser. We advise you to use `&apos;` in place of apostrophies. You may also use `&#39;` instead, but this clashes with code consistency. If this is not done properly, Vercel may encounter issues during deployment after a pull-request. You will not see this when compiling Abystar on local deployment.
+- We advise you to not go over the **120 character** line in descriptions for the sake of code readability. You may use `{' '}` at the end of a line to create a space in between the start of the next character, since HTML doesn't render raw spaces at the end nor beginning of a new line.
+- We also color format certain pieces of information. For any scalings that appear within the description, we highlight their color. This is done through `<span style={{ color: '#ddd' }}>insert_scaling</span>{' '}`. Notice that we need to put a `{' '}` at the end, since the renderer has issues parsing spaces immediately after a span.
+- For any elemental related bonuses, we color them according to the following:
+  - **Pyro:** `#bf612d`
+  - **Geo:** `#c8922b`
+  - **Dendro:** `#84a02f`
+  - **Anemo:** `#5d9b86`
+  - **Hydro:** `#3d9bc1`
+  - **Cryo:** `#7fabb6`
+  - **Electro:** `#8c729a`
+  - **Physical:** `#ddd` (We share the physical-damage color with every other non-elemental forms of scaling)
+
+**Example:**
+
+```tsx
+description: (
+    <span>
+        When initiating a Normal Attack, a Charged Attack, Elemental Skill or
+        Elemental Burst, Keqing gains a{' '}
+        <span style={{ color: '#ddd' }}>6/12/18/24%</span>{' '}
+        <span style={{ color: '#8c729a' }}>Electro DMG Bonus</span> for{' '}
+        <span style={{ color: '#ddd' }}>8s</span>.
+    </span>
+)
+```
+
+##### Parameters For Bonuses
+
+Bonuses have their own set of fields which may be used to define specific properties of the bonus.
+
+| Field | Typing | Description |
+| :--- | :--- | :--- |
+| `name` | `string` | The name of the bonus. **(REQUIRED)** |
+| `description` | `JSX.ELEMENT` | The description of the bonus. **(REQUIRED)** |
+| `icon` | `string` | The icon associated with the bonus. The string is a filepath to the relevant icon located within the `public\images\characters\` directory. **(REQUIRED)** |
+| `effect` | `Effect` | The effect that the bonus has on the character's attributes. **(REQUIRED)** |
+| `maxStacks` | `number` | The maximum number of stacks that the bonus may have. This is defaulted to 1 if you choose not to define it, which will keep the bonus as a toggle.|
+| `stackOptions` | `string[]` | The options of which the user may choose from in a stack. Assumes that maxStacks is > 1, will transform the bonus from a toggle to a dropdown, displaying the stack names as the one you define in the string array. |
+| `currentStacks` | `number` | The current stack that the bonus is at. It is advised not to define this property within the bonus, as it should always be defaulted to 1. |
+| `minConstellation` | `number` | For bonuses that are locked behind a constellation, and will not become active until the minimum condition is met. |
+| `minAscension` | `number` | For bonuses that are locked behind a character ascension, and will not become active until the minimum level is selected. |
+| `enabled` | `boolean` | Determines whether or not the bonus should be automatically enabled once all other conditions are met. This is enabled by default. |
+| `visible` | `boolean` | Determines whether or not the bonus should be visible or not. This is enabled by default. |
+| `origin` | `string` | Where the bonus originates from. Ex: *(E, Q, A1, A4, Passive, C1-C6, etc...)* |
+| `implemented` | `boolean` | Determines whether or not the bonus itself has been implemented fully. This is enabled by default. Note that you should avoid disabling this unless if there is a holdup with the implementation that forces you to skip the bonus, whether that be an impossibility due to unimplemented systems (such as party buffs, res shred, etc...), or an inability to program the bonus. |
+| `priority` | `number` | Determines the order priority in which the bonus should be applied within the calculation. Values from `0-3`, but defaults to `Number.MAX_SAFE_INTEGER`. |
+| `affectsTalentIndex` | `number` | Determines the index of the talent that needs modifying. If not defined, then assumes that the bonus will not affect `talentScalings`. Values from `0-2`. |
+| `applyToTalentScaling` | `void` | Defines the modification(s) done to the indexed talent. |
+
+##### The Priority System
+
+> [!TIP]
+> It is ***highly recommended*** that you familiarize yourself with the types of bonuses and what priorities are assigned to them, since Abystar does not natively check for the validity of the bonuses, nor their effect on the attributes/scalings. As mentioned many times previously in the document, it's advised you cross-reference other existing characters that are implemented.
+
+One of the most crucial aspects to calculating the correct results is for the program to understand where and when the bonus should be applied within the calculation. This is where the priority system comes into play, as the program ultimately compounds all of the bonuses in conjunction with each other in practice. However, giving the wrong priority for a bonus will **NOT** cause an error in the program, so it is up to you to ensure that this doesn't happen.
+
+**All** bonuses that define `effect` will require you to define the `priority` field. The only exception is for bonuses that do nothing in `effect`, whether that be due to a limitation, or a bonus that only effects `applyToTalentScaling`. Keep in mind that the priority system revolves around how you modify [attributes](#attributes-and-bonus-stats).
+
+- Priority `0`: This priority is currently reserved only for implementing constellations 3 and 5, as they're the only bonuses which affect the character's talent levels. You may find how to do this [later on in the document](#implementing-effect). Note that this may change in the future, because characters like Tartaglia give party buffs which alter those properties.
+- Priority `1`: If your bonus modifies the attributes from the `characterAttributes.ts` class through flat value(s) (or constants), then it belongs to priority 1. Note that any [custom attributes](#attributes-and-bonus-stats) are considered to be constants in this case, because they do not exist within the the `characterAttributes.ts` class.
+  - **Example:** A bonus that increases EM by 200, a bonus that gives an additional 20% Dendro DMG%, a bonus that reduces cooldown or stamina cost by a set amount, etc...
+- Priority `2`: If your bonus modifies the character's attributes through a dependency of another attribute during calculation, then it belongs to priority 2. Note that this dependency does **NOT** apply to custom attributes. The dependency must come from existing attributes within the `characterAttributes.ts` class. For example, scaling HP off of ATK is considered priority 2, scaling Tri-Karma Purification off of HP is considered priority 2, but scaling HP off of Tri-Karma Purification is considered priority 1.
+  - **Example:** A bonus that gives ATK based off 25% of HP, a bonus that grants absorbed element's DMG% based off of 30% of EM, etc...
+- Priority `3`: If your bonus uses a character attribute within `characterAttributes.ts` to calculate a constant, then it belongs to priority 3. Recall that any custom attributes are considered constants, and not apart of the character attribute library. Thus, you may think of this as a reverse of priority 1.
+  - **Example:** A bonus that increases Tri-Karma Purification damage based off of EM, a bonus that increases summon damage based off of HP, etc...
+
+Under the scenario where a bonus is unimplemented, priority will be automatically set to `Number.MAX_SAFE_INTEGER`.
+
+##### Utils For Bonuses
+
+Make sure to know the incorporated utility functions that come with the repository's library. They come very handy when you're implementing either the `effect` or `applytoTalentScaling` property. If you wish to contribute your own utility function to help with future character implementations, please create a pull request in the `utils.ts` file.
+
+| Function | Parameters | Description |
+| :--- | :--- | :--- |
+| `clamp` | `(number: number, min: number, max: number)` | Takes a number and restricts its value in range between a minimum and maximum. |
+| `getTalentScalingValue` | `(characterState: CharacterState, talentName: string, scalingKey: string, talentLevel: number)` | Allows you to get the numerical value of a scaling within `talentScalings`. More details on how to use this in [implementing effect](#implementing-effect). |
+
+##### Implementing `effect`
+
+##### Implementing `applyToTalentScaling`
+
+#### Finishing Up
+
+Once you have verified that everything for the character has been fully implemented and that to the best of your ability, you've checked the class from any potential errors or bugs, you are ready to do the finishing touch to set the character as implemented.
+
+Characters are greyed out in the selection box UI until you modify the json file that contains all of the characters. Head over to `characters.json` from the `\src\data\characters\` directory and scroll down until you find your character. Once there, the final field should have the variable `implemented`. It will be false by default. Once you're sure about your completion, change the boolean to true to finish the character. Make a git commit with the "feat:" prefix, and then push the repository before creating a new [pull request](#pull-requests).
 
 ### Implementing Weapons
 
