@@ -718,6 +718,14 @@
         "rarity": 4,
         "implemented": false
     },
+    "Emilie": {
+        "name": "Emilie",
+        "icon": "/images/characters/UI_AvatarIcon_Emilie.png",
+        "weapon": "Polearm",
+        "vision": "Dendro",
+        "rarity": 5,
+        "implemented": false
+    },
     "Eula": {
         "name": "Eula",
         "icon": "/images/characters/UI_AvatarIcon_Eula.png",
@@ -1022,6 +1030,14 @@
         "rarity": 4,
         "implemented": false
     },
+    "Sethos": {
+        "name": "Sethos",
+        "icon": "/images/characters/UI_AvatarIcon_Sethos.png",
+        "weapon": "Bow",
+        "vision": "Electro",
+        "rarity": 4,
+        "implemented": false
+    },
     "Shenhe": {
         "name": "Shenhe",
         "icon": "/images/characters/UI_AvatarIcon_Shenhe.png",
@@ -1036,6 +1052,14 @@
         "weapon": "Catalyst",
         "vision": "Anemo",
         "rarity": 4,
+        "implemented": false
+    },
+    "Sigewinne": {
+        "name": "Sigewinne",
+        "icon": "/images/characters/UI_AvatarIcon_Sigewinne.png",
+        "weapon": "Bow",
+        "vision": "Hydro",
+        "rarity": 5,
         "implemented": false
     },
     "Sucrose": {

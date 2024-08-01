@@ -20,6 +20,13 @@
         "rarity": 5,
         "implemented": true
     },
+    "Absolution": {
+        "name": "Absolution",
+        "image": "/images/weapons/UI_EquipIcon_Sword_Estoc.png",
+        "type": "Sword",
+        "rarity": 5,
+        "implemented": false
+    },
     "Akuoumaru": {
         "name": "Akuoumaru",
         "image": "/images/weapons/UI_EquipIcon_Claymore_Maria.png",
@@ -164,6 +171,13 @@
         "name": "Cinnabar Spindle",
         "image": "/images/weapons/UI_EquipIcon_Sword_Opus.png",
         "type": "Sword",
+        "rarity": 4,
+        "implemented": false
+    },
+    "Cloudforged": {
+        "name": "Cloudforged",
+        "image": "/images/weapons/UI_EquipIcon_Bow_Ultimatum.png",
+        "type": "Bow",
         "rarity": 4,
         "implemented": false
     },
@@ -566,6 +580,13 @@
         "rarity": 5,
         "implemented": false
     },
+    "Lumidouce Elegy": {
+        "name": "Lumidouce Elegy",
+        "image": "/images/weapons/UI_EquipIcon_Pole_Muguet.png",
+        "type": "Polearm",
+        "rarity": 5,
+        "implemented": false
+    },
     "Luxurious Sea-Lord": {
         "name": "Luxurious Sea-Lord",
         "image": "/images/weapons/UI_EquipIcon_Claymore_MillenniaTuna.png",
@@ -915,6 +936,13 @@
         "type": "Sword",
         "rarity": 2,
         "implemented": true
+    },
+    "Silvershower Heartstrings": {
+        "name": "Silvershower Heartstrings",
+        "image": "/images/weapons/UI_EquipIcon_Bow_Arcdange.png",
+        "type": "Bow",
+        "rarity": 5,
+        "implemented": false
     },
     "Skyrider Greatsword": {
         "name": "Skyrider Greatsword",
