@@ -42,6 +42,7 @@ The following is a set of guidelines which pertain to the fair-use of the open s
         - [Utils For Bonuses](#utils-for-bonuses)
         - [Implementing `effect`](#implementing-effect)
         - [Implementing `applyToTalentScaling`](#implementing-applytotalentscaling)
+        - [Constellation-Specific Implementation](#constellation-specific-implementation)
       - [Finishing Up](#finishing-up)
     - [Implementing Weapons](#implementing-weapons)
     - [Implementing Artifacts](#implementing-artifacts)
@@ -462,7 +463,7 @@ One of the most crucial aspects to calculating the correct results is for the pr
 
 **All** bonuses that define `effect` will require you to define the `priority` field. The only exception is for bonuses that do nothing in `effect`, whether that be due to a limitation, or a bonus that only effects `applyToTalentScaling`. Keep in mind that the priority system revolves around how you modify [attributes](#attributes-and-bonus-stats).
 
-- Priority `0`: This priority is currently reserved only for implementing constellations 3 and 5, as they're the only bonuses which affect the character's talent levels. You may find how to do this [later on in the document](#implementing-effect). Note that this may change in the future, because characters like Tartaglia give party buffs which alter those properties.
+- Priority `0`: This priority is currently reserved only for implementing constellations 3 and 5, as they're the only bonuses which affect the character's talent levels. You may find how to do this [later on in the document](#constellation-specific-implementation). Note that this may change in the future, because characters like Tartaglia give party buffs which alter those properties.
 - Priority `1`: If your bonus modifies the attributes from the `characterAttributes.ts` class through flat value(s) (or constants), then it belongs to priority 1. Note that any [custom attributes](#attributes-and-bonus-stats) are considered to be constants in this case, because they do not exist within the the `characterAttributes.ts` class.
   - **Example:** A bonus that increases EM by 200, a bonus that gives an additional 20% Dendro DMG%, a bonus that reduces cooldown or stamina cost by a set amount, etc...
 - Priority `2`: If your bonus modifies the character's attributes through a dependency of another attribute during calculation, then it belongs to priority 2. Note that this dependency does **NOT** apply to custom attributes. The dependency must come from existing attributes within the `characterAttributes.ts` class. For example, scaling HP off of ATK is considered priority 2, scaling Tri-Karma Purification off of HP is considered priority 2, but scaling HP off of Tri-Karma Purification is considered priority 1.
@@ -483,7 +484,215 @@ Make sure to know the incorporated utility functions that come with the reposito
 
 ##### Implementing `effect`
 
+Welcome to the grind. And by that, we mean the thing that will probably make you rip your hair out. If you are ever stuck on implementing the effect you need for the bonus, try cross-referencing other completed characters with similar bonus effects to understand how they work. There is are no strict guidelines for every possible scenario, so it is up to you to come up with the logic for implementing the effect.
+
+The `effect` takes up to 4 possible parameters.
+
+1. `attributes`: The instance of the character's current attribute metadata.
+2. `talentLevels`: The instance of the character's current talent level metadata. This is a `number[]` which goes from index `0-2`. `talentLevels[0]` refers to the Normal Attack talent level. `talentLevels[1]` refers to the Elemental Skill talent level. Last but not least, `talentLevels[2]` refers to the Elemental Burst talent level.
+3. `currentStacks`: The currently selected index for the `stackOptions` field. As mentioned previously, this defaults to 1, and will only change if `stackOptions` is defined as an array with more than 1 index within. This allows you to manipulate the effect that the bonus gives depending on the dropdown selection you choose.
+4. `state`: Refers to the instance of your character's state. Generally reserved only for the [`getTalentScalingValue` function](#utils-for-bonuses) for character bonuses. However, you may also use the character state to obtain any information about the metadata as whole. This may come in handy for future characters, or future systems yet to be implemented. Ex: *The character's element, their current constellation, their level, their active bonuses, their weapon, etc...*
+
+> [!NOTE]
+> You only need to pass on `attributes` in `effect` in order for it to become valid, as it's the return type. This means that you are free to choose however many of the 4 parameters that you actually need in order to implement the bonus. **HOWEVER,** these parameters are **in-order.** This means that you cannot pass on `currentStacks` without also passing on `talentLevels`. Similarly, you cannot pass on `state` without also passing on both `talentLevels` and `currentStacks`. It is fine to not make use of any parameters that you do not need. But you must pass them nonetheless.
+
+If you are to use any of the 3 parameters besides `attributes`, give an null condition at the very beginning as to not break the bonus.
+
+```tsx
+if (!talentLevels || !currentStacks || !state) return {attributes}
+```
+
+`attributes` cannot be directly modified, as it must be passed off with a new reference of `attributes` in the `effect`'s return statement. As such, here is an example for how you achieve this:
+
+```tsx
+const newAttributes = {
+    ...attributes,
+    // Insert attribute changes. Example below where we add 15% to crit rate and 15% to ER.
+    // Notice that this change is priority 1.
+    'CRIT Rate': attributes['CRIT Rate'] + 0.15,
+    'Energy Recharge': attributes['Energy Recharge'] + 0.15,
+}
+
+// Here we update the character's attributes with the new one we defined earlier.
+return { attributes: newAttributes }
+```
+
+If you wish to obtain the value of a `talentScaling` property, use the `getTalentScalingValue` function. It takes in 4 parameters, all of which required. First is the `state`, which you pass off in the fourth `effect` parameter. Second is the name of the talent, third is the name of the specific talent scaling, and the fourth is the `talentLevels` index that is associated with the talent.
+
+For example, if we wish to get the value of Furina's damage increase from her fanfare stacks in her burst, we'll obtain the value like this:
+
+```tsx
+getTalentScalingValue(
+    state,
+    'Let the People Rejoice',
+    'Fanfare to DMG Increase Conversion Ratio',
+    talentLevels[2]
+)
+```
+
+If you are to use stacks in your bonus, make sure to define all of the options within `stackOptions`, and make sure to correspondingly denote the number of elements in `maxStacks`. You may use the `currentStacks` property from `effect` to denote the current option. There are various ways you may use this. Here is an example from Keqing's constellation 4, which gives different elemental damage bonuses depending on the stack obtained:
+
+```tsx
+effect: (attributes, talentLevels, currentStacks) => {
+    if (!currentStacks) return { attributes }
+
+    const elementalDamageBonus = [0.06, 0.12, 0.18, 0.24]
+
+    const newAttributes = {
+        ...attributes,
+        'Electro DMG Bonus':
+            attributes['Electro DMG Bonus'] +
+            elementalDamageBonus[currentStacks - 1],
+    }
+    return { attributes: newAttributes }
+},
+maxStacks: 4,
+stackOptions: ['None', '1 Stack', '2 Stacks', '3 Stacks', '4 Stacks'],
+origin: 'C6',
+minConstellation: 6,
+priority: 1,
+```
+
 ##### Implementing `applyToTalentScaling`
+
+> [!NOTE]
+> Bonuses may modify just the character attributes alone through `effect`, or only change `talentScalings` through `applyToTalentScaling`, or both. But bonuses will **only** be considered valid by the program once you define `effect`. This means it's ok to omit `applyToTalentScaling` from your bonus if you deem it unnecessary. But this does not hold for `effect`, as you must define it regardless if you are to modify character attributes.
+
+There may be various scenarios where modifying a character's attributes through `effect` isn't enough to implement a bonus. Sometimes, alterations must be made towards the `talentScaling` property itself. This can be done through the `applyToTalentScaling` function.
+
+Firstly, it's important to understand that you may only change 1 talent in a single bonus. Luckily, as of current, all Genshin character kits follow this rule. If this is to ever change in the future, please contact the maintainers.
+
+As such, you must define the value of `affectsTalentIndex` before `applyToTalentScaling`. Similarly with `talentLevels`, it values from `0-2`, with each value representing the same as it would for the former property.
+
+`applyToTalentScaling` itself only takes in two potential parameters. The first is mandatory, `talentScaling`. The second is `currentStacks`, which is optional. Both of these parameters have already been explained [previously](#implementing-effect), so this section will not repeat it again.
+
+Besides that, this section requires you to have a relatively solid understanding for algorithms. We will provide two examples for implementation, but it is up to you to learn how it works. Once again, we advise you to cross-reference other completed characters which have this property.
+
+**Example 1:** Hu Tao's elemental skill infuses her normals with pyro. However, this requires modifying the value of `damageType` from `Physical` to `Pyro` within `talentScalings` for every normal, charged, and plunge attack. Additionally, her constellation 1 reduces the charged attack stamina cost. So we must push a [unique bonus](#attributes-and-bonus-stats) to her talents as well. This is how it's done:
+
+```tsx
+affectsTalentIndex: 0,
+applyToTalentScaling: (talentScaling) => {
+    const normalAttackScaling =
+        talentScaling['Normal Attack: Secret Spear of Wangsheng']
+
+    if (normalAttackScaling) {
+        Object.values(normalAttackScaling).forEach((aspect) => {
+            if (
+                aspect.formulaType !== FormulaType.DamageFormula ||
+                !aspect.multiplicativeBonusStat
+            )
+                return
+            aspect.multiplicativeBonusStat[0] = 'Pyro DMG Bonus'
+            aspect.damageType = DamageType.Pyro
+        })
+    }
+    const chargedAttackScaling =
+        talentScaling['Normal Attack: Secret Spear of Wangsheng'][
+            'Charged Attack Stamina Cost'
+        ].multiplicativeBonusStat
+    if (chargedAttackScaling) {
+        chargedAttackScaling.push('Crimson Bouquet Stamina Reduction')
+    }
+},
+```
+
+**Example 2:** Kaedahara Kazuha as mentioned in the unique attributes section creates an extra plunge attack that isn't defined in the character's metadata. However, before this bonus is activated, the scaling should not appear on the calculation. As such, if we wish to make it togglable, we intentionally omit defining `damageType` to begin with, making it incomplete. We will define it in this bonus, and also have its element be dependent the on `currentStacks` variable. This is how it's done:
+
+```tsx
+affectsTalentIndex: 0,
+applyToTalentScaling: (talentScaling, currentStacks) => {
+    if (!currentStacks) return
+
+    const plungeAttackScaling =
+        talentScaling['Normal Attack: Garyuu Bladework']['Midare Ranzan']
+
+    const elementalDamageBonus = [
+        'Hydro DMG Bonus',
+        'Pyro DMG Bonus',
+        'Cryo DMG Bonus',
+        'Electro DMG Bonus',
+    ]
+    const elementalDamageType = [
+        DamageType.Hydro,
+        DamageType.Pyro,
+        DamageType.Cryo,
+        DamageType.Electro,
+    ]
+
+    if (plungeAttackScaling && plungeAttackScaling.multiplicativeBonusStat) {
+        plungeAttackScaling.multiplicativeBonusStat.push(
+            elementalDamageBonus[currentStacks - 1]
+        )
+        plungeAttackScaling.damageType =
+            elementalDamageType[currentStacks - 1]
+    }
+},
+maxStacks: 4,
+stackOptions: ['Off', 'Hydro', 'Pyro', 'Cryo', 'Electro'],
+```
+
+To reiterate, there are various ways you can modify `talentScalings`. These are only two examples, so please take the time to experiment and cross-reference other characters.
+
+##### Constellation-Specific Implementation
+
+> [!NOTE]
+> **All** constellations requires both the `origin` and `minConstellation` field to be defined.
+
+Unlike `characterBonuses`, all constellations **MUST** be implemented regardless if they have an actual bonus or not to be affecting calculation. For those that don't have an effect, here is a general template:
+
+```tsx
+{
+    name: '{name}',
+    description: (
+        <span>
+            {description}
+        </span>
+    ),
+    icon: '/images/characters/{character_icon}.png',
+    effect: (attributes) => {
+        // * Unnecessary, this does nothing
+        return { attributes }
+    },
+    origin: '{C1-C6}',
+    visible: false,
+    minConstellation: {1-6},
+},
+```
+
+Currently, all C3's and C5's do the same thing, which is boost the character's talent levels by 3. Here is a general template on implementing them:
+
+```tsx
+{
+    name: '{name}',
+    description: (
+        <span>
+            {description}
+        </span>
+    ),
+    icon: '/images/characters/{character_icon}.png',
+    effect: (attributes, talentLevels) => {
+        if (!talentLevels) return { attributes }
+
+        const newTalentLevels = [...talentLevels]
+
+        /*
+          value = ...
+          1: Normal Attack
+          2: Skill
+          3: Burst
+        */
+        newTalentLevels[value] = Math.min(newTalentLevels[value] + 3, 13)
+
+        return { attributes: attributes, updatedTalentLevels: newTalentLevels }
+    },
+    minConstellation: {3 or 5},
+    origin: '{C3 or C5}',
+    enabled: true,
+    visible: false,
+    priority: 0,
+},
+```
 
 #### Finishing Up
 
@@ -493,13 +702,12 @@ Characters are greyed out in the selection box UI until you modify the json file
 
 ### Implementing Weapons
 
-> [!CAUTION]
-> **W.I.P**: Guide in progress.
+> **W.I.P**
 
 ### Implementing Artifacts
 
 > [!CAUTION]
-> **W.I.P:** Artifact system under development.
+> Artifact system under development.
 
 ---
 
