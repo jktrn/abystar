@@ -1,5 +1,6 @@
 import json
 import os
+from pathlib import Path
 
 def kebab_case(name):
     clean_name = name.replace('(', '').replace(')', '').lower()
@@ -17,6 +18,7 @@ def generate_tsx_files(json_path, output_directory):
 
     for character_name, char_data in characters.items():
         filename = f"{kebab_case(character_name)}.tsx"
+        
         filepath = os.path.join(output_directory, filename)
 
         with open(filepath, 'w') as tsx_file:
@@ -36,5 +38,7 @@ def generate_tsx_files(json_path, output_directory):
             tsx_file.write(f"export default {pascal_case(character_name)}\n")
 
 json_path = 'characters_new.json'
+json_path_abs = os.path.join(os.path.dirname(__file__), json_path)
 output_directory = '../../src/data/characters'
-generate_tsx_files(json_path, output_directory)
+output_directory_abs = ( Path(__file__).parent / output_directory).resolve()
+generate_tsx_files(json_path_abs, output_directory_abs)

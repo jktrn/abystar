@@ -16,6 +16,9 @@ def parse_cell(cell: str) -> str:
     if any(c.isalpha() for c in cell):
         return cell
     elif '×' in cell:
+        if '/' in cell:
+            print(cell)
+            return cell
         value, multiplier = cell.split('×')
         value = float(value.strip().strip('%')) * float(multiplier)
         return f'{value:.2f}%'
@@ -181,6 +184,11 @@ def save_data_to_file(data: dict[str, dict[str, dict[str, dict[str, str]]]]) -> 
     with open(file_path, 'w') as f:
         json.dump(data, f, indent=4)
 
+def append_file(data: dict[str, dict[str, dict[str, dict[str, str]]]]) -> None:
+    file_path = os.path.join(current_dir, "characters_new.json")
+    with open(file_path, 'a') as f:
+        json.dump(data, f, indent=4)
+
 if __name__ == '__main__':
     # Comment this out if you want to test with a single character
     # all_data = fetch_all_characters_data()
@@ -188,5 +196,7 @@ if __name__ == '__main__':
     # fix_traveler.fix_traveler()
 
     # Uncomment these if you want to test a single character
-    data = fetch_character_data('chevreuse_090')
+    data = fetch_character_data('clorinde_098')
     save_data_to_file(data)
+    data = fetch_character_data('alhatham_078')
+    append_file(data)
