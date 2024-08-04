@@ -670,6 +670,14 @@
         "rarity": 4,
         "implemented": false
     },
+    "Clorinde": {
+        "name": "Clorinde",
+        "icon": "/images/characters/UI_AvatarIcon_Clorinde.png",
+        "weapon": "Sword",
+        "vision": "Electro",
+        "rarity": 5,
+        "implemented": false
+    },
     "Collei": {
         "name": "Collei",
         "icon": "/images/characters/UI_AvatarIcon_Collei.png",

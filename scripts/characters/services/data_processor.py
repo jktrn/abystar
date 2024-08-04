@@ -18,6 +18,8 @@ class DataProcessor:
         try:
             if any(c.isalpha() for c in cell):
                 return cell
+            elif '/' in cell:
+                return cell
             elif '×' in cell:
                 value, multiplier = cell.split('×')
                 value = float(value.strip().strip('%')) * float(multiplier)
