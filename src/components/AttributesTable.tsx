@@ -55,7 +55,7 @@ const AttributesTable = ({
                         difference: difference,
                     }
                 }),
-        [characterAttributes, displayStats, initialAttributes]
+        [characterAttributes, initialAttributes]
     )
 
     if (!characterAttributes) return null

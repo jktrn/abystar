@@ -83,7 +83,8 @@ function calculateDamage(
                                 critRateBonusStat,
                                 critDamageBonusStat,
                                 enemyResistances,
-                                damageType
+                                damageType,
+                                characterState.characterLevel
                             )
                             break
                         case FormulaType.GenericFormulaWithScaling:

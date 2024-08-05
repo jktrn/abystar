@@ -7,15 +7,18 @@ export {
     compareObjects,
     elementColors,
     getTalentScalingValue,
-    insertAspect,
     kebabCase,
     mergeAndSum,
     parseScalingValue,
+    insertAspect,
+    calculateDef,
+    calculateRes,
 } from './utils'
 
 export {
     applySpecialBonuses,
     defaultCharacterAttributes,
+    defaultResistances
 } from './characterAttributes'
 
 export {

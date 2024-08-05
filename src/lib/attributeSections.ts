@@ -68,6 +68,19 @@ export const attributeSections = [
             'Physical RES',
         ],
     },
+    {
+        name: 'Resistance Shred',
+        attributes: [
+            'Pyro RES Shred', 
+            'Cryo RES Shred',
+            'Hydro RES Shred',
+            'Electro RES Shred',
+            'Anemo RES Shred',
+            'Geo RES Shred',
+            'Dendro RES Shred',
+            'Physical RES Shred',
+        ],
+    }
 ]
 
 export const displayStats = [
@@ -115,6 +128,14 @@ export const displayStats = [
     'Geo RES',
     'Dendro RES',
     'Physical RES',
+    'Pyro RES Shred', 
+    'Cryo RES Shred',
+    'Hydro RES Shred',
+    'Electro RES Shred',
+    'Anemo RES Shred',
+    'Geo RES Shred',
+    'Dendro RES Shred',
+    'Physical RES Shred',
 ]
 
 export const availableIcons = [

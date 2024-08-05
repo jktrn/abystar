@@ -69,7 +69,9 @@ export interface Bonus {
         currentStacks?: number
     ) => void
 }
-
+export interface BaseStat {
+    [key: string]: number
+}
 export interface Effect {
     (
         attributes: CharacterAttributes,
@@ -102,8 +104,17 @@ export interface TalentScalingData {
     originMultiplier?: number
 }
 
-export interface BaseStat {
-    [key: string]: number
+export interface CharacterState {
+    character: Character
+    characterLevel: string
+    characterConstellation: number
+    characterActiveBonuses: Bonus[]
+    characterTalentLevels: number[]
+    effectiveTalentLevels: number[]
+    weapon: Weapon
+    weaponLevel: string
+    weaponRefinement: number
+    enemyResistances: BaseStat
 }
 
 export interface Talent {
